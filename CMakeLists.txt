@@ -4,6 +4,7 @@ option(BUILD_TESTS "Build tests" ON)
 
 project(netspeak4 VERSION 4.0 LANGUAGES CXX)
 
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 add_subdirectory(src)
 add_subdirectory(bindings/python)
 
