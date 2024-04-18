@@ -3,10 +3,10 @@
 
 #include <boost/test/unit_test.hpp>
 
-#include "antlr4/parse.hpp"
+#include <antlr4/parse.hpp>
 
-#include "netspeak/error.hpp"
-#include "netspeak/model/Query.hpp"
+#include <netspeak/error.hpp>
+#include <netspeak/model/Query.hpp>
 
 
 namespace netspeak {

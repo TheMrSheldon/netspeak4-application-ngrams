@@ -3,7 +3,7 @@
 
 #include <boost/test/unit_test.hpp>
 
-#include "netspeak/util/ChainCutter.hpp"
+#include <netspeak/util/ChainCutter.hpp>
 
 namespace netspeak {
 

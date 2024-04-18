@@ -1,6 +1,6 @@
 #include <boost/test/unit_test.hpp>
 
-#include "netspeak/model/Phrase.hpp"
+#include <netspeak/model/Phrase.hpp>
 
 namespace netspeak {
 

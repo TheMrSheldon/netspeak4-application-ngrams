@@ -4,8 +4,8 @@
 
 #include "paths.hpp"
 
-#include "netspeak/Netspeak.hpp"
-#include "netspeak/service/NetspeakService.pb.h"
+#include <netspeak/Netspeak.hpp>
+#include <netspeak/NetspeakService.pb.h>
 
 namespace netspeak {
 

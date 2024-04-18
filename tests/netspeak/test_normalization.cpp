@@ -5,14 +5,14 @@
 
 #include "paths.hpp"
 
-#include "antlr4/parse.hpp"
+#include <antlr4/parse.hpp>
 
-#include "netspeak/Dictionaries.hpp"
-#include "netspeak/QueryNormalizer.hpp"
-#include "netspeak/error.hpp"
-#include "netspeak/model/NormQuery.hpp"
-#include "netspeak/model/Query.hpp"
-#include "netspeak/regex/DefaultRegexIndex.hpp"
+#include <netspeak/Dictionaries.hpp>
+#include <netspeak/QueryNormalizer.hpp>
+#include <netspeak/error.hpp>
+#include <netspeak/model/NormQuery.hpp>
+#include <netspeak/model/Query.hpp>
+#include <netspeak/regex/DefaultRegexIndex.hpp>
 
 
 using namespace netspeak;

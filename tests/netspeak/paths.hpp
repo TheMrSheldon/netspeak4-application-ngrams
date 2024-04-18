@@ -8,15 +8,15 @@
 
 namespace test {
 
-const std::string INDEX_DIR = "test/data/index_eng500k_ci";
+const std::string INDEX_DIR = "data/index_eng500k_ci";
 
-const std::string QUERIES_DIR = "test/data/queries";
+const std::string QUERIES_DIR = "data/queries";
 
-const std::string DICTIONARY_SET = "test/data/dictset.csv";
+const std::string DICTIONARY_SET = "data/dictset.csv";
 
-const std::string REGEX_1K_LOWER = "test/data/regex_1k_lower.txt";
+const std::string REGEX_1K_LOWER = "data/regex_1k_lower.txt";
 
-const std::string TEST_REGEX_DATA = "test/data/test_Regex.txt";
+const std::string TEST_REGEX_DATA = "data/test_Regex.txt";
 
 
 inline std::string load_file(std::string path) {

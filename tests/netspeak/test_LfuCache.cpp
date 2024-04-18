@@ -3,7 +3,7 @@
 
 #include <boost/test/unit_test.hpp>
 
-#include "netspeak/util/LfuCache.hpp"
+#include <netspeak/util/LfuCache.hpp>
 
 namespace netspeak {
 

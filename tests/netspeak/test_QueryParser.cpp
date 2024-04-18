@@ -8,14 +8,14 @@
 
 #include "paths.hpp"
 
-#include "antlr4-runtime.h"
-#include "antlr4/QueryErrorHandler.hpp"
-#include "antlr4/generated/QueryLexer.h"
-#include "antlr4/generated/QueryParser.h"
-#include "antlr4/parse.hpp"
+#include <antlr4-runtime.h>
+#include <antlr4/QueryErrorHandler.hpp>
+#include <QueryLexer.h>
+#include <QueryParser.h>
+#include <antlr4/parse.hpp>
 
-#include "netspeak/Dictionaries.hpp"
-#include "netspeak/error.hpp"
+#include <netspeak/Dictionaries.hpp>
+#include <netspeak/error.hpp>
 
 using namespace antlr4;
 

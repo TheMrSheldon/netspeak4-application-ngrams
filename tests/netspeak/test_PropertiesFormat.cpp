@@ -4,7 +4,7 @@
 
 #include <boost/test/unit_test.hpp>
 
-#include "netspeak/util/PropertiesFormat.hpp"
+#include <netspeak/util/PropertiesFormat.hpp>
 
 namespace std {
 std::ostream& operator<<(std::ostream& out,

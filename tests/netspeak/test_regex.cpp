@@ -4,9 +4,9 @@
 
 #include "paths.hpp"
 
-#include "netspeak/regex/DefaultRegexIndex.hpp"
-#include "netspeak/regex/RegexQuery.hpp"
-#include "netspeak/regex/parsers.hpp"
+#include <netspeak/regex/DefaultRegexIndex.hpp>
+#include <netspeak/regex/RegexQuery.hpp>
+#include <netspeak/regex/parsers.hpp>
 
 
 namespace netspeak {

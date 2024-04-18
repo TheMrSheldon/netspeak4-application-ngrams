@@ -3,8 +3,8 @@
 
 #include "paths.hpp"
 
-#include "netspeak/PhraseCorpus.hpp"
-#include "netspeak/model/Phrase.hpp"
+#include <netspeak/PhraseCorpus.hpp>
+#include <netspeak/model/Phrase.hpp>
 
 
 namespace netspeak {

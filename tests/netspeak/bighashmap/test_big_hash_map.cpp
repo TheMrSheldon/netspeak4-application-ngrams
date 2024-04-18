@@ -1,6 +1,8 @@
 // test_big_hash_map.cpp -*- C++ -*-
 // Copyright (C) 2011-2013 Martin Trenkmann
 
+#include <filesystem>
+#include <fstream>
 #include <ostream>
 #include <string>
 #include <utility>
@@ -14,6 +16,8 @@
 #include "netspeak/bighashmap/Builder.hpp"
 #include "netspeak/util/conversion.hpp"
 #include "netspeak/util/memory.hpp"
+
+namespace fs = std::filesystem;
 
 using namespace netspeak;
 using namespace value;
