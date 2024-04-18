@@ -4,7 +4,7 @@
 #include <map>
 #include <memory>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 #include <boost/test/unit_test.hpp>
 
 #include "../ManagedDirectory.hpp"
@@ -16,11 +16,11 @@
 
 namespace aii = netspeak::invertedindex;
 namespace av = netspeak::value;
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 
 template <typename T>
 const std::multimap<std::string, T> write_inverted_file(
-    const bfs::path& inv_file, size_t record_count,
+    const fs::path& inv_file, size_t record_count,
     aii::key_sorting_type sorting) {
   // an in-memory record store for comparison
   std::multimap<std::string, T> expected_records;
@@ -28,7 +28,7 @@ const std::multimap<std::string, T> write_inverted_file(
   std::string key;
   T value;
   aii::Record<T> record;
-  bfs::ofstream inv_file_ofs(inv_file);
+  std::ofstream inv_file_ofs(inv_file);
   aii::InvertedFileWriter<T> writer(inv_file_ofs);
   for (unsigned i(0); i != record_count; ++i) {
     switch (sorting) {
@@ -49,8 +49,8 @@ const std::multimap<std::string, T> write_inverted_file(
 }
 
 template <typename T>
-void build_inverted_index(const bfs::path& input_dir,
-                          const bfs::path& index_dir,
+void build_inverted_index(const fs::path& input_dir,
+                          const fs::path& index_dir,
                           aii::key_sorting_type sorting) {
   aii::Configuration config;
   config.set_input_directory(input_dir.string());
@@ -62,7 +62,7 @@ void build_inverted_index(const bfs::path& input_dir,
 
 template <typename T>
 void check_inverted_index(
-    const bfs::path& index_dir,
+    const fs::path& index_dir,
     const std::multimap<std::string, T>& expected_records) {
   aii::Configuration config;
   config.set_index_directory(index_dir.string());
@@ -146,7 +146,7 @@ BOOST_AUTO_TEST_CASE(test_ManagedIndexer_index) {
 //  typedef value::DoubleLongLongInt value_type;
 //
 //  const size_t record_count(50000000);
-//  const bfs::path index_dir("index");
+//  const fs::path index_dir("index");
 //
 //  std::string key;
 //  value_type value;
@@ -155,7 +155,7 @@ BOOST_AUTO_TEST_CASE(test_ManagedIndexer_index) {
 //  config.set_key_sorting(util::key_sorting::unsorted);
 //  config.set_expected_record_count(record_count); // avoids rehashing
 //
-//  BOOST_REQUIRE(bfs::create_directory(index_dir));
+//  BOOST_REQUIRE(fs::create_directory(index_dir));
 //  Indexer<value_type> indexer(config);
 //  for (unsigned i(0); i != record_count; ++i)
 //  {
@@ -166,7 +166,7 @@ BOOST_AUTO_TEST_CASE(test_ManagedIndexer_index) {
 //  const Properties properties(indexer.index());
 //  BOOST_REQUIRE_EQUAL(properties.key_count, 1000);
 //  BOOST_REQUIRE_EQUAL(properties.value_count, record_count);
-//  bfs::remove_all(index_dir);
+//  fs::remove_all(index_dir);
 //}
 
 using std::string;

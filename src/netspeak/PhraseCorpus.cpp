@@ -10,7 +10,7 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/filesystem/fstream.hpp>
 #include <boost/lexical_cast.hpp>
-#include <boost/optional.hpp>
+#include <optional>
 
 #include <netspeak/error.hpp>
 #include <netspeak/invertedindex/ByteBuffer.hpp>
@@ -20,7 +20,7 @@
 
 namespace netspeak {
 
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 using namespace model;
 
 const std::string PhraseCorpus::txt_dir("txt");
@@ -30,7 +30,7 @@ const std::string PhraseCorpus::phrase_file("phrases");
 
 PhraseCorpus::PhraseCorpus() : max_length_(0) {}
 
-PhraseCorpus::PhraseCorpus(const bfs::path& phrase_dir) {
+PhraseCorpus::PhraseCorpus(const fs::path& phrase_dir) {
   open(phrase_dir);
 }
 
@@ -78,7 +78,7 @@ bool PhraseCorpus::contains(const WordId& id) const {
   return it != id_map->end();
 }
 
-void PhraseCorpus::open(const bfs::path& phrase_dir) {
+void PhraseCorpus::open(const fs::path& phrase_dir) {
   init_vocabulary_(phrase_dir / vocab_file);
   open_phrase_files_(phrase_dir);
 }
@@ -162,8 +162,8 @@ Phrase PhraseCorpus::decode_(const char* buffer, Phrase::Id id) const {
   return phrase;
 }
 
-void PhraseCorpus::init_vocabulary_(const bfs::path& vocab_file) {
-  bfs::ifstream ifs(vocab_file);
+void PhraseCorpus::init_vocabulary_(const fs::path& vocab_file) {
+  std::ifstream ifs(vocab_file);
   util::check(ifs.is_open(), error_message::cannot_open, vocab_file);
 
   std::string word;
@@ -176,7 +176,7 @@ void PhraseCorpus::init_vocabulary_(const bfs::path& vocab_file) {
   id_map.emplace(std::move(builder));
 }
 
-boost::optional<Phrase::Id::Length> parse_phrase_filename(
+std::optional<Phrase::Id::Length> parse_phrase_filename(
     const std::string& name) {
   // we only want to open files of the form `phrases.{n}`
   if (boost::starts_with(name, PhraseCorpus::phrase_file)) {
@@ -188,14 +188,14 @@ boost::optional<Phrase::Id::Length> parse_phrase_filename(
   }
 
   // incorrect format
-  return boost::optional<Phrase::Id::Length>{};
+  return std::optional<Phrase::Id::Length>{};
 }
 
-void PhraseCorpus::open_phrase_files_(const bfs::path& phrase_dir) {
-  bfs::directory_iterator end;
+void PhraseCorpus::open_phrase_files_(const fs::path& phrase_dir) {
+  fs::directory_iterator end;
   Phrase::Id::Length max = 0;
 
-  for (bfs::directory_iterator it(phrase_dir); it != end; ++it) {
+  for (fs::directory_iterator it(phrase_dir); it != end; ++it) {
     const auto& path = it->path();
     const auto filename = path.filename().string();
     const auto phrase_len = parse_phrase_filename(filename);

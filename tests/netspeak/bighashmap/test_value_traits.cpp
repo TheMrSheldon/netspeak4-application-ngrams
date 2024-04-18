@@ -1,7 +1,7 @@
 // test_value_traits.cpp -*- C++ -*-
 // Copyright (C) 2011-2013 Martin Trenkmann
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 #include <boost/test/unit_test.hpp>
 
 #include "netspeak/util/systemio.hpp"
@@ -10,9 +10,9 @@
 #include "netspeak/value/triple_traits.hpp"
 
 using namespace netspeak;
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 
-static const bfs::path k_tmp_file("test_value_traits.tmp");
+static const fs::path k_tmp_file("test_value_traits.tmp");
 
 // Primary template matches for build-in types
 template <typename T>
@@ -42,7 +42,7 @@ void test(unsigned record_count) {
   }
   BOOST_REQUIRE(!traits_type::read_from(test_value, fs));
   util::fclose(fs);
-  bfs::remove(k_tmp_file);
+  fs::remove(k_tmp_file);
 
   // Test buffer I/O
   // Note that copy_to and copy_from do no range check
@@ -108,7 +108,7 @@ void test(unsigned record_count) {
 //  }
 //  BOOST_REQUIRE_EQUAL(false, traits_type::read_from(test_value, file));
 //  io::close(file);
-//  bfs::remove(tmp_file);
+//  fs::remove(tmp_file);
 //
 //  // Test char* I/O
 //  // Note that copy_to and copy_from do no range check

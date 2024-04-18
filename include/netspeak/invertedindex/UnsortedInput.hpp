@@ -7,7 +7,7 @@
 #include <memory>
 #include <unordered_map>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 
 #include "netspeak/invertedindex/IndexStrategy.hpp"
 #include "netspeak/invertedindex/PostlistBuilder.hpp"
@@ -18,7 +18,7 @@
 namespace netspeak {
 namespace invertedindex {
 
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 
 /**
  * This strategy is for building an index from
@@ -44,12 +44,12 @@ public:
     if (max_bucket_size_ == 0)
       max_bucket_size_ = 10 * 1024 * 1024;
     bucket_dir_ = util::tmpdir(this->config().index_directory());
-    bucket_fs_ = rehash(bfs::path(), bucket_dir_, 2);
+    bucket_fs_ = rehash(fs::path(), bucket_dir_, 2);
     this->set_expected_record_count(config.expected_record_count());
   }
 
   virtual ~UnsortedInput() {
-    bfs::remove_all(bucket_dir_);
+    fs::remove_all(bucket_dir_);
   }
 
   virtual void index() {
@@ -57,9 +57,9 @@ public:
     close(bucket_fs_);
     postlist_map postlists;
     StorageWriter<value_type> storage(this->config().index_directory());
-    const bfs::directory_iterator end;
-    for (bfs::directory_iterator it(bucket_dir_); it != end; ++it) {
-      if (!bfs::is_regular_file(it->path())) {
+    const fs::directory_iterator end;
+    for (fs::directory_iterator it(bucket_dir_); it != end; ++it) {
+      if (!fs::is_regular_file(it->path())) {
         continue;
       }
       util::log("Processing", it->path());
@@ -75,7 +75,7 @@ public:
       }
       this->stats_.key_count += postlists.size();
       store(postlists, storage);
-      bfs::remove(it->path());
+      fs::remove(it->path());
       postlists.clear();
     }
     storage.close();
@@ -88,8 +88,8 @@ private:
     }
   }
 
-  static void group(const bfs::path& bucket_path, postlist_map& postlists) {
-    assert(bfs::exists(bucket_path));
+  static void group(const fs::path& bucket_path, postlist_map& postlists) {
+    assert(fs::exists(bucket_path));
 
     record_type record;
     pbuilder_map builders;
@@ -110,20 +110,20 @@ private:
     }
   }
 
-  static const std::vector<FILE*> rehash(const bfs::path& src_dir,
-                                         const bfs::path& des_dir,
+  static const std::vector<FILE*> rehash(const fs::path& src_dir,
+                                         const fs::path& des_dir,
                                          uint32_t num) {
-    assert(bfs::is_empty(des_dir));
+    assert(fs::is_empty(des_dir));
     // create destination bucket files
     std::vector<FILE*> des_fs(util::next_prime(num));
     for (unsigned i(0); i != des_fs.size(); ++i) {
       des_fs[i] = util::fopen(des_dir / ("bucket." + util::to_string(i)), "wb");
     }
-    if (bfs::exists(src_dir)) {
+    if (fs::exists(src_dir)) {
       record_type record;
-      const bfs::directory_iterator end;
-      for (bfs::directory_iterator it(src_dir); it != end; ++it) {
-        if (!bfs::is_regular_file(it->path()))
+      const fs::directory_iterator end;
+      for (fs::directory_iterator it(src_dir); it != end; ++it) {
+        if (!fs::is_regular_file(it->path()))
           continue;
 
         FILE* src_fs(util::fopen(it->path(), "rb"));
@@ -131,7 +131,7 @@ private:
           record.write(des_fs[util::hash32(record.key()) % des_fs.size()]);
         }
         util::fclose(src_fs);
-        bfs::remove(it->path()); // early deletion to safe disk space
+        fs::remove(it->path()); // early deletion to safe disk space
       }
     }
     return des_fs;
@@ -180,16 +180,16 @@ private:
 
   void rehash_(size_t new_bucket_count) {
     close(bucket_fs_);
-    bfs::path new_dir(util::tmpdir(this->config().index_directory()));
+    fs::path new_dir(util::tmpdir(this->config().index_directory()));
     util::log("Rehashing current inserted records", this->stats().value_count);
     bucket_fs_ = rehash(bucket_dir_, new_dir, new_bucket_count);
     util::log("New number of bucket files", bucket_fs_.size());
-    bfs::remove_all(bucket_dir_);
+    fs::remove_all(bucket_dir_);
     bucket_dir_ = new_dir;
   }
 
   std::vector<FILE*> bucket_fs_;
-  bfs::path bucket_dir_;
+  fs::path bucket_dir_;
   uint64_t max_bucket_size_;
 };
 

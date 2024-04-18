@@ -16,7 +16,7 @@
 #include <string>
 #include <thread>
 
-#include "boost/filesystem.hpp"
+#include <filesystem>
 
 #include "cli/util.hpp"
 
@@ -27,7 +27,6 @@
 namespace cli {
 
 namespace bpo = boost::program_options;
-namespace bfs = boost::filesystem;
 using namespace netspeak;
 
 #define SOURCE_KEY "source"

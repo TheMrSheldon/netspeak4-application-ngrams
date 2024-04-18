@@ -9,7 +9,7 @@ namespace netspeak {
 namespace util {
 
 
-Config::Config(boost::filesystem::path file_name)
+Config::Config(std::filesystem::path file_name)
     : data_(), file_name_(file_name) {
   std::ifstream ifs(file_name.string());
   if (!ifs.good()) {

@@ -3,8 +3,9 @@
 #include <chrono>
 #include <iomanip>
 #include <iostream>
+#include <fstream>
 
-#include "boost/filesystem.hpp"
+#include <filesystem>
 
 #include "netspeak/error.hpp"
 #include "netspeak/regex/DefaultRegexIndex.hpp"
@@ -14,7 +15,6 @@
 namespace cli {
 
 namespace bpo = boost::program_options;
-namespace bfs = boost::filesystem;
 
 std::string RegexCommand::desc() {
   return "Load an interactive shell for a regex word list.\n"

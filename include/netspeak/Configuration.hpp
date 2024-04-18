@@ -7,8 +7,8 @@
 #include <unordered_set>
 #include <vector>
 
-#include "boost/filesystem.hpp"
-#include "boost/optional.hpp"
+#include <filesystem>
+#include <optional>
 
 #include "netspeak/util/Config.hpp"
 
@@ -18,7 +18,7 @@ class Configuration {
 private:
   util::Config config_;
   std::unique_ptr<Configuration> extends_;
-  boost::filesystem::path base_dir_;
+  std::filesystem::path base_dir_;
 
   void load_extends();
   void desugar_home();
@@ -27,22 +27,22 @@ public:
   Configuration() : config_(), extends_(), base_dir_() {}
   Configuration(
       std::initializer_list<util::Config::initializer_list_type> list);
-  explicit Configuration(boost::filesystem::path file_name);
+  explicit Configuration(std::filesystem::path file_name);
   explicit Configuration(const util::Config& config);
 
   std::string get_required(const std::string& key) const;
-  boost::optional<std::string> get_optional(const std::string& key) const;
+  std::optional<std::string> get_optional(const std::string& key) const;
   std::string get(const std::string& key,
                   const std::string& defaultValue) const;
 
-  boost::filesystem::path get_required_path(const std::string& key) const;
-  boost::optional<boost::filesystem::path> get_optional_path(
+  std::filesystem::path get_required_path(const std::string& key) const;
+  std::optional<std::filesystem::path> get_optional_path(
       const std::string& key) const;
-  boost::filesystem::path get_path(const std::string& key,
+  std::filesystem::path get_path(const std::string& key,
                                    const std::string& defaultValue) const;
 
   bool get_required_bool(const std::string& key) const;
-  boost::optional<bool> get_optional_bool(const std::string& key) const;
+  std::optional<bool> get_optional_bool(const std::string& key) const;
   bool get_bool(const std::string& key, bool defaultValue) const;
 
   std::unordered_set<std::string> keys() const;

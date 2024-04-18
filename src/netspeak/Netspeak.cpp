@@ -1,5 +1,6 @@
 #include <netspeak/Netspeak.hpp>
 
+#include <fstream>
 #include <future>
 
 #include <boost/lexical_cast.hpp>
@@ -10,7 +11,7 @@
 
 namespace netspeak {
 
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 using namespace model;
 
 const std::string DEFAULT_REGEX_MAX_MATCHES = "100";
@@ -60,7 +61,7 @@ void Netspeak::initialize(const Configuration& config) {
     });
 
     auto pc_result = std::async([&]() {
-      const auto pc_bin_dir = bfs::path(pc_dir) / "bin";
+      const auto pc_bin_dir = fs::path(pc_dir) / "bin";
       util::log("Open phrase corpus in", pc_bin_dir);
       phrase_corpus_.open(pc_bin_dir);
     });
@@ -68,9 +69,9 @@ void Netspeak::initialize(const Configuration& config) {
     // The hash dictionary is optional.
     auto hd_result = std::async([&]() {
       hash_dictionary_ = std::make_shared<Dictionaries::Map>();
-      if (hash_dir_dir && bfs::exists(*hash_dir_dir)) {
-        const bfs::directory_iterator end;
-        for (bfs::directory_iterator it(*hash_dir_dir); it != end; ++it) {
+      if (hash_dir_dir && fs::exists(*hash_dir_dir)) {
+        const fs::directory_iterator end;
+        for (fs::directory_iterator it(*hash_dir_dir); it != end; ++it) {
           util::log("Open hash dictionary in", *it);
           const auto dict = Dictionaries::read_from_file(*it);
           for (const auto& pair : dict) {
@@ -82,11 +83,11 @@ void Netspeak::initialize(const Configuration& config) {
 
     // The regex vocabulary is optional.
     auto re_result = std::async([&]() {
-      if (regex_dir && bfs::exists(*regex_dir)) {
-        const bfs::directory_iterator end;
-        for (bfs::directory_iterator it(*regex_dir); it != end; ++it) {
+      if (regex_dir && fs::exists(*regex_dir)) {
+        const fs::directory_iterator end;
+        for (fs::directory_iterator it(*regex_dir); it != end; ++it) {
           util::log("Open regex vocabulary in", *it);
-          bfs::ifstream ifs(*it);
+          std::ifstream ifs(it->path());
           util::check(ifs.is_open(), error_message::cannot_open, *it);
           std::string regexwords((std::istreambuf_iterator<char>(ifs)),
                                  (std::istreambuf_iterator<char>()));

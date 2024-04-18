@@ -5,8 +5,8 @@
 #include <unordered_map>
 #include <vector>
 
-#include <boost/filesystem.hpp>
-#include <boost/optional.hpp>
+#include <filesystem>
+#include <optional>
 
 #include "invertedindex/ByteBuffer.hpp"
 #include "model/Phrase.hpp"
@@ -33,11 +33,11 @@ public:
 
   PhraseCorpus();
   PhraseCorpus(const PhraseCorpus&) = delete;
-  PhraseCorpus(const boost::filesystem::path& phrase_dir);
+  PhraseCorpus(const std::filesystem::path& phrase_dir);
 
   bool is_open() const;
 
-  void open(const boost::filesystem::path& phrase_dir);
+  void open(const std::filesystem::path& phrase_dir);
 
   /**
    * @brief Returns the number of words of the longest phrase in the corpus.
@@ -65,15 +65,15 @@ public:
 private:
   Phrase decode_(const char* buffer, Phrase::Id phrase_id) const;
 
-  void init_vocabulary_(const boost::filesystem::path& vocab_file);
+  void init_vocabulary_(const std::filesystem::path& vocab_file);
 
-  void open_phrase_files_(const boost::filesystem::path& phrase_dir);
+  void open_phrase_files_(const std::filesystem::path& phrase_dir);
 
 
   /**
    * @brief This maps the id of a word to its string value and vise versa.
    */
-  boost::optional<util::StringIdMap<WordId>> id_map;
+  std::optional<util::StringIdMap<WordId>> id_map;
 
   /**
    * @brief A map from the length of a phrase to the file descriptor of the

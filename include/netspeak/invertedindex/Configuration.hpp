@@ -5,7 +5,7 @@
 
 #include <cstdint>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 
 #include "netspeak/util/conversion.hpp"
 #include "netspeak/util/memory.hpp"

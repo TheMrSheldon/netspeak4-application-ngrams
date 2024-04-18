@@ -4,7 +4,7 @@
 #include <string>
 #include <unordered_map>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 
 namespace netspeak {
 
@@ -21,7 +21,7 @@ class Dictionaries {
 public:
   typedef std::unordered_multimap<std::string, std::string> Map;
 
-  static const Map read_from_file(const boost::filesystem::path& csv);
+  static const Map read_from_file(const std::filesystem::path& csv);
   static const Map parse_csv(
       std::basic_istream<char, std::char_traits<char>>& stream);
 };

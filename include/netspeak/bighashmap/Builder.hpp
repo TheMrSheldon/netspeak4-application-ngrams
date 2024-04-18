@@ -9,7 +9,7 @@
 #include <string>
 #include <vector>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 #include <boost/filesystem/fstream.hpp>
 
 #include "netspeak/bighashmap/CmphMap.hpp"
@@ -24,7 +24,7 @@
 namespace netspeak {
 namespace bighashmap {
 
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 
 template <typename ValueT, typename TraitsT = value::value_traits<ValueT> >
 class Builder {
@@ -40,16 +40,16 @@ public:
 
   Builder() = delete;
 
-  static void Build(const bfs::path& input_dir, const bfs::path& output_dir,
+  static void Build(const fs::path& input_dir, const fs::path& output_dir,
                     Algorithm algorithm = Algorithm::BDZ) {
-    if (!bfs::exists(output_dir)) {
+    if (!fs::exists(output_dir)) {
       util::throw_runtime_error("Does not exist", output_dir.string());
     }
-    if (!bfs::is_empty(output_dir)) {
+    if (!fs::is_empty(output_dir)) {
       util::throw_runtime_error("Is not empty", output_dir.string());
     }
 
-    if (!bfs::exists(input_dir)) {
+    if (!fs::exists(input_dir)) {
       util::throw_runtime_error("Input directory does exist",
                                 input_dir.string());
     }
@@ -57,7 +57,7 @@ public:
     util::log("Performing key space partitioning on input files");
     const auto input_files = Partition(input_dir, output_dir);
     const auto idx_file = output_dir / index_file_name;
-    bfs::ofstream ofs(idx_file);
+    std::ofstream ofs(idx_file);
     if (!ofs) {
       util::throw_runtime_error("Cannot create", idx_file.string());
     }
@@ -67,14 +67,14 @@ public:
       oss << "Building map for partition " << i + 1 << '/' << num_hashtables;
       util::log(oss.str());
       ofs << BuildMap(input_files[i], algorithm).filename().string() << '\n';
-      bfs::remove(input_files[i]);
+      fs::remove(input_files[i]);
     }
     ofs.close();
     util::log("Construction succeeded");
   }
 
 private:
-  static bool IsUnique(const bfs::path& key_file) {
+  static bool IsUnique(const fs::path& key_file) {
     // Set current locale to C to enable byte-wise UTF-8 string comparison.
     const std::string command =
         "export LC_ALL=C && sort " + key_file.string() + " | uniq -d";
@@ -99,7 +99,7 @@ private:
    * Generates a minimal perfect hash function from the given key file.
    * Note that the entire key file will be loaded into memory.
    */
-  static bfs::path BuildHashFunction(const bfs::path& key_file,
+  static fs::path BuildHashFunction(const fs::path& key_file,
                                      Algorithm algorithm) {
     if (!IsUnique(key_file)) {
       util::throw_runtime_error("Keys are not unique");
@@ -115,7 +115,7 @@ private:
     if (mphf == NULL) {
       util::throw_runtime_error("Cannot generate MPHF from", key_file);
     }
-    const bfs::path mph_fn(key_file.string() + ".mph");
+    const fs::path mph_fn(key_file.string() + ".mph");
     FILE* mph_wfs(util::fopen(mph_fn, "wb"));
     cmph_dump(mphf, mph_wfs);
     util::fclose(mph_wfs);
@@ -123,14 +123,14 @@ private:
     return mph_fn;
   }
 
-  static bfs::path BuildHashTable(const bfs::path& mph_file,
-                                  const bfs::path& rec_file) {
+  static fs::path BuildHashTable(const fs::path& mph_file,
+                                  const fs::path& rec_file) {
     FILE* mph_rfs(util::fopen(mph_file, "rb"));
     cmph_t* mph(cmph_load(mph_rfs));
     if (mph == NULL) {
       util::throw_runtime_error("Cannot load MPHF from", mph_file);
     }
-    bfs::ifstream ifs(rec_file);
+    std::ifstream ifs(rec_file);
     if (!ifs) {
       util::throw_runtime_error("Cannot open", rec_file);
     }
@@ -163,7 +163,7 @@ private:
       iss.clear();
     }
     // write table to disk
-    const bfs::path dat_fn(rec_file.string() + ".dat");
+    const fs::path dat_fn(rec_file.string() + ".dat");
     FILE* dat_wfs(util::fopen(dat_fn, "wb"));
     util::fwrite(table, 1, table_size, dat_wfs);
     // clean up
@@ -175,29 +175,29 @@ private:
     return dat_fn;
   }
 
-  static bfs::path BuildMap(const bfs::path& input_file, Algorithm algorithm) {
-    const bfs::path key_file = CreateKeyFile(input_file);
-    const bfs::path mph_file = BuildHashFunction(key_file, algorithm);
-    const bfs::path dat_file = BuildHashTable(mph_file, input_file);
-    const bfs::path idx_file = input_file.string() + ".idx";
-    bfs::ofstream ofs(idx_file);
+  static fs::path BuildMap(const fs::path& input_file, Algorithm algorithm) {
+    const fs::path key_file = CreateKeyFile(input_file);
+    const fs::path mph_file = BuildHashFunction(key_file, algorithm);
+    const fs::path dat_file = BuildHashTable(mph_file, input_file);
+    const fs::path idx_file = input_file.string() + ".idx";
+    std::ofstream ofs(idx_file);
     if (!ofs) {
       util::throw_runtime_error("Cannot create", idx_file);
     }
     ofs << mph_file.filename().string() << '\n'
         << dat_file.filename().string() << std::endl;
     ofs.close();
-    bfs::remove(key_file);
+    fs::remove(key_file);
     return idx_file;
   }
 
-  static bfs::path CreateKeyFile(const bfs::path& rec_file) {
-    bfs::ifstream ifs(rec_file);
+  static fs::path CreateKeyFile(const fs::path& rec_file) {
+    std::ifstream ifs(rec_file);
     if (!ifs) {
       util::throw_runtime_error("Cannot open", rec_file);
     }
-    const bfs::path key_file(rec_file.string() + ".keys");
-    bfs::ofstream ofs(key_file);
+    const fs::path key_file(rec_file.string() + ".keys");
+    std::ofstream ofs(key_file);
     if (!ofs) {
       util::throw_runtime_error("Cannot create", key_file);
     }
@@ -214,15 +214,15 @@ private:
     return key_file;
   }
 
-  static uint64_t CountRecords(const bfs::path& input_dir) {
+  static uint64_t CountRecords(const fs::path& input_dir) {
     // std::getline is up to 10% faster than
     // std::fgetc and std::iostream::get (tested)
     std::string line;
-    bfs::ifstream ifs;
+    std::ifstream ifs;
     uint64_t record_count(0);
-    bfs::directory_iterator end;
-    for (bfs::directory_iterator it(input_dir); it != end; ++it) {
-      if (bfs::is_regular_file(it->path()) &&
+    fs::directory_iterator end;
+    for (fs::directory_iterator it(input_dir); it != end; ++it) {
+      if (fs::is_regular_file(it->path()) &&
           !util::is_hidden_file(it->path())) {
         ifs.open(it->path());
         if (!ifs) {
@@ -238,21 +238,21 @@ private:
     return record_count;
   }
 
-  static std::vector<bfs::path> Partition(const bfs::path& input_dir,
-                                          const bfs::path& output_dir) {
+  static std::vector<fs::path> Partition(const fs::path& input_dir,
+                                          const fs::path& output_dir) {
     const uint32_t num_records_per_hashmap = 10000000;
     const uint64_t num_records_total = CountRecords(input_dir);
     const uint32_t num_maps = 1 + num_records_total / num_records_per_hashmap;
 
     // create record files for hash maps
-    std::vector<bfs::path> rec_paths;
-    std::vector<bfs::ofstream*> rec_files;
+    std::vector<fs::path> rec_paths;
+    std::vector<std::ofstream*> rec_files;
     for (std::size_t i = 0; i != num_maps; ++i) {
       const auto new_suffix = '.' + std::to_string(i);
       const auto new_filename =
-          input_dir.filename().replace_extension(bfs::path(new_suffix));
+          input_dir.filename().replace_extension(fs::path(new_suffix));
       rec_paths.push_back(output_dir / new_filename);
-      rec_files.push_back(new bfs::ofstream(rec_paths.back()));
+      rec_files.push_back(new std::ofstream(rec_paths.back()));
       if (!rec_files.back()->is_open()) {
         util::throw_runtime_error("Cannot create", rec_paths.back());
       }
@@ -260,11 +260,11 @@ private:
     // scatter records
     std::string key;
     std::string line;
-    bfs::ifstream ifs;
-    bfs::directory_iterator end;
+    std::ifstream ifs;
+    fs::directory_iterator end;
     std::string::size_type delim;
-    for (bfs::directory_iterator it(input_dir); it != end; ++it) {
-      if (bfs::is_regular_file(it->path()) &&
+    for (fs::directory_iterator it(input_dir); it != end; ++it) {
+      if (fs::is_regular_file(it->path()) &&
           !util::is_hidden_file(it->path())) {
         ifs.open(it->path());
         if (!ifs) {

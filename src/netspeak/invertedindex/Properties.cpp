@@ -36,13 +36,13 @@ void Properties::print(std::ostream& os) const {
      << "\n}";
 }
 
-void Properties::read(const boost::filesystem::path& path) {
+void Properties::read(const std::filesystem::path& path) {
   FILE* rfs(util::fopen(path, "rb"));
   util::fread(this, sizeof(Properties), 1, rfs);
   util::fclose(rfs);
 }
 
-void Properties::write(const boost::filesystem::path& path) {
+void Properties::write(const std::filesystem::path& path) {
   FILE* wfs(util::fopen(path, "wb"));
   util::fwrite(this, sizeof(Properties), 1, wfs);
   util::fclose(wfs);

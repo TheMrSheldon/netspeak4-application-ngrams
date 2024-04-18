@@ -9,7 +9,7 @@
 #include <iostream>
 #include <string>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 #include <boost/type_traits.hpp>
 #include <boost/utility.hpp>
 
@@ -40,7 +40,7 @@ public:
   CmphMap(const CmphMap&) = delete;
   CmphMap& operator=(const CmphMap&) = delete;
 
-  explicit CmphMap(const boost::filesystem::path& mph_file)
+  explicit CmphMap(const std::filesystem::path& mph_file)
       : algo_(Algorithm::None), mphf_(NULL) {
     FILE* fd = util::fopen(mph_file, "rb");
     algo_ = ExtractAlgorithm(fd);

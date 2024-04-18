@@ -3,7 +3,7 @@
 #ifndef NETSPEAK_INVERTEDINDEX_SEARCHER_HPP
 #define NETSPEAK_INVERTEDINDEX_SEARCHER_HPP
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 
 #include "netspeak/invertedindex/Postlist.hpp"
 #include "netspeak/invertedindex/RawSearcher.hpp"
@@ -43,8 +43,8 @@ public:
     config_ = config;
 
     // load properties
-    const boost::filesystem::path filename(
-        boost::filesystem::path(config.index_directory()) /
+    const std::filesystem::path filename(
+        std::filesystem::path(config.index_directory()) /
         Properties::default_filename());
     FILE* rfs(util::fopen(filename, "rb"));
     util::fread(&props_, sizeof(props_), 1, rfs);

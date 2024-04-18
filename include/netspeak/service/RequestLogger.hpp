@@ -8,8 +8,8 @@
 #include <memory>
 #include <unordered_map>
 
-#include <boost/filesystem.hpp>
-#include <boost/optional.hpp>
+#include <filesystem>
+#include <optional>
 
 #include "netspeak/Netspeak.hpp"
 #include <netspeak/NetspeakService.grpc.pb.h>
@@ -35,7 +35,7 @@ public:
   RequestLogger() = delete;
   RequestLogger(const RequestLogger&) = delete;
   RequestLogger(std::unique_ptr<NetspeakService::Service> service,
-                boost::filesystem::path log_dir);
+                std::filesystem::path log_dir);
   ~RequestLogger() override {}
 
   grpc::Status Search(grpc::ServerContext* context,

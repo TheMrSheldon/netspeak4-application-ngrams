@@ -2,13 +2,13 @@
 
 #include <string>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 
 #include <netspeak/util/traceable_error.hpp>
 
 namespace netspeak {
 
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 
 
 // CONSTANTS
@@ -62,31 +62,31 @@ const std::unordered_set<std::string> PATHS{
 
 void Configuration::load_extends() {
   if (config_.contains(EXTENDS)) {
-    auto extends_path = bfs::path(config_.get(EXTENDS));
+    auto extends_path = fs::path(config_.get(EXTENDS));
     if (extends_path.empty()) {
       return;
     }
     if (!base_dir_.empty()) {
-      extends_path = bfs::absolute(extends_path, base_dir_);
+      extends_path = fs::absolute(base_dir_ / extends_path);
     }
     extends_ = std::make_unique<Configuration>(extends_path);
   }
 }
 void Configuration::desugar_home() {
   if (config_.contains(PATH_TO_HOME)) {
-    auto home_path = bfs::path(config_.get(PATH_TO_HOME));
+    auto home_path = fs::path(config_.get(PATH_TO_HOME));
     if (home_path.empty()) {
       return;
     }
     if (!base_dir_.empty()) {
-      home_path = bfs::absolute(home_path, base_dir_);
+      home_path = fs::absolute(base_dir_ / home_path);
     }
 
     auto set_default = [&](const std::string& key,
                            const std::string& default_value) {
       if (!config_.contains(key)) {
         config_[key] =
-            bfs::weakly_canonical(bfs::absolute(default_value, home_path))
+            fs::weakly_canonical(fs::absolute(home_path / default_value))
                 .string();
       }
     };
@@ -106,7 +106,7 @@ Configuration::Configuration(
   load_extends();
   desugar_home();
 }
-Configuration::Configuration(bfs::path file_name)
+Configuration::Configuration(fs::path file_name)
     : config_(file_name), extends_(), base_dir_(file_name.parent_path()) {
   load_extends();
   desugar_home();
@@ -130,14 +130,14 @@ std::string Configuration::get_required(const std::string& key) const {
                                        " is missing.");
   }
 }
-boost::optional<std::string> Configuration::get_optional(
+std::optional<std::string> Configuration::get_optional(
     const std::string& key) const {
   if (config_.contains(key)) {
     return config_.get(key);
   } else if (extends_) {
     return extends_->get_optional(key);
   } else {
-    return boost::none;
+    return std::nullopt;
   }
 }
 std::string Configuration::get(const std::string& key,
@@ -150,25 +150,25 @@ std::string Configuration::get(const std::string& key,
   }
 }
 
-bfs::path relative_to(const std::string& path, const bfs::path& to) {
+fs::path relative_to(const std::string& path, const fs::path& to) {
   if (to.empty()) {
-    return bfs::weakly_canonical(path);
+    return fs::weakly_canonical(path);
   } else {
-    return bfs::weakly_canonical(bfs::absolute(path, to));
+    return fs::weakly_canonical(fs::absolute(to / path));
   }
 }
-bfs::path Configuration::get_required_path(const std::string& key) const {
+fs::path Configuration::get_required_path(const std::string& key) const {
   return relative_to(get_required(key), base_dir_);
 }
-boost::optional<bfs::path> Configuration::get_optional_path(
+std::optional<fs::path> Configuration::get_optional_path(
     const std::string& key) const {
   const auto optional = get_optional(key);
   if (!optional) {
-    return boost::none;
+    return std::nullopt;
   }
   return relative_to(*optional, base_dir_);
 }
-bfs::path Configuration::get_path(const std::string& key,
+fs::path Configuration::get_path(const std::string& key,
                                   const std::string& defaultValue) const {
   return relative_to(get(key, defaultValue), base_dir_);
 }
@@ -189,11 +189,11 @@ bool parse_bool(const std::string& key, const std::string& value) {
 bool Configuration::get_required_bool(const std::string& key) const {
   return parse_bool(key, get_required(key));
 }
-boost::optional<bool> Configuration::get_optional_bool(
+std::optional<bool> Configuration::get_optional_bool(
     const std::string& key) const {
   const auto optional = get_optional(key);
   if (!optional) {
-    return boost::none;
+    return std::nullopt;
   }
   return parse_bool(key, *optional);
 }

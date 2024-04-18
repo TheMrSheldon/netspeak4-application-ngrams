@@ -8,7 +8,7 @@
 #include <memory>
 #include <numeric>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 
 #include "netspeak/invertedindex/Postlist.hpp"
 #include "netspeak/util/logging.hpp"
@@ -29,7 +29,7 @@ private:
 
 public:
   static std::unique_ptr<Postlist<T>> read(
-      const boost::filesystem::path& path, FILE* file, uint32_t index_begin = 0,
+      const std::filesystem::path& path, FILE* file, uint32_t index_begin = 0,
       uint32_t value_count = std::numeric_limits<uint32_t>::max(),
       uint32_t page_size = swap_type::default_pagesize) {
     std::unique_ptr<Postlist<T>> postlist;

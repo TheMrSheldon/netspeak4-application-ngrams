@@ -48,7 +48,7 @@ public:
     const std::string tn(
         value::value_traits<typename record_type::value_type>::type_name());
     std::strncpy(props.value_type, tn.c_str(), sizeof(props.value_type));
-    props.write(bfs::path(strategy_->config().index_directory()) /
+    props.write(fs::path(strategy_->config().index_directory()) /
                 Properties::default_filename());
     util::log("Indexing succeeded");
     util::log("Properties", props);
@@ -80,13 +80,13 @@ public:
 
 private: // class member
   static void assert_config(const Configuration& config) {
-    if (!bfs::exists(config.index_directory())) {
+    if (!fs::exists(config.index_directory())) {
       util::throw_invalid_argument("Does not exist", config.index_directory());
     }
-    if (!bfs::is_directory(config.index_directory())) {
+    if (!fs::is_directory(config.index_directory())) {
       util::throw_invalid_argument("Not a directory", config.index_directory());
     }
-    if (!bfs::is_empty(config.index_directory())) {
+    if (!fs::is_empty(config.index_directory())) {
       util::throw_invalid_argument("Is not empty", config.index_directory());
     }
   }

@@ -6,7 +6,7 @@
 #include <string>
 #include <vector>
 
-#include "boost/optional.hpp"
+#include <optional>
 
 #include "LengthRange.hpp"
 

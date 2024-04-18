@@ -1,4 +1,4 @@
-#include <boost/filesystem.hpp>
+#include <filesystem>
 #include <boost/test/unit_test.hpp>
 
 #include "paths.hpp"
@@ -14,7 +14,7 @@ typedef Phrase::Id Id;
 
 BOOST_AUTO_TEST_SUITE(test_PhraseCorpus)
 
-const boost::filesystem::path phrase_files_dir(test::INDEX_DIR +
+const std::filesystem::path phrase_files_dir(test::INDEX_DIR +
                                                "/phrase-corpus/bin");
 
 // the test index is fixed, so we know these numbers

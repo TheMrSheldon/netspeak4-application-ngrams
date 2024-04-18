@@ -6,7 +6,7 @@
 #include <ostream>
 #include <string>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 
 #include "netspeak/invertedindex/Configuration.hpp"
 
@@ -23,8 +23,8 @@ struct Properties {
 
   void print(std::ostream& os) const;
 
-  void read(const boost::filesystem::path& path);
-  void write(const boost::filesystem::path& path);
+  void read(const std::filesystem::path& path);
+  void write(const std::filesystem::path& path);
 
   Properties& operator=(const Properties& rhs);
 

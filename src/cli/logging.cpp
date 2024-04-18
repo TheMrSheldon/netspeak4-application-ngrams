@@ -1,6 +1,6 @@
 #include "cli/logging.hpp"
 
-#include "boost/filesystem.hpp"
+#include <filesystem>
 
 #include "netspeak/service/RequestLogger.hpp"
 
@@ -9,7 +9,7 @@ namespace cli {
 
 using namespace netspeak::service;
 namespace bpo = boost::program_options;
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 
 #define LOG_DIR_KEY "log-dir"
 
@@ -36,7 +36,7 @@ std::unique_ptr<NetspeakService::Service> add_logging(
     std::unique_ptr<NetspeakService::Service> service) {
   if (variables.count(LOG_DIR_KEY) > 0) {
     // add a logger
-    bfs::path log_dir(variables[LOG_DIR_KEY].as<std::string>());
+    fs::path log_dir(variables[LOG_DIR_KEY].as<std::string>());
     return std::make_unique<RequestLogger>(std::move(service), log_dir);
   } else {
     return service;

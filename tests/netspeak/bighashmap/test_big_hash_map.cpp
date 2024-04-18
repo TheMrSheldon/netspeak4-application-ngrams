@@ -17,7 +17,6 @@
 
 using namespace netspeak;
 using namespace value;
-namespace bfs = boost::filesystem;
 
 template <typename Value>
 struct RandomRecordGenerator {
@@ -59,8 +58,8 @@ void RunTest(util::memory_type mode, size_t num_records) {
   std::generate(records.begin(), records.end(), RandomRecordGenerator<Value>());
   test::ManagedDirectory input("bhm_test_input");
   test::ManagedDirectory output("bhm_test_output");
-  const bfs::path input_file = input.dir() / "records";
-  bfs::ofstream ofs(input_file);
+  const fs::path input_file = input.dir() / "records";
+  std::ofstream ofs(input_file);
   BOOST_REQUIRE(ofs);
   // enable fixed floating-point notation
   ofs.setf(std::ios::fixed, std::ios::floatfield);

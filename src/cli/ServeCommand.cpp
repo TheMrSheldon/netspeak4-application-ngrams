@@ -9,8 +9,8 @@
 #include <string>
 
 #include "boost/algorithm/string.hpp"
-#include "boost/filesystem.hpp"
-#include "boost/optional.hpp"
+#include <filesystem>
+#include <optional>
 
 #include "cli/logging.hpp"
 #include "cli/util.hpp"
@@ -26,7 +26,6 @@
 namespace cli {
 
 namespace bpo = boost::program_options;
-namespace bfs = boost::filesystem;
 using namespace netspeak;
 
 #define CONFIG_KEY "config"
@@ -70,7 +69,7 @@ void ServeCommand::add_options(
   add_logging_options(easy_init);
 }
 
-boost::optional<Configuration> parse_overrides(
+std::optional<Configuration> parse_overrides(
     const std::vector<std::string>& overrides) {
   util::Config config;
 
@@ -100,13 +99,13 @@ boost::optional<Configuration> parse_overrides(
   }
 
   if (config.empty()) {
-    return boost::none;
+    return std::nullopt;
   } else {
     return Configuration(config);
   }
 }
 Configuration load_config(const std::string& config_file,
-                          const boost::optional<Configuration>& override) {
+                          const std::optional<Configuration>& override) {
   std::cout << "Loading config " << config_file << std::endl;
   Configuration config(config_file);
   if (override) {
@@ -139,7 +138,7 @@ std::unique_ptr<service::NetspeakService::Service> build_service(
   const auto& patterns = variables[CONFIG_KEY].as<std::vector<std::string>>();
   const auto overrides =
       variables.count(OVERRIDE_KEY) == 0
-          ? boost::none
+          ? std::nullopt
           : parse_overrides(
                 variables[OVERRIDE_KEY].as<std::vector<std::string>>());
 

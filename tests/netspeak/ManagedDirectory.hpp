@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 #include <boost/test/unit_test.hpp>
 
 namespace test {
@@ -16,19 +16,19 @@ namespace test {
  */
 class ManagedDirectory {
 private:
-  const boost::filesystem::path path_;
+  const std::filesystem::path path_;
 
 public:
   ManagedDirectory() = delete;
   ManagedDirectory(const ManagedDirectory&) = delete;
   ManagedDirectory(const std::string& path_str) : path_(path_str) {
-    BOOST_REQUIRE(boost::filesystem::create_directory(path_));
+    BOOST_REQUIRE(std::filesystem::create_directory(path_));
   }
   ~ManagedDirectory() {
-    boost::filesystem::remove_all(path_);
+    std::filesystem::remove_all(path_);
   }
 
-  const boost::filesystem::path& dir() const {
+  const std::filesystem::path& dir() const {
     return path_;
   }
 };

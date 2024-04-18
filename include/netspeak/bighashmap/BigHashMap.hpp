@@ -56,16 +56,16 @@ private:
     }
   }
 
-  static uint64_t SerializedSizeInBytes(const bfs::path& dir) {
+  static uint64_t SerializedSizeInBytes(const fs::path& dir) {
     uint64_t size = 0;
-    if (bfs::exists(dir)) {
-      const bfs::directory_iterator end;
-      for (bfs::directory_iterator it(dir); it != end; ++it) {
-        if (!bfs::is_regular_file(it->path()))
+    if (fs::exists(dir)) {
+      const fs::directory_iterator end;
+      for (fs::directory_iterator it(dir); it != end; ++it) {
+        if (!fs::is_regular_file(it->path()))
           continue;
         if (boost::ends_with(it->path().string(), "dat") ||
             boost::ends_with(it->path().string(), "mph")) {
-          size += bfs::file_size(it->path());
+          size += fs::file_size(it->path());
         }
       }
     }
@@ -73,7 +73,7 @@ private:
   }
 
 public:
-  static void Build(const bfs::path& input_dir, const bfs::path& output_dir,
+  static void Build(const fs::path& input_dir, const fs::path& output_dir,
                     Algorithm algorithm = Algorithm::BDZ) {
     // Set current locale to C to enable byte-wise UTF-8 string comparison.
     // http://stackoverflow.com/questions/20226851/how-do-locales-work-in-linux-posix-and-what-transformations-are-applied/20231523
@@ -82,10 +82,10 @@ public:
   }
 
   static BigHashMap* Open(
-      const bfs::path& dir,
+      const fs::path& dir,
       util::memory_type memory = util::memory_type::min_required) {
-    const bfs::path idx_file = dir / index_file_name;
-    bfs::ifstream ifs(idx_file);
+    const fs::path idx_file = dir / index_file_name;
+    std::ifstream ifs(idx_file);
     if (!ifs) {
       util::throw_runtime_error("Cannot open", idx_file);
     }

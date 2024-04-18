@@ -21,7 +21,7 @@
 namespace netspeak {
 namespace bighashmap {
 
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 
 /**
  * This class implements a hash table with a minimal perfect hash function for
@@ -60,7 +60,7 @@ private:
   typedef value::pair<Checksum, Value> Entry;
   typedef value::value_traits<Entry> EntryTraits;
 
-  ExternalMap(const bfs::path& mph_file, const bfs::path& dat_file)
+  ExternalMap(const fs::path& mph_file, const fs::path& dat_file)
       : Base(mph_file) {
     data_ = util::fopen(dat_file, "rb");
   }
@@ -77,8 +77,8 @@ private:
   }
 
 public:
-  static ExternalMap* Open(const bfs::path& idx_file) {
-    bfs::ifstream ifs(idx_file);
+  static ExternalMap* Open(const fs::path& idx_file) {
+    std::ifstream ifs(idx_file);
     if (!ifs) {
       util::throw_runtime_error("Cannot open", idx_file);
     }

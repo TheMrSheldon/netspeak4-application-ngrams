@@ -3,10 +3,11 @@
 #ifndef NETSPEAK_UTIL_SYSTEMIO_HPP
 #define NETSPEAK_UTIL_SYSTEMIO_HPP
 
+#include <assert.h>
 #include <climits>
 #include <cstring>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 
 #include "netspeak/util/exception.hpp"
 
@@ -16,9 +17,9 @@
 namespace netspeak {
 namespace util {
 
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 
-inline bool is_hidden_file(const bfs::path& path) {
+inline bool is_hidden_file(const fs::path& path) {
   return path.filename().string().front() == '.';
 }
 
@@ -26,7 +27,7 @@ inline bool is_hidden_file(const bfs::path& path) {
  * Converts the given 'path' to an absolute path using 'base' as base path.
  * If 'path' is already an absolute path it is returned without modification.
  */
-inline bfs::path make_absolute(const bfs::path& path, const bfs::path& base) {
+inline fs::path make_absolute(const fs::path& path, const fs::path& base) {
   return path.is_absolute() ? path : (base / path);
 }
 
@@ -41,15 +42,15 @@ void signal_error(const std::string& msg, const T& obj) {
   throw_runtime_error(msg, obj);
 }
 
-inline uint64_t directory_size(const bfs::path& dir) {
+inline uint64_t directory_size(const fs::path& dir) {
   uint64_t num_bytes = 0;
-  const bfs::directory_iterator end;
-  for (bfs::directory_iterator it(dir); it != end; ++it) {
-    if (bfs::is_regular_file(it->path())) {
+  const fs::directory_iterator end;
+  for (fs::directory_iterator it(dir); it != end; ++it) {
+    if (fs::is_regular_file(it->path())) {
       if (!is_hidden_file(it->path())) {
-        num_bytes += bfs::file_size(it->path());
+        num_bytes += fs::file_size(it->path());
       }
-    } else if (bfs::is_directory(it->path())) {
+    } else if (fs::is_directory(it->path())) {
       num_bytes += directory_size(it->path());
     }
   }
@@ -64,7 +65,7 @@ inline void fclose(FILE* fs) {
   }
 }
 
-inline FILE* fopen(const bfs::path& path, const std::string& mode) {
+inline FILE* fopen(const fs::path& path, const std::string& mode) {
   FILE* fs(std::fopen(path.string().c_str(), mode.c_str()));
   if (fs == NULL) {
     signal_error("std::fopen failed", path);
@@ -130,7 +131,7 @@ inline FILE* tmpfile() {
   return fs;
 }
 
-inline const bfs::path tmpdir(const bfs::path& parent_dir) {
+inline const fs::path tmpdir(const fs::path& parent_dir) {
   char tmpdir[PATH_MAX];
   const std::string pattern("/tmp_XXXXXX");
   const std::string parent_str(parent_dir.string());
@@ -142,13 +143,13 @@ inline const bfs::path tmpdir(const bfs::path& parent_dir) {
   return tmpdir;
 }
 
-inline void CreateOrCheckIfEmpty(const bfs::path& directory) {
-  if (bfs::is_directory(directory)) {
-    if (!bfs::is_empty(directory)) {
+inline void CreateOrCheckIfEmpty(const fs::path& directory) {
+  if (fs::is_directory(directory)) {
+    if (!fs::is_empty(directory)) {
       signal_error("is not empty", directory);
     }
   } else {
-    bfs::create_directories(directory);
+    fs::create_directories(directory);
   }
 }
 

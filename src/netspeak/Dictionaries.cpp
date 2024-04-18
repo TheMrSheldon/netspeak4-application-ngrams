@@ -1,10 +1,10 @@
 #include <netspeak/Dictionaries.hpp>
 
+#include <fstream>
 #include <string>
 #include <vector>
 
 #include <boost/algorithm/string.hpp>
-#include <boost/filesystem/fstream.hpp>
 
 #include <netspeak/error.hpp>
 #include <netspeak/util/check.hpp>
@@ -12,8 +12,8 @@
 namespace netspeak {
 
 const Dictionaries::Map Dictionaries::read_from_file(
-    const boost::filesystem::path& csv) {
-  boost::filesystem::ifstream ifs(csv);
+    const std::filesystem::path& csv) {
+  std::ifstream ifs(csv);
   util::check(ifs.is_open(), error_message::cannot_open, csv);
   return parse_csv(ifs);
 }

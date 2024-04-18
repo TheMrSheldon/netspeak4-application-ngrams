@@ -17,7 +17,7 @@
 namespace netspeak {
 namespace bighashmap {
 
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 
 /**
  * NOTES
@@ -41,7 +41,7 @@ private:
   typedef value::pair<Checksum, Value> Entry;
   typedef value::value_traits<Entry> EntryTraits;
 
-  InternalMap(const bfs::path& mph_file, const bfs::path& dat_file)
+  InternalMap(const fs::path& mph_file, const fs::path& dat_file)
       : Base(mph_file) {
     const Entry entry;
     data_ = static_cast<char*>(
@@ -56,8 +56,8 @@ private:
   }
 
 public:
-  static InternalMap* Open(const bfs::path& idx_file) {
-    bfs::ifstream ifs(idx_file);
+  static InternalMap* Open(const fs::path& idx_file) {
+    std::ifstream ifs(idx_file);
     if (!ifs) {
       util::throw_runtime_error("Cannot open", idx_file);
     }

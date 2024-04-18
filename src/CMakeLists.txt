@@ -127,8 +127,7 @@ protobuf_generate(
 # target_include_directories(netspeak PUBLIC ${NS_PROTO_HPP})
 
 # Boost
-# TODO: replace with boost::filesystem with std::filesystem
-find_package(Boost 1.40 COMPONENTS filesystem program_options regex REQUIRED)
+find_package(Boost 1.40 COMPONENTS program_options regex REQUIRED)
 target_link_libraries(netspeak PUBLIC ${Boost_LIBRARIES})
 
 # cmph

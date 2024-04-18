@@ -4,7 +4,7 @@
 #include <locale>
 #include <unordered_set>
 
-#include <boost/optional.hpp>
+#include <optional>
 
 #include <netspeak/model/QuerySyntax.hpp>
 
@@ -23,9 +23,9 @@ typedef model::QuerySyntax Syntax;
  * @param begin
  * @param end
  * @param end_char
- * @return boost::optional<std::u32string>
+ * @return std::optional<std::u32string>
  */
-boost::optional<std::u32string> read_until_char(
+std::optional<std::u32string> read_until_char(
     std::u32string::const_iterator begin, std::u32string::const_iterator end,
     char32_t end_char) {
   std::u32string result;
@@ -39,7 +39,7 @@ boost::optional<std::u32string> read_until_char(
   }
 
   // if we had hit the end char, we wouldn't be here
-  return boost::none;
+  return std::nullopt;
 }
 
 

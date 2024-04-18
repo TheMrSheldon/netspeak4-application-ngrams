@@ -14,7 +14,7 @@
 namespace netspeak {
 namespace invertedindex {
 
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 
 template <typename T>
 class StorageWriter : public boost::noncopyable {
@@ -31,15 +31,15 @@ public:
 
   static const size_t data_file_size_max = 1024 * 1024 * 1024; // 1GB
 
-  StorageWriter(const bfs::path& directory)
+  StorageWriter(const fs::path& directory)
       : directory_(directory), data_file_cnt_(), data_wfs_(NULL) {
-    if (!bfs::exists(directory)) {
+    if (!fs::exists(directory)) {
       util::throw_invalid_argument("Does not exist", directory);
     }
-    if (!bfs::is_directory(directory)) {
+    if (!fs::is_directory(directory)) {
       util::throw_invalid_argument("Not a directory", directory);
     }
-    //    if (!bfs::is_empty(directory)) {
+    //    if (!fs::is_empty(directory)) {
     //      util::throw_invalid_argument("Is not empty", directory);
     //    }
   }
@@ -55,8 +55,8 @@ public:
     table_ofs_.close();
     util::fclose(data_wfs_);
     data_wfs_ = NULL;
-    const bfs::path table_dir(directory_ / k_table_dir);
-    if (!bfs::create_directory(table_dir)) {
+    const fs::path table_dir(directory_ / k_table_dir);
+    if (!fs::create_directory(table_dir)) {
       util::throw_invalid_argument("Cannot create", table_dir);
     }
     util::log("Building header table");
@@ -72,20 +72,20 @@ public:
     }
     const size_t postlist_size(postlist.byte_size());
     if (data_wfs_ == NULL) {
-      const bfs::path data_dir(directory_ / k_data_dir);
-      if (!bfs::create_directory(data_dir)) {
+      const fs::path data_dir(directory_ / k_data_dir);
+      if (!fs::create_directory(data_dir)) {
         util::throw_invalid_argument("Cannot create", data_dir);
       }
       const std::string num(util::to_string(data_file_cnt_++));
       data_wfs_ = util::fopen(data_dir / (k_data_file + num), "wb");
-      const bfs::path table_file(directory_ / k_table_file);
+      const fs::path table_file(directory_ / k_table_file);
       table_ofs_.open(table_file);
       if (!table_ofs_) {
         util::throw_invalid_argument("Cannot create", table_file);
       }
     } else if (util::ftell(data_wfs_) + postlist_size > data_file_size_max) {
       util::fclose(data_wfs_);
-      const bfs::path data_dir(directory_ / k_data_dir);
+      const fs::path data_dir(directory_ / k_data_dir);
       const std::string num(util::to_string(data_file_cnt_++));
       data_wfs_ = util::fopen(data_dir / (k_data_file + num), "wb");
     }
@@ -96,8 +96,8 @@ public:
   }
 
 private:
-  bfs::path directory_;
-  bfs::ofstream table_ofs_;
+  fs::path directory_;
+  std::ofstream table_ofs_;
   uint16_t data_file_cnt_;
   FILE* data_wfs_;
 };

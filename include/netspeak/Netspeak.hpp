@@ -6,7 +6,7 @@
 #include <string>
 #include <typeinfo>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 #include <netspeak/NetspeakService.pb.h>
 
 #include "../antlr4/parse.hpp"

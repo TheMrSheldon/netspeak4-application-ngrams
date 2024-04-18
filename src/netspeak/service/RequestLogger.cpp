@@ -4,7 +4,7 @@
 #include <sstream>
 
 #include <boost/date_time/posix_time/posix_time.hpp>
-#include <boost/filesystem.hpp>
+#include <filesystem>
 #include <boost/regex.hpp>
 
 #include <google/protobuf/util/json_util.h>
@@ -17,8 +17,6 @@
 
 namespace netspeak {
 namespace service {
-
-namespace bfs = boost::filesystem;
 
 
 std::string utc_timestamp() {
@@ -35,10 +33,10 @@ std::string get_log_file_prefix() {
 }
 
 RequestLogger::RequestLogger(std::unique_ptr<NetspeakService::Service> service,
-                             bfs::path log_dir)
+                             fs::path log_dir)
     : service_(std::move(service)), req_counter_(0) {
-  if (!bfs::is_directory(log_dir)) {
-    bfs::create_directories(log_dir);
+  if (!fs::is_directory(log_dir)) {
+    fs::create_directories(log_dir);
   }
 
   util::log("Creating log files in", log_dir);

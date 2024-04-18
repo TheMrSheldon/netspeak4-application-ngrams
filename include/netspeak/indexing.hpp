@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 
 #include "netspeak/Configuration.hpp"
 #include "netspeak/invertedindex/Postlist.hpp"
@@ -22,8 +22,8 @@ namespace netspeak {
  * @param phrase_dir
  * @param netspeak_dir
  */
-void BuildNetspeak(const boost::filesystem::path& phrase_dir,
-                   const boost::filesystem::path& netspeak_dir);
+void BuildNetspeak(const std::filesystem::path& phrase_dir,
+                   const std::filesystem::path& netspeak_dir);
 
 /**
  * This function builds the "phrase-corpus" component of Netspeak.
@@ -65,24 +65,24 @@ void BuildNetspeak(const boost::filesystem::path& phrase_dir,
  * - All n-grams in phrase_dir are unique.
  * - The phrase_corpus_dir is empty and writable.
  */
-uint64_t BuildPhraseCorpus(const boost::filesystem::path& phrase_dir,
-                           const boost::filesystem::path& phrase_corpus_dir);
+uint64_t BuildPhraseCorpus(const std::filesystem::path& phrase_dir,
+                           const std::filesystem::path& phrase_corpus_dir);
 
 /**
  * @param phrase_dir
  * @param phrase_dictionary_dir
  */
 void BuildPhraseDictionary(
-    const boost::filesystem::path& phrase_dir,
-    const boost::filesystem::path& phrase_dictionary_dir);
+    const std::filesystem::path& phrase_dir,
+    const std::filesystem::path& phrase_dictionary_dir);
 
 /**
  * @param phrase_dir
  * @param phrase_index_dir
  * @param expected_record_count
  */
-void BuildPhraseIndex(const boost::filesystem::path& phrase_dir,
-                      const boost::filesystem::path& phrase_index_dir,
+void BuildPhraseIndex(const std::filesystem::path& phrase_dir,
+                      const std::filesystem::path& phrase_index_dir,
                       uint64_t expected_record_count);
 
 std::vector<model::PostlistIndexValue> IndexPostlist(
@@ -96,8 +96,8 @@ std::vector<model::PostlistIndexValue> IndexPostlist(
  * @param phrase_index_dir
  * @param postlist_index_dir
  */
-void BuildPostlistIndex(const boost::filesystem::path& phrase_index_dir,
-                        const boost::filesystem::path& postlist_index_dir);
+void BuildPostlistIndex(const std::filesystem::path& phrase_index_dir,
+                        const std::filesystem::path& postlist_index_dir);
 
 /**
  * Creates the regex vocabulary for the index.
@@ -105,8 +105,8 @@ void BuildPostlistIndex(const boost::filesystem::path& phrase_index_dir,
  * @param regex_vocabulary_dir
  * @param phrase_corpus_dir
  */
-void BuildRegexVocabulary(const boost::filesystem::path& regex_vocabulary_dir,
-                          const boost::filesystem::path& phrase_corpus_dir,
+void BuildRegexVocabulary(const std::filesystem::path& regex_vocabulary_dir,
+                          const std::filesystem::path& phrase_corpus_dir,
                           const Configuration& config);
 
 /**
@@ -116,8 +116,8 @@ void BuildRegexVocabulary(const boost::filesystem::path& regex_vocabulary_dir,
  * @param phrase_src_dir Directory with n-gram files.
  * @param phrase_dst_dir Directory to store n-grams files with unique n-grams.
  */
-void MergeDuplicates(const boost::filesystem::path& phrase_src_dir,
-                     const boost::filesystem::path& phrase_dst_dir);
+void MergeDuplicates(const std::filesystem::path& phrase_src_dir,
+                     const std::filesystem::path& phrase_dst_dir);
 
 /**
  * Sets the file denoted by \c path to read-only mode. If \c path points to a
@@ -125,7 +125,7 @@ void MergeDuplicates(const boost::filesystem::path& phrase_src_dir,
  *
  * @param path
  */
-void SetReadOnly(const boost::filesystem::path& path);
+void SetReadOnly(const std::filesystem::path& path);
 
 } // namespace netspeak
 

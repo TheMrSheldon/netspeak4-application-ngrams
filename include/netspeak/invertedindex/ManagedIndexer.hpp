@@ -14,7 +14,7 @@
 namespace netspeak {
 namespace invertedindex {
 
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 
 /**
  * A class to create an inverted index from input files.
@@ -30,9 +30,9 @@ public:
     uint64_t current_input_size = 0;
     uint64_t current_record_count = 0;
 
-    const auto read_file = [&](const bfs::path& file, IndexerType& indexer) {
-      if (bfs::is_regular_file(file) && !util::is_hidden_file(file)) {
-        bfs::ifstream ifs(file);
+    const auto read_file = [&](const fs::path& file, IndexerType& indexer) {
+      if (fs::is_regular_file(file) && !util::is_hidden_file(file)) {
+        std::ifstream ifs(file);
         if (!ifs) {
           util::throw_invalid_argument("Cannot open", file);
         }
@@ -65,26 +65,26 @@ public:
           "Specify either an input file or a directory, not both");
     }
     if (!config.input_file().empty()) {
-      const bfs::path input_file = config.input_file();
-      if (!bfs::exists(input_file)) {
+      const fs::path input_file = config.input_file();
+      if (!fs::exists(input_file)) {
         util::throw_runtime_error("Does not exist", input_file);
       }
-      if (!bfs::is_regular_file(input_file)) {
+      if (!fs::is_regular_file(input_file)) {
         util::throw_runtime_error("No regular file", input_file);
       }
-      total_input_size = bfs::file_size(input_file);
+      total_input_size = fs::file_size(input_file);
       read_file(input_file, indexer);
     } else if (!config.input_directory().empty()) {
-      const bfs::path input_dir = config.input_directory();
-      if (!bfs::exists(input_dir)) {
+      const fs::path input_dir = config.input_directory();
+      if (!fs::exists(input_dir)) {
         util::throw_runtime_error("Does not exist", input_dir);
       }
-      if (!bfs::is_directory(input_dir)) {
+      if (!fs::is_directory(input_dir)) {
         util::throw_runtime_error("Not a directory", input_dir);
       }
       total_input_size = util::directory_size(input_dir);
-      const bfs::directory_iterator end;
-      for (bfs::directory_iterator it(input_dir); it != end; ++it) {
+      const fs::directory_iterator end;
+      for (fs::directory_iterator it(input_dir); it != end; ++it) {
         read_file(it->path(), indexer);
       }
     } else {

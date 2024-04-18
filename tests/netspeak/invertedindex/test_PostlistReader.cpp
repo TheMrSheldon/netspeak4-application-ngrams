@@ -3,7 +3,7 @@
 
 #include <memory>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 #include <boost/test/unit_test.hpp>
 
 #include "netspeak/invertedindex/Postlist.hpp"
@@ -14,7 +14,7 @@
 namespace ai = netspeak::invertedindex;
 namespace au = netspeak::util;
 namespace av = netspeak::value;
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 
 template <typename T>
 void test_io_with_empty_postlist() {
@@ -29,7 +29,7 @@ void test_io_with_empty_postlist() {
   // -------------------------------------------------------------------------
   // Write empty postlist to file (1000 times)
   // -------------------------------------------------------------------------
-  const bfs::path tmp_path("test_io_with_empty_postlist");
+  const fs::path tmp_path("test_io_with_empty_postlist");
   FILE* tmp_fs(au::fopen(tmp_path, "wb+"));
 
   const unsigned num(1000);
@@ -57,7 +57,7 @@ void test_io_with_empty_postlist() {
   BOOST_REQUIRE_EQUAL(au::ftell(tmp_fs), num * sizeof(postlist->head()));
 
   au::fclose(tmp_fs);
-  bfs::remove(tmp_path);
+  fs::remove(tmp_path);
 }
 
 template <typename T>
@@ -67,7 +67,7 @@ void test_io_with_full_postlist(size_t value_count) {
   // -------------------------------------------------------------------------
   // Create 10 postlists and write them to file
   // -------------------------------------------------------------------------
-  const bfs::path tmp_path("test_io_with_full_postlist_reading");
+  const fs::path tmp_path("test_io_with_full_postlist_reading");
   FILE* tmp_fs(au::fopen(tmp_path, "wb+"));
 
   const unsigned num(10);
@@ -105,7 +105,7 @@ void test_io_with_full_postlist(size_t value_count) {
   }
 
   au::fclose(tmp_fs);
-  bfs::remove(tmp_path);
+  fs::remove(tmp_path);
 }
 
 template <typename T>
@@ -115,7 +115,7 @@ void test_io_with_partial_postlist(size_t value_count) {
   // -------------------------------------------------------------------------
   // Create 10 postlists and write them to file
   // -------------------------------------------------------------------------
-  const bfs::path tmp_path("test_io_with_partial_postlist_reading");
+  const fs::path tmp_path("test_io_with_partial_postlist_reading");
   FILE* tmp_fs(au::fopen(tmp_path, "wb+"));
 
   const unsigned num(10);
@@ -171,7 +171,7 @@ void test_io_with_partial_postlist(size_t value_count) {
   BOOST_REQUIRE_EQUAL(au::ftell(tmp_fs), expected_file_offset);
 
   au::fclose(tmp_fs);
-  bfs::remove(tmp_path);
+  fs::remove(tmp_path);
 }
 
 template <typename T>

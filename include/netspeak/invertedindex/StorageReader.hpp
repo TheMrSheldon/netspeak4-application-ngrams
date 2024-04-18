@@ -7,7 +7,7 @@
 #include <mutex>
 #include <type_traits>
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 
 #include "netspeak/bighashmap/BigHashMap.hpp"
 #include "netspeak/invertedindex/PostlistReader.hpp"
@@ -17,13 +17,13 @@
 namespace netspeak {
 namespace invertedindex {
 
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 
 template <typename T, bool ThreadSafe>
 class StorageReader {
 private:
   typedef std::vector<FILE*> FileVector;
-  typedef std::vector<bfs::path> PathVector;
+  typedef std::vector<fs::path> PathVector;
   typedef typename StorageWriter<T>::Address Address;
   typedef bighashmap::BigHashMap<Address, ThreadSafe> Map;
   typedef std::integral_constant<bool, ThreadSafe> IsThreadSafe;
@@ -43,7 +43,7 @@ private:
   }
 
   inline std::unique_ptr<Postlist<T> > ReadPostlist(
-      const bfs::path& path, FILE* file, uint32_t offset, uint32_t begin,
+      const fs::path& path, FILE* file, uint32_t offset, uint32_t begin,
       uint32_t length, uint32_t page_size, std::false_type) const {
     util::fseek(file, offset, SEEK_SET);
     return PostlistReader<T>::read(path, file, begin, length, page_size);
@@ -51,7 +51,7 @@ private:
 
   // Thread-safe version.
   inline std::unique_ptr<Postlist<T> > ReadPostlist(
-      const bfs::path& path, FILE* file, uint32_t offset, uint32_t begin,
+      const fs::path& path, FILE* file, uint32_t offset, uint32_t begin,
       uint32_t length, uint32_t page_size, std::true_type) const {
     std::lock_guard<std::mutex> lock(mutex_);
     return ReadPostlist(path, file, offset, begin, length, page_size,
@@ -61,7 +61,7 @@ private:
 public:
   StorageReader() {}
 
-  StorageReader(const bfs::path& directory, util::memory_type memory) {
+  StorageReader(const fs::path& directory, util::memory_type memory) {
     Open(directory, memory);
   }
 
@@ -82,19 +82,19 @@ public:
     return !files_.empty();
   }
 
-  void Open(const bfs::path& directory, util::memory_type memory) {
+  void Open(const fs::path& directory, util::memory_type memory) {
     if (IsOpen())
       return;
 
-    const bfs::path data_dir(directory / StorageWriter<T>::k_data_dir);
-    const bfs::path table_dir(directory / StorageWriter<T>::k_table_dir);
+    const fs::path data_dir(directory / StorageWriter<T>::k_data_dir);
+    const fs::path table_dir(directory / StorageWriter<T>::k_table_dir);
 
     // open header table
     table_.reset(Map::Open(table_dir, memory));
 
     // open data files
     const size_t data_file_count(std::distance(
-        bfs::directory_iterator(data_dir), bfs::directory_iterator()));
+        fs::directory_iterator(data_dir), fs::directory_iterator()));
     files_.reserve(data_file_count);
     paths_.reserve(data_file_count);
     for (unsigned i(0); i != data_file_count; ++i) {
@@ -137,7 +137,7 @@ public:
     if (table_ && table_->Get(key, address) && address.e1() < files_.size()) {
       FILE* file = files_[address.e1()];
       const uint32_t offset = address.e2();
-      const bfs::path& path = paths_[address.e1()];
+      const fs::path& path = paths_[address.e1()];
       postlist = ReadPostlist(path, file, offset, begin, length, page_size,
                               IsThreadSafe());
     }

@@ -14,7 +14,7 @@
 
 namespace netspeak {
 
-namespace bfs = boost::filesystem;
+namespace fs = std::filesystem;
 using namespace model;
 
 struct RetrievalStrategy3Tag {
@@ -97,7 +97,7 @@ public:
     config.get_required_path(Configuration::PATH_TO_PHRASE_INDEX);
 
     // Open ngram dictionary.
-    const bfs::path dir =
+    const fs::path dir =
         config.get_required_path(Configuration::PATH_TO_PHRASE_DICTIONARY);
     phrase_dictionary_.reset(
         PhraseDictionary::Open(dir, util::memory_type::min_required));
