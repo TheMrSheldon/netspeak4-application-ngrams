@@ -31,7 +31,7 @@ private:
   /**
    * A hash function object for hashing index entries.
    */
-  struct hash : public std::unary_function<index_entry_type, size_t> {
+  struct hash {
     size_t operator()(const index_entry_type& entry) const {
       return traits::hash(entry);
     }
@@ -40,8 +40,7 @@ private:
   /**
    * A comparator function object for comparing ngram references.
    */
-  struct equal
-      : std::binary_function<index_entry_type, index_entry_type, bool> {
+  struct equal {
     bool operator()(const index_entry_type& a,
                     const index_entry_type& b) const {
       return traits::equal(a, b);
