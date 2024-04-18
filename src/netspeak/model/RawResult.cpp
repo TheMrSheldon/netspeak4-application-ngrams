@@ -1,4 +1,4 @@
-#include "netspeak/model/RawResult.hpp"
+#include <netspeak/model/RawResult.hpp>
 
 
 namespace netspeak {

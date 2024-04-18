@@ -1,9 +1,9 @@
-#include "netspeak/model/NormQuery.hpp"
+#include <netspeak/model/NormQuery.hpp>
 
 #include <ostream>
 
-#include "netspeak/error.hpp"
-#include "netspeak/util/exception.hpp"
+#include <netspeak/error.hpp>
+#include <netspeak/util/exception.hpp>
 
 
 namespace netspeak {

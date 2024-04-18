@@ -1,4 +1,4 @@
-#include "netspeak/indexing.hpp"
+#include <netspeak/indexing.hpp>
 
 #include <sys/stat.h>
 
@@ -12,20 +12,20 @@
 
 #include <boost/filesystem/fstream.hpp>
 
-#include "netspeak/Configuration.hpp"
-#include "netspeak/Netspeak.hpp"
-#include "netspeak/PhraseCorpus.hpp"
-#include "netspeak/PhraseFileReader.hpp"
-#include "netspeak/bighashmap/BigHashMap.hpp"
-#include "netspeak/error.hpp"
-#include "netspeak/invertedindex/Configuration.hpp"
-#include "netspeak/invertedindex/ManagedIndexer.hpp"
-#include "netspeak/invertedindex/Postlist.hpp"
-#include "netspeak/invertedindex/Searcher.hpp"
-#include "netspeak/model/Phrase.hpp"
-#include "netspeak/service/NetspeakService.pb.h"
-#include "netspeak/util/check.hpp"
-#include "netspeak/util/systemio.hpp"
+#include <netspeak/Configuration.hpp>
+#include <netspeak/Netspeak.hpp>
+#include <netspeak/PhraseCorpus.hpp>
+#include <netspeak/PhraseFileReader.hpp>
+#include <netspeak/bighashmap/BigHashMap.hpp>
+#include <netspeak/error.hpp>
+#include <netspeak/invertedindex/Configuration.hpp>
+#include <netspeak/invertedindex/ManagedIndexer.hpp>
+#include <netspeak/invertedindex/Postlist.hpp>
+#include <netspeak/invertedindex/Searcher.hpp>
+#include <netspeak/model/Phrase.hpp>
+#include <netspeak/NetspeakService.pb.h>
+#include <netspeak/util/check.hpp>
+#include <netspeak/util/systemio.hpp>
 
 namespace netspeak {
 

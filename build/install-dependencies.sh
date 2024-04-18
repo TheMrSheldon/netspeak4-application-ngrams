@@ -14,7 +14,6 @@ apt-get update --allow-releaseinfo-change
 apt-get install make clang build-essential libboost-filesystem-dev libboost-system-dev libboost-test-dev libboost-program-options-dev libboost-stacktrace-dev libicu-dev libcmph-dev libaio-dev libboost-regex-dev libboost-date-time-dev python3-dev -y
 
 
-bash ./env/install-antlr4.sh
 bash ./env/install-grpc.sh
 
 
@@ -38,27 +37,6 @@ fi
 
 
 if [[ "$1" != "ci" ]]; then
-
-    # Download the JAR necessary to copmile .g4 files
-    if [ ! -f ./antlr4/antlr-4.7.1-complete.jar ]; then
-
-        echo "Downloading Antlr 4.7.1 JAR."
-
-        mkdir -p antlr4
-        cd antlr4
-
-        apt-get install unzip wget -y
-        wget -O antlr-4.7.1-complete.jar 'http://www.antlr.org/download/antlr-4.7.1-complete.jar'
-        chmod a+rw ./antlr-4.7.1-complete.jar
-
-        cd ..
-
-    else
-
-        echo "Antlr 4.7.1 JAR already present"
-
-    fi
-
 
     # Download protoc-gen-grpc-web, a protoc plugin to generate gRPC web code
     if [ ! -f ./protoc-gen-grpc-web ]; then

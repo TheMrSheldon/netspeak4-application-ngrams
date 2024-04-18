@@ -1,4 +1,4 @@
-#include "netspeak/regex/DefaultRegexIndex.hpp"
+#include <netspeak/regex/DefaultRegexIndex.hpp>
 
 #include <chrono>
 #include <codecvt>
@@ -11,8 +11,8 @@
 
 #include <boost/regex.hpp>
 
-#include "netspeak/regex/RegexIndex.hpp"
-#include "netspeak/regex/RegexQuery.hpp"
+#include <netspeak/regex/RegexIndex.hpp>
+#include <netspeak/regex/RegexQuery.hpp>
 
 
 namespace netspeak {

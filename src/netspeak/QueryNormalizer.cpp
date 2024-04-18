@@ -1,4 +1,4 @@
-#include "netspeak/QueryNormalizer.hpp"
+#include <netspeak/QueryNormalizer.hpp>
 
 #include <unicode/unistr.h>
 
@@ -7,14 +7,14 @@
 #include <limits>
 #include <unordered_map>
 
-#include "boost/algorithm/string.hpp"
+#include <boost/algorithm/string.hpp>
 
-#include "netspeak/error.hpp"
-#include "netspeak/model/SimpleQuery.hpp"
-#include "netspeak/regex/parsers.hpp"
-#include "netspeak/util/ChainCutter.hpp"
-#include "netspeak/util/Math.hpp"
-#include "netspeak/util/Vec.hpp"
+#include <netspeak/error.hpp>
+#include <netspeak/model/SimpleQuery.hpp>
+#include <netspeak/regex/parsers.hpp>
+#include <netspeak/util/ChainCutter.hpp>
+#include <netspeak/util/Math.hpp>
+#include <netspeak/util/Vec.hpp>
 
 
 namespace netspeak {

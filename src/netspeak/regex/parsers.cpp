@@ -1,4 +1,4 @@
-#include "netspeak/regex/parsers.hpp"
+#include <netspeak/regex/parsers.hpp>
 
 #include <codecvt>
 #include <locale>
@@ -6,7 +6,7 @@
 
 #include <boost/optional.hpp>
 
-#include "netspeak/model/QuerySyntax.hpp"
+#include <netspeak/model/QuerySyntax.hpp>
 
 
 namespace netspeak {

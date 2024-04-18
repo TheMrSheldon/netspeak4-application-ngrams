@@ -1,6 +1,6 @@
-#include "antlr4/QueryErrorHandler.hpp"
+#include <antlr4/QueryErrorHandler.hpp>
 
-#include "netspeak/error.hpp"
+#include <netspeak/error.hpp>
 
 namespace antlr4 {
 

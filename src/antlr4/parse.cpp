@@ -1,15 +1,15 @@
-#include "antlr4/parse.hpp"
+#include <antlr4/parse.hpp>
 
 #include <sstream>
 #include <vector>
 
-#include "antlr4-runtime.h"
-#include "antlr4/QueryErrorHandler.hpp"
-#include "antlr4/generated/QueryBaseListener.h"
-#include "antlr4/generated/QueryLexer.h"
-#include "antlr4/generated/QueryParser.h"
+#include <antlr4-runtime.h>
+#include <antlr4/QueryErrorHandler.hpp>
+#include <QueryBaseListener.h>
+#include <QueryLexer.h>
+#include <QueryParser.h>
 
-#include "netspeak/error.hpp"
+#include <netspeak/error.hpp>
 
 namespace antlr4 {
 using namespace netspeak::model;

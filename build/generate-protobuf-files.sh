@@ -14,18 +14,12 @@ fi
 
 cd ../conf
 
-mkdir -p ../src/netspeak/service
-rm -rf ../src/netspeak/service/*.{h,cc}
 mkdir -p ./generated-js
 rm -rf ./generated-js/*
 mkdir -p ./generated-java
 rm -rf ./generated-java/*
 
 export PATH="$PATH:../build/dependencies"
-
-protoc ./NetspeakService.proto \
-    --cpp_out=../src/netspeak/service \
-    --grpc_out=../src/netspeak/service --plugin=protoc-gen-grpc=$(which grpc_cpp_plugin)
 
 protoc ./NetspeakService.proto \
     --js_out=import_style=commonjs:./generated-js \

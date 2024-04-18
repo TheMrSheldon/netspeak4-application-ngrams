@@ -1,11 +1,11 @@
-#include "netspeak/model/SimpleQuery.hpp"
+#include <netspeak/model/SimpleQuery.hpp>
 
 #include <algorithm>
 #include <cassert>
 #include <ostream>
 
-#include "netspeak/error.hpp"
-#include "netspeak/util/Vec.hpp"
+#include <netspeak/error.hpp>
+#include <netspeak/util/Vec.hpp>
 
 
 namespace netspeak {

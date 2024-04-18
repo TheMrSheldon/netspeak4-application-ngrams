@@ -1,7 +1,7 @@
-#include "netspeak/service/LoadBalanceProxy.hpp"
+#include <netspeak/service/LoadBalanceProxy.hpp>
 
-#include "netspeak/error.hpp"
-#include "netspeak/util/service.hpp"
+#include <netspeak/error.hpp>
+#include <netspeak/util/service.hpp>
 
 namespace netspeak {
 namespace service {

@@ -1,4 +1,4 @@
-#include "netspeak/invertedindex/ByteBuffer.hpp"
+#include <netspeak/invertedindex/ByteBuffer.hpp>
 
 namespace netspeak {
 namespace invertedindex {

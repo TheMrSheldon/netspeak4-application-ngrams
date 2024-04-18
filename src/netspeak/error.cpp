@@ -1,4 +1,4 @@
-#include "netspeak/error.hpp"
+#include <netspeak/error.hpp>
 
 #include <sstream>
 #include <string>

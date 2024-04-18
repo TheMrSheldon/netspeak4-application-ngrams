@@ -1,4 +1,4 @@
-#include "netspeak/PhraseCorpus.hpp"
+#include <netspeak/PhraseCorpus.hpp>
 
 #include <aio.h>
 #include <fcntl.h>
@@ -12,10 +12,10 @@
 #include <boost/lexical_cast.hpp>
 #include <boost/optional.hpp>
 
-#include "netspeak/error.hpp"
-#include "netspeak/invertedindex/ByteBuffer.hpp"
-#include "netspeak/util/check.hpp"
-#include "netspeak/value/value_traits.hpp"
+#include <netspeak/error.hpp>
+#include <netspeak/invertedindex/ByteBuffer.hpp>
+#include <netspeak/util/check.hpp>
+#include <netspeak/value/value_traits.hpp>
 
 
 namespace netspeak {

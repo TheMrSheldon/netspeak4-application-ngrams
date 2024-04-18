@@ -1,4 +1,4 @@
-#include "netspeak/service/RequestLogger.hpp"
+#include <netspeak/service/RequestLogger.hpp>
 
 #include <chrono>
 #include <sstream>
@@ -7,12 +7,12 @@
 #include <boost/filesystem.hpp>
 #include <boost/regex.hpp>
 
-#include "google/protobuf/util/json_util.h"
+#include <google/protobuf/util/json_util.h>
 
-#include "netspeak/error.hpp"
-#include "netspeak/service/tracking.hpp"
-#include "netspeak/util/JsonWriter.hpp"
-#include "netspeak/util/systemio.hpp"
+#include <netspeak/error.hpp>
+#include <netspeak/service/tracking.hpp>
+#include <netspeak/util/JsonWriter.hpp>
+#include <netspeak/util/systemio.hpp>
 
 
 namespace netspeak {

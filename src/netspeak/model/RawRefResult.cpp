@@ -1,9 +1,9 @@
-#include "netspeak/model/RawRefResult.hpp"
+#include <netspeak/model/RawRefResult.hpp>
 
 #include <algorithm>
 #include <memory>
 
-#include "netspeak/util/Vec.hpp"
+#include <netspeak/util/Vec.hpp>
 
 
 namespace netspeak {

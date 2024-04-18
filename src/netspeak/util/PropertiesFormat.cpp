@@ -1,4 +1,4 @@
-#include "netspeak/util/PropertiesFormat.hpp"
+#include <netspeak/util/PropertiesFormat.hpp>
 
 #include <istream>
 #include <ostream>

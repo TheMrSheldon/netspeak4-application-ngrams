@@ -1,9 +1,9 @@
-#include "netspeak/util/Config.hpp"
+#include <netspeak/util/Config.hpp>
 
 #include <fstream>
 
-#include "netspeak/util/PropertiesFormat.hpp"
-#include "netspeak/util/traceable_error.hpp"
+#include <netspeak/util/PropertiesFormat.hpp>
+#include <netspeak/util/traceable_error.hpp>
 
 namespace netspeak {
 namespace util {

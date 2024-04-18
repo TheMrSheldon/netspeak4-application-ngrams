@@ -1,4 +1,4 @@
-#include "netspeak/model/Words.hpp"
+#include <netspeak/model/Words.hpp>
 
 
 namespace netspeak {

@@ -10,13 +10,13 @@
 #include <grpcpp/server_builder.h>
 #include <grpcpp/server_context.h>
 
-#include "cli/logging.hpp"
-#include "cli/util.hpp"
+#include <cli/logging.hpp>
+#include <cli/util.hpp>
 
-#include "netspeak/Netspeak.hpp"
-#include "netspeak/service/LoadBalanceProxy.hpp"
-#include "netspeak/service/NetspeakService.grpc.pb.h"
-#include "netspeak/util/service.hpp"
+#include <netspeak/Netspeak.hpp>
+#include <netspeak/service/LoadBalanceProxy.hpp>
+#include <netspeak/NetspeakService.grpc.pb.h>
+#include <netspeak/util/service.hpp>
 
 namespace cli {
 

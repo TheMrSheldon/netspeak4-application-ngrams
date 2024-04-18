@@ -1,10 +1,10 @@
-#include "netspeak/Configuration.hpp"
+#include <netspeak/Configuration.hpp>
 
 #include <string>
 
-#include "boost/filesystem.hpp"
+#include <boost/filesystem.hpp>
 
-#include "netspeak/util/traceable_error.hpp"
+#include <netspeak/util/traceable_error.hpp>
 
 namespace netspeak {
 

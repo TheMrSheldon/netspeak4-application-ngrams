@@ -1,4 +1,4 @@
-#include "netspeak/regex/RegexQuery.hpp"
+#include <netspeak/regex/RegexQuery.hpp>
 
 #include <algorithm>
 #include <codecvt>

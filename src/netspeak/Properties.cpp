@@ -1,4 +1,4 @@
-#include "netspeak/Properties.hpp"
+#include <netspeak/Properties.hpp>
 
 namespace netspeak {
 

@@ -1,9 +1,9 @@
-#include "netspeak/model/Query.hpp"
+#include <netspeak/model/Query.hpp>
 
 #include <cassert>
 #include <ostream>
 
-#include "netspeak/error.hpp"
+#include <netspeak/error.hpp>
 
 
 namespace netspeak {

@@ -1,11 +1,11 @@
-#include "netspeak/Netspeak.hpp"
+#include <netspeak/Netspeak.hpp>
 
 #include <future>
 
-#include "boost/lexical_cast.hpp"
+#include <boost/lexical_cast.hpp>
 
-#include "netspeak/error.hpp"
-#include "netspeak/util/Vec.hpp"
+#include <netspeak/error.hpp>
+#include <netspeak/util/Vec.hpp>
 
 
 namespace netspeak {

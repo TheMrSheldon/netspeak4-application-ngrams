@@ -10,14 +10,14 @@
 #include <cstdio>
 #include <iomanip>
 
-#include "boost/filesystem.hpp"
+#include <boost/filesystem.hpp>
 
-#include "cli/util.hpp"
+#include <cli/util.hpp>
 
-#include "netspeak/Configuration.hpp"
-#include "netspeak/Netspeak.hpp"
-#include "netspeak/service/NetspeakService.grpc.pb.h"
-#include "netspeak/util/service.hpp"
+#include <netspeak/Configuration.hpp>
+#include <netspeak/Netspeak.hpp>
+#include <netspeak/NetspeakService.grpc.pb.h>
+#include <netspeak/util/service.hpp>
 
 namespace cli {
 

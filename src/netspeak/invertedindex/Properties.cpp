@@ -1,6 +1,6 @@
-#include "netspeak/invertedindex/Properties.hpp"
+#include <netspeak/invertedindex/Properties.hpp>
 
-#include "netspeak/util/systemio.hpp"
+#include <netspeak/util/systemio.hpp>
 
 namespace netspeak {
 namespace invertedindex {
