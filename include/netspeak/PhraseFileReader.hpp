@@ -22,7 +22,7 @@ public:
   typedef invertedindex::RecordReader<model::PhraseIndexValue> base_type;
   typedef typename base_type::record_type record_type;
 
-  PhraseFileReader(std::istream& is) : base_type(), wordpos_(), parser_(is) {}
+  explicit PhraseFileReader(std::istream& is) : base_type(), wordpos_(), parser_(is) {}
 
   PhraseFileReader(std::istream& is, model::PhraseIndexValue::e2_type id_offset)
       : base_type(), wordpos_(), parser_(is, id_offset) {}

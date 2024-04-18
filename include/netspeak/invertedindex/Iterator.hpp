@@ -16,10 +16,10 @@ namespace netspeak {
 namespace invertedindex {
 
 struct page_type {
-  page_type(size_t size = 0)
+  explicit page_type(size_t size = 0)
       : buffer_(size), index_begin_(0), index_end_(0), index_cur_(0) {}
 
-  page_type(const page_type& rhs)
+  explicit page_type(const page_type& rhs)
       : buffer_(rhs.buffer_),
         index_begin_(rhs.index_begin_),
         index_end_(rhs.index_end_),
@@ -42,7 +42,7 @@ struct swap_type {
 
   swap_type() : pagesize_(default_pagesize), offset_(0), stream_(NULL) {}
 
-  swap_type(FILE* fs, size_t pagesize = default_pagesize)
+  explicit swap_type(FILE* fs, size_t pagesize = default_pagesize)
       : pagesize_(pagesize), offset_(util::ftell(fs)), stream_(fs) {
     assert(pagesize_ != 0);
   }
@@ -116,11 +116,11 @@ struct constant_size_iter : public iterator_type {
 
   virtual ~constant_size_iter() {}
 
-  inline size_t byte_size() const {
+  inline size_t byte_size() const override {
     return count_ * size_;
   }
 
-  inline const char* next() {
+  inline const char* next() override {
     if (page_.index_cur_ == size())
       return NULL;
     if (page_.index_cur_ == page_.index_end_)
@@ -129,7 +129,7 @@ struct constant_size_iter : public iterator_type {
     return page_.buffer_.position();
   }
 
-  inline void rewind() {
+  inline void rewind() override {
     page_.index_cur_ = 0;
     if (swap_.stream_ != NULL) {
       util::fseek(swap_.stream_, swap_.offset_, SEEK_SET);
@@ -139,11 +139,11 @@ struct constant_size_iter : public iterator_type {
     }
   }
 
-  inline size_t size() const {
+  inline size_t size() const override {
     return count_;
   }
 
-  inline void write(FILE* fs) {
+  inline void write(FILE* fs) override {
     rewind();
     if (swap_.stream_ == NULL) {
       page_.buffer_.write(fs);
@@ -194,12 +194,12 @@ struct variable_size_iter : public iterator_type {
 
   virtual ~variable_size_iter() {}
 
-  inline size_t byte_size() const {
+  inline size_t byte_size() const override {
     return size() * sizeof(size_vector::value_type) +
            std::accumulate(sizes_.begin(), sizes_.end(), 0);
   }
 
-  inline const char* next() {
+  inline const char* next() override {
     if (page_.index_cur_ == size())
       return NULL;
     if (page_.index_cur_ == page_.index_end_)
@@ -209,7 +209,7 @@ struct variable_size_iter : public iterator_type {
     return page_.buffer_.position();
   }
 
-  inline void rewind() {
+  inline void rewind() override {
     offset_ = 0;
     page_.index_cur_ = 0;
     if (swap_.stream_ != NULL) {
@@ -220,11 +220,11 @@ struct variable_size_iter : public iterator_type {
     }
   }
 
-  inline size_t size() const {
+  inline size_t size() const override {
     return sizes_.size();
   }
 
-  inline void write(FILE* fs) {
+  inline void write(FILE* fs) override {
     rewind();
     util::fwrite(sizes_.data(), sizeof(size_vector::value_type), sizes_.size(),
                  fs);

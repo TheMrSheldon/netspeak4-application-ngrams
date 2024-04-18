@@ -113,7 +113,7 @@ public:
   SimpleQuery(SimpleQuery&&) = default;
   SimpleQuery& operator=(SimpleQuery&& other) = default;
 
-  SimpleQuery(Unit root) : root_(std::move(root)) {}
+  explicit SimpleQuery(Unit root) : root_(std::move(root)) {}
 
   Unit& root() {
     return root_;

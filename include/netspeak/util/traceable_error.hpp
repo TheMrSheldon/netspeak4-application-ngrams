@@ -26,12 +26,12 @@ inline std::string add_trace(const std::string& what) {
 }
 
 struct tracable_logic_error : public std::logic_error {
-  inline tracable_logic_error(const std::string& what)
+  inline explicit tracable_logic_error(const std::string& what)
       : std::logic_error(add_trace(what)) {}
   virtual ~tracable_logic_error() throw() override {}
 };
 struct tracable_runtime_error : public std::runtime_error {
-  inline tracable_runtime_error(const std::string& what)
+  inline explicit tracable_runtime_error(const std::string& what)
       : std::runtime_error(add_trace(what)) {}
   virtual ~tracable_runtime_error() throw() override {}
 };

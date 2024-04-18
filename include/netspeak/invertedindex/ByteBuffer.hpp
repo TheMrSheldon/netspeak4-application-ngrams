@@ -29,7 +29,7 @@ namespace invertedindex {
 class ByteBuffer {
 private:
   struct buffer_type {
-    buffer_type(size_t initial_size);
+    explicit buffer_type(size_t initial_size);
     void resize(size_t new_size);
     std::unique_ptr<char[]> data;
     size_t size;
@@ -40,7 +40,7 @@ public:
    * The explicit constructor.
    * The byte buffer has a initial size of <code>size</code>.
    */
-  ByteBuffer(size_t size = 0);
+  explicit ByteBuffer(size_t size = 0);
 
   /**
    * The copy constructor for shallow copying.

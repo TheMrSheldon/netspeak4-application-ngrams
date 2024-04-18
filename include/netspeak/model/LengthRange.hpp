@@ -33,7 +33,7 @@ public:
   uint32_t max;
 
   LengthRange() : min(UINT32_MAX), max(0) {}
-  LengthRange(uint32_t min) : min(min), max(UINT32_MAX) {}
+  explicit LengthRange(uint32_t min) : min(min), max(UINT32_MAX) {}
   LengthRange(uint32_t min, uint32_t max) : min(min), max(max) {}
 
   /**

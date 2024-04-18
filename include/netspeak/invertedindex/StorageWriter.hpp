@@ -31,7 +31,7 @@ public:
 
   static const size_t data_file_size_max = 1024 * 1024 * 1024; // 1GB
 
-  StorageWriter(const fs::path& directory)
+  explicit StorageWriter(const fs::path& directory)
       : directory_(directory), data_file_cnt_(), data_wfs_(NULL) {
     if (!fs::exists(directory)) {
       util::throw_invalid_argument("Does not exist", directory);

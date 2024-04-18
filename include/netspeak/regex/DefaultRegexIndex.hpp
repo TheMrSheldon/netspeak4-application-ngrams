@@ -101,7 +101,7 @@ public:
    *
    * @param vocabulary The by \c \n separated words to search in.
    */
-  DefaultRegexIndex(std::string vocabulary);
+  explicit DefaultRegexIndex(std::string vocabulary);
   DefaultRegexIndex(const DefaultRegexIndex&) = delete;
   ~DefaultRegexIndex() override{};
 

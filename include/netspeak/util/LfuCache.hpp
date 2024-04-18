@@ -41,7 +41,7 @@ private:
 public:
   typedef typename storage_type::const_iterator const_iterator;
 
-  LfuCache(size_t capacity = 0)
+  explicit LfuCache(size_t capacity = 0)
       : storage_(capacity), acc_count_(0), hit_count_(0) {
     policy_.reserve(capacity);
   }

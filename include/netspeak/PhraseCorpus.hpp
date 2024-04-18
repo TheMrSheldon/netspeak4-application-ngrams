@@ -33,7 +33,7 @@ public:
 
   PhraseCorpus();
   PhraseCorpus(const PhraseCorpus&) = delete;
-  PhraseCorpus(const std::filesystem::path& phrase_dir);
+  explicit PhraseCorpus(const std::filesystem::path& phrase_dir);
 
   bool is_open() const;
 

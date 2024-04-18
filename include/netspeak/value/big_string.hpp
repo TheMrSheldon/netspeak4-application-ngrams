@@ -11,7 +11,7 @@ namespace value {
 struct big_string {
   big_string() = default;
 
-  big_string(const char* other) : str(other) {}
+  explicit big_string(const char* other) : str(other) {}
 
   big_string(const big_string& other) : str(other.str) {}
 

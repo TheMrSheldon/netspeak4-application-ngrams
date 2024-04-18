@@ -33,7 +33,7 @@ private:
 public:
   static const char value_separator = '\t';
 
-  InvertedFileWriter(std::ostream& os) : os_(os) {}
+  explicit InvertedFileWriter(std::ostream& os) : os_(os) {}
 
   ~InvertedFileWriter() = default;
 

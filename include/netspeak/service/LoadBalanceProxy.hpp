@@ -33,7 +33,7 @@ private:
 public:
   LoadBalanceProxy() = delete;
   LoadBalanceProxy(const LoadBalanceProxy&) = delete;
-  LoadBalanceProxy(const StubVector& stubs);
+  explicit LoadBalanceProxy(const StubVector& stubs);
   ~LoadBalanceProxy() override {}
   grpc::Status Search(grpc::ServerContext* context,
                       const SearchRequest* request,

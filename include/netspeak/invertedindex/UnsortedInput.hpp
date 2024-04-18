@@ -37,7 +37,7 @@ private:
   typedef std::unordered_map<std::string, shared_pbuilder> pbuilder_map;
 
 public:
-  UnsortedInput(const Configuration& config)
+  explicit UnsortedInput(const Configuration& config)
       : IndexStrategy<value_type>(config),
         max_bucket_size_(to_bytes(config.max_memory_usage()) / 12) // best avg.
   {

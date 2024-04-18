@@ -25,7 +25,7 @@ private:
 
 public:
   FileDescriptor() = delete;
-  FileDescriptor(int fd);
+  explicit FileDescriptor(int fd);
 
   static FileDescriptor open(const std::string& path, int __oflag);
 

@@ -28,7 +28,7 @@ private:
   typedef value::value_traits<typename record_type::value_type> value_traits;
 
 public:
-  InvertedFileReader(std::istream& is) : base_type(), is_(is), num_lines_(1) {
+  explicit InvertedFileReader(std::istream& is) : base_type(), is_(is), num_lines_(1) {
     is_.peek();                        // Sets eofbit if no data was available.
     key_traits::parse_from(key_, is_); // Read first key or invalidate stream.
   }

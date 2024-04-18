@@ -31,7 +31,7 @@ public:
 
   Record() : base_type() {}
 
-  Record(const key_type& key) : base_type(key, value_type()) {}
+  explicit Record(const key_type& key) : base_type(key, value_type()) {}
 
   Record(const key_type& key, const value_type& value)
       : base_type(key, value) {}

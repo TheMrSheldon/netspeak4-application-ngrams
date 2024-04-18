@@ -21,7 +21,7 @@ private:
 public:
   ManagedDirectory() = delete;
   ManagedDirectory(const ManagedDirectory&) = delete;
-  ManagedDirectory(const std::string& path_str) : path_(path_str) {
+  explicit ManagedDirectory(const std::string& path_str) : path_(path_str) {
     BOOST_REQUIRE(std::filesystem::create_directory(path_));
   }
   ~ManagedDirectory() {

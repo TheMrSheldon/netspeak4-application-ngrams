@@ -234,7 +234,7 @@ public:                                       \
     string_stream_wrapper() = delete;
     string_stream_wrapper(const string_stream_wrapper&) = default;
     string_stream_wrapper(string_stream_wrapper&&) = default;
-    string_stream_wrapper(std::string& s) : s_(&s) {}
+    explicit string_stream_wrapper(std::string& s) : s_(&s) {}
     string_stream_wrapper& operator=(string_stream_wrapper&& other) {
       if (this != &other) {
         this->s_ = other.s_;

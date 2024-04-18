@@ -13,8 +13,8 @@ class Mut {
 
 public:
   Mut() = default;
-  Mut(const T& value) : value_(value), mutex_() {}
-  Mut(T&& value) : value_(std::move(value)), mutex_() {}
+  explicit Mut(const T& value) : value_(value), mutex_() {}
+  explicit Mut(T&& value) : value_(std::move(value)), mutex_() {}
 
   class Lock {
     Mut<T>& mut_;
@@ -22,7 +22,7 @@ public:
   public:
     Lock() = delete;
     Lock(const Lock&) = delete;
-    Lock(Mut<T>& mut) : mut_(mut) {}
+    explicit Lock(Mut<T>& mut) : mut_(mut) {}
     Lock(Lock&& lock) = default;
     ~Lock() {
       mut_.mutex_.unlock();

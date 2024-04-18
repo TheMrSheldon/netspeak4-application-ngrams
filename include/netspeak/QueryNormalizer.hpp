@@ -35,7 +35,7 @@ public:
   };
 
   QueryNormalizer() {}
-  QueryNormalizer(InitConfig config);
+  explicit QueryNormalizer(InitConfig config);
   QueryNormalizer(const QueryNormalizer&) = delete;
 
   struct Options {

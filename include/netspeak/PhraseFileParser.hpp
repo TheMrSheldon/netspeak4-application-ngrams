@@ -27,7 +27,7 @@ struct PhraseFileParserItem {
 template <bool stream_provides_phrase_id>
 class PhraseFileParser {
 public:
-  PhraseFileParser(std::istream& is) : is_(is), id_offset_(0) {}
+  explicit PhraseFileParser(std::istream& is) : is_(is), id_offset_(0) {}
 
   PhraseFileParser(std::istream& is, model::Phrase::Id::Local id_offset)
       : is_(is), id_offset_(id_offset) {}

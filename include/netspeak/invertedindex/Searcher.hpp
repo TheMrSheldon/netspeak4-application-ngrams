@@ -21,7 +21,7 @@ class Searcher : public RawSearcher {
 public:
   Searcher() {}
 
-  Searcher(const Configuration& config) {
+  explicit Searcher(const Configuration& config) {
     open(config);
   }
 

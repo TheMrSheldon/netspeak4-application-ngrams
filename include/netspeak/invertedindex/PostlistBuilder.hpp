@@ -31,7 +31,7 @@ private:
   typedef std::vector<uint32_t> size_vector;
 
 public:
-  PostlistBuilder(size_t page_size = 10 * 1024 * 1024)
+  explicit PostlistBuilder(size_t page_size = 10 * 1024 * 1024)
       : page_size_(page_size), mem_usage_(0) {}
 
   ~PostlistBuilder() {}

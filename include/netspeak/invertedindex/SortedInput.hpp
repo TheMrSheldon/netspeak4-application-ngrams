@@ -23,7 +23,7 @@ public:
   typedef typename IndexStrategy<T>::record_type record_type;
   typedef typename record_type::value_type value_type;
 
-  SortedInput(const Configuration& config)
+  explicit SortedInput(const Configuration& config)
       : IndexStrategy<value_type>(config), storage_(config.index_directory()) {}
 
   virtual ~SortedInput() {}

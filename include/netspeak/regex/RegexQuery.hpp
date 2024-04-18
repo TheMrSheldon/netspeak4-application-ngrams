@@ -56,7 +56,7 @@ private:
   std::vector<RegexUnit> m_units;
 
 public:
-  RegexQuery(const std::vector<RegexUnit>& units) : m_units(units) {}
+  explicit RegexQuery(const std::vector<RegexUnit>& units) : m_units(units) {}
 
   /**
    * @brief Create a new \c RegexQuery that rejects all words.

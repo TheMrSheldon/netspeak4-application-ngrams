@@ -41,7 +41,7 @@ public:
     friend class Builder;
 
     string_entry() = delete;
-    string_entry(CharDataOffset offset) : offset_(offset) {}
+    explicit string_entry(CharDataOffset offset) : offset_(offset) {}
   };
 
   typedef std::pair<string_entry, Id> ValueType;

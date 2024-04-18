@@ -25,7 +25,7 @@ public:
   typedef T value_type;
   typedef typename IndexStrategy<value_type>::record_type record_type;
 
-  Indexer(const Configuration& config) {
+  explicit Indexer(const Configuration& config) {
     assert_config(config);
     util::log("Configuration", config);
     strategy_ =

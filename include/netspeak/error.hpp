@@ -11,7 +11,7 @@ using util::tracable_logic_error;
 using util::tracable_runtime_error;
 
 struct invalid_query_error : public tracable_runtime_error {
-  invalid_query_error(const std::string& what) : tracable_runtime_error(what) {}
+  explicit invalid_query_error(const std::string& what) : tracable_runtime_error(what) {}
   virtual ~invalid_query_error() throw() override {}
 };
 

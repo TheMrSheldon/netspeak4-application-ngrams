@@ -27,7 +27,7 @@ void write_value(std::ostream& out, const std::string& value);
 } // namespace __properties_format_impl
 
 struct format_properties_error : public tracable_runtime_error {
-  format_properties_error(const std::string& what)
+  explicit format_properties_error(const std::string& what)
       : tracable_runtime_error(what) {}
   virtual ~format_properties_error() throw() override {}
 };
