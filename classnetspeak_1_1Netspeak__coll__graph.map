@@ -1,0 +1,9 @@
+<map id="netspeak::Netspeak" name="netspeak::Netspeak">
+<area shape="rect" id="node1" title=" " alt="" coords="820,129,972,156"/>
+<area shape="rect" id="node2" href="$classnetspeak_1_1PhraseCorpus.html" title=" " alt="" coords="425,5,604,32"/>
+<area shape="rect" id="node3" href="$classnetspeak_1_1QueryProcessor.html" title=" " alt="" coords="383,57,647,98"/>
+<area shape="rect" id="node4" href="$classnetspeak_1_1RetrievalStrategy.html" title=" " alt="" coords="5,57,269,98"/>
+<area shape="rect" id="node5" href="$structnetspeak_1_1Netspeak_1_1search__config.html" title=" " alt="" coords="439,122,591,163"/>
+<area shape="rect" id="node6" href="$classnetspeak_1_1util_1_1LfuCache.html" title=" " alt="" coords="409,188,621,244"/>
+<area shape="rect" id="node7" href="$classnetspeak_1_1QueryNormalizer.html" title=" " alt="" coords="414,268,615,295"/>
+</map>

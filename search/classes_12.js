@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['search_5fconfig_354',['search_config',['../structnetspeak_1_1Netspeak_1_1search__config.html',1,'netspeak::Netspeak']]],
+  ['searcher_355',['Searcher',['../classnetspeak_1_1invertedindex_1_1Searcher.html',1,'netspeak::invertedindex']]],
+  ['searcher_3c_20netspeak_3a_3avalue_3a_3apair_20_3e_356',['Searcher&lt; netspeak::value::pair &gt;',['../classnetspeak_1_1invertedindex_1_1Searcher.html',1,'netspeak::invertedindex']]],
+  ['searchoptions_357',['SearchOptions',['../structnetspeak_1_1model_1_1SearchOptions.html',1,'netspeak::model']]],
+  ['searchresult_358',['SearchResult',['../classnetspeak_1_1model_1_1SearchResult.html',1,'netspeak::model']]],
+  ['servecommand_359',['ServeCommand',['../classcli_1_1ServeCommand.html',1,'cli']]],
+  ['sextuple_360',['sextuple',['../classnetspeak_1_1value_1_1sextuple.html',1,'netspeak::value']]],
+  ['shellcommand_361',['ShellCommand',['../classcli_1_1ShellCommand.html',1,'cli']]],
+  ['simplequery_362',['SimpleQuery',['../classnetspeak_1_1model_1_1SimpleQuery.html',1,'netspeak::model']]],
+  ['simplequeryunit_5f_5f_363',['SimpleQueryUnit__',['../classnetspeak_1_1model_1_1SimpleQueryUnit____.html',1,'netspeak::model']]],
+  ['sortedinput_364',['SortedInput',['../classnetspeak_1_1invertedindex_1_1SortedInput.html',1,'netspeak::invertedindex']]],
+  ['source_365',['Source',['../structnetspeak_1_1model_1_1NormQueryUnit_____1_1Source.html',1,'netspeak::model::NormQueryUnit__']]],
+  ['stats_5ftype_366',['stats_type',['../structnetspeak_1_1invertedindex_1_1IndexStrategy_1_1stats__type.html',1,'netspeak::invertedindex::IndexStrategy&lt; T &gt;::stats_type'],['../structnetspeak_1_1stats__type.html',1,'netspeak::stats_type']]],
+  ['storagereader_367',['StorageReader',['../classnetspeak_1_1invertedindex_1_1StorageReader.html',1,'netspeak::invertedindex']]],
+  ['storagereader_3c_20value_2c_20true_20_3e_368',['StorageReader&lt; Value, true &gt;',['../classnetspeak_1_1invertedindex_1_1StorageReader.html',1,'netspeak::invertedindex']]],
+  ['storagewriter_369',['StorageWriter',['../classnetspeak_1_1invertedindex_1_1StorageWriter.html',1,'netspeak::invertedindex']]],
+  ['storagewriter_3c_20value_5ftype_20_3e_370',['StorageWriter&lt; value_type &gt;',['../classnetspeak_1_1invertedindex_1_1StorageWriter.html',1,'netspeak::invertedindex']]],
+  ['stresscommand_371',['StressCommand',['../classcli_1_1StressCommand.html',1,'cli']]],
+  ['string_5fentry_372',['string_entry',['../structnetspeak_1_1util_1_1StringIdMap_1_1string__entry.html',1,'netspeak::util::StringIdMap']]],
+  ['string_5fstream_5fwrapper_373',['string_stream_wrapper',['../structnetspeak_1_1util_1_1JsonWriter_1_1string__stream__wrapper.html',1,'netspeak::util::JsonWriter']]],
+  ['stringidmap_374',['StringIdMap',['../classnetspeak_1_1util_1_1StringIdMap.html',1,'netspeak::util']]],
+  ['swap_5ftype_375',['swap_type',['../structnetspeak_1_1invertedindex_1_1swap__type.html',1,'netspeak::invertedindex']]]
+];

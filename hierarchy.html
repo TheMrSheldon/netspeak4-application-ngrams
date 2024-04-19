@@ -1,0 +1,350 @@
+<!-- Heavily based on https://github.com/jothepro/doxygen-awesome-css/blob/main/doxygen-custom/header.html -->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- BEGIN opengraph metadata -->
+    <meta property="og:title" content=Netspeak />
+    <meta property="og:image" content="netspeak_logo.svg" />
+    <meta property="og:description" content="One word leads to another." />
+    <meta property="og:url" content="https://github.com/netspeak/netspeak4-application-ngrams" />
+    <!-- END opengraph metadata -->
+    <!-- BEGIN twitter metadata -->
+    <meta name="twitter:image:src" content="netspeak_logo.svg" />
+    <meta name="twitter:title" content="Netspeak" />
+    <meta name="twitter:description" content="One word leads to another." />
+    <!-- END twitter metadata -->
+    <title>Netspeak: Class Hierarchy</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/svg+xml" href="netspeak_logo.svg" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+    <script type="text/javascript" src="toggle-alternative-theme.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+        DoxygenAwesomeDarkModeToggle.init()
+        DoxygenAwesomeParagraphLink.init()
+        DoxygenAwesomeInteractiveToc.init()
+        DoxygenAwesomeTabs.init()
+    </script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-tabs.js" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- https://tholman.com/github-corners/ -->
+    <a href="https://github.com/netspeak/netspeak4-application-ngrams" class="github-corner"
+        title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 250 250" width="40" height="40"
+            style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg></a>
+    <style>
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+        @media (max-width:500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+    </style>
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectlogo"><img alt="Logo" src="netspeak_logo.svg" /></td>
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">Netspeak
+                                &#160;<span
+                                    id="projectnumber">4.2.0</span>
+                            </div>
+                            <div id="projectbrief">One word leads to another.</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- Generated by Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Class Hierarchy</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock">
+<p><a href="inherits.html">Go to the graphical class hierarchy</a></p>
+This inheritance list is sorted roughly, but not completely, alphabetically:</div><div class="directory">
+<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span>]</div><table class="directory">
+<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1util_1_1FileDescriptor_1_1__fd.html" target="_self">netspeak::util::FileDescriptor::_fd</a></td><td class="desc"></td></tr>
+<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ArrayContinue.html" target="_self">netspeak::util::JsonWriter::ArrayContinue&lt; S, R &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ArrayStart.html" target="_self">netspeak::util::JsonWriter::ArrayStart&lt; S, R &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_3_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_3_" class="arrow" onclick="toggleFolder('3_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><b>antlr4::BaseErrorListener</b></td><td class="desc"></td></tr>
+<tr id="row_3_0_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classantlr4_1_1QueryErrorHandler.html" target="_self">antlr4::QueryErrorHandler</a></td><td class="desc">The <a class="el" href="classantlr4_1_1QueryErrorHandler.html" title="The QueryErrorHandler class.">QueryErrorHandler</a> class </td></tr>
+<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1big__string.html" target="_self">netspeak::value::big_string</a></td><td class="desc"></td></tr>
+<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1bighashmap_1_1BigHashMap.html" target="_self">netspeak::bighashmap::BigHashMap&lt; ValueT, IsThreadSafe, TraitsT &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1invertedindex_1_1ByteBuffer_1_1buffer__type.html" target="_self">netspeak::invertedindex::ByteBuffer::buffer_type</a></td><td class="desc"></td></tr>
+<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1bighashmap_1_1Builder.html" target="_self">netspeak::bighashmap::Builder&lt; ValueT, TraitsT &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1StringIdMap_1_1Builder.html" target="_self">netspeak::util::StringIdMap&lt; Id &gt;::Builder</a></td><td class="desc"></td></tr>
+<tr id="row_9_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html" target="_self">netspeak::invertedindex::ByteBuffer</a></td><td class="desc"></td></tr>
+<tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1ChainCutter.html" target="_self">netspeak::util::ChainCutter</a></td><td class="desc"></td></tr>
+<tr id="row_11_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_11_" class="arrow" onclick="toggleFolder('11_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1bighashmap_1_1CmphMap.html" target="_self">netspeak::bighashmap::CmphMap&lt; ValueT, Traits &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_11_0_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1bighashmap_1_1ExternalMap.html" target="_self">netspeak::bighashmap::ExternalMap&lt; ValueT, IsThreadSafe, Traits &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_11_1_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1bighashmap_1_1InternalMap.html" target="_self">netspeak::bighashmap::InternalMap&lt; ValueT, Traits &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_12_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_12_" class="arrow" onclick="toggleFolder('12_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcli_1_1Command.html" target="_self">cli::Command</a></td><td class="desc"></td></tr>
+<tr id="row_12_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcli_1_1BuildCommand.html" target="_self">cli::BuildCommand</a></td><td class="desc"></td></tr>
+<tr id="row_12_1_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcli_1_1ProxyCommand.html" target="_self">cli::ProxyCommand</a></td><td class="desc"></td></tr>
+<tr id="row_12_2_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcli_1_1RegexCommand.html" target="_self">cli::RegexCommand</a></td><td class="desc"></td></tr>
+<tr id="row_12_3_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcli_1_1ServeCommand.html" target="_self">cli::ServeCommand</a></td><td class="desc"></td></tr>
+<tr id="row_12_4_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcli_1_1ShellCommand.html" target="_self">cli::ShellCommand</a></td><td class="desc"></td></tr>
+<tr id="row_12_5_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcli_1_1StressCommand.html" target="_self">cli::StressCommand</a></td><td class="desc"></td></tr>
+<tr id="row_13_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcli_1_1Commands.html" target="_self">cli::Commands</a></td><td class="desc"></td></tr>
+<tr id="row_14_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_14_" class="arrow" onclick="toggleFolder('14_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1Config.html" target="_self">netspeak::util::Config</a></td><td class="desc">A general configuration class backed by a simple map of string key-value-pairs </td></tr>
+<tr id="row_14_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1Properties.html" target="_self">netspeak::Properties</a></td><td class="desc"></td></tr>
+<tr id="row_15_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1Configuration.html" target="_self">netspeak::Configuration</a></td><td class="desc"></td></tr>
+<tr id="row_16_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1Configuration.html" target="_self">netspeak::invertedindex::Configuration</a></td><td class="desc"></td></tr>
+<tr id="row_17_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1model_1_1Phrase_1_1Count.html" target="_self">netspeak::model::Phrase::Count</a></td><td class="desc"></td></tr>
+<tr id="row_18_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1Dictionaries.html" target="_self">netspeak::Dictionaries</a></td><td class="desc"></td></tr>
+<tr id="row_19_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1Done.html" target="_self">netspeak::util::JsonWriter::Done&lt; S &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_20_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1service_1_1UniqueMap_1_1entry.html" target="_self">netspeak::service::UniqueMap::entry</a></td><td class="desc"></td></tr>
+<tr id="row_21_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1QueryProcessor_1_1equal.html" target="_self">netspeak::QueryProcessor&lt; RetrievalStrategyTag &gt;::equal</a></td><td class="desc"></td></tr>
+<tr id="row_22_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1error__message.html" target="_self">netspeak::error_message</a></td><td class="desc"></td></tr>
+<tr id="row_23_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1util_1_1FileDescriptor.html" target="_self">netspeak::util::FileDescriptor</a></td><td class="desc">A managed file descriptor. This is implemented using a shared pointer </td></tr>
+<tr id="row_24_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1generator.html" target="_self">netspeak::value::generator&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_25_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1generator_3_01big__string_01_4.html" target="_self">netspeak::value::generator&lt; big_string &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_26_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1generator_3_01pair_3_01T1_00_01T2_01_4_01_4.html" target="_self">netspeak::value::generator&lt; pair&lt; T1, T2 &gt; &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_27_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1generator_3_01quadruple_3_01T1_00_01T2_00_01T3_00_01T4_01_4_01_4.html" target="_self">netspeak::value::generator&lt; quadruple&lt; T1, T2, T3, T4 &gt; &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_28_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1generator_3_01std_1_1string_01_4.html" target="_self">netspeak::value::generator&lt; std::string &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_29_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1generator_3_01triple_3_01T1_00_01T2_00_01T3_01_4_01_4.html" target="_self">netspeak::value::generator&lt; triple&lt; T1, T2, T3 &gt; &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_30_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1util_1_1LfuCache_1_1greater.html" target="_self">netspeak::util::LfuCache&lt; T &gt;::greater</a></td><td class="desc"></td></tr>
+<tr id="row_31_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1QueryProcessor_1_1hash.html" target="_self">netspeak::QueryProcessor&lt; RetrievalStrategyTag &gt;::hash</a></td><td class="desc"></td></tr>
+<tr id="row_32_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1invertedindex_1_1Head.html" target="_self">netspeak::invertedindex::Head</a></td><td class="desc"></td></tr>
+<tr id="row_33_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1index__entry__traits.html" target="_self">netspeak::index_entry_traits&lt; IndexEntryT &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_34_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1index__entry__traits_3_01RetrievalStrategy3Tag_01_4.html" target="_self">netspeak::index_entry_traits&lt; RetrievalStrategy3Tag &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_35_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_35_" class="arrow" onclick="toggleFolder('35_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1IndexStrategy.html" target="_self">netspeak::invertedindex::IndexStrategy&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_35_0_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1SortedInput.html" target="_self">netspeak::invertedindex::SortedInput&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_35_1_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1UnsortedInput.html" target="_self">netspeak::invertedindex::UnsortedInput&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_36_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1QueryNormalizer_1_1InitConfig.html" target="_self">netspeak::QueryNormalizer::InitConfig</a></td><td class="desc"></td></tr>
+<tr id="row_37_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1InvertedFileWriter.html" target="_self">netspeak::invertedindex::InvertedFileWriter&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_38_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1model_1_1SearchResult_1_1Item.html" target="_self">netspeak::model::SearchResult::Item</a></td><td class="desc"></td></tr>
+<tr id="row_39_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1JsonWriter.html" target="_self">netspeak::util::JsonWriter</a></td><td class="desc"></td></tr>
+<tr id="row_40_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1model_1_1LengthRange.html" target="_self">netspeak::model::LengthRange</a></td><td class="desc"></td></tr>
+<tr id="row_41_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1LfuCache.html" target="_self">netspeak::util::LfuCache&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_42_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1LfuCache.html" target="_self">netspeak::util::LfuCache&lt; netspeak::Netspeak::result_cache_item &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_43_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1Mut_1_1Lock.html" target="_self">netspeak::util::Mut&lt; T &gt;::Lock</a></td><td class="desc"></td></tr>
+<tr id="row_44_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_44_" class="arrow" onclick="toggleFolder('44_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><b>std::logic_error</b></td><td class="desc"></td></tr>
+<tr id="row_44_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1util_1_1tracable__logic__error.html" target="_self">netspeak::util::tracable_logic_error</a></td><td class="desc"></td></tr>
+<tr id="row_45_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1ManagedIndexer.html" target="_self">netspeak::invertedindex::ManagedIndexer&lt; T, Reader &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_46_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1Mut.html" target="_self">netspeak::util::Mut&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_47_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1Mut.html" target="_self">netspeak::util::Mut&lt; std::ofstream &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_48_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1NameOf.html" target="_self">netspeak::value::NameOf&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_49_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1NameOf_3_01big__string_01_4.html" target="_self">netspeak::value::NameOf&lt; big_string &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_50_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1NameOf_3_01double_01_4.html" target="_self">netspeak::value::NameOf&lt; double &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_51_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1NameOf_3_01float_01_4.html" target="_self">netspeak::value::NameOf&lt; float &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_52_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1NameOf_3_01int16__t_01_4.html" target="_self">netspeak::value::NameOf&lt; int16_t &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_53_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1NameOf_3_01int32__t_01_4.html" target="_self">netspeak::value::NameOf&lt; int32_t &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_54_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1NameOf_3_01int64__t_01_4.html" target="_self">netspeak::value::NameOf&lt; int64_t &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_55_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1NameOf_3_01int8__t_01_4.html" target="_self">netspeak::value::NameOf&lt; int8_t &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_56_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1NameOf_3_01std_1_1string_01_4.html" target="_self">netspeak::value::NameOf&lt; std::string &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_57_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1NameOf_3_01uint16__t_01_4.html" target="_self">netspeak::value::NameOf&lt; uint16_t &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_58_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1NameOf_3_01uint32__t_01_4.html" target="_self">netspeak::value::NameOf&lt; uint32_t &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_59_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1NameOf_3_01uint64__t_01_4.html" target="_self">netspeak::value::NameOf&lt; uint64_t &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_60_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1NameOf_3_01uint8__t_01_4.html" target="_self">netspeak::value::NameOf&lt; uint8_t &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_61_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1Netspeak.html" target="_self">netspeak::Netspeak</a></td><td class="desc"></td></tr>
+<tr id="row_62_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_62_" class="arrow" onclick="toggleFolder('62_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><b>boost::noncopyable</b></td><td class="desc"></td></tr>
+<tr id="row_62_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1PostlistBuilder.html" target="_self">netspeak::invertedindex::PostlistBuilder&lt; value_type &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_62_1_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1StorageWriter.html" target="_self">netspeak::invertedindex::StorageWriter&lt; value_type &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_62_2_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1PostlistBuilder.html" target="_self">netspeak::invertedindex::PostlistBuilder&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_62_3_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1StorageWriter.html" target="_self">netspeak::invertedindex::StorageWriter&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_62_4_" style="display:none;"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_62_4_" class="arrow" onclick="toggleFolder('62_4_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1invertedindex_1_1iterator__type.html" target="_self">netspeak::invertedindex::iterator_type</a></td><td class="desc"></td></tr>
+<tr id="row_62_4_0_" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1invertedindex_1_1constant__size__iter.html" target="_self">netspeak::invertedindex::constant_size_iter</a></td><td class="desc"></td></tr>
+<tr id="row_62_4_1_" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1invertedindex_1_1variable__size__iter.html" target="_self">netspeak::invertedindex::variable_size_iter</a></td><td class="desc"></td></tr>
+<tr id="row_63_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1model_1_1NormQuery.html" target="_self">netspeak::model::NormQuery</a></td><td class="desc"></td></tr>
+<tr id="row_64_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1model_1_1NormQueryUnit____.html" target="_self">netspeak::model::NormQueryUnit__</a></td><td class="desc"></td></tr>
+<tr id="row_65_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html" target="_self">netspeak::util::JsonWriter::ObjectContinue&lt; S, R &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_66_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ObjectStart.html" target="_self">netspeak::util::JsonWriter::ObjectStart&lt; S, R &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_67_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1QueryNormalizer_1_1Options.html" target="_self">netspeak::QueryNormalizer::Options</a></td><td class="desc"></td></tr>
+<tr id="row_68_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1invertedindex_1_1page__type.html" target="_self">netspeak::invertedindex::page_type</a></td><td class="desc"></td></tr>
+<tr id="row_69_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_69_" class="arrow" onclick="toggleFolder('69_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><b>std::pair</b></td><td class="desc"></td></tr>
+<tr id="row_69_0_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1Record.html" target="_self">netspeak::invertedindex::Record&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_69_1_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1value_1_1pair.html" target="_self">netspeak::value::pair&lt; T1, T2 &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_70_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1model_1_1Phrase.html" target="_self">netspeak::model::Phrase</a></td><td class="desc"></td></tr>
+<tr id="row_71_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1PhraseCorpus.html" target="_self">netspeak::PhraseCorpus</a></td><td class="desc"></td></tr>
+<tr id="row_72_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1PhraseFileParser.html" target="_self">netspeak::PhraseFileParser&lt; stream_provides_phrase_id &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_73_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1PhraseFileParserItem.html" target="_self">netspeak::PhraseFileParserItem</a></td><td class="desc"></td></tr>
+<tr id="row_74_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1model_1_1PhraseId____.html" target="_self">netspeak::model::PhraseId__</a></td><td class="desc"></td></tr>
+<tr id="row_75_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1model_1_1RawResult_1_1PhraseItem.html" target="_self">netspeak::model::RawResult::PhraseItem</a></td><td class="desc"></td></tr>
+<tr id="row_76_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1PostlistReader.html" target="_self">netspeak::invertedindex::PostlistReader&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_77_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1PostlistSorter.html" target="_self">netspeak::invertedindex::PostlistSorter&lt; T, Comp &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_78_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1invertedindex_1_1Properties.html" target="_self">netspeak::invertedindex::Properties</a></td><td class="desc"></td></tr>
+<tr id="row_79_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1value_1_1quadruple.html" target="_self">netspeak::value::quadruple&lt; T1, T2, T3, T4 &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_80_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1model_1_1Query.html" target="_self">netspeak::model::Query</a></td><td class="desc"></td></tr>
+<tr id="row_81_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1query__error__message.html" target="_self">netspeak::query_error_message</a></td><td class="desc">The <a class="el" href="structnetspeak_1_1query__error__message.html" title="The query_error_message struct.">query_error_message</a> struct </td></tr>
+<tr id="row_82_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1QueryNormalizer.html" target="_self">netspeak::QueryNormalizer</a></td><td class="desc"></td></tr>
+<tr id="row_83_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1QueryProcessor.html" target="_self">netspeak::QueryProcessor&lt; RetrievalStrategyTag &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_84_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1QueryProcessor.html" target="_self">netspeak::QueryProcessor&lt; netspeak::RetrievalStrategy3Tag &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_85_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1model_1_1QuerySyntax.html" target="_self">netspeak::model::QuerySyntax</a></td><td class="desc"></td></tr>
+<tr id="row_86_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1model_1_1QueryUnit____.html" target="_self">netspeak::model::QueryUnit__</a></td><td class="desc"></td></tr>
+<tr id="row_87_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1value_1_1quintuple.html" target="_self">netspeak::value::quintuple&lt; T1, T2, T3, T4, T5 &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_88_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_88_" class="arrow" onclick="toggleFolder('88_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1RawIndexer.html" target="_self">netspeak::invertedindex::RawIndexer</a></td><td class="desc"></td></tr>
+<tr id="row_88_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1Indexer.html" target="_self">netspeak::invertedindex::Indexer&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_89_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1model_1_1RawPhraseResult.html" target="_self">netspeak::model::RawPhraseResult</a></td><td class="desc">A result set of phrase of a single norm query </td></tr>
+<tr id="row_90_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_90_" class="arrow" onclick="toggleFolder('90_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1RawPostlist.html" target="_self">netspeak::invertedindex::RawPostlist</a></td><td class="desc"></td></tr>
+<tr id="row_90_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1Postlist.html" target="_self">netspeak::invertedindex::Postlist&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_91_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1model_1_1RawRefResult.html" target="_self">netspeak::model::RawRefResult</a></td><td class="desc">A result set of phrase references of a single norm query </td></tr>
+<tr id="row_92_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1model_1_1RawResult.html" target="_self">netspeak::model::RawResult</a></td><td class="desc">A result set of phrase and phrase references of multiple norm queries </td></tr>
+<tr id="row_93_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_93_" class="arrow" onclick="toggleFolder('93_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1RawSearcher.html" target="_self">netspeak::invertedindex::RawSearcher</a></td><td class="desc"></td></tr>
+<tr id="row_93_0_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1Searcher.html" target="_self">netspeak::invertedindex::Searcher&lt; netspeak::value::pair &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_93_1_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1Searcher.html" target="_self">netspeak::invertedindex::Searcher&lt; Value, ThreadSafe &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_94_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_94_" class="arrow" onclick="toggleFolder('94_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1RecordReader.html" target="_self">netspeak::invertedindex::RecordReader&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_94_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1InvertedFileReader.html" target="_self">netspeak::invertedindex::InvertedFileReader&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_95_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_95_" class="arrow" onclick="toggleFolder('95_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1RecordReader.html" target="_self">netspeak::invertedindex::RecordReader&lt; model::PhraseIndexValue &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_95_0_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1PhraseFileReader.html" target="_self">netspeak::PhraseFileReader&lt; stream_provides_phrase_id &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_96_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1model_1_1RawRefResult_1_1Ref.html" target="_self">netspeak::model::RawRefResult::Ref</a></td><td class="desc"></td></tr>
+<tr id="row_97_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1model_1_1RawResult_1_1RefItem.html" target="_self">netspeak::model::RawResult::RefItem</a></td><td class="desc"></td></tr>
+<tr id="row_98_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_98_" class="arrow" onclick="toggleFolder('98_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1regex_1_1RegexIndex.html" target="_self">netspeak::regex::RegexIndex</a></td><td class="desc"></td></tr>
+<tr id="row_98_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1regex_1_1DefaultRegexIndex.html" target="_self">netspeak::regex::DefaultRegexIndex</a></td><td class="desc"></td></tr>
+<tr id="row_99_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1regex_1_1RegexQuery.html" target="_self">netspeak::regex::RegexQuery</a></td><td class="desc">An immutable query for a regex index </td></tr>
+<tr id="row_100_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html" target="_self">netspeak::regex::RegexQueryBuilder</a></td><td class="desc"></td></tr>
+<tr id="row_101_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1regex_1_1RegexUnit.html" target="_self">netspeak::regex::RegexUnit</a></td><td class="desc">A basic unit of a regex query </td></tr>
+<tr id="row_102_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1Netspeak_1_1result__cache__item.html" target="_self">netspeak::Netspeak::result_cache_item</a></td><td class="desc"></td></tr>
+<tr id="row_103_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1RetrievalStrategy.html" target="_self">netspeak::RetrievalStrategy&lt; RetrievalStrategyTag &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_104_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1RetrievalStrategy3Tag.html" target="_self">netspeak::RetrievalStrategy3Tag</a></td><td class="desc"></td></tr>
+<tr id="row_105_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1RetrievalStrategy.html" target="_self">netspeak::RetrievalStrategy&lt; netspeak::RetrievalStrategy3Tag &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_106_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1RetrievalStrategy_3_01RetrievalStrategy3Tag_01_4.html" target="_self">netspeak::RetrievalStrategy&lt; RetrievalStrategy3Tag &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_107_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_107_" class="arrow" onclick="toggleFolder('107_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><b>std::runtime_error</b></td><td class="desc"></td></tr>
+<tr id="row_107_0_" class="even" style="display:none;"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_107_0_" class="arrow" onclick="toggleFolder('107_0_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1util_1_1tracable__runtime__error.html" target="_self">netspeak::util::tracable_runtime_error</a></td><td class="desc"></td></tr>
+<tr id="row_107_0_0_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1invalid__query__error.html" target="_self">netspeak::invalid_query_error</a></td><td class="desc"></td></tr>
+<tr id="row_107_0_1_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1util_1_1format__properties__error.html" target="_self">netspeak::util::format_properties_error</a></td><td class="desc"></td></tr>
+<tr id="row_108_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1Netspeak_1_1search__config.html" target="_self">netspeak::Netspeak::search_config</a></td><td class="desc"></td></tr>
+<tr id="row_109_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1model_1_1SearchOptions.html" target="_self">netspeak::model::SearchOptions</a></td><td class="desc"></td></tr>
+<tr id="row_110_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1model_1_1SearchResult.html" target="_self">netspeak::model::SearchResult</a></td><td class="desc"></td></tr>
+<tr id="row_111_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_111_" class="arrow" onclick="toggleFolder('111_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><b>NetspeakService::Service</b></td><td class="desc"></td></tr>
+<tr id="row_111_0_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1service_1_1LoadBalanceProxy.html" target="_self">netspeak::service::LoadBalanceProxy</a></td><td class="desc">A proxy to unify and load-balance any number of compatible <a class="el" href="classnetspeak_1_1Netspeak.html">Netspeak</a> indexes </td></tr>
+<tr id="row_111_1_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1service_1_1RequestLogger.html" target="_self">netspeak::service::RequestLogger</a></td><td class="desc"></td></tr>
+<tr id="row_111_2_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1service_1_1UniqueMap.html" target="_self">netspeak::service::UniqueMap</a></td><td class="desc">An implementation of the <a class="el" href="classnetspeak_1_1Netspeak.html">Netspeak</a> gRPC service that will forward all requests to a unique <a class="el" href="classnetspeak_1_1Netspeak.html">Netspeak</a> instance for the given corpus </td></tr>
+<tr id="row_112_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1value_1_1sextuple.html" target="_self">netspeak::value::sextuple&lt; T1, T2, T3, T4, T5, T6 &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_113_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html" target="_self">netspeak::model::SimpleQuery</a></td><td class="desc"></td></tr>
+<tr id="row_114_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html" target="_self">netspeak::model::SimpleQueryUnit__</a></td><td class="desc"></td></tr>
+<tr id="row_115_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1model_1_1NormQueryUnit_____1_1Source.html" target="_self">netspeak::model::NormQueryUnit__::Source</a></td><td class="desc"></td></tr>
+<tr id="row_116_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1invertedindex_1_1IndexStrategy_1_1stats__type.html" target="_self">netspeak::invertedindex::IndexStrategy&lt; T &gt;::stats_type</a></td><td class="desc"></td></tr>
+<tr id="row_117_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1stats__type.html" target="_self">netspeak::stats_type</a></td><td class="desc"></td></tr>
+<tr id="row_118_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1StorageReader.html" target="_self">netspeak::invertedindex::StorageReader&lt; T, ThreadSafe &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_119_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1invertedindex_1_1StorageReader.html" target="_self">netspeak::invertedindex::StorageReader&lt; Value, true &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_120_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1util_1_1StringIdMap_1_1string__entry.html" target="_self">netspeak::util::StringIdMap&lt; Id &gt;::string_entry</a></td><td class="desc"></td></tr>
+<tr id="row_121_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1util_1_1JsonWriter_1_1string__stream__wrapper.html" target="_self">netspeak::util::JsonWriter::string_stream_wrapper</a></td><td class="desc"></td></tr>
+<tr id="row_122_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1StringIdMap.html" target="_self">netspeak::util::StringIdMap&lt; Id &gt;</a></td><td class="desc">This is a highly specialized data structure for strings with ids </td></tr>
+<tr id="row_123_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1invertedindex_1_1swap__type.html" target="_self">netspeak::invertedindex::swap_type</a></td><td class="desc"></td></tr>
+<tr id="row_124_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1value_1_1triple.html" target="_self">netspeak::value::triple&lt; T1, T2, T3 &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_125_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1RetrievalStrategy3Tag_1_1unit__metadata.html" target="_self">netspeak::RetrievalStrategy3Tag::unit_metadata</a></td><td class="desc"></td></tr>
+<tr id="row_126_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1Value.html" target="_self">netspeak::util::JsonWriter::Value&lt; S, R &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_127_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1value__traits.html" target="_self">netspeak::value::value_traits&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_128_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01big__string_01_4.html" target="_self">netspeak::value::value_traits&lt; big_string &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_129_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01pair_3_01T1_00_01T2_01_4_01_4.html" target="_self">netspeak::value::value_traits&lt; pair&lt; T1, T2 &gt; &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_130_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01quadruple_3_01T1_00_01T2_00_01T3_00_01T4_01_4_01_4.html" target="_self">netspeak::value::value_traits&lt; quadruple&lt; T1, T2, T3, T4 &gt; &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_131_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01quintuple_3_01T1_00_01T2_00_01T3_00_01T4_00_01T5_01_4_01_4.html" target="_self">netspeak::value::value_traits&lt; quintuple&lt; T1, T2, T3, T4, T5 &gt; &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_132_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01sextuple_3_01T1_00_01T2_00_01T3_00_01T4_00_01T5_00_01T6_01_4_01_4.html" target="_self">netspeak::value::value_traits&lt; sextuple&lt; T1, T2, T3, T4, T5, T6 &gt; &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_133_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01std_1_1string_01_4.html" target="_self">netspeak::value::value_traits&lt; std::string &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_134_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01triple_3_01T1_00_01T2_00_01T3_01_4_01_4.html" target="_self">netspeak::value::value_traits&lt; triple&lt; T1, T2, T3 &gt; &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_135_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structnetspeak_1_1regex_1_1DefaultRegexIndex_1_1WordEntry.html" target="_self">netspeak::regex::DefaultRegexIndex::WordEntry</a></td><td class="desc"></td></tr>
+<tr id="row_136_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classnetspeak_1_1model_1_1Words.html" target="_self">netspeak::model::Words</a></td><td class="desc"></td></tr>
+</table>
+</div><!-- directory -->
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
