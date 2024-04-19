@@ -2,19 +2,22 @@ cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
 option(NETSPEAK_BUILD_TESTS "Build tests" ON)
 option(NETSPEAK_BUILD_DOCS "Build documentation" ON)
+option(NETSPEAK_ONLY_DOCS "Build only documentation -- this disables tests and others" OFF)
 
 project(Netspeak VERSION 4.2.0 LANGUAGES CXX)
 
-set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-add_subdirectory(src)
-add_subdirectory(bindings/python)
+if (NOT NETSPEAK_ONLY_DOCS)
+	set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+	add_subdirectory(src)
+	add_subdirectory(bindings/python)
+endif()
 
 ##########################################################################################
 # Testing
 ##########################################################################################
 # Testing only available if this is the main app
 # Emergency override MODERN_CMAKE_BUILD_TESTING provided as well
-if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR MODERN_CMAKE_BUILD_TESTING) AND NETSPEAK_BUILD_TESTS)
+if(NOT NETSPEAK_ONLY_DOCS AND (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR MODERN_CMAKE_BUILD_TESTING) AND NETSPEAK_BUILD_TESTS)
 	enable_testing()
 	add_subdirectory(tests)
 endif()
