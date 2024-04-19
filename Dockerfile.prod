@@ -3,9 +3,12 @@ FROM debian:trixie as build
 ENV DEBIAN_FRONTEND noninteractive
 
 # Tools and Libraries
+#  For shorter build time (but larger binary), we could install protobuf-compiler-grpc libgrpc++-dev here.
+#  If we leave these out, we only need to install pkg-config and the CMake setup automatically compiles
+#  and links grpc++ into the final binary.
 RUN apt-get update && apt-get -y install git g++-13 cmake \
     protobuf-compiler \
-    protobuf-compiler-grpc libgrpc++-dev \
+    pkg-config \
     libboost-all-dev \
     default-jre
 
@@ -35,6 +38,7 @@ FROM debian:trixie
 
 ENV DEBIAN_FRONTEND noninteractive
 
+RUN apt-get update && apt-get -y install libicu72 libcmph0
 COPY --from=build /netspeak/build/src/netspeakcli /usr/local/bin/netspeak4
 
 CMD netspeak4 --help

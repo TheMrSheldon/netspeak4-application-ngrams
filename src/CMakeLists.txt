@@ -66,6 +66,20 @@ target_sources(netspeakcli PRIVATE
 target_compile_features(netspeakcli PUBLIC cxx_std_23)
 target_link_libraries(netspeakcli PUBLIC netspeak)
 
+# We want to build everything into a single binary
+option(BUILD_SHARED_LIBS "Build using shared libraries" OFF)
+if (WIN32)
+    set(CMAKE_FIND_LIBRARY_SUFFIXES ".lib")
+else()
+    set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
+endif()
+if (MSVC)
+    target_compile_options(netspeakcli PUBLIC /MT)
+    target_link_options(netspeakcli PUBLIC /INCREMENTAL:NO /NODEFAULTLIB:MSVCRT)
+else()
+    # target_link_libraries(netspeakcli PUBLIC "-static")
+endif()
+
 ##########################################################################################
 # Libraries
 ##########################################################################################
@@ -136,6 +150,7 @@ protobuf_generate(
 # target_include_directories(netspeak PUBLIC ${NS_PROTO_HPP})
 
 # Boost
+set(Boost_USE_STATIC_LIBS ON)
 find_package(Boost 1.40 COMPONENTS program_options regex REQUIRED)
 target_link_libraries(netspeak PUBLIC ${Boost_LIBRARIES})
 
