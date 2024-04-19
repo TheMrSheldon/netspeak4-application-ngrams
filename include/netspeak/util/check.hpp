@@ -7,8 +7,7 @@
 
 #include "netspeak/util/exception.hpp"
 
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 inline void check(bool expr, const std::string& msg) {
   if (!expr) {
@@ -24,16 +23,14 @@ void check(bool expr, const std::string& msg, const T& obj) {
 }
 
 template <typename T>
-void check(bool expr, const std::string& func, const std::string& msg,
-           const T& obj) {
+void check(bool expr, const std::string& func, const std::string& msg, const T& obj) {
   if (!expr) {
     throw_runtime_error(func + " : " + msg, obj);
   }
 }
 
 template <typename T>
-void check_equal(const T& expected, const T& actual,
-                 const std::string& message = "") {
+void check_equal(const T& expected, const T& actual, const std::string& message = "") {
   if (!(expected == actual)) {
     std::ostringstream oss;
     oss << message << "\nexpected: " << expected << "\nactual: " << actual;
@@ -41,7 +38,6 @@ void check_equal(const T& expected, const T& actual,
   }
 }
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 #endif // NETSPEAK_UTIL_CHECK_HPP

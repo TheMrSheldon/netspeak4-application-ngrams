@@ -5,17 +5,15 @@
 
 #include <climits>
 #include <cmath>
+#include <filesystem>
 #include <memory>
 #include <numeric>
 
-#include <filesystem>
+#include "../util/logging.hpp"
+#include "../util/systemio.hpp"
+#include "Postlist.hpp"
 
-#include "netspeak/invertedindex/Postlist.hpp"
-#include "netspeak/util/logging.hpp"
-#include "netspeak/util/systemio.hpp"
-
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 /**
  * A class to read postlists from a binary file.
@@ -28,10 +26,9 @@ private:
   PostlistReader();
 
 public:
-  static std::unique_ptr<Postlist<T>> read(
-      const std::filesystem::path& path, FILE* file, uint32_t index_begin = 0,
-      uint32_t value_count = std::numeric_limits<uint32_t>::max(),
-      uint32_t page_size = swap_type::default_pagesize) {
+  static std::unique_ptr<Postlist<T>> read(const std::filesystem::path& path, FILE* file, uint32_t index_begin = 0,
+                                           uint32_t value_count = std::numeric_limits<uint32_t>::max(),
+                                           uint32_t page_size = swap_type::default_pagesize) {
     std::unique_ptr<Postlist<T>> postlist;
 
     // load postlist head
@@ -46,17 +43,14 @@ public:
 
       // read value sizes to skip [0, index_begin)
       size_vector value_sizes(index_begin);
-      util::fread(value_sizes.data(), sizeof(size_vector::value_type),
-                  value_sizes.size(), file);
-      const std::size_t offset_of_index_begin = std::accumulate(
-          value_sizes.begin(), value_sizes.end(), begin_of_payload);
+      util::fread(value_sizes.data(), sizeof(size_vector::value_type), value_sizes.size(), file);
+      const std::size_t offset_of_index_begin =
+          std::accumulate(value_sizes.begin(), value_sizes.end(), begin_of_payload);
 
       // read value sizes to use [index_begin, index_begin + value_count)
       value_sizes.resize(value_count);
-      util::fread(value_sizes.data(), sizeof(size_vector::value_type),
-                  value_sizes.size(), file);
-      const std::size_t total_payload_size =
-          std::accumulate(value_sizes.begin(), value_sizes.end(), 0);
+      util::fread(value_sizes.data(), sizeof(size_vector::value_type), value_sizes.size(), file);
+      const std::size_t total_payload_size = std::accumulate(value_sizes.begin(), value_sizes.end(), 0);
 
       // build new head
       Head new_head;
@@ -79,8 +73,7 @@ public:
         postlist.reset(new Postlist<T>(new_head, page, value_sizes));
       }
     } else {
-      const std::size_t offset_of_index_begin =
-          begin_of_payload + index_begin * head.value_size;
+      const std::size_t offset_of_index_begin = begin_of_payload + index_begin * head.value_size;
       const std::size_t total_payload_size = value_count * head.value_size;
       // build new head
       Head new_head;
@@ -107,7 +100,6 @@ public:
   }
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_POSTLIST_READER_HPP

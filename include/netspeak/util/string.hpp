@@ -3,16 +3,14 @@
 
 #include <string>
 
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 bool is_valid_utf8(const std::string& str);
 
 void check_valid_utf8(const std::string& str);
 void check_valid_utf8(const std::string& str, const std::string& message);
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 
 #endif

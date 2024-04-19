@@ -4,14 +4,12 @@
 #define NETSPEAK_INVERTEDINDEX_CONFIGURATION_HPP
 
 #include <cstdint>
-
 #include <filesystem>
 
-#include "netspeak/util/conversion.hpp"
-#include "netspeak/util/memory.hpp"
+#include "../util/conversion.hpp"
+#include "../util/memory.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 enum class key_sorting_type { unsorted, sorted };
 
@@ -85,19 +83,13 @@ public:
   }
 
   void print(std::ostream& os) const {
-    const std::string exp_rec_cnt(
-        expected_record_count_ == 0 ? "undefined"
-                                    : util::to_string(expected_record_count_));
-    os << "{\n  expected_record_count : " << exp_rec_cnt << ",\n  input_file : "
-       << (input_file_.empty() ? "undefined" : input_file_)
-       << ",\n  input_directory : "
-       << (input_directory_.empty() ? "undefined" : input_directory_)
-       << ",\n  index_directory : "
-       << (index_directory_.empty() ? "undefined" : index_directory_)
-       << ",\n  key_sorting : " << to_string(key_sorting_)
-       << ",\n  value_sorting : " << to_string(value_sorting_)
-       << ",\n  max_memory_usage : " << util::to_string(max_memory_usage_)
-       << "\n}";
+    const std::string exp_rec_cnt(expected_record_count_ == 0 ? "undefined" : util::to_string(expected_record_count_));
+    os << "{\n  expected_record_count : " << exp_rec_cnt
+       << ",\n  input_file : " << (input_file_.empty() ? "undefined" : input_file_)
+       << ",\n  input_directory : " << (input_directory_.empty() ? "undefined" : input_directory_)
+       << ",\n  index_directory : " << (index_directory_.empty() ? "undefined" : index_directory_)
+       << ",\n  key_sorting : " << to_string(key_sorting_) << ",\n  value_sorting : " << to_string(value_sorting_)
+       << ",\n  max_memory_usage : " << util::to_string(max_memory_usage_) << "\n}";
   }
 
   void set_expected_record_count(uint64_t record_count) {
@@ -144,7 +136,6 @@ inline std::ostream& operator<<(std::ostream& os, const Configuration& config) {
   return os;
 }
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_CONFIGURATION_HPP

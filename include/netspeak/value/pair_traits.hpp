@@ -3,11 +3,10 @@
 #ifndef NETSPEAK_VALUE_PAIR_TRAITS_HPP
 #define NETSPEAK_VALUE_PAIR_TRAITS_HPP
 
-#include "netspeak/value/pair.hpp"
-#include "netspeak/value/value_traits.hpp"
+#include "pair.hpp"
+#include "value_traits.hpp"
 
-namespace netspeak {
-namespace value {
+namespace netspeak::value {
 
 // -----------------------------------------------------------------------------
 // Partial specialization for value::pair<T1, T2>
@@ -36,13 +35,11 @@ struct value_traits<pair<T1, T2> > {
   }
 
   static inline bool write_to(const value_type& pair, FILE* file) {
-    return T1Traits::write_to(pair.e1(), file) &&
-           T2Traits::write_to(pair.e2(), file);
+    return T1Traits::write_to(pair.e1(), file) && T2Traits::write_to(pair.e2(), file);
   }
 
   static inline bool read_from(value_type& pair, FILE* file) {
-    return T1Traits::read_from(pair.e1(), file) &&
-           T2Traits::read_from(pair.e2(), file);
+    return T1Traits::read_from(pair.e1(), file) && T2Traits::read_from(pair.e2(), file);
   }
 
   static inline void print_to(const value_type& pair, std::ostream& os) {
@@ -96,7 +93,6 @@ std::ostream& operator<<(std::ostream& os, const pair<T1, T2>& value) {
   return os;
 }
 
-} // namespace value
-} // namespace netspeak
+} // namespace netspeak::value
 
 #endif // NETSPEAK_VALUE_PAIR_TRAITS_HPP

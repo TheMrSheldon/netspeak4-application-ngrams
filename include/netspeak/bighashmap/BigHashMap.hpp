@@ -3,24 +3,24 @@
 #ifndef NETSPEAK_BIGHASHMAP_BIG_HASH_MAP_HPP
 #define NETSPEAK_BIGHASHMAP_BIG_HASH_MAP_HPP
 
+#include <fstream>
 #include <string>
 #include <vector>
 
 #include <boost/algorithm/string.hpp>
 
-#include "netspeak/bighashmap/Builder.hpp"
-#include "netspeak/bighashmap/CmphMap.hpp"
-#include "netspeak/bighashmap/ExternalMap.hpp"
-#include "netspeak/bighashmap/InternalMap.hpp"
-#include "netspeak/util/memory.hpp"
-#include "netspeak/value/pair_traits.hpp"
-#include "netspeak/value/quadruple_traits.hpp"
-#include "netspeak/value/quintuple_traits.hpp"
-#include "netspeak/value/sextuple_traits.hpp"
-#include "netspeak/value/triple_traits.hpp"
+#include "../util/memory.hpp"
+#include "../value/pair_traits.hpp"
+#include "../value/quadruple_traits.hpp"
+#include "../value/quintuple_traits.hpp"
+#include "../value/sextuple_traits.hpp"
+#include "../value/triple_traits.hpp"
+#include "Builder.hpp"
+#include "CmphMap.hpp"
+#include "ExternalMap.hpp"
+#include "InternalMap.hpp"
 
-namespace netspeak {
-namespace bighashmap {
+namespace netspeak::bighashmap {
 
 /**
  * For comments please take a look at {@link ExternalMap}.
@@ -29,8 +29,7 @@ namespace bighashmap {
  * @author  martin.trenkmann@uni-weimar.de
  * @version $Id$
  */
-template <typename ValueT, bool IsThreadSafe = false,
-          typename TraitsT = value::value_traits<ValueT> >
+template <typename ValueT, bool IsThreadSafe = false, typename TraitsT = value::value_traits<ValueT> >
 class BigHashMap {
 public:
   typedef ValueT Value;
@@ -49,8 +48,7 @@ private:
 
   static const std::string index_file_name;
 
-  explicit BigHashMap(const std::vector<Map*>& sub_maps)
-      : maps_(sub_maps), size_(0) {
+  explicit BigHashMap(const std::vector<Map*>& sub_maps) : maps_(sub_maps), size_(0) {
     for (const auto& map : maps_) {
       size_ += map->size();
     }
@@ -63,8 +61,7 @@ private:
       for (fs::directory_iterator it(dir); it != end; ++it) {
         if (!fs::is_regular_file(it->path()))
           continue;
-        if (boost::ends_with(it->path().string(), "dat") ||
-            boost::ends_with(it->path().string(), "mph")) {
+        if (boost::ends_with(it->path().string(), "dat") || boost::ends_with(it->path().string(), "mph")) {
           size += fs::file_size(it->path());
         }
       }
@@ -73,17 +70,14 @@ private:
   }
 
 public:
-  static void Build(const fs::path& input_dir, const fs::path& output_dir,
-                    Algorithm algorithm = Algorithm::BDZ) {
+  static void Build(const fs::path& input_dir, const fs::path& output_dir, Algorithm algorithm = Algorithm::BDZ) {
     // Set current locale to C to enable byte-wise UTF-8 string comparison.
     // http://stackoverflow.com/questions/20226851/how-do-locales-work-in-linux-posix-and-what-transformations-are-applied/20231523
     std::locale::global(std::locale("C"));
     bighashmap::Builder<Value>::Build(input_dir, output_dir, algorithm);
   }
 
-  static BigHashMap* Open(
-      const fs::path& dir,
-      util::memory_type memory = util::memory_type::min_required) {
+  static BigHashMap* Open(const fs::path& dir, util::memory_type memory = util::memory_type::min_required) {
     const fs::path idx_file = dir / index_file_name;
     std::ifstream ifs(idx_file);
     if (!ifs) {
@@ -94,13 +88,11 @@ public:
     const uint64_t num_bytes = SerializedSizeInBytes(idx_file.parent_path());
     if (num_bytes > util::to_bytes(memory)) {
       while (std::getline(ifs, part_idx_file)) {
-        part_maps.push_back(ExternalMap<ValueT, IsThreadSafe, Traits>::Open(
-            idx_file.parent_path() / part_idx_file));
+        part_maps.push_back(ExternalMap<ValueT, IsThreadSafe, Traits>::Open(idx_file.parent_path() / part_idx_file));
       }
     } else {
       while (std::getline(ifs, part_idx_file)) {
-        part_maps.push_back(InternalMap<ValueT, Traits>::Open(
-            idx_file.parent_path() / part_idx_file));
+        part_maps.push_back(InternalMap<ValueT, Traits>::Open(idx_file.parent_path() / part_idx_file));
       }
     }
     ifs.close();
@@ -108,9 +100,7 @@ public:
   }
 
   bool Get(const std::string& key, Value& value) {
-    return maps_.empty()
-               ? false
-               : maps_[util::hash32(key) % maps_.size()]->Get(key, value);
+    return maps_.empty() ? false : maps_[util::hash32(key) % maps_.size()]->Get(key, value);
   }
 
   bool Get(const std::string& key, char* buffer) {
@@ -136,10 +126,8 @@ private:
 };
 
 template <typename Value, bool IsThreadSafe, typename Traits>
-const std::string BigHashMap<Value, IsThreadSafe, Traits>::index_file_name(
-    bighashmap::Builder<Value>::index_file_name);
+const std::string BigHashMap<Value, IsThreadSafe, Traits>::index_file_name(bighashmap::Builder<Value>::index_file_name);
 
-} // namespace bighashmap
-} // namespace netspeak
+} // namespace netspeak::bighashmap
 
 #endif // NETSPEAK_BIGHASHMAP_BIG_HASH_MAP_HPP

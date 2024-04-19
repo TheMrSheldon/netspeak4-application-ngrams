@@ -1,10 +1,7 @@
-#include <netspeak/Configuration.hpp>
-
-#include <string>
-
 #include <filesystem>
-
+#include <netspeak/Configuration.hpp>
 #include <netspeak/util/traceable_error.hpp>
+#include <string>
 
 namespace netspeak {
 
@@ -82,12 +79,9 @@ void Configuration::desugar_home() {
       home_path = fs::absolute(base_dir_ / home_path);
     }
 
-    auto set_default = [&](const std::string& key,
-                           const std::string& default_value) {
+    auto set_default = [&](const std::string& key, const std::string& default_value) {
       if (!config_.contains(key)) {
-        config_[key] =
-            fs::weakly_canonical(fs::absolute(home_path / default_value))
-                .string();
+        config_[key] = fs::weakly_canonical(fs::absolute(home_path / default_value)).string();
       }
     };
 
@@ -100,19 +94,16 @@ void Configuration::desugar_home() {
   }
 }
 
-Configuration::Configuration(
-    std::initializer_list<util::Config::initializer_list_type> list)
+Configuration::Configuration(std::initializer_list<util::Config::initializer_list_type> list)
     : config_(list), extends_(), base_dir_() {
   load_extends();
   desugar_home();
 }
-Configuration::Configuration(fs::path file_name)
-    : config_(file_name), extends_(), base_dir_(file_name.parent_path()) {
+Configuration::Configuration(fs::path file_name) : config_(file_name), extends_(), base_dir_(file_name.parent_path()) {
   load_extends();
   desugar_home();
 }
-Configuration::Configuration(const util::Config& config)
-    : config_(config), extends_(), base_dir_() {
+Configuration::Configuration(const util::Config& config) : config_(config), extends_(), base_dir_() {
   load_extends();
   desugar_home();
 }
@@ -126,12 +117,10 @@ std::string Configuration::get_required(const std::string& key) const {
   if (value) {
     return *value;
   } else {
-    throw util::tracable_runtime_error("The required key " + key +
-                                       " is missing.");
+    throw util::tracable_runtime_error("The required key " + key + " is missing.");
   }
 }
-std::optional<std::string> Configuration::get_optional(
-    const std::string& key) const {
+std::optional<std::string> Configuration::get_optional(const std::string& key) const {
   if (config_.contains(key)) {
     return config_.get(key);
   } else if (extends_) {
@@ -140,8 +129,7 @@ std::optional<std::string> Configuration::get_optional(
     return std::nullopt;
   }
 }
-std::string Configuration::get(const std::string& key,
-                               const std::string& defaultValue) const {
+std::string Configuration::get(const std::string& key, const std::string& defaultValue) const {
   auto value = get_optional(key);
   if (value) {
     return *value;
@@ -160,16 +148,14 @@ fs::path relative_to(const std::string& path, const fs::path& to) {
 fs::path Configuration::get_required_path(const std::string& key) const {
   return relative_to(get_required(key), base_dir_);
 }
-std::optional<fs::path> Configuration::get_optional_path(
-    const std::string& key) const {
+std::optional<fs::path> Configuration::get_optional_path(const std::string& key) const {
   const auto optional = get_optional(key);
   if (!optional) {
     return std::nullopt;
   }
   return relative_to(*optional, base_dir_);
 }
-fs::path Configuration::get_path(const std::string& key,
-                                  const std::string& defaultValue) const {
+fs::path Configuration::get_path(const std::string& key, const std::string& defaultValue) const {
   return relative_to(get(key, defaultValue), base_dir_);
 }
 
@@ -182,15 +168,13 @@ bool parse_bool(const std::string& key, const std::string& value) {
   }
 
   std::stringstream out;
-  out << "Invalid boolean value for '" << key
-      << "'. Expected 'true' or 'false' but found '" << value << "'.";
+  out << "Invalid boolean value for '" << key << "'. Expected 'true' or 'false' but found '" << value << "'.";
   throw util::tracable_runtime_error(out.str());
 }
 bool Configuration::get_required_bool(const std::string& key) const {
   return parse_bool(key, get_required(key));
 }
-std::optional<bool> Configuration::get_optional_bool(
-    const std::string& key) const {
+std::optional<bool> Configuration::get_optional_bool(const std::string& key) const {
   const auto optional = get_optional(key);
   if (!optional) {
     return std::nullopt;

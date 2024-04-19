@@ -1,16 +1,14 @@
 #include <iostream>
+#include <netspeak/regex/DefaultRegexIndex.hpp>
+#include <netspeak/regex/RegexQuery.hpp>
+#include <netspeak/regex/parsers.hpp>
 
 #include <boost/test/unit_test.hpp>
 
 #include "paths.hpp"
 
-#include <netspeak/regex/DefaultRegexIndex.hpp>
-#include <netspeak/regex/RegexQuery.hpp>
-#include <netspeak/regex/parsers.hpp>
 
-
-namespace netspeak {
-namespace regex {
+namespace netspeak::regex {
 
 std::string query_to_string(const RegexQuery& query) {
   std::wstring_convert<std::codecvt_utf8<char32_t>, char32_t> conv;
@@ -88,8 +86,7 @@ BOOST_AUTO_TEST_CASE(test_regex_query_parser) {
   BOOST_REQUIRE_EQUAL(netspeak_query("......."), "{star}");
   BOOST_REQUIRE_EQUAL(netspeak_query(".......b"), "{star}{word:'b'}");
   BOOST_REQUIRE_EQUAL(netspeak_query("a......."), "{word:'a'}{star}");
-  BOOST_REQUIRE_EQUAL(netspeak_query("a.......b"),
-                      "{word:'a'}{star}{word:'b'}");
+  BOOST_REQUIRE_EQUAL(netspeak_query("a.......b"), "{word:'a'}{star}{word:'b'}");
 
   // char set
   BOOST_REQUIRE_EQUAL(netspeak_query("[ab]"), "{char_set:'ab'}");
@@ -98,23 +95,18 @@ BOOST_AUTO_TEST_CASE(test_regex_query_parser) {
   BOOST_REQUIRE_EQUAL(netspeak_query("a[]c"), "{char_set:''}");
 
   // order set
-  BOOST_REQUIRE_EQUAL(netspeak_query("{abc}"),
-                      "{char_set:'abc'}{char_set:'abc'}{char_set:'abc'}");
-  BOOST_REQUIRE_EQUAL(
-      netspeak_query("{abba}"),
-      "{char_set:'ab'}{char_set:'ab'}{char_set:'ab'}{char_set:'ab'}");
+  BOOST_REQUIRE_EQUAL(netspeak_query("{abc}"), "{char_set:'abc'}{char_set:'abc'}{char_set:'abc'}");
+  BOOST_REQUIRE_EQUAL(netspeak_query("{abba}"), "{char_set:'ab'}{char_set:'ab'}{char_set:'ab'}{char_set:'ab'}");
   BOOST_REQUIRE_EQUAL(netspeak_query("{aaaa}"), "{word:'aaaa'}");
   BOOST_REQUIRE_EQUAL(netspeak_query("{a}"), "{word:'a'}");
   BOOST_REQUIRE_EQUAL(netspeak_query("{}"), "");
 
   // optional
-  BOOST_REQUIRE_EQUAL(netspeak_query("colo[u]r"),
-                      "{word:'colo'}{optional_word:'u'}{word:'r'}");
+  BOOST_REQUIRE_EQUAL(netspeak_query("colo[u]r"), "{word:'colo'}{optional_word:'u'}{word:'r'}");
 
   // star absorbs optionals
   BOOST_REQUIRE_EQUAL(netspeak_query("*[a]"), "{star}");
-  BOOST_REQUIRE_EQUAL(netspeak_query("[a]?[b]?[c]?*"),
-                      "{qmark}{qmark}{qmark}{star}");
+  BOOST_REQUIRE_EQUAL(netspeak_query("[a]?[b]?[c]?*"), "{qmark}{qmark}{qmark}{star}");
 }
 
 BOOST_AUTO_TEST_CASE(test_regex_query_parser_with_invalid_queries) {
@@ -139,8 +131,7 @@ BOOST_AUTO_TEST_CASE(test_regex_query_reject_all) {
 }
 
 
-std::vector<std::string> matches(const DefaultRegexIndex& index,
-                                 const std::string& netspeak_query,
+std::vector<std::string> matches(const DefaultRegexIndex& index, const std::string& netspeak_query,
                                  uint32_t max_matches) {
   std::vector<std::string> matches;
   auto query = parse_netspeak_regex_query(netspeak_query);
@@ -155,8 +146,7 @@ BOOST_AUTO_TEST_CASE(test_default_regex_index) {
 
   auto test = [&](std::string query, const std::vector<std::string>& expected) {
     std::vector<std::string> actual = matches(index, query, 10);
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(actual.begin(), actual.end(),
-                                    expected.begin(), expected.end());
+    BOOST_REQUIRE_EQUAL_COLLECTIONS(actual.begin(), actual.end(), expected.begin(), expected.end());
   };
 
   {
@@ -164,8 +154,7 @@ BOOST_AUTO_TEST_CASE(test_default_regex_index) {
     test("", e);
   }
   {
-    std::vector<std::string> e{ ",", "the", "of",  "and", "to",
-                                "a", "in",  "for", "is",  "on" };
+    std::vector<std::string> e{ ",", "the", "of", "and", "to", "a", "in", "for", "is", "on" };
     test("*", e);
   }
   {
@@ -177,13 +166,11 @@ BOOST_AUTO_TEST_CASE(test_default_regex_index) {
     test("love", e);
   }
   {
-    std::vector<std::string> e{ "and", "as",    "at",  "are",  "all",
-                                "an",  "about", "any", "also", "am" };
+    std::vector<std::string> e{ "and", "as", "at", "are", "all", "an", "about", "any", "also", "am" };
     test("a+", e);
   }
   {
-    std::vector<std::string> e{ "add", "address", "additional", "added",
-                                "addition" };
+    std::vector<std::string> e{ "add", "address", "additional", "added", "addition" };
     test("*add*", e);
   }
   {
@@ -213,8 +200,7 @@ BOOST_AUTO_TEST_CASE(test_default_regex_index_unicode) {
 
   auto test = [&](std::string query, const std::vector<std::string>& expected) {
     std::vector<std::string> actual = matches(index, query, 10);
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(actual.begin(), actual.end(),
-                                    expected.begin(), expected.end());
+    BOOST_REQUIRE_EQUAL_COLLECTIONS(actual.begin(), actual.end(), expected.begin(), expected.end());
   };
 
   {
@@ -224,8 +210,7 @@ BOOST_AUTO_TEST_CASE(test_default_regex_index_unicode) {
 }
 
 uint32_t get_combinations(std::string netspeak_regex_query) {
-  return parse_netspeak_regex_query(netspeak_regex_query)
-      .combinations_upper_bound();
+  return parse_netspeak_regex_query(netspeak_regex_query).combinations_upper_bound();
 }
 BOOST_AUTO_TEST_CASE(test_regex_query_combinations) {
   BOOST_REQUIRE_EQUAL(get_combinations("*[]*"), 0);
@@ -246,8 +231,7 @@ BOOST_AUTO_TEST_CASE(test_regex_query_combinations) {
 }
 
 size_t get_max_input_length(std::string netspeak_regex_query) {
-  return parse_netspeak_regex_query(netspeak_regex_query)
-      .max_utf8_input_length();
+  return parse_netspeak_regex_query(netspeak_regex_query).max_utf8_input_length();
 }
 BOOST_AUTO_TEST_CASE(test_regex_query_max_input_length) {
   BOOST_REQUIRE_EQUAL(get_max_input_length(""), 0);
@@ -264,8 +248,7 @@ BOOST_AUTO_TEST_CASE(test_regex_query_max_input_length) {
 }
 
 size_t get_min_input_length(std::string netspeak_regex_query) {
-  return parse_netspeak_regex_query(netspeak_regex_query)
-      .min_utf8_input_length();
+  return parse_netspeak_regex_query(netspeak_regex_query).min_utf8_input_length();
 }
 BOOST_AUTO_TEST_CASE(test_regex_query_min_input_length) {
   BOOST_REQUIRE_EQUAL(get_min_input_length(""), 0);
@@ -284,5 +267,4 @@ BOOST_AUTO_TEST_CASE(test_regex_query_min_input_length) {
 
 BOOST_AUTO_TEST_SUITE_END()
 
-} // namespace regex
-} // namespace netspeak
+} // namespace netspeak::regex

@@ -1,25 +1,21 @@
-#include <netspeak/Dictionaries.hpp>
-
 #include <fstream>
+#include <netspeak/Dictionaries.hpp>
+#include <netspeak/error.hpp>
+#include <netspeak/util/check.hpp>
 #include <string>
 #include <vector>
 
 #include <boost/algorithm/string.hpp>
 
-#include <netspeak/error.hpp>
-#include <netspeak/util/check.hpp>
-
 namespace netspeak {
 
-const Dictionaries::Map Dictionaries::read_from_file(
-    const std::filesystem::path& csv) {
+const Dictionaries::Map Dictionaries::read_from_file(const std::filesystem::path& csv) {
   std::ifstream ifs(csv);
   util::check(ifs.is_open(), error_message::cannot_open, csv);
   return parse_csv(ifs);
 }
 
-const Dictionaries::Map Dictionaries::parse_csv(
-    std::basic_istream<char, std::char_traits<char>>& stream) {
+const Dictionaries::Map Dictionaries::parse_csv(std::basic_istream<char, std::char_traits<char>>& stream) {
   Map dict;
   std::string line;
   std::vector<std::string> tokens;

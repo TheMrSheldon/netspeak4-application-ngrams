@@ -2,17 +2,15 @@
 #define NETSPEAK_MODEL_QUERY_HPP
 
 #include <memory>
+#include <optional>
 #include <stdexcept>
 #include <string>
 #include <vector>
 
-#include <optional>
-
 #include "LengthRange.hpp"
 
 
-namespace netspeak {
-namespace model {
+namespace netspeak::model {
 
 class QueryUnit__ {
 public:
@@ -48,8 +46,7 @@ public:
   QueryUnit__() = delete;
   QueryUnit__(const QueryUnit__&) = delete;
 
-  inline static std::shared_ptr<Unit> terminal(Unit::Tag tag,
-                                               const std::string& text) {
+  inline static std::shared_ptr<Unit> terminal(Unit::Tag tag, const std::string& text) {
     const auto unit = std::make_shared<Unit>(tag, text);
     unit->self_ = unit;
     return unit;
@@ -139,8 +136,7 @@ std::ostream& operator<<(std::ostream& out, const Query::Unit& unit);
 std::ostream& operator<<(std::ostream& out, const Query& query);
 
 
-} // namespace model
-} // namespace netspeak
+} // namespace netspeak::model
 
 
 #endif

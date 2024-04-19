@@ -1,16 +1,14 @@
 #ifndef NETSPEAK_UTIL_CONFIG_HPP
 #define NETSPEAK_UTIL_CONFIG_HPP
 
+#include <filesystem>
 #include <istream>
 #include <map>
 #include <ostream>
 #include <string>
 
-#include <filesystem>
 
-
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 /**
  * @brief A general configuration class backed by a simple map of string
@@ -25,8 +23,7 @@ private:
 
 public:
   typedef std::map<std::string, std::string>::value_type initializer_list_type;
-  Config(std::initializer_list<initializer_list_type> list)
-      : data_(list), file_name_() {}
+  Config(std::initializer_list<initializer_list_type> list) : data_(list), file_name_() {}
   Config() : data_(), file_name_() {}
   explicit Config(std::filesystem::path file_name);
 
@@ -36,8 +33,7 @@ public:
   std::map<std::string, std::string>::const_iterator end() const {
     return data_.end();
   }
-  std::map<std::string, std::string>::const_iterator find(
-      const std::string& key) const {
+  std::map<std::string, std::string>::const_iterator find(const std::string& key) const {
     return data_.find(key);
   }
 
@@ -71,8 +67,7 @@ public:
    * @param default_value
    * @return const std::string&
    */
-  const std::string& get(const std::string& key,
-                         const std::string& default_value) const;
+  const std::string& get(const std::string& key, const std::string& default_value) const;
   /**
    * @brief Returns the value of the given key. This will throw an exception if
    * the key is not part of the config.
@@ -108,7 +103,6 @@ public:
   std::ostream& operator<<(std::ostream& out) const;
 };
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 #endif

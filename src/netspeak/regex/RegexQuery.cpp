@@ -1,12 +1,10 @@
-#include <netspeak/regex/RegexQuery.hpp>
-
 #include <algorithm>
 #include <codecvt>
 #include <locale>
+#include <netspeak/regex/RegexQuery.hpp>
 #include <ostream>
 
-namespace netspeak {
-namespace regex {
+namespace netspeak::regex {
 
 /*
  * The implementation will do the following optimizations:
@@ -247,8 +245,7 @@ void RegexQueryBuilder::add(RegexUnit unit) {
 
   if (unit.value.empty()) {
     // there's no point in concatenating the empty string
-    if (unit.type == RegexUnit::Type::WORD ||
-        unit.type == RegexUnit::Type::OPTIONAL_WORD) {
+    if (unit.type == RegexUnit::Type::WORD || unit.type == RegexUnit::Type::OPTIONAL_WORD) {
       return; // rule 1, 5
     }
 
@@ -296,8 +293,7 @@ void RegexQueryBuilder::add(RegexUnit unit) {
       if (prev.type == RegexUnit::Type::STAR) {
         return; // rule 2
       }
-      if (prev.type == RegexUnit::Type::OPTIONAL_WORD ||
-          prev.type == RegexUnit::Type::QMARK) {
+      if (prev.type == RegexUnit::Type::OPTIONAL_WORD || prev.type == RegexUnit::Type::QMARK) {
         // rule 6, 3
         remove_trailing_optional_words(units);
         units.push_back(unit);
@@ -359,5 +355,4 @@ std::ostream& operator<<(std::ostream& outputStream, const RegexQuery& query) {
 }
 
 
-} // namespace regex
-} // namespace netspeak
+} // namespace netspeak::regex

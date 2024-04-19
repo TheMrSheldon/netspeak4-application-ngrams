@@ -4,14 +4,10 @@
 #include <string>
 #include <vector>
 
-namespace netspeak {
-namespace util {
-
+namespace netspeak::util {
 
 void glob(const std::string& pattern, std::vector<std::string>& paths);
 
-
-} // namespace util
-} // namespace netspeak
+}
 
 #endif

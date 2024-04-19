@@ -13,13 +13,11 @@ std::ostream& operator<<(std::ostream& out, const grpc::Status& status);
 
 }
 
-namespace netspeak {
-namespace service {
+namespace netspeak::service {
 
 std::ostream& operator<<(std::ostream& out, const Corpus& corpus);
 
-} // namespace service
-} // namespace netspeak
+} // namespace netspeak::service
 
 
 #endif

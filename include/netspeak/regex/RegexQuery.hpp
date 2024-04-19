@@ -2,12 +2,12 @@
 #define NETSPEAK_REGEX_REGEX_QUERY_HPP
 
 #include <inttypes.h>
+
 #include <string>
 #include <vector>
 
 
-namespace netspeak {
-namespace regex {
+namespace netspeak::regex {
 
 /**
  * @brief A basic unit of a regex query.
@@ -24,8 +24,7 @@ struct RegexUnit {
   std::u32string value;
 
 private:
-  RegexUnit(Type type, const std::u32string& value)
-      : type(type), value(value) {}
+  RegexUnit(Type type, const std::u32string& value) : type(type), value(value) {}
 
 public:
   static RegexUnit qmark() {
@@ -196,7 +195,6 @@ public:
 };
 
 
-} // namespace regex
-} // namespace netspeak
+} // namespace netspeak::regex
 
 #endif // NETSPEAK_REGEX_REGEX_QUERY_HPP

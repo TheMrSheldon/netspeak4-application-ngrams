@@ -7,11 +7,10 @@
 #include <memory>
 #include <string>
 
-#include "netspeak/invertedindex/Properties.hpp"
-#include "netspeak/invertedindex/RawPostlist.hpp"
+#include "Properties.hpp"
+#include "RawPostlist.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 /**
  * A class to search an inverted index.
@@ -24,13 +23,11 @@ public:
 
   virtual bool search_head(const std::string key, Head& head) = 0;
 
-  virtual std::unique_ptr<RawPostlist> search_raw_postlist(
-      const std::string& key, uint32_t begin, uint32_t len) = 0;
+  virtual std::unique_ptr<RawPostlist> search_raw_postlist(const std::string& key, uint32_t begin, uint32_t len) = 0;
 
   virtual const Properties& properties() const = 0;
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_RAW_SEARCHER_HPP

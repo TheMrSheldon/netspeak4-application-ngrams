@@ -1,9 +1,9 @@
 #ifndef NETSPEAK_PHRASE_FILE_READER_HPP
 #define NETSPEAK_PHRASE_FILE_READER_HPP
 
-#include "netspeak/PhraseFileParser.hpp"
-#include "netspeak/invertedindex/RecordReader.hpp"
-#include "netspeak/model/typedefs.hpp"
+#include "PhraseFileParser.hpp"
+#include "invertedindex/RecordReader.hpp"
+#include "model/typedefs.hpp"
 
 namespace netspeak {
 
@@ -16,8 +16,7 @@ namespace netspeak {
  * <ngram> TAB <frequency> TAB <id>
  */
 template <bool stream_provides_phrase_id>
-class PhraseFileReader
-    : public invertedindex::RecordReader<model::PhraseIndexValue> {
+class PhraseFileReader : public invertedindex::RecordReader<model::PhraseIndexValue> {
 public:
   typedef invertedindex::RecordReader<model::PhraseIndexValue> base_type;
   typedef typename base_type::record_type record_type;

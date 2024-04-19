@@ -3,10 +3,9 @@
 
 #include <cstdint>
 
-#include "netspeak/value/pair.hpp"
+#include "../value/pair.hpp"
 
-namespace netspeak {
-namespace model {
+namespace netspeak::model {
 
 
 // The local (= within a specific n-gram class) id of a phrase.
@@ -28,7 +27,6 @@ typedef value::pair<PhraseIndexPhraseFreq, __PhraseLocalId> PhraseIndexValue;
 typedef value::pair<uint32_t, PhraseIndexPhraseFreq> PostlistIndexValue;
 
 
-} // namespace model
-} // namespace netspeak
+} // namespace netspeak::model
 
 #endif

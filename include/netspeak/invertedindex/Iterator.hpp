@@ -9,25 +9,19 @@
 
 #include <boost/utility.hpp>
 
-#include "netspeak/invertedindex/ByteBuffer.hpp"
-#include "netspeak/util/systemio.hpp"
+#include "../util/systemio.hpp"
+#include "ByteBuffer.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 struct page_type {
-  explicit page_type(size_t size = 0)
-      : buffer_(size), index_begin_(0), index_end_(0), index_cur_(0) {}
+  explicit page_type(size_t size = 0) : buffer_(size), index_begin_(0), index_end_(0), index_cur_(0) {}
 
   explicit page_type(const page_type& rhs)
-      : buffer_(rhs.buffer_),
-        index_begin_(rhs.index_begin_),
-        index_end_(rhs.index_end_),
-        index_cur_(rhs.index_cur_) {}
+      : buffer_(rhs.buffer_), index_begin_(rhs.index_begin_), index_end_(rhs.index_end_), index_cur_(rhs.index_cur_) {}
 
   void print(std::ostream& os) const {
-    os << "{ buffer_size : " << buffer_.size()
-       << ", index_begin : " << index_begin_ << ", index_end : " << index_end_
+    os << "{ buffer_size : " << buffer_.size() << ", index_begin : " << index_begin_ << ", index_end : " << index_end_
        << ", index_cur : " << index_cur_ << " }";
   }
 
@@ -47,12 +41,10 @@ struct swap_type {
     assert(pagesize_ != 0);
   }
 
-  swap_type(const swap_type& rhs)
-      : pagesize_(rhs.pagesize_), offset_(rhs.offset_), stream_(rhs.stream_) {}
+  swap_type(const swap_type& rhs) : pagesize_(rhs.pagesize_), offset_(rhs.offset_), stream_(rhs.stream_) {}
 
   void print(std::ostream& os) const {
-    os << "{ pagesize : " << pagesize_ << ", offset : " << offset_
-       << ", stream : " << stream_ << " }";
+    os << "{ pagesize : " << pagesize_ << ", offset : " << offset_ << ", stream : " << stream_ << " }";
   }
 
   size_t pagesize_;
@@ -158,8 +150,7 @@ private:
   inline size_t swap() {
     const size_t remaining_value_count(size() - page_.index_end_);
     const size_t max_values_per_page(swap_.pagesize_ / size_);
-    const size_t new_value_count(
-        std::min(remaining_value_count, max_values_per_page));
+    const size_t new_value_count(std::min(remaining_value_count, max_values_per_page));
     if (new_value_count != 0) {
       const size_t new_buffer_size(new_value_count * size_);
       page_.buffer_.resize(new_buffer_size);
@@ -178,15 +169,13 @@ private:
 struct variable_size_iter : public iterator_type {
   typedef std::vector<uint32_t> size_vector;
 
-  variable_size_iter(const size_vector& sizes, const page_type& page)
-      : iterator_type(page), sizes_(sizes), offset_() {
+  variable_size_iter(const size_vector& sizes, const page_type& page) : iterator_type(page), sizes_(sizes), offset_() {
     page_.index_begin_ = 0;
     page_.index_cur_ = 0;
     page_.index_end_ = sizes_.size();
   }
 
-  variable_size_iter(const size_vector& sizes, const swap_type& swap)
-      : iterator_type(swap), sizes_(sizes), offset_() {
+  variable_size_iter(const size_vector& sizes, const swap_type& swap) : iterator_type(swap), sizes_(sizes), offset_() {
     page_.index_begin_ = 0;
     page_.index_cur_ = 0;
     page_.index_end_ = 0;
@@ -195,8 +184,7 @@ struct variable_size_iter : public iterator_type {
   virtual ~variable_size_iter() {}
 
   inline size_t byte_size() const override {
-    return size() * sizeof(size_vector::value_type) +
-           std::accumulate(sizes_.begin(), sizes_.end(), 0);
+    return size() * sizeof(size_vector::value_type) + std::accumulate(sizes_.begin(), sizes_.end(), 0);
   }
 
   inline const char* next() override {
@@ -226,8 +214,7 @@ struct variable_size_iter : public iterator_type {
 
   inline void write(FILE* fs) override {
     rewind();
-    util::fwrite(sizes_.data(), sizeof(size_vector::value_type), sizes_.size(),
-                 fs);
+    util::fwrite(sizes_.data(), sizeof(size_vector::value_type), sizes_.size(), fs);
     if (swap_.stream_ == NULL) {
       page_.buffer_.write(fs);
     } else {
@@ -274,7 +261,6 @@ inline std::ostream& operator<<(std::ostream& os, const swap_type& swap) {
   return os;
 }
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_ITERATOR_HPP

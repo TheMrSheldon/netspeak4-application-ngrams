@@ -1,13 +1,10 @@
+#include <netspeak/error.hpp>
 #include <netspeak/model/NormQuery.hpp>
-
+#include <netspeak/util/exception.hpp>
 #include <ostream>
 
-#include <netspeak/error.hpp>
-#include <netspeak/util/exception.hpp>
 
-
-namespace netspeak {
-namespace model {
+namespace netspeak::model {
 
 
 typedef NormQuery::Unit Unit;
@@ -123,5 +120,4 @@ std::ostream& operator<<(std::ostream& out, const NormQuery& query) {
   return out;
 }
 
-} // namespace model
-} // namespace netspeak
+} // namespace netspeak::model

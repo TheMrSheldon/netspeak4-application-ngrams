@@ -6,26 +6,19 @@
 #include <cmph.h>
 
 #include <array>
+#include <filesystem>
 #include <iostream>
 #include <string>
 
-#include <filesystem>
 #include <boost/type_traits.hpp>
 #include <boost/utility.hpp>
 
-#include "netspeak/util/exception.hpp"
-#include "netspeak/util/systemio.hpp"
+#include "../util/exception.hpp"
+#include "../util/systemio.hpp"
 
-namespace netspeak {
-namespace bighashmap {
+namespace netspeak::bighashmap {
 
-enum class Algorithm {
-  BMZ = CMPH_BMZ,
-  CHM = CMPH_CHM,
-  BDZ = CMPH_BDZ,
-  CHD = CMPH_CHD,
-  None = CMPH_COUNT
-};
+enum class Algorithm { BMZ = CMPH_BMZ, CHM = CMPH_CHM, BDZ = CMPH_BDZ, CHD = CMPH_CHD, None = CMPH_COUNT };
 
 /**
  * @author  martin.trenkmann@uni-weimar.de
@@ -40,8 +33,7 @@ public:
   CmphMap(const CmphMap&) = delete;
   CmphMap& operator=(const CmphMap&) = delete;
 
-  explicit CmphMap(const std::filesystem::path& mph_file)
-      : algo_(Algorithm::None), mphf_(NULL) {
+  explicit CmphMap(const std::filesystem::path& mph_file) : algo_(Algorithm::None), mphf_(NULL) {
     FILE* fd = util::fopen(mph_file, "rb");
     algo_ = ExtractAlgorithm(fd);
     util::rewind(fd);
@@ -77,8 +69,7 @@ protected:
 private:
   static Algorithm ExtractAlgorithm(FILE* fd) {
     std::string algorithm(3, '\0');
-    util::fread(const_cast<char*>(algorithm.data()), sizeof(char),
-                algorithm.size(), fd);
+    util::fread(const_cast<char*>(algorithm.data()), sizeof(char), algorithm.size(), fd);
     if (algorithm == "bdz") {
       return Algorithm::BDZ;
     }
@@ -99,7 +90,6 @@ private:
   cmph_t* mphf_;
 };
 
-} // namespace bighashmap
-} // namespace netspeak
+} // namespace netspeak::bighashmap
 
 #endif // NETSPEAK_BIGHASHMAP_CMPH_MAP_HPP

@@ -1,10 +1,10 @@
 #ifndef NETSPEAK_RETRIEVAL_STRATEGY_HPP
 #define NETSPEAK_RETRIEVAL_STRATEGY_HPP
 
-#include "netspeak/Configuration.hpp"
-#include "netspeak/Properties.hpp"
-#include "netspeak/model/NormQuery.hpp"
-#include "netspeak/model/SearchOptions.hpp"
+#include "Configuration.hpp"
+#include "Properties.hpp"
+#include "model/NormQuery.hpp"
+#include "model/SearchOptions.hpp"
 
 namespace netspeak {
 
@@ -30,10 +30,7 @@ struct index_entry_traits {
 };
 
 struct stats_type {
-  stats_type()
-      : eval_index_entry_count(),
-        min_phrase_frequency(),
-        max_phrase_frequency() {}
+  stats_type() : eval_index_entry_count(), min_phrase_frequency(), max_phrase_frequency() {}
   uint32_t eval_index_entry_count;
   uint64_t min_phrase_frequency;
   uint64_t max_phrase_frequency;
@@ -51,22 +48,19 @@ class RetrievalStrategy {
 public:
   void initialize(const Configuration& config);
 
-  void initialize_query(
-      const SearchOptions& options, const model::NormQuery& query,
-      std::vector<typename RetrievalStrategyTag::unit_metadata>& metadata);
+  void initialize_query(const SearchOptions& options, const model::NormQuery& query,
+                        std::vector<typename RetrievalStrategyTag::unit_metadata>& metadata);
 
   template <typename OutputIterator>
-  const stats_type initialize_result_set(
-      const typename RetrievalStrategyTag::unit_metadata& unit_meta,
-      const model::NormQuery& query, uint64_t max_phrase_frequency,
-      uint64_t max_phrase_count, OutputIterator output);
+  const stats_type initialize_result_set(const typename RetrievalStrategyTag::unit_metadata& unit_meta,
+                                         const model::NormQuery& query, uint64_t max_phrase_frequency,
+                                         uint64_t max_phrase_count, OutputIterator output);
 
   template <typename IntersectionSet, typename OutputIterator>
-  const stats_type intersect_result_set(
-      const IntersectionSet& input,
-      const typename RetrievalStrategyTag::unit_metadata& unit_meta,
-      const model::NormQuery& query, size_t max_phrase_frequency,
-      size_t max_phrase_count, OutputIterator& output);
+  const stats_type intersect_result_set(const IntersectionSet& input,
+                                        const typename RetrievalStrategyTag::unit_metadata& unit_meta,
+                                        const model::NormQuery& query, size_t max_phrase_frequency,
+                                        size_t max_phrase_count, OutputIterator& output);
 
   Properties properties() const;
 };

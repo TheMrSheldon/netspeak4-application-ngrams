@@ -6,8 +6,7 @@
 #include "netspeak/regex/RegexQuery.hpp"
 
 
-namespace netspeak {
-namespace regex {
+namespace netspeak::regex {
 
 /**
  * @brief Parses the given Netspeak regex query and returns the equivalent
@@ -23,7 +22,6 @@ namespace regex {
  */
 RegexQuery parse_netspeak_regex_query(const std::string& netspeak_query);
 
-} // namespace regex
-} // namespace netspeak
+} // namespace netspeak::regex
 
 #endif // NETSPEAK_REGEX_PARSERS_HPP

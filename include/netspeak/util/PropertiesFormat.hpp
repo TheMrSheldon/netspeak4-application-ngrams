@@ -7,8 +7,7 @@
 #include "netspeak/util/traceable_error.hpp"
 
 
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 // C++ is a very mature language, so of course it's not possible to move the
 // implementation of a template function into a .cpp file.
@@ -27,8 +26,7 @@ void write_value(std::ostream& out, const std::string& value);
 } // namespace __properties_format_impl
 
 struct format_properties_error : public tracable_runtime_error {
-  explicit format_properties_error(const std::string& what)
-      : tracable_runtime_error(what) {}
+  explicit format_properties_error(const std::string& what) : tracable_runtime_error(what) {}
   virtual ~format_properties_error() throw() override {}
 };
 
@@ -56,8 +54,7 @@ void write_properties(std::ostream& out, T begin, T end) {
 }
 
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 
 #endif

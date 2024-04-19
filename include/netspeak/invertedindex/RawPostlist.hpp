@@ -5,17 +5,16 @@
 
 #include <memory>
 
-#include "netspeak/invertedindex/Iterator.hpp"
+#include "Iterator.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 struct Head {
   Head() : value_count(), value_size(), total_size() {}
 
   void PrintTo(std::ostream& os) const {
-    os << "{ value_count : " << value_count << ", value_size : " << value_size
-       << ", total_size : " << total_size << " }";
+    os << "{ value_count : " << value_count << ", value_size : " << value_size << ", total_size : " << total_size
+       << " }";
   }
 
   uint32_t value_count;
@@ -28,23 +27,19 @@ public:
   RawPostlist() : iter_(new constant_size_iter) {}
 
   RawPostlist(const Head& head, const page_type& page)
-      : iter_(new constant_size_iter(head.value_count, head.value_size, page)),
-        head_(head) {}
+      : iter_(new constant_size_iter(head.value_count, head.value_size, page)), head_(head) {}
 
   RawPostlist(const Head& head, const swap_type& swap)
-      : iter_(new constant_size_iter(head.value_count, head.value_size, swap)),
-        head_(head) {
+      : iter_(new constant_size_iter(head.value_count, head.value_size, swap)), head_(head) {
     assert(swap.stream_ != NULL);
   }
 
-  RawPostlist(const Head& head, const page_type& page,
-              const variable_size_iter::size_vector& sizes)
+  RawPostlist(const Head& head, const page_type& page, const variable_size_iter::size_vector& sizes)
       : iter_(new variable_size_iter(sizes, page)), head_(head) {
     assert(head.value_count == sizes.size());
   }
 
-  RawPostlist(const Head& head, const swap_type& swap,
-              const variable_size_iter::size_vector& sizes)
+  RawPostlist(const Head& head, const swap_type& swap, const variable_size_iter::size_vector& sizes)
       : iter_(new variable_size_iter(sizes, swap)), head_(head) {
     assert(head.value_count == sizes.size());
     assert(swap.stream_ != NULL);
@@ -106,7 +101,6 @@ inline std::ostream& operator<<(std::ostream& os, const RawPostlist& postlist) {
   return os;
 }
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_RAW_POSTLIST_HPP

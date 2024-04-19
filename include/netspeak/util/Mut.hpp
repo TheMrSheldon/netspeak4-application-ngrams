@@ -3,8 +3,7 @@
 
 #include <mutex>
 
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 template <class T>
 class Mut {
@@ -39,7 +38,6 @@ public:
   }
 };
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 #endif

@@ -6,10 +6,9 @@
 #include <ostream>
 #include <string>
 
-#include "netspeak/invertedindex/Properties.hpp"
+#include "Properties.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 /**
  * A class to create an inverted index from a number of records.
@@ -25,7 +24,6 @@ public:
   virtual void set_expected_record_count(uint64_t record_count) = 0;
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_RAW_INDEXER_HPP

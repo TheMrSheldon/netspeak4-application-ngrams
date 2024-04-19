@@ -1,7 +1,7 @@
 #ifndef NETSPEAK_PROPERTIES_HPP
 #define NETSPEAK_PROPERTIES_HPP
 
-#include "netspeak/util/Config.hpp"
+#include "util/Config.hpp"
 
 namespace netspeak {
 
@@ -9,8 +9,7 @@ class Properties : public util::Config {
 public:
   Properties() : util::Config() {}
   explicit Properties(const std::string& file_name) : util::Config(file_name) {}
-  Properties(std::initializer_list<util::Config::initializer_list_type> list)
-      : util::Config(list) {}
+  Properties(std::initializer_list<util::Config::initializer_list_type> list) : util::Config(list) {}
 
 public:
   // cache properties

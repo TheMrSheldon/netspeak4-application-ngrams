@@ -5,8 +5,7 @@
 
 #include <utility>
 
-namespace netspeak {
-namespace value {
+namespace netspeak::value {
 
 template <typename T1, typename T2>
 class pair : std::pair<T1, T2> {
@@ -74,7 +73,6 @@ inline bool operator>(const pair<T1, T2>& lhs, const pair<T1, T2>& rhs) {
   return lhs.e1() > rhs.e1();
 }
 
-} // namespace value
-} // namespace netspeak
+} // namespace netspeak::value
 
 #endif // NETSPEAK_VALUE_PAIR_HPP

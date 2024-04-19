@@ -3,15 +3,13 @@
 #ifndef NETSPEAK_INVERTEDINDEX_PROPERTIES_HPP
 #define NETSPEAK_INVERTEDINDEX_PROPERTIES_HPP
 
+#include <filesystem>
 #include <ostream>
 #include <string>
 
-#include <filesystem>
+#include "Configuration.hpp"
 
-#include "netspeak/invertedindex/Configuration.hpp"
-
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 struct Properties {
   static const uint32_t k_version_number = 103; // 1.3.x
@@ -38,7 +36,6 @@ struct Properties {
 
 std::ostream& operator<<(std::ostream& os, const Properties& properties);
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_PROPERTIES_HPP

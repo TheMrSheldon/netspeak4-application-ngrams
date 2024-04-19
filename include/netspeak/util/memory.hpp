@@ -6,20 +6,9 @@
 #include <cstdint>
 #include <string>
 
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
-enum class memory_type {
-  min_required,
-  mb512,
-  mb1024,
-  mb2048,
-  mb4096,
-  mb8192,
-  mb16384,
-  mb32768,
-  mb65536
-};
+enum class memory_type { min_required, mb512, mb1024, mb2048, mb4096, mb8192, mb16384, mb32768, mb65536 };
 
 inline uint64_t to_bytes(memory_type memory) {
   uint64_t bytes(1024 * 1024); // 1 MiB
@@ -68,7 +57,6 @@ inline std::string to_string(memory_type memory) {
   }
 }
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 #endif // NETSPEAK_UTIL_MEMORY_HPP

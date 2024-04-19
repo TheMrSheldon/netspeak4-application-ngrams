@@ -1,10 +1,9 @@
 #ifndef NETSPEAK_DICTIONARIES_HPP
 #define NETSPEAK_DICTIONARIES_HPP
 
+#include <filesystem>
 #include <string>
 #include <unordered_map>
-
-#include <filesystem>
 
 namespace netspeak {
 
@@ -22,8 +21,7 @@ public:
   typedef std::unordered_multimap<std::string, std::string> Map;
 
   static const Map read_from_file(const std::filesystem::path& csv);
-  static const Map parse_csv(
-      std::basic_istream<char, std::char_traits<char>>& stream);
+  static const Map parse_csv(std::basic_istream<char, std::char_traits<char>>& stream);
 };
 
 } // namespace netspeak

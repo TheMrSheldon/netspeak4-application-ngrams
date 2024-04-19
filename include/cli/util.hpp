@@ -1,9 +1,9 @@
 #ifndef CLI_UTIL_HPP
 #define CLI_UTIL_HPP
 
-#include <string>
-
 #include <netspeak/NetSpeakService.grpc.pb.h>
+
+#include <string>
 
 namespace cli {
 
@@ -18,9 +18,8 @@ std::string localhost(uint16_t port);
  * @param stub
  * @param stub_address The address of the stub or the empty string.
  */
-netspeak::service::CorporaResponse getCorpora(
-    netspeak::service::NetspeakService::Stub& stub,
-    const std::string& stub_address = "");
+netspeak::service::CorporaResponse getCorpora(netspeak::service::NetspeakService::Stub& stub,
+                                              const std::string& stub_address = "");
 
 
 extern const std::string RESET;

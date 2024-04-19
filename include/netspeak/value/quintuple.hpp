@@ -3,8 +3,7 @@
 #ifndef NETSPEAK_VALUE_QUINTUPLE_HPP
 #define NETSPEAK_VALUE_QUINTUPLE_HPP
 
-namespace netspeak {
-namespace value {
+namespace netspeak::value {
 
 template <typename T1, typename T2, typename T3, typename T4, typename T5>
 class quintuple {
@@ -18,16 +17,10 @@ public:
 public:
   quintuple() : e1_(), e2_(), e3_(), e4_(), e5_() {}
 
-  quintuple(const e1_type& e1, const e2_type& e2, const e3_type& e3,
-            const e4_type& e4, const e5_type& e5)
+  quintuple(const e1_type& e1, const e2_type& e2, const e3_type& e3, const e4_type& e4, const e5_type& e5)
       : e1_(e1), e2_(e2), e3_(e3), e4_(e4), e5_(e5) {}
 
-  quintuple(const quintuple& other)
-      : e1_(other.e1_),
-        e2_(other.e2_),
-        e3_(other.e3_),
-        e4_(other.e4_),
-        e5_(other.e5_) {}
+  quintuple(const quintuple& other) : e1_(other.e1_), e2_(other.e2_), e3_(other.e3_), e4_(other.e4_), e5_(other.e5_) {}
 
   ~quintuple() {}
 
@@ -79,8 +72,7 @@ public:
     e5_ = e5;
   }
 
-  void set(const e1_type& e1, const e2_type& e2, const e3_type& e3,
-           const e4_type& e4, const e5_type& e5) {
+  void set(const e1_type& e1, const e2_type& e2, const e3_type& e3, const e4_type& e4, const e5_type& e5) {
     e1_ = e1;
     e2_ = e2;
     e3_ = e3;
@@ -97,31 +89,26 @@ private:
 };
 
 template <typename T1, typename T2, typename T3, typename T4, typename T5>
-inline bool operator==(const quintuple<T1, T2, T3, T4, T5>& lhs,
-                       const quintuple<T1, T2, T3, T4, T5>& rhs) {
-  return lhs.e1() == rhs.e1() && lhs.e2() == rhs.e2() && lhs.e3() == rhs.e3() &&
-         lhs.e4() == rhs.e4() && lhs.e5() == rhs.e5();
+inline bool operator==(const quintuple<T1, T2, T3, T4, T5>& lhs, const quintuple<T1, T2, T3, T4, T5>& rhs) {
+  return lhs.e1() == rhs.e1() && lhs.e2() == rhs.e2() && lhs.e3() == rhs.e3() && lhs.e4() == rhs.e4() &&
+         lhs.e5() == rhs.e5();
 }
 
 template <typename T1, typename T2, typename T3, typename T4, typename T5>
-inline bool operator!=(const quintuple<T1, T2, T3, T4, T5>& lhs,
-                       const quintuple<T1, T2, T3, T4, T5>& rhs) {
+inline bool operator!=(const quintuple<T1, T2, T3, T4, T5>& lhs, const quintuple<T1, T2, T3, T4, T5>& rhs) {
   return !(lhs == rhs);
 }
 
 template <typename T1, typename T2, typename T3, typename T4, typename T5>
-inline bool operator<(const quintuple<T1, T2, T3, T4, T5>& lhs,
-                      const quintuple<T1, T2, T3, T4, T5>& rhs) {
+inline bool operator<(const quintuple<T1, T2, T3, T4, T5>& lhs, const quintuple<T1, T2, T3, T4, T5>& rhs) {
   return lhs.e1() < rhs.e1();
 }
 
 template <typename T1, typename T2, typename T3, typename T4, typename T5>
-inline bool operator>(const quintuple<T1, T2, T3, T4, T5>& lhs,
-                      const quintuple<T1, T2, T3, T4, T5>& rhs) {
+inline bool operator>(const quintuple<T1, T2, T3, T4, T5>& lhs, const quintuple<T1, T2, T3, T4, T5>& rhs) {
   return lhs.e1() > rhs.e1();
 }
 
-} // namespace value
-} // namespace netspeak
+} // namespace netspeak::value
 
 #endif // NETSPEAK_VALUE_QUINTUPLE_HPP

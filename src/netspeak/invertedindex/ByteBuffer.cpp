@@ -1,10 +1,8 @@
 #include <netspeak/invertedindex/ByteBuffer.hpp>
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
-ByteBuffer::buffer_type::buffer_type(size_t initial_size)
-    : data(new char[initial_size]), size(initial_size) {
+ByteBuffer::buffer_type::buffer_type(size_t initial_size) : data(new char[initial_size]), size(initial_size) {
   if (!data)
     throw std::bad_alloc();
 }
@@ -17,15 +15,13 @@ void ByteBuffer::buffer_type::resize(size_t new_size) {
   size = new_size;
 }
 
-ByteBuffer::ByteBuffer(size_t size)
-    : buffer_(new buffer_type(size)), bufpos_(buffer_->data.get()) {}
+ByteBuffer::ByteBuffer(size_t size) : buffer_(new buffer_type(size)), bufpos_(buffer_->data.get()) {}
 
 /**
  * The copy constructor for shallow copying.
  * @param buffer
  */
-ByteBuffer::ByteBuffer(const ByteBuffer& buffer)
-    : buffer_(buffer.buffer_), bufpos_(buffer_->data.get()) {}
+ByteBuffer::ByteBuffer(const ByteBuffer& buffer) : buffer_(buffer.buffer_), bufpos_(buffer_->data.get()) {}
 
 
 void ByteBuffer::clear() {
@@ -76,5 +72,4 @@ void ByteBuffer::resize(size_t size) {
 }
 
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex

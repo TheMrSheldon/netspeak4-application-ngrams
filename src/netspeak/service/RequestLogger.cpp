@@ -1,22 +1,19 @@
-#include <netspeak/service/RequestLogger.hpp>
-
-#include <chrono>
-#include <sstream>
-
-#include <boost/date_time/posix_time/posix_time.hpp>
-#include <filesystem>
-#include <boost/regex.hpp>
-
 #include <google/protobuf/util/json_util.h>
 
+#include <chrono>
+#include <filesystem>
 #include <netspeak/error.hpp>
+#include <netspeak/service/RequestLogger.hpp>
 #include <netspeak/service/tracking.hpp>
 #include <netspeak/util/JsonWriter.hpp>
 #include <netspeak/util/systemio.hpp>
+#include <sstream>
+
+#include <boost/date_time/posix_time/posix_time.hpp>
+#include <boost/regex.hpp>
 
 
-namespace netspeak {
-namespace service {
+namespace netspeak::service {
 
 
 std::string utc_timestamp() {
@@ -32,8 +29,7 @@ std::string get_log_file_prefix() {
   return boost::regex_replace(time, re, "-");
 }
 
-RequestLogger::RequestLogger(std::unique_ptr<NetspeakService::Service> service,
-                             fs::path log_dir)
+RequestLogger::RequestLogger(std::unique_ptr<NetspeakService::Service> service, fs::path log_dir)
     : service_(std::move(service)), req_counter_(0) {
   if (!fs::is_directory(log_dir)) {
     fs::create_directories(log_dir);
@@ -50,9 +46,9 @@ RequestLogger::RequestLogger(std::unique_ptr<NetspeakService::Service> service,
 }
 
 template <class S, class R>
-util::JsonWriter::ObjectContinue<S, R> log_boilerplate(
-    util::JsonWriter::Value<S, R> writer, uint64_t req_id,
-    const std::string& user, const google::protobuf::Message& message) {
+util::JsonWriter::ObjectContinue<S, R> log_boilerplate(util::JsonWriter::Value<S, R> writer, uint64_t req_id,
+                                                       const std::string& user,
+                                                       const google::protobuf::Message& message) {
   return writer.object()
       .prop("timestamp")
       .string(utc_timestamp())
@@ -64,8 +60,8 @@ util::JsonWriter::ObjectContinue<S, R> log_boilerplate(
       .protobuf_message(message);
 }
 template <class S, class R>
-util::JsonWriter::ObjectContinue<S, R> log_error_status(
-    util::JsonWriter::ObjectContinue<S, R> writer, const grpc::Status& status) {
+util::JsonWriter::ObjectContinue<S, R> log_error_status(util::JsonWriter::ObjectContinue<S, R> writer,
+                                                        const grpc::Status& status) {
   return writer.prop("status")
       .object()
       .prop("code")
@@ -77,17 +73,14 @@ util::JsonWriter::ObjectContinue<S, R> log_error_status(
       .endObject();
 }
 
-grpc::Status RequestLogger::Search(grpc::ServerContext* context,
-                                   const SearchRequest* request,
+grpc::Status RequestLogger::Search(grpc::ServerContext* context, const SearchRequest* request,
                                    SearchResponse* response) {
   const auto user = get_tracking_id(*context);
   const auto req_id = req_counter_++;
 
   {
     std::string log_line;
-    log_boilerplate(util::JsonWriter::create(log_line), req_id, user, *request)
-        .endObject()
-        .done();
+    log_boilerplate(util::JsonWriter::create(log_line), req_id, user, *request).endObject().done();
 
     {
       auto lock = f_search_req_.lock();
@@ -99,8 +92,7 @@ grpc::Status RequestLogger::Search(grpc::ServerContext* context,
 
   if (!status.ok() || response->has_error()) {
     std::string log_line;
-    auto writer = log_boilerplate(util::JsonWriter::create(log_line), req_id,
-                                  user, *request);
+    auto writer = log_boilerplate(util::JsonWriter::create(log_line), req_id, user, *request);
 
     if (!status.ok()) {
       writer = log_error_status(std::move(writer), status);
@@ -120,17 +112,14 @@ grpc::Status RequestLogger::Search(grpc::ServerContext* context,
   return status;
 }
 
-grpc::Status RequestLogger::GetCorpora(grpc::ServerContext* context,
-                                       const CorporaRequest* request,
+grpc::Status RequestLogger::GetCorpora(grpc::ServerContext* context, const CorporaRequest* request,
                                        CorporaResponse* response) {
   const auto user = get_tracking_id(*context);
   const auto req_id = req_counter_++;
 
   {
     std::string log_line;
-    log_boilerplate(util::JsonWriter::create(log_line), req_id, user, *request)
-        .endObject()
-        .done();
+    log_boilerplate(util::JsonWriter::create(log_line), req_id, user, *request).endObject().done();
 
     {
       auto lock = f_get_corpora_req_.lock();
@@ -142,9 +131,7 @@ grpc::Status RequestLogger::GetCorpora(grpc::ServerContext* context,
 
   if (!status.ok()) {
     std::string log_line;
-    log_error_status(log_boilerplate(util::JsonWriter::create(log_line), req_id,
-                                     user, *request),
-                     status)
+    log_error_status(log_boilerplate(util::JsonWriter::create(log_line), req_id, user, *request), status)
         .endObject()
         .done();
 
@@ -158,5 +145,4 @@ grpc::Status RequestLogger::GetCorpora(grpc::ServerContext* context,
 }
 
 
-} // namespace service
-} // namespace netspeak
+} // namespace netspeak::service

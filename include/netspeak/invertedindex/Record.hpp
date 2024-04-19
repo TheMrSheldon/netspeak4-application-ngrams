@@ -6,16 +6,15 @@
 #include <string>
 #include <utility>
 
-#include "netspeak/value/big_string_traits.hpp"
-#include "netspeak/value/pair_traits.hpp"
-#include "netspeak/value/quadruple_traits.hpp"
-#include "netspeak/value/quintuple_traits.hpp"
-#include "netspeak/value/sextuple_traits.hpp"
-#include "netspeak/value/string_traits.hpp"
-#include "netspeak/value/triple_traits.hpp"
+#include "../value/big_string_traits.hpp"
+#include "../value/pair_traits.hpp"
+#include "../value/quadruple_traits.hpp"
+#include "../value/quintuple_traits.hpp"
+#include "../value/sextuple_traits.hpp"
+#include "../value/string_traits.hpp"
+#include "../value/triple_traits.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 /**
  * A class template to represent a key value pair.
@@ -33,8 +32,7 @@ public:
 
   explicit Record(const key_type& key) : base_type(key, value_type()) {}
 
-  Record(const key_type& key, const value_type& value)
-      : base_type(key, value) {}
+  Record(const key_type& key, const value_type& value) : base_type(key, value) {}
 
   Record(const Record& record) : base_type(record) {}
 
@@ -108,7 +106,6 @@ std::istream& operator>>(std::istream& is, Record<T>& record) {
   return is;
 }
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_RECORD_HPP

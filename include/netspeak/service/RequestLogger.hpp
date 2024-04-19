@@ -2,23 +2,22 @@
 #define NETSPEAK_SERVICE_REQUEST_LOGGER_HPP
 
 
+#include <netspeak/NetspeakService.grpc.pb.h>
+#include <netspeak/NetspeakService.pb.h>
+
 #include <atomic>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <memory>
+#include <optional>
 #include <unordered_map>
 
-#include <filesystem>
-#include <optional>
-
 #include "netspeak/Netspeak.hpp"
-#include <netspeak/NetspeakService.grpc.pb.h>
-#include <netspeak/NetspeakService.pb.h>
 #include "netspeak/util/Mut.hpp"
 
 
-namespace netspeak {
-namespace service {
+namespace netspeak::service {
 
 class RequestLogger final : public NetspeakService::Service {
 private:
@@ -34,20 +33,15 @@ private:
 public:
   RequestLogger() = delete;
   RequestLogger(const RequestLogger&) = delete;
-  RequestLogger(std::unique_ptr<NetspeakService::Service> service,
-                std::filesystem::path log_dir);
+  RequestLogger(std::unique_ptr<NetspeakService::Service> service, std::filesystem::path log_dir);
   ~RequestLogger() override {}
 
-  grpc::Status Search(grpc::ServerContext* context,
-                      const SearchRequest* request,
-                      SearchResponse* response) override;
-  grpc::Status GetCorpora(grpc::ServerContext* context,
-                          const CorporaRequest* request,
+  grpc::Status Search(grpc::ServerContext* context, const SearchRequest* request, SearchResponse* response) override;
+  grpc::Status GetCorpora(grpc::ServerContext* context, const CorporaRequest* request,
                           CorporaResponse* response) override;
 };
 
-} // namespace service
-} // namespace netspeak
+} // namespace netspeak::service
 
 
 #endif

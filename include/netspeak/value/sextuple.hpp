@@ -3,11 +3,9 @@
 #ifndef NETSPEAK_VALUE_SEXTUPLE_HPP
 #define NETSPEAK_VALUE_SEXTUPLE_HPP
 
-namespace netspeak {
-namespace value {
+namespace netspeak::value {
 
-template <typename T1, typename T2, typename T3, typename T4, typename T5,
-          typename T6>
+template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6>
 class sextuple {
 public:
   typedef T1 e1_type;
@@ -20,17 +18,11 @@ public:
 public:
   sextuple() : e1_(), e2_(), e3_(), e4_(), e5_(), e6_() {}
 
-  sextuple(const e1_type& e1, const e2_type& e2, const e3_type& e3,
-           const e4_type& e4, const e5_type& e5, const e6_type& e6)
+  sextuple(const e1_type& e1, const e2_type& e2, const e3_type& e3, const e4_type& e4, const e5_type& e5,
+           const e6_type& e6)
       : e1_(e1), e2_(e2), e3_(e3), e4_(e4), e5_(e5), e6_(e6) {}
 
-  sextuple(const sextuple& rhs)
-      : e1_(rhs.e1_),
-        e2_(rhs.e2_),
-        e3_(rhs.e3_),
-        e4_(rhs.e4_),
-        e5_(rhs.e5_),
-        e6_(rhs.e6_) {}
+  sextuple(const sextuple& rhs) : e1_(rhs.e1_), e2_(rhs.e2_), e3_(rhs.e3_), e4_(rhs.e4_), e5_(rhs.e5_), e6_(rhs.e6_) {}
 
   ~sextuple() {}
 
@@ -106,8 +98,8 @@ public:
     e6_ = e6;
   }
 
-  void set(const e1_type& e1, const e2_type& e2, const e3_type& e3,
-           const e4_type& e4, const e5_type& e5, const e6_type& e6) {
+  void set(const e1_type& e1, const e2_type& e2, const e3_type& e3, const e4_type& e4, const e5_type& e5,
+           const e6_type& e6) {
     e1_ = e1;
     e2_ = e2;
     e3_ = e3;
@@ -125,36 +117,27 @@ private:
   e6_type e6_;
 };
 
-template <typename T1, typename T2, typename T3, typename T4, typename T5,
-          typename T6>
-inline bool operator==(const sextuple<T1, T2, T3, T4, T5, T6>& lhs,
-                       const sextuple<T1, T2, T3, T4, T5, T6>& rhs) {
-  return lhs.e1() == rhs.e1() && lhs.e2() == rhs.e2() && lhs.e3() == rhs.e3() &&
-         lhs.e4() == rhs.e4() && lhs.e5() == rhs.e5() && lhs.e6() == rhs.e6();
+template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6>
+inline bool operator==(const sextuple<T1, T2, T3, T4, T5, T6>& lhs, const sextuple<T1, T2, T3, T4, T5, T6>& rhs) {
+  return lhs.e1() == rhs.e1() && lhs.e2() == rhs.e2() && lhs.e3() == rhs.e3() && lhs.e4() == rhs.e4() &&
+         lhs.e5() == rhs.e5() && lhs.e6() == rhs.e6();
 }
 
-template <typename T1, typename T2, typename T3, typename T4, typename T5,
-          typename T6>
-inline bool operator!=(const sextuple<T1, T2, T3, T4, T5, T6>& lhs,
-                       const sextuple<T1, T2, T3, T4, T5, T6>& rhs) {
+template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6>
+inline bool operator!=(const sextuple<T1, T2, T3, T4, T5, T6>& lhs, const sextuple<T1, T2, T3, T4, T5, T6>& rhs) {
   return !(lhs == rhs);
 }
 
-template <typename T1, typename T2, typename T3, typename T4, typename T5,
-          typename T6>
-inline bool operator<(const sextuple<T1, T2, T3, T4, T5, T6>& lhs,
-                      const sextuple<T1, T2, T3, T4, T5, T6>& rhs) {
+template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6>
+inline bool operator<(const sextuple<T1, T2, T3, T4, T5, T6>& lhs, const sextuple<T1, T2, T3, T4, T5, T6>& rhs) {
   return lhs.e1() < rhs.e1();
 }
 
-template <typename T1, typename T2, typename T3, typename T4, typename T5,
-          typename T6>
-inline bool operator>(const sextuple<T1, T2, T3, T4, T5, T6>& lhs,
-                      const sextuple<T1, T2, T3, T4, T5, T6>& rhs) {
+template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6>
+inline bool operator>(const sextuple<T1, T2, T3, T4, T5, T6>& lhs, const sextuple<T1, T2, T3, T4, T5, T6>& rhs) {
   return lhs.e1() > rhs.e1();
 }
 
-} // namespace value
-} // namespace netspeak
+} // namespace netspeak::value
 
 #endif // NETSPEAK_VALUE_SEXTUPLE_HPP

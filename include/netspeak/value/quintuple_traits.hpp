@@ -3,11 +3,10 @@
 #ifndef NETSPEAK_VALUE_QUINTUPLE_TRAITS_HPP
 #define NETSPEAK_VALUE_QUINTUPLE_TRAITS_HPP
 
-#include "netspeak/value/quintuple.hpp"
-#include "netspeak/value/value_traits.hpp"
+#include "quintuple.hpp"
+#include "value_traits.hpp"
 
-namespace netspeak {
-namespace value {
+namespace netspeak::value {
 
 // -----------------------------------------------------------------------------
 // Partial specialization for value::quintuple<T1, T2, T3, T4, T5>
@@ -25,9 +24,8 @@ struct value_traits<quintuple<T1, T2, T3, T4, T5> > {
   typedef value_traits<T5> T5Traits; // Compiles for arithmetic types only.
 
   static inline size_t size_of(const value_type& tuple) {
-    return T1Traits::size_of(tuple.e1()) + T2Traits::size_of(tuple.e2()) +
-           T3Traits::size_of(tuple.e3()) + T4Traits::size_of(tuple.e4()) +
-           T5Traits::size_of(tuple.e5());
+    return T1Traits::size_of(tuple.e1()) + T2Traits::size_of(tuple.e2()) + T3Traits::size_of(tuple.e3()) +
+           T4Traits::size_of(tuple.e4()) + T5Traits::size_of(tuple.e5());
   }
 
   static inline char* copy_to(const value_type& tuple, char* buffer) {
@@ -47,18 +45,14 @@ struct value_traits<quintuple<T1, T2, T3, T4, T5> > {
   }
 
   static inline bool write_to(const value_type& tuple, FILE* file) {
-    return T1Traits::write_to(tuple.e1(), file) &&
-           T2Traits::write_to(tuple.e2(), file) &&
-           T3Traits::write_to(tuple.e3(), file) &&
-           T4Traits::write_to(tuple.e4(), file) &&
+    return T1Traits::write_to(tuple.e1(), file) && T2Traits::write_to(tuple.e2(), file) &&
+           T3Traits::write_to(tuple.e3(), file) && T4Traits::write_to(tuple.e4(), file) &&
            T5Traits::write_to(tuple.e5(), file);
   }
 
   static inline bool read_from(value_type& tuple, FILE* file) {
-    return T1Traits::read_from(tuple.e1(), file) &&
-           T2Traits::read_from(tuple.e2(), file) &&
-           T3Traits::read_from(tuple.e3(), file) &&
-           T4Traits::read_from(tuple.e4(), file) &&
+    return T1Traits::read_from(tuple.e1(), file) && T2Traits::read_from(tuple.e2(), file) &&
+           T3Traits::read_from(tuple.e3(), file) && T4Traits::read_from(tuple.e4(), file) &&
            T5Traits::read_from(tuple.e5(), file);
   }
 
@@ -88,8 +82,7 @@ struct value_traits<quintuple<T1, T2, T3, T4, T5> > {
   }
 
   static inline std::string type_name() {
-    return T1Traits::type_name() + T2Traits::type_name() +
-           T3Traits::type_name() + T4Traits::type_name() +
+    return T1Traits::type_name() + T2Traits::type_name() + T3Traits::type_name() + T4Traits::type_name() +
            T5Traits::type_name();
   }
 };
@@ -99,14 +92,12 @@ struct value_traits<quintuple<T1, T2, T3, T4, T5> > {
 // -----------------------------------------------------------------------------
 
 template <typename T1, typename T2, typename T3, typename T4, typename T5>
-std::ostream& operator<<(std::ostream& os,
-                         const quintuple<T1, T2, T3, T4, T5>& tuple) {
+std::ostream& operator<<(std::ostream& os, const quintuple<T1, T2, T3, T4, T5>& tuple) {
   if (os)
     value_traits<quintuple<T1, T2, T3, T4, T5> >::print_to(tuple, os);
   return os;
 }
 
-} // namespace value
-} // namespace netspeak
+} // namespace netspeak::value
 
 #endif // NETSPEAK_VALUE_QUINTUPLE_TRAITS_HPP

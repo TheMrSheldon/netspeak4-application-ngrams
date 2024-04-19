@@ -13,8 +13,7 @@ public:
   virtual ~Command() {}
   virtual std::string name() = 0;
   virtual std::string desc() = 0;
-  virtual void add_options(
-      boost::program_options::options_description_easy_init& easy_init) = 0;
+  virtual void add_options(boost::program_options::options_description_easy_init& easy_init) = 0;
   virtual int run(boost::program_options::variables_map variables) = 0;
 };
 

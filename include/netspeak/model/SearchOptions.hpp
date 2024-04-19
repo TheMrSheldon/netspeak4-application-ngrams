@@ -4,8 +4,7 @@
 #include <cstdint>
 
 
-namespace netspeak {
-namespace model {
+namespace netspeak::model {
 
 
 struct SearchOptions {
@@ -20,10 +19,8 @@ public:
   uint32_t pruning_low;
 
   bool operator==(const SearchOptions& rhs) const {
-    return max_phrase_count == rhs.max_phrase_count &&
-           max_phrase_frequency == rhs.max_phrase_frequency &&
-           phrase_length_min == rhs.phrase_length_min &&
-           phrase_length_max == rhs.phrase_length_max &&
+    return max_phrase_count == rhs.max_phrase_count && max_phrase_frequency == rhs.max_phrase_frequency &&
+           phrase_length_min == rhs.phrase_length_min && phrase_length_max == rhs.phrase_length_max &&
            pruning_high == rhs.pruning_high && pruning_low == rhs.pruning_low;
   }
   bool operator!=(const SearchOptions& rhs) const {
@@ -32,8 +29,7 @@ public:
 };
 
 
-} // namespace model
-} // namespace netspeak
+} // namespace netspeak::model
 
 
 #endif

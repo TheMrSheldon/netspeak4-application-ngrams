@@ -7,8 +7,7 @@
 
 #include "netspeak/model/Query.hpp"
 
-namespace netspeak {
-namespace model {
+namespace netspeak::model {
 
 // Implementation note:
 //
@@ -33,8 +32,7 @@ public:
   struct Source {
     std::shared_ptr<const Query> query;
     std::shared_ptr<const Query::Unit> unit;
-    Source(const std::shared_ptr<const Query>& query,
-           const std::shared_ptr<const Query::Unit>& unit)
+    Source(const std::shared_ptr<const Query>& query, const std::shared_ptr<const Query::Unit>& unit)
         : query(query), unit(unit) {}
   };
 
@@ -63,8 +61,7 @@ public:
   }
 
 private:
-  NormQueryUnit__(Tag tag, const Text& text, const Source& source)
-      : tag_(tag), text_(text), source_(source) {}
+  NormQueryUnit__(Tag tag, const Text& text, const Source& source) : tag_(tag), text_(text), source_(source) {}
   NormQueryUnit__() = delete;
 };
 
@@ -125,8 +122,7 @@ std::ostream& operator<<(std::ostream& out, const NormQuery::Unit& unit);
 std::ostream& operator<<(std::ostream& out, const NormQuery& query);
 
 
-} // namespace model
-} // namespace netspeak
+} // namespace netspeak::model
 
 
 #endif

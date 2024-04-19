@@ -1,16 +1,15 @@
 #ifndef NETSPEAK_CONFIGURATION_HPP
 #define NETSPEAK_CONFIGURATION_HPP
 
+#include <filesystem>
 #include <memory>
+#include <optional>
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
 
-#include <filesystem>
-#include <optional>
-
-#include "netspeak/util/Config.hpp"
+#include "util/Config.hpp"
 
 namespace netspeak {
 
@@ -25,21 +24,17 @@ private:
 
 public:
   Configuration() : config_(), extends_(), base_dir_() {}
-  Configuration(
-      std::initializer_list<util::Config::initializer_list_type> list);
+  Configuration(std::initializer_list<util::Config::initializer_list_type> list);
   explicit Configuration(std::filesystem::path file_name);
   explicit Configuration(const util::Config& config);
 
   std::string get_required(const std::string& key) const;
   std::optional<std::string> get_optional(const std::string& key) const;
-  std::string get(const std::string& key,
-                  const std::string& defaultValue) const;
+  std::string get(const std::string& key, const std::string& defaultValue) const;
 
   std::filesystem::path get_required_path(const std::string& key) const;
-  std::optional<std::filesystem::path> get_optional_path(
-      const std::string& key) const;
-  std::filesystem::path get_path(const std::string& key,
-                                   const std::string& defaultValue) const;
+  std::optional<std::filesystem::path> get_optional_path(const std::string& key) const;
+  std::filesystem::path get_path(const std::string& key, const std::string& defaultValue) const;
 
   bool get_required_bool(const std::string& key) const;
   std::optional<bool> get_optional_bool(const std::string& key) const;

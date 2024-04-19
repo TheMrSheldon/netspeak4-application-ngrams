@@ -1,16 +1,15 @@
 #ifndef NETSPEAK_NETSPEAK_HPP
 #define NETSPEAK_NETSPEAK_HPP
 
+#include <netspeak/NetspeakService.pb.h>
+
 #include <algorithm>
+#include <filesystem>
 #include <memory>
 #include <string>
 #include <typeinfo>
 
-#include <filesystem>
-#include <netspeak/NetspeakService.pb.h>
-
 #include "../antlr4/parse.hpp"
-
 #include "Configuration.hpp"
 #include "Dictionaries.hpp"
 #include "PhraseCorpus.hpp"
@@ -46,8 +45,7 @@ public:
 
   Properties properties() const;
 
-  void search(const service::SearchRequest& request,
-              service::SearchResponse& response) throw();
+  void search(const service::SearchRequest& request, service::SearchResponse& response) throw();
 
 
 private:
@@ -58,20 +56,16 @@ private:
   typedef model::RawResult RawResult;
   typedef model::SearchOptions SearchOptions;
 
-  std::pair<QueryNormalizer::Options, SearchOptions> to_options(
-      const service::SearchRequest& request);
+  std::pair<QueryNormalizer::Options, SearchOptions> to_options(const service::SearchRequest& request);
 
-  std::unique_ptr<SearchResult> merge_raw_result_(const SearchOptions& options,
-                                                  const RawResult& raw_result);
+  std::unique_ptr<SearchResult> merge_raw_result_(const SearchOptions& options, const RawResult& raw_result);
 
-  std::shared_ptr<const RawRefResult> process_wildcard_query_(
-      const SearchOptions& options, const NormQuery& query);
-  std::shared_ptr<const RawPhraseResult> process_non_wildcard_query_(
-      const SearchOptions& options, const NormQuery& query);
+  std::shared_ptr<const RawRefResult> process_wildcard_query_(const SearchOptions& options, const NormQuery& query);
+  std::shared_ptr<const RawPhraseResult> process_non_wildcard_query_(const SearchOptions& options,
+                                                                     const NormQuery& query);
 
-  std::unique_ptr<RawResult> search_raw_(
-      const QueryNormalizer::Options& normalizer_options,
-      const SearchOptions& options, std::shared_ptr<Query> query);
+  std::unique_ptr<RawResult> search_raw_(const QueryNormalizer::Options& normalizer_options,
+                                         const SearchOptions& options, std::shared_ptr<Query> query);
 
   struct search_config {
     size_t max_norm_queries;
@@ -88,8 +82,7 @@ private:
     std::shared_ptr<const RawRefResult> result;
 
     result_cache_item() = delete;
-    result_cache_item(const SearchOptions& options,
-                      const std::shared_ptr<const RawRefResult>& result)
+    result_cache_item(const SearchOptions& options, const std::shared_ptr<const RawRefResult>& result)
         : options(options), result(result) {}
   };
 

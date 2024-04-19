@@ -3,16 +3,14 @@
 #ifndef NETSPEAK_INVERTEDINDEX_STORAGE_WRITER_HPP
 #define NETSPEAK_INVERTEDINDEX_STORAGE_WRITER_HPP
 
-#include <boost/filesystem/fstream.hpp>
 #include <boost/utility.hpp>
 
-#include "netspeak/bighashmap/Builder.hpp"
-#include "netspeak/invertedindex/Postlist.hpp"
-#include "netspeak/invertedindex/Record.hpp"
-#include "netspeak/util/conversion.hpp"
+#include "../bighashmap/Builder.hpp"
+#include "../util/conversion.hpp"
+#include "Postlist.hpp"
+#include "Record.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 namespace fs = std::filesystem;
 
@@ -31,8 +29,7 @@ public:
 
   static const size_t data_file_size_max = 1024 * 1024 * 1024; // 1GB
 
-  explicit StorageWriter(const fs::path& directory)
-      : directory_(directory), data_file_cnt_(), data_wfs_(NULL) {
+  explicit StorageWriter(const fs::path& directory) : directory_(directory), data_file_cnt_(), data_wfs_(NULL) {
     if (!fs::exists(directory)) {
       util::throw_invalid_argument("Does not exist", directory);
     }
@@ -89,8 +86,7 @@ public:
       const std::string num(util::to_string(data_file_cnt_++));
       data_wfs_ = util::fopen(data_dir / (k_data_file + num), "wb");
     }
-    Record<Address> record(key,
-                           Address(data_file_cnt_ - 1, util::ftell(data_wfs_)));
+    Record<Address> record(key, Address(data_file_cnt_ - 1, util::ftell(data_wfs_)));
     postlist.write(data_wfs_);
     return (table_ofs_ << record << '\n').good();
   }
@@ -114,7 +110,6 @@ const std::string StorageWriter<T>::k_table_dir("table");
 template <typename T>
 const std::string StorageWriter<T>::k_table_file("table.txt");
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_STORAGE_WRITER_HPP

@@ -8,8 +8,7 @@
 #include <vector>
 
 
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 
 /**
@@ -78,22 +77,20 @@ private:
     return ::strcmp(a, b) < 0;
   }
 
-  static std::vector<ValueType> create_sorted_words(
-      const std::vector<char>& char_data_, std::vector<ValueType>&& id_data) {
+  static std::vector<ValueType> create_sorted_words(const std::vector<char>& char_data_,
+                                                    std::vector<ValueType>&& id_data) {
     std::vector<ValueType> sorted_words(std::move(id_data));
     sorted_words.shrink_to_fit();
 
     const auto data = char_data_.data();
-    std::sort(sorted_words.begin(), sorted_words.end(),
-              [data](const ValueType& a, const ValueType& b) {
-                return str_less_than(get_c_str(data, a), get_c_str(data, b));
-              });
+    std::sort(sorted_words.begin(), sorted_words.end(), [data](const ValueType& a, const ValueType& b) {
+      return str_less_than(get_c_str(data, a), get_c_str(data, b));
+    });
 
     return std::move(sorted_words);
   }
 
-  static std::vector<uint32_t> create_id_map(
-      const std::vector<ValueType>& sorted_words_) {
+  static std::vector<uint32_t> create_id_map(const std::vector<ValueType>& sorted_words_) {
     std::vector<uint32_t> id_map;
 
     const uint32_t len = static_cast<uint32_t>(sorted_words_.size());
@@ -120,8 +117,7 @@ public:
     char_data_ = std::move(builder.char_data_);
     char_data_.shrink_to_fit();
 
-    sorted_words_ =
-        std::move(create_sorted_words(char_data_, std::move(builder.id_data_)));
+    sorted_words_ = std::move(create_sorted_words(char_data_, std::move(builder.id_data_)));
 
     id_map_ = std::move(create_id_map(sorted_words_));
   }
@@ -159,10 +155,9 @@ public:
     const auto data = char_data_.data();
 
     typedef const char* CharPtr;
-    auto it = std::lower_bound(begin(), end(), word,
-                               [data](const ValueType& a, const CharPtr& b) {
-                                 return str_less_than(get_c_str(data, a), b);
-                               });
+    auto it = std::lower_bound(begin(), end(), word, [data](const ValueType& a, const CharPtr& b) {
+      return str_less_than(get_c_str(data, a), b);
+    });
 
     if (!(it == end()) && !str_less_than(word, get_c_str(data, *it))) {
       return it;
@@ -193,7 +188,6 @@ private:
 };
 
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 #endif

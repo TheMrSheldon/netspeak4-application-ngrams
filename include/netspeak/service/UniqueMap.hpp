@@ -2,16 +2,16 @@
 #define NETSPEAK_SERVICE_UNIQUE_MAP_HPP
 
 
+#include <netspeak/NetspeakService.grpc.pb.h>
+#include <netspeak/NetspeakService.pb.h>
+
 #include <memory>
 #include <unordered_map>
 
 #include "netspeak/Netspeak.hpp"
-#include <netspeak/NetspeakService.grpc.pb.h>
-#include <netspeak/NetspeakService.pb.h>
 
 
-namespace netspeak {
-namespace service {
+namespace netspeak::service {
 
 /**
  * @brief An implementation of the Netspeak gRPC service that will forward all
@@ -36,13 +36,10 @@ public:
   explicit UniqueMap(std::unique_ptr<std::vector<entry>> entries_ptr);
   ~UniqueMap() override {}
 
-  grpc::Status Search(grpc::ServerContext* context,
-                      const SearchRequest* request,
-                      SearchResponse* response) override {
+  grpc::Status Search(grpc::ServerContext* context, const SearchRequest* request, SearchResponse* response) override {
     return Search_(context, request, response);
   }
-  grpc::Status GetCorpora(grpc::ServerContext* context,
-                          const CorporaRequest* request,
+  grpc::Status GetCorpora(grpc::ServerContext* context, const CorporaRequest* request,
                           CorporaResponse* response) override {
     return GetCorpora_(context, request, response);
   }
@@ -52,16 +49,12 @@ private:
   // The `const` means that the compiler will not allow us to modify the state
   // of the object and as an immutable object, it's inherently thread-safe.
 
-  grpc::Status Search_(grpc::ServerContext* context,
-                       const SearchRequest* request,
-                       SearchResponse* response) const;
-  grpc::Status GetCorpora_(grpc::ServerContext* context,
-                           const CorporaRequest* request,
+  grpc::Status Search_(grpc::ServerContext* context, const SearchRequest* request, SearchResponse* response) const;
+  grpc::Status GetCorpora_(grpc::ServerContext* context, const CorporaRequest* request,
                            CorporaResponse* response) const;
 };
 
-} // namespace service
-} // namespace netspeak
+} // namespace netspeak::service
 
 
 #endif

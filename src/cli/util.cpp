@@ -15,8 +15,7 @@ std::string localhost(uint16_t port) {
   return local;
 }
 
-service::CorporaResponse getCorpora(service::NetspeakService::Stub& stub,
-                                    const std::string& stub_address) {
+service::CorporaResponse getCorpora(service::NetspeakService::Stub& stub, const std::string& stub_address) {
   service::CorporaRequest corporaReq;
   service::CorporaResponse corporaRes;
   grpc::ClientContext context;

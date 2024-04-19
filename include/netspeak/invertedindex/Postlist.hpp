@@ -3,10 +3,9 @@
 #ifndef NETSPEAK_INVERTEDINDEX_POSTLIST_HPP
 #define NETSPEAK_INVERTEDINDEX_POSTLIST_HPP
 
-#include "netspeak/invertedindex/RawPostlist.hpp"
+#include "RawPostlist.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 /**
  * Specialized class to interpret raw values of a RawPostlist.
@@ -22,12 +21,10 @@ public:
 
   Postlist(const Head& head, const swap_type& swap) : RawPostlist(head, swap) {}
 
-  Postlist(const Head& head, const page_type& page,
-           const variable_size_iter::size_vector& sizes)
+  Postlist(const Head& head, const page_type& page, const variable_size_iter::size_vector& sizes)
       : RawPostlist(head, page, sizes) {}
 
-  Postlist(const Head& head, const swap_type& swap,
-           const variable_size_iter::size_vector& sizes)
+  Postlist(const Head& head, const swap_type& swap, const variable_size_iter::size_vector& sizes)
       : RawPostlist(head, swap, sizes) {}
 
   virtual ~Postlist() {}
@@ -41,7 +38,6 @@ public:
   }
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_POSTLIST_HPP

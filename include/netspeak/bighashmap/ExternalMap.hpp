@@ -9,17 +9,14 @@
 #include <string>
 #include <type_traits>
 
-#include <boost/filesystem/fstream.hpp>
+#include "../util/checksum.hpp"
+#include "../util/logging.hpp"
+#include "../util/systemio.hpp"
+#include "../value/pair.hpp"
+#include "../value/pair_traits.hpp"
+#include "CmphMap.hpp"
 
-#include "netspeak/bighashmap/CmphMap.hpp"
-#include "netspeak/util/checksum.hpp"
-#include "netspeak/util/logging.hpp"
-#include "netspeak/util/systemio.hpp"
-#include "netspeak/value/pair.hpp"
-#include "netspeak/value/pair_traits.hpp"
-
-namespace netspeak {
-namespace bighashmap {
+namespace netspeak::bighashmap {
 
 namespace fs = std::filesystem;
 
@@ -60,8 +57,7 @@ private:
   typedef value::pair<Checksum, Value> Entry;
   typedef value::value_traits<Entry> EntryTraits;
 
-  ExternalMap(const fs::path& mph_file, const fs::path& dat_file)
-      : Base(mph_file) {
+  ExternalMap(const fs::path& mph_file, const fs::path& dat_file) : Base(mph_file) {
     data_ = util::fopen(dat_file, "rb");
   }
 
@@ -86,8 +82,7 @@ public:
     std::string dat_file;
     std::getline(ifs, mph_file);
     std::getline(ifs, dat_file);
-    return new ExternalMap(idx_file.parent_path() / mph_file,
-                           idx_file.parent_path() / dat_file);
+    return new ExternalMap(idx_file.parent_path() / mph_file, idx_file.parent_path() / dat_file);
   }
 
   bool Get(const std::string& key, Value& value) {
@@ -119,7 +114,6 @@ private:
   mutable std::mutex mutex_;
 };
 
-} // namespace bighashmap
-} // namespace netspeak
+} // namespace netspeak::bighashmap
 
 #endif // NETSPEAK_BIGHASHMAP_EXTERNAL_MAP_HPP

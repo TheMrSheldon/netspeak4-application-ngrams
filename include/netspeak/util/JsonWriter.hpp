@@ -7,8 +7,7 @@
 
 #include "google/protobuf/util/json_util.h"
 
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 static char to_hex_digit(char value) {
   if (value < 10) {
@@ -276,8 +275,7 @@ public:                                       \
     }
   };
 
-  static Value<string_stream_wrapper, Done<string_stream_wrapper>> create(
-      std::string& str) {
+  static Value<string_stream_wrapper, Done<string_stream_wrapper>> create(std::string& str) {
     string_stream_wrapper out(str);
     return Value<string_stream_wrapper, Done<string_stream_wrapper>>(out);
   }
@@ -285,7 +283,6 @@ public:                                       \
 
 #undef BOILERPLATE
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 #endif

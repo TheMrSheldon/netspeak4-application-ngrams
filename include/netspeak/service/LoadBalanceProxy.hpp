@@ -2,15 +2,14 @@
 #define NETSPEAK_SERVICE_LOAD_BALANCE_PROXY_HPP
 
 
-#include <memory>
-#include <unordered_map>
-
 #include <netspeak/NetspeakService.grpc.pb.h>
 #include <netspeak/NetspeakService.pb.h>
 
+#include <memory>
+#include <unordered_map>
 
-namespace netspeak {
-namespace service {
+
+namespace netspeak::service {
 
 /**
  * @brief A proxy to unify and load-balance any number of compatible Netspeak
@@ -35,13 +34,10 @@ public:
   LoadBalanceProxy(const LoadBalanceProxy&) = delete;
   explicit LoadBalanceProxy(const StubVector& stubs);
   ~LoadBalanceProxy() override {}
-  grpc::Status Search(grpc::ServerContext* context,
-                      const SearchRequest* request,
-                      SearchResponse* response) override {
+  grpc::Status Search(grpc::ServerContext* context, const SearchRequest* request, SearchResponse* response) override {
     return Search_(context, request, response);
   }
-  grpc::Status GetCorpora(grpc::ServerContext* context,
-                          const CorporaRequest* request,
+  grpc::Status GetCorpora(grpc::ServerContext* context, const CorporaRequest* request,
                           CorporaResponse* response) override {
     return GetCorpora_(context, request, response);
   }
@@ -51,11 +47,8 @@ private:
   // The `const` means that the compiler will not allow us to modify the state
   // of the object and as an immutable object, it's inherently thread-safe.
 
-  grpc::Status Search_(grpc::ServerContext* context,
-                       const SearchRequest* request,
-                       SearchResponse* response) const;
-  grpc::Status GetCorpora_(grpc::ServerContext* context,
-                           const CorporaRequest* request,
+  grpc::Status Search_(grpc::ServerContext* context, const SearchRequest* request, SearchResponse* response) const;
+  grpc::Status GetCorpora_(grpc::ServerContext* context, const CorporaRequest* request,
                            CorporaResponse* response) const;
 
 public:
@@ -69,8 +62,7 @@ public:
   static bool areCompatible(const Corpus& a, const Corpus& b);
 };
 
-} // namespace service
-} // namespace netspeak
+} // namespace netspeak::service
 
 
 #endif

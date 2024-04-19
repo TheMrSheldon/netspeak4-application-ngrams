@@ -5,18 +5,17 @@
 
 #include <ostream>
 
-#include "netspeak/invertedindex/Record.hpp"
-#include "netspeak/util/exception.hpp"
-#include "netspeak/value/big_string_traits.hpp"
-#include "netspeak/value/pair_traits.hpp"
-#include "netspeak/value/quadruple_traits.hpp"
-#include "netspeak/value/quintuple_traits.hpp"
-#include "netspeak/value/sextuple_traits.hpp"
-#include "netspeak/value/string_traits.hpp"
-#include "netspeak/value/triple_traits.hpp"
+#include "../util/exception.hpp"
+#include "../value/big_string_traits.hpp"
+#include "../value/pair_traits.hpp"
+#include "../value/quadruple_traits.hpp"
+#include "../value/quintuple_traits.hpp"
+#include "../value/sextuple_traits.hpp"
+#include "../value/string_traits.hpp"
+#include "../value/triple_traits.hpp"
+#include "Record.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 /**
  * A class to write records in the inverted file format to an output stream.
@@ -58,7 +57,6 @@ private:
   std::string key_;
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_INVERTED_FILE_WRITER_HPP

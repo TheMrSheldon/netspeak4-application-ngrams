@@ -4,9 +4,9 @@
 #include <istream>
 #include <ostream>
 
-#include "netspeak/model/Phrase.hpp"
-#include "netspeak/model/Words.hpp"
-#include "netspeak/util/string.hpp"
+#include "model/Phrase.hpp"
+#include "model/Words.hpp"
+#include "util/string.hpp"
 
 namespace netspeak {
 
@@ -29,8 +29,7 @@ class PhraseFileParser {
 public:
   explicit PhraseFileParser(std::istream& is) : is_(is), id_offset_(0) {}
 
-  PhraseFileParser(std::istream& is, model::Phrase::Id::Local id_offset)
-      : is_(is), id_offset_(id_offset) {}
+  PhraseFileParser(std::istream& is, model::Phrase::Id::Local id_offset) : is_(is), id_offset_(id_offset) {}
 
   virtual ~PhraseFileParser() {}
 
@@ -50,8 +49,7 @@ public:
     return is_.good();
   }
 
-  static std::ostream& write(std::ostream& out,
-                             const PhraseFileParserItem& res) {
+  static std::ostream& write(std::ostream& out, const PhraseFileParserItem& res) {
     // words
     auto it = res.words.begin();
     auto end = res.words.end();

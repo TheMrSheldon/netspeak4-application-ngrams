@@ -5,11 +5,10 @@
 
 #include <cassert>
 
-#include "netspeak/invertedindex/PostlistBuilder.hpp"
-#include "netspeak/util/systemio.hpp"
+#include "../util/systemio.hpp"
+#include "PostlistBuilder.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 /**
  * A class that provides a static method to sort a huge postlist with an
@@ -27,8 +26,7 @@ private: // disallow instantiation
   PostlistSorter();
 
 public:
-  static std::unique_ptr<Postlist<value_type> > sort(
-      Postlist<value_type>& postlist, size_t max_memory_usage_mb = 100) {
+  static std::unique_ptr<Postlist<value_type> > sort(Postlist<value_type>& postlist, size_t max_memory_usage_mb = 100) {
     const size_t max_bucket_size(1 + max_memory_usage_mb * 1024 * 1024);
     const size_t bucket_count(postlist.head().total_size / max_bucket_size);
     if (bucket_count == 0) {
@@ -40,8 +38,7 @@ public:
   }
 
 private:
-  static std::unique_ptr<Postlist<value_type> > internal_sort(
-      Postlist<value_type>& postlist) {
+  static std::unique_ptr<Postlist<value_type> > internal_sort(Postlist<value_type>& postlist) {
     value_type value;
     postlist.rewind();
     std::vector<value_type> values;
@@ -60,15 +57,13 @@ private:
     return builder.build();
   }
 
-  static std::unique_ptr<Postlist<value_type> > merge(
-      std::vector<FILE*>& buckets) {
+  static std::unique_ptr<Postlist<value_type> > merge(std::vector<FILE*>& buckets) {
     // initialize value streams
     std::vector<value_type> values(buckets.size());
     for (unsigned i(0); i != buckets.size(); ++i) {
       std::rewind(buckets[i]);
       if (!traits_type::read_from(values[i], buckets[i])) {
-        util::throw_runtime_error("traits_type::read_from failed for",
-                                  values[i]);
+        util::throw_runtime_error("traits_type::read_from failed for", values[i]);
       }
     }
     // merge value streams
@@ -76,8 +71,7 @@ private:
     PostlistBuilder<value_type> builder;
     typename std::vector<value_type>::iterator next_value;
     while (!values.empty()) {
-      next_value =
-          std::min_element(values.begin(), values.end(), compare_type());
+      next_value = std::min_element(values.begin(), values.end(), compare_type());
       builder.push_back(*next_value);
       bucket_index = std::distance(values.begin(), next_value);
       if (!traits_type::read_from(*next_value, buckets[bucket_index])) {
@@ -89,8 +83,7 @@ private:
     return builder.build();
   }
 
-  static const std::vector<FILE*> scatter(Postlist<value_type>& postlist,
-                                          size_t bucket_count) {
+  static const std::vector<FILE*> scatter(Postlist<value_type>& postlist, size_t bucket_count) {
     value_type value;
     postlist.rewind();
     std::vector<FILE*> bucket_fs;
@@ -125,7 +118,6 @@ private:
   }
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_POSTLIST_SORTER_HPP

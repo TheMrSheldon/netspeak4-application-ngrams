@@ -8,8 +8,7 @@
 #include "netspeak/model/Phrase.hpp"
 
 
-namespace netspeak {
-namespace model {
+namespace netspeak::model {
 
 
 /**
@@ -137,8 +136,7 @@ public:
 };
 
 
-} // namespace model
-} // namespace netspeak
+} // namespace netspeak::model
 
 
 #endif

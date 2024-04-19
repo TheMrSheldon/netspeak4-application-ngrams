@@ -2,10 +2,10 @@
 #define ANTLR4_QUERY_ERROR_HANDLER_HPP
 
 
+#include <antlr4-runtime.h>
+
 #include <sstream>
 #include <string>
-
-#include <antlr4-runtime.h>
 
 
 namespace antlr4 {
@@ -23,8 +23,7 @@ public:
    * @brief Is called when a syntax error occurs e.g. an unexpected token is
    * read.
    */
-  void syntaxError(Recognizer*, Token* offendingSymbol, size_t line,
-                   size_t charPositionInLine, const std::string& msg,
+  void syntaxError(Recognizer*, Token* offendingSymbol, size_t line, size_t charPositionInLine, const std::string& msg,
                    std::exception_ptr) override;
 };
 

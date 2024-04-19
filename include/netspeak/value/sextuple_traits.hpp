@@ -3,18 +3,16 @@
 #ifndef NETSPEAK_VALUE_SEXTUPLE_TRAITS_HPP
 #define NETSPEAK_VALUE_SEXTUPLE_TRAITS_HPP
 
-#include "netspeak/value/sextuple.hpp"
-#include "netspeak/value/value_traits.hpp"
+#include "sextuple.hpp"
+#include "value_traits.hpp"
 
-namespace netspeak {
-namespace value {
+namespace netspeak::value {
 
 // -----------------------------------------------------------------------------
 // Partial specialization for value::sextuple<T1, T2, T3, T4, T5, T6>
 // -----------------------------------------------------------------------------
 
-template <typename T1, typename T2, typename T3, typename T4, typename T5,
-          typename T6>
+template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6>
 struct value_traits<sextuple<T1, T2, T3, T4, T5, T6> > {
   typedef sextuple<T1, T2, T3, T4, T5, T6> value_type;
   typedef uint16_t io_size_type;
@@ -27,9 +25,8 @@ struct value_traits<sextuple<T1, T2, T3, T4, T5, T6> > {
   typedef value_traits<T6> T6Traits; // Compiles for arithmetic types only.
 
   static inline size_t size_of(const value_type& sextuple) {
-    return T1Traits::size_of(sextuple.e1()) + T2Traits::size_of(sextuple.e2()) +
-           T3Traits::size_of(sextuple.e3()) + T4Traits::size_of(sextuple.e4()) +
-           T5Traits::size_of(sextuple.e5()) + T6Traits::size_of(sextuple.e6());
+    return T1Traits::size_of(sextuple.e1()) + T2Traits::size_of(sextuple.e2()) + T3Traits::size_of(sextuple.e3()) +
+           T4Traits::size_of(sextuple.e4()) + T5Traits::size_of(sextuple.e5()) + T6Traits::size_of(sextuple.e6());
   }
 
   static inline char* copy_to(const value_type& sextuple, char* buffer) {
@@ -41,8 +38,7 @@ struct value_traits<sextuple<T1, T2, T3, T4, T5, T6> > {
     return T6Traits::copy_to(sextuple.e6(), buffer);
   }
 
-  static inline const char* copy_from(value_type& sextuple,
-                                      const char* buffer) {
+  static inline const char* copy_from(value_type& sextuple, const char* buffer) {
     buffer = T1Traits::copy_from(sextuple.e1(), buffer);
     buffer = T2Traits::copy_from(sextuple.e2(), buffer);
     buffer = T3Traits::copy_from(sextuple.e3(), buffer);
@@ -52,21 +48,15 @@ struct value_traits<sextuple<T1, T2, T3, T4, T5, T6> > {
   }
 
   static inline bool write_to(const value_type& sextuple, FILE* file) {
-    return T1Traits::write_to(sextuple.e1(), file) &&
-           T2Traits::write_to(sextuple.e2(), file) &&
-           T3Traits::write_to(sextuple.e3(), file) &&
-           T4Traits::write_to(sextuple.e4(), file) &&
-           T5Traits::write_to(sextuple.e5(), file) &&
-           T6Traits::write_to(sextuple.e6(), file);
+    return T1Traits::write_to(sextuple.e1(), file) && T2Traits::write_to(sextuple.e2(), file) &&
+           T3Traits::write_to(sextuple.e3(), file) && T4Traits::write_to(sextuple.e4(), file) &&
+           T5Traits::write_to(sextuple.e5(), file) && T6Traits::write_to(sextuple.e6(), file);
   }
 
   static inline bool read_from(value_type& sextuple, FILE* file) {
-    return T1Traits::read_from(sextuple.e1(), file) &&
-           T2Traits::read_from(sextuple.e2(), file) &&
-           T3Traits::read_from(sextuple.e3(), file) &&
-           T4Traits::read_from(sextuple.e4(), file) &&
-           T5Traits::read_from(sextuple.e5(), file) &&
-           T6Traits::read_from(sextuple.e6(), file);
+    return T1Traits::read_from(sextuple.e1(), file) && T2Traits::read_from(sextuple.e2(), file) &&
+           T3Traits::read_from(sextuple.e3(), file) && T4Traits::read_from(sextuple.e4(), file) &&
+           T5Traits::read_from(sextuple.e5(), file) && T6Traits::read_from(sextuple.e6(), file);
   }
 
   static inline void print_to(const value_type& sextuple, std::ostream& os) {
@@ -98,8 +88,7 @@ struct value_traits<sextuple<T1, T2, T3, T4, T5, T6> > {
   }
 
   static inline std::string type_name() {
-    return T1Traits::type_name() + T2Traits::type_name() +
-           T3Traits::type_name() + T4Traits::type_name() +
+    return T1Traits::type_name() + T2Traits::type_name() + T3Traits::type_name() + T4Traits::type_name() +
            T5Traits::type_name() + T6Traits::type_name();
   }
 };
@@ -108,16 +97,13 @@ struct value_traits<sextuple<T1, T2, T3, T4, T5, T6> > {
 // Operators
 // -----------------------------------------------------------------------------
 
-template <typename T1, typename T2, typename T3, typename T4, typename T5,
-          typename T6>
-std::ostream& operator<<(std::ostream& os,
-                         const sextuple<T1, T2, T3, T4, T5, T6>& value) {
+template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6>
+std::ostream& operator<<(std::ostream& os, const sextuple<T1, T2, T3, T4, T5, T6>& value) {
   if (os)
     value_traits<sextuple<T1, T2, T3, T4, T5, T6> >::print_to(value, os);
   return os;
 }
 
-} // namespace value
-} // namespace netspeak
+} // namespace netspeak::value
 
 #endif // NETSPEAK_VALUE_SEXTUPLE_TRAITS_HPP

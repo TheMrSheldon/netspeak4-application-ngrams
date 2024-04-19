@@ -1,14 +1,13 @@
 #ifndef NETSPEAK_INDEXING_HPP
 #define NETSPEAK_INDEXING_HPP
 
+#include <filesystem>
 #include <string>
 #include <vector>
 
-#include <filesystem>
-
-#include "netspeak/Configuration.hpp"
-#include "netspeak/invertedindex/Postlist.hpp"
-#include "netspeak/model/typedefs.hpp"
+#include "Configuration.hpp"
+#include "invertedindex/Postlist.hpp"
+#include "model/typedefs.hpp"
 
 namespace netspeak {
 
@@ -22,8 +21,7 @@ namespace netspeak {
  * @param phrase_dir
  * @param netspeak_dir
  */
-void BuildNetspeak(const std::filesystem::path& phrase_dir,
-                   const std::filesystem::path& netspeak_dir);
+void BuildNetspeak(const std::filesystem::path& phrase_dir, const std::filesystem::path& netspeak_dir);
 
 /**
  * This function builds the "phrase-corpus" component of Netspeak.
@@ -65,29 +63,24 @@ void BuildNetspeak(const std::filesystem::path& phrase_dir,
  * - All n-grams in phrase_dir are unique.
  * - The phrase_corpus_dir is empty and writable.
  */
-uint64_t BuildPhraseCorpus(const std::filesystem::path& phrase_dir,
-                           const std::filesystem::path& phrase_corpus_dir);
+uint64_t BuildPhraseCorpus(const std::filesystem::path& phrase_dir, const std::filesystem::path& phrase_corpus_dir);
 
 /**
  * @param phrase_dir
  * @param phrase_dictionary_dir
  */
-void BuildPhraseDictionary(
-    const std::filesystem::path& phrase_dir,
-    const std::filesystem::path& phrase_dictionary_dir);
+void BuildPhraseDictionary(const std::filesystem::path& phrase_dir, const std::filesystem::path& phrase_dictionary_dir);
 
 /**
  * @param phrase_dir
  * @param phrase_index_dir
  * @param expected_record_count
  */
-void BuildPhraseIndex(const std::filesystem::path& phrase_dir,
-                      const std::filesystem::path& phrase_index_dir,
+void BuildPhraseIndex(const std::filesystem::path& phrase_dir, const std::filesystem::path& phrase_index_dir,
                       uint64_t expected_record_count);
 
-std::vector<model::PostlistIndexValue> IndexPostlist(
-    const invertedindex::Postlist<model::PhraseIndexValue>& postlist,
-    std::size_t resolution);
+std::vector<model::PostlistIndexValue> IndexPostlist(const invertedindex::Postlist<model::PhraseIndexValue>& postlist,
+                                                     std::size_t resolution);
 
 /**
  * This function builds an inverted index
@@ -96,8 +89,7 @@ std::vector<model::PostlistIndexValue> IndexPostlist(
  * @param phrase_index_dir
  * @param postlist_index_dir
  */
-void BuildPostlistIndex(const std::filesystem::path& phrase_index_dir,
-                        const std::filesystem::path& postlist_index_dir);
+void BuildPostlistIndex(const std::filesystem::path& phrase_index_dir, const std::filesystem::path& postlist_index_dir);
 
 /**
  * Creates the regex vocabulary for the index.
@@ -106,8 +98,7 @@ void BuildPostlistIndex(const std::filesystem::path& phrase_index_dir,
  * @param phrase_corpus_dir
  */
 void BuildRegexVocabulary(const std::filesystem::path& regex_vocabulary_dir,
-                          const std::filesystem::path& phrase_corpus_dir,
-                          const Configuration& config);
+                          const std::filesystem::path& phrase_corpus_dir, const Configuration& config);
 
 /**
  * Merges n-gram duplicates by adding their frequency values to form a set of
@@ -116,8 +107,7 @@ void BuildRegexVocabulary(const std::filesystem::path& regex_vocabulary_dir,
  * @param phrase_src_dir Directory with n-gram files.
  * @param phrase_dst_dir Directory to store n-grams files with unique n-grams.
  */
-void MergeDuplicates(const std::filesystem::path& phrase_src_dir,
-                     const std::filesystem::path& phrase_dst_dir);
+void MergeDuplicates(const std::filesystem::path& phrase_src_dir, const std::filesystem::path& phrase_dst_dir);
 
 /**
  * Sets the file denoted by \c path to read-only mode. If \c path points to a

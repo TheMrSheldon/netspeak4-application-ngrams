@@ -4,18 +4,17 @@
 #define NETSPEAK_UTIL_SYSTEMIO_HPP
 
 #include <assert.h>
+
 #include <climits>
 #include <cstring>
-
 #include <filesystem>
 
-#include "netspeak/util/exception.hpp"
+#include "exception.hpp"
 
 /**
  * Functions to replace FILE* I/O to throw exceptions on failure.
  */
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 namespace fs = std::filesystem;
 
@@ -153,7 +152,6 @@ inline void CreateOrCheckIfEmpty(const fs::path& directory) {
   }
 }
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 #endif // NETSPEAK_UTIL_SYSTEMIO_HPP

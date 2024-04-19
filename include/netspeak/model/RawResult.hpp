@@ -11,8 +11,7 @@
 #include "netspeak/model/RawRefResult.hpp"
 
 
-namespace netspeak {
-namespace model {
+namespace netspeak::model {
 
 
 /**
@@ -56,10 +55,8 @@ public:
     return refs_.empty() && phrases_.empty();
   }
 
-  void add_item(const NormQuery& query,
-                const std::shared_ptr<const RawPhraseResult>& result);
-  void add_item(const NormQuery& query,
-                const std::shared_ptr<const RawRefResult>& result);
+  void add_item(const NormQuery& query, const std::shared_ptr<const RawPhraseResult>& result);
+  void add_item(const NormQuery& query, const std::shared_ptr<const RawRefResult>& result);
 
   const std::set<std::string>& unknown_words() const {
     return unknown_words_;
@@ -67,8 +64,7 @@ public:
 };
 
 
-} // namespace model
-} // namespace netspeak
+} // namespace netspeak::model
 
 
 #endif

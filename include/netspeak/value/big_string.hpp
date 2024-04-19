@@ -5,8 +5,7 @@
 
 #include <string>
 
-namespace netspeak {
-namespace value {
+namespace netspeak::value {
 
 struct big_string {
   big_string() = default;
@@ -38,7 +37,6 @@ inline std::ostream& operator<<(std::ostream& os, const big_string& value) {
   return os << value.str;
 }
 
-} // namespace value
-} // namespace netspeak
+} // namespace netspeak::value
 
 #endif // NETSPEAK_VALUE_BIG_STRING_HPP

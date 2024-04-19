@@ -2,8 +2,7 @@
 #define NETSPEAK_UTIL_MATH_HPP
 
 
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 template <typename T>
 T binomial(T n, T k) {
@@ -24,8 +23,7 @@ T factorial(T n) {
   return prod;
 }
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 
 #endif

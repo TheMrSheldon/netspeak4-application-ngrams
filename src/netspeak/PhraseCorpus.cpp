@@ -1,21 +1,19 @@
-#include <netspeak/PhraseCorpus.hpp>
-
 #include <aio.h>
 #include <fcntl.h>
 
 #include <algorithm>
-#include <string>
-#include <utility>
-
-#include <boost/algorithm/string.hpp>
-#include <boost/filesystem/fstream.hpp>
-#include <boost/lexical_cast.hpp>
-#include <optional>
-
+#include <fstream>
+#include <netspeak/PhraseCorpus.hpp>
 #include <netspeak/error.hpp>
 #include <netspeak/invertedindex/ByteBuffer.hpp>
 #include <netspeak/util/check.hpp>
 #include <netspeak/value/value_traits.hpp>
+#include <optional>
+#include <string>
+#include <utility>
+
+#include <boost/algorithm/string.hpp>
+#include <boost/lexical_cast.hpp>
 
 
 namespace netspeak {
@@ -50,8 +48,7 @@ size_t entry_size(Phrase::Id::Length length) {
   return sizeof(Phrase::Frequency) + sizeof(WordId) * (size_t)length;
 }
 
-Phrase::Count::Local PhraseCorpus::count_phrases(
-    Phrase::Id::Length phrase_len) const {
+Phrase::Count::Local PhraseCorpus::count_phrases(Phrase::Id::Length phrase_len) const {
   const auto it_fd = fd_map.find(phrase_len);
 
   if (it_fd != fd_map.end()) {
@@ -83,8 +80,7 @@ void PhraseCorpus::open(const fs::path& phrase_dir) {
   open_phrase_files_(phrase_dir);
 }
 
-std::vector<Phrase> PhraseCorpus::read_phrases(
-    const std::vector<Phrase::Id>& phrase_ids) const {
+std::vector<Phrase> PhraseCorpus::read_phrases(const std::vector<Phrase::Id>& phrase_ids) const {
   // The gist of this method is the following:
   // We use async IO to read all the raw phrases data in parallel into memory
   // and then we decode the raw data sequentially. This is a lot faster than
@@ -126,17 +122,14 @@ std::vector<Phrase> PhraseCorpus::read_phrases(
     buffer_pos += size;
   }
 
-  util::check(::lio_listio(LIO_WAIT, aio_read_ptrs.data(), count, NULL) != -1,
-              __func__, "lio_listio failed");
+  util::check(::lio_listio(LIO_WAIT, aio_read_ptrs.data(), count, NULL) != -1, __func__, "lio_listio failed");
 
   std::vector<Phrase> phrases;
   phrases.reserve(count);
 
   for (size_t i = 0; i < count; ++i) {
     const auto aio_ptr = aio_read_ptrs[i];
-    util::check(
-        ::aio_return(aio_ptr) == static_cast<ssize_t>(aio_ptr->aio_nbytes),
-        __func__, "aio_read64 failed");
+    util::check(::aio_return(aio_ptr) == static_cast<ssize_t>(aio_ptr->aio_nbytes), __func__, "aio_read64 failed");
 
     phrases.push_back(decode_((const char*)aio_ptr->aio_buf, phrase_ids[i]));
   }
@@ -176,8 +169,7 @@ void PhraseCorpus::init_vocabulary_(const fs::path& vocab_file) {
   id_map.emplace(std::move(builder));
 }
 
-std::optional<Phrase::Id::Length> parse_phrase_filename(
-    const std::string& name) {
+std::optional<Phrase::Id::Length> parse_phrase_filename(const std::string& name) {
   // we only want to open files of the form `phrases.{n}`
   if (boost::starts_with(name, PhraseCorpus::phrase_file)) {
     std::string::size_type dotpos = name.rfind('.');
@@ -201,8 +193,7 @@ void PhraseCorpus::open_phrase_files_(const fs::path& phrase_dir) {
     const auto phrase_len = parse_phrase_filename(filename);
 
     if (phrase_len) {
-      fd_map.insert(std::make_pair(
-          *phrase_len, util::FileDescriptor::open(path.string(), O_RDONLY)));
+      fd_map.insert(std::make_pair(*phrase_len, util::FileDescriptor::open(path.string(), O_RDONLY)));
       max = std::max(max, *phrase_len);
     }
   }

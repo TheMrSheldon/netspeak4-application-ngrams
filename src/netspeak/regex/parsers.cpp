@@ -1,16 +1,12 @@
-#include <netspeak/regex/parsers.hpp>
-
 #include <codecvt>
 #include <locale>
+#include <netspeak/model/QuerySyntax.hpp>
+#include <netspeak/regex/parsers.hpp>
+#include <optional>
 #include <unordered_set>
 
-#include <optional>
 
-#include <netspeak/model/QuerySyntax.hpp>
-
-
-namespace netspeak {
-namespace regex {
+namespace netspeak::regex {
 
 typedef model::QuerySyntax Syntax;
 
@@ -25,9 +21,8 @@ typedef model::QuerySyntax Syntax;
  * @param end_char
  * @return std::optional<std::u32string>
  */
-std::optional<std::u32string> read_until_char(
-    std::u32string::const_iterator begin, std::u32string::const_iterator end,
-    char32_t end_char) {
+std::optional<std::u32string> read_until_char(std::u32string::const_iterator begin, std::u32string::const_iterator end,
+                                              char32_t end_char) {
   std::u32string result;
   for (auto it = begin; it != end; it++) {
     char32_t c = *it;
@@ -52,8 +47,7 @@ RegexQuery parse_netspeak_regex_query(const std::string& netspeak_query) {
   std::wstring_convert<std::codecvt_utf8<char32_t>, char32_t> conv;
   std::u32string query = conv.from_bytes(netspeak_query);
 
-  for (std::u32string::const_iterator it = query.begin(); it != query.end();
-       ++it) {
+  for (std::u32string::const_iterator it = query.begin(); it != query.end(); ++it) {
     char32_t c = *it;
     switch (c) {
       case Syntax::QMARK:
@@ -81,8 +75,7 @@ RegexQuery parse_netspeak_regex_query(const std::string& netspeak_query) {
 
       case Syntax::BRACKET_LEFT: {
         // e.g. "[u]" or "[aeiou]"
-        auto result =
-            read_until_char(it + 1, query.end(), Syntax::BRACKET_RIGHT);
+        auto result = read_until_char(it + 1, query.end(), Syntax::BRACKET_RIGHT);
         if (result) {
           it += result->size() + 1; // result + the end characters
           // "[u]" will be translated to /u?/ (optional) while "[aeiou]" will
@@ -129,6 +122,4 @@ RegexQuery parse_netspeak_regex_query(const std::string& netspeak_query) {
   return builder.to_query();
 }
 
-
-} // namespace regex
-} // namespace netspeak
+} // namespace netspeak::regex

@@ -8,8 +8,7 @@
 #include "netspeak/regex/RegexQuery.hpp"
 
 
-namespace netspeak {
-namespace regex {
+namespace netspeak::regex {
 
 class RegexIndex {
 public:
@@ -24,13 +23,10 @@ public:
    * @param timeout The amount of time after which the search for more words
    * will be aborted.
    */
-  virtual void match_query(const RegexQuery& query,
-                           std::vector<std::string>& matches,
-                           uint32_t max_matches,
+  virtual void match_query(const RegexQuery& query, std::vector<std::string>& matches, uint32_t max_matches,
                            std::chrono::nanoseconds timeout) const = 0;
 };
 
-} // namespace regex
-} // namespace netspeak
+} // namespace netspeak::regex
 
 #endif // NETSPEAK_REGEX_REGEX_INDEX_HPP

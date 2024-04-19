@@ -7,18 +7,17 @@
 #include <cstring>
 #include <memory>
 
-#include "netspeak/util/exception.hpp"
-#include "netspeak/util/systemio.hpp"
-#include "netspeak/value/big_string_traits.hpp"
-#include "netspeak/value/pair_traits.hpp"
-#include "netspeak/value/quadruple_traits.hpp"
-#include "netspeak/value/quintuple_traits.hpp"
-#include "netspeak/value/sextuple_traits.hpp"
-#include "netspeak/value/string_traits.hpp"
-#include "netspeak/value/triple_traits.hpp"
+#include "../util/exception.hpp"
+#include "../util/systemio.hpp"
+#include "../value/big_string_traits.hpp"
+#include "../value/pair_traits.hpp"
+#include "../value/quadruple_traits.hpp"
+#include "../value/quintuple_traits.hpp"
+#include "../value/sextuple_traits.hpp"
+#include "../value/string_traits.hpp"
+#include "../value/triple_traits.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 /**
  * A class to represent a raw byte buffer to store primitives and strings.
@@ -90,8 +89,7 @@ public: // methods
   template <typename T>
   bool get(T& value) {
     typedef value::value_traits<T> traits_type;
-    if (!bufpos_ ||
-        bufpos_ + sizeof(value) > buffer_->data.get() + buffer_->size)
+    if (!bufpos_ || bufpos_ + sizeof(value) > buffer_->data.get() + buffer_->size)
       return false;
     const char* new_bufpos(traits_type::copy_from(value, bufpos_));
     bufpos_ = const_cast<char*>(new_bufpos);
@@ -136,7 +134,6 @@ private:
   char* bufpos_;
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_BYTE_BUFFER_HPP

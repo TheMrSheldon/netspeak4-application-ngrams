@@ -1,12 +1,11 @@
 #ifndef NETSPEAK_PHRASE_CORPUS_HPP
 #define NETSPEAK_PHRASE_CORPUS_HPP
 
+#include <filesystem>
+#include <optional>
 #include <string>
 #include <unordered_map>
 #include <vector>
-
-#include <filesystem>
-#include <optional>
 
 #include "invertedindex/ByteBuffer.hpp"
 #include "model/Phrase.hpp"
@@ -59,8 +58,7 @@ public:
   bool contains(const std::string& word) const;
   bool contains(const WordId& id) const;
 
-  std::vector<Phrase> read_phrases(
-      const std::vector<Phrase::Id>& phrase_ids) const;
+  std::vector<Phrase> read_phrases(const std::vector<Phrase::Id>& phrase_ids) const;
 
 private:
   Phrase decode_(const char* buffer, Phrase::Id phrase_id) const;

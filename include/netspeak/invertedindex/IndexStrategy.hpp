@@ -3,11 +3,10 @@
 #ifndef NETSPEAK_INVERTEDINDEX_INDEX_STRATEGY_HPP
 #define NETSPEAK_INVERTEDINDEX_INDEX_STRATEGY_HPP
 
-#include "netspeak/invertedindex/Configuration.hpp"
-#include "netspeak/invertedindex/Record.hpp"
+#include "Configuration.hpp"
+#include "Record.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 template <typename T>
 class IndexStrategy {
@@ -55,7 +54,6 @@ protected:
   stats_type stats_;
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_INDEX_STRATEGY_HPP

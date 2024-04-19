@@ -5,10 +5,10 @@
 #include <string>
 #include <vector>
 
-#include "netspeak/Dictionaries.hpp"
-#include "netspeak/model/NormQuery.hpp"
-#include "netspeak/model/Query.hpp"
-#include "netspeak/regex/RegexIndex.hpp"
+#include "Dictionaries.hpp"
+#include "model/NormQuery.hpp"
+#include "model/Query.hpp"
+#include "regex/RegexIndex.hpp"
 
 
 namespace netspeak {
@@ -71,8 +71,7 @@ public:
     std::chrono::nanoseconds max_regex_time;
   };
 
-  void normalize(std::shared_ptr<const model::Query> query,
-                 const Options& options,
+  void normalize(std::shared_ptr<const model::Query> query, const Options& options,
                  std::vector<model::NormQuery>& norm_queries);
 };
 

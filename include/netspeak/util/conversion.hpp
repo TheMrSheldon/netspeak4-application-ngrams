@@ -10,19 +10,17 @@
 #include <sstream>
 #include <string>
 
-#include "netspeak/util/exception.hpp"
+#include "exception.hpp"
 
 /**
  * Functions to convert numbers to strings and vice versa.
  */
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 // http://stackoverflow.com/questions/12877521/human-readable-type-info-name
 inline const std::string demangle(const char* mangled) {
   int status;
-  std::unique_ptr<char[], void (*)(void*)> result(
-      abi::__cxa_demangle(mangled, 0, 0, &status), std::free);
+  std::unique_ptr<char[], void (*)(void*)> result(abi::__cxa_demangle(mangled, 0, 0, &status), std::free);
   return result.get() ? std::string(result.get()) : "error occurred";
 }
 
@@ -46,7 +44,6 @@ std::string to_string(T value) {
   return oss.str();
 }
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 #endif // NETSPEAK_UTIL_CONVERSION_HPP

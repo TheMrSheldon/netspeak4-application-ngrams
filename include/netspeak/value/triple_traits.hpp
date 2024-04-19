@@ -3,11 +3,10 @@
 #ifndef NETSPEAK_VALUE_TRIPLE_TRAITS_HPP
 #define NETSPEAK_VALUE_TRIPLE_TRAITS_HPP
 
-#include "netspeak/value/triple.hpp"
-#include "netspeak/value/value_traits.hpp"
+#include "triple.hpp"
+#include "value_traits.hpp"
 
-namespace netspeak {
-namespace value {
+namespace netspeak::value {
 
 // -----------------------------------------------------------------------------
 // Partial specialization for value::triple<T1, T2, T3>
@@ -23,8 +22,7 @@ struct value_traits<triple<T1, T2, T3> > {
   typedef value_traits<T3> T3Traits; // Compiles for arithmetic types only.
 
   static inline size_t size_of(const value_type& triple) {
-    return T1Traits::size_of(triple.e1()) + T2Traits::size_of(triple.e2()) +
-           T3Traits::size_of(triple.e3());
+    return T1Traits::size_of(triple.e1()) + T2Traits::size_of(triple.e2()) + T3Traits::size_of(triple.e3());
   }
 
   static inline char* copy_to(const value_type& triple, char* buffer) {
@@ -40,14 +38,12 @@ struct value_traits<triple<T1, T2, T3> > {
   }
 
   static inline bool write_to(const value_type& triple, FILE* file) {
-    return T1Traits::write_to(triple.e1(), file) &&
-           T2Traits::write_to(triple.e2(), file) &&
+    return T1Traits::write_to(triple.e1(), file) && T2Traits::write_to(triple.e2(), file) &&
            T3Traits::write_to(triple.e3(), file);
   }
 
   static inline bool read_from(value_type& triple, FILE* file) {
-    return T1Traits::read_from(triple.e1(), file) &&
-           T2Traits::read_from(triple.e2(), file) &&
+    return T1Traits::read_from(triple.e1(), file) && T2Traits::read_from(triple.e2(), file) &&
            T3Traits::read_from(triple.e3(), file);
   }
 
@@ -71,8 +67,7 @@ struct value_traits<triple<T1, T2, T3> > {
   }
 
   static inline std::string type_name() {
-    return T1Traits::type_name() + T2Traits::type_name() +
-           T3Traits::type_name();
+    return T1Traits::type_name() + T2Traits::type_name() + T3Traits::type_name();
   }
 };
 
@@ -108,7 +103,6 @@ std::ostream& operator<<(std::ostream& os, const triple<T1, T2, T3>& value) {
   return os;
 }
 
-} // namespace value
-} // namespace netspeak
+} // namespace netspeak::value
 
 #endif // NETSPEAK_VALUE_TRIPLE_TRAITS_HPP

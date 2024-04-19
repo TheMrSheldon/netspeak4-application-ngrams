@@ -5,13 +5,12 @@
 
 #include <memory>
 
-#include "netspeak/invertedindex/IndexStrategy.hpp"
-#include "netspeak/invertedindex/PostlistBuilder.hpp"
-#include "netspeak/invertedindex/PostlistSorter.hpp"
-#include "netspeak/invertedindex/StorageWriter.hpp"
+#include "IndexStrategy.hpp"
+#include "PostlistBuilder.hpp"
+#include "PostlistSorter.hpp"
+#include "StorageWriter.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 /**
  * This strategy is for building an index from record sequences
@@ -48,12 +47,10 @@ private:
     auto postlist = builder_.build();
     switch (this->config().value_sorting()) {
       case value_sorting_type::ascending:
-        postlist =
-            PostlistSorter<value_type, std::less<value_type> >::sort(*postlist);
+        postlist = PostlistSorter<value_type, std::less<value_type> >::sort(*postlist);
         break;
       case value_sorting_type::descending:
-        postlist = PostlistSorter<value_type, std::greater<value_type> >::sort(
-            *postlist);
+        postlist = PostlistSorter<value_type, std::greater<value_type> >::sort(*postlist);
         break;
       default:;
     }
@@ -67,7 +64,6 @@ private:
   std::string key_;
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_SORTED_INPUT_HPP

@@ -1,15 +1,13 @@
-#include <antlr4/parse.hpp>
-
-#include <sstream>
-#include <vector>
-
-#include <antlr4-runtime.h>
-#include <antlr4/QueryErrorHandler.hpp>
 #include <QueryBaseListener.h>
 #include <QueryLexer.h>
 #include <QueryParser.h>
+#include <antlr4-runtime.h>
 
+#include <antlr4/QueryErrorHandler.hpp>
+#include <antlr4/parse.hpp>
 #include <netspeak/error.hpp>
+#include <sstream>
+#include <vector>
 
 namespace antlr4 {
 using namespace netspeak::model;
@@ -73,8 +71,7 @@ private:
 
   void pop_stack() {
     if (stack_.size() <= 1) {
-      throw netspeak::tracable_logic_error(
-          "Some operation either pushed too little or popped too much.");
+      throw netspeak::tracable_logic_error("Some operation either pushed too little or popped too much.");
     }
     stack_.pop_back();
   }
@@ -95,8 +92,7 @@ public:
   }
   virtual void exitQuery(QueryParser::QueryContext*) override {
     if (stack_.size() != 1) {
-      throw netspeak::tracable_logic_error(
-          "Some operation either pushed too much or popped too little.");
+      throw netspeak::tracable_logic_error("Some operation either pushed too much or popped too little.");
     }
   }
 

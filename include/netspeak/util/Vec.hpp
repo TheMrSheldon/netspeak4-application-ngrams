@@ -4,8 +4,7 @@
 #include <vector>
 
 
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 /**
  * @brief A simple function that appends all elements of \c other to \c base.
@@ -62,8 +61,7 @@ void vec_sorted_filter_dups(std::vector<T>& base) {
   base.erase(base.begin() + write_i);
 }
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 
 #endif

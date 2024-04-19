@@ -9,13 +9,13 @@
 #include <unordered_set>
 #include <vector>
 
-#include "netspeak/Configuration.hpp"
-#include "netspeak/RetrievalStrategy.hpp"
-#include "netspeak/model/NormQuery.hpp"
-#include "netspeak/model/RawRefResult.hpp"
-#include "netspeak/model/SearchOptions.hpp"
-#include "netspeak/util/check.hpp"
-#include "netspeak/util/logging.hpp"
+#include "Configuration.hpp"
+#include "RetrievalStrategy.hpp"
+#include "model/NormQuery.hpp"
+#include "model/RawRefResult.hpp"
+#include "model/SearchOptions.hpp"
+#include "util/check.hpp"
+#include "util/logging.hpp"
 
 namespace netspeak {
 
@@ -41,14 +41,12 @@ private:
    * A comparator function object for comparing ngram references.
    */
   struct equal {
-    bool operator()(const index_entry_type& a,
-                    const index_entry_type& b) const {
+    bool operator()(const index_entry_type& a, const index_entry_type& b) const {
       return traits::equal(a, b);
     }
   };
 
-  typedef std::unordered_set<index_entry_type, hash, equal>
-      intersection_set_type;
+  typedef std::unordered_set<index_entry_type, hash, equal> intersection_set_type;
 
 public:
   void initialize(const Configuration& config) {
@@ -61,16 +59,14 @@ public:
     return strategy_.properties();
   }
 
-  std::shared_ptr<RawRefResult> process(const SearchOptions& options,
-                                        const NormQuery& query) {
+  std::shared_ptr<RawRefResult> process(const SearchOptions& options, const NormQuery& query) {
     auto query_result = std::make_shared<RawRefResult>();
     process_(options, *query_result, query);
     return query_result;
   }
 
 private:
-  void process_(const SearchOptions& options, RawRefResult& query_result,
-                const NormQuery& query) {
+  void process_(const SearchOptions& options, RawRefResult& query_result, const NormQuery& query) {
     std::vector<typename RetrievalStrategyTag::unit_metadata> unit_metadata;
     strategy_.initialize_query(options, query, unit_metadata);
     std::sort(unit_metadata.begin(), unit_metadata.end());
@@ -89,17 +85,15 @@ private:
         if (it == unit_metadata.end() - 1) {
           // ...and the last word
           const stats_type stats(strategy_.initialize_result_set(
-              *it, query, cur_max_phrase_frequency, options.max_phrase_count,
-              std::back_inserter(index_entries)));
+              *it, query, cur_max_phrase_frequency, options.max_phrase_count, std::back_inserter(index_entries)));
           if (!stats.unknown_word.empty()) {
             query_result.unknown_words().push_back(stats.unknown_word);
           }
         } else {
           // ...but not the last word
-          const stats_type stats(strategy_.initialize_result_set(
-              *it, query, cur_max_phrase_frequency,
-              std::numeric_limits<size_t>::max(),
-              std::inserter(*src_set_ptr, src_set_ptr->end())));
+          const stats_type stats(strategy_.initialize_result_set(*it, query, cur_max_phrase_frequency,
+                                                                 std::numeric_limits<size_t>::max(),
+                                                                 std::inserter(*src_set_ptr, src_set_ptr->end())));
           cur_max_phrase_frequency = stats.max_phrase_frequency;
           if (!stats.unknown_word.empty()) {
             query_result.unknown_words().push_back(stats.unknown_word);
@@ -108,18 +102,17 @@ private:
       } else if (it == unit_metadata.end() - 1) {
         // perform last intersection and copy
         // matches directly into final result vector
-        const stats_type stats(strategy_.intersect_result_set(
-            *src_set_ptr, *it, query, cur_max_phrase_frequency,
-            options.max_phrase_count, std::back_inserter(index_entries)));
+        const stats_type stats(strategy_.intersect_result_set(*src_set_ptr, *it, query, cur_max_phrase_frequency,
+                                                              options.max_phrase_count,
+                                                              std::back_inserter(index_entries)));
         if (!stats.unknown_word.empty()) {
           query_result.unknown_words().push_back(stats.unknown_word);
         }
       } else {
         // perform intermediate intersection
-        const stats_type stats(strategy_.intersect_result_set(
-            *src_set_ptr, *it, query, cur_max_phrase_frequency,
-            std::numeric_limits<size_t>::max(),
-            std::inserter(*dst_set_ptr, dst_set_ptr->end())));
+        const stats_type stats(strategy_.intersect_result_set(*src_set_ptr, *it, query, cur_max_phrase_frequency,
+                                                              std::numeric_limits<size_t>::max(),
+                                                              std::inserter(*dst_set_ptr, dst_set_ptr->end())));
         cur_max_phrase_frequency = stats.max_phrase_frequency;
         if (!stats.unknown_word.empty()) {
           query_result.unknown_words().push_back(stats.unknown_word);

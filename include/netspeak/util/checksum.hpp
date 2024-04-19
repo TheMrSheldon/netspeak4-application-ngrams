@@ -9,15 +9,14 @@
 /**
  * Functions to compute string checksums and prime numbers.
  */
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 inline bool is_prime(uint32_t number) {
   if (number == 2)
     return true;
   if (number < 2 || number % 2 == 0)
     return false;
-  for (unsigned i(3); i <= std::sqrt(number); ++++i) {
+  for (unsigned i(3); i <= std::sqrt(number); ++ ++i) {
     if (number % i == 0)
       return false;
   }
@@ -88,7 +87,6 @@ inline uint64_t hash64(const std::string& key) {
   return hash<uint64_t>(key.c_str(), key.size());
 }
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 #endif // NETSPEAK_UTIL_CHECKSUM_HPP

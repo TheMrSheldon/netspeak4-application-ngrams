@@ -4,8 +4,7 @@
 #include <ostream>
 #include <string>
 
-namespace netspeak {
-namespace model {
+namespace netspeak::model {
 
 struct QuerySyntax {
   static const char HASH = '#';
@@ -25,7 +24,6 @@ struct QuerySyntax {
 };
 
 
-} // namespace model
-} // namespace netspeak
+} // namespace netspeak::model
 
 #endif

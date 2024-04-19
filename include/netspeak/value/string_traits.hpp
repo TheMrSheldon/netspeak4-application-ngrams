@@ -8,11 +8,10 @@
 
 #include <boost/algorithm/string/trim.hpp>
 
-#include "netspeak/util/exception.hpp"
-#include "netspeak/value/value_traits.hpp"
+#include "../util/exception.hpp"
+#include "value_traits.hpp"
 
-namespace netspeak {
-namespace value {
+namespace netspeak::value {
 
 // -----------------------------------------------------------------------------
 // The base template is defined in netspeak/value/value_traits.hpp.
@@ -71,8 +70,7 @@ struct value_traits<std::string> {
 
   static inline void print_to(const value_type& value, std::ostream& os) {
     if (value.find(tuple_element_separator) != std::string::npos) {
-      util::throw_invalid_argument(
-          "std::string tuple element contains delimiter character", value);
+      util::throw_invalid_argument("std::string tuple element contains delimiter character", value);
     }
     os << value;
   }
@@ -128,7 +126,6 @@ struct generator<std::string> {
   }
 };
 
-} // namespace value
-} // namespace netspeak
+} // namespace netspeak::value
 
 #endif // NETSPEAK_VALUE_STRING_TRAITS_HPP

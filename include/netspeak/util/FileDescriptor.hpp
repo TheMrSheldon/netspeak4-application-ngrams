@@ -6,8 +6,7 @@
 #include <memory>
 
 
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 /**
  * @brief A managed file descriptor. This is implemented using a shared pointer.
@@ -35,8 +34,7 @@ public:
 };
 
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 
 #endif

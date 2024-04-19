@@ -8,13 +8,12 @@
 
 #include <boost/algorithm/string/trim.hpp>
 
-#include "netspeak/util/exception.hpp"
-#include "netspeak/value/big_string.hpp"
-#include "netspeak/value/string_traits.hpp"
-#include "netspeak/value/value_traits.hpp"
+#include "../util/exception.hpp"
+#include "big_string.hpp"
+#include "string_traits.hpp"
+#include "value_traits.hpp"
 
-namespace netspeak {
-namespace value {
+namespace netspeak::value {
 
 // -----------------------------------------------------------------------------
 // The base template is defined in netspeak/value/value_traits.hpp.
@@ -60,8 +59,7 @@ struct value_traits<big_string> {
 
   static inline bool write_to(const value_type& value, FILE* file) {
     return value_traits<io_size_type>::write_to(value.str.size(), file) &&
-           std::fwrite(value.str.data(), 1, value.str.size(), file) ==
-               value.str.size();
+           std::fwrite(value.str.data(), 1, value.str.size(), file) == value.str.size();
   }
 
   static inline bool read_from(value_type& value, FILE* file) {
@@ -109,7 +107,6 @@ struct generator<big_string> {
   }
 };
 
-} // namespace value
-} // namespace netspeak
+} // namespace netspeak::value
 
 #endif // NETSPEAK_VALUE_BIG_STRING_TRAITS_HPP

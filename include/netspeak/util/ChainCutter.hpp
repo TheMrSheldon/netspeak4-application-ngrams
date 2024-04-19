@@ -6,8 +6,7 @@
 
 #include "netspeak/util/Math.hpp"
 
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 
 /**
@@ -63,8 +62,7 @@ private:
 
 public:
   ChainCutter() = delete;
-  ChainCutter(size_t cuts, size_t length)
-      : cuts_(cuts), length_(length), state_(), output_() {
+  ChainCutter(size_t cuts, size_t length) : cuts_(cuts), length_(length), state_(), output_() {
     // How does this class work?
     //
     // Internally, we represent each unit of the chain with a 0 and each cut
@@ -126,8 +124,7 @@ public:
 };
 
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 
 #endif

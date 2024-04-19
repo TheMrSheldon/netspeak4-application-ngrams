@@ -3,10 +3,9 @@
 #ifndef NETSPEAK_INVERTEDINDEX_RECORD_READER_HPP
 #define NETSPEAK_INVERTEDINDEX_RECORD_READER_HPP
 
-#include "netspeak/invertedindex/Record.hpp"
+#include "Record.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 template <typename T>
 class RecordReader {
@@ -21,7 +20,6 @@ public:
   virtual std::size_t tell() = 0;
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_RECORD_READER_HPP

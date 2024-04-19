@@ -4,19 +4,17 @@
 #define NETSPEAK_INVERTEDINDEX_UNSORTED_INPUT_HPP
 
 #include <cstdio>
+#include <filesystem>
 #include <memory>
 #include <unordered_map>
 
-#include <filesystem>
+#include "../util/checksum.hpp"
+#include "IndexStrategy.hpp"
+#include "PostlistBuilder.hpp"
+#include "PostlistSorter.hpp"
+#include "StorageWriter.hpp"
 
-#include "netspeak/invertedindex/IndexStrategy.hpp"
-#include "netspeak/invertedindex/PostlistBuilder.hpp"
-#include "netspeak/invertedindex/PostlistSorter.hpp"
-#include "netspeak/invertedindex/StorageWriter.hpp"
-#include "netspeak/util/checksum.hpp"
-
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 namespace fs = std::filesystem;
 
@@ -105,14 +103,11 @@ private:
     }
     util::fclose(rfs);
     for (auto it = builders.begin(); it != builders.end(); ++it) {
-      postlists.insert(
-          std::make_pair(it->first, shared_postlist(it->second->build())));
+      postlists.insert(std::make_pair(it->first, shared_postlist(it->second->build())));
     }
   }
 
-  static const std::vector<FILE*> rehash(const fs::path& src_dir,
-                                         const fs::path& des_dir,
-                                         uint32_t num) {
+  static const std::vector<FILE*> rehash(const fs::path& src_dir, const fs::path& des_dir, uint32_t num) {
     assert(fs::is_empty(des_dir));
     // create destination bucket files
     std::vector<FILE*> des_fs(util::next_prime(num));
@@ -144,16 +139,14 @@ private:
     }
   }
 
-  static void store(postlist_map& postlists,
-                    StorageWriter<value_type>& storage) {
+  static void store(postlist_map& postlists, StorageWriter<value_type>& storage) {
     for (auto it(postlists.begin()); it != postlists.end(); ++it) {
       storage.write(it->first, *it->second);
     }
   }
 
   void insert_(const record_type& record) {
-    if (!record.write(
-            bucket_fs_[util::hash32(record.key()) % bucket_fs_.size()])) {
+    if (!record.write(bucket_fs_[util::hash32(record.key()) % bucket_fs_.size()])) {
       util::throw_runtime_error("Cannot write record", record);
     }
     // do rehashing, if the maximal bucket size exceeds
@@ -162,17 +155,12 @@ private:
       if (this->config().expected_record_count() == 0) {
         rehash_(2 * bucket_fs_.size());
       } else {
-        util::log("Expected total number of records",
-                  this->config().expected_record_count());
+        util::log("Expected total number of records", this->config().expected_record_count());
         // estimate the final number of buckets
         // note: division by zero is not possible
-        const double avg_value_size =
-            this->stats().total_size /
-            static_cast<double>(this->stats().value_count);
-        const uint64_t expected_total_size =
-            avg_value_size * this->config().expected_record_count();
-        const size_t new_bucket_count =
-            1 + expected_total_size / max_bucket_size_;
+        const double avg_value_size = this->stats().total_size / static_cast<double>(this->stats().value_count);
+        const uint64_t expected_total_size = avg_value_size * this->config().expected_record_count();
+        const size_t new_bucket_count = 1 + expected_total_size / max_bucket_size_;
         rehash_(std::max(new_bucket_count, 2 * bucket_fs_.size()));
       }
     }
@@ -193,7 +181,6 @@ private:
   uint64_t max_bucket_size_;
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_UNSORTED_INPUT_HPP

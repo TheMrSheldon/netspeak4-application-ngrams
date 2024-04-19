@@ -17,8 +17,7 @@ std::string BuildCommand::desc() {
          "`--merge-duplicates` option.";
 };
 
-void BuildCommand::add_options(
-    boost::program_options::options_description_easy_init& easy_init) {
+void BuildCommand::add_options(boost::program_options::options_description_easy_init& easy_init) {
   easy_init("in,i", bpo::value<std::string>()->required(), "Input directory");
   easy_init("out,o", bpo::value<std::string>()->required(),
             "The output directory (must be empty). If the directory doesn't "
@@ -59,10 +58,8 @@ int BuildCommand::run(boost::program_options::variables_map variables) {
   if (variables.count("merge-duplicates")) {
     // if keys have to be merged and no merge dir was given. Create 'tmp'
     // dir in dst_folder
-    fs::path tmp_dir =
-        variables.count("merge-dir")
-            ? fs::path(variables["merge-dir"].as<std::string>())
-            : output_dir / fs::path("tmp");
+    fs::path tmp_dir = variables.count("merge-dir") ? fs::path(variables["merge-dir"].as<std::string>())
+                                                    : output_dir / fs::path("tmp");
 
     netspeak::MergeDuplicates(input_dir, tmp_dir);
     input_dir = tmp_dir;

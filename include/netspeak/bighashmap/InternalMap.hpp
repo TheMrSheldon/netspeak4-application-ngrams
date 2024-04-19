@@ -5,17 +5,14 @@
 
 #include <string>
 
-#include <boost/filesystem/fstream.hpp>
+#include "../util/checksum.hpp"
+#include "../util/logging.hpp"
+#include "../util/systemio.hpp"
+#include "../value/pair.hpp"
+#include "../value/pair_traits.hpp"
+#include "CmphMap.hpp"
 
-#include "netspeak/bighashmap/CmphMap.hpp"
-#include "netspeak/util/checksum.hpp"
-#include "netspeak/util/logging.hpp"
-#include "netspeak/util/systemio.hpp"
-#include "netspeak/value/pair.hpp"
-#include "netspeak/value/pair_traits.hpp"
-
-namespace netspeak {
-namespace bighashmap {
+namespace netspeak::bighashmap {
 
 namespace fs = std::filesystem;
 
@@ -41,14 +38,11 @@ private:
   typedef value::pair<Checksum, Value> Entry;
   typedef value::value_traits<Entry> EntryTraits;
 
-  InternalMap(const fs::path& mph_file, const fs::path& dat_file)
-      : Base(mph_file) {
+  InternalMap(const fs::path& mph_file, const fs::path& dat_file) : Base(mph_file) {
     const Entry entry;
-    data_ = static_cast<char*>(
-        std::calloc(this->size(), EntryTraits::size_of(entry)));
+    data_ = static_cast<char*>(std::calloc(this->size(), EntryTraits::size_of(entry)));
     if (data_ == NULL) {
-      util::throw_runtime_error("Cannot allocate memory",
-                                this->size() * EntryTraits::size_of(entry));
+      util::throw_runtime_error("Cannot allocate memory", this->size() * EntryTraits::size_of(entry));
     }
     FILE* dat_rfs = util::fopen(dat_file, "rb");
     util::fread(data_, EntryTraits::size_of(entry), this->size(), dat_rfs);
@@ -65,8 +59,7 @@ public:
     std::string dat_file;
     std::getline(ifs, mph_file);
     std::getline(ifs, dat_file);
-    return new InternalMap(idx_file.parent_path() / mph_file,
-                           idx_file.parent_path() / dat_file);
+    return new InternalMap(idx_file.parent_path() / mph_file, idx_file.parent_path() / dat_file);
   }
 
   bool Get(const std::string& key, Value& value) {
@@ -90,7 +83,6 @@ private:
   char* data_;
 };
 
-} // namespace bighashmap
-} // namespace netspeak
+} // namespace netspeak::bighashmap
 
 #endif // NETSPEAK_BIGHASHMAP_INTERNAL_MAP_HPP

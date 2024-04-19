@@ -4,12 +4,11 @@
 #include <string>
 #include <vector>
 
-#include "netspeak/model/LengthRange.hpp"
-#include "netspeak/model/NormQuery.hpp"
-#include "netspeak/model/Query.hpp"
+#include "LengthRange.hpp"
+#include "NormQuery.hpp"
+#include "Query.hpp"
 
-namespace netspeak {
-namespace model {
+namespace netspeak::model {
 
 class SimpleQueryUnit__ {
 public:
@@ -41,8 +40,7 @@ public:
   SimpleQueryUnit__(SimpleQueryUnit__&&) = default;
   SimpleQueryUnit__& operator=(SimpleQueryUnit__&& other) = default;
 
-  SimpleQueryUnit__(Tag tag, const Text& text, const Source& source)
-      : tag_(tag), text_(text), source_(source){};
+  SimpleQueryUnit__(Tag tag, const Text& text, const Source& source) : tag_(tag), text_(text), source_(source){};
 
   static Unit new_word(const Text& text, const Source& source);
   static Unit new_regex(const Text& text, const Source& source);
@@ -93,8 +91,7 @@ public:
 };
 
 bool operator==(const SimpleQueryUnit__& lhs, const SimpleQueryUnit__& rhs);
-inline bool operator!=(const SimpleQueryUnit__& lhs,
-                       const SimpleQueryUnit__& rhs) {
+inline bool operator!=(const SimpleQueryUnit__& lhs, const SimpleQueryUnit__& rhs) {
   return !operator==(lhs, rhs);
 }
 
@@ -131,8 +128,7 @@ std::ostream& operator<<(std::ostream& out, const SimpleQuery::Unit& unit);
 std::ostream& operator<<(std::ostream& out, const SimpleQuery& query);
 
 
-} // namespace model
-} // namespace netspeak
+} // namespace netspeak::model
 
 
 #endif

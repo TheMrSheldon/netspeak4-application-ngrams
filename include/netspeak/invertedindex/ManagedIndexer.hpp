@@ -3,16 +3,15 @@
 #ifndef NETSPEAK_INVERTEDINDEX_MANAGED_INDEXER_HPP
 #define NETSPEAK_INVERTEDINDEX_MANAGED_INDEXER_HPP
 
-#include <boost/filesystem/fstream.hpp>
+#include <fstream>
 
-#include "netspeak/invertedindex/Indexer.hpp"
-#include "netspeak/invertedindex/InvertedFileReader.hpp"
-#include "netspeak/invertedindex/Properties.hpp"
-#include "netspeak/invertedindex/Record.hpp"
-#include "netspeak/util/exception.hpp"
+#include "../util/exception.hpp"
+#include "Indexer.hpp"
+#include "InvertedFileReader.hpp"
+#include "Properties.hpp"
+#include "Record.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 namespace fs = std::filesystem;
 
@@ -45,10 +44,8 @@ public:
             if (!(++current_record_count % 10000000)) {
               // Estimate the total number of records.
               const double avg_record_size =
-                  (current_input_size + reader.tell()) /
-                  static_cast<double>(current_record_count);
-              const uint64_t total_record_count =
-                  total_input_size / avg_record_size;
+                  (current_input_size + reader.tell()) / static_cast<double>(current_record_count);
+              const uint64_t total_record_count = total_input_size / avg_record_size;
               indexer.set_expected_record_count(total_record_count);
             }
           } catch (std::exception& e) {
@@ -61,8 +58,7 @@ public:
 
     IndexerType indexer(config);
     if (!config.input_file().empty() && !config.input_directory().empty()) {
-      util::throw_invalid_argument(
-          "Specify either an input file or a directory, not both");
+      util::throw_invalid_argument("Specify either an input file or a directory, not both");
     }
     if (!config.input_file().empty()) {
       const fs::path input_file = config.input_file();
@@ -94,7 +90,6 @@ public:
   }
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_MANAGED_INDEXER_HPP

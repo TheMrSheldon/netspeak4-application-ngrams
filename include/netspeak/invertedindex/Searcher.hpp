@@ -5,12 +5,11 @@
 
 #include <filesystem>
 
-#include "netspeak/invertedindex/Postlist.hpp"
-#include "netspeak/invertedindex/RawSearcher.hpp"
-#include "netspeak/invertedindex/StorageReader.hpp"
+#include "Postlist.hpp"
+#include "RawSearcher.hpp"
+#include "StorageReader.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 /**
  * A class to search an inverted index.
@@ -43,9 +42,8 @@ public:
     config_ = config;
 
     // load properties
-    const std::filesystem::path filename(
-        std::filesystem::path(config.index_directory()) /
-        Properties::default_filename());
+    const std::filesystem::path filename(std::filesystem::path(config.index_directory()) /
+                                         Properties::default_filename());
     FILE* rfs(util::fopen(filename, "rb"));
     util::fread(&props_, sizeof(props_), 1, rfs);
     util::fclose(rfs);
@@ -73,9 +71,8 @@ public:
    * returned. Otherwise, if no mapping exists at all NULL will be returned
    * to indicate that case.
    */
-  std::unique_ptr<Postlist<Value> > search_postlist(
-      const std::string& key, uint32_t begin = 0,
-      uint32_t length = std::numeric_limits<uint32_t>::max()) {
+  std::unique_ptr<Postlist<Value> > search_postlist(const std::string& key, uint32_t begin = 0,
+                                                    uint32_t length = std::numeric_limits<uint32_t>::max()) {
     std::unique_ptr<Postlist<Value> > plist;
     try {
       plist = storage_.ReadPostlist(key, begin, length);
@@ -87,8 +84,7 @@ public:
     return plist;
   }
 
-  virtual std::unique_ptr<RawPostlist> search_raw_postlist(
-      const std::string& key, uint32_t begin, uint32_t len) {
+  virtual std::unique_ptr<RawPostlist> search_raw_postlist(const std::string& key, uint32_t begin, uint32_t len) {
     auto plist = search_postlist(key, begin, len);
     return std::unique_ptr<RawPostlist>(plist.release());
   }
@@ -105,10 +101,8 @@ private:
   static void assert_properties(const Properties& properties) {
     if (properties.version_number != Properties::k_version_number) {
       std::ostringstream oss;
-      oss << "The version number of the index you want load is "
-          << properties.version_number
-          << ", but your installed library is of different version "
-          << Properties::k_version_number
+      oss << "The version number of the index you want load is " << properties.version_number
+          << ", but your installed library is of different version " << Properties::k_version_number
           << ". Please install the correct library.";
       util::throw_domain_error("Version conflict", oss.str());
     }
@@ -117,10 +111,8 @@ private:
     const std::string tn(value::value_traits<Value>::type_name());
     if (tn != std::string(properties.value_type)) {
       std::ostringstream oss;
-      oss << "The value type of the index you want load is "
-          << properties.value_type
-          << ", but your value type parameterization is " << tn
-          << ". Please reload with the correct value type.";
+      oss << "The value type of the index you want load is " << properties.value_type
+          << ", but your value type parameterization is " << tn << ". Please reload with the correct value type.";
       util::throw_domain_error("Wrong value type", oss.str());
     }
   }
@@ -130,7 +122,6 @@ private:
   StorageReader<Value, ThreadSafe> storage_;
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_SEARCHER_HPP

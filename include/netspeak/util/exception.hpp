@@ -11,8 +11,7 @@
  * Functions that provide an interface to throw C++ standard exceptions
  * attached with exception-dependent messages and optional user information.
  */
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 template <typename T>
 inline std::string format(const std::string& msg, const T& value) {
@@ -75,7 +74,6 @@ inline void throw_invalid_argument(const std::string& msg) {
   throw std::invalid_argument(msg);
 }
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 #endif // NETSPEAK_UTIL_EXCEPTION_HPP

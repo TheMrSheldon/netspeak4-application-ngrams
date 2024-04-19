@@ -1,16 +1,13 @@
+#include <antlr4/parse.hpp>
 #include <iostream>
+#include <netspeak/error.hpp>
+#include <netspeak/model/Query.hpp>
 #include <sstream>
 
 #include <boost/test/unit_test.hpp>
 
-#include <antlr4/parse.hpp>
 
-#include <netspeak/error.hpp>
-#include <netspeak/model/Query.hpp>
-
-
-namespace netspeak {
-namespace regex {
+namespace netspeak::regex {
 
 std::string remove_spaces(const std::string& str) {
   std::string new_str;
@@ -51,75 +48,42 @@ BOOST_AUTO_TEST_CASE(test_parse_query) {
   ASSERT_QUERY("", Query(Alternation{ Concat{} }));
   ASSERT_QUERY("   ", Query(Alternation{ Concat{} }));
   ASSERT_QUERY("abc", Query(Alternation{ Concat{ Word("abc") } }));
-  ASSERT_QUERY("abc def",
-               Query(Alternation{ Concat{ Word("abc"), Word("def") } }));
-  ASSERT_QUERY("  abc   Def  ",
-               Query(Alternation{ Concat{ Word("abc"), Word("Def") } }));
+  ASSERT_QUERY("abc def", Query(Alternation{ Concat{ Word("abc"), Word("def") } }));
+  ASSERT_QUERY("  abc   Def  ", Query(Alternation{ Concat{ Word("abc"), Word("Def") } }));
 
   // wild cards
-  ASSERT_QUERY("abc ? def",
-               Query(Alternation{ Concat{ Word("abc"), QMark, Word("def") } }));
-  ASSERT_QUERY(
-      "abc ? def *",
-      Query(Alternation{ Concat{ Word("abc"), QMark, Word("def"), Star } }));
-  ASSERT_QUERY("abc ? def * * *",
-               Query(Alternation{ Concat{ Word("abc"), QMark, Word("def"), Star,
-                                          Star, Star } }));
-  ASSERT_QUERY(
-      "abc ? def +",
-      Query(Alternation{ Concat{ Word("abc"), QMark, Word("def"), Plus } }));
-  ASSERT_QUERY(
-      "abc ? def ..",
-      Query(Alternation{ Concat{ Word("abc"), QMark, Word("def"), Star } }));
-  ASSERT_QUERY(
-      "abc ? def ...",
-      Query(Alternation{ Concat{ Word("abc"), QMark, Word("def"), Star } }));
-  ASSERT_QUERY(
-      "abc ? def ....",
-      Query(Alternation{ Concat{ Word("abc"), QMark, Word("def"), Star } }));
+  ASSERT_QUERY("abc ? def", Query(Alternation{ Concat{ Word("abc"), QMark, Word("def") } }));
+  ASSERT_QUERY("abc ? def *", Query(Alternation{ Concat{ Word("abc"), QMark, Word("def"), Star } }));
+  ASSERT_QUERY("abc ? def * * *", Query(Alternation{ Concat{ Word("abc"), QMark, Word("def"), Star, Star, Star } }));
+  ASSERT_QUERY("abc ? def +", Query(Alternation{ Concat{ Word("abc"), QMark, Word("def"), Plus } }));
+  ASSERT_QUERY("abc ? def ..", Query(Alternation{ Concat{ Word("abc"), QMark, Word("def"), Star } }));
+  ASSERT_QUERY("abc ? def ...", Query(Alternation{ Concat{ Word("abc"), QMark, Word("def"), Star } }));
+  ASSERT_QUERY("abc ? def ....", Query(Alternation{ Concat{ Word("abc"), QMark, Word("def"), Star } }));
 
   // option set
-  ASSERT_QUERY("abc [ ]",
-               Query(Alternation{ Concat{ Word("abc"), OptionSet{} } }));
-  ASSERT_QUERY(
-      "abc [ foo ]",
-      Query(Alternation{ Concat{ Word("abc"), OptionSet{ Word("foo") } } }));
-  ASSERT_QUERY("abc [ foo bar ]",
-               Query(Alternation{ Concat{
-                   Word("abc"), OptionSet{ Word("foo"), Word("bar") } } }));
+  ASSERT_QUERY("abc [ ]", Query(Alternation{ Concat{ Word("abc"), OptionSet{} } }));
+  ASSERT_QUERY("abc [ foo ]", Query(Alternation{ Concat{ Word("abc"), OptionSet{ Word("foo") } } }));
+  ASSERT_QUERY("abc [ foo bar ]", Query(Alternation{ Concat{ Word("abc"), OptionSet{ Word("foo"), Word("bar") } } }));
   ASSERT_QUERY(
       "abc [ foo \"bar baz\" ]",
-      Query(Alternation{ Concat{
-          Word("abc"),
-          OptionSet{ Word("foo"), Concat{ Word("bar"), Word("baz") } } } }));
+      Query(Alternation{ Concat{ Word("abc"), OptionSet{ Word("foo"), Concat{ Word("bar"), Word("baz") } } } }));
   ASSERT_INCORRECT_QUERY("abc { foo ? }");
 
   // order set
-  ASSERT_QUERY("abc { }",
-               Query(Alternation{ Concat{ Word("abc"), OrderSet{} } }));
-  ASSERT_QUERY(
-      "abc { foo }",
-      Query(Alternation{ Concat{ Word("abc"), OrderSet{ Word("foo") } } }));
-  ASSERT_QUERY("abc { foo bar }",
-               Query(Alternation{ Concat{
-                   Word("abc"), OrderSet{ Word("foo"), Word("bar") } } }));
+  ASSERT_QUERY("abc { }", Query(Alternation{ Concat{ Word("abc"), OrderSet{} } }));
+  ASSERT_QUERY("abc { foo }", Query(Alternation{ Concat{ Word("abc"), OrderSet{ Word("foo") } } }));
+  ASSERT_QUERY("abc { foo bar }", Query(Alternation{ Concat{ Word("abc"), OrderSet{ Word("foo"), Word("bar") } } }));
   ASSERT_QUERY(
       "abc { foo \"bar baz\" }",
-      Query(Alternation{ Concat{
-          Word("abc"),
-          OrderSet{ Word("foo"), Concat{ Word("bar"), Word("baz") } } } }));
+      Query(Alternation{ Concat{ Word("abc"), OrderSet{ Word("foo"), Concat{ Word("bar"), Word("baz") } } } }));
   ASSERT_INCORRECT_QUERY("abc { foo ? }");
 
   // alternation set
-  ASSERT_QUERY("abc | def", Query(Alternation{ Concat{ Word("abc") },
-                                               Concat{ Word("def") } }));
-  ASSERT_QUERY("abc * | * def *",
-               Query(Alternation{ Concat{ Word("abc"), Star },
-                                  Concat{ Star, Word("def"), Star } }));
+  ASSERT_QUERY("abc | def", Query(Alternation{ Concat{ Word("abc") }, Concat{ Word("def") } }));
+  ASSERT_QUERY("abc * | * def *", Query(Alternation{ Concat{ Word("abc"), Star }, Concat{ Star, Word("def"), Star } }));
 
   // dictionary
-  ASSERT_QUERY("abc #def",
-               Query(Alternation{ Concat{ Word("abc"), DictSet("def") } }));
+  ASSERT_QUERY("abc #def", Query(Alternation{ Concat{ Word("abc"), DictSet("def") } }));
   ASSERT_INCORRECT_QUERY("abc #");
   ASSERT_INCORRECT_QUERY("abc #?");
   ASSERT_INCORRECT_QUERY("abc #+");
@@ -130,12 +94,9 @@ BOOST_AUTO_TEST_CASE(test_parse_query) {
   // regex
   ASSERT_QUERY("**", Query(Alternation{ Concat{ Regex("**") } }));
   ASSERT_QUERY("*?+...", Query(Alternation{ Concat{ Regex("*?+...") } }));
-  ASSERT_QUERY("abc? ?def..",
-               Query(Alternation{ Concat{ Regex("abc?"), Regex("?def..") } }));
-  ASSERT_QUERY("[ abc? ?def.. ]", Query(Alternation{ Concat{ OptionSet{
-                                      Regex("abc?"), Regex("?def..") } } }));
-  ASSERT_QUERY("{ abc? ?def.. }", Query(Alternation{ Concat{ OrderSet{
-                                      Regex("abc?"), Regex("?def..") } } }));
+  ASSERT_QUERY("abc? ?def..", Query(Alternation{ Concat{ Regex("abc?"), Regex("?def..") } }));
+  ASSERT_QUERY("[ abc? ?def.. ]", Query(Alternation{ Concat{ OptionSet{ Regex("abc?"), Regex("?def..") } } }));
+  ASSERT_QUERY("{ abc? ?def.. }", Query(Alternation{ Concat{ OrderSet{ Regex("abc?"), Regex("?def..") } } }));
 }
 
 BOOST_AUTO_TEST_CASE(test_too_long_query) {
@@ -144,5 +105,4 @@ BOOST_AUTO_TEST_CASE(test_too_long_query) {
 
 BOOST_AUTO_TEST_SUITE_END()
 
-} // namespace regex
-} // namespace netspeak
+} // namespace netspeak::regex

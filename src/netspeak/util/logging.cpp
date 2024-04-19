@@ -1,12 +1,10 @@
-#include <netspeak/util/logging.hpp>
-
 #include <cstdarg>
 #include <ctime>
 #include <memory>
 #include <mutex>
+#include <netspeak/util/logging.hpp>
 
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 
 static std::mutex log_mutex;
@@ -32,10 +30,7 @@ void log(const std::string& msg) {
 }
 void log(const char* file, int line, const char* msg) {
   std::lock_guard<std::mutex> guard(get_log_mutex());
-  print_timestamp_to(std::cout)
-      << ' ' << file << ':' << line << ' ' << msg << std::endl;
+  print_timestamp_to(std::cout) << ' ' << file << ':' << line << ' ' << msg << std::endl;
 }
 
-
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util

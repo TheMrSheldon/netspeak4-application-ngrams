@@ -11,8 +11,7 @@
 #include <vector>
 
 
-namespace netspeak {
-namespace util {
+namespace netspeak::util {
 
 /**
  * A simple and fast object cache with LFU policy.
@@ -32,8 +31,7 @@ private:
   typedef std::pair<typename storage_type::iterator, bool> insert_result;
 
   struct greater {
-    bool operator()(const key_priority_pair* lhs,
-                    const key_priority_pair* rhs) {
+    bool operator()(const key_priority_pair* lhs, const key_priority_pair* rhs) {
       return lhs->second > rhs->second;
     }
   };
@@ -41,8 +39,7 @@ private:
 public:
   typedef typename storage_type::const_iterator const_iterator;
 
-  explicit LfuCache(size_t capacity = 0)
-      : storage_(capacity), acc_count_(0), hit_count_(0) {
+  explicit LfuCache(size_t capacity = 0) : storage_(capacity), acc_count_(0), hit_count_(0) {
     policy_.reserve(capacity);
   }
   LfuCache(const LfuCache&) = delete;
@@ -66,8 +63,7 @@ public:
     return acc_count_ == 0 ? 0 : static_cast<double>(hit_count_) / acc_count_;
   }
 
-  std::ostream& list(std::ostream& os,
-                     size_t n = std::numeric_limits<size_t>::max()) const {
+  std::ostream& list(std::ostream& os, size_t n = std::numeric_limits<size_t>::max()) const {
     policy_type sorted_policy(policy_);
     std::sort_heap(sorted_policy.begin(), sorted_policy.end(), greater());
     for (unsigned i(0); i != sorted_policy.size() && i != n; ++i) {
@@ -88,7 +84,7 @@ public:
       return false;
     std::lock_guard<std::mutex> lg(mutex_);
     const insert_result result(insert_(key, value));
-    if (!result.second) { // overwrite old value and reset priority
+    if (!result.second) {                      // overwrite old value and reset priority
       result.first->second.first = value;      // overwrite value
       result.first->second.second->second = 1; // overwrite priority
       std::make_heap(policy_.begin(), policy_.end(), greater());
@@ -119,7 +115,7 @@ public:
     std::lock_guard<std::mutex> lg(mutex_);
     typename storage_type::iterator it(storage_.find(key));
     if (it != storage_.end()) {
-      it->second.second->second = 0; // set priority to minimum
+      it->second.second->second = 0;                             // set priority to minimum
       std::make_heap(policy_.begin(), policy_.end(), greater()); // bubble
       remove_top_();
     }
@@ -156,8 +152,7 @@ public:
 
 private:
   // Lock mutex before calling these methods
-  const insert_result insert_(const key_type& key,
-                              const std::shared_ptr<value_type>& value) {
+  const insert_result insert_(const key_type& key, const std::shared_ptr<value_type>& value) {
     const entry_type entry(value, static_cast<key_priority_pair*>(NULL));
     insert_result result(storage_.insert(std::make_pair(key, entry)));
     if (result.second) { // The key-value pair was inserted
@@ -190,7 +185,6 @@ private:
 };
 
 
-} // namespace util
-} // namespace netspeak
+} // namespace netspeak::util
 
 #endif // NETSPEAK_LFU_CACHE_HPP

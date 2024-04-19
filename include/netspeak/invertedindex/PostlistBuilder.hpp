@@ -9,13 +9,12 @@
 
 #include <boost/utility.hpp>
 
-#include "netspeak/invertedindex/Iterator.hpp"
-#include "netspeak/invertedindex/Postlist.hpp"
-#include "netspeak/util/exception.hpp"
-#include "netspeak/util/logging.hpp"
+#include "../util/exception.hpp"
+#include "../util/logging.hpp"
+#include "Iterator.hpp"
+#include "Postlist.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 /**
  * A class to build postlists.
@@ -31,8 +30,7 @@ private:
   typedef std::vector<uint32_t> size_vector;
 
 public:
-  explicit PostlistBuilder(size_t page_size = 10 * 1024 * 1024)
-      : page_size_(page_size), mem_usage_(0) {}
+  explicit PostlistBuilder(size_t page_size = 10 * 1024 * 1024) : page_size_(page_size), mem_usage_(0) {}
 
   ~PostlistBuilder() {}
 
@@ -55,9 +53,8 @@ public:
     if (has_swap_()) {
       util::rewind(swap_.stream_);
       swap_.pagesize_ = page_size_;
-      postlist.reset((head_.value_size == 0)
-                         ? new Postlist<value_type>(head_, swap_, sizes_)
-                         : new Postlist<value_type>(head_, swap_));
+      postlist.reset((head_.value_size == 0) ? new Postlist<value_type>(head_, swap_, sizes_)
+                                             : new Postlist<value_type>(head_, swap_));
       swap_.stream_ = NULL; // postlist gets file stream ownership
     } else {
       page_type page(head_.total_size);
@@ -67,9 +64,8 @@ public:
         util::throw_runtime_error("ByteBuffer::put failed", *it);
       }
       assert(page.buffer_.position() == page.buffer_.end());
-      postlist.reset((head_.value_size == 0)
-                         ? new Postlist<value_type>(head_, page, sizes_)
-                         : new Postlist<value_type>(head_, page));
+      postlist.reset((head_.value_size == 0) ? new Postlist<value_type>(head_, page, sizes_)
+                                             : new Postlist<value_type>(head_, page));
     }
     clear();
     return postlist;
@@ -120,7 +116,6 @@ private:
   swap_type swap_;
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_POSTLIST_BUILDER_HPP

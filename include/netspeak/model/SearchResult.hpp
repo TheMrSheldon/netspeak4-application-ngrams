@@ -8,8 +8,7 @@
 #include "netspeak/model/Phrase.hpp"
 
 
-namespace netspeak {
-namespace model {
+namespace netspeak::model {
 
 
 class SearchResult {
@@ -19,8 +18,7 @@ public:
     Phrase phrase;
 
     Item() = delete;
-    Item(const std::shared_ptr<const NormQuery>& query, const Phrase& phrase)
-        : query(query), phrase(phrase) {}
+    Item(const std::shared_ptr<const NormQuery>& query, const Phrase& phrase) : query(query), phrase(phrase) {}
 
     inline bool operator==(const Item& rhs) const {
       return phrase == rhs.phrase;
@@ -66,8 +64,7 @@ public:
 };
 
 
-} // namespace model
-} // namespace netspeak
+} // namespace netspeak::model
 
 
 #endif

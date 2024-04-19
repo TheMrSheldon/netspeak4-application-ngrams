@@ -6,18 +6,17 @@
 #include <istream>
 #include <string>
 
-#include "netspeak/invertedindex/RecordReader.hpp"
-#include "netspeak/util/exception.hpp"
-#include "netspeak/value/big_string_traits.hpp"
-#include "netspeak/value/pair_traits.hpp"
-#include "netspeak/value/quadruple_traits.hpp"
-#include "netspeak/value/quintuple_traits.hpp"
-#include "netspeak/value/sextuple_traits.hpp"
-#include "netspeak/value/string_traits.hpp"
-#include "netspeak/value/triple_traits.hpp"
+#include "../util/exception.hpp"
+#include "../value/big_string_traits.hpp"
+#include "../value/pair_traits.hpp"
+#include "../value/quadruple_traits.hpp"
+#include "../value/quintuple_traits.hpp"
+#include "../value/sextuple_traits.hpp"
+#include "../value/string_traits.hpp"
+#include "../value/triple_traits.hpp"
+#include "RecordReader.hpp"
 
-namespace netspeak {
-namespace invertedindex {
+namespace netspeak::invertedindex {
 
 template <typename T>
 class InvertedFileReader : public RecordReader<T> {
@@ -57,8 +56,7 @@ public:
         }
       }
     } catch (std::exception& e) {
-      util::throw_runtime_error(std::string(e.what()) +
-                                " Line: " + std::to_string(num_lines_));
+      util::throw_runtime_error(std::string(e.what()) + " Line: " + std::to_string(num_lines_));
     }
     return false;
   }
@@ -73,7 +71,6 @@ private:
   std::size_t num_lines_;
 };
 
-} // namespace invertedindex
-} // namespace netspeak
+} // namespace netspeak::invertedindex
 
 #endif // NETSPEAK_INVERTEDINDEX_INVERTED_FILE_READER_HPP

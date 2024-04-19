@@ -1,11 +1,11 @@
 #ifndef NETSPEAK_MODEL_LENGTH_RANGE_HPP
 #define NETSPEAK_MODEL_LENGTH_RANGE_HPP
 
-#include <ostream>
 #include <inttypes.h>
 
-namespace netspeak {
-namespace model {
+#include <ostream>
+
+namespace netspeak::model {
 
 
 /**
@@ -71,8 +71,7 @@ LengthRange operator|(const LengthRange& lhs, const LengthRange& rhs);
 std::ostream& operator<<(std::ostream& out, const LengthRange& range);
 
 
-} // namespace model
-} // namespace netspeak
+} // namespace netspeak::model
 
 
 #endif

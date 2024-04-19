@@ -6,23 +6,21 @@
 #include <cmph.h>
 
 #include <cstdio>
+#include <filesystem>
+#include <fstream>
 #include <string>
 #include <vector>
 
-#include <filesystem>
-#include <boost/filesystem/fstream.hpp>
+#include "../util/checksum.hpp"
+#include "../util/conversion.hpp"
+#include "../util/exception.hpp"
+#include "../util/logging.hpp"
+#include "../util/systemio.hpp"
+#include "../value/pair.hpp"
+#include "../value/value_traits.hpp"
+#include "CmphMap.hpp"
 
-#include "netspeak/bighashmap/CmphMap.hpp"
-#include "netspeak/util/checksum.hpp"
-#include "netspeak/util/conversion.hpp"
-#include "netspeak/util/exception.hpp"
-#include "netspeak/util/logging.hpp"
-#include "netspeak/util/systemio.hpp"
-#include "netspeak/value/pair.hpp"
-#include "netspeak/value/value_traits.hpp"
-
-namespace netspeak {
-namespace bighashmap {
+namespace netspeak::bighashmap {
 
 namespace fs = std::filesystem;
 
@@ -40,8 +38,7 @@ public:
 
   Builder() = delete;
 
-  static void Build(const fs::path& input_dir, const fs::path& output_dir,
-                    Algorithm algorithm = Algorithm::BDZ) {
+  static void Build(const fs::path& input_dir, const fs::path& output_dir, Algorithm algorithm = Algorithm::BDZ) {
     if (!fs::exists(output_dir)) {
       util::throw_runtime_error("Does not exist", output_dir.string());
     }
@@ -50,8 +47,7 @@ public:
     }
 
     if (!fs::exists(input_dir)) {
-      util::throw_runtime_error("Input directory does exist",
-                                input_dir.string());
+      util::throw_runtime_error("Input directory does exist", input_dir.string());
     }
 
     util::log("Performing key space partitioning on input files");
@@ -76,8 +72,7 @@ public:
 private:
   static bool IsUnique(const fs::path& key_file) {
     // Set current locale to C to enable byte-wise UTF-8 string comparison.
-    const std::string command =
-        "export LC_ALL=C && sort " + key_file.string() + " | uniq -d";
+    const std::string command = "export LC_ALL=C && sort " + key_file.string() + " | uniq -d";
     FILE* file = popen(command.c_str(), "r");
     if (file == NULL) {
       util::throw_runtime_error("Cannot access the result of ", command);
@@ -99,8 +94,7 @@ private:
    * Generates a minimal perfect hash function from the given key file.
    * Note that the entire key file will be loaded into memory.
    */
-  static fs::path BuildHashFunction(const fs::path& key_file,
-                                     Algorithm algorithm) {
+  static fs::path BuildHashFunction(const fs::path& key_file, Algorithm algorithm) {
     if (!IsUnique(key_file)) {
       util::throw_runtime_error("Keys are not unique");
     }
@@ -123,8 +117,7 @@ private:
     return mph_fn;
   }
 
-  static fs::path BuildHashTable(const fs::path& mph_file,
-                                  const fs::path& rec_file) {
+  static fs::path BuildHashTable(const fs::path& mph_file, const fs::path& rec_file) {
     FILE* mph_rfs(util::fopen(mph_file, "rb"));
     cmph_t* mph(cmph_load(mph_rfs));
     if (mph == NULL) {
@@ -184,8 +177,7 @@ private:
     if (!ofs) {
       util::throw_runtime_error("Cannot create", idx_file);
     }
-    ofs << mph_file.filename().string() << '\n'
-        << dat_file.filename().string() << std::endl;
+    ofs << mph_file.filename().string() << '\n' << dat_file.filename().string() << std::endl;
     ofs.close();
     fs::remove(key_file);
     return idx_file;
@@ -222,8 +214,7 @@ private:
     uint64_t record_count(0);
     fs::directory_iterator end;
     for (fs::directory_iterator it(input_dir); it != end; ++it) {
-      if (fs::is_regular_file(it->path()) &&
-          !util::is_hidden_file(it->path())) {
+      if (fs::is_regular_file(it->path()) && !util::is_hidden_file(it->path())) {
         ifs.open(it->path());
         if (!ifs) {
           util::throw_runtime_error("Cannot open", it->path());
@@ -238,8 +229,7 @@ private:
     return record_count;
   }
 
-  static std::vector<fs::path> Partition(const fs::path& input_dir,
-                                          const fs::path& output_dir) {
+  static std::vector<fs::path> Partition(const fs::path& input_dir, const fs::path& output_dir) {
     const uint32_t num_records_per_hashmap = 10000000;
     const uint64_t num_records_total = CountRecords(input_dir);
     const uint32_t num_maps = 1 + num_records_total / num_records_per_hashmap;
@@ -249,8 +239,7 @@ private:
     std::vector<std::ofstream*> rec_files;
     for (std::size_t i = 0; i != num_maps; ++i) {
       const auto new_suffix = '.' + std::to_string(i);
-      const auto new_filename =
-          input_dir.filename().replace_extension(fs::path(new_suffix));
+      const auto new_filename = input_dir.filename().replace_extension(fs::path(new_suffix));
       rec_paths.push_back(output_dir / new_filename);
       rec_files.push_back(new std::ofstream(rec_paths.back()));
       if (!rec_files.back()->is_open()) {
@@ -264,8 +253,7 @@ private:
     fs::directory_iterator end;
     std::string::size_type delim;
     for (fs::directory_iterator it(input_dir); it != end; ++it) {
-      if (fs::is_regular_file(it->path()) &&
-          !util::is_hidden_file(it->path())) {
+      if (fs::is_regular_file(it->path()) && !util::is_hidden_file(it->path())) {
         ifs.open(it->path());
         if (!ifs) {
           util::throw_runtime_error("Cannot open", it->path());
@@ -293,7 +281,6 @@ private:
 template <typename ValueT, typename Traits>
 const std::string Builder<ValueT, Traits>::index_file_name("map.idx");
 
-} // namespace bighashmap
-} // namespace netspeak
+} // namespace netspeak::bighashmap
 
 #endif // NETSPEAK_BIGHASHMAP_BUILDER_HPP

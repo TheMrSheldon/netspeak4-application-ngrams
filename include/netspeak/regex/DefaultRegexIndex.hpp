@@ -10,12 +10,11 @@
 
 #include <boost/regex.hpp>
 
-#include "netspeak/regex/RegexIndex.hpp"
-#include "netspeak/regex/RegexQuery.hpp"
+#include "RegexIndex.hpp"
+#include "RegexQuery.hpp"
 
 
-namespace netspeak {
-namespace regex {
+namespace netspeak::regex {
 
 class DefaultRegexIndex : public RegexIndex {
 public: // types
@@ -83,13 +82,9 @@ private: // functions
    */
   RegexQuery optimize_query(const RegexQuery& query) const;
 
-  void match_query_hash_lookup(const RegexQuery& query,
-                               std::vector<std::string>& matches,
-                               uint32_t max_matches) const;
+  void match_query_hash_lookup(const RegexQuery& query, std::vector<std::string>& matches, uint32_t max_matches) const;
 
-  void match_query_regex(const RegexQuery& query,
-                         std::vector<std::string>& matches,
-                         uint32_t max_matches,
+  void match_query_regex(const RegexQuery& query, std::vector<std::string>& matches, uint32_t max_matches,
                          std::chrono::nanoseconds timeout) const;
 
 public:
@@ -118,12 +113,10 @@ public:
    * @param timeout The amount of time after which the search for more words
    * will be aborted.
    */
-  void match_query(const RegexQuery& query, std::vector<std::string>& matches,
-                   uint32_t max_matches,
+  void match_query(const RegexQuery& query, std::vector<std::string>& matches, uint32_t max_matches,
                    std::chrono::nanoseconds timeout) const override;
 };
 
-} // namespace regex
-} // namespace netspeak
+} // namespace netspeak::regex
 
 #endif // NETSPEAK_REGEX_DEFAULT_REGEX_INDEX_HPP

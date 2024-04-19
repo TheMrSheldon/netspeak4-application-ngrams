@@ -8,8 +8,9 @@
 #include <string>
 #include <type_traits>
 
-namespace netspeak {
-namespace value {
+#include "../util/exception.hpp"
+
+namespace netspeak::value {
 
 // -----------------------------------------------------------------------------
 // Template specializations to obtain the name of some primitive type.
@@ -113,8 +114,7 @@ static const char tuple_element_separator = '\t';
 
 template <typename T>
 struct value_traits {
-  typedef
-      typename std::enable_if<std::is_arithmetic<T>::value, T>::type value_type;
+  typedef typename std::enable_if<std::is_arithmetic<T>::value, T>::type value_type;
   typedef uint16_t io_size_type; // not needed for types with constant size
 
   static constexpr std::size_t ByteSize() {
@@ -159,8 +159,7 @@ struct value_traits {
   static inline void parse_from(value_type& value, std::istream& is) {
     is >> value;
     if (is.fail()) {
-      util::throw_runtime_error("Reading next " + std::string(type_name()) +
-                                " from input stream failed.");
+      util::throw_runtime_error("Reading next " + std::string(type_name()) + " from input stream failed.");
     }
     if (is.peek() == tuple_element_separator)
       is.get();
@@ -188,7 +187,6 @@ struct generator {
   }
 };
 
-} // namespace value
-} // namespace netspeak
+} // namespace netspeak::value
 
 #endif // NETSPEAK_VALUE_VALUE_TRAITS_HPP
