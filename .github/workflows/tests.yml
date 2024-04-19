@@ -40,3 +40,17 @@ jobs:
         # Execute tests defined by the CMake configuration.
         # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more details
         run: ctest -j6 -C ${{env.BUILD_TYPE}} -T test --output-on-failure
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+          sudo apt-get update
+          sudo apt-get -y install clang-format
+      - name: Check codestyle
+        working-directory: ${{github.workspace}}
+        run: |
+          find src/ include/ -type f -iregex '^.*\.\(c\|h\|cpp\|hpp\|cc\|hh\)$' | xargs clang-format --dry-run -Werror

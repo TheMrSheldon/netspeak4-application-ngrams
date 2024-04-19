@@ -3,7 +3,6 @@ BasedOnStyle: Google
 AccessModifierOffset: -2
 SpacesBeforeTrailingComments: 1
 MaxEmptyLinesToKeep: 2
-AlwaysBreakTemplateDeclarations: false
 Cpp11BracedListStyle: false
 
 AllowShortIfStatementsOnASingleLine: false
