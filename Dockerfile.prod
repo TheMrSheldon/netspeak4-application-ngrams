@@ -34,7 +34,7 @@ RUN cmake -S ./ -B ./build/ -DCMAKE_BUILD_TYPE=MinSizeRel -D CMAKE_C_COMPILER=gc
 RUN cd build/ && ctest -j6 -C MinSizeRel -T test --output-on-failure
 
 
-FROM debian:trixie
+FROM debian:trixie-slim
 
 ENV DEBIAN_FRONTEND noninteractive
 
