@@ -115,7 +115,7 @@ target_link_libraries(netspeak PUBLIC ${Protobuf_LIBRARIES})
 set(PROTO_BINARY_DIR "${CMAKE_CURRENT_BINARY_DIR}")
 target_include_directories(netspeak PUBLIC "$<BUILD_INTERFACE:${PROTO_BINARY_DIR}>")
 
-target_sources(netspeak PRIVATE netspeak/NetSpeakService.proto)
+target_sources(netspeak PRIVATE netspeak/NetspeakService.proto)
 protobuf_generate(TARGET netspeak)
 protobuf_generate(
     TARGET netspeak
