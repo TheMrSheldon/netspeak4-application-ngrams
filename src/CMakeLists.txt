@@ -103,11 +103,20 @@ FetchContent_MakeAvailable(absl)
 
 
 # gRPC
-FetchContent_Declare(gRPC GIT_REPOSITORY https://github.com/grpc/grpc GIT_TAG v1.62.1)
-set(gRPC_SSL_PROVIDER package)
-# set(gRPC_PROTOBUF_PROVIDER package)
-FetchContent_MakeAvailable(gRPC)
-target_link_libraries(netspeak PUBLIC grpc++)
+find_package(gRPC CONFIG)
+if (gRPC_FOUND)
+    set(GRPC_PLUGIN_TARGET $<TARGET_FILE:gRPC::grpc_cpp_plugin>)
+    set(GRPC_LIBRARIES gRPC::grpc++)
+else()
+    FetchContent_Declare(gRPC GIT_REPOSITORY https://github.com/grpc/grpc GIT_TAG v1.62.1)
+    set(gRPC_SSL_PROVIDER package)
+    # set(gRPC_PROTOBUF_PROVIDER package)
+    FetchContent_MakeAvailable(gRPC)
+    set(GRPC_PLUGIN_TARGET $<TARGET_FILE:grpc_cpp_plugin>)
+    set(GRPC_LIBRARIES grpc++)
+endif()
+
+target_link_libraries(netspeak PUBLIC ${GRPC_LIBRARIES})
 
 # Protobuf and gRPC sources
 find_package(Protobuf REQUIRED)
@@ -120,7 +129,7 @@ protobuf_generate(TARGET netspeak)
 protobuf_generate(
     TARGET netspeak
     LANGUAGE grpc
-    PLUGIN protoc-gen-grpc=$<TARGET_FILE:grpc_cpp_plugin>
+    PLUGIN protoc-gen-grpc=${GRPC_PLUGIN_TARGET}
     GENERATE_EXTENSIONS .grpc.pb.h .grpc.pb.cc
 )
 # target_sources(netspeak PUBLIC ${NS_PROTO_CPP})
