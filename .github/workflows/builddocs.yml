@@ -22,7 +22,7 @@ jobs:
         run: cmake -B ${{github.workspace}}/build -D NETSPEAK_ONLY_DOCS=YES
       - name: Build Documentation
         run: |
-          run: cmake --build ${{github.workspace}}/build --target netspeak_docs
+          cmake --build ${{github.workspace}}/build --target netspeak_docs
           touch build/documentation/html/.nojekyll
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

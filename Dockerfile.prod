@@ -26,7 +26,7 @@ COPY src ./src
 COPY tests ./tests
 
 # Configure and Build
-RUN cmake -S ./ -B ./build/ -DCMAKE_BUILD_TYPE=MinSizeRel -D CMAKE_C_COMPILER=gcc-13 -D CMAKE_CXX_COMPILER=g++-13 && \
+RUN cmake -S ./ -B ./build/ -DCMAKE_BUILD_TYPE=MinSizeRel -D CMAKE_C_COMPILER=gcc-13 -D CMAKE_CXX_COMPILER=g++-13 -D NETSPEAK_BUILD_DOCS=NO && \
     cmake --build ./build/ --config MinSizeRel --target netspeakcli -j 16 && \
     cmake --build ./build/ --config MinSizeRel --target tests -j 16
 
