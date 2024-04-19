@@ -1,6 +1,8 @@
 #ifndef NETSPEAK_ERROR_HPP
 #define NETSPEAK_ERROR_HPP
 
+#include <inttypes.h>
+
 #include <string>
 
 #include "util/traceable_error.hpp"

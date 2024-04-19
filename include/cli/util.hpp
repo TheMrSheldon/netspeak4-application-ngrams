@@ -1,7 +1,7 @@
 #ifndef CLI_UTIL_HPP
 #define CLI_UTIL_HPP
 
-#include <netspeak/NetSpeakService.grpc.pb.h>
+#include <netspeak/NetspeakService.grpc.pb.h>
 
 #include <string>
 

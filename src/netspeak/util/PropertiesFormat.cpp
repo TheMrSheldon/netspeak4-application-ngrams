@@ -1,3 +1,5 @@
+#include <inttypes.h>
+
 #include <istream>
 #include <netspeak/util/PropertiesFormat.hpp>
 #include <ostream>

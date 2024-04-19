@@ -1,7 +1,7 @@
 #ifndef CLI_LOGGING_HPP
 #define CLI_LOGGING_HPP
 
-#include <netspeak/NetSpeakService.grpc.pb.h>
+#include <netspeak/NetspeakService.grpc.pb.h>
 
 #include <memory>
 #include <string>
