@@ -1,7 +1,9 @@
 #include <google/protobuf/util/json_util.h>
 
+#include <algorithm>
 #include <chrono>
 #include <filesystem>
+#include <format>
 #include <netspeak/error.hpp>
 #include <netspeak/service/RequestLogger.hpp>
 #include <netspeak/service/tracking.hpp>
@@ -9,24 +11,26 @@
 #include <netspeak/util/systemio.hpp>
 #include <sstream>
 
-#include <boost/date_time/posix_time/posix_time.hpp>
-#include <boost/regex.hpp>
-
 
 namespace netspeak::service {
 
 
-std::string utc_timestamp() {
-  auto t = boost::posix_time::microsec_clock::universal_time();
-  std::string result = boost::posix_time::to_iso_extended_string(t);
-  result.push_back('Z');
-  return result;
+/**
+ * @brief Returns the current time formatted as a string following the [ISO
+ * 8601](https://en.wikipedia.org/wiki/ISO_8601) format for UTC date and time.
+ */
+static std::string utc_timestamp() {
+  const auto now = std::chrono::time_point_cast<std::chrono::microseconds>(std::chrono::system_clock::now());
+  return std::format("{:%FT%TZ}", now);
 }
 
-std::string get_log_file_prefix() {
-  const auto time = utc_timestamp();
-  boost::regex re("[^a-zA-Z0-9\\-_]");
-  return boost::regex_replace(time, re, "-");
+static std::string get_log_file_prefix() {
+  /** \todo could we just use the utc_timestamp instead or use - as a separate but keep the decimal point? The latter
+   * would only require a different format specifier: `{:%Y-%m-%dT%H-%M-%SZ}`. */
+  auto time = netspeak::service::utc_timestamp();
+  std::replace(time.begin(), time.end(), ':', '-');
+  std::replace(time.begin(), time.end(), '.', '-');
+  return time;
 }
 
 RequestLogger::RequestLogger(std::unique_ptr<NetspeakService::Service> service, fs::path log_dir)
