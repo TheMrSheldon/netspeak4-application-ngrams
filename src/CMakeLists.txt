@@ -159,5 +159,5 @@ pkg_check_modules(CMPH REQUIRED cmph)
 target_link_libraries(netspeak PUBLIC cmph)
 
 # ICU
-find_package(ICU COMPONENTS data uc REQUIRED)
+find_package(ICU COMPONENTS uc data REQUIRED) # Component-order is important! https://stackoverflow.com/a/76405185
 target_link_libraries(netspeak PUBLIC ${ICU_LIBRARIES})
