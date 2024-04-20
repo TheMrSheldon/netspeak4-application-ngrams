@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['defaultregexindex_32',['DefaultRegexIndex',['../classnetspeak_1_1regex_1_1DefaultRegexIndex.html#adbf7fd8017eef6ae86b3cf8fc654ea03',1,'netspeak::regex::DefaultRegexIndex::DefaultRegexIndex()'],['../classnetspeak_1_1regex_1_1DefaultRegexIndex.html',1,'netspeak::regex::DefaultRegexIndex']]],
-  ['dictionaries_33',['Dictionaries',['../classnetspeak_1_1Dictionaries.html',1,'netspeak']]],
-  ['disjoint_5fwith_34',['disjoint_with',['../classnetspeak_1_1model_1_1RawRefResult.html#a0604a1e03e1e9b09a7c873ec94b9f28e',1,'netspeak::model::RawRefResult']]],
-  ['done_35',['Done',['../classnetspeak_1_1util_1_1JsonWriter_1_1Done.html',1,'netspeak::util::JsonWriter']]]
+  ['empty_34',['empty',['../structnetspeak_1_1model_1_1LengthRange.html#a3d9a055e04900bb01dbaf097a99bb4b6',1,'netspeak::model::LengthRange::empty()'],['../classnetspeak_1_1model_1_1RawPhraseResult.html#a05074ebb5ca0e11f4e798b131c45c8e9',1,'netspeak::model::RawPhraseResult::empty()'],['../classnetspeak_1_1model_1_1RawRefResult.html#a53caa8af8c7e1f2b2f8d1beaf2061ef3',1,'netspeak::model::RawRefResult::empty()']]],
+  ['entry_35',['entry',['../structnetspeak_1_1service_1_1UniqueMap_1_1entry.html',1,'netspeak::service::UniqueMap']]],
+  ['equal_36',['equal',['../structnetspeak_1_1QueryProcessor_1_1equal.html',1,'netspeak::QueryProcessor']]],
+  ['error_5fmessage_37',['error_message',['../structnetspeak_1_1error__message.html',1,'netspeak']]],
+  ['externalmap_38',['ExternalMap',['../classnetspeak_1_1bighashmap_1_1ExternalMap.html',1,'netspeak::bighashmap']]],
+  ['extract_5flongest_5fsubstrings_39',['extract_longest_substrings',['../classnetspeak_1_1RetrievalStrategy_3_01RetrievalStrategy3Tag_01_4.html#af727d4d79255beb4471770722260e20c',1,'netspeak::RetrievalStrategy&lt; RetrievalStrategy3Tag &gt;']]]
 ];

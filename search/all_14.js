@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['text_199',['text',['../classnetspeak_1_1model_1_1QueryUnit____.html#a1ee7e0b09dd46cde02056260bee1a06e',1,'netspeak::model::QueryUnit__']]],
-  ['to_5fquery_200',['to_query',['../classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a7ef4e5553d0ec791b3960977a25e463f',1,'netspeak::regex::RegexQueryBuilder']]],
-  ['tracable_5flogic_5ferror_201',['tracable_logic_error',['../structnetspeak_1_1util_1_1tracable__logic__error.html',1,'netspeak::util']]],
-  ['tracable_5fruntime_5ferror_202',['tracable_runtime_error',['../structnetspeak_1_1util_1_1tracable__runtime__error.html',1,'netspeak::util']]],
-  ['triple_203',['triple',['../classnetspeak_1_1value_1_1triple.html',1,'netspeak::value']]],
-  ['type_204',['Type',['../structnetspeak_1_1regex_1_1RegexUnit.html#a3480f979c6207cd8b2906d4c84f5f447',1,'netspeak::regex::RegexUnit']]]
+  ['unbounded_208',['unbounded',['../structnetspeak_1_1model_1_1LengthRange.html#af563a2920aed78958a6eb1f5b050a99f',1,'netspeak::model::LengthRange']]],
+  ['uniquemap_209',['UniqueMap',['../classnetspeak_1_1service_1_1UniqueMap.html',1,'netspeak::service']]],
+  ['unit_5fmetadata_210',['unit_metadata',['../structnetspeak_1_1RetrievalStrategy3Tag_1_1unit__metadata.html',1,'netspeak::RetrievalStrategy3Tag']]],
+  ['unsortedinput_211',['UnsortedInput',['../classnetspeak_1_1invertedindex_1_1UnsortedInput.html',1,'netspeak::invertedindex']]],
+  ['using_20the_20netspeak_20cli_212',['Using the Netspeak CLI',['../netspeakcli.html',1,'']]]
 ];

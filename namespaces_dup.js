@@ -1,6 +1,7 @@
 var namespaces_dup =
 [
     [ "antlr4", null, [
+      [ "Build Command", "netspeakcli.html#autotoc_md30", null ],
       [ "QueryErrorHandler", "classantlr4_1_1QueryErrorHandler.html", "classantlr4_1_1QueryErrorHandler" ],
       [ "parse_query", "parse_8hpp.html#ac5039850a792b839329f7b022155eec2", null ]
     ] ],

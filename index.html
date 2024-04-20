@@ -18,7 +18,7 @@
     <meta name="twitter:title" content="Netspeak" />
     <meta name="twitter:description" content="One word leads to another." />
     <!-- END twitter metadata -->
-    <title>Netspeak: Netspeak 4 application C++</title>
+    <title>Netspeak: Main Page</title>
     <link href="tabs.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/svg+xml" href="netspeak_logo.svg" />
     <script type="text/javascript" src="jquery.js"></script>
@@ -157,238 +157,40 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Netspeak 4 application C++ </div>  </div>
+<div class="title">Netspeak Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__home_runner_work_netspeak4_application_ngrams_netspeak4_application_ngrams_README"></a> <a href="https://github.com/netspeak/netspeak4-application-cpp/actions"><img src="https://github.com/netspeak/netspeak4-application-cpp/workflows/Build/badge.svg" alt="Actions Status" style="pointer-events: none;" class="inline"/></a></p>
-<p>This is the core library of Netspeak 4.</p>
-<p>It contains methods to create indexes and make queries on Netspeak indexes. The Netspeak 4 Protobuf messages and the Antlr4 grammar of the Netspeak 4 query language are also part of this project. Whatever resource is shared between Netspeak's projects is probably in here.</p>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<div class="textblock"><p align="center"><a class="anchor" id="md__home_runner_work_netspeak4_application_ngrams_netspeak4_application_ngrams_README"></a> </p>
+<p><img src="docs/media/netspeak-banner.svg" alt="" style="pointer-events: none;" width="300pt" class="inline"/> </p><h3 align="center">One word leads to another</h3>
+<hr  />
+<p align="center"></p>
+<p><a href="https://github.com/netspeak/netspeak4-application-ngrams/blob/master/LICENSE"><img src="https://img.shields.io/github/license/netspeak/netspeak4-application-ngrams.svg" alt="MIT License" style="pointer-events: none;" class="inline"/> </a> <a href="https://github.com/netspeak/netspeak4-application-ngrams/releases"><img src="https://img.shields.io/github/release/netspeak/netspeak4-application-ngrams.svg" alt="Current Release" style="pointer-events: none;" class="inline"/> </a> <img src="https://github.com/netspeak/netspeak4-application-ngrams/actions/workflows/tests.yml/badge.svg" alt="Test Status" style="pointer-events: none;" class="inline"/> <br  />
+ <a href="https://netspeak.github.io/netspeak4-application-ngrams/index.html">Documentation</a> &#160;|&#160; <a href="https://webis.de/publications.html?q=netspeak">Publications</a> </p>
+<p>This is the core library of Netspeak.</p>
+<p>It contains methods to create indexes and make queries on Netspeak indexes. The Netspeak Protobuf messages and the Antlr4 grammar of the Netspeak query language are also part of this project. Whatever resource is shared between Netspeak's projects is probably in here.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Getting started</h1>
-<h2><a class="anchor" id="autotoc_md9"></a>
-Docker</h2>
-<p>If you just want to run Netspeak without having to setup anything, then our Docker image will help you.</p>
-<div class="fragment"><div class="line">docker run webis/netspeak:4.1.3 netspeak4 --help</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
-Installing dependencies</h2>
-<p>Before you can compile and run anything, you have to install the dependencies. To do this, simply run:</p>
-<div class="fragment"><div class="line">sudo bash build/install-dependencies.sh</div>
-</div><!-- fragment --><p>This will install, a C++ compiler, build tools, gRPC, Protobuf tools, and other general dependencies.</p>
-<p>Some of the dependencies will by compiled from source and might be compiled/installed in parallel causing noticeable stuttering or even freezes for a few seconds. The heaviest dependencies will be installed globally, so they only have to be installed once.</p>
-<h3><a class="anchor" id="autotoc_md11"></a>
-CI</h3>
-<p>The install script will also install some dependencies that are used by other scripts (e.g. the ones that generate Protobuf and ANTLR4 files). If you do not use these scripts (e.g. in CI), then running <code>sudo bash build/install-dependencies.sh ci</code> instead will only install the dependencies that are necessary to compile the project.</p>
-<h3><a class="anchor" id="autotoc_md12"></a>
-For Windows users</h3>
-<p>Netspeak 4 is a Linux project. To compile and run it on your system, install WSL with any Linux distribution and run all commands there.</p>
-<h2><a class="anchor" id="autotoc_md13"></a>
-Building</h2>
-<p>This project has a <code>debug</code> build and a <code>release</code> build. To make/update either one run:</p>
-<div class="fragment"><div class="line"># debug build</div>
-<div class="line">bash build/make-debug.sh</div>
-<div class="line"># release build</div>
-<div class="line">bash build/make-release.sh</div>
-</div><!-- fragment --><p>The Netspeak executable can then be found at <code>build/{debug,release}/netspeak4</code>.</p>
-<h2><a class="anchor" id="autotoc_md14"></a>
-Running tests</h2>
-<p>Run the following command:</p>
-<div class="fragment"><div class="line">bash build/run-tests.sh</div>
-</div><!-- fragment --><p>This will use the <code>debug</code> build to run tests.</p>
-<p>(It's recommended to do it like this because otherwise the test application might have problems locating its test resources.)</p>
-<h2><a class="anchor" id="autotoc_md15"></a>
-Writing code</h2>
+<p>The easiest way to get started is using the NetspeakCLI through the docker image: </p><div class="fragment"><div class="line">docker run webis/netspeak:4.1.4 netspeak4 --help</div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md6"></a>
+For Windows users</h4>
+<p>Netspeak is a Linux project. To compile and run it on your system, install WSL with any Linux distribution and run all commands there.</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Contributing code</h1>
 <p>To write code, open the project in your IDE of choice (e.g. VSCode with the C++ plugin) and start typing!</p>
 <p>Keep in mind that new files have to registered in <code>CMakeLists.txt</code>.</p>
 <p>We use <code>clang-format</code> to format our code. If your IDE doesn't support this, you can use the <code>./build/format-all.sh</code> script to reformat all source files.</p>
-<h1><a class="anchor" id="autotoc_md16"></a>
-Using the Netspeak4 CLI</h1>
-<p>After compiling, you can run the Netspeak executable which will start a small command line interface for Netspeak.</p>
-<p>The Netspeak CLI aims to be self-documenting, so this section will be brief. To view the full CLI documentation run <code>netspeak4 --help</code>. This will list all commands and how to use them.</p>
-<h3><a class="anchor" id="autotoc_md17"></a>
-&lt;tt&gt;build&lt;/tt&gt;</h3>
-<p>The <code>build</code> command can be used to build a new Netspeak4 index from a given data set. The basic usage works as follows:</p>
-<div class="fragment"><div class="line">./netspeak4 build -i &quot;/data-set&quot; -o &quot;/my-index&quot;</div>
-</div><!-- fragment --><p><code>/data-set</code> is the input directory that contains all phrases. Netspeak will assume all files in the input directory are simple text files containing phrase-frequency pairs.</p>
-<p>Netspeak will parse all files in the input directory and create a index in <code>/my-index</code>, the output directory.</p>
-<p>Depending on the number of phrase, the build process may take several hours. The whole process is usually bound by whatever storage medium is used to store the phrase and the index, so you can use your computer while the index is being created.</p>
-<p><b>NOTE:</b> When building large indexes using <code>./netspeak4 build -i &lt;input&gt; -o &lt;output&gt;</code>, be sure that the limit on the maximum number of opened files by one process is high enough. <b>If it's too low, the build process will fail.</b> For small indexes a limit for 1024 is sufficient but for larger data sets (&gt;10GB input), be sure it's at least 2048. You can set the limit using the <code>ulimit</code> command. <br  />
- WSL users: This limit will be reset with every restart of your Linux subsystem.</p>
-<h1><a class="anchor" id="autotoc_md18"></a>
-Logging</h1>
-<p>The <code>serve</code> and <code>proxy</code> sub-command both support logging. This means that they will log every request they receive and every error produced.</p>
-<h2><a class="anchor" id="autotoc_md19"></a>
-Tracking ID</h2>
-<p>Tracking is implemented via optional client metadata. Clients can provide a number to track their session to help improve the service.</p>
-<p>The tracking number has to be provided as client metadata using the key <code>netspeak-tracking-id</code>. The value of that key has to be a 128bit hexadecimal number matching the following regex: <code>^[0-9A-Fa-f]{32}$</code>.</p>
-<p>There are no requirements for the actual number but it is recommended for them to be randomly generated.</p>
-<h1><a class="anchor" id="autotoc_md20"></a>
-Protobuf</h1>
-<p>This project also contain the Netspeak4 protobuf message definitions: <code>conf/NetspeakMessages.proto</code>.</p>
-<p>After changing the definition, you have to run <code>build/generate-protobuf-files.sh</code> which, as the name suggests, will (re-)generate all protobuf C++ files. The generated files are located under <code>src/netspeak/generated/</code>.</p>
-<p>You also have to update the generated protobuf files <code>netspeak4-application-java</code> by running <code>src/scripts/generate-protobuf-files.sh</code> (this requires Java &gt;= 1.6 to be installed).</p>
-<p><em>Note:</em> In case you OS doesn't support the specific protobuf version required, you the dev console from <code>netspeak4-deployment</code>.</p>
-<h1><a class="anchor" id="autotoc_md21"></a>
-Antlr4</h1>
-<p>The Antlr4 grammar of the Netspeak4 query language can be found under <code>conf/grammar/</code>. Changes to these files require you to regenerate the Antlr4 files by running <code>build/generate-antlr4-files.sh</code> (this requires Java &gt;= 1.6 to be installed).</p>
-<h1><a class="anchor" id="autotoc_md22"></a>
-Netspeak query language</h1>
-<p>The Netspeak query syntax as described here should be used as reference. There might be other syntax information out there, e.g. at netspeak.org, which provides some syntactical simplifications in form of easier to use wildcards or operators. However, these modified syntaxes are just front-ends and do not work with the original Netspeak interface. Here is the truth:</p>
-<div class="fragment"><div class="line">?   is a placeholder for exactly one word and can be sequenced to search for</div>
-<div class="line">    exaclty two, three, four ... words.</div>
-<div class="line"> </div>
-<div class="line">    Example:    how to ? this</div>
-<div class="line">                -&gt; how to use this</div>
-<div class="line">                -&gt; how to do this</div>
-<div class="line">                -&gt; how to cite this</div>
-<div class="line"> </div>
-<div class="line">*   is a placeholder for zero or many words.</div>
-<div class="line"> </div>
-<div class="line">    Example:    see * works</div>
-<div class="line">                -&gt; see how it works</div>
-<div class="line">                -&gt; see if it works</div>
-<div class="line">                -&gt; see what works</div>
-<div class="line"> </div>
-<div class="line">[]  compares options, i.e. it checks each word or phrase between these</div>
-<div class="line">    brackets plus the so called empty word at that position in the query.</div>
-<div class="line"> </div>
-<div class="line">    Example:    it&#39;s [ great well &quot;so good&quot; ]</div>
-<div class="line">                -&gt; it&#39;s</div>
-<div class="line">                -&gt; it&#39;s great</div>
-<div class="line">                -&gt; it&#39;s well</div>
-<div class="line">                -&gt; it&#39;s so good</div>
-<div class="line"> </div>
-<div class="line">{}  checks the order, i.e. it tries to find each permutation of the given</div>
-<div class="line">    sequence of words or phrases at that position in the query.</div>
-<div class="line"> </div>
-<div class="line">    Example:    for { &quot;very important people&quot; only }</div>
-<div class="line">                -&gt; for very important people only</div>
-<div class="line">                -&gt; for only very important people</div>
-<div class="line"> </div>
-<div class="line">#   searches for alternatives of the word following. This operator requests</div>
-<div class="line">    the optional Netspeak hash-dictionary component and uses [] to compare</div>
-<div class="line">    each retrieved alternative (except that the empty word is not checked).</div>
-<div class="line">    The mapping from word to alternatives is completely up to the user when</div>
-<div class="line">    building Netspeak, for netspeak.org we use this operator for a synonym</div>
-<div class="line">    search providing the Wordnet dictionary.</div>
-<div class="line"> </div>
-<div class="line">    Example:    waiting for #response</div>
-<div class="line">                -&gt; waiting for response</div>
-<div class="line">                -&gt; waiting for answer</div>
-<div class="line">                -&gt; waiting for reply</div>
-</div><!-- fragment --><p>You can combine the introduced wildcards and operators as you want, but with the exception that you may not place any wildcard within bracket operators. Also nested brackets are not allowed. As you can see in the examples above you can quote phrases to be handled as one entity is <code>[]</code> and <code>{}</code>.</p>
-<h1><a class="anchor" id="autotoc_md23"></a>
-Index configuration files</h1>
-<p>Netspeak loads indexes using configuration files. These are small <code>.properties</code> files that contain information about the location and directory structure of the index, metadata (like name and language), and runtime parameters like the cache size.</p>
-<p>The following section will explain all supported keys.</p>
-<h2><a class="anchor" id="autotoc_md24"></a>
-Metadata</h2>
-<p>The following keys hold metadata about the corpus used to create the current index.</p>
-<ul>
-<li><p class="startli"><code>corpus.key = string</code> _(required)_</p>
-<p class="startli">A unique key to identify the corpus. Two corpora with the same key are always assumed to be equal.</p>
-</li>
-<li><p class="startli"><code>corpus.name = string</code> _(required)_</p>
-<p class="startli">The human-readable name of the corpus.</p>
-</li>
-<li><p class="startli"><code>corpus.language = string</code> _(required)_</p>
-<p class="startli">The <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1 code</a> of the language of the corpus.</p>
-</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md25"></a>
-Performance</h2>
-<p>The following keys are parameters used to fine-tune performance.</p>
-<ul>
-<li><p class="startli"><code>cache.capacity = size_t</code> _(optional)_</p>
-<p class="startli">This sets the capacity of Netspeak's main cache: the norm query cache. This LFU cache stores the outputs of the query processor. It has a static capacity that limits the maximum number of items.</p>
-<p class="startli">The default cache capacity of the current implementation is 1 million. At this capacity, an empty cache will use about 100MB and a full cache will use about 3GB of memory (depends on the cached queries). Other implementation may use different defaults.</p>
-</li>
-<li><p class="startli"><code>search.max-norm-queries = uint32</code> _(optional)_</p>
-<p class="startli">The maximum number of norm queries the queries normalizer is allowed to create.</p>
-<p class="startli">Norm queries are the fundamental query units of Netspeak. Each norm queries (if not cached) requires at least one random IO access. The maximum should be chosen with regards to hardware the index is stored on. A maximum of &lt;=1000 for HDDs and ~10k for SDDs is recommended.</p>
-<p class="startli">Choosing a large maximum can cause queries containing regexes and synonyms to become very slow (seconds per query; uncached).</p>
-<p class="startli">The default is implementation defined. The current implementation has a default of 1000.</p>
-</li>
-<li><p class="startli"><code>search.regex.max-matches = uint32</code> _(optional)_</p>
-<p class="startli">The maximum number of regex matches. The current implementation replaces regex queries with a set of matching words (e.g. <code>route?</code> may be replaced with <code>[ router routed ]</code>). This parameter sets the maximum amount of words each regex query can be replaced with.</p>
-<p class="startli">Choosing a large maximum can cause queries containing regexes to become very slow. This is only a maximum and the implementation may choose to use fewer words to (hopefully) stay fast.</p>
-<p class="startli">You can set this to 0 to disable regex queries.</p>
-<p class="startli">The default is implementation defined. The current implementation has a default of 100.</p>
-</li>
-<li><p class="startli"><code>search.regex.max-time = uint32</code> _(optional)_</p>
-<p class="startli">The maximum amount of time in milliseconds Netspeak is allowed to search for regex matches. Choosing a generous duration will lead to more accurate search results but may degrade performance.</p>
-<p class="startli">The default is implementation-defined but will generally around be a few milliseconds.</p>
-</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md26"></a>
-Paths</h2>
-<p>The following keys are paths to locate the index.</p>
-<ul>
-<li><p class="startli"><code>path.to.phrase-index = path</code> _(optional)_ <br  />
- <code>path.to.phrase-corpus = path</code> _(optional)_ <br  />
- <code>path.to.phrase-dictionary = path</code> _(optional)_ <br  />
- <code>path.to.postlist-index = path</code> _(optional)_ <br  />
- <code>path.to.hash-dictionary = path</code> _(optional)_ <br  />
- <code>path.to.regex-vocabulary = path</code> _(optional)_ <br  />
-</p>
-<p class="startli">Paths to the individual components of a Netspeak index.</p>
-</li>
-<li><p class="startli"><code>path.to.home = path</code> _(optional)_</p>
-<p class="startli">This will set all unset <code>path.to.xxxx</code> values to <code>&lt;path.to.home&gt;/xxxx</code>.</p>
-<p class="startli">If a Netspeak index follows the default index format (all indexes created by Netspeak do), then <code>path.to.home</code> can be used to set all index paths at once.</p>
-<p class="startli">Note: "unset" means not present in this configuration file. Keys from the <code>extends</code> file are not considered.</p>
-</li>
-</ul>
-<h3><a class="anchor" id="autotoc_md27"></a>
-Note</h3>
-<p>All paths (if not absolute) are relative to the directory the configuration file lives in.</p>
-<h2><a class="anchor" id="autotoc_md28"></a>
-Casing</h2>
-<ul>
-<li><p class="startli"><code>query.lower-case = bool</code> _(optional)_</p>
-<p class="startli">Whether all queries will be lower-cased. This option is useful if the index only contains lower-case phrases.</p>
-<p class="startli">The default is <code>false</code>.</p>
-</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md29"></a>
-Other</h2>
-<ul>
-<li><p class="startli"><code>extends = path</code> _(optional)_</p>
-<p class="startli">The path of another configuration files.</p>
-<p class="startli">All keys that are not present in the current configuration file will be retrieved from this one instead. This can be used to implement inheritance.</p>
-</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md30"></a>
-gRPC-web proxy</h1>
-<p>A <a href="https://github.com/netspeak/grpcwebproxy">gRPC-web proxy</a> is necessary to use Netspeak in browsers. This is how you use the proxy.</p>
-<h2><a class="anchor" id="autotoc_md31"></a>
-Linux</h2>
-<p>You need to have Docker installed.</p>
-<p>Serve the index(es):</p>
-<div class="fragment"><div class="line">docker run -p 9000:9000 -v /path/to/index:/index:ro webis/netspeak:4.1.3 netspeak4 serve -c /index/index.properties -p 9000</div>
-</div><!-- fragment --><p>Run the proxy:</p>
-<div class="fragment"><div class="line">docker run --network=&quot;host&quot; webis/grpcwebproxy:0.14.0 grpcwebproxy --allow_all_origins --backend_addr=localhost:9000 --backend_tls=false --run_tls_server=false</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md32"></a>
-Windows</h2>
-<p>To run the gRPC-web proxy on Windows, you need to have WSL2 and Docker Desktop (with WSL2 backend) installed.</p>
-<p>Serve the index(es):</p>
-<div class="fragment"><div class="line">docker run -p 9000:9000 -v C:\path\to\index:/index:ro webis/netspeak:4.1.3 netspeak4 serve -c /index/index.properties -p 9000</div>
-</div><!-- fragment --><p>Run the proxy:</p>
-<div class="fragment"><div class="line">docker run -p 8080:8080 webis/grpcwebproxy:0.14.0 grpcwebproxy --allow_all_origins --backend_addr=host.docker.internal:9000 --backend_tls=false --run_tls_server=false</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md33"></a>
-Python bindings</h1>
-<p>This project also contains Python 3 bindings using pybind11.</p>
-<p>The Python bindings are a shared library (<code>.so</code>) and there are some limitations that come from this. The most notable limitation is that the bindings have runtime dependencies (the other Netspeak binaries all statically link their dependencies).</p>
-<p>To run the bindings, you need to have boost-regex and boost-system installed. Assuming that you copied <code>netspeak4py.cpython-38-x86_64-linux-gnu.so</code> from the builder Docker container, then you also need to copy <code>/usr/lib/libantlr4-runtime.so</code> and <code>/usr/lib/libantlr4-runtime.so.4.7.1</code>.</p>
-<p>To actually import the bindings in Python, make sure pass the directory <code>netspeak4py...so</code> is located via the <a href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH"><code>PYTHONPATH</code></a> environment variable. If everything is setup correctly, Netspeak's Python bindings can be imported via:</p>
-<div class="fragment"><div class="line"><span class="keyword">import</span> netspeak4py</div>
-</div><!-- fragment --><p>To see the API of the bindings, run <code>help(netspeak4py)</code>.</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Publishing a new release</h1>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>describe</dd></dl>
 <hr  />
-<h1><a class="anchor" id="autotoc_md35"></a>
-Contributors</h1>
-<p>Michael Schmidt (2018 - 2020)</p>
-<p>Martin Trenkmann (2008 - 2013)</p>
-<p>Martin Potthast (2008 - 2020)</p>
-<p>Benno Stein (2008 - 2020) </p>
+<h2><a class="anchor" id="autotoc_md10"></a>
+Contributors</h2>
+<ul>
+<li>Michael Schmidt (2018 - 2020)</li>
+<li>Martin Trenkmann (2008 - 2013)</li>
+<li>Martin Potthast (2008 - 2020)</li>
+<li>Benno Stein (2008 - 2020) </li>
+</ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

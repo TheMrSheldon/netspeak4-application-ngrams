@@ -1,10 +1,16 @@
 var searchData=
 [
-  ['big_5fstring_12',['big_string',['../structnetspeak_1_1value_1_1big__string.html',1,'netspeak::value']]],
-  ['bighashmap_13',['BigHashMap',['../classnetspeak_1_1bighashmap_1_1BigHashMap.html',1,'netspeak::bighashmap']]],
-  ['buffer_5ftype_14',['buffer_type',['../structnetspeak_1_1invertedindex_1_1ByteBuffer_1_1buffer__type.html',1,'netspeak::invertedindex::ByteBuffer']]],
-  ['buildcommand_15',['BuildCommand',['../classcli_1_1BuildCommand.html',1,'cli']]],
-  ['builder_16',['Builder',['../classnetspeak_1_1bighashmap_1_1Builder.html',1,'netspeak::bighashmap::Builder&lt; ValueT, TraitsT &gt;'],['../classnetspeak_1_1util_1_1StringIdMap_1_1Builder.html',1,'netspeak::util::StringIdMap&lt; Id &gt;::Builder']]],
-  ['buildhashfunction_17',['BuildHashFunction',['../classnetspeak_1_1bighashmap_1_1Builder.html#aee77cc2f04280bd3b36aad2c7e22c52b',1,'netspeak::bighashmap::Builder']]],
-  ['bytebuffer_18',['ByteBuffer',['../classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a3c50032c48f96e530fd44f0cca3ce60c',1,'netspeak::invertedindex::ByteBuffer::ByteBuffer(size_t size=0)'],['../classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a1b38f8054c7b8c7457a22dec1df13f08',1,'netspeak::invertedindex::ByteBuffer::ByteBuffer(const ByteBuffer &amp;buffer)'],['../classnetspeak_1_1invertedindex_1_1ByteBuffer.html',1,'netspeak::invertedindex::ByteBuffer']]]
+  ['chaincutter_16',['ChainCutter',['../classnetspeak_1_1util_1_1ChainCutter.html',1,'netspeak::util']]],
+  ['clone_17',['clone',['../classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a123a9c595224694ecdc3b55ebcf058bc',1,'netspeak::invertedindex::ByteBuffer']]],
+  ['cmphmap_18',['CmphMap',['../classnetspeak_1_1bighashmap_1_1CmphMap.html',1,'netspeak::bighashmap']]],
+  ['combinations_5fupper_5fbound_19',['combinations_upper_bound',['../classnetspeak_1_1regex_1_1RegexQuery.html#a8f2543e1cc1b4460233f700f547a89f6',1,'netspeak::regex::RegexQuery']]],
+  ['command_20',['Command',['../classcli_1_1Command.html',1,'cli']]],
+  ['commands_21',['Commands',['../classcli_1_1Commands.html',1,'cli']]],
+  ['config_22',['Config',['../classnetspeak_1_1util_1_1Config.html',1,'netspeak::util']]],
+  ['configuration_23',['Configuration',['../classnetspeak_1_1Configuration.html',1,'netspeak::Configuration'],['../classnetspeak_1_1invertedindex_1_1Configuration.html',1,'netspeak::invertedindex::Configuration']]],
+  ['constant_5fsize_5fiter_24',['constant_size_iter',['../structnetspeak_1_1invertedindex_1_1constant__size__iter.html',1,'netspeak::invertedindex']]],
+  ['count_25',['Count',['../structnetspeak_1_1model_1_1Phrase_1_1Count.html',1,'netspeak::model::Phrase']]],
+  ['count_5fphrases_26',['count_phrases',['../classnetspeak_1_1PhraseCorpus.html#a436713055969380039d89778197d92bf',1,'netspeak::PhraseCorpus']]],
+  ['count_5fvocabulary_27',['count_vocabulary',['../classnetspeak_1_1PhraseCorpus.html#a3c133724b6e69e9b2f13304f6da88676',1,'netspeak::PhraseCorpus']]],
+  ['create_5freject_5fall_28',['create_reject_all',['../classnetspeak_1_1regex_1_1RegexQuery.html#a8199b3021617949f2853c788110d9d61',1,'netspeak::regex::RegexQuery']]]
 ];

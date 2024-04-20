@@ -1,22 +1,9 @@
 var searchData=
 [
-  ['nameof_96',['NameOf',['../structnetspeak_1_1value_1_1NameOf.html',1,'netspeak::value']]],
-  ['nameof_3c_20big_5fstring_20_3e_97',['NameOf&lt; big_string &gt;',['../structnetspeak_1_1value_1_1NameOf_3_01big__string_01_4.html',1,'netspeak::value']]],
-  ['nameof_3c_20double_20_3e_98',['NameOf&lt; double &gt;',['../structnetspeak_1_1value_1_1NameOf_3_01double_01_4.html',1,'netspeak::value']]],
-  ['nameof_3c_20float_20_3e_99',['NameOf&lt; float &gt;',['../structnetspeak_1_1value_1_1NameOf_3_01float_01_4.html',1,'netspeak::value']]],
-  ['nameof_3c_20int16_5ft_20_3e_100',['NameOf&lt; int16_t &gt;',['../structnetspeak_1_1value_1_1NameOf_3_01int16__t_01_4.html',1,'netspeak::value']]],
-  ['nameof_3c_20int32_5ft_20_3e_101',['NameOf&lt; int32_t &gt;',['../structnetspeak_1_1value_1_1NameOf_3_01int32__t_01_4.html',1,'netspeak::value']]],
-  ['nameof_3c_20int64_5ft_20_3e_102',['NameOf&lt; int64_t &gt;',['../structnetspeak_1_1value_1_1NameOf_3_01int64__t_01_4.html',1,'netspeak::value']]],
-  ['nameof_3c_20int8_5ft_20_3e_103',['NameOf&lt; int8_t &gt;',['../structnetspeak_1_1value_1_1NameOf_3_01int8__t_01_4.html',1,'netspeak::value']]],
-  ['nameof_3c_20std_3a_3astring_20_3e_104',['NameOf&lt; std::string &gt;',['../structnetspeak_1_1value_1_1NameOf_3_01std_1_1string_01_4.html',1,'netspeak::value']]],
-  ['nameof_3c_20uint16_5ft_20_3e_105',['NameOf&lt; uint16_t &gt;',['../structnetspeak_1_1value_1_1NameOf_3_01uint16__t_01_4.html',1,'netspeak::value']]],
-  ['nameof_3c_20uint32_5ft_20_3e_106',['NameOf&lt; uint32_t &gt;',['../structnetspeak_1_1value_1_1NameOf_3_01uint32__t_01_4.html',1,'netspeak::value']]],
-  ['nameof_3c_20uint64_5ft_20_3e_107',['NameOf&lt; uint64_t &gt;',['../structnetspeak_1_1value_1_1NameOf_3_01uint64__t_01_4.html',1,'netspeak::value']]],
-  ['nameof_3c_20uint8_5ft_20_3e_108',['NameOf&lt; uint8_t &gt;',['../structnetspeak_1_1value_1_1NameOf_3_01uint8__t_01_4.html',1,'netspeak::value']]],
-  ['netspeak_109',['Netspeak',['../classnetspeak_1_1Netspeak.html',1,'netspeak']]],
-  ['netspeak_204_20application_20c_2b_2b_110',['Netspeak 4 application C++',['../index.html',1,'']]],
-  ['next_111',['next',['../classnetspeak_1_1util_1_1ChainCutter.html#a4a2ad399d5cba8d80b20d04674b89153',1,'netspeak::util::ChainCutter']]],
-  ['normquery_112',['NormQuery',['../classnetspeak_1_1model_1_1NormQuery.html',1,'netspeak::model']]],
-  ['normqueryunit_5f_5f_113',['NormQueryUnit__',['../classnetspeak_1_1model_1_1NormQueryUnit____.html',1,'netspeak::model']]],
-  ['util_114',['util',['../namespacenetspeak_1_1util.html',1,'netspeak']]]
+  ['objectcontinue_115',['ObjectContinue',['../classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html',1,'netspeak::util::JsonWriter']]],
+  ['objectstart_116',['ObjectStart',['../classnetspeak_1_1util_1_1JsonWriter_1_1ObjectStart.html',1,'netspeak::util::JsonWriter']]],
+  ['operator_3c_3c_117',['operator&lt;&lt;',['../classnetspeak_1_1util_1_1Config.html#ade6133f623d65739e99bb5e858f26cfa',1,'netspeak::util::Config']]],
+  ['operator_3d_118',['operator=',['../classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a094616daee7e30f189c72633b9da98e8',1,'netspeak::invertedindex::ByteBuffer']]],
+  ['optimize_5fquery_119',['optimize_query',['../classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a445e83616a9f062d4f44db53017f3e9c',1,'netspeak::regex::DefaultRegexIndex']]],
+  ['options_120',['Options',['../structnetspeak_1_1QueryNormalizer_1_1Options.html',1,'netspeak::QueryNormalizer']]]
 ];

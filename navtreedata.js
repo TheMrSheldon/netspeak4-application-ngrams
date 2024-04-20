@@ -25,50 +25,18 @@
 var NAVTREE =
 [
   [ "Netspeak", "index.html", [
-    [ "Netspeak 4 application C++", "index.html", [
-      [ "Getting started", "index.html#autotoc_md8", [
-        [ "Docker", "index.html#autotoc_md9", null ],
-        [ "Installing dependencies", "index.html#autotoc_md10", [
-          [ "CI", "index.html#autotoc_md11", null ],
-          [ "For Windows users", "index.html#autotoc_md12", null ]
-        ] ],
-        [ "Building", "index.html#autotoc_md13", null ],
-        [ "Running tests", "index.html#autotoc_md14", null ],
-        [ "Writing code", "index.html#autotoc_md15", null ]
-      ] ],
-      [ "Using the Netspeak4 CLI", "index.html#autotoc_md16", null ],
-      [ "Logging", "index.html#autotoc_md18", [
-        [ "Tracking ID", "index.html#autotoc_md19", null ]
-      ] ],
-      [ "Protobuf", "index.html#autotoc_md20", null ],
-      [ "Antlr4", "index.html#autotoc_md21", null ],
-      [ "Netspeak query language", "index.html#autotoc_md22", null ],
-      [ "Index configuration files", "index.html#autotoc_md23", [
-        [ "Metadata", "index.html#autotoc_md24", null ],
-        [ "Performance", "index.html#autotoc_md25", null ],
-        [ "Paths", "index.html#autotoc_md26", [
-          [ "<tt>build</tt>", "index.html#autotoc_md17", null ],
-          [ "Note", "index.html#autotoc_md27", null ]
-        ] ],
-        [ "Casing", "index.html#autotoc_md28", null ],
-        [ "Other", "index.html#autotoc_md29", null ]
-      ] ],
-      [ "gRPC-web proxy", "index.html#autotoc_md30", [
-        [ "Linux", "index.html#autotoc_md31", null ],
-        [ "Windows", "index.html#autotoc_md32", null ]
-      ] ],
-      [ "Python bindings", "index.html#autotoc_md33", null ],
-      [ "Contributors", "index.html#autotoc_md35", null ]
+    [ "Getting started", "index.html#autotoc_md5", null ],
+    [ "Contributing code", "index.html#autotoc_md7", null ],
+    [ "Publishing a new release", "index.html#autotoc_md8", [
+      [ "Contributors", "index.html#autotoc_md10", null ]
     ] ],
-    [ "<tt>netspeak::model</tt>", "md_netspeak_model_README.html", [
-      [ "Queries", "md_netspeak_model_README.html#autotoc_md1", [
-        [ "<tt>Query</tt>", "md_netspeak_model_README.html#autotoc_md2", null ],
-        [ "<tt>NormQuery</tt>", "md_netspeak_model_README.html#autotoc_md3", null ],
-        [ "<tt>SimpleQuery</tt>", "md_netspeak_model_README.html#autotoc_md4", null ]
-      ] ]
-    ] ],
-    [ "<tt>netspeak.regex</tt>", "md_netspeak_regex_README.html", null ],
-    [ "<tt>netspeak.util</tt>", "md_netspeak_util_README.html", null ],
+    [ "README", "md_netspeak_model_README.html", null ],
+    [ "README", "md_netspeak_regex_README.html", null ],
+    [ "README", "md_netspeak_util_README.html", null ],
+    [ "Deployment", "deployment.html", null ],
+    [ "For Developers", "DeveloperIdx.html", "DeveloperIdx" ],
+    [ "Using the Netspeak CLI", "netspeakcli.html", null ],
+    [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -98,13 +66,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BigHashMap_8hpp_source.html",
-"classnetspeak_1_1PhraseCorpus.html",
-"classnetspeak_1_1invertedindex_1_1IndexStrategy.html#a9ea82e40255adde7ffce73378135cbfa",
-"classnetspeak_1_1model_1_1NormQueryUnit____.html#ac426e7c2c50dc38a4e282fde1ece4aaa",
-"classnetspeak_1_1service_1_1UniqueMap.html#a94b2f725d5dc4d6883df83d56690815e",
-"index.html#autotoc_md19",
-"structnetspeak_1_1invertedindex_1_1Properties.html#aca4680a14cc80cd970ef28c30fc8ce63",
-"structnetspeak_1_1value_1_1generator_3_01pair_3_01T1_00_01T2_01_4_01_4.html#a75e609f11748792ed009382b6b17dc62"
+"classnetspeak_1_1Netspeak.html#ac6054eab938589cb16974a8276d28f18",
+"classnetspeak_1_1invertedindex_1_1IndexStrategy.html#a6f746cfe3dccc423f3da32c5671f973d",
+"classnetspeak_1_1model_1_1NormQueryUnit____.html#aa4a7688e923a2442e43176b6f3a99986",
+"classnetspeak_1_1service_1_1UniqueMap.html#a626d4824173dd7960849be4e812c20bd",
+"gettingstarted.html#autotoc_md20",
+"structnetspeak_1_1invertedindex_1_1Properties.html#aea1e8f877d51986785a8cfc78f19c001",
+"structnetspeak_1_1value_1_1generator_3_01pair_3_01T1_00_01T2_01_4_01_4.html#ad9c3369c724954a9fee7613a03773647"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
