@@ -118,7 +118,6 @@ var hierarchy =
     [ "netspeak::QueryProcessor< netspeak::RetrievalStrategy3Tag >", "classnetspeak_1_1QueryProcessor.html", null ],
     [ "netspeak::model::QuerySyntax", "structnetspeak_1_1model_1_1QuerySyntax.html", null ],
     [ "netspeak::model::QueryUnit__", "classnetspeak_1_1model_1_1QueryUnit____.html", null ],
-    [ "netspeak::value::quintuple< T1, T2, T3, T4, T5 >", "classnetspeak_1_1value_1_1quintuple.html", null ],
     [ "netspeak::invertedindex::RawIndexer", "classnetspeak_1_1invertedindex_1_1RawIndexer.html", [
       [ "netspeak::invertedindex::Indexer< T >", "classnetspeak_1_1invertedindex_1_1Indexer.html", null ]
     ] ],
@@ -165,7 +164,6 @@ var hierarchy =
       [ "netspeak::service::RequestLogger", "classnetspeak_1_1service_1_1RequestLogger.html", null ],
       [ "netspeak::service::UniqueMap", "classnetspeak_1_1service_1_1UniqueMap.html", null ]
     ] ],
-    [ "netspeak::value::sextuple< T1, T2, T3, T4, T5, T6 >", "classnetspeak_1_1value_1_1sextuple.html", null ],
     [ "netspeak::model::SimpleQuery", "classnetspeak_1_1model_1_1SimpleQuery.html", null ],
     [ "netspeak::model::SimpleQueryUnit__", "classnetspeak_1_1model_1_1SimpleQueryUnit____.html", null ],
     [ "netspeak::model::NormQueryUnit__::Source", "structnetspeak_1_1model_1_1NormQueryUnit_____1_1Source.html", null ],
@@ -184,8 +182,6 @@ var hierarchy =
     [ "netspeak::value::value_traits< big_string >", "structnetspeak_1_1value_1_1value__traits_3_01big__string_01_4.html", null ],
     [ "netspeak::value::value_traits< pair< T1, T2 > >", "structnetspeak_1_1value_1_1value__traits_3_01pair_3_01T1_00_01T2_01_4_01_4.html", null ],
     [ "netspeak::value::value_traits< quadruple< T1, T2, T3, T4 > >", "structnetspeak_1_1value_1_1value__traits_3_01quadruple_3_01T1_00_01T2_00_01T3_00_01T4_01_4_01_4.html", null ],
-    [ "netspeak::value::value_traits< quintuple< T1, T2, T3, T4, T5 > >", "structnetspeak_1_1value_1_1value__traits_3_01quintuple_3_01T1_00_01T2_00_01T3_00_01T4_00_01T5_01_4_01_4.html", null ],
-    [ "netspeak::value::value_traits< sextuple< T1, T2, T3, T4, T5, T6 > >", "structnetspeak_1_1value_1_1value__traits_3_01sextuple_3_01T1_00_01T2_00_01T3_00_01T4_00_01T5_00_01T6_01_4_01_4.html", null ],
     [ "netspeak::value::value_traits< std::string >", "structnetspeak_1_1value_1_1value__traits_3_01std_1_1string_01_4.html", null ],
     [ "netspeak::value::value_traits< triple< T1, T2, T3 > >", "structnetspeak_1_1value_1_1value__traits_3_01triple_3_01T1_00_01T2_00_01T3_01_4_01_4.html", null ],
     [ "netspeak::regex::DefaultRegexIndex::WordEntry", "structnetspeak_1_1regex_1_1DefaultRegexIndex_1_1WordEntry.html", null ],

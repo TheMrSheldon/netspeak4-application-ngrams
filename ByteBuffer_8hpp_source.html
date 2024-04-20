@@ -174,107 +174,105 @@ $(document).ready(function(){initNavTree('ByteBuffer_8hpp_source.html',''); init
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../value/big_string_traits.hpp&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../value/pair_traits.hpp&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../value/quadruple_traits.hpp&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../value/quintuple_traits.hpp&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../value/sextuple_traits.hpp&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../value/string_traits.hpp&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../value/triple_traits.hpp&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../value/string_traits.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../value/triple_traits.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>netspeak::invertedindex {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>netspeak::invertedindex {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">ByteBuffer</a> {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structnetspeak_1_1invertedindex_1_1ByteBuffer_1_1buffer__type.html">   30</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structnetspeak_1_1invertedindex_1_1ByteBuffer_1_1buffer__type.html">buffer_type</a> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structnetspeak_1_1invertedindex_1_1ByteBuffer_1_1buffer__type.html">buffer_type</a>(<span class="keywordtype">size_t</span> initial_size);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> resize(<span class="keywordtype">size_t</span> new_size);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::unique_ptr&lt;char[]&gt; data;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">size_t</span> size;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  };</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a3c50032c48f96e530fd44f0cca3ce60c">   42</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a3c50032c48f96e530fd44f0cca3ce60c">ByteBuffer</a>(<span class="keywordtype">size_t</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ac7160f8bd36f86815662909c0722556f">size</a> = 0);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a1b38f8054c7b8c7457a22dec1df13f08">   48</a></span>&#160;  <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a1b38f8054c7b8c7457a22dec1df13f08">ByteBuffer</a>(<span class="keyword">const</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">ByteBuffer</a>&amp; buffer);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a5ebe676c53d60259a5e98c67eb08b26c">   53</a></span>&#160;  <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a5ebe676c53d60259a5e98c67eb08b26c">~ByteBuffer</a>() {}</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">size_t</span> bytes_available()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> buffer_-&gt;size - (bufpos_ - buffer_-&gt;data.get());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">public</span>: <span class="comment">// methods</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">char</span>* begin() {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> buffer_-&gt;data.get();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* begin()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> buffer_-&gt;data.get();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">char</span>* end() {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> buffer_-&gt;data.get() + buffer_-&gt;size;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* end()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> buffer_-&gt;data.get() + buffer_-&gt;size;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">ByteBuffer</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structnetspeak_1_1invertedindex_1_1ByteBuffer_1_1buffer__type.html">   28</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structnetspeak_1_1invertedindex_1_1ByteBuffer_1_1buffer__type.html">buffer_type</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structnetspeak_1_1invertedindex_1_1ByteBuffer_1_1buffer__type.html">buffer_type</a>(<span class="keywordtype">size_t</span> initial_size);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> resize(<span class="keywordtype">size_t</span> new_size);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::unique_ptr&lt;char[]&gt; data;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">size_t</span> size;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  };</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a3c50032c48f96e530fd44f0cca3ce60c">   40</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a3c50032c48f96e530fd44f0cca3ce60c">ByteBuffer</a>(<span class="keywordtype">size_t</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ac7160f8bd36f86815662909c0722556f">size</a> = 0);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a1b38f8054c7b8c7457a22dec1df13f08">   46</a></span>&#160;  <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a1b38f8054c7b8c7457a22dec1df13f08">ByteBuffer</a>(<span class="keyword">const</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">ByteBuffer</a>&amp; buffer);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a5ebe676c53d60259a5e98c67eb08b26c">   51</a></span>&#160;  <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a5ebe676c53d60259a5e98c67eb08b26c">~ByteBuffer</a>() {}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">size_t</span> bytes_available()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> buffer_-&gt;size - (bufpos_ - buffer_-&gt;data.get());</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">public</span>: <span class="comment">// methods</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">char</span>* begin() {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> buffer_-&gt;data.get();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* begin()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> buffer_-&gt;data.get();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">char</span>* end() {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> buffer_-&gt;data.get() + buffer_-&gt;size;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* end()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> buffer_-&gt;data.get() + buffer_-&gt;size;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">void</span> clear();</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> clear();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a123a9c595224694ecdc3b55ebcf058bc">   80</a></span>&#160;  <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">ByteBuffer</a> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a123a9c595224694ecdc3b55ebcf058bc">clone</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a094616daee7e30f189c72633b9da98e8">   87</a></span>&#160;  <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">ByteBuffer</a>&amp; <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a094616daee7e30f189c72633b9da98e8">operator=</a>(<span class="keyword">const</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">ByteBuffer</a>&amp; buffer);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordtype">bool</span> get(T&amp; value) {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnetspeak_1_1value_1_1value__traits.html">value::value_traits&lt;T&gt;</a> traits_type;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (!bufpos_ || bufpos_ + <span class="keyword">sizeof</span>(value) &gt; buffer_-&gt;data.get() + buffer_-&gt;size)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* new_bufpos(traits_type::copy_from(value, bufpos_));</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    bufpos_ = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(new_bufpos);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">bool</span> put(<span class="keyword">const</span> T&amp; value) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnetspeak_1_1value_1_1value__traits.html">value::value_traits&lt;T&gt;</a> traits_type;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (traits_type::size_of(value) &gt; bytes_available())</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    bufpos_ = traits_type::copy_to(value, bufpos_);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">void</span> seek(<span class="keywordtype">size_t</span> offset);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">size_t</span> tell() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span> rewind();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordtype">void</span> read(FILE* fs);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">void</span> write(FILE* fs) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ab83184815805ed4606aa924eb9a6f42c">  118</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ab83184815805ed4606aa924eb9a6f42c">resize</a>(<span class="keywordtype">size_t</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ac7160f8bd36f86815662909c0722556f">size</a>);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ac7160f8bd36f86815662909c0722556f">  124</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ac7160f8bd36f86815662909c0722556f">size</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> buffer_-&gt;size;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* position()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">return</span> bufpos_;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  std::shared_ptr&lt;buffer_type&gt; buffer_;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">char</span>* bufpos_;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a123a9c595224694ecdc3b55ebcf058bc">   78</a></span>&#160;  <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">ByteBuffer</a> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a123a9c595224694ecdc3b55ebcf058bc">clone</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a094616daee7e30f189c72633b9da98e8">   85</a></span>&#160;  <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">ByteBuffer</a>&amp; <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a094616daee7e30f189c72633b9da98e8">operator=</a>(<span class="keyword">const</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">ByteBuffer</a>&amp; buffer);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">bool</span> get(T&amp; value) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnetspeak_1_1value_1_1value__traits.html">value::value_traits&lt;T&gt;</a> traits_type;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> (!bufpos_ || bufpos_ + <span class="keyword">sizeof</span>(value) &gt; buffer_-&gt;data.get() + buffer_-&gt;size)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* new_bufpos(traits_type::copy_from(value, bufpos_));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    bufpos_ = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(new_bufpos);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">bool</span> put(<span class="keyword">const</span> T&amp; value) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnetspeak_1_1value_1_1value__traits.html">value::value_traits&lt;T&gt;</a> traits_type;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (traits_type::size_of(value) &gt; bytes_available())</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    bufpos_ = traits_type::copy_to(value, bufpos_);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">void</span> seek(<span class="keywordtype">size_t</span> offset);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">size_t</span> tell() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">void</span> rewind();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">void</span> read(FILE* fs);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span> write(FILE* fs) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ab83184815805ed4606aa924eb9a6f42c">  116</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ab83184815805ed4606aa924eb9a6f42c">resize</a>(<span class="keywordtype">size_t</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ac7160f8bd36f86815662909c0722556f">size</a>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ac7160f8bd36f86815662909c0722556f">  122</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ac7160f8bd36f86815662909c0722556f">size</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> buffer_-&gt;size;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* position()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> bufpos_;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  std::shared_ptr&lt;buffer_type&gt; buffer_;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">char</span>* bufpos_;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;};</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;} <span class="comment">// namespace netspeak::invertedindex</span></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;} <span class="comment">// namespace netspeak::invertedindex</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// NETSPEAK_INVERTEDINDEX_BYTE_BUFFER_HPP</span></div>
-<div class="ttc" id="aclassnetspeak_1_1invertedindex_1_1ByteBuffer_html"><div class="ttname"><a href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">netspeak::invertedindex::ByteBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="ByteBuffer_8hpp_source.html#l00028">ByteBuffer.hpp:28</a></div></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// NETSPEAK_INVERTEDINDEX_BYTE_BUFFER_HPP</span></div>
+<div class="ttc" id="aclassnetspeak_1_1invertedindex_1_1ByteBuffer_html"><div class="ttname"><a href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html">netspeak::invertedindex::ByteBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="ByteBuffer_8hpp_source.html#l00026">ByteBuffer.hpp:26</a></div></div>
 <div class="ttc" id="aclassnetspeak_1_1invertedindex_1_1ByteBuffer_html_a094616daee7e30f189c72633b9da98e8"><div class="ttname"><a href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a094616daee7e30f189c72633b9da98e8">netspeak::invertedindex::ByteBuffer::operator=</a></div><div class="ttdeci">ByteBuffer &amp; operator=(const ByteBuffer &amp;buffer)</div></div>
 <div class="ttc" id="aclassnetspeak_1_1invertedindex_1_1ByteBuffer_html_a123a9c595224694ecdc3b55ebcf058bc"><div class="ttname"><a href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a123a9c595224694ecdc3b55ebcf058bc">netspeak::invertedindex::ByteBuffer::clone</a></div><div class="ttdeci">ByteBuffer clone() const</div></div>
 <div class="ttc" id="aclassnetspeak_1_1invertedindex_1_1ByteBuffer_html_a1b38f8054c7b8c7457a22dec1df13f08"><div class="ttname"><a href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a1b38f8054c7b8c7457a22dec1df13f08">netspeak::invertedindex::ByteBuffer::ByteBuffer</a></div><div class="ttdeci">ByteBuffer(const ByteBuffer &amp;buffer)</div></div>
 <div class="ttc" id="aclassnetspeak_1_1invertedindex_1_1ByteBuffer_html_a3c50032c48f96e530fd44f0cca3ce60c"><div class="ttname"><a href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a3c50032c48f96e530fd44f0cca3ce60c">netspeak::invertedindex::ByteBuffer::ByteBuffer</a></div><div class="ttdeci">ByteBuffer(size_t size=0)</div></div>
-<div class="ttc" id="aclassnetspeak_1_1invertedindex_1_1ByteBuffer_html_a5ebe676c53d60259a5e98c67eb08b26c"><div class="ttname"><a href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a5ebe676c53d60259a5e98c67eb08b26c">netspeak::invertedindex::ByteBuffer::~ByteBuffer</a></div><div class="ttdeci">~ByteBuffer()</div><div class="ttdef"><b>Definition:</b> <a href="ByteBuffer_8hpp_source.html#l00053">ByteBuffer.hpp:53</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1invertedindex_1_1ByteBuffer_html_a5ebe676c53d60259a5e98c67eb08b26c"><div class="ttname"><a href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a5ebe676c53d60259a5e98c67eb08b26c">netspeak::invertedindex::ByteBuffer::~ByteBuffer</a></div><div class="ttdeci">~ByteBuffer()</div><div class="ttdef"><b>Definition:</b> <a href="ByteBuffer_8hpp_source.html#l00051">ByteBuffer.hpp:51</a></div></div>
 <div class="ttc" id="aclassnetspeak_1_1invertedindex_1_1ByteBuffer_html_ab83184815805ed4606aa924eb9a6f42c"><div class="ttname"><a href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ab83184815805ed4606aa924eb9a6f42c">netspeak::invertedindex::ByteBuffer::resize</a></div><div class="ttdeci">void resize(size_t size)</div></div>
-<div class="ttc" id="aclassnetspeak_1_1invertedindex_1_1ByteBuffer_html_ac7160f8bd36f86815662909c0722556f"><div class="ttname"><a href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ac7160f8bd36f86815662909c0722556f">netspeak::invertedindex::ByteBuffer::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdef"><b>Definition:</b> <a href="ByteBuffer_8hpp_source.html#l00124">ByteBuffer.hpp:124</a></div></div>
-<div class="ttc" id="astructnetspeak_1_1invertedindex_1_1ByteBuffer_1_1buffer__type_html"><div class="ttname"><a href="structnetspeak_1_1invertedindex_1_1ByteBuffer_1_1buffer__type.html">netspeak::invertedindex::ByteBuffer::buffer_type</a></div><div class="ttdef"><b>Definition:</b> <a href="ByteBuffer_8hpp_source.html#l00030">ByteBuffer.hpp:30</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1invertedindex_1_1ByteBuffer_html_ac7160f8bd36f86815662909c0722556f"><div class="ttname"><a href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ac7160f8bd36f86815662909c0722556f">netspeak::invertedindex::ByteBuffer::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdef"><b>Definition:</b> <a href="ByteBuffer_8hpp_source.html#l00122">ByteBuffer.hpp:122</a></div></div>
+<div class="ttc" id="astructnetspeak_1_1invertedindex_1_1ByteBuffer_1_1buffer__type_html"><div class="ttname"><a href="structnetspeak_1_1invertedindex_1_1ByteBuffer_1_1buffer__type.html">netspeak::invertedindex::ByteBuffer::buffer_type</a></div><div class="ttdef"><b>Definition:</b> <a href="ByteBuffer_8hpp_source.html#l00028">ByteBuffer.hpp:28</a></div></div>
 <div class="ttc" id="astructnetspeak_1_1value_1_1value__traits_html"><div class="ttname"><a href="structnetspeak_1_1value_1_1value__traits.html">netspeak::value::value_traits</a></div><div class="ttdef"><b>Definition:</b> <a href="value__traits_8hpp_source.html#l00116">value_traits.hpp:116</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
