@@ -1,3 +1,2 @@
-# `netspeak.util`
-
-This is a namespace for general internal utility classes.
+\dir netspeak/util
+\brief This folder contains general internal utility classes.

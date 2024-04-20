@@ -39,6 +39,7 @@ if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME) AND NETSPEAK_BUILD_DOCS)
 	set(DOXYGEN_USE_MDFILE_AS_MAINPAGE "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
 	set(DOXYGEN_SOURCE_BROWSER "YES")
 	set(DOXYGEN_INLINE_SOURCES "YES")
+	set(DOXYGEN_IMAGE_PATH ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/docs/media)
 
 	set(DOXYGEN_GENERATE_HTML "YES")
 
@@ -57,7 +58,12 @@ if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME) AND NETSPEAK_BUILD_DOCS)
 	## Build Documentation
 	doxygen_add_docs(
 		netspeak_docs
-		${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAKE_CURRENT_SOURCE_DIR}/README.md
+		${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAKE_CURRENT_SOURCE_DIR}/README.md ${CMAKE_CURRENT_SOURCE_DIR}/docs
 		WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+	)
+
+	# Copy Files over that Doxygen has not found (hopefully Doxygen will do this automatically in the future)
+	add_custom_command(TARGET netspeak_docs POST_BUILD
+    	COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/docs/media/netspeak-banner.svg ${DOXYGEN_OUTPUT_DIRECTORY}/html/docs/media/netspeak-banner.svg
 	)
 endif()

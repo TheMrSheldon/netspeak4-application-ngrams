@@ -1,6 +1,6 @@
-# `netspeak::model`
-
-This namespace defines basic internal types that are used everywhere. All types are Netspeak specific and used across classes. These types are how our different classes communicate.
+\dir netspeak/model
+\brief  This folder defines basic internal types that are used everywhere. All types are Netspeak specific and used
+    across classes. These types are how our different classes communicate.
 
 
 ## Queries
