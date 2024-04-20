@@ -10,7 +10,6 @@
 #include "../value/pair_traits.hpp"
 #include "../value/quadruple_traits.hpp"
 #include "../value/quintuple_traits.hpp"
-#include "../value/sextuple_traits.hpp"
 #include "../value/string_traits.hpp"
 #include "../value/triple_traits.hpp"
 #include "Record.hpp"
