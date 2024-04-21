@@ -57,7 +57,7 @@ inline uint64_t directory_size(const fs::path& dir) {
 }
 
 inline void fclose(FILE* fs) {
-  if (fs == NULL)
+  if (fs == nullptr)
     return;
   if (std::fclose(fs) == -1) {
     signal_error("std::fclose failed");
@@ -66,24 +66,24 @@ inline void fclose(FILE* fs) {
 
 inline FILE* fopen(const fs::path& path, const std::string& mode) {
   FILE* fs(std::fopen(path.string().c_str(), mode.c_str()));
-  if (fs == NULL) {
+  if (fs == nullptr) {
     signal_error("std::fopen failed", path);
   }
   return fs;
 }
 
 inline void fread(void* data, size_t size, size_t count, FILE* fs) {
-  // As it turns out, simply asserting NULL is not enough. As the `std::fread`
+  // As it turns out, simply asserting nullptr is not enough. As the `std::fread`
   // spec clearly states:
   //
   // > f size or count is zero, fread returns zero and performs no other
   // > action.
   //
   // Since `data` may be the `data()` value of a vector, we have to take this
-  // into account because `data()` may return NULL for empty vectors depending
+  // into account because `data()` may return nullptr for empty vectors depending
   // on the compiler.
-  assert(data != NULL || size == 0 || count == 0);
-  assert(fs != NULL);
+  assert(data != nullptr || size == 0 || count == 0);
+  assert(fs != nullptr);
 
   if (std::fread(data, size, count, fs) != count) {
     signal_error("std::fread failed");
@@ -91,7 +91,7 @@ inline void fread(void* data, size_t size, size_t count, FILE* fs) {
 }
 
 inline void fseek(FILE* fs, long offset, int origin) {
-  assert(fs != NULL);
+  assert(fs != nullptr);
   if (std::fseek(fs, offset, origin) != 0) {
     signal_error("std::fseek failed");
   }
@@ -99,8 +99,8 @@ inline void fseek(FILE* fs, long offset, int origin) {
 
 inline void fwrite(const void* data, size_t size, size_t count, FILE* fs) {
   // Same as for `util::fread`
-  assert(data != NULL || size == 0 || count == 0);
-  assert(fs != NULL);
+  assert(data != nullptr || size == 0 || count == 0);
+  assert(fs != nullptr);
 
   if (std::fwrite(data, size, count, fs) != count) {
     signal_error("std::fwrite failed");
@@ -108,7 +108,7 @@ inline void fwrite(const void* data, size_t size, size_t count, FILE* fs) {
 }
 
 inline size_t ftell(FILE* fs) {
-  assert(fs != NULL);
+  assert(fs != nullptr);
   const long offset(std::ftell(fs));
   if (offset == -1) {
     signal_error("std::ftell failed");
@@ -117,14 +117,14 @@ inline size_t ftell(FILE* fs) {
 }
 
 inline void rewind(FILE* fs) {
-  if (fs == NULL)
+  if (fs == nullptr)
     return;
   std::rewind(fs);
 }
 
 inline FILE* tmpfile() {
   FILE* fs(std::tmpfile());
-  if (fs == NULL) {
+  if (fs == nullptr) {
     signal_error("std::tmpfile failed");
   }
   return fs;
@@ -136,7 +136,7 @@ inline const fs::path tmpdir(const fs::path& parent_dir) {
   const std::string parent_str(parent_dir.string());
   std::strncpy(tmpdir, parent_str.c_str(), parent_str.size() + 1);
   std::strncat(tmpdir, pattern.c_str(), pattern.size() + 1);
-  if (mkdtemp(tmpdir) == NULL) {
+  if (mkdtemp(tmpdir) == nullptr) {
     signal_error("mkdtemp failed");
   }
   return tmpdir;

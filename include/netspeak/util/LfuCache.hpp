@@ -153,7 +153,7 @@ public:
 private:
   // Lock mutex before calling these methods
   const insert_result insert_(const key_type& key, const std::shared_ptr<value_type>& value) {
-    const entry_type entry(value, static_cast<key_priority_pair*>(NULL));
+    const entry_type entry(value, static_cast<key_priority_pair*>(nullptr));
     insert_result result(storage_.insert(std::make_pair(key, entry)));
     if (result.second) { // The key-value pair was inserted
       if (size() == capacity()) {

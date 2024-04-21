@@ -29,7 +29,7 @@ public:
 
   static const size_t data_file_size_max = 1024 * 1024 * 1024; // 1GB
 
-  explicit StorageWriter(const fs::path& directory) : directory_(directory), data_file_cnt_(), data_wfs_(NULL) {
+  explicit StorageWriter(const fs::path& directory) : directory_(directory), data_file_cnt_(), data_wfs_(nullptr) {
     if (!fs::exists(directory)) {
       util::throw_invalid_argument("Does not exist", directory);
     }
@@ -46,12 +46,12 @@ public:
   }
 
   void close() {
-    if (data_wfs_ == NULL)
+    if (data_wfs_ == nullptr)
       return;
 
     table_ofs_.close();
     util::fclose(data_wfs_);
-    data_wfs_ = NULL;
+    data_wfs_ = nullptr;
     const fs::path table_dir(directory_ / k_table_dir);
     if (!fs::create_directory(table_dir)) {
       util::throw_invalid_argument("Cannot create", table_dir);
@@ -68,7 +68,7 @@ public:
       util::throw_invalid_argument("Cannot write empty key");
     }
     const size_t postlist_size(postlist.byte_size());
-    if (data_wfs_ == NULL) {
+    if (data_wfs_ == nullptr) {
       const fs::path data_dir(directory_ / k_data_dir);
       if (!fs::create_directory(data_dir)) {
         util::throw_invalid_argument("Cannot create", data_dir);

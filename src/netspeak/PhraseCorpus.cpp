@@ -122,7 +122,7 @@ std::vector<Phrase> PhraseCorpus::read_phrases(const std::vector<Phrase::Id>& ph
     buffer_pos += size;
   }
 
-  util::check(::lio_listio(LIO_WAIT, aio_read_ptrs.data(), count, NULL) != -1, __func__, "lio_listio failed");
+  util::check(::lio_listio(LIO_WAIT, aio_read_ptrs.data(), count, nullptr) != -1, __func__, "lio_listio failed");
 
   std::vector<Phrase> phrases;
   phrases.reserve(count);

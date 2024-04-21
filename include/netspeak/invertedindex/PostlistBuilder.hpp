@@ -55,7 +55,7 @@ public:
       swap_.pagesize_ = page_size_;
       postlist.reset((head_.value_size == 0) ? new Postlist<value_type>(head_, swap_, sizes_)
                                              : new Postlist<value_type>(head_, swap_));
-      swap_.stream_ = NULL; // postlist gets file stream ownership
+      swap_.stream_ = nullptr; // postlist gets file stream ownership
     } else {
       page_type page(head_.total_size);
       for (auto it(values_.begin()); it != values_.end(); ++it) {
@@ -104,7 +104,7 @@ private:
   }
 
   bool has_swap_() const {
-    return swap_.stream_ != NULL;
+    return swap_.stream_ != nullptr;
   }
 
 private:

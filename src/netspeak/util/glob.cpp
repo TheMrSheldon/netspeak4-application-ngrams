@@ -19,7 +19,7 @@ void glob(const std::string& pattern, std::vector<std::string>& paths) {
   memset(&glob_result, 0, sizeof(glob_result));
 
   // do the glob operation
-  int return_value = glob(pattern.c_str(), GLOB_TILDE, NULL, &glob_result);
+  int return_value = glob(pattern.c_str(), GLOB_TILDE, nullptr, &glob_result);
   if (return_value != 0) {
     globfree(&glob_result);
     std::stringstream ss;

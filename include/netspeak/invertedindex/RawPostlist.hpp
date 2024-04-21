@@ -31,7 +31,7 @@ public:
 
   RawPostlist(const Head& head, const swap_type& swap)
       : iter_(new constant_size_iter(head.value_count, head.value_size, swap)), head_(head) {
-    assert(swap.stream_ != NULL);
+    assert(swap.stream_ != nullptr);
   }
 
   RawPostlist(const Head& head, const page_type& page, const variable_size_iter::size_vector& sizes)
@@ -42,7 +42,7 @@ public:
   RawPostlist(const Head& head, const swap_type& swap, const variable_size_iter::size_vector& sizes)
       : iter_(new variable_size_iter(sizes, swap)), head_(head) {
     assert(head.value_count == sizes.size());
-    assert(swap.stream_ != NULL);
+    assert(swap.stream_ != nullptr);
   }
 
   virtual ~RawPostlist(){};

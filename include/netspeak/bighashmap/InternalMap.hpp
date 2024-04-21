@@ -41,7 +41,7 @@ private:
   InternalMap(const fs::path& mph_file, const fs::path& dat_file) : Base(mph_file) {
     const Entry entry;
     data_ = static_cast<char*>(std::calloc(this->size(), EntryTraits::size_of(entry)));
-    if (data_ == NULL) {
+    if (data_ == nullptr) {
       util::throw_runtime_error("Cannot allocate memory", this->size() * EntryTraits::size_of(entry));
     }
     FILE* dat_rfs = util::fopen(dat_file, "rb");

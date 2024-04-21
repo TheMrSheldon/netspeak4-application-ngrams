@@ -1,21 +1,19 @@
+#include <QueryLexer.h>
+#include <QueryParser.h>
+#include <antlr4-runtime.h>
 #include <dirent.h>
 #include <stdio.h>
 
+#include <antlr4/QueryErrorHandler.hpp>
+#include <antlr4/parse.hpp>
 #include <fstream>
 #include <iostream>
+#include <netspeak/Dictionaries.hpp>
+#include <netspeak/error.hpp>
 
 #include <boost/test/unit_test.hpp>
 
 #include "paths.hpp"
-
-#include <antlr4-runtime.h>
-#include <antlr4/QueryErrorHandler.hpp>
-#include <QueryLexer.h>
-#include <QueryParser.h>
-#include <antlr4/parse.hpp>
-
-#include <netspeak/Dictionaries.hpp>
-#include <netspeak/error.hpp>
 
 using namespace antlr4;
 
@@ -24,7 +22,7 @@ BOOST_AUTO_TEST_CASE(test_detection) {
 
   DIR *dir = opendir(path.c_str());
 
-  if (dir == NULL) {
+  if (dir == nullptr) {
     std::cerr << "no such directory" << std::endl;
     return;
   }
@@ -32,7 +30,7 @@ BOOST_AUTO_TEST_CASE(test_detection) {
 
   std::vector<std::string> files;
 
-  while ((pdir = readdir(dir)) != NULL) {
+  while ((pdir = readdir(dir)) != nullptr) {
     files.push_back(path + "/" + pdir->d_name);
   }
   closedir(dir);

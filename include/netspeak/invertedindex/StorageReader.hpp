@@ -111,7 +111,7 @@ public:
    * the beginning by the value of \c begin and at the end by the value
    * of \c length. If a mapping for \c key exists but the other parameters
    * truncate the postlist completely, then an empty postlist will be
-   * returned. Otherwise, if no mapping exists at all NULL will be returned
+   * returned. Otherwise, if no mapping exists at all, nullptr will be returned
    * to indicate that case.
    *
    * @param key the key of the wanted postlist.

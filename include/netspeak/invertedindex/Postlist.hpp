@@ -31,7 +31,7 @@ public:
 
   bool next(T& value) const {
     const char* buffer(RawPostlist::next());
-    if (buffer == NULL)
+    if (buffer == nullptr)
       return false;
     value::value_traits<value_type>::copy_from(value, buffer);
     return true;

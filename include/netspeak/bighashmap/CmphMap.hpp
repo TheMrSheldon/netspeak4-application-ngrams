@@ -33,12 +33,12 @@ public:
   CmphMap(const CmphMap&) = delete;
   CmphMap& operator=(const CmphMap&) = delete;
 
-  explicit CmphMap(const std::filesystem::path& mph_file) : algo_(Algorithm::None), mphf_(NULL) {
+  explicit CmphMap(const std::filesystem::path& mph_file) : algo_(Algorithm::None), mphf_(nullptr) {
     FILE* fd = util::fopen(mph_file, "rb");
     algo_ = ExtractAlgorithm(fd);
     util::rewind(fd);
     mphf_ = cmph_load(fd);
-    if (mphf_ == NULL) {
+    if (mphf_ == nullptr) {
       util::throw_runtime_error("Cannot load MPHF from", mph_file);
     }
     util::fclose(fd);

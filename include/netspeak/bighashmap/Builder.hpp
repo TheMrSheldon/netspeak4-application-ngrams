@@ -74,12 +74,12 @@ private:
     // Set current locale to C to enable byte-wise UTF-8 string comparison.
     const std::string command = "export LC_ALL=C && sort " + key_file.string() + " | uniq -d";
     FILE* file = popen(command.c_str(), "r");
-    if (file == NULL) {
+    if (file == nullptr) {
       util::throw_runtime_error("Cannot access the result of ", command);
     }
     char line[PATH_MAX];
     std::string duplicate_keys;
-    while (std::fgets(line, sizeof(line), file) != NULL) {
+    while (std::fgets(line, sizeof(line), file) != nullptr) {
       duplicate_keys += line;
     }
     if (!duplicate_keys.empty()) {
@@ -106,7 +106,7 @@ private:
     cmph_config_destroy(config);
     cmph_io_nlfile_adapter_destroy(source);
     util::fclose(key_rfs);
-    if (mphf == NULL) {
+    if (mphf == nullptr) {
       util::throw_runtime_error("Cannot generate MPHF from", key_file);
     }
     const fs::path mph_fn(key_file.string() + ".mph");
@@ -120,7 +120,7 @@ private:
   static fs::path BuildHashTable(const fs::path& mph_file, const fs::path& rec_file) {
     FILE* mph_rfs(util::fopen(mph_file, "rb"));
     cmph_t* mph(cmph_load(mph_rfs));
-    if (mph == NULL) {
+    if (mph == nullptr) {
       util::throw_runtime_error("Cannot load MPHF from", mph_file);
     }
     std::ifstream ifs(rec_file);
@@ -131,7 +131,7 @@ private:
     Entry entry;
     const size_t table_size(cmph_size(mph) * EntryTraits::size_of(entry));
     char* table(static_cast<char*>(std::malloc(table_size)));
-    if (table == NULL) {
+    if (table == nullptr) {
       util::throw_runtime_error("Cannot allocate memory", table_size);
     }
 

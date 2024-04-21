@@ -34,7 +34,7 @@ struct page_type {
 struct swap_type {
   static const size_t default_pagesize = 5 * 1024 * 1024; // 5 MiB
 
-  swap_type() : pagesize_(default_pagesize), offset_(0), stream_(NULL) {}
+  swap_type() : pagesize_(default_pagesize), offset_(0), stream_(nullptr) {}
 
   explicit swap_type(FILE* fs, size_t pagesize = default_pagesize)
       : pagesize_(pagesize), offset_(util::ftell(fs)), stream_(fs) {
@@ -114,7 +114,7 @@ struct constant_size_iter : public iterator_type {
 
   inline const char* next() override {
     if (page_.index_cur_ == size())
-      return NULL;
+      return nullptr;
     if (page_.index_cur_ == page_.index_end_)
       swap();
     page_.buffer_.seek((page_.index_cur_++ - page_.index_begin_) * size_);
@@ -123,7 +123,7 @@ struct constant_size_iter : public iterator_type {
 
   inline void rewind() override {
     page_.index_cur_ = 0;
-    if (swap_.stream_ != NULL) {
+    if (swap_.stream_ != nullptr) {
       util::fseek(swap_.stream_, swap_.offset_, SEEK_SET);
       page_.index_begin_ = 0;
       page_.index_end_ = 0;
@@ -137,7 +137,7 @@ struct constant_size_iter : public iterator_type {
 
   inline void write(FILE* fs) override {
     rewind();
-    if (swap_.stream_ == NULL) {
+    if (swap_.stream_ == nullptr) {
       page_.buffer_.write(fs);
     } else {
       while (swap() != 0) {
@@ -189,7 +189,7 @@ struct variable_size_iter : public iterator_type {
 
   inline const char* next() override {
     if (page_.index_cur_ == size())
-      return NULL;
+      return nullptr;
     if (page_.index_cur_ == page_.index_end_)
       swap();
     page_.buffer_.seek(offset_);
@@ -200,7 +200,7 @@ struct variable_size_iter : public iterator_type {
   inline void rewind() override {
     offset_ = 0;
     page_.index_cur_ = 0;
-    if (swap_.stream_ != NULL) {
+    if (swap_.stream_ != nullptr) {
       util::fseek(swap_.stream_, swap_.offset_, SEEK_SET);
       page_.index_begin_ = 0;
       page_.index_end_ = 0;
@@ -215,7 +215,7 @@ struct variable_size_iter : public iterator_type {
   inline void write(FILE* fs) override {
     rewind();
     util::fwrite(sizes_.data(), sizeof(size_vector::value_type), sizes_.size(), fs);
-    if (swap_.stream_ == NULL) {
+    if (swap_.stream_ == nullptr) {
       page_.buffer_.write(fs);
     } else {
       while (swap() != 0) {

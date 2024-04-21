@@ -15,7 +15,7 @@ std::mutex& get_log_mutex() {
 
 std::ostream& print_timestamp_to(std::ostream& os) {
   if (os) {
-    const time_t rawtime(std::time(NULL));
+    const time_t rawtime(std::time(nullptr));
     struct tm* now(localtime(&rawtime));
     char timestr[64];
     strftime(timestr, sizeof(timestr), "%Y-%m-%d %H:%M:%S", now);
