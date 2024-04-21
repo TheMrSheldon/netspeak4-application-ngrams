@@ -1,7 +1,8 @@
+#include <format>
 #include <netspeak/error.hpp>
 #include <netspeak/model/NormQuery.hpp>
-#include <netspeak/util/exception.hpp>
 #include <ostream>
+#include <stdexcept>
 
 
 namespace netspeak::model {

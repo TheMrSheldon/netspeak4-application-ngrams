@@ -1,4 +1,6 @@
+#include <format>
 #include <netspeak/invertedindex/ByteBuffer.hpp>
+#include <stdexcept>
 
 namespace netspeak::invertedindex {
 
@@ -44,7 +46,7 @@ ByteBuffer& ByteBuffer::operator=(const ByteBuffer& buffer) {
 
 void ByteBuffer::seek(size_t offset) {
   if (offset > size()) {
-    util::throw_out_of_range("ByteBuffer::seek failed", offset);
+    throw std::out_of_range(std::format("ByteBuffer::seek failed : {}", offset));
   }
   bufpos_ = buffer_->data.get() + offset;
 }

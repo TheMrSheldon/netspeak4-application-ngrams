@@ -17,6 +17,7 @@
 #include <netspeak/invertedindex/Searcher.hpp>
 #include <netspeak/model/Phrase.hpp>
 #include <netspeak/util/check.hpp>
+#include <netspeak/util/std_path_formatter.hpp>
 #include <netspeak/util/systemio.hpp>
 #include <sstream>
 #include <string>
