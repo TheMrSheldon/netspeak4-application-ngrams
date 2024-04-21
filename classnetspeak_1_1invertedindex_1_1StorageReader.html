@@ -289,7 +289,7 @@ template&lt;typename T , bool ThreadSafe&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the postlist for a given <code>key</code>, which may be truncated at the the beginning by the value of <code>begin</code> and at the end by the value of <code>length</code>. If a mapping for <code>key</code> exists but the other parameters truncate the postlist completely, then an empty postlist will be returned. Otherwise, if no mapping exists at all NULL will be returned to indicate that case.</p>
+<p>Returns the postlist for a given <code>key</code>, which may be truncated at the the beginning by the value of <code>begin</code> and at the end by the value of <code>length</code>. If a mapping for <code>key</code> exists but the other parameters truncate the postlist completely, then an empty postlist will be returned. Otherwise, if no mapping exists at all, nullptr will be returned to indicate that case.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>the key of the wanted postlist. </td></tr>

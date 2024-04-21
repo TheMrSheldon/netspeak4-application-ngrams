@@ -1,0 +1,6 @@
+<map id="netspeak/util/std_path_formatter.hpp" name="netspeak/util/std_path_formatter.hpp">
+<area shape="rect" id="node1" title="Defines an std::formatter for std::filesystem::path. MUST be deleted when C++26 is available with tha..." alt="" coords="70,5,237,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,96,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="120,95,187,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="211,95,269,121"/>
+</map>

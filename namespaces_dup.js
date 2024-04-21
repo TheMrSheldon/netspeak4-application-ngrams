@@ -266,5 +266,13 @@ var namespaces_dup =
       [ "IndexPostlist", "indexing_8hpp.html#a76e5b3f3f90095a7839da6ce1b122c57", null ],
       [ "MergeDuplicates", "indexing_8hpp.html#a50fb630a191a82d45d0f54ae4f63f8b3", null ],
       [ "SetReadOnly", "indexing_8hpp.html#a3fda4b2d4a98783976fea351c52cf444", null ]
+    ] ],
+    [ "std", null, [
+      [ "formatter< netspeak::invertedindex::Record< T > >", "structstd_1_1formatter_3_01netspeak_1_1invertedindex_1_1Record_3_01T_01_4_01_4.html", "structstd_1_1formatter_3_01netspeak_1_1invertedindex_1_1Record_3_01T_01_4_01_4" ],
+      [ "formatter< std::filesystem::path >", "structstd_1_1formatter_3_01std_1_1filesystem_1_1path_01_4.html", "structstd_1_1formatter_3_01std_1_1filesystem_1_1path_01_4" ],
+      [ "formatter< std::filesystem::directory_entry >", "structstd_1_1formatter_3_01std_1_1filesystem_1_1directory__entry_01_4.html", "structstd_1_1formatter_3_01std_1_1filesystem_1_1directory__entry_01_4" ],
+      [ "formatter< netspeak::value::pair< T1, T2 > >", "structstd_1_1formatter_3_01netspeak_1_1value_1_1pair_3_01T1_00_01T2_01_4_01_4.html", "structstd_1_1formatter_3_01netspeak_1_1value_1_1pair_3_01T1_00_01T2_01_4_01_4" ],
+      [ "formatter< netspeak::value::quadruple< T1, T2, T3, T4 > >", "structstd_1_1formatter_3_01netspeak_1_1value_1_1quadruple_3_01T1_00_01T2_00_01T3_00_01T4_01_4_01_4.html", "structstd_1_1formatter_3_01netspeak_1_1value_1_1quadruple_3_01T1_00_01T2_00_01T3_00_01T4_01_4_01_4" ],
+      [ "formatter< netspeak::value::triple< T1, T2, T3 > >", "structstd_1_1formatter_3_01netspeak_1_1value_1_1triple_3_01T1_00_01T2_00_01T3_01_4_01_4.html", "structstd_1_1formatter_3_01netspeak_1_1value_1_1triple_3_01T1_00_01T2_00_01T3_01_4_01_4" ]
     ] ]
 ];

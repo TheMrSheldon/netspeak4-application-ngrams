@@ -305,7 +305,7 @@ $(document).ready(function(){initNavTree('UnsortedInput_8hpp_source.html',''); i
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordtype">void</span> insert_(<span class="keyword">const</span> <a class="code" href="classnetspeak_1_1invertedindex_1_1Record.html">record_type</a>&amp; record) {</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">if</span> (!record.write(bucket_fs_[util::hash32(record.key()) % bucket_fs_.size()])) {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      util::throw_runtime_error(<span class="stringliteral">&quot;Cannot write record&quot;</span>, record);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="keywordflow">throw</span> std::runtime_error(std::format(<span class="stringliteral">&quot;Cannot write record : {}&quot;</span>, record));</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">// do rehashing, if the maximal bucket size exceeds</span></div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">if</span> (this-&gt;stats().total_size / bucket_fs_.size() &gt; max_bucket_size_) {</div>

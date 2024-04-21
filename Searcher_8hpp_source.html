@@ -250,31 +250,30 @@ $(document).ready(function(){initNavTree('Searcher_8hpp_source.html',''); initRe
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> assert_properties(<span class="keyword">const</span> Properties&amp; properties) {</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (properties.version_number != Properties::k_version_number) {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      std::ostringstream oss;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      oss &lt;&lt; <span class="stringliteral">&quot;The version number of the index you want load is &quot;</span> &lt;&lt; properties.version_number</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;          &lt;&lt; <span class="stringliteral">&quot;, but your installed library is of different version &quot;</span> &lt;&lt; Properties::k_version_number</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;          &lt;&lt; <span class="stringliteral">&quot;. Please install the correct library.&quot;</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      util::throw_domain_error(<span class="stringliteral">&quot;Version conflict&quot;</span>, oss.str());</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// check value type</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">const</span> std::string tn(value::value_traits&lt;Value&gt;::type_name());</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (tn != std::string(properties.value_type)) {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      std::ostringstream oss;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      oss &lt;&lt; <span class="stringliteral">&quot;The value type of the index you want load is &quot;</span> &lt;&lt; properties.value_type</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;          &lt;&lt; <span class="stringliteral">&quot;, but your value type parameterization is &quot;</span> &lt;&lt; tn &lt;&lt; <span class="stringliteral">&quot;. Please reload with the correct value type.&quot;</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      util::throw_domain_error(<span class="stringliteral">&quot;Wrong value type&quot;</span>, oss.str());</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  Configuration config_;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  Properties props_;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  StorageReader&lt;Value, ThreadSafe&gt; storage_;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;};</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;} <span class="comment">// namespace netspeak::invertedindex</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// NETSPEAK_INVERTEDINDEX_SEARCHER_HPP</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keywordflow">throw</span> std::domain_error(</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;          std::format(<span class="stringliteral">&quot;Version conflict : The version number of the index you want to load, is {}, but your installed &quot;</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                      <span class="stringliteral">&quot;library is of the different version {}. Please install the correct library.&quot;</span>,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                      properties.version_number, Properties::k_version_number));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">// check value type</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">const</span> std::string tn(value::value_traits&lt;Value&gt;::type_name());</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">if</span> (tn != std::string(properties.value_type)) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordflow">throw</span> std::domain_error(</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;          std::format(<span class="stringliteral">&quot;Wrong value type : The value type of the index you want to load, is {}, but your value type &quot;</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                      <span class="stringliteral">&quot;parameterization is {}. Please reload with the correct value type.&quot;</span>,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                      properties.value_type, tn));</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  Configuration config_;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  Properties props_;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  StorageReader&lt;Value, ThreadSafe&gt; storage_;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;} <span class="comment">// namespace netspeak::invertedindex</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// NETSPEAK_INVERTEDINDEX_SEARCHER_HPP</span></div>
 <div class="ttc" id="aclassnetspeak_1_1Configuration_html"><div class="ttname"><a href="classnetspeak_1_1Configuration.html">netspeak::Configuration</a></div><div class="ttdef"><b>Definition:</b> <a href="Configuration_8hpp_source.html#l00016">Configuration.hpp:16</a></div></div>
 <div class="ttc" id="aclassnetspeak_1_1invertedindex_1_1Configuration_html"><div class="ttname"><a href="classnetspeak_1_1invertedindex_1_1Configuration.html">netspeak::invertedindex::Configuration</a></div><div class="ttdef"><b>Definition:</b> <a href="invertedindex_2Configuration_8hpp_source.html#l00046">Configuration.hpp:46</a></div></div>
 <div class="ttc" id="aclassnetspeak_1_1invertedindex_1_1RawSearcher_html"><div class="ttname"><a href="classnetspeak_1_1invertedindex_1_1RawSearcher.html">netspeak::invertedindex::RawSearcher</a></div><div class="ttdef"><b>Definition:</b> <a href="RawSearcher_8hpp_source.html#l00018">RawSearcher.hpp:18</a></div></div>

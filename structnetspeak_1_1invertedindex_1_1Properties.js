@@ -7,7 +7,7 @@ var structnetspeak_1_1invertedindex_1_1Properties =
     [ "print", "structnetspeak_1_1invertedindex_1_1Properties.html#a755129bd2d2a65e91851bb2e2a2e1d4a", null ],
     [ "read", "structnetspeak_1_1invertedindex_1_1Properties.html#ab68dc5c9ff901034a32d0d8b89a9f574", null ],
     [ "write", "structnetspeak_1_1invertedindex_1_1Properties.html#a87ba24f5097e993de6077cebcf4f5f3a", null ],
-    [ "k_version_number", "structnetspeak_1_1invertedindex_1_1Properties.html#a56a9ad82a875470ebd2935901c23726f", null ],
+    [ "k_version_number", "structnetspeak_1_1invertedindex_1_1Properties.html#a12f01dffa8ebc3f308544069727d9fa3", null ],
     [ "key_count", "structnetspeak_1_1invertedindex_1_1Properties.html#a1098bc93bc620981e8867ca1f30a6691", null ],
     [ "total_size", "structnetspeak_1_1invertedindex_1_1Properties.html#aea1e8f877d51986785a8cfc78f19c001", null ],
     [ "value_count", "structnetspeak_1_1invertedindex_1_1Properties.html#a442ab57d4676b981a41b3473cddb0a31", null ],

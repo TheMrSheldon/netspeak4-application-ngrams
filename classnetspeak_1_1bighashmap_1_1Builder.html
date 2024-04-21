@@ -228,7 +228,7 @@ static std::vector&lt; fs::path &gt;&#160;</td><td class="memItemRight" valign="
 class netspeak::bighashmap::Builder&lt; ValueT, TraitsT &gt;</h3>
 
 
-<p class="definition">Definition at line <a class="el" href="Builder_8hpp_source.html#l00028">28</a> of file <a class="el" href="Builder_8hpp_source.html">Builder.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Builder_8hpp_source.html#l00029">29</a> of file <a class="el" href="Builder_8hpp_source.html">Builder.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aee77cc2f04280bd3b36aad2c7e22c52b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee77cc2f04280bd3b36aad2c7e22c52b">&#9670;&nbsp;</a></span>BuildHashFunction()</h2>
@@ -267,29 +267,29 @@ template&lt;typename ValueT , typename TraitsT  = value::value_traits&lt;ValueT&
 </div><div class="memdoc">
 <p>Generates a minimal perfect hash function from the given key file. Note that the entire key file will be loaded into memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="Builder_8hpp_source.html#l00097">97</a> of file <a class="el" href="Builder_8hpp_source.html">Builder.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                                                               {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (!IsUnique(key_file)) {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      util::throw_runtime_error(<span class="stringliteral">&quot;Keys are not unique&quot;</span>);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    FILE* key_rfs = util::fopen(key_file, <span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    cmph_io_adapter_t* source(cmph_io_nlfile_adapter(key_rfs));</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    cmph_config_t* config(cmph_config_new(source));</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    cmph_config_set_algo(config, <span class="keyword">static_cast&lt;</span>CMPH_ALGO<span class="keyword">&gt;</span>(algorithm));</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    cmph_t* mphf(cmph_new(config));</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    cmph_config_destroy(config);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    cmph_io_nlfile_adapter_destroy(source);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    util::fclose(key_rfs);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">if</span> (mphf == NULL) {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      util::throw_runtime_error(<span class="stringliteral">&quot;Cannot generate MPHF from&quot;</span>, key_file);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">const</span> fs::path mph_fn(key_file.string() + <span class="stringliteral">&quot;.mph&quot;</span>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    FILE* mph_wfs(util::fopen(mph_fn, <span class="stringliteral">&quot;wb&quot;</span>));</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    cmph_dump(mphf, mph_wfs);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    util::fclose(mph_wfs);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    cmph_destroy(mphf);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> mph_fn;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Builder_8hpp_source.html#l00098">98</a> of file <a class="el" href="Builder_8hpp_source.html">Builder.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                                                               {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> (!IsUnique(key_file)) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Keys are not unique&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    FILE* key_rfs = util::fopen(key_file, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    cmph_io_adapter_t* source(cmph_io_nlfile_adapter(key_rfs));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    cmph_config_t* config(cmph_config_new(source));</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    cmph_config_set_algo(config, <span class="keyword">static_cast&lt;</span>CMPH_ALGO<span class="keyword">&gt;</span>(algorithm));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    cmph_t* mphf(cmph_new(config));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    cmph_config_destroy(config);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    cmph_io_nlfile_adapter_destroy(source);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    util::fclose(key_rfs);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">if</span> (mphf == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keywordflow">throw</span> std::runtime_error(std::format(<span class="stringliteral">&quot;Cannot generate MPHF from : {}&quot;</span>, key_file));</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">const</span> fs::path mph_fn(key_file.string() + <span class="stringliteral">&quot;.mph&quot;</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    FILE* mph_wfs(util::fopen(mph_fn, <span class="stringliteral">&quot;wb&quot;</span>));</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    cmph_dump(mphf, mph_wfs);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    util::fclose(mph_wfs);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    cmph_destroy(mphf);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> mph_fn;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>

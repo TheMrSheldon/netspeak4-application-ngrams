@@ -166,11 +166,11 @@ $(document).ready(function(){initNavTree('value__traits_8hpp_source.html',''); i
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define NETSPEAK_VALUE_VALUE_TRAITS_HPP</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../util/exception.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;format&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>netspeak::value {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
@@ -317,7 +317,7 @@ $(document).ready(function(){initNavTree('value__traits_8hpp_source.html',''); i
 <div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="structnetspeak_1_1value_1_1value__traits.html#ac31a9953614e416777f4652b215bd560">  159</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="structnetspeak_1_1value_1_1value__traits.html#ac31a9953614e416777f4652b215bd560">parse_from</a>(value_type&amp; value, std::istream&amp; is) {</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    is &gt;&gt; value;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">if</span> (is.fail()) {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      util::throw_runtime_error(<span class="stringliteral">&quot;Reading next &quot;</span> + std::string(type_name()) + <span class="stringliteral">&quot; from input stream failed.&quot;</span>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <span class="keywordflow">throw</span> std::runtime_error(std::format(<span class="stringliteral">&quot;Reading next {} from input stream failed.&quot;</span>, type_name()));</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">if</span> (is.peek() == tuple_element_separator)</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      is.get();</div>

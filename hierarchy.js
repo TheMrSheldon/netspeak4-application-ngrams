@@ -38,6 +38,14 @@ var hierarchy =
     [ "netspeak::QueryProcessor< RetrievalStrategyTag >::equal", "structnetspeak_1_1QueryProcessor_1_1equal.html", null ],
     [ "netspeak::error_message", "structnetspeak_1_1error__message.html", null ],
     [ "netspeak::util::FileDescriptor", "structnetspeak_1_1util_1_1FileDescriptor.html", null ],
+    [ "std::formatter", null, [
+      [ "std::formatter< netspeak::invertedindex::Record< T > >", "structstd_1_1formatter_3_01netspeak_1_1invertedindex_1_1Record_3_01T_01_4_01_4.html", null ],
+      [ "std::formatter< netspeak::value::pair< T1, T2 > >", "structstd_1_1formatter_3_01netspeak_1_1value_1_1pair_3_01T1_00_01T2_01_4_01_4.html", null ],
+      [ "std::formatter< netspeak::value::quadruple< T1, T2, T3, T4 > >", "structstd_1_1formatter_3_01netspeak_1_1value_1_1quadruple_3_01T1_00_01T2_00_01T3_00_01T4_01_4_01_4.html", null ],
+      [ "std::formatter< netspeak::value::triple< T1, T2, T3 > >", "structstd_1_1formatter_3_01netspeak_1_1value_1_1triple_3_01T1_00_01T2_00_01T3_01_4_01_4.html", null ],
+      [ "std::formatter< std::filesystem::directory_entry >", "structstd_1_1formatter_3_01std_1_1filesystem_1_1directory__entry_01_4.html", null ],
+      [ "std::formatter< std::filesystem::path >", "structstd_1_1formatter_3_01std_1_1filesystem_1_1path_01_4.html", null ]
+    ] ],
     [ "netspeak::value::generator< T >", "structnetspeak_1_1value_1_1generator.html", null ],
     [ "netspeak::value::generator< big_string >", "structnetspeak_1_1value_1_1generator_3_01big__string_01_4.html", null ],
     [ "netspeak::value::generator< pair< T1, T2 > >", "structnetspeak_1_1value_1_1generator_3_01pair_3_01T1_00_01T2_01_4_01_4.html", null ],
