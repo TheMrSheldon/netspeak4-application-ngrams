@@ -87,7 +87,7 @@ var annotated_dup =
         [ "FileDescriptor", "structnetspeak_1_1util_1_1FileDescriptor.html", "structnetspeak_1_1util_1_1FileDescriptor" ],
         [ "JsonWriter", "classnetspeak_1_1util_1_1JsonWriter.html", "classnetspeak_1_1util_1_1JsonWriter" ],
         [ "LfuCache", "classnetspeak_1_1util_1_1LfuCache.html", "classnetspeak_1_1util_1_1LfuCache" ],
-        [ "Mut", "classnetspeak_1_1util_1_1Mut.html", "classnetspeak_1_1util_1_1Mut" ],
+        [ "Lockable", "classnetspeak_1_1util_1_1Lockable.html", "classnetspeak_1_1util_1_1Lockable" ],
         [ "format_properties_error", "structnetspeak_1_1util_1_1format__properties__error.html", "structnetspeak_1_1util_1_1format__properties__error" ],
         [ "StringIdMap", "classnetspeak_1_1util_1_1StringIdMap.html", "classnetspeak_1_1util_1_1StringIdMap" ],
         [ "tracable_logic_error", "structnetspeak_1_1util_1_1tracable__logic__error.html", "structnetspeak_1_1util_1_1tracable__logic__error" ],

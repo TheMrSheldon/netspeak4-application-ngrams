@@ -178,9 +178,9 @@ Collaboration diagram for netspeak::service::RequestLogger:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnetspeak_1_1service_1_1RequestLogger__coll__graph.png" border="0" usemap="#anetspeak_1_1service_1_1RequestLogger_coll__map" alt="Collaboration graph"/></div>
 <map name="anetspeak_1_1service_1_1RequestLogger_coll__map" id="anetspeak_1_1service_1_1RequestLogger_coll__map">
-<area shape="rect" title=" " alt="" coords="121,153,267,195"/>
+<area shape="rect" title=" " alt="" coords="129,153,275,195"/>
 <area shape="rect" title=" " alt="" coords="5,13,193,39"/>
-<area shape="rect" href="classnetspeak_1_1util_1_1Mut.html" title=" " alt="" coords="218,5,362,47"/>
+<area shape="rect" href="classnetspeak_1_1util_1_1Lockable.html" title=" " alt="" coords="218,5,394,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -207,18 +207,18 @@ std::unique_ptr&lt; NetspeakService::Service &gt;&#160;</td><td class="memItemRi
 <tr class="memitem:a15c6ea3acc447e73368075fdb02177fe"><td class="memItemLeft" align="right" valign="top"><a id="a15c6ea3acc447e73368075fdb02177fe"></a>
 std::atomic&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>req_counter_</b></td></tr>
 <tr class="separator:a15c6ea3acc447e73368075fdb02177fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae646e14cd38414ec2c3fddc28b1ddf2f"><td class="memItemLeft" align="right" valign="top"><a id="ae646e14cd38414ec2c3fddc28b1ddf2f"></a>
-<a class="el" href="classnetspeak_1_1util_1_1Mut.html">util::Mut</a>&lt; std::ofstream &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>f_search_req_</b></td></tr>
-<tr class="separator:ae646e14cd38414ec2c3fddc28b1ddf2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a400acb80779c0b6426a3d5a688083d3f"><td class="memItemLeft" align="right" valign="top"><a id="a400acb80779c0b6426a3d5a688083d3f"></a>
-<a class="el" href="classnetspeak_1_1util_1_1Mut.html">util::Mut</a>&lt; std::ofstream &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>f_search_error</b></td></tr>
-<tr class="separator:a400acb80779c0b6426a3d5a688083d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf2e8a6c5a274d569b2fc9d27ca0a4c0"><td class="memItemLeft" align="right" valign="top"><a id="acf2e8a6c5a274d569b2fc9d27ca0a4c0"></a>
-<a class="el" href="classnetspeak_1_1util_1_1Mut.html">util::Mut</a>&lt; std::ofstream &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>f_get_corpora_req_</b></td></tr>
-<tr class="separator:acf2e8a6c5a274d569b2fc9d27ca0a4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22ecbe3cb017d0149c82f6fb8a0b352d"><td class="memItemLeft" align="right" valign="top"><a id="a22ecbe3cb017d0149c82f6fb8a0b352d"></a>
-<a class="el" href="classnetspeak_1_1util_1_1Mut.html">util::Mut</a>&lt; std::ofstream &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>f_get_corpora_error</b></td></tr>
-<tr class="separator:a22ecbe3cb017d0149c82f6fb8a0b352d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab10ddd0bd76211a76b5b83a08bac1bff"><td class="memItemLeft" align="right" valign="top"><a id="ab10ddd0bd76211a76b5b83a08bac1bff"></a>
+<a class="el" href="classnetspeak_1_1util_1_1Lockable.html">util::Lockable</a>&lt; std::ofstream &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>f_search_req_</b></td></tr>
+<tr class="separator:ab10ddd0bd76211a76b5b83a08bac1bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82982778b2d7bdd11183a36d5cdd7035"><td class="memItemLeft" align="right" valign="top"><a id="a82982778b2d7bdd11183a36d5cdd7035"></a>
+<a class="el" href="classnetspeak_1_1util_1_1Lockable.html">util::Lockable</a>&lt; std::ofstream &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>f_search_error</b></td></tr>
+<tr class="separator:a82982778b2d7bdd11183a36d5cdd7035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0393ec6bed2a57ac27b2f8d0be7d95b6"><td class="memItemLeft" align="right" valign="top"><a id="a0393ec6bed2a57ac27b2f8d0be7d95b6"></a>
+<a class="el" href="classnetspeak_1_1util_1_1Lockable.html">util::Lockable</a>&lt; std::ofstream &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>f_get_corpora_req_</b></td></tr>
+<tr class="separator:a0393ec6bed2a57ac27b2f8d0be7d95b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a781ab6489400586725b2bc932f7ae5"><td class="memItemLeft" align="right" valign="top"><a id="a3a781ab6489400586725b2bc932f7ae5"></a>
+<a class="el" href="classnetspeak_1_1util_1_1Lockable.html">util::Lockable</a>&lt; std::ofstream &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>f_get_corpora_error</b></td></tr>
+<tr class="separator:a3a781ab6489400586725b2bc932f7ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">

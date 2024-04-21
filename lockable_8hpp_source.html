@@ -18,7 +18,7 @@
     <meta name="twitter:title" content="Netspeak" />
     <meta name="twitter:description" content="One word leads to another." />
     <!-- END twitter metadata -->
-    <title>Netspeak: netspeak/util/Mut.hpp Source File</title>
+    <title>Netspeak: netspeak/util/lockable.hpp Source File</title>
     <link href="tabs.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/svg+xml" href="netspeak_logo.svg" />
     <script type="text/javascript" src="jquery.js"></script>
@@ -137,7 +137,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('Mut_8hpp_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('lockable_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -157,61 +157,54 @@ $(document).ready(function(){initNavTree('Mut_8hpp_source.html',''); initResizab
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Mut.hpp</div>  </div>
+<div class="title">lockable.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NETSPEAK_UTIL_MUT_HPP</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define NETSPEAK_UTIL_MUT_HPP</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NETSPEAK_UTIL_LOCKABLE_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define NETSPEAK_UTIL_LOCKABLE_HPP</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacenetspeak_1_1util.html">netspeak::util</a> {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classnetspeak_1_1util_1_1Mut.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classnetspeak_1_1util_1_1Mut.html">Mut</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  T value_;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  std::mutex mutex_;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Mut.html">Mut</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classnetspeak_1_1util_1_1Mut.html">Mut</a>(<span class="keyword">const</span> T&amp; value) : value_(value), mutex_() {}</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classnetspeak_1_1util_1_1Mut.html">Mut</a>(T&amp;&amp; value) : value_(std::move(value)), mutex_() {}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classnetspeak_1_1util_1_1Mut_1_1Lock.html">   18</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classnetspeak_1_1util_1_1Mut_1_1Lock.html">Lock</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classnetspeak_1_1util_1_1Mut.html">Mut&lt;T&gt;</a>&amp; mut_;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classnetspeak_1_1util_1_1Mut_1_1Lock.html">Lock</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classnetspeak_1_1util_1_1Mut_1_1Lock.html">Lock</a>(<span class="keyword">const</span> <a class="code" href="classnetspeak_1_1util_1_1Mut_1_1Lock.html">Lock</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classnetspeak_1_1util_1_1Mut_1_1Lock.html">Lock</a>(<a class="code" href="classnetspeak_1_1util_1_1Mut.html">Mut&lt;T&gt;</a>&amp; mut) : mut_(mut) {}</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classnetspeak_1_1util_1_1Mut_1_1Lock.html">Lock</a>(<a class="code" href="classnetspeak_1_1util_1_1Mut_1_1Lock.html">Lock</a>&amp;&amp; lock) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    ~<a class="code" href="classnetspeak_1_1util_1_1Mut_1_1Lock.html">Lock</a>() {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      mut_.mutex_.unlock();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classnetspeak_1_1util_1_1Lockable.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classnetspeak_1_1util_1_1Lockable.html">Lockable</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  T value;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  std::mutex mutex;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classnetspeak_1_1util_1_1Lockable.html#af97431d829f30fc711684be88b770790">   21</a></span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Lockable.html#af97431d829f30fc711684be88b770790">Lockable</a>(<span class="keyword">const</span> <a class="code" href="classnetspeak_1_1util_1_1Lockable.html">Lockable</a>&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classnetspeak_1_1util_1_1Lockable.html#a0d9d4dc911da26d329748f2985466631">   23</a></span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Lockable.html#a0d9d4dc911da26d329748f2985466631">Lockable</a>(<a class="code" href="classnetspeak_1_1util_1_1Lockable.html">Lockable</a>&amp;&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classnetspeak_1_1util_1_1Lockable.html#aac552bca4a50a4c7c479a90d5778f96d">   26</a></span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Lockable.html">Lockable</a>&amp; <a class="code" href="classnetspeak_1_1util_1_1Lockable.html#aac552bca4a50a4c7c479a90d5778f96d">operator=</a>(<span class="keyword">const</span> <a class="code" href="classnetspeak_1_1util_1_1Lockable.html">Lockable</a>&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classnetspeak_1_1util_1_1Lockable.html#abc86451809c99e32e0f6ff82d49068c3">   28</a></span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Lockable.html">Lockable</a>&amp; <a class="code" href="classnetspeak_1_1util_1_1Lockable.html#abc86451809c99e32e0f6ff82d49068c3">operator=</a>(<a class="code" href="classnetspeak_1_1util_1_1Lockable.html">Lockable</a>&amp;&amp; other) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    T&amp; value() {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="keywordflow">return</span> mut_.value_;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Lockable.html">Lockable</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classnetspeak_1_1util_1_1Lockable.html">Lockable</a>(<span class="keyword">const</span> T&amp; value) : value(value), mutex() {}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classnetspeak_1_1util_1_1Lockable.html">Lockable</a>(T&amp;&amp; value) : value(std::move(value)), mutex() {}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Mut_1_1Lock.html">Lock</a> lock() {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    mutex_.lock();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classnetspeak_1_1util_1_1Mut_1_1Lock.html">Lock</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;} <span class="comment">// namespace netspeak::util</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassnetspeak_1_1util_1_1Mut_1_1Lock_html"><div class="ttname"><a href="classnetspeak_1_1util_1_1Mut_1_1Lock.html">netspeak::util::Mut::Lock</a></div><div class="ttdef"><b>Definition:</b> <a href="Mut_8hpp_source.html#l00018">Mut.hpp:18</a></div></div>
-<div class="ttc" id="aclassnetspeak_1_1util_1_1Mut_html"><div class="ttname"><a href="classnetspeak_1_1util_1_1Mut.html">netspeak::util::Mut</a></div><div class="ttdef"><b>Definition:</b> <a href="Mut_8hpp_source.html#l00009">Mut.hpp:9</a></div></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classnetspeak_1_1util_1_1Lockable.html#a71e4dd2fa5e27572a685e2f9a57e8e8a">   44</a></span>&#160;  std::shared_ptr&lt;T&gt; <a class="code" href="classnetspeak_1_1util_1_1Lockable.html#a71e4dd2fa5e27572a685e2f9a57e8e8a">lock</a>() {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">auto</span> counter = std::make_shared&lt;std::lock_guard&lt;std::mutex&gt;&gt;(std::ref(mutex));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> std::shared_ptr&lt;T&gt;{ counter, &amp;value };</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;} <span class="comment">// namespace netspeak::util</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassnetspeak_1_1util_1_1Lockable_html"><div class="ttname"><a href="classnetspeak_1_1util_1_1Lockable.html">netspeak::util::Lockable</a></div><div class="ttdoc">Allows locking and unlocking the specified member variable.</div><div class="ttdef"><b>Definition:</b> <a href="lockable_8hpp_source.html#l00015">lockable.hpp:15</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1util_1_1Lockable_html_a0d9d4dc911da26d329748f2985466631"><div class="ttname"><a href="classnetspeak_1_1util_1_1Lockable.html#a0d9d4dc911da26d329748f2985466631">netspeak::util::Lockable::Lockable</a></div><div class="ttdeci">Lockable(Lockable &amp;&amp;other)=delete</div><div class="ttdoc">Deleted; Mutexes are immovable.</div></div>
+<div class="ttc" id="aclassnetspeak_1_1util_1_1Lockable_html_a71e4dd2fa5e27572a685e2f9a57e8e8a"><div class="ttname"><a href="classnetspeak_1_1util_1_1Lockable.html#a71e4dd2fa5e27572a685e2f9a57e8e8a">netspeak::util::Lockable::lock</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; lock()</div><div class="ttdoc">Returns a shared_ptr to the unlocked resource. The resource remains unlocked as long as it is referen...</div><div class="ttdef"><b>Definition:</b> <a href="lockable_8hpp_source.html#l00044">lockable.hpp:44</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1util_1_1Lockable_html_aac552bca4a50a4c7c479a90d5778f96d"><div class="ttname"><a href="classnetspeak_1_1util_1_1Lockable.html#aac552bca4a50a4c7c479a90d5778f96d">netspeak::util::Lockable::operator=</a></div><div class="ttdeci">Lockable &amp; operator=(const Lockable &amp;other)=delete</div><div class="ttdoc">Deleted; The assignemt may require read-access when other.mutex is locked or write-access when this-&gt;...</div></div>
+<div class="ttc" id="aclassnetspeak_1_1util_1_1Lockable_html_abc86451809c99e32e0f6ff82d49068c3"><div class="ttname"><a href="classnetspeak_1_1util_1_1Lockable.html#abc86451809c99e32e0f6ff82d49068c3">netspeak::util::Lockable::operator=</a></div><div class="ttdeci">Lockable &amp; operator=(Lockable &amp;&amp;other)=delete</div><div class="ttdoc">Deleted; Mutexes are immovable.</div></div>
+<div class="ttc" id="aclassnetspeak_1_1util_1_1Lockable_html_af97431d829f30fc711684be88b770790"><div class="ttname"><a href="classnetspeak_1_1util_1_1Lockable.html#af97431d829f30fc711684be88b770790">netspeak::util::Lockable::Lockable</a></div><div class="ttdeci">Lockable(const Lockable &amp;other)=delete</div><div class="ttdoc">Deleted; The copy instruction may require read-access when other.mutex is locked.</div></div>
 <div class="ttc" id="anamespacenetspeak_1_1util_html"><div class="ttname"><a href="namespacenetspeak_1_1util.html">netspeak::util</a></div><div class="ttdef"><b>Definition:</b> <a href="ChainCutter_8hpp_source.html#l00009">ChainCutter.hpp:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_899bcb725501b3e5ae04f82e9882ab67.html">netspeak</a></li><li class="navelem"><a class="el" href="dir_0f956b98ab38fac79c3e745ba397a630.html">util</a></li><li class="navelem"><b>Mut.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_899bcb725501b3e5ae04f82e9882ab67.html">netspeak</a></li><li class="navelem"><a class="el" href="dir_0f956b98ab38fac79c3e745ba397a630.html">util</a></li><li class="navelem"><b>lockable.hpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

@@ -60,13 +60,12 @@ var hierarchy =
     [ "netspeak::model::LengthRange", "structnetspeak_1_1model_1_1LengthRange.html", null ],
     [ "netspeak::util::LfuCache< T >", "classnetspeak_1_1util_1_1LfuCache.html", null ],
     [ "netspeak::util::LfuCache< netspeak::Netspeak::result_cache_item >", "classnetspeak_1_1util_1_1LfuCache.html", null ],
-    [ "netspeak::util::Mut< T >::Lock", "classnetspeak_1_1util_1_1Mut_1_1Lock.html", null ],
+    [ "netspeak::util::Lockable< T >", "classnetspeak_1_1util_1_1Lockable.html", null ],
+    [ "netspeak::util::Lockable< std::ofstream >", "classnetspeak_1_1util_1_1Lockable.html", null ],
     [ "std::logic_error", null, [
       [ "netspeak::util::tracable_logic_error", "structnetspeak_1_1util_1_1tracable__logic__error.html", null ]
     ] ],
     [ "netspeak::invertedindex::ManagedIndexer< T, Reader >", "classnetspeak_1_1invertedindex_1_1ManagedIndexer.html", null ],
-    [ "netspeak::util::Mut< T >", "classnetspeak_1_1util_1_1Mut.html", null ],
-    [ "netspeak::util::Mut< std::ofstream >", "classnetspeak_1_1util_1_1Mut.html", null ],
     [ "netspeak::value::NameOf< T >", "structnetspeak_1_1value_1_1NameOf.html", null ],
     [ "netspeak::value::NameOf< big_string >", "structnetspeak_1_1value_1_1NameOf_3_01big__string_01_4.html", null ],
     [ "netspeak::value::NameOf< double >", "structnetspeak_1_1value_1_1NameOf_3_01double_01_4.html", null ],

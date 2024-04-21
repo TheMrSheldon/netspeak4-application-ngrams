@@ -1,5 +1,16 @@
 var NAVTREEINDEX0 =
 {
+"":[10,0,0],
+"":[10,0,1],
+"":[10,0,2],
+"":[10,0,3,3],
+"":[10,0,3,4],
+"":[10,0,3,5,0],
+"":[10,0,3],
+"":[10,0,3,0],
+"":[10,0,3,1],
+"":[10,0,3,2],
+"":[10,0,3,6],
 "BigHashMap_8hpp_source.html":[12,0,2,0,0],
 "BuildCommand_8hpp_source.html":[12,0,1,0],
 "Builder_8hpp_source.html":[12,0,2,0,1],
@@ -39,8 +50,7 @@ var NAVTREEINDEX0 =
 "LfuCache_8hpp_source.html":[12,0,2,5,9],
 "LoadBalanceProxy_8hpp_source.html":[12,0,2,4,0],
 "ManagedIndexer_8hpp_source.html":[12,0,2,1,7],
-"Math_8hpp_source.html":[12,0,2,5,11],
-"Mut_8hpp_source.html":[12,0,2,5,13],
+"Math_8hpp_source.html":[12,0,2,5,12],
 "Netspeak_8hpp_source.html":[12,0,2,11],
 "NormQuery_8hpp.html#a76cb5f6f16196d78de0430ccd2bb43a4":[10,0,3,2,27],
 "NormQuery_8hpp.html#a8f30e1a47e34f59dd20b9a2a31bb56d3":[10,0,3,2,28],
@@ -239,15 +249,5 @@ var NAVTREEINDEX0 =
 "classnetspeak_1_1Netspeak.html#a2caaaada49201917142b483c0f32e6a8":[11,0,2,12,19],
 "classnetspeak_1_1Netspeak.html#a336bf8728a28885c9da492a35bf606c7":[11,0,2,12,3],
 "classnetspeak_1_1Netspeak.html#a4fa7fcfd57d5c943e1bf476c61610c99":[11,0,2,12,11],
-"classnetspeak_1_1Netspeak.html#a5d46d377206529a32b308d58e9c5ed2d":[11,0,2,12,7],
-"classnetspeak_1_1Netspeak.html#a6d2431bc312233cb980c401b1606d8af":[11,0,2,12,10],
-"classnetspeak_1_1Netspeak.html#a852c9a0e98eab5ffaaee87077f845c3d":[11,0,2,12,9],
-"classnetspeak_1_1Netspeak.html#a8f2a340428ae0da2b761a8f82e284944":[11,0,2,12,21],
-"classnetspeak_1_1Netspeak.html#a8fb915d448eb793d6d22f630e895ba83":[11,0,2,12,2],
-"classnetspeak_1_1Netspeak.html#a932efa63991326e539f3745ffce398a4":[11,0,2,12,17],
-"classnetspeak_1_1Netspeak.html#a9420a0c70c85999bd3041391b0d4d095":[11,0,2,12,13],
-"classnetspeak_1_1Netspeak.html#aa798d5c62d47fd418487ec83405a257f":[11,0,2,12,16],
-"classnetspeak_1_1Netspeak.html#ab200a0b1b1138784369908f2ebf34fea":[11,0,2,12,18],
-"classnetspeak_1_1Netspeak.html#ab6868f65d0a79d2df8acb180a2c7368e":[11,0,2,12,22],
-"classnetspeak_1_1Netspeak.html#ac48c5ec0c40d0adc44615a537644bb7f":[11,0,2,12,4]
+"classnetspeak_1_1Netspeak.html#a5d46d377206529a32b308d58e9c5ed2d":[11,0,2,12,7]
 };

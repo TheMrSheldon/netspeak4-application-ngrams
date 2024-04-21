@@ -176,7 +176,7 @@ $(document).ready(function(){initNavTree('RequestLogger_8hpp_source.html',''); i
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;netspeak/Netspeak.hpp&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;netspeak/util/Mut.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;netspeak/util/lockable.hpp&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>netspeak::service {</div>
@@ -186,11 +186,11 @@ $(document).ready(function(){initNavTree('RequestLogger_8hpp_source.html',''); i
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  std::unique_ptr&lt;NetspeakService::Service&gt; service_;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  std::atomic&lt;uint64_t&gt; req_counter_;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Mut.html">util::Mut&lt;std::ofstream&gt;</a> f_search_req_;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Mut.html">util::Mut&lt;std::ofstream&gt;</a> f_search_error;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Lockable.html">util::Lockable&lt;std::ofstream&gt;</a> f_search_req_;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Lockable.html">util::Lockable&lt;std::ofstream&gt;</a> f_search_error;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Mut.html">util::Mut&lt;std::ofstream&gt;</a> f_get_corpora_req_;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Mut.html">util::Mut&lt;std::ofstream&gt;</a> f_get_corpora_error;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Lockable.html">util::Lockable&lt;std::ofstream&gt;</a> f_get_corpora_req_;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="classnetspeak_1_1util_1_1Lockable.html">util::Lockable&lt;std::ofstream&gt;</a> f_get_corpora_error;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classnetspeak_1_1service_1_1RequestLogger.html">RequestLogger</a>() = <span class="keyword">delete</span>;</div>
@@ -208,7 +208,7 @@ $(document).ready(function(){initNavTree('RequestLogger_8hpp_source.html',''); i
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassnetspeak_1_1service_1_1RequestLogger_html"><div class="ttname"><a href="classnetspeak_1_1service_1_1RequestLogger.html">netspeak::service::RequestLogger</a></div><div class="ttdef"><b>Definition:</b> <a href="RequestLogger_8hpp_source.html#l00022">RequestLogger.hpp:22</a></div></div>
-<div class="ttc" id="aclassnetspeak_1_1util_1_1Mut_html"><div class="ttname"><a href="classnetspeak_1_1util_1_1Mut.html">netspeak::util::Mut&lt; std::ofstream &gt;</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1util_1_1Lockable_html"><div class="ttname"><a href="classnetspeak_1_1util_1_1Lockable.html">netspeak::util::Lockable&lt; std::ofstream &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

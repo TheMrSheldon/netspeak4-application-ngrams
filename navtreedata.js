@@ -65,14 +65,14 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"BigHashMap_8hpp_source.html",
-"classnetspeak_1_1Netspeak.html#ac6054eab938589cb16974a8276d28f18",
-"classnetspeak_1_1invertedindex_1_1IndexStrategy.html#a6f746cfe3dccc423f3da32c5671f973d",
-"classnetspeak_1_1model_1_1NormQueryUnit____.html#aa4a7688e923a2442e43176b6f3a99986",
-"classnetspeak_1_1service_1_1UniqueMap.html#a626d4824173dd7960849be4e812c20bd",
-"gettingstarted.html#autotoc_md20",
-"structnetspeak_1_1invertedindex_1_1Properties.html#aea1e8f877d51986785a8cfc78f19c001",
-"structnetspeak_1_1value_1_1generator_3_01pair_3_01T1_00_01T2_01_4_01_4.html#ad9c3369c724954a9fee7613a03773647"
+"",
+"classnetspeak_1_1Netspeak.html#a6d2431bc312233cb980c401b1606d8af",
+"classnetspeak_1_1invertedindex_1_1Configuration.html#ae412e8763d60cfc5680a370ce7381708",
+"classnetspeak_1_1model_1_1NormQueryUnit____.html",
+"classnetspeak_1_1service_1_1RequestLogger.html#a82982778b2d7bdd11183a36d5cdd7035",
+"functions_type.html",
+"structnetspeak_1_1invertedindex_1_1Properties.html#a5a4305675f8823cea2c057eaf877490f",
+"structnetspeak_1_1value_1_1generator.html#aa6e3bd27c3d82bbc4723852da5d639dc"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

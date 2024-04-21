@@ -1,5 +1,11 @@
 var NAVTREEINDEX5 =
 {
+"functions_type.html":[11,3,3],
+"functions_vars.html":[11,3,2],
+"gettingstarted.html":[7,0],
+"gettingstarted.html#autotoc_md17":[7,0,3],
+"gettingstarted.html#autotoc_md18":[7,0,4],
+"gettingstarted.html#autotoc_md19":[7,0,5],
 "gettingstarted.html#autotoc_md20":[7,0,6],
 "glob_8hpp_source.html":[12,0,2,5,7],
 "hierarchy.html":[11,2],
@@ -33,10 +39,11 @@ var NAVTREEINDEX5 =
 "invertedindex_2Configuration_8hpp_source.html":[12,0,2,1,1],
 "invertedindex_2Properties_8hpp.html#a3b06571a9dc5cb4cd87b4b5ebf32cb1b":[10,0,3,1,34],
 "invertedindex_2Properties_8hpp_source.html":[12,0,2,1,12],
+"lockable_8hpp_source.html":[12,0,2,5,10],
 "md_netspeak_model_README.html":[3],
 "md_netspeak_regex_README.html":[4],
 "md_netspeak_util_README.html":[5],
-"memory_8hpp_source.html":[12,0,2,5,12],
+"memory_8hpp_source.html":[12,0,2,5,13],
 "namespacemembers.html":[10,1,0],
 "namespacemembers_func.html":[10,1,1],
 "namespacenetspeak_1_1util.html":[10,0,3,5],
@@ -121,7 +128,7 @@ var NAVTREEINDEX5 =
 "namespacenetspeak_1_1util.html#aff2588cdc5eba0270462c499ffc66ffb":[10,0,3,5,69],
 "namespacenetspeak_1_1util.html#aff96a54c98e1783d6dceb8fb51daca2e":[10,0,3,5,81],
 "namespaces.html":[10,0],
-"netspeak_2util_2logging_8hpp_source.html":[12,0,2,5,10],
+"netspeak_2util_2logging_8hpp_source.html":[12,0,2,5,11],
 "netspeakcli.html":[8],
 "netspeakcli.html#autotoc_md30":[0],
 "pages.html":[],
@@ -242,12 +249,5 @@ var NAVTREEINDEX5 =
 "structnetspeak_1_1invertedindex_1_1Properties.html#a1098bc93bc620981e8867ca1f30a6691":[11,0,2,1,16,8],
 "structnetspeak_1_1invertedindex_1_1Properties.html#a16edd8437338ac5b7183f2b302463ac4":[11,0,2,1,16,12],
 "structnetspeak_1_1invertedindex_1_1Properties.html#a442ab57d4676b981a41b3473cddb0a31":[11,0,2,1,16,10],
-"structnetspeak_1_1invertedindex_1_1Properties.html#a56a9ad82a875470ebd2935901c23726f":[11,0,2,1,16,7],
-"structnetspeak_1_1invertedindex_1_1Properties.html#a5a4305675f8823cea2c057eaf877490f":[11,0,2,1,16,0],
-"structnetspeak_1_1invertedindex_1_1Properties.html#a755129bd2d2a65e91851bb2e2a2e1d4a":[11,0,2,1,16,4],
-"structnetspeak_1_1invertedindex_1_1Properties.html#a87ba24f5097e993de6077cebcf4f5f3a":[11,0,2,1,16,6],
-"structnetspeak_1_1invertedindex_1_1Properties.html#a90bc3f5e5be2ef8241e46b407973c8bc":[11,0,2,1,16,2],
-"structnetspeak_1_1invertedindex_1_1Properties.html#a9ba9b98f4e034224f6fed37253a8f6a5":[11,0,2,1,16,1],
-"structnetspeak_1_1invertedindex_1_1Properties.html#ab68dc5c9ff901034a32d0d8b89a9f574":[11,0,2,1,16,5],
-"structnetspeak_1_1invertedindex_1_1Properties.html#aca4680a14cc80cd970ef28c30fc8ce63":[11,0,2,1,16,3]
+"structnetspeak_1_1invertedindex_1_1Properties.html#a56a9ad82a875470ebd2935901c23726f":[11,0,2,1,16,7]
 };
