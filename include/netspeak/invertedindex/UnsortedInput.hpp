@@ -147,7 +147,7 @@ private:
 
   void insert_(const record_type& record) {
     if (!record.write(bucket_fs_[util::hash32(record.key()) % bucket_fs_.size()])) {
-      util::throw_runtime_error("Cannot write record", record);
+      throw std::runtime_error(std::format("Cannot write record : {}", record));
     }
     // do rehashing, if the maximal bucket size exceeds
     if (this->stats().total_size / bucket_fs_.size() > max_bucket_size_) {

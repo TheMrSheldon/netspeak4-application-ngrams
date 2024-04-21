@@ -8,7 +8,8 @@
 
 #include <boost/algorithm/string/trim.hpp>
 
-#include "../util/exception.hpp"
+#include <format>
+#include <stdexcept>
 #include "value_traits.hpp"
 
 namespace netspeak::value {
@@ -70,7 +71,7 @@ struct value_traits<std::string> {
 
   static inline void print_to(const value_type& value, std::ostream& os) {
     if (value.find(tuple_element_separator) != std::string::npos) {
-      util::throw_invalid_argument("std::string tuple element contains delimiter character", value);
+      throw std::invalid_argument(std::format("std::string tuple element contains delimiter character : {}", value));
     }
     os << value;
   }

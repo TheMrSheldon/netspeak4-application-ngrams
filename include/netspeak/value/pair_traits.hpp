@@ -13,7 +13,7 @@ namespace netspeak::value {
 // -----------------------------------------------------------------------------
 
 template <typename T1, typename T2>
-struct value_traits<pair<T1, T2> > {
+struct value_traits<pair<T1, T2>> {
   typedef pair<T1, T2> value_type;
   typedef uint16_t io_size_type;
 
@@ -68,7 +68,7 @@ struct value_traits<pair<T1, T2> > {
 // -----------------------------------------------------------------------------
 
 template <typename T1, typename T2>
-struct generator<pair<T1, T2> > {
+struct generator<pair<T1, T2>> {
   typedef pair<T1, T2> value_type;
 
   static void randomized(value_type& value) {
@@ -89,10 +89,24 @@ struct generator<pair<T1, T2> > {
 template <typename T1, typename T2>
 std::ostream& operator<<(std::ostream& os, const pair<T1, T2>& value) {
   if (os)
-    value_traits<pair<T1, T2> >::print_to(value, os);
+    value_traits<pair<T1, T2>>::print_to(value, os);
   return os;
 }
 
 } // namespace netspeak::value
+
+#include <format>
+#include <sstream>
+#include <string>
+
+template <typename T1, typename T2>
+struct std::formatter<netspeak::value::pair<T1, T2>> : public std::formatter<std::string> {
+public:
+  auto format(netspeak::value::pair<T1, T2> p, format_context& ctx) const {
+    std::stringstream ss;
+    ss << p;
+    return formatter<string>::format(ss.str(), ctx);
+  }
+};
 
 #endif // NETSPEAK_VALUE_PAIR_TRAITS_HPP

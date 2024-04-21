@@ -5,9 +5,10 @@
 
 #include <cstdlib>
 #include <cstring>
+#include <format>
 #include <memory>
+#include <stdexcept>
 
-#include "../util/exception.hpp"
 #include "../util/systemio.hpp"
 #include "../value/big_string_traits.hpp"
 #include "../value/pair_traits.hpp"

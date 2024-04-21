@@ -3,10 +3,11 @@
 #ifndef NETSPEAK_INVERTEDINDEX_INVERTED_FILE_READER_HPP
 #define NETSPEAK_INVERTEDINDEX_INVERTED_FILE_READER_HPP
 
+#include <format>
 #include <istream>
+#include <stdexcept>
 #include <string>
 
-#include "../util/exception.hpp"
 #include "../value/big_string_traits.hpp"
 #include "../value/pair_traits.hpp"
 #include "../value/quadruple_traits.hpp"
@@ -54,7 +55,7 @@ public:
         }
       }
     } catch (std::exception& e) {
-      util::throw_runtime_error(std::string(e.what()) + " Line: " + std::to_string(num_lines_));
+      throw std::runtime_error(std::format("{} Line: ", e.what(), num_lines_));
     }
     return false;
   }

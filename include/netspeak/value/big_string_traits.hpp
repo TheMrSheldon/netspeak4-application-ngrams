@@ -4,11 +4,12 @@
 #define NETSPEAK_VALUE_BIG_STRING_TRAITS_HPP
 
 #include <cstdio>
+#include <format>
+#include <stdexcept>
 #include <string>
 
 #include <boost/algorithm/string/trim.hpp>
 
-#include "../util/exception.hpp"
 #include "big_string.hpp"
 #include "string_traits.hpp"
 #include "value_traits.hpp"

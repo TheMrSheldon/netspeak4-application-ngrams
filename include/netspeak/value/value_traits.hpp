@@ -4,11 +4,11 @@
 #define NETSPEAK_VALUE_VALUE_TRAITS_HPP
 
 #include <cstring>
+#include <format>
 #include <iostream>
+#include <stdexcept>
 #include <string>
 #include <type_traits>
-
-#include "../util/exception.hpp"
 
 namespace netspeak::value {
 
@@ -159,7 +159,7 @@ struct value_traits {
   static inline void parse_from(value_type& value, std::istream& is) {
     is >> value;
     if (is.fail()) {
-      util::throw_runtime_error("Reading next " + std::string(type_name()) + " from input stream failed.");
+      throw std::runtime_error(std::format("Reading next {} from input stream failed.", type_name()));
     }
     if (is.peek() == tuple_element_separator)
       is.get();

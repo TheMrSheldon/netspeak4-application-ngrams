@@ -13,7 +13,7 @@ namespace netspeak::value {
 // -----------------------------------------------------------------------------
 
 template <typename T1, typename T2, typename T3, typename T4>
-struct value_traits<quadruple<T1, T2, T3, T4> > {
+struct value_traits<quadruple<T1, T2, T3, T4>> {
   typedef quadruple<T1, T2, T3, T4> value_type;
   typedef uint16_t io_size_type;
 
@@ -83,7 +83,7 @@ struct value_traits<quadruple<T1, T2, T3, T4> > {
 // -----------------------------------------------------------------------------
 
 template <typename T1, typename T2, typename T3, typename T4>
-struct generator<quadruple<T1, T2, T3, T4> > {
+struct generator<quadruple<T1, T2, T3, T4>> {
   typedef quadruple<T1, T2, T3, T4> value_type;
 
   static void randomized(value_type& value) {
@@ -108,10 +108,25 @@ struct generator<quadruple<T1, T2, T3, T4> > {
 template <typename T1, typename T2, typename T3, typename T4>
 std::ostream& operator<<(std::ostream& os, const quadruple<T1, T2, T3, T4>& value) {
   if (os)
-    value_traits<quadruple<T1, T2, T3, T4> >::print_to(value, os);
+    value_traits<quadruple<T1, T2, T3, T4>>::print_to(value, os);
   return os;
 }
 
 } // namespace netspeak::value
+
+
+#include <format>
+#include <sstream>
+#include <string>
+
+template <typename T1, typename T2, typename T3, typename T4>
+struct std::formatter<netspeak::value::quadruple<T1, T2, T3, T4>> : public std::formatter<std::string> {
+public:
+  auto format(const netspeak::value::quadruple<T1, T2, T3, T4>& p, format_context& ctx) const {
+    std::stringstream ss;
+    ss << p;
+    return formatter<string>::format(ss.str(), ctx);
+  }
+};
 
 #endif // NETSPEAK_VALUE_QUADRUPLE_TRAITS_HPP

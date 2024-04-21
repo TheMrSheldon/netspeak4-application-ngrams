@@ -7,13 +7,14 @@
 
 #include <array>
 #include <filesystem>
+#include <format>
 #include <iostream>
+#include <stdexcept>
 #include <string>
 
 #include <boost/type_traits.hpp>
 #include <boost/utility.hpp>
 
-#include "../util/exception.hpp"
 #include "../util/systemio.hpp"
 
 namespace netspeak::bighashmap {
@@ -39,7 +40,7 @@ public:
     util::rewind(fd);
     mphf_ = cmph_load(fd);
     if (mphf_ == nullptr) {
-      util::throw_runtime_error("Cannot load MPHF from", mph_file);
+      throw std::runtime_error(std::format("Cannot load MPHF from : {}", mph_file));
     }
     util::fclose(fd);
   }

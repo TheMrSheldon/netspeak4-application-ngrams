@@ -63,7 +63,7 @@ private:
     for (unsigned i(0); i != buckets.size(); ++i) {
       std::rewind(buckets[i]);
       if (!traits_type::read_from(values[i], buckets[i])) {
-        util::throw_runtime_error("traits_type::read_from failed for", values[i]);
+        throw std::runtime_error(std::format("traits_type::read_from failed for : {}", values[i]));
       }
     }
     // merge value streams
@@ -111,7 +111,7 @@ private:
     FILE* tmp_fs(util::tmpfile());
     for (auto it(values.begin()); it != values.end(); ++it) {
       if (!traits_type::write_to(*it, tmp_fs)) {
-        util::throw_runtime_error("traits_type::write_to failed for", *it);
+        throw std::runtime_error(std::format("traits_type::write_to failed for : {}", *it));
       }
     }
     return tmp_fs;

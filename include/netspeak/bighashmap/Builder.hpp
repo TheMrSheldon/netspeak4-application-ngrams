@@ -7,13 +7,14 @@
 
 #include <cstdio>
 #include <filesystem>
+#include <format>
 #include <fstream>
+#include <stdexcept>
 #include <string>
 #include <vector>
 
 #include "../util/checksum.hpp"
 #include "../util/conversion.hpp"
-#include "../util/exception.hpp"
 #include "../util/logging.hpp"
 #include "../util/systemio.hpp"
 #include "../value/pair.hpp"
@@ -40,14 +41,14 @@ public:
 
   static void Build(const fs::path& input_dir, const fs::path& output_dir, Algorithm algorithm = Algorithm::BDZ) {
     if (!fs::exists(output_dir)) {
-      util::throw_runtime_error("Does not exist", output_dir.string());
+      throw std::runtime_error(std::format("Does not exist : {}", output_dir.string()));
     }
     if (!fs::is_empty(output_dir)) {
-      util::throw_runtime_error("Is not empty", output_dir.string());
+      throw std::runtime_error(std::format("Is not empty : {}", output_dir.string()));
     }
 
     if (!fs::exists(input_dir)) {
-      util::throw_runtime_error("Input directory does exist", input_dir.string());
+      throw std::runtime_error(std::format("Input directory does exist : {}", input_dir.string()));
     }
 
     util::log("Performing key space partitioning on input files");
@@ -55,7 +56,7 @@ public:
     const auto idx_file = output_dir / index_file_name;
     std::ofstream ofs(idx_file);
     if (!ofs) {
-      util::throw_runtime_error("Cannot create", idx_file.string());
+      throw std::runtime_error(std::format("Cannot create : {}", idx_file.string()));
     }
     const auto num_hashtables = input_files.size();
     for (std::size_t i = 0; i != num_hashtables; ++i) {
@@ -75,7 +76,7 @@ private:
     const std::string command = "export LC_ALL=C && sort " + key_file.string() + " | uniq -d";
     FILE* file = popen(command.c_str(), "r");
     if (file == nullptr) {
-      util::throw_runtime_error("Cannot access the result of ", command);
+      throw std::runtime_error(std::format("Cannot access the result of : {}", command));
     }
     char line[PATH_MAX];
     std::string duplicate_keys;
@@ -96,7 +97,7 @@ private:
    */
   static fs::path BuildHashFunction(const fs::path& key_file, Algorithm algorithm) {
     if (!IsUnique(key_file)) {
-      util::throw_runtime_error("Keys are not unique");
+      throw std::runtime_error("Keys are not unique");
     }
     FILE* key_rfs = util::fopen(key_file, "r");
     cmph_io_adapter_t* source(cmph_io_nlfile_adapter(key_rfs));
@@ -107,7 +108,7 @@ private:
     cmph_io_nlfile_adapter_destroy(source);
     util::fclose(key_rfs);
     if (mphf == nullptr) {
-      util::throw_runtime_error("Cannot generate MPHF from", key_file);
+      throw std::runtime_error(std::format("Cannot generate MPHF from : {}", key_file));
     }
     const fs::path mph_fn(key_file.string() + ".mph");
     FILE* mph_wfs(util::fopen(mph_fn, "wb"));
@@ -121,18 +122,18 @@ private:
     FILE* mph_rfs(util::fopen(mph_file, "rb"));
     cmph_t* mph(cmph_load(mph_rfs));
     if (mph == nullptr) {
-      util::throw_runtime_error("Cannot load MPHF from", mph_file);
+      throw std::runtime_error(std::format("Cannot load MPHF from : {}", mph_file));
     }
     std::ifstream ifs(rec_file);
     if (!ifs) {
-      util::throw_runtime_error("Cannot open", rec_file);
+      throw std::runtime_error(std::format("Cannot open : {}", rec_file));
     }
     // allocate hash table memory
     Entry entry;
     const size_t table_size(cmph_size(mph) * EntryTraits::size_of(entry));
     char* table(static_cast<char*>(std::malloc(table_size)));
     if (table == nullptr) {
-      util::throw_runtime_error("Cannot allocate memory", table_size);
+      throw std::runtime_error(std::format("Cannot allocate memory : {}", table_size));
     }
 
     char* address;
@@ -175,7 +176,7 @@ private:
     const fs::path idx_file = input_file.string() + ".idx";
     std::ofstream ofs(idx_file);
     if (!ofs) {
-      util::throw_runtime_error("Cannot create", idx_file);
+      throw std::runtime_error(std::format("Cannot create : {}", idx_file));
     }
     ofs << mph_file.filename().string() << '\n' << dat_file.filename().string() << std::endl;
     ofs.close();
@@ -186,12 +187,12 @@ private:
   static fs::path CreateKeyFile(const fs::path& rec_file) {
     std::ifstream ifs(rec_file);
     if (!ifs) {
-      util::throw_runtime_error("Cannot open", rec_file);
+      throw std::runtime_error(std::format("Cannot open : {}", rec_file));
     }
     const fs::path key_file(rec_file.string() + ".keys");
     std::ofstream ofs(key_file);
     if (!ofs) {
-      util::throw_runtime_error("Cannot create", key_file);
+      throw std::runtime_error(std::format("Cannot create : {}", key_file));
     }
     std::string line;
     std::string::size_type delim;
@@ -217,7 +218,7 @@ private:
       if (fs::is_regular_file(it->path()) && !util::is_hidden_file(it->path())) {
         ifs.open(it->path());
         if (!ifs) {
-          util::throw_runtime_error("Cannot open", it->path());
+          throw std::runtime_error(std::format("Cannot open : {}", it->path()));
         }
         while (std::getline(ifs, line)) {
           if (!line.empty())
@@ -243,7 +244,7 @@ private:
       rec_paths.push_back(output_dir / new_filename);
       rec_files.push_back(new std::ofstream(rec_paths.back()));
       if (!rec_files.back()->is_open()) {
-        util::throw_runtime_error("Cannot create", rec_paths.back());
+        throw std::runtime_error(std::format("Cannot create : {}", rec_paths.back()));
       }
     }
     // scatter records
@@ -256,7 +257,7 @@ private:
       if (fs::is_regular_file(it->path()) && !util::is_hidden_file(it->path())) {
         ifs.open(it->path());
         if (!ifs) {
-          util::throw_runtime_error("Cannot open", it->path());
+          throw std::runtime_error(std::format("Cannot open : {}", it->path()));
         }
         util::log("Processing", it->path());
         while (std::getline(ifs, line)) {

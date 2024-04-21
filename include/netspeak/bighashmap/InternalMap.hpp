@@ -42,7 +42,7 @@ private:
     const Entry entry;
     data_ = static_cast<char*>(std::calloc(this->size(), EntryTraits::size_of(entry)));
     if (data_ == nullptr) {
-      util::throw_runtime_error("Cannot allocate memory", this->size() * EntryTraits::size_of(entry));
+      throw std::runtime_error(std::format("Cannot allocate memory : {}", this->size() * EntryTraits::size_of(entry)));
     }
     FILE* dat_rfs = util::fopen(dat_file, "rb");
     util::fread(data_, EntryTraits::size_of(entry), this->size(), dat_rfs);
@@ -53,7 +53,7 @@ public:
   static InternalMap* Open(const fs::path& idx_file) {
     std::ifstream ifs(idx_file);
     if (!ifs) {
-      util::throw_runtime_error("Cannot open", idx_file);
+      throw std::runtime_error(std::format("Cannot open : {}", idx_file));
     }
     std::string mph_file;
     std::string dat_file;

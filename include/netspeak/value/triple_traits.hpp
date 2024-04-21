@@ -13,7 +13,7 @@ namespace netspeak::value {
 // -----------------------------------------------------------------------------
 
 template <typename T1, typename T2, typename T3>
-struct value_traits<triple<T1, T2, T3> > {
+struct value_traits<triple<T1, T2, T3>> {
   typedef triple<T1, T2, T3> value_type;
   typedef uint16_t io_size_type;
 
@@ -76,7 +76,7 @@ struct value_traits<triple<T1, T2, T3> > {
 // -----------------------------------------------------------------------------
 
 template <typename T1, typename T2, typename T3>
-struct generator<triple<T1, T2, T3> > {
+struct generator<triple<T1, T2, T3>> {
   typedef triple<T1, T2, T3> value_type;
 
   static void randomized(value_type& value) {
@@ -99,10 +99,25 @@ struct generator<triple<T1, T2, T3> > {
 template <typename T1, typename T2, typename T3>
 std::ostream& operator<<(std::ostream& os, const triple<T1, T2, T3>& value) {
   if (os)
-    value_traits<triple<T1, T2, T3> >::print_to(value, os);
+    value_traits<triple<T1, T2, T3>>::print_to(value, os);
   return os;
 }
 
 } // namespace netspeak::value
+
+
+#include <format>
+#include <sstream>
+#include <string>
+
+template <typename T1, typename T2, typename T3>
+struct std::formatter<netspeak::value::triple<T1, T2, T3>> : public std::formatter<std::string> {
+public:
+  auto format(const netspeak::value::triple<T1, T2, T3>& p, format_context& ctx) const {
+    std::stringstream ss;
+    ss << p;
+    return formatter<string>::format(ss.str(), ctx);
+  }
+};
 
 #endif // NETSPEAK_VALUE_TRIPLE_TRAITS_HPP

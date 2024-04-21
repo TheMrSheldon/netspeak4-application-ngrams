@@ -3,13 +3,15 @@
 #ifndef NETSPEAK_INVERTEDINDEX_POSTLIST_BUILDER_HPP
 #define NETSPEAK_INVERTEDINDEX_POSTLIST_BUILDER_HPP
 
+#include <format>
 #include <limits>
 #include <memory>
+#include <netspeak/util/std_path_formatter.hpp>
 #include <numeric>
+#include <stdexcept>
 
 #include <boost/utility.hpp>
 
-#include "../util/exception.hpp"
 #include "../util/logging.hpp"
 #include "Iterator.hpp"
 #include "Postlist.hpp"
@@ -61,7 +63,7 @@ public:
       for (auto it(values_.begin()); it != values_.end(); ++it) {
         if (page.buffer_.put(*it))
           continue;
-        util::throw_runtime_error("ByteBuffer::put failed", *it);
+        throw std::runtime_error(std::format("ByteBuffer::put failed : {}", *it));
       }
       assert(page.buffer_.position() == page.buffer_.end());
       postlist.reset((head_.value_size == 0) ? new Postlist<value_type>(head_, page, sizes_)

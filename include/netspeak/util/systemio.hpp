@@ -8,8 +8,9 @@
 #include <climits>
 #include <cstring>
 #include <filesystem>
-
-#include "exception.hpp"
+#include <format>
+#include <netspeak/util/std_path_formatter.hpp>
+#include <stdexcept>
 
 /**
  * Functions to replace FILE* I/O to throw exceptions on failure.
@@ -32,13 +33,13 @@ inline fs::path make_absolute(const fs::path& path, const fs::path& base) {
 
 inline void signal_error(const std::string& msg) {
   std::perror(msg.c_str());
-  throw_runtime_error(msg);
+  throw std::runtime_error(msg);
 }
 
 template <typename T>
 void signal_error(const std::string& msg, const T& obj) {
   std::perror(msg.c_str());
-  throw_runtime_error(msg, obj);
+  throw std::runtime_error(std::format("{} : {}", msg, obj));
 }
 
 inline uint64_t directory_size(const fs::path& dir) {

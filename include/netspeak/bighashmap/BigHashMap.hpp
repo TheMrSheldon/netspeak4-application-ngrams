@@ -4,6 +4,7 @@
 #define NETSPEAK_BIGHASHMAP_BIG_HASH_MAP_HPP
 
 #include <fstream>
+#include <netspeak/util/std_path_formatter.hpp>
 #include <string>
 #include <vector>
 
@@ -79,7 +80,7 @@ public:
     const fs::path idx_file = dir / index_file_name;
     std::ifstream ifs(idx_file);
     if (!ifs) {
-      util::throw_runtime_error("Cannot open", idx_file);
+      throw std::runtime_error(std::format("Cannot open : {}", idx_file));
     }
     std::string part_idx_file;
     std::vector<Map*> part_maps;

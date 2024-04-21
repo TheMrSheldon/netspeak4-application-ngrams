@@ -12,7 +12,7 @@
 namespace netspeak::invertedindex {
 
 struct Properties {
-  static const uint32_t k_version_number = 103; // 1.3.x
+  static constexpr uint32_t k_version_number = 103; // 1.3.x
 
   Properties();
   Properties(const Properties& rhs);

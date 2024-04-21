@@ -3,9 +3,10 @@
 #ifndef NETSPEAK_INVERTEDINDEX_MANAGED_INDEXER_HPP
 #define NETSPEAK_INVERTEDINDEX_MANAGED_INDEXER_HPP
 
+#include <format>
 #include <fstream>
+#include <stdexcept>
 
-#include "../util/exception.hpp"
 #include "Indexer.hpp"
 #include "InvertedFileReader.hpp"
 #include "Properties.hpp"
@@ -33,7 +34,7 @@ public:
       if (fs::is_regular_file(file) && !util::is_hidden_file(file)) {
         std::ifstream ifs(file);
         if (!ifs) {
-          util::throw_invalid_argument("Cannot open", file);
+          throw std::invalid_argument(std::format("Cannot open : {}", file));
         }
         RecordType record;
         Reader reader(ifs);
@@ -58,25 +59,25 @@ public:
 
     IndexerType indexer(config);
     if (!config.input_file().empty() && !config.input_directory().empty()) {
-      util::throw_invalid_argument("Specify either an input file or a directory, not both");
+      throw std::invalid_argument("Specify either an input file or a directory, not both");
     }
     if (!config.input_file().empty()) {
       const fs::path input_file = config.input_file();
       if (!fs::exists(input_file)) {
-        util::throw_runtime_error("Does not exist", input_file);
+        throw std::runtime_error(std::format("Does not exist : {}", input_file));
       }
       if (!fs::is_regular_file(input_file)) {
-        util::throw_runtime_error("No regular file", input_file);
+        throw std::runtime_error(std::format("No regular file : {}", input_file));
       }
       total_input_size = fs::file_size(input_file);
       read_file(input_file, indexer);
     } else if (!config.input_directory().empty()) {
       const fs::path input_dir = config.input_directory();
       if (!fs::exists(input_dir)) {
-        util::throw_runtime_error("Does not exist", input_dir);
+        throw std::runtime_error(std::format("Does not exist : {}", input_dir));
       }
       if (!fs::is_directory(input_dir)) {
-        util::throw_runtime_error("Not a directory", input_dir);
+        throw std::runtime_error(std::format("Not a directory : {}", input_dir));
       }
       total_input_size = util::directory_size(input_dir);
       const fs::directory_iterator end;
@@ -84,7 +85,7 @@ public:
         read_file(it->path(), indexer);
       }
     } else {
-      util::throw_invalid_argument("No input file or directory specified");
+      throw std::invalid_argument("No input file or directory specified");
     }
     return indexer.index();
   }

@@ -6,11 +6,11 @@
 #include <cxxabi.h>
 
 #include <cstdlib>
+#include <format>
 #include <memory>
 #include <sstream>
+#include <stdexcept>
 #include <string>
-
-#include "exception.hpp"
 
 /**
  * Functions to convert numbers to strings and vice versa.
@@ -33,7 +33,7 @@ template <typename T>
 const T to_number(const std::string& value) {
   T number;
   if (!to_number<T>(value, number))
-    throw_invalid_argument("to_number failed", value);
+    throw std::invalid_argument(std::format("to_number failed : {}", value));
   return number;
 }
 

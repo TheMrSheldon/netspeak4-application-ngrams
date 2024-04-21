@@ -3,6 +3,9 @@
 #ifndef NETSPEAK_INVERTEDINDEX_STORAGE_WRITER_HPP
 #define NETSPEAK_INVERTEDINDEX_STORAGE_WRITER_HPP
 
+#include <format>
+#include <stdexcept>
+
 #include <boost/utility.hpp>
 
 #include "../bighashmap/Builder.hpp"
@@ -31,13 +34,13 @@ public:
 
   explicit StorageWriter(const fs::path& directory) : directory_(directory), data_file_cnt_(), data_wfs_(nullptr) {
     if (!fs::exists(directory)) {
-      util::throw_invalid_argument("Does not exist", directory);
+      throw std::invalid_argument(std::format("Does not exist : {}", directory));
     }
     if (!fs::is_directory(directory)) {
-      util::throw_invalid_argument("Not a directory", directory);
+      throw std::invalid_argument(std::format("Not a directory : {}", directory));
     }
     //    if (!fs::is_empty(directory)) {
-    //      util::throw_invalid_argument("Is not empty", directory);
+    //      throw std::invalid_argument(std::format("Is not empty : {}", directory));
     //    }
   }
 
@@ -54,7 +57,7 @@ public:
     data_wfs_ = nullptr;
     const fs::path table_dir(directory_ / k_table_dir);
     if (!fs::create_directory(table_dir)) {
-      util::throw_invalid_argument("Cannot create", table_dir);
+      throw std::invalid_argument(std::format("Cannot create : {}", table_dir));
     }
     util::log("Building header table");
     bighashmap::Builder<Address>::Build(directory_, table_dir);
@@ -65,20 +68,20 @@ public:
       return false;
     }
     if (key.empty()) {
-      util::throw_invalid_argument("Cannot write empty key");
+      throw std::invalid_argument("Cannot write empty key");
     }
     const size_t postlist_size(postlist.byte_size());
     if (data_wfs_ == nullptr) {
       const fs::path data_dir(directory_ / k_data_dir);
       if (!fs::create_directory(data_dir)) {
-        util::throw_invalid_argument("Cannot create", data_dir);
+        throw std::invalid_argument(std::format("Cannot create : {}", data_dir));
       }
       const std::string num(util::to_string(data_file_cnt_++));
       data_wfs_ = util::fopen(data_dir / (k_data_file + num), "wb");
       const fs::path table_file(directory_ / k_table_file);
       table_ofs_.open(table_file);
       if (!table_ofs_) {
-        util::throw_invalid_argument("Cannot create", table_file);
+        throw std::invalid_argument(std::format("Cannot create : {}", table_file));
       }
     } else if (util::ftell(data_wfs_) + postlist_size > data_file_size_max) {
       util::fclose(data_wfs_);

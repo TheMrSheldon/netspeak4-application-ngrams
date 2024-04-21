@@ -106,4 +106,19 @@ std::istream& operator>>(std::istream& is, Record<T>& record) {
 
 } // namespace netspeak::invertedindex
 
+
+#include <format>
+#include <sstream>
+#include <string>
+
+template <typename T>
+struct std::formatter<netspeak::invertedindex::Record<T>> : public std::formatter<std::string> {
+public:
+  auto format(const netspeak::invertedindex::Record<T>& p, format_context& ctx) const {
+    std::stringstream ss;
+    ss << p;
+    return formatter<string>::format(ss.str(), ctx);
+  }
+};
+
 #endif // NETSPEAK_INVERTEDINDEX_RECORD_HPP

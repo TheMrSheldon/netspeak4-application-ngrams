@@ -3,9 +3,10 @@
 #ifndef NETSPEAK_INVERTEDINDEX_INVERTED_FILE_WRITER_HPP
 #define NETSPEAK_INVERTEDINDEX_INVERTED_FILE_WRITER_HPP
 
+#include <format>
 #include <ostream>
+#include <stdexcept>
 
-#include "../util/exception.hpp"
 #include "../value/big_string_traits.hpp"
 #include "../value/pair_traits.hpp"
 #include "../value/quadruple_traits.hpp"

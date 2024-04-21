@@ -100,20 +100,19 @@ public:
 private:
   static void assert_properties(const Properties& properties) {
     if (properties.version_number != Properties::k_version_number) {
-      std::ostringstream oss;
-      oss << "The version number of the index you want load is " << properties.version_number
-          << ", but your installed library is of different version " << Properties::k_version_number
-          << ". Please install the correct library.";
-      util::throw_domain_error("Version conflict", oss.str());
+      throw std::domain_error(
+          std::format("Version conflict : The version number of the index you want to load, is {}, but your installed "
+                      "library is of the different version {}. Please install the correct library.",
+                      properties.version_number, Properties::k_version_number));
     }
 
     // check value type
     const std::string tn(value::value_traits<Value>::type_name());
     if (tn != std::string(properties.value_type)) {
-      std::ostringstream oss;
-      oss << "The value type of the index you want load is " << properties.value_type
-          << ", but your value type parameterization is " << tn << ". Please reload with the correct value type.";
-      util::throw_domain_error("Wrong value type", oss.str());
+      throw std::domain_error(
+          std::format("Wrong value type : The value type of the index you want to load, is {}, but your value type "
+                      "parameterization is {}. Please reload with the correct value type.",
+                      properties.value_type, tn));
     }
   }
 

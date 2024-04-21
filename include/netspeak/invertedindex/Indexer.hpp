@@ -4,8 +4,10 @@
 #define NETSPEAK_INVERTEDINDEX_INDEXER_HPP
 
 #include <cstring>
+#include <format>
 #include <memory>
 #include <ostream>
+#include <stdexcept>
 
 #include "Configuration.hpp"
 #include "IndexStrategy.hpp"
@@ -76,13 +78,13 @@ public:
 private: // class member
   static void assert_config(const Configuration& config) {
     if (!fs::exists(config.index_directory())) {
-      util::throw_invalid_argument("Does not exist", config.index_directory());
+      throw std::invalid_argument(std::format("Does not exist : {}", config.index_directory()));
     }
     if (!fs::is_directory(config.index_directory())) {
-      util::throw_invalid_argument("Not a directory", config.index_directory());
+      throw std::invalid_argument(std::format("Not a directory : {}", config.index_directory()));
     }
     if (!fs::is_empty(config.index_directory())) {
-      util::throw_invalid_argument("Is not empty", config.index_directory());
+      throw std::invalid_argument(std::format("Is not empty : {}", config.index_directory()));
     }
   }
 
@@ -91,10 +93,10 @@ private: // class member
     typedef value::value_traits<typename record_type::value_type> vtraits_t;
 
     if (record.key().size() > std::numeric_limits<typename ktraits_t::io_size_type>::max()) {
-      util::throw_invalid_argument("Too long key", record);
+      throw std::invalid_argument(std::format("Too long key : {}", record));
     }
     if (vtraits_t::size_of(record.value()) > std::numeric_limits<typename vtraits_t::io_size_type>::max()) {
-      util::throw_invalid_argument("Too long value", record);
+      throw std::invalid_argument(std::format("Too long value : {}", record));
     }
   }
 

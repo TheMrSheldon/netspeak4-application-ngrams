@@ -76,7 +76,7 @@ public:
   static ExternalMap* Open(const fs::path& idx_file) {
     std::ifstream ifs(idx_file);
     if (!ifs) {
-      util::throw_runtime_error("Cannot open", idx_file);
+      throw std::runtime_error(std::format("Cannot open : {}", idx_file));
     }
     std::string mph_file;
     std::string dat_file;
@@ -93,7 +93,7 @@ public:
     if (!ReadEntry(offset, entry, IsThreadSafeSwitch())) {
       DEBUG_LOG("Key", key);
       DEBUG_LOG("File offset", offset);
-      util::throw_runtime_error("EntryTraits::read_from failed");
+      throw std::runtime_error("EntryTraits::read_from failed");
     }
     // Compute checksum and reject value on mismatch.
     const Checksum checksum(util::hash<Checksum>(key));
