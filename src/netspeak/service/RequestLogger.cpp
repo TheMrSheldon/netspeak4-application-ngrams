@@ -43,10 +43,10 @@ RequestLogger::RequestLogger(std::unique_ptr<NetspeakService::Service> service, 
 
   const auto prefix = (log_dir / get_log_file_prefix()).string();
 
-  f_search_req_.lock().value().open(prefix + "_search_req.jsonl");
-  f_search_error.lock().value().open(prefix + "_search_error.jsonl");
-  f_get_corpora_req_.lock().value().open(prefix + "_get_corpora_req.jsonl");
-  f_get_corpora_error.lock().value().open(prefix + "_get_corpora_error.jsonl");
+  f_search_req_.lock()->open(prefix + "_search_req.jsonl");
+  f_search_error.lock()->open(prefix + "_search_error.jsonl");
+  f_get_corpora_req_.lock()->open(prefix + "_get_corpora_req.jsonl");
+  f_get_corpora_error.lock()->open(prefix + "_get_corpora_error.jsonl");
 }
 
 template <class S, class R>
@@ -88,7 +88,7 @@ grpc::Status RequestLogger::Search(grpc::ServerContext* context, const SearchReq
 
     {
       auto lock = f_search_req_.lock();
-      lock.value() << log_line << std::endl;
+      *lock << log_line << std::endl;
     }
   }
 
@@ -109,7 +109,7 @@ grpc::Status RequestLogger::Search(grpc::ServerContext* context, const SearchReq
 
     {
       auto lock = f_search_error.lock();
-      lock.value() << log_line << std::endl;
+      *lock << log_line << std::endl;
     }
   }
 
@@ -127,7 +127,7 @@ grpc::Status RequestLogger::GetCorpora(grpc::ServerContext* context, const Corpo
 
     {
       auto lock = f_get_corpora_req_.lock();
-      lock.value() << log_line << std::endl;
+      *lock << log_line << std::endl;
     }
   }
 
@@ -141,7 +141,7 @@ grpc::Status RequestLogger::GetCorpora(grpc::ServerContext* context, const Corpo
 
     {
       auto lock = f_get_corpora_error.lock();
-      lock.value() << log_line << std::endl;
+      *lock << log_line << std::endl;
     }
   }
 

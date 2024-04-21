@@ -19,7 +19,8 @@ const Dictionaries::Map Dictionaries::parse_csv(std::basic_istream<char, std::ch
   Map dict;
   std::string line;
   std::vector<std::string> tokens;
-  const auto predicate = std::bind2nd(std::equal_to<char>(), '\t');
+  /** Equivalence relations are symmetric; why do we specifically bind the second argument to '\t' and not the first? */
+  const auto predicate = std::bind(std::equal_to<char>(), std::placeholders::_1, '\t');
   while (std::getline(stream, line)) {
     boost::split(tokens, line, predicate);
     if (tokens.size() < 2)

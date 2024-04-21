@@ -14,7 +14,7 @@
 #include <unordered_map>
 
 #include "netspeak/Netspeak.hpp"
-#include "netspeak/util/Mut.hpp"
+#include "netspeak/util/lockable.hpp"
 
 
 namespace netspeak::service {
@@ -24,11 +24,11 @@ private:
   std::unique_ptr<NetspeakService::Service> service_;
   std::atomic<uint64_t> req_counter_;
 
-  util::Mut<std::ofstream> f_search_req_;
-  util::Mut<std::ofstream> f_search_error;
+  util::Lockable<std::ofstream> f_search_req_;
+  util::Lockable<std::ofstream> f_search_error;
 
-  util::Mut<std::ofstream> f_get_corpora_req_;
-  util::Mut<std::ofstream> f_get_corpora_error;
+  util::Lockable<std::ofstream> f_get_corpora_req_;
+  util::Lockable<std::ofstream> f_get_corpora_error;
 
 public:
   RequestLogger() = delete;
