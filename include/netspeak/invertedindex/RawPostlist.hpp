@@ -22,8 +22,11 @@ struct Head {
   uint32_t total_size;
 } __attribute__((packed));
 
+static_assert(sizeof(Head) == 12); // Ensure that the packed attribute is actually enforced
+
 class RawPostlist {
 public:
+  /** \todo O.o thats not how you create a unique_ptr **/
   RawPostlist() : iter_(new constant_size_iter) {}
 
   RawPostlist(const Head& head, const page_type& page)
@@ -45,7 +48,7 @@ public:
     assert(swap.stream_ != nullptr);
   }
 
-  virtual ~RawPostlist(){};
+  virtual ~RawPostlist() = default;
 
   inline size_t byte_size() const {
     return sizeof(Head) + iter_->byte_size();

@@ -29,14 +29,16 @@ namespace netspeak::bighashmap {
  * @version $Id$
  */
 template <typename ValueT, bool IsThreadSafe = false, typename TraitsT = value::value_traits<ValueT> >
-class BigHashMap {
+class BigHashMap final {
 public:
   typedef ValueT Value;
   typedef TraitsT Traits;
 
   BigHashMap() = delete;
 
-  virtual ~BigHashMap() {
+  ~BigHashMap() {
+    /** \todo use unique_ptr instead of raw pointers to encode this onwership semantic and provide automatic
+     * deallocation. **/
     for (const auto& map : maps_) {
       delete map;
     }
@@ -56,6 +58,7 @@ private:
   static uint64_t SerializedSizeInBytes(const fs::path& dir) {
     uint64_t size = 0;
     if (fs::exists(dir)) {
+      /** \todo Refactor **/
       const fs::directory_iterator end;
       for (fs::directory_iterator it(dir); it != end; ++it) {
         if (!fs::is_regular_file(it->path()))
@@ -120,8 +123,8 @@ public:
   }
 
 private:
-  std::vector<Map*> maps_;
-  uint64_t size_;
+  const std::vector<Map*> maps_;
+  uint64_t size_; /** \todo: with slight modification of the constructor, size_ can be const **/
 };
 
 template <typename Value, bool IsThreadSafe, typename Traits>

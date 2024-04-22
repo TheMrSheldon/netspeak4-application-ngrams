@@ -74,6 +74,7 @@ private:
 
 public:
   static ExternalMap* Open(const fs::path& idx_file) {
+    /** \todo return a unique_ptr instead **/
     std::ifstream ifs(idx_file);
     if (!ifs) {
       throw std::runtime_error(std::format("Cannot open : {}", idx_file));

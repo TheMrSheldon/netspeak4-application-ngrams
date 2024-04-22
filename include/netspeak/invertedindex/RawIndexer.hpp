@@ -3,7 +3,8 @@
 #ifndef NETSPEAK_INVERTEDINDEX_RAW_INDEXER_HPP
 #define NETSPEAK_INVERTEDINDEX_RAW_INDEXER_HPP
 
-#include <ostream>
+#include <inttypes.h>
+
 #include <string>
 
 #include "Properties.hpp"
@@ -15,7 +16,7 @@ namespace netspeak::invertedindex {
  */
 class RawIndexer {
 public:
-  virtual ~RawIndexer() {}
+  virtual ~RawIndexer() = default;
 
   virtual const Properties index() = 0;
 

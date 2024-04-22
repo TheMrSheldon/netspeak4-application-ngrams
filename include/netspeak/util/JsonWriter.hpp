@@ -104,6 +104,7 @@ public:                                       \
       return R(out_);
     }
 
+    /** \todo smells like a good place for generics and the std::integral concept **/
     R number(int16_t value) {
       out_ << value;
       return R(out_);

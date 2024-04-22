@@ -38,7 +38,7 @@ public:
 
   virtual ~Indexer() {}
 
-  const Properties index() {
+  const Properties index() override {
     Properties props;
     strategy_->index();
     props.key_count = strategy_->stats().key_count;
@@ -46,6 +46,7 @@ public:
     props.total_size = strategy_->stats().total_size;
     props.value_sorting = strategy_->config().value_sorting();
     const std::string tn(value::value_traits<typename record_type::value_type>::type_name());
+    /** \todo Potentially unchecked memory issue here since this may not write a \0, if tn is too long! **/
     std::strncpy(props.value_type, tn.c_str(), sizeof(props.value_type));
     props.write(fs::path(strategy_->config().index_directory()) / Properties::default_filename());
     util::log("Indexing succeeded");

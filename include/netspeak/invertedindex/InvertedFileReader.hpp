@@ -18,7 +18,7 @@
 namespace netspeak::invertedindex {
 
 template <typename T>
-class InvertedFileReader : public RecordReader<T> {
+class InvertedFileReader final : public RecordReader<T> {
 private:
   typedef RecordReader<T> base_type;
   typedef typename base_type::record_type record_type;

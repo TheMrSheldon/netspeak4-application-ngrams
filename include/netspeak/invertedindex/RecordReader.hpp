@@ -12,8 +12,8 @@ class RecordReader {
 public:
   typedef Record<T> record_type;
 
-  RecordReader() {}
-  virtual ~RecordReader() {}
+  RecordReader() = default;
+  virtual ~RecordReader() = default;
 
   virtual bool read(record_type& record) = 0;
 

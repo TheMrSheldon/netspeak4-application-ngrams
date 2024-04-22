@@ -11,7 +11,7 @@ namespace netspeak::invertedindex {
  * Specialized class to interpret raw values of a RawPostlist.
  */
 template <typename T>
-class Postlist : public RawPostlist {
+class Postlist final : public RawPostlist {
 public:
   typedef T value_type;
 

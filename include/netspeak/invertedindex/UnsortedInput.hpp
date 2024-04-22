@@ -23,7 +23,7 @@ namespace fs = std::filesystem;
  * unsorted records, e.g. from a pseudo inverted file.
  */
 template <typename T>
-class UnsortedInput : public IndexStrategy<T> {
+class UnsortedInput final : public IndexStrategy<T> {
 public:
   typedef typename IndexStrategy<T>::record_type record_type;
   typedef typename record_type::value_type value_type;
@@ -145,7 +145,7 @@ private:
     }
   }
 
-  void insert_(const record_type& record) {
+  void insert_(const record_type& record) override {
     if (!record.write(bucket_fs_[util::hash32(record.key()) % bucket_fs_.size()])) {
       throw std::runtime_error(std::format("Cannot write record : {}", record));
     }

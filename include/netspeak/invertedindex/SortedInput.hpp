@@ -17,7 +17,7 @@ namespace netspeak::invertedindex {
  * whose values are sorted, e.g. those extracted from real inverted files.
  */
 template <typename T>
-class SortedInput : public IndexStrategy<T> {
+class SortedInput final : public IndexStrategy<T> {
 public:
   typedef typename IndexStrategy<T>::record_type record_type;
   typedef typename record_type::value_type value_type;
@@ -25,9 +25,9 @@ public:
   explicit SortedInput(const Configuration& config)
       : IndexStrategy<value_type>(config), storage_(config.index_directory()) {}
 
-  virtual ~SortedInput() {}
+  virtual ~SortedInput() = default;
 
-  virtual void index() {
+  virtual void index() override {
     write_current_postlist_();
     storage_.close();
   }

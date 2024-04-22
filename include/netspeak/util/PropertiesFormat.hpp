@@ -12,6 +12,7 @@ namespace netspeak::util {
 // C++ is a very mature language, so of course it's not possible to move the
 // implementation of a template function into a .cpp file.
 // https://stackoverflow.com/questions/115703/storing-c-template-function-definitions-in-a-cpp-file
+// > Hurray for C++20 modules!
 
 namespace __properties_format_impl {
 
