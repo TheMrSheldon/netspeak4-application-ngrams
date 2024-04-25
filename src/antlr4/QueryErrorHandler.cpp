@@ -1,4 +1,5 @@
 #include <antlr4/QueryErrorHandler.hpp>
+#include <format>
 #include <netspeak/error.hpp>
 
 namespace antlr4 {
@@ -10,11 +11,8 @@ void QueryErrorHandler::syntaxError(Recognizer*, Token* offendingSymbol, size_t 
   size_t endLine = offendingSymbol->getLine();
   size_t endPoint = offendingSymbol->getStopIndex() + 1;
 
-  std::stringstream what;
-  what << "(" << startLine << ":" << startPoint << ", " << endLine << ":" << endPoint << ")";
-  what << " " << msg;
-
-  throw netspeak::invalid_query_error(what.str());
+  std::string what = std::format("({}:{},{}:{}) {}", startLine, startPoint, endLine, endPoint, msg);
+  throw netspeak::invalid_query_error(what);
 }
 
 } // namespace antlr4

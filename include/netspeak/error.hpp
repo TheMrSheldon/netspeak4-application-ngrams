@@ -12,9 +12,9 @@ namespace netspeak {
 using util::tracable_logic_error;
 using util::tracable_runtime_error;
 
-struct invalid_query_error : public tracable_runtime_error {
+struct invalid_query_error final : public tracable_runtime_error {
   explicit invalid_query_error(const std::string& what) : tracable_runtime_error(what) {}
-  virtual ~invalid_query_error() throw() override {}
+  virtual ~invalid_query_error() override = default;
 };
 
 
@@ -22,6 +22,8 @@ struct invalid_query_error : public tracable_runtime_error {
  * @brief The query_error_message struct
  *
  * returns a standard error messages for an invalid query
+ *
+ * @todo This should be a namespace and the members should be constexpr.
  */
 struct query_error_message {
   static const std::string too_many_words;
@@ -32,6 +34,7 @@ struct query_error_message {
   static const std::string too_long_query(int queryLength, int queryMaxLength);
 };
 
+/** @todo This should be a namespace and the members should be constexpr. **/
 struct error_message {
   static const std::string no_error;
   static const std::string invalid_query;

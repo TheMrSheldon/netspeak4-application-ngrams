@@ -7,7 +7,6 @@
 #include <ostream>
 #include <stdexcept>
 
-#include "../value/big_string_traits.hpp"
 #include "../value/pair_traits.hpp"
 #include "../value/quadruple_traits.hpp"
 #include "../value/string_traits.hpp"

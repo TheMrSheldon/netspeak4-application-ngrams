@@ -8,7 +8,6 @@
 #include <antlr4/parse.hpp>
 #include <fstream>
 #include <iostream>
-#include <netspeak/Dictionaries.hpp>
 #include <netspeak/error.hpp>
 
 #include <boost/test/unit_test.hpp>

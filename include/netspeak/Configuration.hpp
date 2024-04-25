@@ -13,7 +13,7 @@
 
 namespace netspeak {
 
-class Configuration {
+class Configuration final {
 private:
   util::Config config_;
   std::unique_ptr<Configuration> extends_;
@@ -47,6 +47,7 @@ public:
   Configuration extend(const Configuration& base) const;
 
 public:
+  /** \todo These should be constexpr and should not be all-caps to avoid clashes with any macros **/
   static const std::string PATH_TO_HOME;
   static const std::string PATH_TO_PHRASE_INDEX;
   static const std::string PATH_TO_PHRASE_CORPUS;

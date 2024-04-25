@@ -3,6 +3,8 @@
 #ifndef NETSPEAK_VALUE_BIG_STRING_HPP
 #define NETSPEAK_VALUE_BIG_STRING_HPP
 
+/** \todo I don't see, why big_string.hpp and big_string_traits.hpp exist. Deprecated? **/
+
 #include <string>
 
 namespace netspeak::value {

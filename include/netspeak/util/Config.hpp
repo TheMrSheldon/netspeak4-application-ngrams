@@ -22,7 +22,7 @@ private:
   std::filesystem::path file_name_;
 
 public:
-  typedef std::map<std::string, std::string>::value_type initializer_list_type;
+  using initializer_list_type = std::map<std::string, std::string>::value_type;
   Config(std::initializer_list<initializer_list_type> list) : data_(list), file_name_() {}
   Config() : data_(), file_name_() {}
   explicit Config(std::filesystem::path file_name);

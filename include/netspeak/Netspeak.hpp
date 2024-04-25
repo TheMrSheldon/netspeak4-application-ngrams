@@ -36,25 +36,25 @@
 
 namespace netspeak {
 
-class Netspeak {
+class Netspeak final {
 public:
-  Netspeak() {}
+  Netspeak() = default;
   Netspeak(const Netspeak&) = delete;
 
   void initialize(const Configuration& config);
 
   Properties properties() const;
 
-  void search(const service::SearchRequest& request, service::SearchResponse& response) throw();
+  void search(const service::SearchRequest& request, service::SearchResponse& response) noexcept;
 
 
 private:
-  typedef model::Query Query;
-  typedef model::NormQuery NormQuery;
-  typedef model::RawPhraseResult RawPhraseResult;
-  typedef model::RawRefResult RawRefResult;
-  typedef model::RawResult RawResult;
-  typedef model::SearchOptions SearchOptions;
+  using NormQuery = model::NormQuery;
+  using Query = model::Query;
+  using RawPhraseResult = model::RawPhraseResult;
+  using RawRefResult = model::RawRefResult;
+  using RawResult = model::RawResult;
+  using SearchOptions = model::SearchOptions;
 
   std::pair<QueryNormalizer::Options, SearchOptions> to_options(const service::SearchRequest& request);
 
@@ -75,7 +75,7 @@ private:
   search_config get_search_config(const Configuration& config) const;
 
 private:
-  // TODO: Extract the whole cache logic into its own class
+  /** \todo Extract the whole cache logic into its own class **/
   struct result_cache_item {
   public:
     SearchOptions options;

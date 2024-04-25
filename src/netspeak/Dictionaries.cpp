@@ -7,15 +7,15 @@
 
 #include <boost/algorithm/string.hpp>
 
-namespace netspeak {
+namespace netspeak::Dictionaries {
 
-const Dictionaries::Map Dictionaries::read_from_file(const std::filesystem::path& csv) {
+const Map read_from_file(const std::filesystem::path& csv) {
   std::ifstream ifs(csv);
   util::check(ifs.is_open(), error_message::cannot_open, csv);
   return parse_csv(ifs);
 }
 
-const Dictionaries::Map Dictionaries::parse_csv(std::basic_istream<char, std::char_traits<char>>& stream) {
+const Map parse_csv(std::istream& stream) {
   Map dict;
   std::string line;
   std::vector<std::string> tokens;
@@ -32,4 +32,4 @@ const Dictionaries::Map Dictionaries::parse_csv(std::basic_istream<char, std::ch
   return dict;
 }
 
-} // namespace netspeak
+} // namespace netspeak::Dictionaries

@@ -2,10 +2,12 @@
 #define NETSPEAK_DICTIONARIES_HPP
 
 #include <filesystem>
+#include <istream>
 #include <string>
 #include <unordered_map>
 
-namespace netspeak {
+/** \todo Rename Dictionaries namespace to something lowercase to fulfill naming conventions **/
+namespace netspeak::Dictionaries {
 
 /**
  * A class to represent a dictionary. A dictionary is a mapping from keys to
@@ -16,14 +18,10 @@ namespace netspeak {
  *
  * Whereas whitespaces within keys and/or values are allowed.
  */
-class Dictionaries {
-public:
-  typedef std::unordered_multimap<std::string, std::string> Map;
+using Map = std::unordered_multimap<std::string, std::string>;
 
-  static const Map read_from_file(const std::filesystem::path& csv);
-  static const Map parse_csv(std::basic_istream<char, std::char_traits<char>>& stream);
-};
-
-} // namespace netspeak
+const Map read_from_file(const std::filesystem::path& csv);
+const Map parse_csv(std::istream& stream);
+} // namespace netspeak::Dictionaries
 
 #endif // NETSPEAK_DICTIONARIES_HPP

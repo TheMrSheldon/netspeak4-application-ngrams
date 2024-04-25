@@ -1,11 +1,29 @@
-cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
 
 option(NETSPEAK_BUILD_TESTS "Build tests" ON)
 option(NETSPEAK_BUILD_DOCS "Build documentation" ON)
 option(NETSPEAK_ONLY_DOCS "Build only documentation -- this disables tests and others" OFF)
 
-project(Netspeak VERSION 4.2.0 LANGUAGES CXX)
+project(Netspeak VERSION 4.2.0 LANGUAGES C CXX)
 
+##########################################################################################
+# Enable Optimization
+##########################################################################################
+if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
+	include(CheckIPOSupported)
+	check_ipo_supported(RESULT supported OUTPUT error)
+	if( supported )
+		message(STATUS "IPO / LTO enabled")
+		# set_property(TARGET example PROPERTY INTERPROCEDURAL_OPTIMIZATION TRUE)
+		set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
+	else()
+		message(STATUS "IPO / LTO not supported: <${error}>")
+	endif()
+endif()
+
+##########################################################################################
+# Source Code
+##########################################################################################
 if (NOT NETSPEAK_ONLY_DOCS)
 	set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 	add_subdirectory(src)
@@ -33,13 +51,23 @@ if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME) AND NETSPEAK_BUILD_DOCS)
 	set(DOXYGEN_PROJECT_BRIEF "One word leads to another.")
 	set(DOXYGEN_PROJECT_LOGO "netspeak_logo.svg")
 	set(DOXYGEN_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/documentation)
-	set(DOXYGEN_STRIP_FROM_PATH "include")
+	set(DOXYGEN_STRIP_FROM_PATH "\"include\" \"src\"")
 	set(DOXYGEN_EXTRACT_PRIVATE "YES")
+	set(DOXYGEN_EXTRACT_ALL "YES")
 	set(DOXYGEN_EXTRACT_STATIC "YES")
 	set(DOXYGEN_USE_MDFILE_AS_MAINPAGE "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
 	set(DOXYGEN_SOURCE_BROWSER "YES")
 	set(DOXYGEN_INLINE_SOURCES "YES")
+	set(DOXYGEN_RECURSIVE "YES")
 	set(DOXYGEN_IMAGE_PATH ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/docs/media)
+	set(DOXYGEN_HAVE_DOT "YES")  # Required for CALL_GRAPH
+	set(DOXYGEN_DOT_IMAGE_FORMAT "svg")
+	set(DOXYGEN_CALL_GRAPH "YES")
+	set(DOXYGEN_CALLER_GRAPH "YES")
+	set(DOXYGEN_MACRO_EXPANSION "YES")
+	set(DOXYGEN_UML_LOOK "YES")
+	# set(DOXYGEN_DIRECTORY_GRAPH "YES")
+	# set(DOXYGEN_DIR_GRAPH_MAX_DEPTH 5)
 
 	set(DOXYGEN_GENERATE_HTML "YES")
 
@@ -58,7 +86,7 @@ if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME) AND NETSPEAK_BUILD_DOCS)
 	## Build Documentation
 	doxygen_add_docs(
 		netspeak_docs
-		${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAKE_CURRENT_SOURCE_DIR}/README.md ${CMAKE_CURRENT_SOURCE_DIR}/docs
+		${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAKE_CURRENT_SOURCE_DIR}/src ${CMAKE_CURRENT_SOURCE_DIR}/README.md ${CMAKE_CURRENT_SOURCE_DIR}/docs
 		WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 	)
 

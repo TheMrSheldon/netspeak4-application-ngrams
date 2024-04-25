@@ -9,7 +9,7 @@
 
 #include "netspeak/invertedindex/InvertedFileReader.hpp"
 #include "netspeak/invertedindex/Record.hpp"
-#include "netspeak/value/big_string.hpp"
+#include "netspeak/value/big_string_traits.hpp"
 #include "netspeak/value/pair.hpp"
 #include "netspeak/value/triple.hpp"
 

@@ -12,46 +12,63 @@
 namespace antlr4 {
 using namespace netspeak::model;
 
-typedef Query::Unit Unit;
-typedef Query::Unit::Tag Tag;
-
 /**
- * @brief Unescapes backslashes in the given word.
+ * @brief Unescapes backslashes in the given string.
+ * @details Unescapes backslashes in the given string. That is, sequences of the form `\c`, were `c`is an arbitrary
+ * character, are replaced with `c` in the output. In effect this means that single backslashes are removed and double
+ * backslashes are replaced with a single backslash:
+ * ```cpp
+ * >>> unescape_word("hello world");
+ * "hello world"
+ * >>> unescape_word("\\hello \\\\world\\");
+ * "hello \\world"
+ * >>> unescape_word("hello \\\\\\world");
+ * "hello \\world"
+ * ```
+ * @param[in,out] str The string to be unescaped
  */
-void unescape_word(std::string& word) {
+static void unescape_word(std::string& str) {
   size_t write_i = 0;
 
-  for (size_t i = 0; i < word.size(); i++) {
-    char c = word[i];
+  for (size_t i = 0; i < str.size(); i++) {
+    char c = str[i];
     if (c == '\\') {
       size_t next = i + 1;
-      if (next < word.size()) {
-        c = word[next];
+      if (next < str.size()) {
+        c = str[next];
         i = next;
       }
     }
-    word[write_i] = c;
+    str[write_i] = c;
     write_i++;
   }
 
-  word.erase(write_i);
+  str.erase(write_i);
 }
 
 /**
- * @brief A query listener that will construct a \c Query while visiting all
- * ANTLR4 grammar rules.
+ * @brief A query listener that will construct a \c Query while visiting all ANTLR4 grammar rules.
+ * @details The understand the implementation of this class, it's helpful to have the grammar (not necessarily the
+ * lexer) open on the side.
  *
- * The understand the implementation of this class, it's helpful to have the
- * grammar (not necessarily the lexer) open on the side.
+ * @todo This class smells fishy. The stack should be replaceable with a Visitor implementation. Right now, it is a
+ * stack-machine on top of the stack-machine of the parser.
  */
 class QueryConstructor : public QueryBaseListener {
 private:
+  using Unit = Query::Unit;
+  using Tag = Query::Unit::Tag;
+
   std::vector<std::shared_ptr<Unit>> stack_;
   std::shared_ptr<Query> query_;
   bool in_dictset_ = false;
 
-  static const size_t MAX_STACK_SIZE = 30;
+  static constexpr size_t MaxStackSize = 30;
 
+public:
+  static constexpr size_t MaxQueryLength = 2000;
+
+private:
   void push_stack(std::shared_ptr<Unit> unit) {
     auto& last = stack_[stack_.size() - 1];
     last->add_child(unit);
@@ -64,7 +81,7 @@ private:
     // implemented using recursion, so the program stack might overflow for too
     // deeply nested query ASTs. So to be on the safe side, the size of this
     // stack is limited.
-    if (stack_.size() > MAX_STACK_SIZE) {
+    if (stack_.size() > MaxStackSize) {
       throw netspeak::invalid_query_error("The query is too deeply nested");
     }
   }
@@ -77,7 +94,7 @@ private:
   }
 
 public:
-  QueryConstructor() {}
+  QueryConstructor() = default;
   QueryConstructor(const QueryConstructor&) = delete;
 
   std::shared_ptr<Query> query() {
@@ -186,7 +203,7 @@ public:
 
 
 std::shared_ptr<Query> parse_query(const std::string& query) {
-  if (query.size() > 2000) {
+  if (query.length() > QueryConstructor::MaxQueryLength) {
     throw netspeak::invalid_query_error("Query too long");
   }
 
