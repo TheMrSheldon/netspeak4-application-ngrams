@@ -8,7 +8,7 @@ var searchData=
   ['rawresult_2ecpp_5',['RawResult.cpp',['../RawResult_8cpp.html',1,'']]],
   ['rawresult_2ehpp_6',['RawResult.hpp',['../RawResult_8hpp.html',1,'']]],
   ['rawsearcher_2ehpp_7',['RawSearcher.hpp',['../RawSearcher_8hpp.html',1,'']]],
-  ['readme_2emd_8',['readme.md',['../include_2netspeak_2util_2README_8md.html',1,'(Global Namespace)'],['../README_8md.html',1,'(Global Namespace)'],['../include_2netspeak_2regex_2README_8md.html',1,'(Global Namespace)'],['../include_2netspeak_2model_2README_8md.html',1,'(Global Namespace)']]],
+  ['readme_2emd_8',['README.md',['../README_8md.html',1,'']]],
   ['record_2ehpp_9',['Record.hpp',['../Record_8hpp.html',1,'']]],
   ['recordreader_2ehpp_10',['RecordReader.hpp',['../RecordReader_8hpp.html',1,'']]],
   ['regexcommand_2ecpp_11',['RegexCommand.cpp',['../RegexCommand_8cpp.html',1,'']]],

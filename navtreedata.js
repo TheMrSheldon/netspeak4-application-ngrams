@@ -30,9 +30,6 @@ var NAVTREE =
     [ "Publishing a new release", "index.html#autotoc_md12", [
       [ "Contributors", "index.html#autotoc_md14", null ]
     ] ],
-    [ "README", "md_netspeak_2model_2README.html", null ],
-    [ "README", "md_netspeak_2regex_2README.html", null ],
-    [ "README", "md_netspeak_2util_2README.html", null ],
     [ "Deployment", "deployment.html", null ],
     [ "For Developers", "DeveloperIdx.html", [
       [ "Getting Started", "gettingstarted.html", [
@@ -58,7 +55,7 @@ var NAVTREE =
         [ "Python", "bindings.html#autotoc_md20", null ]
       ] ]
     ] ],
-    [ "Using the Netspeak CLI", "netspeakcli.html", null ],
+    [ "Netspeak CLI", "netspeakcli.html", null ],
     [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -111,12 +108,12 @@ var NAVTREEINDEX =
 "classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html#a4c506304a4e907e91dc75d45ad5bd1ee",
 "classnetspeak_1_1value_1_1quadruple.html#a2521c3819a7c86c72a0ca9601f584bd8",
 "indexing_8cpp.html#a4ea97d4aa2512ac858edac0e8710d49b",
-"namespacenetspeak_1_1invertedindex.html#a1f12f1eba0c5a10bc4058e519221204ba9c9ab624360885fcf93b7643c93b6748",
-"service_8hpp.html#a9f5fa11e35e7a549c179834573e1abb7",
-"structnetspeak_1_1invalid__query__error.html",
-"structnetspeak_1_1model_1_1QuerySyntax.html#a3f127b5f375a247d1d1ab1f75c64e956",
-"structnetspeak_1_1value_1_1NameOf_3_01big__string_01_4.html#af3497bf0c9f1ecb7b6808463cc3dd092",
-"structnetspeak_1_1value_1_1value__traits_3_01triple_3_01T1_00_01T2_00_01T3_01_4_01_4.html#a2448429419dad2afbf7f09b93bd6094f"
+"namespacenetspeak_1_1invertedindex.html#a68d6ed4445a1c4d17135483cb74782e8",
+"specification.html",
+"structnetspeak_1_1invalid__query__error.html#a507da5ee35d6819dbf888b5ad8c28db1",
+"structnetspeak_1_1model_1_1QuerySyntax.html#a458b218de2c9ec780c7556f17d8e63ce",
+"structnetspeak_1_1value_1_1NameOf_3_01double_01_4.html#afbbe46eb890e56c73f92a113ccb7be16",
+"structnetspeak_1_1value_1_1value__traits_3_01triple_3_01T1_00_01T2_00_01T3_01_4_01_4.html#a360c8332f0d67fc516c13e225f8cdb22"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
