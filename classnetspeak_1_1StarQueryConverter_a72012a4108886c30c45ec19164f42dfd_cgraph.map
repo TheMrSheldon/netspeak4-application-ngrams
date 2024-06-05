@@ -1,0 +1,32 @@
+<map id="netspeak::StarQueryConverter::to_star_queries" name="netspeak::StarQueryConverter::to_star_queries">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,172,224,212"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1StarQueryConverter.html#a3b9f125a061331acd1c667c8bf50fb2b" title=" " alt="" coords="274,140,493,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,176,260,172,261,177,225,182"/>
+<area shape="rect" id="Node000012" href="$classnetspeak_1_1model_1_1SimpleQuery.html#aacd9450bbdddc1274a461e21075335db" title=" " alt="" coords="272,204,495,244"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="225,202,259,206,258,212,224,208"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="334,140,331,130,339,121,356,115,383,113,414,116,431,123,429,128,413,121,383,119,357,121,342,125,336,131,339,139"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a8840caeb703398accd6bf417b0b1ae8e" title=" " alt="" coords="809,5,1032,45"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="413,138,471,104,542,73,606,56,671,43,795,28,796,34,672,49,607,61,544,79,474,109,416,142"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1StarQueryConverter.html#a603db91f5a1da4fcc11c7e99f71ece2f" title=" " alt="" coords="543,140,761,180"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="493,166,529,166,529,172,493,172"/>
+<area shape="rect" id="Node000008" href="$classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a90bbf69557a0a390446247d9435aed98" title=" " alt="" coords="809,69,1032,109"/>
+<area shape="poly" id="edge15_Node000002_Node000008" title=" " alt="" coords="429,137,482,117,542,101,607,92,672,86,796,82,796,87,673,91,607,97,543,107,484,123,431,142"/>
+<area shape="rect" id="Node000009" href="$classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a06c21084859addaa75c754815d691d39" title=" " alt="" coords="809,197,1032,237"/>
+<area shape="poly" id="edge16_Node000002_Node000009" title=" " alt="" coords="473,177,543,189,673,203,796,210,795,216,673,208,542,195,472,183"/>
+<area shape="rect" id="Node000010" href="$classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a1ffd5dced48df9d16a6de0e434858634" title=" " alt="" coords="809,261,1032,301"/>
+<area shape="poly" id="edge17_Node000002_Node000010" title=" " alt="" coords="461,178,496,190,520,202,544,214,607,232,673,246,796,266,795,272,672,252,606,237,542,218,517,207,494,194,460,183"/>
+<area shape="rect" id="Node000011" href="$classnetspeak_1_1StarQuery.html#a01c6f6f85f75d9c05c9398d32ad231e0" title=" " alt="" coords="575,305,729,345"/>
+<area shape="poly" id="edge14_Node000002_Node000011" title=" " alt="" coords="478,178,496,190,515,214,522,238,528,262,545,285,564,298,561,303,541,289,523,264,516,240,510,216,493,194,475,182"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="543,154,506,154,506,148,543,148"/>
+<area shape="poly" id="edge9_Node000004_Node000003" title=" " alt="" coords="677,137,735,96,808,55,826,47,828,52,811,60,738,101,681,142"/>
+<area shape="poly" id="edge10_Node000004_Node000004" title=" " alt="" coords="603,140,600,130,608,121,625,115,652,113,683,116,700,123,698,128,682,121,652,119,626,121,610,125,605,131,608,139"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1StarQuery.html#a8df828a9f4fc20f1530bf0fa7a2fc2fc" title=" " alt="" coords="843,133,998,173"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="761,155,830,153,830,158,762,160"/>
+<area shape="poly" id="edge11_Node000004_Node000008" title=" " alt="" coords="728,137,830,110,831,115,730,143"/>
+<area shape="poly" id="edge12_Node000004_Node000009" title=" " alt="" coords="747,177,813,192,812,197,746,183"/>
+<area shape="poly" id="edge13_Node000004_Node000010" title=" " alt="" coords="685,178,742,212,810,247,830,254,828,259,808,252,739,217,682,182"/>
+<area shape="rect" id="Node000006" href="$namespacenetspeak_1_1util.html#a3d1d03195f7667390b5f548a2b9f9869" title="A simple function that appends all elements of other to base." alt="" coords="1080,133,1223,173"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="999,151,1066,151,1066,156,999,156"/>
+<area shape="rect" id="Node000007" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="1271,141,1421,166"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="1223,151,1257,151,1257,156,1223,156"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="netspeak::service::bit_mix" name="netspeak::service::bit_mix">
+<area shape="rect" id="Node000001" title="This determinestically returns a random number from the given number." alt="" coords="495,5,640,45"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1service_1_1LoadBalanceProxy.html#ab06ac7d71d42a2df0a3402ecdb7fa178" title=" " alt="" coords="247,5,447,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="481,28,447,28,447,23,481,23"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1service_1_1LoadBalanceProxy.html#ae41bead1d4e6e6a1a2e7307d1fc8da5c" title=" " alt="" coords="5,5,199,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="233,28,199,28,199,23,233,23"/>
+</map>

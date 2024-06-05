@@ -1,0 +1,11 @@
+<map id="netspeak::bighashmap::CmphMap::size" name="netspeak::bighashmap::CmphMap::size">
+<area shape="rect" id="Node000001" title=" " alt="" coords="467,69,637,109"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1bighashmap_1_1CmphMap.html#a605981be34ef78b33eb5cfc2ab764dda" title=" " alt="" coords="236,37,407,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="453,78,407,72,407,67,453,73"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1bighashmap_1_1InternalMap.html#a2bf5f719141050961f5967e006036043" title=" " alt="" coords="224,101,419,141"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="454,106,419,110,419,105,453,100"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1bighashmap_1_1ExternalMap.html#ab4c1b42fd3ea23b4bb6543f24d4fa062" title=" " alt="" coords="5,5,176,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="222,46,176,40,177,35,223,41"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1bighashmap_1_1InternalMap.html#af7547d2d66d8db1f2e9585ac049a414a" title=" " alt="" coords="5,69,176,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="223,74,177,80,176,75,222,68"/>
+</map>

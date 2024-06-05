@@ -1,0 +1,15 @@
+<map id="netspeak::PhraseFileReader::read" name="netspeak::PhraseFileReader::read">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,133,208,173"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1model_1_1Words.html#ae1deea93068d08a083295b54bba7401e" title=" " alt="" coords="257,5,435,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,131,188,94,255,55,270,48,272,53,257,60,191,98,136,136"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1invertedindex_1_1Record.html#a8c31f71f3940ea11d85fbfca276f0eca" title=" " alt="" coords="256,69,436,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,131,257,110,258,115,183,136"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1model_1_1Words.html#a2100c650e63c1c205afd766bef7fc713" title=" " alt="" coords="257,133,435,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="208,151,243,151,243,156,208,156"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#ac8b0cdf55599b33fd7d4013948d48f43" title=" " alt="" coords="280,197,412,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="183,171,268,194,266,199,182,176"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1invertedindex_1_1Record.html#a0d49817e43096fd3bb77cef8c1a42dd5" title=" " alt="" coords="256,261,436,301"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="136,171,191,209,257,247,272,254,270,259,255,252,188,213,133,176"/>
+<area shape="rect" id="Node000006" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="484,205,635,230"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="412,215,470,215,470,220,412,220"/>
+</map>

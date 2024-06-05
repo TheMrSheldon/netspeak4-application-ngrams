@@ -1,0 +1,9 @@
+<map id="cli::newStub" name="cli::newStub">
+<area shape="rect" id="Node000001" title=" " alt="" coords="629,5,731,31"/>
+<area shape="rect" id="Node000002" href="$namespacecli.html#a6a02e1a5cac70ac58dc17ac7f8c5cc00" title=" " alt="" coords="455,5,581,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="616,21,582,21,582,15,616,15"/>
+<area shape="rect" id="Node000003" href="$namespacecli.html#ab3047781f5c7e722415ab5ac13152596" title=" " alt="" coords="232,5,407,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="441,21,407,21,407,15,441,15"/>
+<area shape="rect" id="Node000004" href="$classcli_1_1ProxyCommand.html#a50dcb9c42e6b385a65354f9b999901ce" title=" " alt="" coords="5,5,184,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="218,21,184,21,184,15,218,15"/>
+</map>

@@ -1,5 +1,7 @@
 <map id="netspeak::invertedindex::RawSearcher" name="netspeak::invertedindex::RawSearcher">
-<area shape="rect" id="node1" title=" " alt="" coords="5,50,185,91"/>
-<area shape="rect" id="node2" href="$classnetspeak_1_1invertedindex_1_1Searcher.html" title=" " alt="" coords="261,5,441,61"/>
-<area shape="rect" id="node3" href="$classnetspeak_1_1invertedindex_1_1Searcher.html" title=" " alt="" coords="233,86,468,127"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="117,5,289,165"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1invertedindex_1_1Searcher.html" title=" " alt="" coords="5,213,177,568"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,179,159,214,154,212,167,177"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1invertedindex_1_1Searcher.html" title=" " alt="" coords="202,221,429,561"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="240,177,255,220,250,221,235,179"/>
 </map>

@@ -1,0 +1,10 @@
+<map id="netspeak::norm_query_to_key" name="netspeak::norm_query_to_key">
+<area shape="rect" id="Node000001" title="Returns a unique string representation for the given query." alt="" coords="447,49,615,89"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1Netspeak.html#aaaac0f03b7e31a499189cdcba71801f7" title=" " alt="" coords="215,5,389,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="433,56,388,49,389,44,434,51"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1Netspeak.html#a63bb059fbca69dbbcb42a2c9ed24674f" title=" " alt="" coords="205,85,399,125"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="434,87,399,92,398,87,433,81"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1Netspeak.html#aaa049275c7a0a7f6721acf7422402bff" title=" " alt="" coords="5,49,157,89"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="202,52,158,59,157,54,201,46"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="191,89,157,84,158,78,192,84"/>
+</map>

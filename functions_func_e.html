@@ -1,0 +1,223 @@
+<!-- Heavily based on https://github.com/jothepro/doxygen-awesome-css/blob/main/doxygen-custom/header.html -->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- BEGIN opengraph metadata -->
+    <meta property="og:title" content=Netspeak />
+    <meta property="og:image" content="netspeak_logo.svg" />
+    <meta property="og:description" content="One word leads to another." />
+    <meta property="og:url" content="https://github.com/netspeak/netspeak4-application-ngrams" />
+    <!-- END opengraph metadata -->
+    <!-- BEGIN twitter metadata -->
+    <meta name="twitter:image:src" content="netspeak_logo.svg" />
+    <meta name="twitter:title" content="Netspeak" />
+    <meta name="twitter:description" content="One word leads to another." />
+    <!-- END twitter metadata -->
+    <title>Netspeak: Class Members - Functions</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/svg+xml" href="netspeak_logo.svg" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+    <script type="text/javascript" src="toggle-alternative-theme.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+        DoxygenAwesomeDarkModeToggle.init()
+        DoxygenAwesomeParagraphLink.init()
+        DoxygenAwesomeInteractiveToc.init()
+        DoxygenAwesomeTabs.init()
+    </script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-tabs.js" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- https://tholman.com/github-corners/ -->
+    <a href="https://github.com/netspeak/netspeak4-application-ngrams" class="github-corner"
+        title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 250 250" width="40" height="40"
+            style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg></a>
+    <style>
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+        @media (max-width:500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+    </style>
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectlogo"><img alt="Logo" src="netspeak_logo.svg" /></td>
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">Netspeak
+                                &#160;<span
+                                    id="projectnumber">4.2.0</span>
+                            </div>
+                            <div id="projectbrief">One word leads to another.</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions_func_e.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<div class="textblock">Here is a list of all functions with links to the classes they belong to:</div>
+
+<h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
+<li>e1()&#160;:&#160;<a class="el" href="classnetspeak_1_1value_1_1pair.html#af9d2c0cc810be5073065439a8d067daf">netspeak::value::pair&lt; T1, T2 &gt;</a>, <a class="el" href="classnetspeak_1_1value_1_1quadruple.html#a5543c0f8dc08796da17831df5134f841">netspeak::value::quadruple&lt; T1, T2, T3, T4 &gt;</a>, <a class="el" href="classnetspeak_1_1value_1_1triple.html#a966393a9c36677d90cab0f4c3ece836f">netspeak::value::triple&lt; T1, T2, T3 &gt;</a></li>
+<li>e2()&#160;:&#160;<a class="el" href="classnetspeak_1_1value_1_1pair.html#a52d349f5f25b356c4436a983182e4b6c">netspeak::value::pair&lt; T1, T2 &gt;</a>, <a class="el" href="classnetspeak_1_1value_1_1quadruple.html#a5bf0442db99788dc3835d9be853ecf00">netspeak::value::quadruple&lt; T1, T2, T3, T4 &gt;</a>, <a class="el" href="classnetspeak_1_1value_1_1triple.html#a98a6aa098005e04f09026b7f6160b3e2">netspeak::value::triple&lt; T1, T2, T3 &gt;</a></li>
+<li>e3()&#160;:&#160;<a class="el" href="classnetspeak_1_1value_1_1quadruple.html#a19b8695d26a93073e7afca44c2f8790c">netspeak::value::quadruple&lt; T1, T2, T3, T4 &gt;</a>, <a class="el" href="classnetspeak_1_1value_1_1triple.html#a08e08c7bc2b0a2d45c34446d00bfa52c">netspeak::value::triple&lt; T1, T2, T3 &gt;</a></li>
+<li>e4()&#160;:&#160;<a class="el" href="classnetspeak_1_1value_1_1quadruple.html#ad3063cff6a86e51c886a2c9316d043c3">netspeak::value::quadruple&lt; T1, T2, T3, T4 &gt;</a></li>
+<li>empty()&#160;:&#160;<a class="el" href="classnetspeak_1_1invertedindex_1_1RawPostlist.html#ad46e560ad871f7be03ab6ecb53b89a76">netspeak::invertedindex::RawPostlist</a>, <a class="el" href="structnetspeak_1_1model_1_1LengthRange.html#a3d9a055e04900bb01dbaf097a99bb4b6">netspeak::model::LengthRange</a>, <a class="el" href="classnetspeak_1_1model_1_1NormQuery.html#a1ba6d7ed6135d885b9589c2e6e6618bb">netspeak::model::NormQuery</a>, <a class="el" href="classnetspeak_1_1model_1_1RawPhraseResult.html#a05074ebb5ca0e11f4e798b131c45c8e9">netspeak::model::RawPhraseResult</a>, <a class="el" href="classnetspeak_1_1model_1_1RawRefResult.html#a53caa8af8c7e1f2b2f8d1beaf2061ef3">netspeak::model::RawRefResult</a>, <a class="el" href="classnetspeak_1_1model_1_1RawResult.html#aa5a6359fc87a74fc52c6f48b3d97ee8e">netspeak::model::RawResult</a>, <a class="el" href="classnetspeak_1_1model_1_1Words.html#ae1deea93068d08a083295b54bba7401e">netspeak::model::Words</a>, <a class="el" href="classnetspeak_1_1util_1_1Config.html#a16a188857ca25e3ab7c2ddf89f8609e5">netspeak::util::Config</a>, <a class="el" href="classnetspeak_1_1util_1_1LfuCache.html#ada6afb12d868f1cac0ec2ce52829f8df">netspeak::util::LfuCache&lt; T &gt;</a>, <a class="el" href="classnetspeak_1_1util_1_1StringIdMap.html#a9ac196ff190f2d4b2253149aeabf02a9">netspeak::util::StringIdMap&lt; Id &gt;</a></li>
+<li>end()&#160;:&#160;<a class="el" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ad636fceb34eb9093cb9b422f1c596d46">netspeak::invertedindex::ByteBuffer</a>, <a class="el" href="classnetspeak_1_1model_1_1Words.html#a508100838caa82812f550f172ae314c5">netspeak::model::Words</a>, <a class="el" href="classnetspeak_1_1util_1_1Config.html#a037ac2181642eb158a983f2387f358d2">netspeak::util::Config</a>, <a class="el" href="classnetspeak_1_1util_1_1LfuCache.html#acec949e7e39564673766b659316efdb4">netspeak::util::LfuCache&lt; T &gt;</a>, <a class="el" href="classnetspeak_1_1util_1_1StringIdMap.html#ae0ffe4e90073fe919e20dee19880e6d9">netspeak::util::StringIdMap&lt; Id &gt;</a></li>
+<li>endArray()&#160;:&#160;<a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ArrayContinue.html#a27d022df4a7689b0a92c4e308d6b6a5a">netspeak::util::JsonWriter::ArrayContinue&lt; S, R &gt;</a>, <a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ArrayStart.html#a386b5d336f483834ec6dc9d845ef13ca">netspeak::util::JsonWriter::ArrayStart&lt; S, R &gt;</a></li>
+<li>endObject()&#160;:&#160;<a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html#a6993e5259d36e60f3bc0d2eb3df7e604">netspeak::util::JsonWriter::ObjectContinue&lt; S, R &gt;</a>, <a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ObjectStart.html#abe44c70dea02696c87aa877582b745c7">netspeak::util::JsonWriter::ObjectStart&lt; S, R &gt;</a></li>
+<li>enterAssociation()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a9d85c2c59afd926ed3b3c2ac2daa4aeb">antlr4::QueryConstructor</a></li>
+<li>enterAsterisk()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#ae7edd119e7f8282d7deaf51699113ac4">antlr4::QueryConstructor</a></li>
+<li>enterDictset()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a19bef679a5f7aefa06f83b6ccccf5414">antlr4::QueryConstructor</a></li>
+<li>enterOptionset()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a4c98d040a76e41b59c4fd04c38c59db2">antlr4::QueryConstructor</a></li>
+<li>enterOrderset()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#afe1ea68a8a98f2498f3fb41c593e0657">antlr4::QueryConstructor</a></li>
+<li>enterPhrase()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a72312ab3ef84dbf05eb7d4d8e08e52a5">antlr4::QueryConstructor</a></li>
+<li>enterPlus()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a3adb887e347ba0ba1f3d2ac96d072e24">antlr4::QueryConstructor</a></li>
+<li>enterQmark()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a255c49a5080e687aefc3372cb84783b1">antlr4::QueryConstructor</a></li>
+<li>enterQuery()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a4fa2bd469ed2e60d816b26acbccda8c1">antlr4::QueryConstructor</a></li>
+<li>enterRegexword()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a95d98c68d314f6a193961bb3959003cc">antlr4::QueryConstructor</a></li>
+<li>enterUnit()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#ad263ed04f56a5c08318d0c214a623aba">antlr4::QueryConstructor</a></li>
+<li>enterUnits()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#ad5b1971e445b12f1f9e8cbc4c9618bb7">antlr4::QueryConstructor</a></li>
+<li>enterWord()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a967ddb2ed0c3e732b7845112539e0774">antlr4::QueryConstructor</a></li>
+<li>equal()&#160;:&#160;<a class="el" href="structnetspeak_1_1index__entry__traits.html#ae974be4994bd2851875682026b3c0b04">netspeak::index_entry_traits&lt; IndexEntryT &gt;</a>, <a class="el" href="structnetspeak_1_1index__entry__traits_3_01RetrievalStrategy3Tag_01_4.html#a7e064f12558930e3db3cf372865f0dfa">netspeak::index_entry_traits&lt; RetrievalStrategy3Tag &gt;</a></li>
+<li>erase()&#160;:&#160;<a class="el" href="classnetspeak_1_1util_1_1LfuCache.html#a2cd012bdae4c4ca383a9bf35da6bc676">netspeak::util::LfuCache&lt; T &gt;</a></li>
+<li>estimate()&#160;:&#160;<a class="el" href="structnetspeak_1_1NormQueryCounter.html#a853463fd07c510eeef9767164fbfd5bd">netspeak::NormQueryCounter</a></li>
+<li>estimate_impl()&#160;:&#160;<a class="el" href="structnetspeak_1_1NormQueryCounter.html#a72d9822b381ac1a8d8f29521c73c7e45">netspeak::NormQueryCounter</a></li>
+<li>exitAssociation()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a91a34773dcf28b3caab818603d22aaf1">antlr4::QueryConstructor</a></li>
+<li>exitAsterisk()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a45f5ed58d510f25d4868086d50ffd376">antlr4::QueryConstructor</a></li>
+<li>exitDictset()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a28ced79fdfac7ec047a284a66b84cf4c">antlr4::QueryConstructor</a></li>
+<li>exitOptionset()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a874eb7ff5d28d9fa7510b2cd112bbd95">antlr4::QueryConstructor</a></li>
+<li>exitOrderset()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a9696b7bb46086154ed372ce1c44d038b">antlr4::QueryConstructor</a></li>
+<li>exitPhrase()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#afd78511f7350f08e457b7b3464402d39">antlr4::QueryConstructor</a></li>
+<li>exitPlus()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a91b9cec86970459f1df9e2cad67c0fae">antlr4::QueryConstructor</a></li>
+<li>exitQmark()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a362201214c7d9d889e939d4121794bbf">antlr4::QueryConstructor</a></li>
+<li>exitQuery()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#ab26eeec41e2cbabddb082892c5593c74">antlr4::QueryConstructor</a></li>
+<li>exitRegexword()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a6778e574d3609f66419e4506608c3d22">antlr4::QueryConstructor</a></li>
+<li>exitUnit()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#ab59610968d09d6b2eecf20b1034898ad">antlr4::QueryConstructor</a></li>
+<li>exitUnits()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#af3b5119de691256ca484f5073b0f820d">antlr4::QueryConstructor</a></li>
+<li>exitWord()&#160;:&#160;<a class="el" href="classantlr4_1_1QueryConstructor.html#a2e450d11002e0827e1e43903f2076c47">antlr4::QueryConstructor</a></li>
+<li>expected_record_count()&#160;:&#160;<a class="el" href="classnetspeak_1_1invertedindex_1_1Configuration.html#aaa77c568531787e259dbbb978f39c93c">netspeak::invertedindex::Configuration</a></li>
+<li>extend()&#160;:&#160;<a class="el" href="classnetspeak_1_1Configuration.html#a7df6bab59598b039e18f637a9558fb83">netspeak::Configuration</a></li>
+<li>ExternalMap()&#160;:&#160;<a class="el" href="classnetspeak_1_1bighashmap_1_1ExternalMap.html#a5e8b7cd4ef7521e515eaa7267002afe9">netspeak::bighashmap::ExternalMap&lt; ValueT, IsThreadSafe, Traits &gt;</a></li>
+<li>extract_longest_substrings()&#160;:&#160;<a class="el" href="classnetspeak_1_1RetrievalStrategy_3_01RetrievalStrategy3Tag_01_4.html#a1c0086c350c3ed8ec7e13d1874cf492a">netspeak::RetrievalStrategy&lt; RetrievalStrategy3Tag &gt;</a></li>
+<li>ExtractAlgorithm()&#160;:&#160;<a class="el" href="classnetspeak_1_1bighashmap_1_1CmphMap.html#ad3f1b7aa414ddef34f9118e7203f39dd">netspeak::bighashmap::CmphMap&lt; ValueT, Traits &gt;</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

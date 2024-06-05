@@ -1,0 +1,10 @@
+<map id="netspeak::model::SimpleQuery::has_wildcards" name="netspeak::model::SimpleQuery::has_wildcards">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,49,228,89"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1model_1_1SimpleQuery.html#aacd9450bbdddc1274a461e21075335db" title=" " alt="" coords="276,5,499,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,49,262,43,263,48,229,54"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1model.html#a2e3fa40462fc88abd33620b09736dc0e" title=" " alt="" coords="305,93,469,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,85,292,95,291,100,228,90"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="338,94,335,84,343,74,360,69,387,67,418,69,435,77,433,82,417,75,387,72,361,74,346,79,340,85,343,92"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1model_1_1NormQueryUnit____.html#acfa30079a8434df0560b0930cc185d51" title=" " alt="" coords="547,93,761,133"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="470,111,533,111,533,116,470,116"/>
+</map>

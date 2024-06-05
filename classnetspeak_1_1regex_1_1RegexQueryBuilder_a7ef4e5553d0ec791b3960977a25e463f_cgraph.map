@@ -1,0 +1,7 @@
+<map id="netspeak::regex::RegexQueryBuilder::to_query" name="netspeak::regex::RegexQueryBuilder::to_query">
+<area shape="rect" id="Node000001" title="Creates a query from the current internal state." alt="" coords="5,5,220,45"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a74390b07cc488876e518d35979f3f814" title="Create a new RegexQuery that rejects all words." alt="" coords="268,5,483,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,23,254,23,254,28,220,28"/>
+<area shape="rect" id="Node000003" href="$structnetspeak_1_1regex_1_1RegexUnit.html#a98dff8023a5bb0d25f87f544dbb39659" title=" " alt="" coords="531,5,733,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="483,23,517,23,517,28,483,28"/>
+</map>

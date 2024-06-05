@@ -1,0 +1,40 @@
+<map id="netspeak/util/FileDescriptor.cpp" name="netspeak/util/FileDescriptor.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="291,5,518,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="147,79,209,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="369,33,223,79,222,74,367,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="234,79,309,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="384,33,306,74,304,70,382,28"/>
+<area shape="rect" id="Node000004" href="$error_8hpp.html" title=" " alt="" coords="333,79,477,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="407,31,407,65,402,65,402,31"/>
+<area shape="rect" id="Node000011" href="$FileDescriptor_8hpp.html" title=" " alt="" coords="751,79,979,104"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="479,28,777,74,777,79,478,33"/>
+<area shape="rect" id="Node000014" href="$check_8hpp.html" title=" " alt="" coords="501,79,679,104"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="435,28,548,71,546,76,433,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="320,159,407,185"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="401,105,378,148,373,146,396,103"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="499,240,558,265"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="416,102,513,227,509,230,411,106"/>
+<area shape="rect" id="Node000007" href="$traceable__error_8hpp.html" title=" " alt="" coords="122,159,295,185"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="377,106,251,157,249,152,375,102"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="256,182,487,238,486,244,255,187"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="189,240,263,265"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="214,184,223,226,218,227,209,185"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="355,240,441,265"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="237,182,359,232,357,237,235,187"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="5,240,164,265"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="192,187,116,235,113,230,189,183"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="927,159,1013,185"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="882,102,945,149,942,153,879,106"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="826,159,903,185"/>
+<area shape="poly" id="edge13_Node000011_Node000013" title=" " alt="" coords="867,104,867,145,862,145,862,104"/>
+<area shape="poly" id="edge21_Node000014_Node000006" title=" " alt="" coords="588,105,541,228,536,226,583,103"/>
+<area shape="poly" id="edge20_Node000014_Node000009" title=" " alt="" coords="578,106,424,233,421,229,574,102"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="746,240,813,265"/>
+<area shape="poly" id="edge15_Node000014_Node000015" title=" " alt="" coords="678,102,724,119,746,133,764,150,775,168,781,188,784,226,779,227,776,189,770,170,760,154,742,137,722,124,676,107"/>
+<area shape="rect" id="Node000016" href="$std__path__formatter_8hpp.html" title="Defines an std::formatter for std::filesystem::path. MUST be deleted when C++26 is available with tha..." alt="" coords="584,152,751,192"/>
+<area shape="poly" id="edge16_Node000014_Node000016" title=" " alt="" coords="603,102,641,140,637,144,600,106"/>
+<area shape="poly" id="edge19_Node000016_Node000006" title=" " alt="" coords="635,194,562,235,560,231,633,190"/>
+<area shape="poly" id="edge18_Node000016_Node000015" title=" " alt="" coords="696,190,753,230,750,234,693,194"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="622,240,713,265"/>
+<area shape="poly" id="edge17_Node000016_Node000017" title=" " alt="" coords="670,192,670,226,665,226,665,192"/>
+</map>

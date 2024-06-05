@@ -1,0 +1,1238 @@
+<!-- Heavily based on https://github.com/jothepro/doxygen-awesome-css/blob/main/doxygen-custom/header.html -->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- BEGIN opengraph metadata -->
+    <meta property="og:title" content=Netspeak />
+    <meta property="og:image" content="netspeak_logo.svg" />
+    <meta property="og:description" content="One word leads to another." />
+    <meta property="og:url" content="https://github.com/netspeak/netspeak4-application-ngrams" />
+    <!-- END opengraph metadata -->
+    <!-- BEGIN twitter metadata -->
+    <meta name="twitter:image:src" content="netspeak_logo.svg" />
+    <meta name="twitter:title" content="Netspeak" />
+    <meta name="twitter:description" content="One word leads to another." />
+    <!-- END twitter metadata -->
+    <title>Netspeak: netspeak::regex Namespace Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/svg+xml" href="netspeak_logo.svg" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+    <script type="text/javascript" src="toggle-alternative-theme.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+        DoxygenAwesomeDarkModeToggle.init()
+        DoxygenAwesomeParagraphLink.init()
+        DoxygenAwesomeInteractiveToc.init()
+        DoxygenAwesomeTabs.init()
+    </script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-tabs.js" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- https://tholman.com/github-corners/ -->
+    <a href="https://github.com/netspeak/netspeak4-application-ngrams" class="github-corner"
+        title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 250 250" width="40" height="40"
+            style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg></a>
+    <style>
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+        @media (max-width:500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+    </style>
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectlogo"><img alt="Logo" src="netspeak_logo.svg" /></td>
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">Netspeak
+                                &#160;<span
+                                    id="projectnumber">4.2.0</span>
+                            </div>
+                            <div id="projectbrief">One word leads to another.</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespacenetspeak_1_1regex.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">netspeak::regex Namespace Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1regex_1_1DefaultRegexIndex.html">DefaultRegexIndex</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1regex_1_1RegexIndex.html">RegexIndex</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1regex_1_1RegexQuery.html">RegexQuery</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An immutable query for a regex index.  <a href="classnetspeak_1_1regex_1_1RegexQuery.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html">RegexQueryBuilder</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1regex_1_1RegexUnit.html">RegexUnit</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A basic unit of a regex query.  <a href="structnetspeak_1_1regex_1_1RegexUnit.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html">utf8_finite_regex_unit</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A UTF8 encoded regex unit which describes a finite formal language.  <a href="structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aae0d184df027ea6b2ccb77a0db4d75ce" id="r_aae0d184df027ea6b2ccb77a0db4d75ce"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnetspeak_1_1model_1_1QuerySyntax.html">model::QuerySyntax</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#aae0d184df027ea6b2ccb77a0db4d75ce">Syntax</a></td></tr>
+<tr class="separator:aae0d184df027ea6b2ccb77a0db4d75ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a8ce7eefaa185e2118cece76d1099ad04" id="r_a8ce7eefaa185e2118cece76d1099ad04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnetspeak_1_1regex_1_1RegexQuery.html">RegexQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#a8ce7eefaa185e2118cece76d1099ad04">parse_netspeak_regex_query</a> (const std::string &amp;netspeak_query)</td></tr>
+<tr class="memdesc:a8ce7eefaa185e2118cece76d1099ad04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the given <a class="el" href="classnetspeak_1_1Netspeak.html">Netspeak</a> regex query and returns the equivalent general regex query.  <br /></td></tr>
+<tr class="separator:a8ce7eefaa185e2118cece76d1099ad04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ad812750b4e0550867c0e250b83e396" id="r_a0ad812750b4e0550867c0e250b83e396"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#a0ad812750b4e0550867c0e250b83e396">operator&lt;&lt;</a> (std::ostream &amp;outputStream, const <a class="el" href="classnetspeak_1_1regex_1_1RegexQuery.html">RegexQuery</a> &amp;query)</td></tr>
+<tr class="memdesc:a0ad812750b4e0550867c0e250b83e396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends the general string representation of a regex query.  <br /></td></tr>
+<tr class="separator:a0ad812750b4e0550867c0e250b83e396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff2153e5ec7d60ff8ef1b953089583fe" id="r_aff2153e5ec7d60ff8ef1b953089583fe"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#aff2153e5ec7d60ff8ef1b953089583fe">next_pow_of_2</a> (uint32_t n)</td></tr>
+<tr class="separator:aff2153e5ec7d60ff8ef1b953089583fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f4fc36a36d53c9404c8c58994db4f16" id="r_a6f4fc36a36d53c9404c8c58994db4f16"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#a6f4fc36a36d53c9404c8c58994db4f16">hash_word</a> (const std::string &amp;str, std::string::size_type offset, std::string::size_type length)</td></tr>
+<tr class="separator:a6f4fc36a36d53c9404c8c58994db4f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd2483ad4c4c5830b3a7b1f4dbe1e67" id="r_aebd2483ad4c4c5830b3a7b1f4dbe1e67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#aebd2483ad4c4c5830b3a7b1f4dbe1e67">contains_unknown_characters</a> (const std::u32string &amp;str, const std::unordered_set&lt; char32_t &gt; &amp;known_chars)</td></tr>
+<tr class="separator:aebd2483ad4c4c5830b3a7b1f4dbe1e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2012930d0c5c43d0ad661a49adceb26b" id="r_a2012930d0c5c43d0ad661a49adceb26b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#a2012930d0c5c43d0ad661a49adceb26b">regex_pattern_append_char</a> (std::u32string &amp;pattern, char32_t c)</td></tr>
+<tr class="separator:a2012930d0c5c43d0ad661a49adceb26b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac3221e2a2d1a5db57380f4b12386c9" id="r_afac3221e2a2d1a5db57380f4b12386c9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#afac3221e2a2d1a5db57380f4b12386c9">create_regex_pattern</a> (const <a class="el" href="classnetspeak_1_1regex_1_1RegexQuery.html">RegexQuery</a> &amp;query)</td></tr>
+<tr class="separator:afac3221e2a2d1a5db57380f4b12386c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace4835f8060dcf407b0f4bdf422de2b2" id="r_ace4835f8060dcf407b0f4bdf422de2b2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html">utf8_finite_regex_unit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#ace4835f8060dcf407b0f4bdf422de2b2">finite_query_to_utf8</a> (const <a class="el" href="classnetspeak_1_1regex_1_1RegexQuery.html">RegexQuery</a> &amp;query)</td></tr>
+<tr class="separator:ace4835f8060dcf407b0f4bdf422de2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51168d153e77973b3bc1329b2ab4420c" id="r_a51168d153e77973b3bc1329b2ab4420c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#a51168d153e77973b3bc1329b2ab4420c">match_query_hash_lookup_impl</a> (const std::vector&lt; <a class="el" href="structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html">utf8_finite_regex_unit</a> &gt; &amp;stack, size_t stack_index, std::string &amp;word, std::vector&lt; uint32_t &gt; &amp;matches, std::function&lt; uint32_t(const std::string &amp;)&gt; &amp;find_word)</td></tr>
+<tr class="separator:a51168d153e77973b3bc1329b2ab4420c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1be471280f1d11b869b2b7c1f4ecb8" id="r_acd1be471280f1d11b869b2b7c1f4ecb8"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::u32string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#acd1be471280f1d11b869b2b7c1f4ecb8">read_until_char</a> (std::u32string::const_iterator begin, std::u32string::const_iterator end, char32_t end_char)</td></tr>
+<tr class="memdesc:acd1be471280f1d11b869b2b7c1f4ecb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the given range until it finds a given end characters. If it finds the end characters, it will returns all characters between the start of the given range and the end characters (inclusive beginning, exclusive end).  <br /></td></tr>
+<tr class="separator:acd1be471280f1d11b869b2b7c1f4ecb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e50f7971c5d223b3dfc4ed586fd45d6" id="r_a6e50f7971c5d223b3dfc4ed586fd45d6"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#a6e50f7971c5d223b3dfc4ed586fd45d6">number_of_utf8_bytes</a> (char32_t c)</td></tr>
+<tr class="separator:a6e50f7971c5d223b3dfc4ed586fd45d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af699a70a2450bb3c60f6eb849b7e6176" id="r_af699a70a2450bb3c60f6eb849b7e6176"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#af699a70a2450bb3c60f6eb849b7e6176">remove_trailing_optional_words</a> (std::vector&lt; <a class="el" href="structnetspeak_1_1regex_1_1RegexUnit.html">RegexUnit</a> &gt; &amp;units)</td></tr>
+<tr class="memdesc:af699a70a2450bb3c60f6eb849b7e6176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all trailing optional words.  <br /></td></tr>
+<tr class="separator:af699a70a2450bb3c60f6eb849b7e6176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330e12f037f1cfe62d8e2bd33d3fd1e7" id="r_a330e12f037f1cfe62d8e2bd33d3fd1e7"><td class="memItemLeft" align="right" valign="top">std::u32string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#a330e12f037f1cfe62d8e2bd33d3fd1e7">without_duplicates</a> (const std::u32string &amp;characters)</td></tr>
+<tr class="memdesc:a330e12f037f1cfe62d8e2bd33d3fd1e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new string in which all duplicate characters of the given string are removed.  <br /></td></tr>
+<tr class="separator:a330e12f037f1cfe62d8e2bd33d3fd1e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bcd9407eaeeaacfbdac4b3b53246bb8" id="r_a7bcd9407eaeeaacfbdac4b3b53246bb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnetspeak_1_1regex_1_1RegexUnit.html">RegexUnit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#a7bcd9407eaeeaacfbdac4b3b53246bb8">optimize_unit</a> (<a class="el" href="structnetspeak_1_1regex_1_1RegexUnit.html">RegexUnit</a> &amp;unit)</td></tr>
+<tr class="separator:a7bcd9407eaeeaacfbdac4b3b53246bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a2b195646eb8a91a8b0720056ab903473" id="r_a2b195646eb8a91a8b0720056ab903473"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#a2b195646eb8a91a8b0720056ab903473">MIN_UTF8_BYTES_PER_CHAR</a> = 1</td></tr>
+<tr class="separator:a2b195646eb8a91a8b0720056ab903473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a480f29fb3aca10ca39f914e4eda5dc53" id="r_a480f29fb3aca10ca39f914e4eda5dc53"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1regex.html#a480f29fb3aca10ca39f914e4eda5dc53">MAX_UTF8_BYTES_PER_CHAR</a> = 4</td></tr>
+<tr class="separator:a480f29fb3aca10ca39f914e4eda5dc53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="aae0d184df027ea6b2ccb77a0db4d75ce" name="aae0d184df027ea6b2ccb77a0db4d75ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae0d184df027ea6b2ccb77a0db4d75ce">&#9670;&#160;</a></span>Syntax</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnetspeak_1_1model_1_1QuerySyntax.html">model::QuerySyntax</a> <a class="el" href="namespacenetspeak_1_1regex.html#aae0d184df027ea6b2ccb77a0db4d75ce">netspeak::regex::Syntax</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="parsers_8cpp_source.html#l00011">11</a> of file <a class="el" href="parsers_8cpp_source.html">parsers.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aebd2483ad4c4c5830b3a7b1f4dbe1e67" name="aebd2483ad4c4c5830b3a7b1f4dbe1e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd2483ad4c4c5830b3a7b1f4dbe1e67">&#9670;&#160;</a></span>contains_unknown_characters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool netspeak::regex::contains_unknown_characters </td>
+          <td>(</td>
+          <td class="paramtype">const std::u32string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; char32_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>known_chars</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DefaultRegexIndex_8cpp_source.html#l00146">146</a> of file <a class="el" href="DefaultRegexIndex_8cpp_source.html">DefaultRegexIndex.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>                                                                                                         {</div>
+<div class="line"><span class="lineno">  147</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = str.begin(); it != str.end(); it++) {</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">if</span> (known_chars.find(*it) == known_chars.end()) {</div>
+<div class="line"><span class="lineno">  149</span>      <span class="comment">// character is not in the set of all characters</span></div>
+<div class="line"><span class="lineno">  150</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  151</span>    }</div>
+<div class="line"><span class="lineno">  152</span>  }</div>
+<div class="line"><span class="lineno">  153</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  154</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_aebd2483ad4c4c5830b3a7b1f4dbe1e67_icgraph.svg" width="928" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="afac3221e2a2d1a5db57380f4b12386c9" name="afac3221e2a2d1a5db57380f4b12386c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afac3221e2a2d1a5db57380f4b12386c9">&#9670;&#160;</a></span>create_regex_pattern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string netspeak::regex::create_regex_pattern </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1regex_1_1RegexQuery.html">RegexQuery</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DefaultRegexIndex_8cpp_source.html#l00183">183</a> of file <a class="el" href="DefaultRegexIndex_8cpp_source.html">DefaultRegexIndex.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>                                                        {</div>
+<div class="line"><span class="lineno">  184</span>  std::u32string pattern;</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; unit : query.get_units()) {</div>
+<div class="line"><span class="lineno">  187</span>    <span class="keywordflow">switch</span> (unit.type) {</div>
+<div class="line"><span class="lineno">  188</span>      <span class="keywordflow">case</span> RegexUnit::Type::QMARK:</div>
+<div class="line"><span class="lineno">  189</span>        <span class="comment">// https://stackoverflow.com/a/13163802/7595472</span></div>
+<div class="line"><span class="lineno">  190</span>        pattern.append(</div>
+<div class="line"><span class="lineno">  191</span>            U<span class="stringliteral">&quot;(?:[\\x00-\\x7F]|(?:[\\xC2-\\xDF]|\\xE0[\\xA0-\\xBF]|\\xED[&quot;</span></div>
+<div class="line"><span class="lineno">  192</span>            U<span class="stringliteral">&quot;\\x80-&quot;</span></div>
+<div class="line"><span class="lineno">  193</span>            U<span class="stringliteral">&quot;\\x9F]|(?:[\\xE1-\\xEC]|[\\xEE-\\xEF]|\\xF0[\\x90-\\xBF]|[&quot;</span></div>
+<div class="line"><span class="lineno">  194</span>            U<span class="stringliteral">&quot;\\xF1-&quot;</span></div>
+<div class="line"><span class="lineno">  195</span>            U<span class="stringliteral">&quot;\\xF3][\\x80-\\xBF]|\\xF4[\\x80-\\x8F])[\\x80-\\xBF])[\\x80-&quot;</span></div>
+<div class="line"><span class="lineno">  196</span>            U<span class="stringliteral">&quot;\\xBF])&quot;</span>);</div>
+<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  198</span> </div>
+<div class="line"><span class="lineno">  199</span>      <span class="keywordflow">case</span> RegexUnit::Type::STAR:</div>
+<div class="line"><span class="lineno">  200</span>        pattern.append(U<span class="stringliteral">&quot;.*&quot;</span>);</div>
+<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  202</span> </div>
+<div class="line"><span class="lineno">  203</span>      <span class="keywordflow">case</span> RegexUnit::Type::CHAR_SET: {</div>
+<div class="line"><span class="lineno">  204</span>        pattern.append(U<span class="stringliteral">&quot;(?:&quot;</span>);</div>
+<div class="line"><span class="lineno">  205</span>        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> c : unit.value) {</div>
+<div class="line"><span class="lineno">  207</span>          <span class="keywordflow">if</span> (first) {</div>
+<div class="line"><span class="lineno">  208</span>            first = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  209</span>          } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  210</span>            pattern.push_back(<span class="charliteral">&#39;|&#39;</span>);</div>
+<div class="line"><span class="lineno">  211</span>          }</div>
+<div class="line"><span class="lineno">  212</span>          regex_pattern_append_char(pattern, c);</div>
+<div class="line"><span class="lineno">  213</span>        }</div>
+<div class="line"><span class="lineno">  214</span>        pattern.append(U<span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  216</span>      }</div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span>      <span class="keywordflow">case</span> RegexUnit::Type::OPTIONAL_WORD:</div>
+<div class="line"><span class="lineno">  219</span>        pattern.append(U<span class="stringliteral">&quot;(?:&quot;</span>);</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> c : unit.value) {</div>
+<div class="line"><span class="lineno">  221</span>          <a class="code hl_function" href="namespacenetspeak_1_1regex.html#a2012930d0c5c43d0ad661a49adceb26b">regex_pattern_append_char</a>(pattern, c);</div>
+<div class="line"><span class="lineno">  222</span>        }</div>
+<div class="line"><span class="lineno">  223</span>        pattern.append(U<span class="stringliteral">&quot;)?&quot;</span>);</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  225</span> </div>
+<div class="line"><span class="lineno">  226</span>      <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> c : unit.value) {</div>
+<div class="line"><span class="lineno">  228</span>          <a class="code hl_function" href="namespacenetspeak_1_1regex.html#a2012930d0c5c43d0ad661a49adceb26b">regex_pattern_append_char</a>(pattern, c);</div>
+<div class="line"><span class="lineno">  229</span>        }</div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  231</span>    }</div>
+<div class="line"><span class="lineno">  232</span>  }</div>
+<div class="line"><span class="lineno">  233</span> </div>
+<div class="line"><span class="lineno">  234</span>  std::wstring_convert&lt;std::codecvt_utf8&lt;char32_t&gt;, <span class="keywordtype">char32_t</span>&gt; conv;</div>
+<div class="line"><span class="lineno">  235</span>  <span class="keywordflow">return</span> conv.to_bytes(pattern);</div>
+<div class="line"><span class="lineno">  236</span>}</div>
+<div class="ttc" id="anamespacenetspeak_1_1regex_html_a2012930d0c5c43d0ad661a49adceb26b"><div class="ttname"><a href="namespacenetspeak_1_1regex.html#a2012930d0c5c43d0ad661a49adceb26b">netspeak::regex::regex_pattern_append_char</a></div><div class="ttdeci">void regex_pattern_append_char(std::u32string &amp;pattern, char32_t c)</div><div class="ttdef"><b>Definition</b> <a href="DefaultRegexIndex_8cpp_source.html#l00156">DefaultRegexIndex.cpp:156</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_afac3221e2a2d1a5db57380f4b12386c9_cgraph.svg" width="450" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_afac3221e2a2d1a5db57380f4b12386c9_icgraph.svg" width="942" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ace4835f8060dcf407b0f4bdf422de2b2" name="ace4835f8060dcf407b0f4bdf422de2b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace4835f8060dcf407b0f4bdf422de2b2">&#9670;&#160;</a></span>finite_query_to_utf8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html">utf8_finite_regex_unit</a> &gt; netspeak::regex::finite_query_to_utf8 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1regex_1_1RegexQuery.html">RegexQuery</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DefaultRegexIndex_8cpp_source.html#l00433">433</a> of file <a class="el" href="DefaultRegexIndex_8cpp_source.html">DefaultRegexIndex.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  433</span>                                                                                {</div>
+<div class="line"><span class="lineno">  434</span>  std::vector&lt;utf8_finite_regex_unit&gt; result;</div>
+<div class="line"><span class="lineno">  435</span> </div>
+<div class="line"><span class="lineno">  436</span>  std::wstring_convert&lt;std::codecvt_utf8&lt;char32_t&gt;, <span class="keywordtype">char32_t</span>&gt; conv;</div>
+<div class="line"><span class="lineno">  437</span> </div>
+<div class="line"><span class="lineno">  438</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; unit : query.get_units()) {</div>
+<div class="line"><span class="lineno">  439</span>    <a class="code hl_struct" href="structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html">utf8_finite_regex_unit</a> utf8_unit;</div>
+<div class="line"><span class="lineno">  440</span> </div>
+<div class="line"><span class="lineno">  441</span>    <span class="keywordflow">switch</span> (unit.type) {</div>
+<div class="line"><span class="lineno">  442</span>      <span class="keywordflow">case</span> RegexUnit::Type::CHAR_SET: {</div>
+<div class="line"><span class="lineno">  443</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; unit.value.size(); i++) {</div>
+<div class="line"><span class="lineno">  444</span>          <span class="keyword">auto</span> c = unit.value.substr(i, 1);</div>
+<div class="line"><span class="lineno">  445</span>          utf8_unit.<a class="code hl_variable" href="structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html#a9afd3e7618d3a3ed7d35ddc33a9c5a46">alternatives</a>.push_back(conv.to_bytes(c));</div>
+<div class="line"><span class="lineno">  446</span>        }</div>
+<div class="line"><span class="lineno">  447</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  448</span>      }</div>
+<div class="line"><span class="lineno">  449</span>      <span class="keywordflow">case</span> RegexUnit::Type::OPTIONAL_WORD: {</div>
+<div class="line"><span class="lineno">  450</span>        utf8_unit.<a class="code hl_variable" href="structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html#a9afd3e7618d3a3ed7d35ddc33a9c5a46">alternatives</a>.push_back(conv.to_bytes(unit.value));</div>
+<div class="line"><span class="lineno">  451</span>        utf8_unit.<a class="code hl_variable" href="structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html#a9afd3e7618d3a3ed7d35ddc33a9c5a46">alternatives</a>.push_back(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  452</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  453</span>      }</div>
+<div class="line"><span class="lineno">  454</span>      <span class="keywordflow">default</span>: {</div>
+<div class="line"><span class="lineno">  455</span>        utf8_unit.<a class="code hl_variable" href="structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html#a9afd3e7618d3a3ed7d35ddc33a9c5a46">alternatives</a>.push_back(conv.to_bytes(unit.value));</div>
+<div class="line"><span class="lineno">  456</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  457</span>      }</div>
+<div class="line"><span class="lineno">  458</span>    }</div>
+<div class="line"><span class="lineno">  459</span> </div>
+<div class="line"><span class="lineno">  460</span>    result.push_back(std::move(utf8_unit));</div>
+<div class="line"><span class="lineno">  461</span>  }</div>
+<div class="line"><span class="lineno">  462</span> </div>
+<div class="line"><span class="lineno">  463</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  464</span>}</div>
+<div class="ttc" id="astructnetspeak_1_1regex_1_1utf8__finite__regex__unit_html"><div class="ttname"><a href="structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html">netspeak::regex::utf8_finite_regex_unit</a></div><div class="ttdoc">A UTF8 encoded regex unit which describes a finite formal language.</div><div class="ttdef"><b>Definition</b> <a href="DefaultRegexIndex_8cpp_source.html#l00425">DefaultRegexIndex.cpp:425</a></div></div>
+<div class="ttc" id="astructnetspeak_1_1regex_1_1utf8__finite__regex__unit_html_a9afd3e7618d3a3ed7d35ddc33a9c5a46"><div class="ttname"><a href="structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html#a9afd3e7618d3a3ed7d35ddc33a9c5a46">netspeak::regex::utf8_finite_regex_unit::alternatives</a></div><div class="ttdeci">std::vector&lt; std::string &gt; alternatives</div><div class="ttdef"><b>Definition</b> <a href="DefaultRegexIndex_8cpp_source.html#l00427">DefaultRegexIndex.cpp:427</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_ace4835f8060dcf407b0f4bdf422de2b2_cgraph.svg" width="442" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_ace4835f8060dcf407b0f4bdf422de2b2_icgraph.svg" width="890" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6f4fc36a36d53c9404c8c58994db4f16" name="a6f4fc36a36d53c9404c8c58994db4f16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f4fc36a36d53c9404c8c58994db4f16">&#9670;&#160;</a></span>hash_word()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t netspeak::regex::hash_word </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string::size_type&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string::size_type&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DefaultRegexIndex_8cpp_source.html#l00134">134</a> of file <a class="el" href="DefaultRegexIndex_8cpp_source.html">DefaultRegexIndex.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>                                                                                               {</div>
+<div class="line"><span class="lineno">  135</span>  uint32_t h = 0x12345678U;</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>  <span class="comment">// the Java hashcode implementation</span></div>
+<div class="line"><span class="lineno">  138</span>  std::string::size_type end = offset + length;</div>
+<div class="line"><span class="lineno">  139</span>  <span class="keywordflow">for</span> (; offset != end; offset++) {</div>
+<div class="line"><span class="lineno">  140</span>    h = h * 31 + str[offset];</div>
+<div class="line"><span class="lineno">  141</span>  }</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>  <span class="keywordflow">return</span> h;</div>
+<div class="line"><span class="lineno">  144</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_a6f4fc36a36d53c9404c8c58994db4f16_icgraph.svg" width="1198" height="138"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a51168d153e77973b3bc1329b2ab4420c" name="a51168d153e77973b3bc1329b2ab4420c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51168d153e77973b3bc1329b2ab4420c">&#9670;&#160;</a></span>match_query_hash_lookup_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void netspeak::regex::match_query_hash_lookup_impl </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html">utf8_finite_regex_unit</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>stack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>stack_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>word</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; uint32_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>matches</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; uint32_t(const std::string &amp;)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>find_word</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DefaultRegexIndex_8cpp_source.html#l00466">466</a> of file <a class="el" href="DefaultRegexIndex_8cpp_source.html">DefaultRegexIndex.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  468</span>                                                                                      {</div>
+<div class="line"><span class="lineno">  469</span>  <span class="keywordflow">if</span> (stack_index &gt;= stack.size()) {</div>
+<div class="line"><span class="lineno">  470</span>    <span class="comment">// we reached the end of the stack, so just check the word</span></div>
+<div class="line"><span class="lineno">  471</span>    <span class="keyword">const</span> uint32_t index = find_word(word);</div>
+<div class="line"><span class="lineno">  472</span>    <span class="keywordflow">if</span> (index != UINT32_MAX) {</div>
+<div class="line"><span class="lineno">  473</span>      <span class="comment">// found a word</span></div>
+<div class="line"><span class="lineno">  474</span>      matches.push_back(index);</div>
+<div class="line"><span class="lineno">  475</span>    }</div>
+<div class="line"><span class="lineno">  476</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  477</span>    <span class="comment">// go through all combinations</span></div>
+<div class="line"><span class="lineno">  478</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; current = stack[stack_index];</div>
+<div class="line"><span class="lineno">  479</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; alternative : current.alternatives) {</div>
+<div class="line"><span class="lineno">  480</span>      <span class="keyword">const</span> <span class="keyword">auto</span> len = word.size();</div>
+<div class="line"><span class="lineno">  481</span>      word.append(alternative);</div>
+<div class="line"><span class="lineno">  482</span>      <span class="comment">// recursively call the function</span></div>
+<div class="line"><span class="lineno">  483</span>      match_query_hash_lookup_impl(stack, stack_index + 1, word, matches, find_word);</div>
+<div class="line"><span class="lineno">  484</span>      word.erase(len); <span class="comment">// remove all appended characters</span></div>
+<div class="line"><span class="lineno">  485</span>    }</div>
+<div class="line"><span class="lineno">  486</span>  }</div>
+<div class="line"><span class="lineno">  487</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_a51168d153e77973b3bc1329b2ab4420c_cgraph.svg" width="202" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_a51168d153e77973b3bc1329b2ab4420c_icgraph.svg" width="912" height="83"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aff2153e5ec7d60ff8ef1b953089583fe" name="aff2153e5ec7d60ff8ef1b953089583fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff2153e5ec7d60ff8ef1b953089583fe">&#9670;&#160;</a></span>next_pow_of_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t netspeak::regex::next_pow_of_2 </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This will be a rough explanation of the implementation of the index below, a few of the optimizations, and the costs of it all.</p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+The purpose of the index</h1>
+<p>The index is given a <em>vocabulary</em>. This is just a simple UTF-8 string where each non-empty line is interpreted as a word (can be any non-empty string). The purpose of the index is to retrieve words from the vocabulary that match a given regex query. The words have to be returned in the order of occurrence in the vocabulary. This means that the index will and cannot do any form of ranking.</p>
+<p><a class="el" href="classnetspeak_1_1Netspeak.html">Netspeak</a> will provide all 1-grams sorted by descending frequency as the vocabulary, so ranking isn't an issue as we will assume that frequency is the only ranking criteria for 1-grams. Note: While <a class="el" href="classnetspeak_1_1Netspeak.html">Netspeak</a> will only provide 1-grams, the index can deal with any list of non-empty strings (referred to as words).</p>
+<p>To retrieve words matching the given query as fast as possible, we use several optimizations, some more costly than others.</p>
+<p>Before everything else, it's important to note that this index requires the full vocabulary (UTF-8) to be in-memory at all times. This means that the vocabulary alone will use between 100MB and 200MB of memory.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Word list</h1>
+<p>The first optimization is the most important one: We keep a separate list of the offset and length of every word in the vocabulary in the order of occurrence (first offset is the first word and so on).</p>
+<p>This, among other things, allows us to match regular expressions more efficiently. We can now define a string which has to match the regular expression (of the query) as a whole. This is huge because the RE engine doesn't have to move the matcher accross the string, potentially, character by character. Instead it can jump from word to word resulting in a considerable speedup (4~10x faster on average). Since we also known the exact length of each word, we can reject some word based on their length alone.</p>
+<p>The only cost is the memory to store all the offsets and length. We need 4 bytes per offset and 2 bytes per length (plus some padding for memory alignment by the compiler), so 8 bytes per entry. The datasets of European languages have between 10e6 and 20e6 words, so the list will need between 80MB and 160MB of memory which is about the size of the vocabulary itself.</p>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Unicode character set</h1>
+<p>We keep a set of all Unicode characters in the vocabulary. This allows us to quickly answer queries which cannot match any words in the vocabulary because they require a certain character which none of the words has. It also allows us to simply other queries (the idea being to eliminate parts of the query which cannot match) which in turn enables further optimization.</p>
+<p>Example: Let's say the vocabulary does not contain upper-case letters. In this case, we know that the query <code>Foo*</code> cannot match any words. The query <code>[fF]oo</code> can be simplified to <code>foo</code> and similarly, <code>(B)ar</code> (<code>()</code> denotes optional words) can be simplified to <code>ar</code>.</p>
+<p>This won't need a lot of memory, only 4 bytes per unique character in the vocabulary plus the overhead of the <code>std::unordered_set</code> implementation. The English dataset contains about 500 unique characters but for Asian language this number much larger with around 50K unique characters. So even assuming the worst-case, we can safely say that the set won't require more than about 2MB of memory.</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Word hash table</h1>
+<p>A hash table from every word to its index in the <em>word list</em> can be used to answer queries which can only match a finite number of words.</p>
+<p>Example: The query <code>[bp]et</code> can only every match the words "bet" and "pet", so instead of searching through all words linearly, it's <b>a lot</b> faster to just lookup these two words in a hash table to check whether they are part of the vocabulary.</p>
+<p>One problem of this approach an potential exponential blowup of combination (e.g. for the query <code>{abcdef}</code> (<code>{}</code> denotes a <a class="el" href="classnetspeak_1_1Netspeak.html">Netspeak</a> order set) 46656 lookups are necessary). To keep the number of lookups (and generated strings) small, the implementation will only apply the lookup strategy to queries to queries with less combinatory possibilities than a certain threshold.</p>
+<p>Queries which contain wildcards (<code>?</code> and <code>*</code>) theoretically describe a regular language with infinitely many words but practically, this number is still finite because the vocabulary only has finitely many unique characters (see <em>character set</em>) and a word with a maximum length. However, despite this, queries with wildcard will not considered for hash lookups because their combinations blow up very fast and for small number of combinations (basically just one <code>?</code>), it is usually faster to use other methods.</p>
+<p>The hash table is implemented using linear probing, so we only need to know how many 4 byte slots the table has. Since the size of the hash table n will be a power of two, we will choose the next power of two of the number of words w as a base. This will cause n to be 1.5 time greater than w on average. However it is very important that there are enough free slot for the lookup to be efficient, so if n and w are relatively close (n &lt; w * 1.5), we will double n. This means that n will be in the interval [w * 1.5, w * 3). Given the datasets of European languages, this will result in between 60MB/120MB and 120MB/240MB for the hash table. </p>
+
+<p class="definition">Definition at line <a class="el" href="DefaultRegexIndex_8cpp_source.html#l00123">123</a> of file <a class="el" href="DefaultRegexIndex_8cpp_source.html">DefaultRegexIndex.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>                                   {</div>
+<div class="line"><span class="lineno">  124</span>  n--;</div>
+<div class="line"><span class="lineno">  125</span>  n |= n &gt;&gt; 1;</div>
+<div class="line"><span class="lineno">  126</span>  n |= n &gt;&gt; 2;</div>
+<div class="line"><span class="lineno">  127</span>  n |= n &gt;&gt; 4;</div>
+<div class="line"><span class="lineno">  128</span>  n |= n &gt;&gt; 8;</div>
+<div class="line"><span class="lineno">  129</span>  n |= n &gt;&gt; 16;</div>
+<div class="line"><span class="lineno">  130</span>  n++;</div>
+<div class="line"><span class="lineno">  131</span>  <span class="keywordflow">return</span> n;</div>
+<div class="line"><span class="lineno">  132</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_aff2153e5ec7d60ff8ef1b953089583fe_icgraph.svg" width="686" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6e50f7971c5d223b3dfc4ed586fd45d6" name="a6e50f7971c5d223b3dfc4ed586fd45d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e50f7971c5d223b3dfc4ed586fd45d6">&#9670;&#160;</a></span>number_of_utf8_bytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t netspeak::regex::number_of_utf8_bytes </td>
+          <td>(</td>
+          <td class="paramtype">char32_t&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RegexQuery_8cpp_source.html#l00065">65</a> of file <a class="el" href="RegexQuery_8cpp_source.html">RegexQuery.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>                                        {</div>
+<div class="line"><span class="lineno">   66</span>  <span class="keywordflow">if</span> (c &lt;= 0x7F)</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   68</span>  <span class="keywordflow">if</span> (c &lt;= 0x7FF)</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">return</span> 2;</div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">if</span> (c &lt;= 0xFFFF)</div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">return</span> 3;</div>
+<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">return</span> 4;</div>
+<div class="line"><span class="lineno">   73</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_a6e50f7971c5d223b3dfc4ed586fd45d6_icgraph.svg" width="1214" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a0ad812750b4e0550867c0e250b83e396" name="a0ad812750b4e0550867c0e250b83e396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ad812750b4e0550867c0e250b83e396">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; netspeak::regex::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>outputStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1regex_1_1RegexQuery.html">RegexQuery</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Appends the general string representation of a regex query. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outputStream</td><td></td></tr>
+    <tr><td class="paramname">query</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="RegexQuery_8cpp_source.html#l00321">321</a> of file <a class="el" href="RegexQuery_8cpp_source.html">RegexQuery.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  321</span>                                                                          {</div>
+<div class="line"><span class="lineno">  322</span>  <span class="keywordflow">if</span> (query.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQuery.html#a2f4d2e52bef616730e1395063c3e82ed">reject_all</a>()) {</div>
+<div class="line"><span class="lineno">  323</span>    <span class="keywordflow">return</span> outputStream &lt;&lt; <span class="stringliteral">&quot;[]REJECT_ALL[]&quot;</span>;</div>
+<div class="line"><span class="lineno">  324</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  325</span>    std::wstring_convert&lt;std::codecvt_utf8&lt;char32_t&gt;, <span class="keywordtype">char32_t</span>&gt; conv;</div>
+<div class="line"><span class="lineno">  326</span> </div>
+<div class="line"><span class="lineno">  327</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; unit : query.get_units()) {</div>
+<div class="line"><span class="lineno">  328</span>      <span class="keywordflow">switch</span> (unit.type) {</div>
+<div class="line"><span class="lineno">  329</span>        <span class="keywordflow">case</span> RegexUnit::Type::QMARK:</div>
+<div class="line"><span class="lineno">  330</span>          outputStream &lt;&lt; <span class="stringliteral">&quot;?&quot;</span>;</div>
+<div class="line"><span class="lineno">  331</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  332</span>        <span class="keywordflow">case</span> RegexUnit::Type::STAR:</div>
+<div class="line"><span class="lineno">  333</span>          outputStream &lt;&lt; <span class="stringliteral">&quot;*&quot;</span>;</div>
+<div class="line"><span class="lineno">  334</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  335</span> </div>
+<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">case</span> RegexUnit::Type::CHAR_SET:</div>
+<div class="line"><span class="lineno">  337</span>          outputStream &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><span class="lineno">  338</span>          outputStream &lt;&lt; conv.to_bytes(unit.value);</div>
+<div class="line"><span class="lineno">  339</span>          outputStream &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><span class="lineno">  340</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  341</span> </div>
+<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">case</span> RegexUnit::Type::OPTIONAL_WORD:</div>
+<div class="line"><span class="lineno">  343</span>          outputStream &lt;&lt; <span class="stringliteral">&quot;(&quot;</span>;</div>
+<div class="line"><span class="lineno">  344</span>          outputStream &lt;&lt; conv.to_bytes(unit.value);</div>
+<div class="line"><span class="lineno">  345</span>          outputStream &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  346</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  347</span> </div>
+<div class="line"><span class="lineno">  348</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  349</span>          outputStream &lt;&lt; conv.to_bytes(unit.value);</div>
+<div class="line"><span class="lineno">  350</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  351</span>      }</div>
+<div class="line"><span class="lineno">  352</span>    }</div>
+<div class="line"><span class="lineno">  353</span> </div>
+<div class="line"><span class="lineno">  354</span>    <span class="keywordflow">return</span> outputStream;</div>
+<div class="line"><span class="lineno">  355</span>  }</div>
+<div class="line"><span class="lineno">  356</span>}</div>
+<div class="ttc" id="aclassnetspeak_1_1regex_1_1RegexQuery_html_a2f4d2e52bef616730e1395063c3e82ed"><div class="ttname"><a href="classnetspeak_1_1regex_1_1RegexQuery.html#a2f4d2e52bef616730e1395063c3e82ed">netspeak::regex::RegexQuery::reject_all</a></div><div class="ttdeci">bool reject_all() const</div><div class="ttdoc">Returns whether this query will reject all words.</div><div class="ttdef"><b>Definition</b> <a href="RegexQuery_8hpp_source.html#l00074">RegexQuery.hpp:74</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_a0ad812750b4e0550867c0e250b83e396_cgraph.svg" width="748" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a7bcd9407eaeeaacfbdac4b3b53246bb8" name="a7bcd9407eaeeaacfbdac4b3b53246bb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bcd9407eaeeaacfbdac4b3b53246bb8">&#9670;&#160;</a></span>optimize_unit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnetspeak_1_1regex_1_1RegexUnit.html">RegexUnit</a> netspeak::regex::optimize_unit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnetspeak_1_1regex_1_1RegexUnit.html">RegexUnit</a> &amp;&#160;</td>
+          <td class="paramname"><em>unit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RegexQuery_8cpp_source.html#l00224">224</a> of file <a class="el" href="RegexQuery_8cpp_source.html">RegexQuery.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>                                         {</div>
+<div class="line"><span class="lineno">  225</span>  <span class="keywordflow">if</span> (unit.<a class="code hl_variable" href="structnetspeak_1_1regex_1_1RegexUnit.html#ae5b5fd385cbd968ea55007f7412d14f6">type</a> == RegexUnit::Type::CHAR_SET) {</div>
+<div class="line"><span class="lineno">  226</span>    std::u32string set = <a class="code hl_function" href="namespacenetspeak_1_1regex.html#a330e12f037f1cfe62d8e2bd33d3fd1e7">without_duplicates</a>(unit.<a class="code hl_variable" href="structnetspeak_1_1regex_1_1RegexUnit.html#a553c86b65981c9f9dae9e6311824be0a">value</a>);</div>
+<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">if</span> (set.size() == 1) {</div>
+<div class="line"><span class="lineno">  228</span>      <span class="comment">// rule 4</span></div>
+<div class="line"><span class="lineno">  229</span>      <span class="keywordflow">return</span> RegexUnit::word(set);</div>
+<div class="line"><span class="lineno">  230</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  231</span>      <span class="keywordflow">return</span> RegexUnit::char_set(set);</div>
+<div class="line"><span class="lineno">  232</span>    }</div>
+<div class="line"><span class="lineno">  233</span>  }</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>  <span class="keywordflow">return</span> unit;</div>
+<div class="line"><span class="lineno">  236</span>}</div>
+<div class="ttc" id="anamespacenetspeak_1_1regex_html_a330e12f037f1cfe62d8e2bd33d3fd1e7"><div class="ttname"><a href="namespacenetspeak_1_1regex.html#a330e12f037f1cfe62d8e2bd33d3fd1e7">netspeak::regex::without_duplicates</a></div><div class="ttdeci">std::u32string without_duplicates(const std::u32string &amp;characters)</div><div class="ttdoc">Returns a new string in which all duplicate characters of the given string are removed.</div><div class="ttdef"><b>Definition</b> <a href="RegexQuery_8cpp_source.html#l00202">RegexQuery.cpp:202</a></div></div>
+<div class="ttc" id="astructnetspeak_1_1regex_1_1RegexUnit_html_a553c86b65981c9f9dae9e6311824be0a"><div class="ttname"><a href="structnetspeak_1_1regex_1_1RegexUnit.html#a553c86b65981c9f9dae9e6311824be0a">netspeak::regex::RegexUnit::value</a></div><div class="ttdeci">std::u32string value</div><div class="ttdef"><b>Definition</b> <a href="RegexQuery_8hpp_source.html#l00027">RegexQuery.hpp:27</a></div></div>
+<div class="ttc" id="astructnetspeak_1_1regex_1_1RegexUnit_html_ae5b5fd385cbd968ea55007f7412d14f6"><div class="ttname"><a href="structnetspeak_1_1regex_1_1RegexUnit.html#ae5b5fd385cbd968ea55007f7412d14f6">netspeak::regex::RegexUnit::type</a></div><div class="ttdeci">Type type</div><div class="ttdef"><b>Definition</b> <a href="RegexQuery_8hpp_source.html#l00026">RegexQuery.hpp:26</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_a7bcd9407eaeeaacfbdac4b3b53246bb8_cgraph.svg" width="486" height="203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_a7bcd9407eaeeaacfbdac4b3b53246bb8_icgraph.svg" width="1443" height="166"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8ce7eefaa185e2118cece76d1099ad04" name="a8ce7eefaa185e2118cece76d1099ad04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ce7eefaa185e2118cece76d1099ad04">&#9670;&#160;</a></span>parse_netspeak_regex_query()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnetspeak_1_1regex_1_1RegexQuery.html">RegexQuery</a> netspeak::regex::parse_netspeak_regex_query </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>netspeak_query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parses the given <a class="el" href="classnetspeak_1_1Netspeak.html">Netspeak</a> regex query and returns the equivalent general regex query. </p>
+<p>Note: The parser guarantees that every string will be parsed as a query. Every syntactically incorrect part of a query will be interpreted as a literal word. E.g. <code>fo[o</code> will be parsed as the word "fo[o" instead of not at all because of the unclosed bracket.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">netspeak_query</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classnetspeak_1_1regex_1_1RegexQuery.html" title="An immutable query for a regex index.">RegexQuery</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="parsers_8cpp_source.html#l00041">41</a> of file <a class="el" href="parsers_8cpp_source.html">parsers.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                                       {</div>
+<div class="line"><span class="lineno">   42</span>  <a class="code hl_class" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html">RegexQueryBuilder</a> builder;</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>  <span class="comment">// while input and output strings are UTF-8, the implementation will work</span></div>
+<div class="line"><span class="lineno">   45</span>  <span class="comment">// exclusively with UTF-32 strings, so each code point is one character</span></div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>  std::wstring_convert&lt;std::codecvt_utf8&lt;char32_t&gt;, <span class="keywordtype">char32_t</span>&gt; conv;</div>
+<div class="line"><span class="lineno">   48</span>  std::u32string query = conv.from_bytes(netspeak_query);</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordflow">for</span> (std::u32string::const_iterator it = query.begin(); it != query.end(); ++it) {</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordtype">char32_t</span> c = *it;</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">switch</span> (c) {</div>
+<div class="line"><span class="lineno">   53</span>      <span class="keywordflow">case</span> Syntax::QMARK:</div>
+<div class="line"><span class="lineno">   54</span>        builder.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c">add</a>(RegexUnit::qmark());</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   56</span>      <span class="keywordflow">case</span> Syntax::STAR:</div>
+<div class="line"><span class="lineno">   57</span>        builder.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c">add</a>(RegexUnit::star());</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   59</span>      <span class="keywordflow">case</span> Syntax::PLUS:</div>
+<div class="line"><span class="lineno">   60</span>        builder.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c">add</a>(RegexUnit::qmark());</div>
+<div class="line"><span class="lineno">   61</span>        builder.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c">add</a>(RegexUnit::star());</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;.&#39;</span>:</div>
+<div class="line"><span class="lineno">   65</span>        <span class="comment">// &gt;= 2 dots is equal to &quot;*&quot; but a single dot is just a character</span></div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (*(it + 1) == <span class="charliteral">&#39;.&#39;</span>) {</div>
+<div class="line"><span class="lineno">   67</span>          builder.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c">add</a>(RegexUnit::star());</div>
+<div class="line"><span class="lineno">   68</span>          <span class="keywordflow">while</span> ((*(it + 1)) == <span class="charliteral">&#39;.&#39;</span>) {</div>
+<div class="line"><span class="lineno">   69</span>            ++it;</div>
+<div class="line"><span class="lineno">   70</span>          }</div>
+<div class="line"><span class="lineno">   71</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   72</span>          builder.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c">add</a>(RegexUnit::word(U<span class="stringliteral">&quot;.&quot;</span>));</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>      <span class="keywordflow">case</span> Syntax::BRACKET_LEFT: {</div>
+<div class="line"><span class="lineno">   77</span>        <span class="comment">// e.g. &quot;[u]&quot; or &quot;[aeiou]&quot;</span></div>
+<div class="line"><span class="lineno">   78</span>        <span class="keyword">auto</span> result = <a class="code hl_function" href="namespacenetspeak_1_1regex.html#acd1be471280f1d11b869b2b7c1f4ecb8">read_until_char</a>(it + 1, query.end(), Syntax::BRACKET_RIGHT);</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (result) {</div>
+<div class="line"><span class="lineno">   80</span>          it += result-&gt;size() + 1; <span class="comment">// result + the end characters</span></div>
+<div class="line"><span class="lineno">   81</span>          <span class="comment">// &quot;[u]&quot; will be translated to /u?/ (optional) while &quot;[aeiou]&quot; will</span></div>
+<div class="line"><span class="lineno">   82</span>          <span class="comment">// be translated to /[aeiou]/ (non-optional). The actual UTF-8 pattern</span></div>
+<div class="line"><span class="lineno">   83</span>          <span class="comment">// might be different but will behave identical to the above UTF-32</span></div>
+<div class="line"><span class="lineno">   84</span>          <span class="comment">// patterns.</span></div>
+<div class="line"><span class="lineno">   85</span>          <span class="keyword">auto</span> value = *result;</div>
+<div class="line"><span class="lineno">   86</span>          <span class="keywordflow">if</span> (value.size() == 1) {</div>
+<div class="line"><span class="lineno">   87</span>            builder.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c">add</a>(RegexUnit::optional_word(value));</div>
+<div class="line"><span class="lineno">   88</span>          } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   89</span>            builder.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c">add</a>(RegexUnit::char_set(value));</div>
+<div class="line"><span class="lineno">   90</span>          }</div>
+<div class="line"><span class="lineno">   91</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   92</span>          <span class="comment">// not valid syntax, so just append the character</span></div>
+<div class="line"><span class="lineno">   93</span>          builder.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c">add</a>(RegexUnit::word(std::u32string(1, c)));</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   96</span>      }</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>      <span class="keywordflow">case</span> Syntax::BRACE_LEFT: {</div>
+<div class="line"><span class="lineno">   99</span>        <span class="comment">// E.g. &quot;{form}&quot; will be translated to /[form][form][form][form]/ (or</span></div>
+<div class="line"><span class="lineno">  100</span>        <span class="comment">// equivalent).</span></div>
+<div class="line"><span class="lineno">  101</span>        <span class="keyword">auto</span> result = <a class="code hl_function" href="namespacenetspeak_1_1regex.html#acd1be471280f1d11b869b2b7c1f4ecb8">read_until_char</a>(it + 1, query.end(), Syntax::BRACE_RIGHT);</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (result) {</div>
+<div class="line"><span class="lineno">  103</span>          <span class="keyword">const</span> <span class="keyword">auto</span>&amp; result_chars = *result;</div>
+<div class="line"><span class="lineno">  104</span>          it += result_chars.size() + 1; <span class="comment">// result + the end characters</span></div>
+<div class="line"><span class="lineno">  105</span>          <span class="keyword">auto</span> char_set = RegexUnit::char_set(result_chars);</div>
+<div class="line"><span class="lineno">  106</span>          <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; result-&gt;size(); i++) {</div>
+<div class="line"><span class="lineno">  107</span>            builder.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c">add</a>(char_set);</div>
+<div class="line"><span class="lineno">  108</span>          }</div>
+<div class="line"><span class="lineno">  109</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  110</span>          <span class="comment">// not valid syntax, so just append the character</span></div>
+<div class="line"><span class="lineno">  111</span>          builder.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c">add</a>(RegexUnit::word(std::u32string(1, c)));</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  114</span>      }</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>      <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  117</span>        builder.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c">add</a>(RegexUnit::word(std::u32string(1, c)));</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span>  }</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>  <span class="keywordflow">return</span> builder.<a class="code hl_function" href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a7ef4e5553d0ec791b3960977a25e463f">to_query</a>();</div>
+<div class="line"><span class="lineno">  123</span>}</div>
+<div class="ttc" id="aclassnetspeak_1_1regex_1_1RegexQueryBuilder_html"><div class="ttname"><a href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html">netspeak::regex::RegexQueryBuilder</a></div><div class="ttdef"><b>Definition</b> <a href="RegexQuery_8hpp_source.html#l00163">RegexQuery.hpp:163</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1regex_1_1RegexQueryBuilder_html_a626cce510f80b416ea26d8d1e9d4891c"><div class="ttname"><a href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c">netspeak::regex::RegexQueryBuilder::add</a></div><div class="ttdeci">void add(RegexUnit unit)</div><div class="ttdoc">Adds the given unit to the internal query.</div><div class="ttdef"><b>Definition</b> <a href="RegexQuery_8cpp_source.html#l00238">RegexQuery.cpp:238</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1regex_1_1RegexQueryBuilder_html_a7ef4e5553d0ec791b3960977a25e463f"><div class="ttname"><a href="classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a7ef4e5553d0ec791b3960977a25e463f">netspeak::regex::RegexQueryBuilder::to_query</a></div><div class="ttdeci">RegexQuery to_query() const</div><div class="ttdoc">Creates a query from the current internal state.</div><div class="ttdef"><b>Definition</b> <a href="RegexQuery_8hpp_source.html#l00190">RegexQuery.hpp:190</a></div></div>
+<div class="ttc" id="anamespacenetspeak_1_1regex_html_acd1be471280f1d11b869b2b7c1f4ecb8"><div class="ttname"><a href="namespacenetspeak_1_1regex.html#acd1be471280f1d11b869b2b7c1f4ecb8">netspeak::regex::read_until_char</a></div><div class="ttdeci">std::optional&lt; std::u32string &gt; read_until_char(std::u32string::const_iterator begin, std::u32string::const_iterator end, char32_t end_char)</div><div class="ttdoc">Reads the given range until it finds a given end characters. If it finds the end characters,...</div><div class="ttdef"><b>Definition</b> <a href="parsers_8cpp_source.html#l00024">parsers.cpp:24</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_a8ce7eefaa185e2118cece76d1099ad04_cgraph.svg" width="974" height="560"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_a8ce7eefaa185e2118cece76d1099ad04_icgraph.svg" width="868" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="acd1be471280f1d11b869b2b7c1f4ecb8" name="acd1be471280f1d11b869b2b7c1f4ecb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd1be471280f1d11b869b2b7c1f4ecb8">&#9670;&#160;</a></span>read_until_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; std::u32string &gt; netspeak::regex::read_until_char </td>
+          <td>(</td>
+          <td class="paramtype">std::u32string::const_iterator&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::u32string::const_iterator&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char32_t&#160;</td>
+          <td class="paramname"><em>end_char</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads the given range until it finds a given end characters. If it finds the end characters, it will returns all characters between the start of the given range and the end characters (inclusive beginning, exclusive end). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">begin</td><td></td></tr>
+    <tr><td class="paramname">end</td><td></td></tr>
+    <tr><td class="paramname">end_char</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::optional&lt;std::u32string&gt; </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="parsers_8cpp_source.html#l00024">24</a> of file <a class="el" href="parsers_8cpp_source.html">parsers.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>                                                                 {</div>
+<div class="line"><span class="lineno">   26</span>  std::u32string result;</div>
+<div class="line"><span class="lineno">   27</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = begin; it != end; it++) {</div>
+<div class="line"><span class="lineno">   28</span>    <span class="keywordtype">char32_t</span> c = *it;</div>
+<div class="line"><span class="lineno">   29</span>    <span class="keywordflow">if</span> (c == end_char) {</div>
+<div class="line"><span class="lineno">   30</span>      <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   31</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   32</span>      result.push_back(c);</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+<div class="line"><span class="lineno">   34</span>  }</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>  <span class="comment">// if we had hit the end char, we wouldn&#39;t be here</span></div>
+<div class="line"><span class="lineno">   37</span>  <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><span class="lineno">   38</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_acd1be471280f1d11b869b2b7c1f4ecb8_icgraph.svg" width="1080" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2012930d0c5c43d0ad661a49adceb26b" name="a2012930d0c5c43d0ad661a49adceb26b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2012930d0c5c43d0ad661a49adceb26b">&#9670;&#160;</a></span>regex_pattern_append_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void netspeak::regex::regex_pattern_append_char </td>
+          <td>(</td>
+          <td class="paramtype">std::u32string &amp;&#160;</td>
+          <td class="paramname"><em>pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char32_t&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DefaultRegexIndex_8cpp_source.html#l00156">156</a> of file <a class="el" href="DefaultRegexIndex_8cpp_source.html">DefaultRegexIndex.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>                                                                  {</div>
+<div class="line"><span class="lineno">  157</span>  <span class="keywordflow">switch</span> (c) {</div>
+<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;+&#39;</span>:</div>
+<div class="line"><span class="lineno">  159</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;*&#39;</span>:</div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;?&#39;</span>:</div>
+<div class="line"><span class="lineno">  161</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;|&#39;</span>:</div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;\\&#39;</span>:</div>
+<div class="line"><span class="lineno">  163</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;/&#39;</span>:</div>
+<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:</div>
+<div class="line"><span class="lineno">  165</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;)&#39;</span>:</div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;[&#39;</span>:</div>
+<div class="line"><span class="lineno">  167</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;]&#39;</span>:</div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;{&#39;</span>:</div>
+<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;}&#39;</span>:</div>
+<div class="line"><span class="lineno">  170</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;.&#39;</span>:</div>
+<div class="line"><span class="lineno">  171</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;-&#39;</span>:</div>
+<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;^&#39;</span>:</div>
+<div class="line"><span class="lineno">  173</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;$&#39;</span>:</div>
+<div class="line"><span class="lineno">  174</span>      pattern.push_back(<span class="charliteral">&#39;\\&#39;</span>);</div>
+<div class="line"><span class="lineno">  175</span>      pattern.push_back(c);</div>
+<div class="line"><span class="lineno">  176</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  177</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  178</span>      pattern.push_back(c);</div>
+<div class="line"><span class="lineno">  179</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  180</span>  }</div>
+<div class="line"><span class="lineno">  181</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_a2012930d0c5c43d0ad661a49adceb26b_icgraph.svg" width="1162" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af699a70a2450bb3c60f6eb849b7e6176" name="af699a70a2450bb3c60f6eb849b7e6176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af699a70a2450bb3c60f6eb849b7e6176">&#9670;&#160;</a></span>remove_trailing_optional_words()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void netspeak::regex::remove_trailing_optional_words </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structnetspeak_1_1regex_1_1RegexUnit.html">RegexUnit</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>units</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes all trailing optional words. </p>
+<p>There may be any number of qmarks and optional words between optional words and the end.</p>
+<p>Example: The query <code>f(a)?(b)?</code> (<code>()</code> denotes optional words) will be transformed to <code>f??</code>.</p>
+<p>This function is intended to be used before adding a star (<code>*</code>) to the query. This function will then apply some of the absorption and commutative rules to simplify the query.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">units</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="RegexQuery_8cpp_source.html#l00168">168</a> of file <a class="el" href="RegexQuery_8cpp_source.html">RegexQuery.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>                                                                 {</div>
+<div class="line"><span class="lineno">  169</span>  <span class="comment">// remove qmarks and optional words</span></div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span>  <span class="keywordtype">size_t</span> qmarks = 0;</div>
+<div class="line"><span class="lineno">  172</span>  <span class="keywordflow">while</span> (!units.empty()) {</div>
+<div class="line"><span class="lineno">  173</span>    <span class="keyword">const</span> <span class="keyword">auto</span> type = units.back().type;</div>
+<div class="line"><span class="lineno">  174</span>    <span class="keywordflow">if</span> (type == RegexUnit::Type::QMARK) {</div>
+<div class="line"><span class="lineno">  175</span>      qmarks++;</div>
+<div class="line"><span class="lineno">  176</span>      units.pop_back();</div>
+<div class="line"><span class="lineno">  177</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == RegexUnit::Type::OPTIONAL_WORD) {</div>
+<div class="line"><span class="lineno">  178</span>      units.pop_back();</div>
+<div class="line"><span class="lineno">  179</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  180</span>      <span class="comment">// fun&#39;s over. We hit a unit which isn&#39;t a QMARK or optional word</span></div>
+<div class="line"><span class="lineno">  181</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  182</span>    }</div>
+<div class="line"><span class="lineno">  183</span>  }</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>  <span class="comment">// add removed qmarks back in</span></div>
+<div class="line"><span class="lineno">  186</span>  <span class="comment">// (all qmarks are equivalent, so we&#39;ll just create new ones)</span></div>
+<div class="line"><span class="lineno">  187</span> </div>
+<div class="line"><span class="lineno">  188</span>  <span class="keywordflow">while</span> (qmarks-- &gt; 0) {</div>
+<div class="line"><span class="lineno">  189</span>    units.push_back(RegexUnit::qmark());</div>
+<div class="line"><span class="lineno">  190</span>  }</div>
+<div class="line"><span class="lineno">  191</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_af699a70a2450bb3c60f6eb849b7e6176_cgraph.svg" width="447" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_af699a70a2450bb3c60f6eb849b7e6176_icgraph.svg" width="1404" height="166"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a330e12f037f1cfe62d8e2bd33d3fd1e7" name="a330e12f037f1cfe62d8e2bd33d3fd1e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a330e12f037f1cfe62d8e2bd33d3fd1e7">&#9670;&#160;</a></span>without_duplicates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::u32string netspeak::regex::without_duplicates </td>
+          <td>(</td>
+          <td class="paramtype">const std::u32string &amp;&#160;</td>
+          <td class="paramname"><em>characters</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a new string in which all duplicate characters of the given string are removed. </p>
+<p>The order of the characters might be different from the input string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">characters</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::u32string </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="RegexQuery_8cpp_source.html#l00202">202</a> of file <a class="el" href="RegexQuery_8cpp_source.html">RegexQuery.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  202</span>                                                                {</div>
+<div class="line"><span class="lineno">  203</span>  <span class="keywordflow">if</span> (characters.size() &lt; 2) {</div>
+<div class="line"><span class="lineno">  204</span>    <span class="keywordflow">return</span> std::u32string(characters);</div>
+<div class="line"><span class="lineno">  205</span>  }</div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>  std::vector&lt;char32_t&gt; chars(characters.begin(), characters.end());</div>
+<div class="line"><span class="lineno">  208</span>  std::sort(chars.begin(), chars.end());</div>
+<div class="line"><span class="lineno">  209</span> </div>
+<div class="line"><span class="lineno">  210</span>  std::u32string dupFree;</div>
+<div class="line"><span class="lineno">  211</span>  <span class="keywordtype">char32_t</span> last = chars[0];</div>
+<div class="line"><span class="lineno">  212</span>  dupFree.push_back(last);</div>
+<div class="line"><span class="lineno">  213</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; chars.size(); i++) {</div>
+<div class="line"><span class="lineno">  214</span>    <span class="keywordtype">char32_t</span> ch = chars[i];</div>
+<div class="line"><span class="lineno">  215</span>    <span class="keywordflow">if</span> (ch != last) {</div>
+<div class="line"><span class="lineno">  216</span>      last = ch;</div>
+<div class="line"><span class="lineno">  217</span>      dupFree.push_back(last);</div>
+<div class="line"><span class="lineno">  218</span>    }</div>
+<div class="line"><span class="lineno">  219</span>  }</div>
+<div class="line"><span class="lineno">  220</span> </div>
+<div class="line"><span class="lineno">  221</span>  <span class="keywordflow">return</span> dupFree;</div>
+<div class="line"><span class="lineno">  222</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1regex_a330e12f037f1cfe62d8e2bd33d3fd1e7_icgraph.svg" width="1675" height="166"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a480f29fb3aca10ca39f914e4eda5dc53" name="a480f29fb3aca10ca39f914e4eda5dc53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a480f29fb3aca10ca39f914e4eda5dc53">&#9670;&#160;</a></span>MAX_UTF8_BYTES_PER_CHAR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t netspeak::regex::MAX_UTF8_BYTES_PER_CHAR = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RegexQuery_8cpp_source.html#l00062">62</a> of file <a class="el" href="RegexQuery_8cpp_source.html">RegexQuery.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2b195646eb8a91a8b0720056ab903473" name="a2b195646eb8a91a8b0720056ab903473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b195646eb8a91a8b0720056ab903473">&#9670;&#160;</a></span>MIN_UTF8_BYTES_PER_CHAR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t netspeak::regex::MIN_UTF8_BYTES_PER_CHAR = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RegexQuery_8cpp_source.html#l00061">61</a> of file <a class="el" href="RegexQuery_8cpp_source.html">RegexQuery.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacenetspeak.html">netspeak</a></li><li class="navelem"><a class="el" href="namespacenetspeak_1_1regex.html">regex</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<map id="netspeak::invertedindex::PostlistReader::read" name="netspeak::invertedindex::PostlistReader::read">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,129,185,169"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util.html#a4acc3d13f8d541f4b65dd44f486403fd" title=" " alt="" coords="473,5,629,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,126,178,102,232,79,350,48,459,27,460,33,351,53,234,85,180,107,133,131"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#a0f64660040077bd1ae3a46941a000b07" title=" " alt="" coords="475,105,628,131"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="186,140,461,121,461,127,186,145"/>
+<area shape="rect" id="Node000006" href="$namespacenetspeak_1_1util.html#a3015ae7c69935f843a1915958d0de042" title=" " alt="" coords="474,56,629,81"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="173,126,233,113,351,92,460,77,460,82,352,98,234,118,174,131"/>
+<area shape="rect" id="Node000007" href="$namespacenetspeak_1_1util.html#a40f06a45e10cacbbc067fdd36cb252b0" title=" " alt="" coords="479,284,623,309"/>
+<area shape="poly" id="edge11_Node000001_Node000007" title=" " alt="" coords="140,166,234,206,365,247,482,278,481,283,364,253,232,211,137,171"/>
+<area shape="rect" id="Node000008" href="$namespacenetspeak_1_1util.html#ad2441a387c3a4c47e09c373e9412fad0" title=" " alt="" coords="482,333,621,359"/>
+<area shape="poly" id="edge14_Node000001_Node000008" title=" " alt="" coords="116,167,166,217,199,244,235,266,293,292,355,311,469,334,468,340,353,316,291,297,232,271,196,248,162,221,112,171"/>
+<area shape="rect" id="Node000011" href="$classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a2f5a59f9d290bd2116bbd73244666171" title=" " alt="" coords="233,157,413,197"/>
+<area shape="poly" id="edge19_Node000001_Node000011" title=" " alt="" coords="186,157,220,161,220,167,185,162"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="896,171,1047,196"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="630,14,680,17,737,24,794,38,849,60,882,81,912,107,956,158,952,161,908,111,879,85,847,64,793,43,736,30,680,22,629,19"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#af94d48fda5f335ddcb461a8237079866" title=" " alt="" coords="689,106,848,146"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="608,28,642,41,690,67,732,95,729,100,687,72,640,46,606,33"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="841,143,913,164,912,169,839,149"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="599,128,642,141,690,155,789,170,882,177,882,183,789,175,689,161,641,146,597,133"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="628,118,676,120,675,125,628,123"/>
+<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="629,61,735,66,793,75,849,92,878,105,905,123,949,158,945,163,902,127,875,110,847,96,792,81,735,71,629,67"/>
+<area shape="poly" id="edge10_Node000006_Node000004" title=" " alt="" coords="601,79,680,100,679,105,600,84"/>
+<area shape="poly" id="edge12_Node000007_Node000003" title=" " alt="" coords="599,281,909,197,911,202,600,287"/>
+<area shape="poly" id="edge13_Node000007_Node000004" title=" " alt="" coords="614,282,640,269,656,257,666,244,687,214,739,154,743,158,691,217,670,248,659,260,643,274,616,286"/>
+<area shape="poly" id="edge16_Node000008_Node000003" title=" " alt="" coords="600,331,745,292,847,261,898,232,942,202,945,206,901,237,849,266,746,297,602,336"/>
+<area shape="rect" id="Node000009" href="$namespacenetspeak_1_1util.html#ab27a22c787271513007af0719b17cef9" title=" " alt="" coords="699,322,839,362"/>
+<area shape="poly" id="edge15_Node000008_Node000009" title=" " alt="" coords="621,342,685,341,685,346,621,347"/>
+<area shape="rect" id="Node000010" href="$namespacenetspeak_1_1util.html#a93e18aaa529a497b6afdf4b3bd221182" title=" " alt="" coords="694,386,843,426"/>
+<area shape="poly" id="edge17_Node000008_Node000010" title=" " alt="" coords="599,356,683,380,682,385,597,361"/>
+<area shape="poly" id="edge18_Node000010_Node000003" title=" " alt="" coords="829,384,846,372,884,333,916,288,940,244,957,208,962,210,945,246,920,291,889,336,850,376,832,388"/>
+<area shape="poly" id="edge20_Node000011_Node000005" title=" " alt="" coords="401,154,488,132,489,137,402,159"/>
+<area shape="rect" id="Node000012" href="$classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a109be725161102fab0e4b4ee0651491e" title=" " alt="" coords="461,219,641,259"/>
+<area shape="poly" id="edge21_Node000011_Node000012" title=" " alt="" coords="397,194,466,213,464,218,396,199"/>
+<area shape="rect" id="Node000013" href="$classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ac7160f8bd36f86815662909c0722556f" title=" " alt="" coords="461,155,641,195"/>
+<area shape="poly" id="edge22_Node000011_Node000013" title=" " alt="" coords="414,173,448,173,448,179,414,179"/>
+</map>

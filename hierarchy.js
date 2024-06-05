@@ -31,12 +31,11 @@ var hierarchy =
     ] ],
     [ "netspeak::Configuration", "classnetspeak_1_1Configuration.html", null ],
     [ "netspeak::invertedindex::Configuration", "classnetspeak_1_1invertedindex_1_1Configuration.html", null ],
+    [ "cli::Tester::corpus_measurements", "structcli_1_1Tester_1_1corpus__measurements.html", null ],
     [ "netspeak::model::Phrase::Count", "structnetspeak_1_1model_1_1Phrase_1_1Count.html", null ],
-    [ "netspeak::Dictionaries", "classnetspeak_1_1Dictionaries.html", null ],
     [ "netspeak::util::JsonWriter::Done< S >", "classnetspeak_1_1util_1_1JsonWriter_1_1Done.html", null ],
     [ "netspeak::service::UniqueMap::entry", "structnetspeak_1_1service_1_1UniqueMap_1_1entry.html", null ],
     [ "netspeak::QueryProcessor< RetrievalStrategyTag >::equal", "structnetspeak_1_1QueryProcessor_1_1equal.html", null ],
-    [ "netspeak::error_message", "structnetspeak_1_1error__message.html", null ],
     [ "netspeak::util::FileDescriptor", "structnetspeak_1_1util_1_1FileDescriptor.html", null ],
     [ "std::formatter", null, [
       [ "std::formatter< netspeak::invertedindex::Record< T > >", "structstd_1_1formatter_3_01netspeak_1_1invertedindex_1_1Record_3_01T_01_4_01_4.html", null ],
@@ -74,6 +73,7 @@ var hierarchy =
       [ "netspeak::util::tracable_logic_error", "structnetspeak_1_1util_1_1tracable__logic__error.html", null ]
     ] ],
     [ "netspeak::invertedindex::ManagedIndexer< T, Reader >", "classnetspeak_1_1invertedindex_1_1ManagedIndexer.html", null ],
+    [ "netspeak::MinLengthMargin", "structnetspeak_1_1MinLengthMargin.html", null ],
     [ "netspeak::value::NameOf< T >", "structnetspeak_1_1value_1_1NameOf.html", null ],
     [ "netspeak::value::NameOf< big_string >", "structnetspeak_1_1value_1_1NameOf_3_01big__string_01_4.html", null ],
     [ "netspeak::value::NameOf< double >", "structnetspeak_1_1value_1_1NameOf_3_01double_01_4.html", null ],
@@ -99,6 +99,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "netspeak::model::NormQuery", "classnetspeak_1_1model_1_1NormQuery.html", null ],
+    [ "netspeak::NormQueryCounter", "structnetspeak_1_1NormQueryCounter.html", null ],
     [ "netspeak::model::NormQueryUnit__", "classnetspeak_1_1model_1_1NormQueryUnit____.html", null ],
     [ "netspeak::util::JsonWriter::ObjectContinue< S, R >", "classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html", null ],
     [ "netspeak::util::JsonWriter::ObjectStart< S, R >", "classnetspeak_1_1util_1_1JsonWriter_1_1ObjectStart.html", null ],
@@ -119,10 +120,13 @@ var hierarchy =
     [ "netspeak::invertedindex::Properties", "structnetspeak_1_1invertedindex_1_1Properties.html", null ],
     [ "netspeak::value::quadruple< T1, T2, T3, T4 >", "classnetspeak_1_1value_1_1quadruple.html", null ],
     [ "netspeak::model::Query", "classnetspeak_1_1model_1_1Query.html", null ],
-    [ "netspeak::query_error_message", "structnetspeak_1_1query__error__message.html", null ],
+    [ "QueryBaseListener", null, [
+      [ "antlr4::QueryConstructor", "classantlr4_1_1QueryConstructor.html", null ]
+    ] ],
     [ "netspeak::QueryNormalizer", "classnetspeak_1_1QueryNormalizer.html", null ],
     [ "netspeak::QueryProcessor< RetrievalStrategyTag >", "classnetspeak_1_1QueryProcessor.html", null ],
     [ "netspeak::QueryProcessor< netspeak::RetrievalStrategy3Tag >", "classnetspeak_1_1QueryProcessor.html", null ],
+    [ "netspeak::QuerySimplifier", "classnetspeak_1_1QuerySimplifier.html", null ],
     [ "netspeak::model::QuerySyntax", "structnetspeak_1_1model_1_1QuerySyntax.html", null ],
     [ "netspeak::model::QueryUnit__", "classnetspeak_1_1model_1_1QueryUnit____.html", null ],
     [ "netspeak::invertedindex::RawIndexer", "classnetspeak_1_1invertedindex_1_1RawIndexer.html", [
@@ -145,6 +149,7 @@ var hierarchy =
       [ "netspeak::PhraseFileReader< stream_provides_phrase_id >", "classnetspeak_1_1PhraseFileReader.html", null ]
     ] ],
     [ "netspeak::model::RawRefResult::Ref", "classnetspeak_1_1model_1_1RawRefResult_1_1Ref.html", null ],
+    [ "netspeak::ref_", "structnetspeak_1_1ref__.html", null ],
     [ "netspeak::model::RawResult::RefItem", "structnetspeak_1_1model_1_1RawResult_1_1RefItem.html", null ],
     [ "netspeak::regex::RegexIndex", "classnetspeak_1_1regex_1_1RegexIndex.html", [
       [ "netspeak::regex::DefaultRegexIndex", "classnetspeak_1_1regex_1_1DefaultRegexIndex.html", null ]
@@ -172,18 +177,28 @@ var hierarchy =
       [ "netspeak::service::UniqueMap", "classnetspeak_1_1service_1_1UniqueMap.html", null ]
     ] ],
     [ "netspeak::model::SimpleQuery", "classnetspeak_1_1model_1_1SimpleQuery.html", null ],
+    [ "netspeak::SimpleQueryNormalizer", "classnetspeak_1_1SimpleQueryNormalizer.html", null ],
+    [ "netspeak::SimpleQueryOptimizer", "classnetspeak_1_1SimpleQueryOptimizer.html", null ],
     [ "netspeak::model::SimpleQueryUnit__", "classnetspeak_1_1model_1_1SimpleQueryUnit____.html", null ],
     [ "netspeak::model::NormQueryUnit__::Source", "structnetspeak_1_1model_1_1NormQueryUnit_____1_1Source.html", null ],
+    [ "netspeak::StarQuery", "classnetspeak_1_1StarQuery.html", null ],
+    [ "netspeak::StarQueryConverter", "classnetspeak_1_1StarQueryConverter.html", null ],
     [ "netspeak::invertedindex::IndexStrategy< T >::stats_type", "structnetspeak_1_1invertedindex_1_1IndexStrategy_1_1stats__type.html", null ],
     [ "netspeak::stats_type", "structnetspeak_1_1stats__type.html", null ],
     [ "netspeak::invertedindex::StorageReader< T, ThreadSafe >", "classnetspeak_1_1invertedindex_1_1StorageReader.html", null ],
+    [ "netspeak::invertedindex::StorageReader< netspeak::value::pair, true >", "classnetspeak_1_1invertedindex_1_1StorageReader.html", null ],
     [ "netspeak::invertedindex::StorageReader< Value, true >", "classnetspeak_1_1invertedindex_1_1StorageReader.html", null ],
     [ "netspeak::util::StringIdMap< Id >::string_entry", "structnetspeak_1_1util_1_1StringIdMap_1_1string__entry.html", null ],
     [ "netspeak::util::JsonWriter::string_stream_wrapper", "structnetspeak_1_1util_1_1JsonWriter_1_1string__stream__wrapper.html", null ],
     [ "netspeak::util::StringIdMap< Id >", "classnetspeak_1_1util_1_1StringIdMap.html", null ],
     [ "netspeak::invertedindex::swap_type", "structnetspeak_1_1invertedindex_1_1swap__type.html", null ],
+    [ "cli::Tester", "classcli_1_1Tester.html", null ],
+    [ "cli::Tester::time_analysis", "structcli_1_1Tester_1_1time__analysis.html", null ],
     [ "netspeak::value::triple< T1, T2, T3 >", "classnetspeak_1_1value_1_1triple.html", null ],
+    [ "netspeak::StarQuery::Unit", "structnetspeak_1_1StarQuery_1_1Unit.html", null ],
     [ "netspeak::RetrievalStrategy3Tag::unit_metadata", "structnetspeak_1_1RetrievalStrategy3Tag_1_1unit__metadata.html", null ],
+    [ "netspeak::NormQueryCounter::UnitResult", "structnetspeak_1_1NormQueryCounter_1_1UnitResult.html", null ],
+    [ "netspeak::regex::utf8_finite_regex_unit", "structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html", null ],
     [ "netspeak::util::JsonWriter::Value< S, R >", "classnetspeak_1_1util_1_1JsonWriter_1_1Value.html", null ],
     [ "netspeak::value::value_traits< T >", "structnetspeak_1_1value_1_1value__traits.html", null ],
     [ "netspeak::value::value_traits< big_string >", "structnetspeak_1_1value_1_1value__traits_3_01big__string_01_4.html", null ],

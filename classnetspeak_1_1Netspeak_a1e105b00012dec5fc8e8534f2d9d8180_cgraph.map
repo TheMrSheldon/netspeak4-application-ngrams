@@ -1,0 +1,19 @@
+<map id="netspeak::Netspeak::search" name="netspeak::Netspeak::search">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,99,157,139"/>
+<area shape="rect" id="Node000002" href="$namespaceantlr4.html#a2020344a1fef6dbc1acdc22984b7855f" title=" " alt="" coords="219,45,367,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,96,235,71,236,77,152,101"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak.html#ad74fec567cecadce429daf41e8d8cd32" title="Converts the given search result item into a (service) phrase." alt="" coords="205,127,381,167"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="158,126,192,131,191,136,157,131"/>
+<area shape="rect" id="Node000003" href="$classantlr4_1_1QueryConstructor.html#af4ffb8a2e97831a0f5395863f8d797cf" title=" " alt="" coords="439,5,622,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="367,45,425,37,426,42,368,50"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1model_1_1Phrase.html#acfc15d1ae254baa86daa01723e7e5778" title=" " alt="" coords="439,69,622,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="376,124,434,110,435,115,377,129"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1model_1_1Phrase.html#abf504a6571722f250cd0738da12cfc19" title=" " alt="" coords="429,134,632,159"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="381,144,416,144,416,149,381,149"/>
+<area shape="rect" id="Node000007" href="$namespacenetspeak.html#a5dfc32f282aa2ad493b13184b11ef68b" title=" " alt="" coords="465,183,596,209"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="382,162,456,178,455,183,381,168"/>
+<area shape="rect" id="Node000009" href="$classnetspeak_1_1model_1_1Phrase.html#a0cfea75b7cad4d3c9a3cd111789bd42f" title=" " alt="" coords="439,233,622,273"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="329,164,376,191,430,218,452,226,450,231,428,222,374,196,326,169"/>
+<area shape="rect" id="Node000008" href="$classnetspeak_1_1model_1_1NormQueryUnit____.html#ac434701089b009138eafdec6f1bfbc8e" title=" " alt="" coords="680,176,895,216"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="596,193,666,193,666,199,596,199"/>
+</map>

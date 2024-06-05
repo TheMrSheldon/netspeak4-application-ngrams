@@ -1,0 +1,1315 @@
+<!-- Heavily based on https://github.com/jothepro/doxygen-awesome-css/blob/main/doxygen-custom/header.html -->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- BEGIN opengraph metadata -->
+    <meta property="og:title" content=Netspeak />
+    <meta property="og:image" content="netspeak_logo.svg" />
+    <meta property="og:description" content="One word leads to another." />
+    <meta property="og:url" content="https://github.com/netspeak/netspeak4-application-ngrams" />
+    <!-- END opengraph metadata -->
+    <!-- BEGIN twitter metadata -->
+    <meta name="twitter:image:src" content="netspeak_logo.svg" />
+    <meta name="twitter:title" content="Netspeak" />
+    <meta name="twitter:description" content="One word leads to another." />
+    <!-- END twitter metadata -->
+    <title>Netspeak: netspeak::QuerySimplifier Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/svg+xml" href="netspeak_logo.svg" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+    <script type="text/javascript" src="toggle-alternative-theme.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+        DoxygenAwesomeDarkModeToggle.init()
+        DoxygenAwesomeParagraphLink.init()
+        DoxygenAwesomeInteractiveToc.init()
+        DoxygenAwesomeTabs.init()
+    </script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-tabs.js" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- https://tholman.com/github-corners/ -->
+    <a href="https://github.com/netspeak/netspeak4-application-ngrams" class="github-corner"
+        title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 250 250" width="40" height="40"
+            style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg></a>
+    <style>
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+        @media (max-width:500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+    </style>
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectlogo"><img alt="Logo" src="netspeak_logo.svg" /></td>
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">Netspeak
+                                &#160;<span
+                                    id="projectnumber">4.2.0</span>
+                            </div>
+                            <div id="projectbrief">One word leads to another.</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classnetspeak_1_1QuerySimplifier.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="classnetspeak_1_1QuerySimplifier-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">netspeak::QuerySimplifier Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A converter from a <code>Query</code> to its <code>SimpleQuery</code> units.  
+ <a href="classnetspeak_1_1QuerySimplifier.html#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for netspeak::QuerySimplifier:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier__coll__graph.svg" width="204" height="619"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a597e316e2e10a218ba2f2dd75f3b1721" id="r_a597e316e2e10a218ba2f2dd75f3b1721"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; const <a class="el" href="classnetspeak_1_1model_1_1Query.html#a281d4debf6c99245497bdaef94116d8d">Query::Unit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a></td></tr>
+<tr class="separator:a597e316e2e10a218ba2f2dd75f3b1721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c710138b9c8f1bd6bc923ee2ba1a50" id="r_a87c710138b9c8f1bd6bc923ee2ba1a50"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; const <a class="el" href="classnetspeak_1_1model_1_1Query.html">Query</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a></td></tr>
+<tr class="separator:a87c710138b9c8f1bd6bc923ee2ba1a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae6884aef4c09bc538d425c793fc17ea9" id="r_ae6884aef4c09bc538d425c793fc17ea9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#ae6884aef4c09bc538d425c793fc17ea9">QuerySimplifier</a> ()=delete</td></tr>
+<tr class="separator:ae6884aef4c09bc538d425c793fc17ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7109f4c03ff5b7715ded37be92fa0309" id="r_a7109f4c03ff5b7715ded37be92fa0309"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#a7109f4c03ff5b7715ded37be92fa0309">QuerySimplifier</a> (const <a class="el" href="structnetspeak_1_1QueryNormalizer_1_1Options.html">QueryNormalizer::Options</a> &amp;<a class="el" href="classnetspeak_1_1QuerySimplifier.html#a0f842b8623d97065c5049f20e05c118e">options</a>)</td></tr>
+<tr class="separator:a7109f4c03ff5b7715ded37be92fa0309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47411b51e5d329b77e30c2204c12627d" id="r_a47411b51e5d329b77e30c2204c12627d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html">SimpleQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#a47411b51e5d329b77e30c2204c12627d">to_simple</a> (const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;query)</td></tr>
+<tr class="separator:a47411b51e5d329b77e30c2204c12627d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a0f842b8623d97065c5049f20e05c118e" id="r_a0f842b8623d97065c5049f20e05c118e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnetspeak_1_1QueryNormalizer_1_1Options.html">QueryNormalizer::Options</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#a0f842b8623d97065c5049f20e05c118e">options</a></td></tr>
+<tr class="separator:a0f842b8623d97065c5049f20e05c118e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4bb43123a70d5461074b191549548b6" id="r_af4bb43123a70d5461074b191549548b6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const <a class="el" href="namespacenetspeak_1_1Dictionaries.html#ad01bbf88e3baef4bc6b7b1a73e236a95">Dictionaries::Map</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#af4bb43123a70d5461074b191549548b6">dictionary</a> = nullptr</td></tr>
+<tr class="separator:af4bb43123a70d5461074b191549548b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb0a7922776d8c62a6f372066f4c9bc1" id="r_acb0a7922776d8c62a6f372066f4c9bc1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#acb0a7922776d8c62a6f372066f4c9bc1">allow_regex</a> = false</td></tr>
+<tr class="separator:acb0a7922776d8c62a6f372066f4c9bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9cf4cee63527d86a97dd50e47868535" id="r_aa9cf4cee63527d86a97dd50e47868535"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#aa9cf4cee63527d86a97dd50e47868535">lower_case</a> = false</td></tr>
+<tr class="separator:aa9cf4cee63527d86a97dd50e47868535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a6370b7569ff3cd8fe257c76f23ed166b" id="r_a6370b7569ff3cd8fe257c76f23ed166b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#a6370b7569ff3cd8fe257c76f23ed166b">get_text</a> (const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;unit) const</td></tr>
+<tr class="separator:a6370b7569ff3cd8fe257c76f23ed166b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa609db274838f9056f0051d2b391c77c" id="r_aa609db274838f9056f0051d2b391c77c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#aa609db274838f9056f0051d2b391c77c">plus_to_simple</a> (const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;query, const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;unit)</td></tr>
+<tr class="separator:aa609db274838f9056f0051d2b391c77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a61e022386f41896500001dcd46858c" id="r_a7a61e022386f41896500001dcd46858c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#a7a61e022386f41896500001dcd46858c">regex_to_simple</a> (const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;query, const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;unit)</td></tr>
+<tr class="separator:a7a61e022386f41896500001dcd46858c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1ac4b76923d0b209354bf42e2a59d00" id="r_ac1ac4b76923d0b209354bf42e2a59d00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#ac1ac4b76923d0b209354bf42e2a59d00">dict_to_simple</a> (const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;query, const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;unit)</td></tr>
+<tr class="separator:ac1ac4b76923d0b209354bf42e2a59d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abafc853573d650c19c989cebbdc10ce4" id="r_abafc853573d650c19c989cebbdc10ce4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#abafc853573d650c19c989cebbdc10ce4">option_to_simple</a> (const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;query, const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;unit)</td></tr>
+<tr class="separator:abafc853573d650c19c989cebbdc10ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f67510a9b668e751894cdeb6e97b349" id="r_a2f67510a9b668e751894cdeb6e97b349"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#a2f67510a9b668e751894cdeb6e97b349">order_to_simple</a> (const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;query, const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;unit)</td></tr>
+<tr class="separator:a2f67510a9b668e751894cdeb6e97b349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b44d549420ef21f82bde54ad4858ba5" id="r_a3b44d549420ef21f82bde54ad4858ba5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#a3b44d549420ef21f82bde54ad4858ba5">alt_to_simple</a> (const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;query, const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;unit)</td></tr>
+<tr class="separator:a3b44d549420ef21f82bde54ad4858ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f629b768d053c64ba136f00661e601d" id="r_a1f629b768d053c64ba136f00661e601d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#a1f629b768d053c64ba136f00661e601d">concat_to_simple</a> (const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;query, const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;unit)</td></tr>
+<tr class="separator:a1f629b768d053c64ba136f00661e601d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f06fcd290543e7a04f2e5614a5f719" id="r_ab2f06fcd290543e7a04f2e5614a5f719"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#ab2f06fcd290543e7a04f2e5614a5f719">unit_to_simple</a> (const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;query, const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;unit)</td></tr>
+<tr class="separator:ab2f06fcd290543e7a04f2e5614a5f719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a6cbbe38bc9244210c3f76635f30daaa3" id="r_a6cbbe38bc9244210c3f76635f30daaa3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#a6cbbe38bc9244210c3f76635f30daaa3">add_to_concat</a> (<a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> &amp;concat, <a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> unit)</td></tr>
+<tr class="separator:a6cbbe38bc9244210c3f76635f30daaa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3c3e04a80fa328604bd5287349aebe2" id="r_ae3c3e04a80fa328604bd5287349aebe2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#ae3c3e04a80fa328604bd5287349aebe2">add_to_alternation</a> (<a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> &amp;alt, <a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> unit)</td></tr>
+<tr class="separator:ae3c3e04a80fa328604bd5287349aebe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18ef84f764ae6f69b3cf33d616e6fc41" id="r_a18ef84f764ae6f69b3cf33d616e6fc41"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a0ddf090ec768afb6b29a1ff29c6d7fed">SimpleQuery::Unit::Source</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1QuerySimplifier.html#a18ef84f764ae6f69b3cf33d616e6fc41">to_source</a> (const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;query, const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;unit)</td></tr>
+<tr class="separator:a18ef84f764ae6f69b3cf33d616e6fc41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A converter from a <code>Query</code> to its <code>SimpleQuery</code> units. </p>
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00026">26</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a87c710138b9c8f1bd6bc923ee2ba1a50" name="a87c710138b9c8f1bd6bc923ee2ba1a50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87c710138b9c8f1bd6bc923ee2ba1a50">&#9670;&#160;</a></span>QueryPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::shared_ptr&lt;const <a class="el" href="classnetspeak_1_1model_1_1Query.html">Query</a>&gt; <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">netspeak::QuerySimplifier::QueryPtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00037">37</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a597e316e2e10a218ba2f2dd75f3b1721" name="a597e316e2e10a218ba2f2dd75f3b1721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a597e316e2e10a218ba2f2dd75f3b1721">&#9670;&#160;</a></span>UnitPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::shared_ptr&lt;const <a class="el" href="classnetspeak_1_1model_1_1Query.html#a281d4debf6c99245497bdaef94116d8d">Query::Unit</a>&gt; <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">netspeak::QuerySimplifier::UnitPtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00036">36</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae6884aef4c09bc538d425c793fc17ea9" name="ae6884aef4c09bc538d425c793fc17ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6884aef4c09bc538d425c793fc17ea9">&#9670;&#160;</a></span>QuerySimplifier() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">netspeak::QuerySimplifier::QuerySimplifier </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7109f4c03ff5b7715ded37be92fa0309" name="a7109f4c03ff5b7715ded37be92fa0309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7109f4c03ff5b7715ded37be92fa0309">&#9670;&#160;</a></span>QuerySimplifier() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">netspeak::QuerySimplifier::QuerySimplifier </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnetspeak_1_1QueryNormalizer_1_1Options.html">QueryNormalizer::Options</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00034">34</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>: <a class="code hl_variable" href="classnetspeak_1_1QuerySimplifier.html#a0f842b8623d97065c5049f20e05c118e">options</a>(<a class="code hl_variable" href="classnetspeak_1_1QuerySimplifier.html#a0f842b8623d97065c5049f20e05c118e">options</a>) {}</div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_a0f842b8623d97065c5049f20e05c118e"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#a0f842b8623d97065c5049f20e05c118e">netspeak::QuerySimplifier::options</a></div><div class="ttdeci">QueryNormalizer::Options options</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00028">QueryNormalizer.cpp:28</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae3c3e04a80fa328604bd5287349aebe2" name="ae3c3e04a80fa328604bd5287349aebe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3c3e04a80fa328604bd5287349aebe2">&#9670;&#160;</a></span>add_to_alternation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void netspeak::QuerySimplifier::add_to_alternation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> &amp;&#160;</td>
+          <td class="paramname"><em>alt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a>&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00051">51</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                                             {</div>
+<div class="line"><span class="lineno">   52</span>    <span class="comment">// If an alt is added to an alt, then we can add all alternatives of the</span></div>
+<div class="line"><span class="lineno">   53</span>    <span class="comment">// child alt instead.</span></div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">if</span> (unit.tag() == <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da80ea6a59a36341e746a915b8c39872cf">SimpleQuery::Unit::Tag::ALTERNATION</a>) {</div>
+<div class="line"><span class="lineno">   55</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; child : unit.drain_children()) {</div>
+<div class="line"><span class="lineno">   56</span>        alt.add_child(std::move(child));</div>
+<div class="line"><span class="lineno">   57</span>      }</div>
+<div class="line"><span class="lineno">   58</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   59</span>      alt.add_child(std::move(unit));</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="line"><span class="lineno">   61</span>  }</div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a3247a2a5789d3161f6682491821ed38da80ea6a59a36341e746a915b8c39872cf"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da80ea6a59a36341e746a915b8c39872cf">netspeak::model::SimpleQueryUnit__::Tag::ALTERNATION</a></div><div class="ttdeci">@ ALTERNATION</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_ae3c3e04a80fa328604bd5287349aebe2_cgraph.svg" width="472" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_ae3c3e04a80fa328604bd5287349aebe2_icgraph.svg" width="1367" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6cbbe38bc9244210c3f76635f30daaa3" name="a6cbbe38bc9244210c3f76635f30daaa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cbbe38bc9244210c3f76635f30daaa3">&#9670;&#160;</a></span>add_to_concat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void netspeak::QuerySimplifier::add_to_concat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> &amp;&#160;</td>
+          <td class="paramname"><em>concat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a>&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00040">40</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                                           {</div>
+<div class="line"><span class="lineno">   41</span>    <span class="comment">// If a concat is added to a concat, then we can just inline the elements of</span></div>
+<div class="line"><span class="lineno">   42</span>    <span class="comment">// the child concat.</span></div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">if</span> (unit.tag() == <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da911737ef056ac1eb1c4c7dbe6eb90786">SimpleQuery::Unit::Tag::CONCAT</a>) {</div>
+<div class="line"><span class="lineno">   44</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; child : unit.drain_children()) {</div>
+<div class="line"><span class="lineno">   45</span>        concat.add_child(std::move(child));</div>
+<div class="line"><span class="lineno">   46</span>      }</div>
+<div class="line"><span class="lineno">   47</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   48</span>      concat.add_child(std::move(unit));</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="line"><span class="lineno">   50</span>  }</div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a3247a2a5789d3161f6682491821ed38da911737ef056ac1eb1c4c7dbe6eb90786"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da911737ef056ac1eb1c4c7dbe6eb90786">netspeak::model::SimpleQueryUnit__::Tag::CONCAT</a></div><div class="ttdeci">@ CONCAT</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a6cbbe38bc9244210c3f76635f30daaa3_cgraph.svg" width="472" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a6cbbe38bc9244210c3f76635f30daaa3_icgraph.svg" width="1367" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a3b44d549420ef21f82bde54ad4858ba5" name="a3b44d549420ef21f82bde54ad4858ba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b44d549420ef21f82bde54ad4858ba5">&#9670;&#160;</a></span>alt_to_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> netspeak::QuerySimplifier::alt_to_simple </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00263">263</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  263</span>                                                                            {</div>
+<div class="line"><span class="lineno">  264</span>    <span class="keyword">const</span> <span class="keyword">auto</span> source = <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a18ef84f764ae6f69b3cf33d616e6fc41">to_source</a>(query, unit);</div>
+<div class="line"><span class="lineno">  265</span> </div>
+<div class="line"><span class="lineno">  266</span>    <span class="keyword">auto</span> alt = <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3080baa4a48b461ec365cec8f3aa967c">SimpleQuery::Unit::new_alternation</a>(source);</div>
+<div class="line"><span class="lineno">  267</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; child : unit-&gt;children()) {</div>
+<div class="line"><span class="lineno">  268</span>      <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#ae3c3e04a80fa328604bd5287349aebe2">add_to_alternation</a>(alt, <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#ab2f06fcd290543e7a04f2e5614a5f719">unit_to_simple</a>(query, child));</div>
+<div class="line"><span class="lineno">  269</span>    }</div>
+<div class="line"><span class="lineno">  270</span>    <span class="keywordflow">return</span> alt;</div>
+<div class="line"><span class="lineno">  271</span>  }</div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_a18ef84f764ae6f69b3cf33d616e6fc41"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#a18ef84f764ae6f69b3cf33d616e6fc41">netspeak::QuerySimplifier::to_source</a></div><div class="ttdeci">static SimpleQuery::Unit::Source to_source(const QueryPtr &amp;query, const UnitPtr &amp;unit)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00062">QueryNormalizer.cpp:62</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_ab2f06fcd290543e7a04f2e5614a5f719"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#ab2f06fcd290543e7a04f2e5614a5f719">netspeak::QuerySimplifier::unit_to_simple</a></div><div class="ttdeci">SimpleQuery::Unit unit_to_simple(const QueryPtr &amp;query, const UnitPtr &amp;unit)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00283">QueryNormalizer.cpp:283</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_ae3c3e04a80fa328604bd5287349aebe2"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#ae3c3e04a80fa328604bd5287349aebe2">netspeak::QuerySimplifier::add_to_alternation</a></div><div class="ttdeci">static void add_to_alternation(SimpleQuery::Unit &amp;alt, SimpleQuery::Unit unit)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00051">QueryNormalizer.cpp:51</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a3080baa4a48b461ec365cec8f3aa967c"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3080baa4a48b461ec365cec8f3aa967c">netspeak::model::SimpleQueryUnit__::new_alternation</a></div><div class="ttdeci">static Unit new_alternation(const Source &amp;source)</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a3b44d549420ef21f82bde54ad4858ba5_cgraph.svg" width="1220" height="728"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a3b44d549420ef21f82bde54ad4858ba5_icgraph.svg" width="1128" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a1f629b768d053c64ba136f00661e601d" name="a1f629b768d053c64ba136f00661e601d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f629b768d053c64ba136f00661e601d">&#9670;&#160;</a></span>concat_to_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> netspeak::QuerySimplifier::concat_to_simple </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00273">273</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  273</span>                                                                               {</div>
+<div class="line"><span class="lineno">  274</span>    <span class="keyword">const</span> <span class="keyword">auto</span> source = <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a18ef84f764ae6f69b3cf33d616e6fc41">to_source</a>(query, unit);</div>
+<div class="line"><span class="lineno">  275</span> </div>
+<div class="line"><span class="lineno">  276</span>    <span class="keyword">auto</span> concat = <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a42d698a0c2b81bb96d5efb842e0c09cd">SimpleQuery::Unit::new_concat</a>(source);</div>
+<div class="line"><span class="lineno">  277</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; child : unit-&gt;children()) {</div>
+<div class="line"><span class="lineno">  278</span>      <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a6cbbe38bc9244210c3f76635f30daaa3">add_to_concat</a>(concat, <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#ab2f06fcd290543e7a04f2e5614a5f719">unit_to_simple</a>(query, child));</div>
+<div class="line"><span class="lineno">  279</span>    }</div>
+<div class="line"><span class="lineno">  280</span>    <span class="keywordflow">return</span> concat;</div>
+<div class="line"><span class="lineno">  281</span>  }</div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_a6cbbe38bc9244210c3f76635f30daaa3"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#a6cbbe38bc9244210c3f76635f30daaa3">netspeak::QuerySimplifier::add_to_concat</a></div><div class="ttdeci">static void add_to_concat(SimpleQuery::Unit &amp;concat, SimpleQuery::Unit unit)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00040">QueryNormalizer.cpp:40</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a42d698a0c2b81bb96d5efb842e0c09cd"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a42d698a0c2b81bb96d5efb842e0c09cd">netspeak::model::SimpleQueryUnit__::new_concat</a></div><div class="ttdeci">static Unit new_concat(const Source &amp;source)</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a1f629b768d053c64ba136f00661e601d_cgraph.svg" width="1220" height="695"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a1f629b768d053c64ba136f00661e601d_icgraph.svg" width="1128" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ac1ac4b76923d0b209354bf42e2a59d00" name="ac1ac4b76923d0b209354bf42e2a59d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1ac4b76923d0b209354bf42e2a59d00">&#9670;&#160;</a></span>dict_to_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> netspeak::QuerySimplifier::dict_to_simple </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00099">99</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                                             {</div>
+<div class="line"><span class="lineno">  100</span>    <span class="keyword">const</span> <span class="keyword">auto</span> source = <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a18ef84f764ae6f69b3cf33d616e6fc41">to_source</a>(query, unit);</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    <span class="keyword">const</span> std::string&amp; text = <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a6370b7569ff3cd8fe257c76f23ed166b">get_text</a>(unit);</div>
+<div class="line"><span class="lineno">  103</span>    <span class="keyword">auto</span> text_unit = <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#aec3288b9da92b0fdeedcec37c09572c4">SimpleQuery::Unit::new_word</a>(text, source);</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classnetspeak_1_1QuerySimplifier.html#af4bb43123a70d5461074b191549548b6">dictionary</a>) {</div>
+<div class="line"><span class="lineno">  106</span>      <span class="comment">// no dictionary for this index</span></div>
+<div class="line"><span class="lineno">  107</span>      <span class="keywordflow">return</span> text_unit;</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>    <span class="keyword">const</span> <span class="keyword">auto</span> range = <a class="code hl_variable" href="classnetspeak_1_1QuerySimplifier.html#af4bb43123a70d5461074b191549548b6">dictionary</a>-&gt;equal_range(text);</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">if</span> (range.first == range.second) {</div>
+<div class="line"><span class="lineno">  112</span>      <span class="comment">// the word isn&#39;t in the dictionary, hence no synonyms</span></div>
+<div class="line"><span class="lineno">  113</span>      <span class="keywordflow">return</span> text_unit;</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>    <span class="comment">// make an alternation with the text itself and all of its synonyms</span></div>
+<div class="line"><span class="lineno">  117</span>    <span class="comment">// (be sure to ignore the original word just in case)</span></div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>    <span class="keyword">auto</span> alt = <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3080baa4a48b461ec365cec8f3aa967c">SimpleQuery::Unit::new_alternation</a>(source);</div>
+<div class="line"><span class="lineno">  120</span>    alt.add_child(std::move(text_unit));</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>    std::vector&lt;std::string&gt; words; <span class="comment">// just a temporary buffer</span></div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = range.first; it != range.second; it++) {</div>
+<div class="line"><span class="lineno">  125</span>      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; syn = it-&gt;second;</div>
+<div class="line"><span class="lineno">  126</span>      <span class="keywordflow">if</span> (syn == text) {</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  128</span>      }</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>      <span class="comment">// synonyms may be phrases, so e.g. `#fail` might map to &quot;break down&quot;, so</span></div>
+<div class="line"><span class="lineno">  131</span>      <span class="comment">// we have to split the synonym into words first</span></div>
+<div class="line"><span class="lineno">  132</span>      words.clear();</div>
+<div class="line"><span class="lineno">  133</span>      boost::split(words, syn, [](<span class="keywordtype">char</span> c) { <span class="keywordflow">return</span> c == <span class="charliteral">&#39; &#39;</span>; });</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>      <span class="keywordflow">if</span> (words.size() == 1) {</div>
+<div class="line"><span class="lineno">  136</span>        <span class="comment">// the synonym is just one word</span></div>
+<div class="line"><span class="lineno">  137</span>        alt.add_child(<a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#aec3288b9da92b0fdeedcec37c09572c4">SimpleQuery::Unit::new_word</a>(words[0], source));</div>
+<div class="line"><span class="lineno">  138</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  139</span>        <span class="comment">// the synonym is a phrase</span></div>
+<div class="line"><span class="lineno">  140</span>        <span class="keyword">auto</span> concat = <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a42d698a0c2b81bb96d5efb842e0c09cd">SimpleQuery::Unit::new_concat</a>(source);</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; word : words) {</div>
+<div class="line"><span class="lineno">  142</span>          concat.add_child(<a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#aec3288b9da92b0fdeedcec37c09572c4">SimpleQuery::Unit::new_word</a>(word, source));</div>
+<div class="line"><span class="lineno">  143</span>        }</div>
+<div class="line"><span class="lineno">  144</span>        alt.add_child(std::move(concat));</div>
+<div class="line"><span class="lineno">  145</span>      }</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">return</span> alt;</div>
+<div class="line"><span class="lineno">  149</span>  }</div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_a6370b7569ff3cd8fe257c76f23ed166b"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#a6370b7569ff3cd8fe257c76f23ed166b">netspeak::QuerySimplifier::get_text</a></div><div class="ttdeci">std::string get_text(const UnitPtr &amp;unit) const</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00067">QueryNormalizer.cpp:67</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_af4bb43123a70d5461074b191549548b6"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#af4bb43123a70d5461074b191549548b6">netspeak::QuerySimplifier::dictionary</a></div><div class="ttdeci">std::shared_ptr&lt; const Dictionaries::Map &gt; dictionary</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00029">QueryNormalizer.cpp:29</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_aec3288b9da92b0fdeedcec37c09572c4"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#aec3288b9da92b0fdeedcec37c09572c4">netspeak::model::SimpleQueryUnit__::new_word</a></div><div class="ttdeci">static Unit new_word(const Text &amp;text, const Source &amp;source)</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_ac1ac4b76923d0b209354bf42e2a59d00_cgraph.svg" width="472" height="307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_ac1ac4b76923d0b209354bf42e2a59d00_icgraph.svg" width="1128" height="307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6370b7569ff3cd8fe257c76f23ed166b" name="a6370b7569ff3cd8fe257c76f23ed166b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6370b7569ff3cd8fe257c76f23ed166b">&#9670;&#160;</a></span>get_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string netspeak::QuerySimplifier::get_text </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>unit</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00067">67</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                                                {</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keyword">const</span> std::string&amp; text = unit-&gt;text();</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classnetspeak_1_1QuerySimplifier.html#aa9cf4cee63527d86a97dd50e47868535">lower_case</a>) {</div>
+<div class="line"><span class="lineno">   70</span>      <span class="keywordflow">return</span> text;</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    icu::UnicodeString u_str(text.c_str(), <span class="stringliteral">&quot;UTF-8&quot;</span>);</div>
+<div class="line"><span class="lineno">   74</span>    std::string lower;</div>
+<div class="line"><span class="lineno">   75</span>    u_str.toLower().toUTF8String(lower);</div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">return</span> lower;</div>
+<div class="line"><span class="lineno">   77</span>  }</div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_aa9cf4cee63527d86a97dd50e47868535"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#aa9cf4cee63527d86a97dd50e47868535">netspeak::QuerySimplifier::lower_case</a></div><div class="ttdeci">bool lower_case</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00031">QueryNormalizer.cpp:31</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a6370b7569ff3cd8fe257c76f23ed166b_icgraph.svg" width="1367" height="307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="abafc853573d650c19c989cebbdc10ce4" name="abafc853573d650c19c989cebbdc10ce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abafc853573d650c19c989cebbdc10ce4">&#9670;&#160;</a></span>option_to_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> netspeak::QuerySimplifier::option_to_simple </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00151">151</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  151</span>                                                                               {</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keyword">const</span> <span class="keyword">auto</span> source = <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a18ef84f764ae6f69b3cf33d616e6fc41">to_source</a>(query, unit);</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>    <span class="keyword">auto</span> option = <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3080baa4a48b461ec365cec8f3aa967c">SimpleQuery::Unit::new_alternation</a>(source);</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">if</span> (unit-&gt;children().size() &lt;= 1) {</div>
+<div class="line"><span class="lineno">  157</span>      <span class="comment">// If an option set has 0 or 1 elements, the option set is optional. E.g.</span></div>
+<div class="line"><span class="lineno">  158</span>      <span class="comment">// `[ foo ]` == `foo | EMPTY_CONCAT` and `[ ]` == `EMPTY_CONCAT`</span></div>
+<div class="line"><span class="lineno">  159</span>      option.add_child(<a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a42d698a0c2b81bb96d5efb842e0c09cd">SimpleQuery::Unit::new_concat</a>(source));</div>
+<div class="line"><span class="lineno">  160</span>    }</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; child : unit-&gt;children()) {</div>
+<div class="line"><span class="lineno">  163</span>      <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#ae3c3e04a80fa328604bd5287349aebe2">add_to_alternation</a>(option, <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#ab2f06fcd290543e7a04f2e5614a5f719">unit_to_simple</a>(query, child));</div>
+<div class="line"><span class="lineno">  164</span>    }</div>
+<div class="line"><span class="lineno">  165</span>    <span class="keywordflow">return</span> option;</div>
+<div class="line"><span class="lineno">  166</span>  }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_abafc853573d650c19c989cebbdc10ce4_cgraph.svg" width="1220" height="728"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_abafc853573d650c19c989cebbdc10ce4_icgraph.svg" width="1128" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2f67510a9b668e751894cdeb6e97b349" name="a2f67510a9b668e751894cdeb6e97b349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f67510a9b668e751894cdeb6e97b349">&#9670;&#160;</a></span>order_to_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> netspeak::QuerySimplifier::order_to_simple </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00168">168</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>                                                                              {</div>
+<div class="line"><span class="lineno">  169</span>    <span class="keyword">const</span> <span class="keyword">auto</span> source = <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a18ef84f764ae6f69b3cf33d616e6fc41">to_source</a>(query, unit);</div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span>    <span class="comment">// Order sets easily blow up simple queries because an order set with n</span></div>
+<div class="line"><span class="lineno">  172</span>    <span class="comment">// element will be converted to (n+1)! elements (n! copies of the original n</span></div>
+<div class="line"><span class="lineno">  173</span>    <span class="comment">// elements + n! concat elements). Some blow-up is necessary, because that&#39;s</span></div>
+<div class="line"><span class="lineno">  174</span>    <span class="comment">// how the order set works, but the normalization options to prevent</span></div>
+<div class="line"><span class="lineno">  175</span>    <span class="comment">// malicious queries that could crash or block our server.</span></div>
+<div class="line"><span class="lineno">  176</span>    <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  177</span>    <span class="comment">// 1) options.max_length:</span></div>
+<div class="line"><span class="lineno">  178</span>    <span class="comment">// We know that all generated concats have the same min_length (because</span></div>
+<div class="line"><span class="lineno">  179</span>    <span class="comment">// min_length doesn&#39;t depend on the order of the elements in the concat), so</span></div>
+<div class="line"><span class="lineno">  180</span>    <span class="comment">// if a concat of all elements of the order set has a min_length &gt;</span></div>
+<div class="line"><span class="lineno">  181</span>    <span class="comment">// options.max_length, then we know that all norm queries generated from</span></div>
+<div class="line"><span class="lineno">  182</span>    <span class="comment">// this order set will be discarded anyway. Thus we don&#39;t need to do any</span></div>
+<div class="line"><span class="lineno">  183</span>    <span class="comment">// work and can just return an empty alternation.</span></div>
+<div class="line"><span class="lineno">  184</span>    <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  185</span>    <span class="comment">// 2) options.max_norm_queries:</span></div>
+<div class="line"><span class="lineno">  186</span>    <span class="comment">// We know that we will create n! concats, so have to assume all of them</span></div>
+<div class="line"><span class="lineno">  187</span>    <span class="comment">// will translate into norm queries, creating n! many. If n! &gt;</span></div>
+<div class="line"><span class="lineno">  188</span>    <span class="comment">// options.max_norm_queries, we can abort early because the input query will</span></div>
+<div class="line"><span class="lineno">  189</span>    <span class="comment">// (very likely) create too many norm queries.</span></div>
+<div class="line"><span class="lineno">  190</span> </div>
+<div class="line"><span class="lineno">  191</span>    std::vector&lt;SimpleQuery::Unit&gt; elements;</div>
+<div class="line"><span class="lineno">  192</span>    uint32_t elements_min_length = 0;</div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; child : unit-&gt;children()) {</div>
+<div class="line"><span class="lineno">  194</span>      <span class="keyword">const</span> <span class="keyword">auto</span> child_simple = <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#ab2f06fcd290543e7a04f2e5614a5f719">unit_to_simple</a>(query, child);</div>
+<div class="line"><span class="lineno">  195</span>      <span class="keyword">const</span> <span class="keyword">auto</span> range = child_simple.length_range();</div>
+<div class="line"><span class="lineno">  196</span>      <span class="keywordflow">if</span> (range.empty()) {</div>
+<div class="line"><span class="lineno">  197</span>        <span class="comment">// any concat with a unit that doesn&#39;t accept any phrases will also not</span></div>
+<div class="line"><span class="lineno">  198</span>        <span class="comment">// accept any phrases</span></div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3080baa4a48b461ec365cec8f3aa967c">SimpleQuery::Unit::new_alternation</a>(source);</div>
+<div class="line"><span class="lineno">  200</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  201</span>        elements_min_length += range.min;</div>
+<div class="line"><span class="lineno">  202</span>      }</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>      <span class="keywordflow">if</span> (range.max == 0) {</div>
+<div class="line"><span class="lineno">  205</span>        <span class="comment">// the child is equal to the empty concat and can therefore be removed</span></div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  207</span>      }</div>
+<div class="line"><span class="lineno">  208</span>      elements.push_back(<a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#ab2f06fcd290543e7a04f2e5614a5f719">unit_to_simple</a>(query, child));</div>
+<div class="line"><span class="lineno">  209</span>    }</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>    <span class="comment">// check 1)</span></div>
+<div class="line"><span class="lineno">  212</span>    <span class="keywordflow">if</span> (elements_min_length &gt; <a class="code hl_variable" href="classnetspeak_1_1QuerySimplifier.html#a0f842b8623d97065c5049f20e05c118e">options</a>.<a class="code hl_variable" href="structnetspeak_1_1QueryNormalizer_1_1Options.html#a34fb9e6e9867127b93b4406b55742d9b">max_length</a>) {</div>
+<div class="line"><span class="lineno">  213</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3080baa4a48b461ec365cec8f3aa967c">SimpleQuery::Unit::new_alternation</a>(source);</div>
+<div class="line"><span class="lineno">  214</span>    }</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span>    <span class="comment">// check 2)</span></div>
+<div class="line"><span class="lineno">  217</span>    <span class="keywordflow">if</span> (elements.size() &gt;= 7 || <a class="code hl_function" href="namespacenetspeak_1_1util.html#a907f0924900ed20d328dd2ac8db7aad0">util::factorial</a>(elements.size()) &gt; <a class="code hl_variable" href="classnetspeak_1_1QuerySimplifier.html#a0f842b8623d97065c5049f20e05c118e">options</a>.<a class="code hl_variable" href="structnetspeak_1_1QueryNormalizer_1_1Options.html#a2e8ba99f24adb32e9cdd6f8c22d56af7">max_norm_queries</a>) {</div>
+<div class="line"><span class="lineno">  218</span>      <span class="comment">// 7! will result in at least 7! (~5k) norm queries and at least 8! (~40k)</span></div>
+<div class="line"><span class="lineno">  219</span>      <span class="comment">// elements, so it&#39;s used as a hard limit. Our current indexes only</span></div>
+<div class="line"><span class="lineno">  220</span>      <span class="comment">// support up to 5-grams, so this shouldn&#39;t be an issue.</span></div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>      <span class="keywordflow">throw</span> invalid_query_error(<span class="stringliteral">&quot;Orderset with too many options.&quot;</span>);</div>
+<div class="line"><span class="lineno">  223</span>    }</div>
+<div class="line"><span class="lineno">  224</span> </div>
+<div class="line"><span class="lineno">  225</span>    <span class="comment">// Special cases for 0 and 1 many elements.</span></div>
+<div class="line"><span class="lineno">  226</span> </div>
+<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">if</span> (elements.size() == 0) {</div>
+<div class="line"><span class="lineno">  228</span>      <span class="comment">// A empty order set is equal to the empty concat.</span></div>
+<div class="line"><span class="lineno">  229</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a42d698a0c2b81bb96d5efb842e0c09cd">SimpleQuery::Unit::new_concat</a>(source);</div>
+<div class="line"><span class="lineno">  230</span>    }</div>
+<div class="line"><span class="lineno">  231</span>    <span class="keywordflow">if</span> (elements.size() == 1) {</div>
+<div class="line"><span class="lineno">  232</span>      <span class="comment">// An order set with one unit is equal to its unit.</span></div>
+<div class="line"><span class="lineno">  233</span>      <span class="keywordflow">return</span> std::move(elements[0]);</div>
+<div class="line"><span class="lineno">  234</span>    }</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>    <span class="comment">// This is the general case.</span></div>
+<div class="line"><span class="lineno">  237</span>    <span class="comment">// Make an alternative that contains the all permutations.</span></div>
+<div class="line"><span class="lineno">  238</span> </div>
+<div class="line"><span class="lineno">  239</span>    <span class="keyword">auto</span> alt = <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3080baa4a48b461ec365cec8f3aa967c">SimpleQuery::Unit::new_alternation</a>(source);</div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>    std::vector&lt;size_t&gt; indexes;</div>
+<div class="line"><span class="lineno">  242</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; elements.size(); i++) {</div>
+<div class="line"><span class="lineno">  243</span>      indexes.push_back(i);</div>
+<div class="line"><span class="lineno">  244</span>    }</div>
+<div class="line"><span class="lineno">  245</span> </div>
+<div class="line"><span class="lineno">  246</span>    <span class="comment">// go through all permutations of indexes</span></div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>    <span class="comment">// All the permutating is done by std::next_permutation.</span></div>
+<div class="line"><span class="lineno">  249</span>    <span class="comment">// https://en.cppreference.com/w/cpp/algorithm/next_permutation</span></div>
+<div class="line"><span class="lineno">  250</span>    <span class="keywordflow">do</span> {</div>
+<div class="line"><span class="lineno">  251</span>      <span class="keyword">auto</span> perm_concat = <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a42d698a0c2b81bb96d5efb842e0c09cd">SimpleQuery::Unit::new_concat</a>(source);</div>
+<div class="line"><span class="lineno">  252</span> </div>
+<div class="line"><span class="lineno">  253</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> i : indexes) {</div>
+<div class="line"><span class="lineno">  254</span>        <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a6cbbe38bc9244210c3f76635f30daaa3">add_to_concat</a>(perm_concat, elements[i].clone());</div>
+<div class="line"><span class="lineno">  255</span>      }</div>
+<div class="line"><span class="lineno">  256</span> </div>
+<div class="line"><span class="lineno">  257</span>      alt.add_child(std::move(perm_concat));</div>
+<div class="line"><span class="lineno">  258</span>    } <span class="keywordflow">while</span> (std::next_permutation(indexes.begin(), indexes.end()));</div>
+<div class="line"><span class="lineno">  259</span> </div>
+<div class="line"><span class="lineno">  260</span>    <span class="keywordflow">return</span> alt;</div>
+<div class="line"><span class="lineno">  261</span>  }</div>
+<div class="ttc" id="anamespacenetspeak_1_1util_html_a907f0924900ed20d328dd2ac8db7aad0"><div class="ttname"><a href="namespacenetspeak_1_1util.html#a907f0924900ed20d328dd2ac8db7aad0">netspeak::util::factorial</a></div><div class="ttdeci">T factorial(T n)</div><div class="ttdef"><b>Definition</b> <a href="Math_8hpp_source.html#l00018">Math.hpp:18</a></div></div>
+<div class="ttc" id="astructnetspeak_1_1QueryNormalizer_1_1Options_html_a2e8ba99f24adb32e9cdd6f8c22d56af7"><div class="ttname"><a href="structnetspeak_1_1QueryNormalizer_1_1Options.html#a2e8ba99f24adb32e9cdd6f8c22d56af7">netspeak::QueryNormalizer::Options::max_norm_queries</a></div><div class="ttdeci">size_t max_norm_queries</div><div class="ttdoc">The maximum number of norm queries allowed to be returned.</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8hpp_source.html#l00045">QueryNormalizer.hpp:45</a></div></div>
+<div class="ttc" id="astructnetspeak_1_1QueryNormalizer_1_1Options_html_a34fb9e6e9867127b93b4406b55742d9b"><div class="ttname"><a href="structnetspeak_1_1QueryNormalizer_1_1Options.html#a34fb9e6e9867127b93b4406b55742d9b">netspeak::QueryNormalizer::Options::max_length</a></div><div class="ttdeci">uint32_t max_length</div><div class="ttdoc">The maximum length norm queries are allowed to have.</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8hpp_source.html#l00057">QueryNormalizer.hpp:57</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a2f67510a9b668e751894cdeb6e97b349_cgraph.svg" width="1220" height="832"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a2f67510a9b668e751894cdeb6e97b349_icgraph.svg" width="1128" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa609db274838f9056f0051d2b391c77c" name="aa609db274838f9056f0051d2b391c77c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa609db274838f9056f0051d2b391c77c">&#9670;&#160;</a></span>plus_to_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> netspeak::QuerySimplifier::plus_to_simple </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00079">79</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                                             {</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keyword">const</span> <span class="keyword">auto</span> source = <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a18ef84f764ae6f69b3cf33d616e6fc41">to_source</a>(query, unit);</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>    <span class="keyword">auto</span> plus = <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a42d698a0c2b81bb96d5efb842e0c09cd">SimpleQuery::Unit::new_concat</a>(source);</div>
+<div class="line"><span class="lineno">   83</span>    plus.add_child(<a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a44428178c9365d823c13fa04d5f9bad6">SimpleQuery::Unit::new_qmark</a>(source));</div>
+<div class="line"><span class="lineno">   84</span>    plus.add_child(<a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a399342037a597b05de0369743456d22f">SimpleQuery::Unit::new_star</a>(source));</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">return</span> plus;</div>
+<div class="line"><span class="lineno">   86</span>  }</div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a399342037a597b05de0369743456d22f"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a399342037a597b05de0369743456d22f">netspeak::model::SimpleQueryUnit__::new_star</a></div><div class="ttdeci">static Unit new_star(const Source &amp;source)</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a44428178c9365d823c13fa04d5f9bad6"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a44428178c9365d823c13fa04d5f9bad6">netspeak::model::SimpleQueryUnit__::new_qmark</a></div><div class="ttdeci">static Unit new_qmark(const Source &amp;source)</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_aa609db274838f9056f0051d2b391c77c_cgraph.svg" width="472" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_aa609db274838f9056f0051d2b391c77c_icgraph.svg" width="1128" height="307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a7a61e022386f41896500001dcd46858c" name="a7a61e022386f41896500001dcd46858c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a61e022386f41896500001dcd46858c">&#9670;&#160;</a></span>regex_to_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> netspeak::QuerySimplifier::regex_to_simple </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00088">88</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                                              {</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keyword">const</span> <span class="keyword">auto</span> source = <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a18ef84f764ae6f69b3cf33d616e6fc41">to_source</a>(query, unit);</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classnetspeak_1_1QuerySimplifier.html#acb0a7922776d8c62a6f372066f4c9bc1">allow_regex</a>) {</div>
+<div class="line"><span class="lineno">   92</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a9c3bd26c2e3a029ee43dd0a1590ba7db">SimpleQuery::Unit::new_regex</a>(<a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a6370b7569ff3cd8fe257c76f23ed166b">get_text</a>(unit), source);</div>
+<div class="line"><span class="lineno">   93</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   94</span>      <span class="comment">// regexes are not allowed -&gt; replace them with the empty alternation</span></div>
+<div class="line"><span class="lineno">   95</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3080baa4a48b461ec365cec8f3aa967c">SimpleQuery::Unit::new_alternation</a>(source);</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="line"><span class="lineno">   97</span>  }</div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_acb0a7922776d8c62a6f372066f4c9bc1"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#acb0a7922776d8c62a6f372066f4c9bc1">netspeak::QuerySimplifier::allow_regex</a></div><div class="ttdeci">bool allow_regex</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00030">QueryNormalizer.cpp:30</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a9c3bd26c2e3a029ee43dd0a1590ba7db"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a9c3bd26c2e3a029ee43dd0a1590ba7db">netspeak::model::SimpleQueryUnit__::new_regex</a></div><div class="ttdeci">static Unit new_regex(const Text &amp;text, const Source &amp;source)</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a7a61e022386f41896500001dcd46858c_cgraph.svg" width="472" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a7a61e022386f41896500001dcd46858c_icgraph.svg" width="1128" height="307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a47411b51e5d329b77e30c2204c12627d" name="a47411b51e5d329b77e30c2204c12627d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47411b51e5d329b77e30c2204c12627d">&#9670;&#160;</a></span>to_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html">SimpleQuery</a> netspeak::QuerySimplifier::to_simple </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00318">318</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  318</span>                                               {</div>
+<div class="line"><span class="lineno">  319</span>    <span class="keywordflow">return</span> SimpleQuery(<a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#ab2f06fcd290543e7a04f2e5614a5f719">unit_to_simple</a>(query, query-&gt;alternatives()));</div>
+<div class="line"><span class="lineno">  320</span>  }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a47411b51e5d329b77e30c2204c12627d_cgraph.svg" width="1220" height="736"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a47411b51e5d329b77e30c2204c12627d_icgraph.svg" width="651" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a18ef84f764ae6f69b3cf33d616e6fc41" name="a18ef84f764ae6f69b3cf33d616e6fc41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18ef84f764ae6f69b3cf33d616e6fc41">&#9670;&#160;</a></span>to_source()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a0ddf090ec768afb6b29a1ff29c6d7fed">SimpleQuery::Unit::Source</a> netspeak::QuerySimplifier::to_source </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00062">62</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                                                                                     {</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a0ddf090ec768afb6b29a1ff29c6d7fed">SimpleQuery::Unit::Source</a>(query, unit);</div>
+<div class="line"><span class="lineno">   64</span>  }</div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a0ddf090ec768afb6b29a1ff29c6d7fed"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a0ddf090ec768afb6b29a1ff29c6d7fed">netspeak::model::SimpleQueryUnit__::Source</a></div><div class="ttdeci">NormQuery::Unit::Source Source</div><div class="ttdef"><b>Definition</b> <a href="SimpleQuery_8hpp_source.html#l00024">SimpleQuery.hpp:24</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_a18ef84f764ae6f69b3cf33d616e6fc41_icgraph.svg" width="1367" height="372"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab2f06fcd290543e7a04f2e5614a5f719" name="ab2f06fcd290543e7a04f2e5614a5f719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f06fcd290543e7a04f2e5614a5f719">&#9670;&#160;</a></span>unit_to_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> netspeak::QuerySimplifier::unit_to_simple </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a87c710138b9c8f1bd6bc923ee2ba1a50">QueryPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1QuerySimplifier.html#a597e316e2e10a218ba2f2dd75f3b1721">UnitPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00283">283</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  283</span>                                                                             {</div>
+<div class="line"><span class="lineno">  284</span>    <span class="keyword">const</span> <span class="keyword">auto</span> source = <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a18ef84f764ae6f69b3cf33d616e6fc41">to_source</a>(query, unit);</div>
+<div class="line"><span class="lineno">  285</span> </div>
+<div class="line"><span class="lineno">  286</span>    <span class="keywordflow">switch</span> (unit-&gt;tag()) {</div>
+<div class="line"><span class="lineno">  287</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9abdde29e3c0fe7b687d69a696bbaf71ac">Query::Unit::Tag::WORD</a>:</div>
+<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#aec3288b9da92b0fdeedcec37c09572c4">SimpleQuery::Unit::new_word</a>(<a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a6370b7569ff3cd8fe257c76f23ed166b">get_text</a>(unit), source);</div>
+<div class="line"><span class="lineno">  289</span> </div>
+<div class="line"><span class="lineno">  290</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a97894a65a46501e516e242a3d38f7d0d">Query::Unit::Tag::QMARK</a>:</div>
+<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a44428178c9365d823c13fa04d5f9bad6">SimpleQuery::Unit::new_qmark</a>(source);</div>
+<div class="line"><span class="lineno">  292</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a8ab2630ada18b94a005a0c5399d9d483">Query::Unit::Tag::STAR</a>:</div>
+<div class="line"><span class="lineno">  293</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a399342037a597b05de0369743456d22f">SimpleQuery::Unit::new_star</a>(source);</div>
+<div class="line"><span class="lineno">  294</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a883acd43c77567e1c3baced84ccf6ed7">Query::Unit::Tag::PLUS</a>:</div>
+<div class="line"><span class="lineno">  295</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#aa609db274838f9056f0051d2b391c77c">plus_to_simple</a>(query, unit);</div>
+<div class="line"><span class="lineno">  296</span> </div>
+<div class="line"><span class="lineno">  297</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a17746ad0201dc8a388f2f979b50b071c">Query::Unit::Tag::REGEX</a>:</div>
+<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a7a61e022386f41896500001dcd46858c">regex_to_simple</a>(query, unit);</div>
+<div class="line"><span class="lineno">  299</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9ade9fe6916592e373029a0bb09f50573e">Query::Unit::Tag::DICTSET</a>:</div>
+<div class="line"><span class="lineno">  300</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#ac1ac4b76923d0b209354bf42e2a59d00">dict_to_simple</a>(query, unit);</div>
+<div class="line"><span class="lineno">  301</span> </div>
+<div class="line"><span class="lineno">  302</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a40840162e0653c5a605ced3b6c9dcd51">Query::Unit::Tag::OPTIONSET</a>:</div>
+<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#abafc853573d650c19c989cebbdc10ce4">option_to_simple</a>(query, unit);</div>
+<div class="line"><span class="lineno">  304</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a4db1f35b8d5046ccf16fe3934e392fe9">Query::Unit::Tag::ORDERSET</a>:</div>
+<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a2f67510a9b668e751894cdeb6e97b349">order_to_simple</a>(query, unit);</div>
+<div class="line"><span class="lineno">  306</span> </div>
+<div class="line"><span class="lineno">  307</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a80ea6a59a36341e746a915b8c39872cf">Query::Unit::Tag::ALTERNATION</a>:</div>
+<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a3b44d549420ef21f82bde54ad4858ba5">alt_to_simple</a>(query, unit);</div>
+<div class="line"><span class="lineno">  309</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a911737ef056ac1eb1c4c7dbe6eb90786">Query::Unit::Tag::CONCAT</a>:</div>
+<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1QuerySimplifier.html#a1f629b768d053c64ba136f00661e601d">concat_to_simple</a>(query, unit);</div>
+<div class="line"><span class="lineno">  311</span> </div>
+<div class="line"><span class="lineno">  312</span>      <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">throw</span> tracable_logic_error(<span class="stringliteral">&quot;Unknown tag&quot;</span>);</div>
+<div class="line"><span class="lineno">  314</span>    }</div>
+<div class="line"><span class="lineno">  315</span>  }</div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_a1f629b768d053c64ba136f00661e601d"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#a1f629b768d053c64ba136f00661e601d">netspeak::QuerySimplifier::concat_to_simple</a></div><div class="ttdeci">SimpleQuery::Unit concat_to_simple(const QueryPtr &amp;query, const UnitPtr &amp;unit)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00273">QueryNormalizer.cpp:273</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_a2f67510a9b668e751894cdeb6e97b349"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#a2f67510a9b668e751894cdeb6e97b349">netspeak::QuerySimplifier::order_to_simple</a></div><div class="ttdeci">SimpleQuery::Unit order_to_simple(const QueryPtr &amp;query, const UnitPtr &amp;unit)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00168">QueryNormalizer.cpp:168</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_a3b44d549420ef21f82bde54ad4858ba5"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#a3b44d549420ef21f82bde54ad4858ba5">netspeak::QuerySimplifier::alt_to_simple</a></div><div class="ttdeci">SimpleQuery::Unit alt_to_simple(const QueryPtr &amp;query, const UnitPtr &amp;unit)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00263">QueryNormalizer.cpp:263</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_a7a61e022386f41896500001dcd46858c"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#a7a61e022386f41896500001dcd46858c">netspeak::QuerySimplifier::regex_to_simple</a></div><div class="ttdeci">SimpleQuery::Unit regex_to_simple(const QueryPtr &amp;query, const UnitPtr &amp;unit)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00088">QueryNormalizer.cpp:88</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_aa609db274838f9056f0051d2b391c77c"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#aa609db274838f9056f0051d2b391c77c">netspeak::QuerySimplifier::plus_to_simple</a></div><div class="ttdeci">SimpleQuery::Unit plus_to_simple(const QueryPtr &amp;query, const UnitPtr &amp;unit)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00079">QueryNormalizer.cpp:79</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_abafc853573d650c19c989cebbdc10ce4"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#abafc853573d650c19c989cebbdc10ce4">netspeak::QuerySimplifier::option_to_simple</a></div><div class="ttdeci">SimpleQuery::Unit option_to_simple(const QueryPtr &amp;query, const UnitPtr &amp;unit)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00151">QueryNormalizer.cpp:151</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1QuerySimplifier_html_ac1ac4b76923d0b209354bf42e2a59d00"><div class="ttname"><a href="classnetspeak_1_1QuerySimplifier.html#ac1ac4b76923d0b209354bf42e2a59d00">netspeak::QuerySimplifier::dict_to_simple</a></div><div class="ttdeci">SimpleQuery::Unit dict_to_simple(const QueryPtr &amp;query, const UnitPtr &amp;unit)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00099">QueryNormalizer.cpp:99</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1QueryUnit_____html_a33fa32b86f6a7f50f089e22af020cfe9a17746ad0201dc8a388f2f979b50b071c"><div class="ttname"><a href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a17746ad0201dc8a388f2f979b50b071c">netspeak::model::QueryUnit__::Tag::REGEX</a></div><div class="ttdeci">@ REGEX</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1QueryUnit_____html_a33fa32b86f6a7f50f089e22af020cfe9a40840162e0653c5a605ced3b6c9dcd51"><div class="ttname"><a href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a40840162e0653c5a605ced3b6c9dcd51">netspeak::model::QueryUnit__::Tag::OPTIONSET</a></div><div class="ttdeci">@ OPTIONSET</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1QueryUnit_____html_a33fa32b86f6a7f50f089e22af020cfe9a4db1f35b8d5046ccf16fe3934e392fe9"><div class="ttname"><a href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a4db1f35b8d5046ccf16fe3934e392fe9">netspeak::model::QueryUnit__::Tag::ORDERSET</a></div><div class="ttdeci">@ ORDERSET</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1QueryUnit_____html_a33fa32b86f6a7f50f089e22af020cfe9a80ea6a59a36341e746a915b8c39872cf"><div class="ttname"><a href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a80ea6a59a36341e746a915b8c39872cf">netspeak::model::QueryUnit__::Tag::ALTERNATION</a></div><div class="ttdeci">@ ALTERNATION</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1QueryUnit_____html_a33fa32b86f6a7f50f089e22af020cfe9a883acd43c77567e1c3baced84ccf6ed7"><div class="ttname"><a href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a883acd43c77567e1c3baced84ccf6ed7">netspeak::model::QueryUnit__::Tag::PLUS</a></div><div class="ttdeci">@ PLUS</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1QueryUnit_____html_a33fa32b86f6a7f50f089e22af020cfe9a8ab2630ada18b94a005a0c5399d9d483"><div class="ttname"><a href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a8ab2630ada18b94a005a0c5399d9d483">netspeak::model::QueryUnit__::Tag::STAR</a></div><div class="ttdeci">@ STAR</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1QueryUnit_____html_a33fa32b86f6a7f50f089e22af020cfe9a911737ef056ac1eb1c4c7dbe6eb90786"><div class="ttname"><a href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a911737ef056ac1eb1c4c7dbe6eb90786">netspeak::model::QueryUnit__::Tag::CONCAT</a></div><div class="ttdeci">@ CONCAT</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1QueryUnit_____html_a33fa32b86f6a7f50f089e22af020cfe9a97894a65a46501e516e242a3d38f7d0d"><div class="ttname"><a href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9a97894a65a46501e516e242a3d38f7d0d">netspeak::model::QueryUnit__::Tag::QMARK</a></div><div class="ttdeci">@ QMARK</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1QueryUnit_____html_a33fa32b86f6a7f50f089e22af020cfe9abdde29e3c0fe7b687d69a696bbaf71ac"><div class="ttname"><a href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9abdde29e3c0fe7b687d69a696bbaf71ac">netspeak::model::QueryUnit__::Tag::WORD</a></div><div class="ttdeci">@ WORD</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1QueryUnit_____html_a33fa32b86f6a7f50f089e22af020cfe9ade9fe6916592e373029a0bb09f50573e"><div class="ttname"><a href="classnetspeak_1_1model_1_1QueryUnit____.html#a33fa32b86f6a7f50f089e22af020cfe9ade9fe6916592e373029a0bb09f50573e">netspeak::model::QueryUnit__::Tag::DICTSET</a></div><div class="ttdeci">@ DICTSET</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_ab2f06fcd290543e7a04f2e5614a5f719_cgraph.svg" width="982" height="736"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnetspeak_1_1QuerySimplifier_ab2f06fcd290543e7a04f2e5614a5f719_icgraph.svg" width="890" height="307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="acb0a7922776d8c62a6f372066f4c9bc1" name="acb0a7922776d8c62a6f372066f4c9bc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb0a7922776d8c62a6f372066f4c9bc1">&#9670;&#160;</a></span>allow_regex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool netspeak::QuerySimplifier::allow_regex = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00030">30</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af4bb43123a70d5461074b191549548b6" name="af4bb43123a70d5461074b191549548b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4bb43123a70d5461074b191549548b6">&#9670;&#160;</a></span>dictionary</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;const <a class="el" href="namespacenetspeak_1_1Dictionaries.html#ad01bbf88e3baef4bc6b7b1a73e236a95">Dictionaries::Map</a>&gt; netspeak::QuerySimplifier::dictionary = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00029">29</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa9cf4cee63527d86a97dd50e47868535" name="aa9cf4cee63527d86a97dd50e47868535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9cf4cee63527d86a97dd50e47868535">&#9670;&#160;</a></span>lower_case</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool netspeak::QuerySimplifier::lower_case = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00031">31</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0f842b8623d97065c5049f20e05c118e" name="a0f842b8623d97065c5049f20e05c118e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f842b8623d97065c5049f20e05c118e">&#9670;&#160;</a></span>options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnetspeak_1_1QueryNormalizer_1_1Options.html">QueryNormalizer::Options</a> netspeak::QuerySimplifier::options</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00028">28</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>netspeak/<a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacenetspeak.html">netspeak</a></li><li class="navelem"><a class="el" href="classnetspeak_1_1QuerySimplifier.html">QuerySimplifier</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

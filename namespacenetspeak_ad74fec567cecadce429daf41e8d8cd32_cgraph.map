@@ -1,0 +1,13 @@
+<map id="netspeak::set_response_phrase" name="netspeak::set_response_phrase">
+<area shape="rect" id="Node000001" title="Converts the given search result item into a (service) phrase." alt="" coords="5,88,181,128"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1model_1_1Phrase.html#acfc15d1ae254baa86daa01723e7e5778" title=" " alt="" coords="239,5,422,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,85,228,55,251,47,253,52,230,60,147,90"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1model_1_1Phrase.html#abf504a6571722f250cd0738da12cfc19" title=" " alt="" coords="229,70,432,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,96,215,92,216,98,182,101"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak.html#a5dfc32f282aa2ad493b13184b11ef68b" title=" " alt="" coords="265,119,396,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="182,114,252,121,251,127,181,120"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1model_1_1Phrase.html#a0cfea75b7cad4d3c9a3cd111789bd42f" title=" " alt="" coords="239,169,422,209"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="151,126,230,153,256,162,255,167,228,159,149,131"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1model_1_1NormQueryUnit____.html#ac434701089b009138eafdec6f1bfbc8e" title=" " alt="" coords="480,112,695,152"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="396,129,466,129,466,135,396,135"/>
+</map>

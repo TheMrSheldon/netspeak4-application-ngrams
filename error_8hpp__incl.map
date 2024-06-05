@@ -1,0 +1,16 @@
+<map id="netspeak/error.hpp" name="netspeak/error.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="58,5,202,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,92,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,33,74,72,70,68,115,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="101,152,159,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,31,133,138,127,138,127,31"/>
+<area shape="rect" id="Node000004" href="$traceable__error_8hpp.html" title=" " alt="" coords="167,79,341,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="151,28,223,69,221,74,149,33"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="235,106,163,147,161,143,233,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="183,152,258,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="251,105,234,141,229,139,246,103"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="283,152,369,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="268,102,306,140,303,144,264,106"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="393,152,552,177"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="290,101,425,145,423,150,288,107"/>
+</map>

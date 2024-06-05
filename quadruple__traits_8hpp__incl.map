@@ -1,0 +1,25 @@
+<map id="netspeak/value/quadruple_traits.hpp" name="netspeak/value/quadruple_traits.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="222,5,413,45"/>
+<area shape="rect" id="Node000002" href="$quadruple_8hpp.html" title=" " alt="" coords="64,93,179,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="271,48,164,91,162,86,269,43"/>
+<area shape="rect" id="Node000003" href="$value__traits_8hpp.html" title=" " alt="" coords="254,93,381,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="320,46,320,79,315,79,315,46"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,167,72,192"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="297,48,250,84,192,121,138,146,86,166,84,161,136,141,189,116,247,79,294,43"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="609,167,668,192"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="340,44,387,80,445,116,597,163,595,168,443,121,384,85,337,48"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="456,93,531,119"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="361,43,456,85,454,90,358,48"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="96,167,163,192"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="288,121,174,164,172,159,286,116"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="187,167,253,192"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="303,121,249,160,246,156,300,117"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="273,121,86,169,85,164,272,116"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="277,167,357,192"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="320,119,320,153,315,153,315,119"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="382,167,469,192"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="336,116,398,157,395,161,333,121"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="377,116,596,164,595,169,375,121"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="493,167,585,192"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="354,116,491,160,489,165,352,121"/>
+</map>

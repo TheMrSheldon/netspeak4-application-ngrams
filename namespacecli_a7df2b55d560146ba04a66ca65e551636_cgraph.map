@@ -1,0 +1,25 @@
+<map id="cli::print_error" name="cli::print_error">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,117,119,143"/>
+<area shape="rect" id="Node000002" href="$namespacecli.html#a1fb203adc83f007fd2be352a32997a72" title="Print a short help message that lists all available commands." alt="" coords="167,117,356,143"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,127,153,127,153,133,119,133"/>
+<area shape="rect" id="Node000003" href="$namespacecli.html#a7a53f12676e9ac752c1fe8327f55fd34" title=" " alt="" coords="431,68,560,93"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="322,115,420,94,421,99,323,120"/>
+<area shape="rect" id="Node000004" href="$namespacecli.html#afa35336b7c594c68eb850544a1ae6b41" title=" " alt="" coords="404,117,587,143"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="356,127,391,127,391,133,356,133"/>
+<area shape="rect" id="Node000010" href="$namespacecli.html#a176ef3b1efb7c9ba45ff614d5ae0aacd" title=" " alt="" coords="670,204,778,229"/>
+<area shape="poly" id="edge12_Node000002_Node000010" title=" " alt="" coords="331,140,657,202,656,207,330,145"/>
+<area shape="rect" id="Node000005" href="$classcli_1_1Command.html#ad1d4b2459b72ddab8cec0279f576b7a0" title=" " alt="" coords="885,7,1036,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="560,115,585,103,600,88,608,72,616,56,633,41,692,18,754,6,816,3,872,5,872,10,816,8,755,12,694,23,636,46,620,59,612,74,604,91,588,107,563,120"/>
+<area shape="rect" id="Node000006" href="$namespacecli.html#a3aacc4bf1a67732a492a18bc25fcd211" title=" " alt="" coords="649,56,799,81"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="543,115,662,83,663,88,544,120"/>
+<area shape="rect" id="Node000008" href="$namespacecli.html#affe799d66dff4cf3b7872b5c76382a8d" title=" " alt="" coords="635,105,813,131"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="587,123,621,121,621,126,587,128"/>
+<area shape="rect" id="Node000009" href="$classcli_1_1Command.html#a8dcc4261b4cdd458bd235f19eb604507" title=" " alt="" coords="645,155,803,180"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="574,140,633,150,632,155,573,146"/>
+<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="523,141,574,165,636,190,658,198,657,203,634,195,572,170,520,145"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="785,53,885,32,886,38,786,59"/>
+<area shape="rect" id="Node000007" href="$classcli_1_1Command.html#a384df28e8769751598c52346deebeb77" title=" " alt="" coords="861,56,1060,81"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="799,66,847,66,847,71,799,71"/>
+<area shape="rect" id="Node000011" href="$namespacecli.html#a37b490d397c09cf994d962212b4a4f7a" title=" " alt="" coords="907,204,1014,229"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="778,214,894,214,894,219,778,219"/>
+</map>

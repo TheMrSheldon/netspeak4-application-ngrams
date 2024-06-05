@@ -1,0 +1,26 @@
+var namespacenetspeak_1_1regex =
+[
+    [ "DefaultRegexIndex", "classnetspeak_1_1regex_1_1DefaultRegexIndex.html", "classnetspeak_1_1regex_1_1DefaultRegexIndex" ],
+    [ "RegexIndex", "classnetspeak_1_1regex_1_1RegexIndex.html", "classnetspeak_1_1regex_1_1RegexIndex" ],
+    [ "RegexQuery", "classnetspeak_1_1regex_1_1RegexQuery.html", "classnetspeak_1_1regex_1_1RegexQuery" ],
+    [ "RegexQueryBuilder", "classnetspeak_1_1regex_1_1RegexQueryBuilder.html", "classnetspeak_1_1regex_1_1RegexQueryBuilder" ],
+    [ "RegexUnit", "structnetspeak_1_1regex_1_1RegexUnit.html", "structnetspeak_1_1regex_1_1RegexUnit" ],
+    [ "utf8_finite_regex_unit", "structnetspeak_1_1regex_1_1utf8__finite__regex__unit.html", "structnetspeak_1_1regex_1_1utf8__finite__regex__unit" ],
+    [ "Syntax", "namespacenetspeak_1_1regex.html#aae0d184df027ea6b2ccb77a0db4d75ce", null ],
+    [ "contains_unknown_characters", "namespacenetspeak_1_1regex.html#aebd2483ad4c4c5830b3a7b1f4dbe1e67", null ],
+    [ "create_regex_pattern", "namespacenetspeak_1_1regex.html#afac3221e2a2d1a5db57380f4b12386c9", null ],
+    [ "finite_query_to_utf8", "namespacenetspeak_1_1regex.html#ace4835f8060dcf407b0f4bdf422de2b2", null ],
+    [ "hash_word", "namespacenetspeak_1_1regex.html#a6f4fc36a36d53c9404c8c58994db4f16", null ],
+    [ "match_query_hash_lookup_impl", "namespacenetspeak_1_1regex.html#a51168d153e77973b3bc1329b2ab4420c", null ],
+    [ "next_pow_of_2", "namespacenetspeak_1_1regex.html#aff2153e5ec7d60ff8ef1b953089583fe", null ],
+    [ "number_of_utf8_bytes", "namespacenetspeak_1_1regex.html#a6e50f7971c5d223b3dfc4ed586fd45d6", null ],
+    [ "operator<<", "namespacenetspeak_1_1regex.html#a0ad812750b4e0550867c0e250b83e396", null ],
+    [ "optimize_unit", "namespacenetspeak_1_1regex.html#a7bcd9407eaeeaacfbdac4b3b53246bb8", null ],
+    [ "parse_netspeak_regex_query", "namespacenetspeak_1_1regex.html#a8ce7eefaa185e2118cece76d1099ad04", null ],
+    [ "read_until_char", "namespacenetspeak_1_1regex.html#acd1be471280f1d11b869b2b7c1f4ecb8", null ],
+    [ "regex_pattern_append_char", "namespacenetspeak_1_1regex.html#a2012930d0c5c43d0ad661a49adceb26b", null ],
+    [ "remove_trailing_optional_words", "namespacenetspeak_1_1regex.html#af699a70a2450bb3c60f6eb849b7e6176", null ],
+    [ "without_duplicates", "namespacenetspeak_1_1regex.html#a330e12f037f1cfe62d8e2bd33d3fd1e7", null ],
+    [ "MAX_UTF8_BYTES_PER_CHAR", "namespacenetspeak_1_1regex.html#a480f29fb3aca10ca39f914e4eda5dc53", null ],
+    [ "MIN_UTF8_BYTES_PER_CHAR", "namespacenetspeak_1_1regex.html#a2b195646eb8a91a8b0720056ab903473", null ]
+];

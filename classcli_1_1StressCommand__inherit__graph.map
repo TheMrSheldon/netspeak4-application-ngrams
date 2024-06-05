@@ -1,4 +1,5 @@
 <map id="cli::StressCommand" name="cli::StressCommand">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,157,107"/>
-<area shape="rect" id="node2" href="$classcli_1_1Command.html" title=" " alt="" coords="25,5,137,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,199,163,344"/>
+<area shape="rect" id="Node000002" href="$classcli_1_1Command.html" title=" " alt="" coords="25,5,143,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,164,87,198,81,198,81,164"/>
 </map>

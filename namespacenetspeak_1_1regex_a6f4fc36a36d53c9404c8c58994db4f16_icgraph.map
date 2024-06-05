@@ -1,0 +1,15 @@
+<map id="netspeak::regex::hash_word" name="netspeak::regex::hash_word">
+<area shape="rect" id="Node000001" title=" " alt="" coords="987,56,1192,81"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#aebcc95cc799f637dbdca131be9380c8c" title="Returns the index of the given word or UINT32_MAX if the given word is not a word of the vocabulary." alt="" coords="756,13,939,53"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="990,57,938,49,939,44,991,51"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a2830957e5f661267847def2ade734887" title=" " alt="" coords="756,77,939,132"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="991,86,939,94,938,88,990,81"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a5c0cbc299628d069cfd1d800d74875d3" title=" " alt="" coords="496,5,688,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="742,35,688,35,688,30,742,30"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a243db53a6f592cf81dc78ab6abe09bc2" title="Adds all words matching the given query to the given vector." alt="" coords="236,13,428,53"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="482,35,428,35,428,30,482,30"/>
+<area shape="rect" id="Node000005" href="$classcli_1_1RegexCommand.html#a359a924652eac2c3d8664bfc5ff29f3e" title=" " alt="" coords="5,20,188,45"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="222,35,188,35,188,30,222,30"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#adbf7fd8017eef6ae86b3cf8fc654ea03" title="Construct a new Regex Index object." alt="" coords="476,85,708,125"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="742,107,708,107,708,102,742,102"/>
+</map>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['getting_20started_477',['Getting Started',['../gettingstarted.html',1,'DeveloperIdx']]]
+  ['deployment_0',['Deployment',['../deployment.html',1,'']]],
+  ['developers_1',['For Developers',['../DeveloperIdx.html',1,'']]]
 ];

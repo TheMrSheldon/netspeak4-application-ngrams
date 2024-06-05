@@ -1,0 +1,9 @@
+<map id="netspeak::PhraseCorpus::decode_" name="netspeak::PhraseCorpus::decode_">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,184,109"/>
+<area shape="rect" id="Node000002" href="$structnetspeak_1_1value_1_1value__traits.html#a27c68558505f16e261d678ee62c8a4f0" title=" " alt="" coords="238,5,409,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,67,238,46,239,52,168,72"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1model_1_1Words.html#a74ce9e9ed9745cdfffd806ec605974df" title=" " alt="" coords="234,69,413,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,87,220,87,220,92,184,92"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1model_1_1Phrase.html#a0cfea75b7cad4d3c9a3cd111789bd42f" title=" " alt="" coords="232,133,415,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="168,107,239,127,238,132,166,112"/>
+</map>

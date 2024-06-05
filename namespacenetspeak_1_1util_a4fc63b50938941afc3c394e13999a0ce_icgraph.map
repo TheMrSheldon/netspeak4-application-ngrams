@@ -1,0 +1,5 @@
+<map id="netspeak::util::vec_sorted_filter_dups" name="netspeak::util::vec_sorted_filter_dups">
+<area shape="rect" id="Node000001" title="Assuming a sorted vector, this will remove all duplicate elements in the vector." alt="" coords="284,5,429,45"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1model_1_1RawRefResult.html#aa98ade235e2a2e2ec9e833b58d374d0d" title="Creates a new result set that contains all phrases (unknown words) of this set and the given set." alt="" coords="5,5,236,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,28,236,28,236,23,270,23"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="netspeak/service/tracking.hpp" name="netspeak/service/tracking.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="294,5,513,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,265,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="361,33,192,78,191,73,360,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="289,79,517,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="406,31,406,65,401,65,401,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="542,79,601,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="431,28,532,71,530,76,429,33"/>
+</map>

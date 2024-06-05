@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,189,117,214"/>
+<area shape="rect" id="Node000001" href="$structstd_1_1formatter_3_01netspeak_1_1invertedindex_1_1Record_3_01T_01_4_01_4.html" title=" " alt="" coords="165,5,392,45"/>
+<area shape="poly" id="edge31_Node000000_Node000001" title=" " alt="" coords="72,175,107,115,133,82,164,55,185,43,188,48,167,60,137,86,111,118,76,177"/>
+<area shape="rect" id="Node000002" href="$structstd_1_1formatter_3_01netspeak_1_1value_1_1pair_3_01T1_00_01T2_01_4_01_4.html" title=" " alt="" coords="185,69,372,109"/>
+<area shape="poly" id="edge32_Node000000_Node000002" title=" " alt="" coords="84,177,120,147,164,119,192,107,194,112,167,124,123,152,87,182"/>
+<area shape="rect" id="Node000003" href="$structstd_1_1formatter_3_01netspeak_1_1value_1_1quadruple_3_01T1_00_01T2_00_01T3_00_01T4_01_4_01_4.html" title=" " alt="" coords="185,134,372,189"/>
+<area shape="poly" id="edge33_Node000000_Node000003" title=" " alt="" coords="130,186,185,176,186,181,131,191"/>
+<area shape="rect" id="Node000004" href="$structstd_1_1formatter_3_01netspeak_1_1value_1_1triple_3_01T1_00_01T2_00_01T3_01_4_01_4.html" title=" " alt="" coords="185,213,372,267"/>
+<area shape="poly" id="edge34_Node000000_Node000004" title=" " alt="" coords="131,211,186,221,185,226,130,216"/>
+<area shape="rect" id="Node000005" href="$structstd_1_1formatter_3_01std_1_1filesystem_1_1directory__entry_01_4.html" title=" " alt="" coords="197,291,361,346"/>
+<area shape="poly" id="edge35_Node000000_Node000005" title=" " alt="" coords="89,221,125,249,167,276,198,291,195,296,164,281,122,254,86,226"/>
+<area shape="rect" id="Node000006" href="$structstd_1_1formatter_3_01std_1_1filesystem_1_1path_01_4.html" title=" " alt="" coords="203,371,354,411"/>
+<area shape="poly" id="edge36_Node000000_Node000006" title=" " alt="" coords="75,225,110,291,135,326,167,355,204,374,202,379,164,360,131,329,105,294,70,228"/>
+</map>

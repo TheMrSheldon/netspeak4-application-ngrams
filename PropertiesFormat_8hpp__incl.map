@@ -1,0 +1,17 @@
+<map id="netspeak/util/PropertiesFormat.hpp" name="netspeak/util/PropertiesFormat.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="51,5,229,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,101,77,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,48,67,93,63,89,116,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="102,101,178,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,46,143,87,137,87,137,46"/>
+<area shape="rect" id="Node000004" href="$traceable__error_8hpp.html" title=" " alt="" coords="202,93,374,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,43,245,84,242,89,171,48"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="96,181,171,207"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="252,136,169,177,167,173,250,131"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="195,181,282,207"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="278,135,255,171,251,168,274,132"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="307,181,365,207"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="302,132,324,168,319,171,297,135"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="390,181,549,207"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="332,131,431,173,429,178,330,136"/>
+</map>

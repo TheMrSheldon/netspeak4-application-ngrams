@@ -1,0 +1,96 @@
+<map id="cli::RegexCommand::run" name="cli::RegexCommand::run">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,399,188,425"/>
+<area shape="rect" id="Node000002" href="$namespacecli.html#adae54133585658a447ba1db3fcd4d232" title=" " alt="" coords="282,70,382,95"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,398,312,105,316,108,109,401"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a243db53a6f592cf81dc78ab6abe09bc2" title="Adds all words matching the given query to the given vector." alt="" coords="236,392,428,432"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="189,409,222,409,222,415,189,415"/>
+<area shape="rect" id="Node000036" href="$namespacenetspeak_1_1regex.html#a8ce7eefaa185e2118cece76d1099ad04" title="Parses the given Netspeak regex query and returns the equivalent general regex query." alt="" coords="505,1123,683,1163"/>
+<area shape="poly" id="edge46_Node000001_Node000036" title=" " alt="" coords="109,423,574,1110,569,1113,104,426"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1error__message.html#a2a36ff57b354714213502a72e6d9d416" title=" " alt="" coords="501,5,687,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="382,69,488,46,489,51,383,74"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#aad6c5a8708322dd600c23507cc2035f1" title=" " alt="" coords="515,70,673,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="382,80,502,80,502,85,382,85"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="792,66,943,91"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="673,79,778,77,778,83,673,84"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a1da7c2171dd8f2aebe9e0053a828ccb4" title="Returns whether this query will accept all non&#45;empty words." alt="" coords="487,127,701,167"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="340,391,360,351,389,300,428,246,474,198,518,170,521,175,478,202,432,250,394,303,364,354,345,393"/>
+<area shape="rect" id="Node000009" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a8f2543e1cc1b4460233f700f547a89f6" title="Returns an upper bound for the number of possible words, the query can match. If UINT32_MAX is return..." alt="" coords="760,180,975,220"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="344,390,396,326,433,291,475,263,541,235,612,216,681,204,746,198,746,204,682,210,613,221,543,240,477,268,436,296,400,330,348,394"/>
+<area shape="rect" id="Node000010" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a5c0cbc299628d069cfd1d800d74875d3" title=" " alt="" coords="498,385,690,439"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="428,409,484,409,484,415,428,415"/>
+<area shape="rect" id="Node000016" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a6670d85281af35910d5d00d8997f7f37" title="Returns the word at the given index in the word list." alt="" coords="766,524,969,564"/>
+<area shape="poly" id="edge45_Node000006_Node000016" title=" " alt="" coords="406,430,477,448,766,518,765,523,475,453,405,435"/>
+<area shape="rect" id="Node000018" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#aa6875223b64c6979bd2135023f71f2ce" title=" " alt="" coords="476,632,712,672"/>
+<area shape="poly" id="edge18_Node000006_Node000018" title=" " alt="" coords="357,430,563,621,559,625,353,434"/>
+<area shape="rect" id="Node000024" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a445e83616a9f062d4f44db53017f3e9c" title="Optimizes the given query considering the properties of the vocabulary of the index." alt="" coords="490,839,698,879"/>
+<area shape="poly" id="edge27_Node000006_Node000024" title=" " alt="" coords="345,431,400,540,478,683,528,760,572,825,568,828,523,763,474,685,395,542,341,433"/>
+<area shape="rect" id="Node000035" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a2f4d2e52bef616730e1395063c3e82ed" title="Returns whether this query will reject all words." alt="" coords="487,277,701,317"/>
+<area shape="poly" id="edge43_Node000006_Node000035" title=" " alt="" coords="378,389,534,321,536,325,380,394"/>
+<area shape="rect" id="Node000008" href="$classnetspeak_1_1regex_1_1RegexQuery.html#aa0a5cc38ccc6098fa3a77bcf9cb79edd" title="Returns whether this query will accept all words." alt="" coords="760,116,975,156"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="701,140,746,138,746,143,702,145"/>
+<area shape="rect" id="Node000011" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#aebcc95cc799f637dbdca131be9380c8c" title="Returns the index of the given word or UINT32_MAX if the given word is not a word of the vocabulary." alt="" coords="776,244,959,284"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="633,382,759,294,775,286,778,291,761,298,636,387"/>
+<area shape="rect" id="Node000013" href="$namespacenetspeak_1_1regex.html#ace4835f8060dcf407b0f4bdf422de2b2" title=" " alt="" coords="783,308,951,348"/>
+<area shape="poly" id="edge12_Node000010_Node000013" title=" " alt="" coords="681,382,759,357,786,349,787,354,761,363,682,387"/>
+<area shape="rect" id="Node000015" href="$namespacenetspeak_1_1regex.html#a51168d153e77973b3bc1329b2ab4420c" title=" " alt="" coords="772,396,963,436"/>
+<area shape="poly" id="edge14_Node000010_Node000015" title=" " alt="" coords="690,411,758,412,758,417,690,416"/>
+<area shape="poly" id="edge16_Node000010_Node000016" title=" " alt="" coords="636,437,694,474,761,510,779,517,777,522,759,514,691,479,633,442"/>
+<area shape="rect" id="Node000012" href="$namespacenetspeak_1_1regex.html#a6f4fc36a36d53c9404c8c58994db4f16" title=" " alt="" coords="1032,251,1237,277"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="959,261,1018,261,1018,267,959,267"/>
+<area shape="rect" id="Node000014" href="$classnetspeak_1_1regex_1_1RegexQuery.html#ace5fe64453987c6f605300a8aa5d4ee4" title="Get the underlying units." alt="" coords="1027,428,1242,468"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="943,346,976,358,1037,387,1091,418,1088,423,1034,392,974,362,941,351"/>
+<area shape="poly" id="edge15_Node000015_Node000015" title=" " alt="" coords="818,396,815,386,823,377,840,371,867,369,898,372,915,379,913,384,897,377,867,375,841,377,826,381,820,387,823,395"/>
+<area shape="rect" id="Node000017" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a54963c57bab5c92e0044c351b69da357" title="Returns the word string from the given entry." alt="" coords="1025,595,1244,635"/>
+<area shape="poly" id="edge17_Node000016_Node000017" title=" " alt="" coords="944,561,1045,588,1044,594,943,567"/>
+<area shape="poly" id="edge26_Node000018_Node000017" title=" " alt="" coords="712,641,1011,620,1012,626,712,647"/>
+<area shape="rect" id="Node000019" href="$namespacenetspeak_1_1regex.html#afac3221e2a2d1a5db57380f4b12386c9" title=" " alt="" coords="779,460,955,500"/>
+<area shape="poly" id="edge19_Node000018_Node000019" title=" " alt="" coords="612,630,673,571,714,538,759,510,773,503,775,508,761,514,717,542,677,575,615,634"/>
+<area shape="rect" id="Node000021" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a027a4b5415fce264c86bdd7c038ca46b" title="Returns the maximum number of UTF8 bytes a word can to have to match this query." alt="" coords="760,689,975,729"/>
+<area shape="poly" id="edge22_Node000018_Node000021" title=" " alt="" coords="691,669,759,684,758,689,689,675"/>
+<area shape="rect" id="Node000023" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a634da32c1d91b1d13ffcb3bc0edf259c" title="Returns the minimum number of UTF8 bytes a word has to have to match this query." alt="" coords="760,753,975,793"/>
+<area shape="poly" id="edge24_Node000018_Node000023" title=" " alt="" coords="629,670,689,704,761,739,780,746,779,751,759,744,687,709,626,674"/>
+<area shape="poly" id="edge20_Node000019_Node000014" title=" " alt="" coords="955,467,1014,460,1014,465,956,472"/>
+<area shape="rect" id="Node000020" href="$namespacenetspeak_1_1regex.html#a2012930d0c5c43d0ad661a49adceb26b" title=" " alt="" coords="1049,492,1221,532"/>
+<area shape="poly" id="edge21_Node000019_Node000020" title=" " alt="" coords="956,488,1035,497,1035,503,955,493"/>
+<area shape="rect" id="Node000022" href="$namespacenetspeak_1_1regex.html#a6e50f7971c5d223b3dfc4ed586fd45d6" title=" " alt="" coords="1042,721,1227,761"/>
+<area shape="poly" id="edge23_Node000021_Node000022" title=" " alt="" coords="975,720,1029,726,1028,731,974,725"/>
+<area shape="poly" id="edge25_Node000023_Node000022" title=" " alt="" coords="974,758,1028,751,1029,757,975,763"/>
+<area shape="poly" id="edge39_Node000024_Node000014" title=" " alt="" coords="607,837,668,760,711,716,758,675,789,656,818,643,870,628,920,612,946,597,973,574,989,550,995,526,1002,502,1021,478,1028,473,1031,477,1025,482,1007,504,1000,528,994,552,977,578,949,601,922,617,872,633,820,648,792,660,762,679,715,720,672,764,612,840"/>
+<area shape="rect" id="Node000025" href="$classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c" title="Adds the given unit to the internal query." alt="" coords="760,1065,975,1105"/>
+<area shape="poly" id="edge28_Node000024_Node000025" title=" " alt="" coords="621,877,833,1055,830,1059,618,881"/>
+<area shape="rect" id="Node000027" href="$structnetspeak_1_1regex_1_1RegexUnit.html#a98dff8023a5bb0d25f87f544dbb39659" title=" " alt="" coords="1295,936,1497,976"/>
+<area shape="poly" id="edge37_Node000024_Node000027" title=" " alt="" coords="698,854,760,853,898,852,1006,854,1113,868,1247,899,1336,928,1334,933,1246,904,1112,873,1006,860,898,857,760,859,698,859"/>
+<area shape="rect" id="Node000032" href="$namespacenetspeak_1_1regex.html#aebd2483ad4c4c5830b3a7b1f4dbe1e67" title=" " alt="" coords="772,868,963,908"/>
+<area shape="poly" id="edge38_Node000024_Node000032" title=" " alt="" coords="698,867,759,874,758,879,698,872"/>
+<area shape="rect" id="Node000033" href="$classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a7ef4e5553d0ec791b3960977a25e463f" title="Creates a query from the current internal state." alt="" coords="760,932,975,972"/>
+<area shape="poly" id="edge40_Node000024_Node000033" title=" " alt="" coords="647,876,761,917,785,925,784,930,759,923,646,881"/>
+<area shape="rect" id="Node000026" href="$namespacenetspeak_1_1regex.html#a7bcd9407eaeeaacfbdac4b3b53246bb8" title=" " alt="" coords="1023,1029,1247,1054"/>
+<area shape="poly" id="edge29_Node000025_Node000026" title=" " alt="" coords="974,1065,1043,1054,1044,1059,975,1070"/>
+<area shape="rect" id="Node000029" href="$structnetspeak_1_1regex_1_1RegexUnit.html#a4da1987f131aa9640b7e77d7960b031b" title=" " alt="" coords="1295,1116,1497,1156"/>
+<area shape="poly" id="edge36_Node000025_Node000029" title=" " alt="" coords="975,1093,1281,1122,1281,1128,975,1098"/>
+<area shape="rect" id="Node000030" href="$namespacenetspeak_1_1regex.html#af699a70a2450bb3c60f6eb849b7e6176" title="Removes all trailing optional words." alt="" coords="1042,1244,1227,1284"/>
+<area shape="poly" id="edge34_Node000025_Node000030" title=" " alt="" coords="886,1104,943,1166,981,1200,1024,1230,1037,1236,1035,1241,1021,1234,978,1205,939,1170,882,1107"/>
+<area shape="poly" id="edge30_Node000026_Node000027" title=" " alt="" coords="1182,1026,1246,1007,1328,978,1330,983,1247,1012,1183,1031"/>
+<area shape="rect" id="Node000028" href="$namespacenetspeak_1_1regex.html#a330e12f037f1cfe62d8e2bd33d3fd1e7" title="Returns a new string in which all duplicate characters of the given string are removed." alt="" coords="1304,1021,1488,1061"/>
+<area shape="poly" id="edge31_Node000026_Node000028" title=" " alt="" coords="1247,1039,1290,1039,1290,1044,1247,1044"/>
+<area shape="poly" id="edge32_Node000026_Node000029" title=" " alt="" coords="1186,1052,1248,1071,1340,1108,1338,1113,1246,1076,1184,1057"/>
+<area shape="poly" id="edge33_Node000029_Node000029" title=" " alt="" coords="1348,1116,1345,1106,1352,1097,1370,1091,1396,1089,1426,1092,1443,1099,1441,1104,1425,1097,1396,1095,1371,1097,1355,1101,1350,1107,1353,1115"/>
+<area shape="rect" id="Node000031" href="$structnetspeak_1_1regex_1_1RegexUnit.html#a3b20469cd1d0f8e97d6d6ce6626fd5a5" title=" " alt="" coords="1295,1272,1497,1312"/>
+<area shape="poly" id="edge35_Node000030_Node000031" title=" " alt="" coords="1228,1271,1281,1277,1281,1282,1227,1277"/>
+<area shape="rect" id="Node000034" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a74390b07cc488876e518d35979f3f814" title="Create a new RegexQuery that rejects all words." alt="" coords="1027,913,1242,953"/>
+<area shape="poly" id="edge41_Node000033_Node000034" title=" " alt="" coords="975,942,1014,939,1014,944,975,947"/>
+<area shape="poly" id="edge42_Node000034_Node000027" title=" " alt="" coords="1243,940,1281,943,1281,949,1242,945"/>
+<area shape="poly" id="edge44_Node000035_Node000009" title=" " alt="" coords="642,275,759,229,782,222,784,227,761,235,644,280"/>
+<area shape="poly" id="edge47_Node000036_Node000025" title=" " alt="" coords="682,1122,757,1106,759,1111,683,1127"/>
+<area shape="poly" id="edge48_Node000036_Node000027" title=" " alt="" coords="623,1120,684,1084,759,1051,859,1027,997,1003,1280,966,1281,971,998,1009,860,1032,761,1056,687,1089,626,1125"/>
+<area shape="poly" id="edge55_Node000036_Node000029" title=" " alt="" coords="683,1139,1280,1134,1280,1140,683,1145"/>
+<area shape="poly" id="edge51_Node000036_Node000031" title=" " alt="" coords="638,1160,709,1193,803,1231,911,1267,1023,1293,1085,1301,1134,1300,1247,1293,1281,1293,1281,1298,1247,1299,1134,1306,1085,1306,1022,1299,910,1272,801,1236,707,1197,635,1165"/>
+<area shape="poly" id="edge54_Node000036_Node000033" title=" " alt="" coords="611,1120,672,1056,713,1020,759,988,785,975,787,980,761,993,717,1025,676,1060,615,1124"/>
+<area shape="rect" id="Node000037" href="$structnetspeak_1_1regex_1_1RegexUnit.html#af7031ca21988515e98dc2b3dcf482e0b" title=" " alt="" coords="1033,1180,1236,1220"/>
+<area shape="poly" id="edge49_Node000036_Node000037" title=" " alt="" coords="683,1150,760,1159,1020,1186,1019,1191,760,1164,683,1155"/>
+<area shape="rect" id="Node000038" href="$namespacenetspeak_1_1regex.html#acd1be471280f1d11b869b2b7c1f4ecb8" title="Reads the given range until it finds a given end characters. If it finds the end characters,..." alt="" coords="785,1359,949,1399"/>
+<area shape="poly" id="edge52_Node000036_Node000038" title=" " alt="" coords="609,1162,633,1199,668,1246,711,1295,762,1338,783,1351,781,1355,758,1342,708,1299,664,1249,629,1202,605,1164"/>
+<area shape="rect" id="Node000039" href="$structnetspeak_1_1regex_1_1RegexUnit.html#abdddfa5541553a0a8a061f31e4d5662a" title=" " alt="" coords="766,1423,969,1463"/>
+<area shape="poly" id="edge53_Node000036_Node000039" title=" " alt="" coords="605,1162,624,1212,657,1279,703,1349,730,1381,762,1409,769,1414,766,1418,758,1413,727,1384,698,1352,652,1281,619,1214,600,1164"/>
+<area shape="poly" id="edge50_Node000037_Node000029" title=" " alt="" coords="1216,1177,1300,1157,1301,1162,1218,1183"/>
+</map>

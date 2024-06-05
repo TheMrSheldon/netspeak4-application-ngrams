@@ -5,7 +5,7 @@ var structnetspeak_1_1invertedindex_1_1iterator__type =
     [ "iterator_type", "structnetspeak_1_1invertedindex_1_1iterator__type.html#a0961a007f46e9cd3dc91e9933808e4a8", null ],
     [ "~iterator_type", "structnetspeak_1_1invertedindex_1_1iterator__type.html#af8aa802ddc72499f44da07e2833259c7", null ],
     [ "byte_size", "structnetspeak_1_1invertedindex_1_1iterator__type.html#a1448f1f342a32c41e0d9cbe57592b69a", null ],
-    [ "next", "structnetspeak_1_1invertedindex_1_1iterator__type.html#af053ba18fd98720ce14c43a09aec0b96", null ],
+    [ "next", "structnetspeak_1_1invertedindex_1_1iterator__type.html#a3867239f5702b8b33c21389c771f811d", null ],
     [ "print", "structnetspeak_1_1invertedindex_1_1iterator__type.html#a0de824f39e7006c4ae1e3002d1013c36", null ],
     [ "rewind", "structnetspeak_1_1invertedindex_1_1iterator__type.html#a378f7a1e95a2662201fc7aad2ee906dc", null ],
     [ "size", "structnetspeak_1_1invertedindex_1_1iterator__type.html#a057a0c4ce3478f90db81802c8e9339ab", null ],

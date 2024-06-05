@@ -1,0 +1,21 @@
+<map id="netspeak/error.cpp" name="netspeak/error.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="38,5,181,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,72,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,33,62,71,58,67,96,29"/>
+<area shape="rect" id="Node000003" href="$error_8hpp.html" title=" " alt="" coords="173,79,317,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="132,28,212,70,210,75,130,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="207,225,265,251"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="111,31,109,59,111,97,119,138,137,176,163,202,195,220,192,224,160,206,132,179,114,140,106,97,104,59,105,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="147,152,234,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="238,106,210,143,206,140,234,103"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="249,104,248,178,243,212,238,211,243,177,243,104"/>
+<area shape="rect" id="Node000006" href="$traceable__error_8hpp.html" title=" " alt="" coords="309,152,483,177"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="271,102,360,144,358,148,268,106"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="371,180,276,222,274,217,369,175"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="289,225,364,251"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="386,180,349,217,345,214,383,176"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="389,225,475,251"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="404,176,422,212,418,214,400,179"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="499,225,658,251"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="426,175,537,218,535,223,424,180"/>
+</map>

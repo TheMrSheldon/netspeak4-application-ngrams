@@ -1,0 +1,20 @@
+<map id="netspeak::invertedindex::variable_size_iter::swap" name="netspeak::invertedindex::variable_size_iter::swap">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,87,192,127"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a2f5a59f9d290bd2116bbd73244666171" title=" " alt="" coords="240,55,420,95"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,92,226,87,227,92,193,97"/>
+<area shape="rect" id="Node000008" href="$classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ab83184815805ed4606aa924eb9a6f42c" title=" " alt="" coords="240,119,420,159"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="193,118,227,122,226,128,192,123"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#a0f64660040077bd1ae3a46941a000b07" title=" " alt="" coords="481,5,635,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="409,53,493,31,494,37,411,58"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a109be725161102fab0e4b4ee0651491e" title=" " alt="" coords="468,119,648,159"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="403,93,473,113,472,118,401,98"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ac7160f8bd36f86815662909c0722556f" title=" " alt="" coords="468,55,648,95"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="420,73,454,73,454,78,420,78"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="903,7,1053,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="635,14,855,13,889,13,889,19,855,18,635,19"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#af94d48fda5f335ddcb461a8237079866" title=" " alt="" coords="696,27,855,67"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="635,26,682,32,682,37,635,31"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="855,34,888,29,889,34,856,39"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="420,137,454,137,454,142,420,142"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="401,117,472,97,473,102,403,122"/>
+</map>

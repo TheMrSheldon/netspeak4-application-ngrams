@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structnetspeak_1_1index__entry__traits.html" title=" " alt="" coords="5,5,176,47"/>
+<area shape="rect" id="Node000000" href="$classnetspeak_1_1bighashmap_1_1CmphMap.html" title=" " alt="" coords="5,53,219,93"/>
+<area shape="rect" id="Node000001" href="$classnetspeak_1_1bighashmap_1_1ExternalMap.html" title=" " alt="" coords="267,5,441,60"/>
+<area shape="poly" id="edge15_Node000000_Node000001" title=" " alt="" coords="232,50,266,44,267,50,233,55"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1bighashmap_1_1InternalMap.html" title=" " alt="" coords="269,84,439,139"/>
+<area shape="poly" id="edge16_Node000000_Node000002" title=" " alt="" coords="233,89,269,95,268,100,232,95"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['using_20the_20netspeak_20cli_482',['Using the Netspeak CLI',['../netspeakcli.html',1,'']]]
+  ['readme_0',['readme',['../md_netspeak_2model_2README.html',1,'README'],['../md_netspeak_2regex_2README.html',1,'README'],['../md_netspeak_2util_2README.html',1,'README']]]
 ];

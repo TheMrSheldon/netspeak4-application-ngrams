@@ -1,0 +1,22 @@
+<map id="netspeak::invertedindex::UnsortedInput::group" name="netspeak::invertedindex::UnsortedInput::group">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,105,185,145"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util.html#a978978e70b474657b12402a3db711ef0" title=" " alt="" coords="244,6,403,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,103,173,71,232,40,252,33,254,38,234,45,175,75,126,107"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#a4acc3d13f8d541f4b65dd44f486403fd" title=" " alt="" coords="245,55,401,80"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="175,102,258,81,260,86,176,108"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1invertedindex_1_1Record.html#a8c31f71f3940ea11d85fbfca276f0eca" title=" " alt="" coords="233,105,413,145"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="186,122,220,122,220,128,186,128"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1invertedindex_1_1Record.html#a6661e7a0659dc3fc968d7992fca4732c" title=" " alt="" coords="233,169,413,209"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="168,143,239,163,237,168,167,148"/>
+<area shape="rect" id="Node000009" href="$classnetspeak_1_1invertedindex_1_1Record.html#a0d49817e43096fd3bb77cef8c1a42dd5" title=" " alt="" coords="233,233,413,273"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="123,143,173,181,235,219,248,225,246,230,232,223,170,185,119,147"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="680,31,831,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="403,8,512,3,572,4,632,9,703,25,702,30,632,14,572,9,512,8,403,13"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#af94d48fda5f335ddcb461a8237079866" title=" " alt="" coords="467,24,626,64"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="403,25,454,31,454,36,403,30"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="626,41,666,41,666,46,626,46"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="402,74,511,79,572,78,632,73,702,58,703,63,632,78,572,84,511,85,401,79"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="402,57,453,51,454,56,402,62"/>
+<area shape="rect" id="Node000008" href="$structnetspeak_1_1value_1_1value__traits.html#ae0ea99c085b1395ddf5651ff4604c96a" title=" " alt="" coords="461,169,632,209"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="414,186,448,186,448,192,414,192"/>
+</map>

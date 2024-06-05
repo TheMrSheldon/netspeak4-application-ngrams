@@ -1,0 +1,10 @@
+<map id="netspeak::invertedindex::PostlistBuilder::clear" name="netspeak::invertedindex::PostlistBuilder::clear">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,185,45"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util.html#a978978e70b474657b12402a3db711ef0" title=" " alt="" coords="233,13,392,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,23,220,23,220,28,186,28"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="647,13,797,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="392,20,440,19,599,19,633,19,633,25,599,24,440,24,392,25"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#af94d48fda5f335ddcb461a8237079866" title=" " alt="" coords="440,33,599,73"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="393,33,427,38,426,43,392,39"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="599,40,632,35,633,40,600,45"/>
+</map>

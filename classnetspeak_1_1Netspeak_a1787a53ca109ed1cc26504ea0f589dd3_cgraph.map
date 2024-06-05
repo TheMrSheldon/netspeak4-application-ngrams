@@ -1,0 +1,10 @@
+<map id="netspeak::Netspeak::properties" name="netspeak::Netspeak::properties">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,157,77"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="41,38,39,28,45,18,60,13,81,11,106,14,120,21,117,26,105,19,81,16,61,18,49,23,44,29,46,36"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1PhraseCorpus.html#a436713055969380039d89778197d92bf" title=" " alt="" coords="205,5,384,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,43,191,38,192,43,158,49"/>
+<area shape="rect" id="Node000004" href="$structnetspeak_1_1value_1_1value__traits.html#aeb2c7518229319929894df4e71b39790" title=" " alt="" coords="209,69,380,109"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="158,66,196,72,195,77,157,71"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak.html#af4c3dc2b340c7ade26cd9638cd1108a1" title="Returns the size in bytes each entry in the binary file of the given length (= n&#45;gram class)." alt="" coords="432,13,589,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="384,23,418,23,418,28,384,28"/>
+</map>

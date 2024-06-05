@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readme_479',['README',['../md_netspeak_model_README.html',1,'(Global Namespace)'],['../md_netspeak_regex_README.html',1,'(Global Namespace)'],['../md_netspeak_util_README.html',1,'(Global Namespace)']]]
+  ['getting_20started_0',['Getting Started',['../gettingstarted.html',1,'DeveloperIdx']]]
 ];

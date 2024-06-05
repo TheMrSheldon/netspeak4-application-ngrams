@@ -1,0 +1,14 @@
+<map id="netspeak::regex::number_of_utf8_bytes" name="netspeak::regex::number_of_utf8_bytes">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1023,37,1208,77"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a027a4b5415fce264c86bdd7c038ca46b" title="Returns the maximum number of UTF8 bytes a word can to have to match this query." alt="" coords="760,5,975,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1009,46,975,42,975,37,1010,41"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a634da32c1d91b1d13ffcb3bc0edf259c" title="Returns the minimum number of UTF8 bytes a word has to have to match this query." alt="" coords="760,69,975,109"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1010,74,975,78,975,73,1009,68"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#aa6875223b64c6979bd2135023f71f2ce" title=" " alt="" coords="476,37,712,77"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="747,42,713,46,712,41,746,37"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a243db53a6f592cf81dc78ab6abe09bc2" title="Adds all words matching the given query to the given vector." alt="" coords="236,37,428,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="462,60,428,60,428,55,462,55"/>
+<area shape="rect" id="Node000005" href="$classcli_1_1RegexCommand.html#a359a924652eac2c3d8664bfc5ff29f3e" title=" " alt="" coords="5,45,188,70"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="222,60,188,60,188,55,222,55"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="746,78,712,74,713,69,747,73"/>
+</map>

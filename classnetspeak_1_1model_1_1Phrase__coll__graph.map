@@ -1,5 +1,7 @@
 <map id="netspeak::model::Phrase" name="netspeak::model::Phrase">
-<area shape="rect" id="node1" title=" " alt="" coords="113,95,295,121"/>
-<area shape="rect" id="node2" href="$classnetspeak_1_1model_1_1Words.html" title=" " alt="" coords="5,5,184,32"/>
-<area shape="rect" id="node3" href="$structnetspeak_1_1model_1_1PhraseId____.html" title=" " alt="" coords="209,5,418,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="124,353,299,639"/>
+<area shape="rect" id="Node000002" href="$structnetspeak_1_1model_1_1PhraseId____.html" title=" " alt="" coords="5,5,207,291"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,290,166,337,161,338,147,292"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1model_1_1Words.html" title=" " alt="" coords="231,5,402,291"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="276,292,262,338,257,337,271,290"/>
 </map>

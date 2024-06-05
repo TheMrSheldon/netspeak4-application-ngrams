@@ -1,5 +1,7 @@
 <map id="netspeak::invertedindex::variable_size_iter" name="netspeak::invertedindex::variable_size_iter">
-<area shape="rect" id="node1" title=" " alt="" coords="5,169,185,211"/>
-<area shape="rect" id="node2" href="$structnetspeak_1_1invertedindex_1_1iterator__type.html" title=" " alt="" coords="5,80,185,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="21,5,170,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,447,177,707"/>
+<area shape="rect" id="Node000002" href="$structnetspeak_1_1invertedindex_1_1iterator__type.html" title=" " alt="" coords="5,119,177,399"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,412,94,446,89,446,89,412"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="21,5,162,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,84,94,119,89,119,89,84"/>
 </map>

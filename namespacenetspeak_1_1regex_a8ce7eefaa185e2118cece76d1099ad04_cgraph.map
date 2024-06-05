@@ -1,0 +1,34 @@
+<map id="netspeak::regex::parse_netspeak_regex_query" name="netspeak::regex::parse_netspeak_regex_query">
+<area shape="rect" id="Node000001" title="Parses the given Netspeak regex query and returns the equivalent general regex query." alt="" coords="5,250,183,290"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a626cce510f80b416ea26d8d1e9d4891c" title="Adds the given unit to the internal query." alt="" coords="231,278,445,318"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,278,217,282,217,287,182,283"/>
+<area shape="rect" id="Node000004" href="$structnetspeak_1_1regex_1_1RegexUnit.html#a98dff8023a5bb0d25f87f544dbb39659" title=" " alt="" coords="765,53,968,93"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="100,249,116,209,143,158,181,107,204,85,229,67,299,34,375,14,452,4,530,4,605,9,675,20,791,46,790,52,674,25,604,15,530,9,452,10,376,19,301,39,232,71,207,89,185,111,148,161,121,211,105,251"/>
+<area shape="rect" id="Node000006" href="$structnetspeak_1_1regex_1_1RegexUnit.html#a4da1987f131aa9640b7e77d7960b031b" title=" " alt="" coords="765,213,968,253"/>
+<area shape="poly" id="edge19_Node000001_Node000006" title=" " alt="" coords="172,248,230,236,366,213,473,200,580,198,718,206,752,210,751,215,717,212,580,204,473,206,367,218,231,241,174,253"/>
+<area shape="rect" id="Node000008" href="$structnetspeak_1_1regex_1_1RegexUnit.html#a3b20469cd1d0f8e97d6d6ce6626fd5a5" title=" " alt="" coords="765,364,968,404"/>
+<area shape="poly" id="edge13_Node000001_Node000008" title=" " alt="" coords="136,288,181,308,232,328,361,365,419,376,494,385,556,390,605,389,717,385,751,384,752,390,717,390,605,395,556,395,493,390,418,381,359,371,230,333,179,313,134,293"/>
+<area shape="rect" id="Node000009" href="$structnetspeak_1_1regex_1_1RegexUnit.html#af7031ca21988515e98dc2b3dcf482e0b" title=" " alt="" coords="504,221,707,261"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="183,262,490,245,490,250,183,268"/>
+<area shape="rect" id="Node000010" href="$namespacenetspeak_1_1regex.html#acd1be471280f1d11b869b2b7c1f4ecb8" title="Reads the given range until it finds a given end characters. If it finds the end characters,..." alt="" coords="256,450,420,490"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="110,289,158,357,193,396,232,429,254,442,252,447,229,434,189,400,154,361,105,292"/>
+<area shape="rect" id="Node000011" href="$structnetspeak_1_1regex_1_1RegexUnit.html#abdddfa5541553a0a8a061f31e4d5662a" title=" " alt="" coords="237,514,439,554"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="104,289,120,333,146,390,184,449,207,477,232,500,239,505,236,509,229,504,203,480,179,453,142,393,115,335,99,291"/>
+<area shape="rect" id="Node000012" href="$classnetspeak_1_1regex_1_1RegexQueryBuilder.html#a7ef4e5553d0ec791b3960977a25e463f" title="Creates a query from the current internal state." alt="" coords="231,81,445,121"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="118,248,229,163,288,126,291,130,232,167,121,252"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1regex.html#a7bcd9407eaeeaacfbdac4b3b53246bb8" title=" " alt="" coords="493,120,717,146"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="370,276,570,151,573,155,373,280"/>
+<area shape="poly" id="edge9_Node000002_Node000006" title=" " alt="" coords="445,294,576,287,717,270,788,254,790,259,718,275,576,292,446,299"/>
+<area shape="rect" id="Node000007" href="$namespacenetspeak_1_1regex.html#af699a70a2450bb3c60f6eb849b7e6176" title="Removes all trailing optional words." alt="" coords="513,336,698,376"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="432,316,499,330,498,335,431,321"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="662,118,717,105,766,93,768,99,718,110,663,123"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1regex.html#a330e12f037f1cfe62d8e2bd33d3fd1e7" title="Returns a new string in which all duplicate characters of the given string are removed." alt="" coords="775,117,959,157"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="718,132,761,133,761,138,717,137"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="658,143,718,162,815,204,812,209,716,167,656,148"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="818,213,815,203,823,194,840,188,867,186,897,189,913,196,911,201,896,194,867,192,841,193,826,198,820,204,823,212"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="699,363,752,369,751,374,698,368"/>
+<area shape="poly" id="edge12_Node000009_Node000006" title=" " alt="" coords="707,235,751,234,752,239,707,240"/>
+<area shape="rect" id="Node000013" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a74390b07cc488876e518d35979f3f814" title="Create a new RegexQuery that rejects all words." alt="" coords="498,56,713,96"/>
+<area shape="poly" id="edge17_Node000012_Node000013" title=" " alt="" coords="445,88,484,84,485,90,446,93"/>
+<area shape="poly" id="edge18_Node000013_Node000004" title=" " alt="" coords="713,72,752,71,752,77,713,77"/>
+</map>

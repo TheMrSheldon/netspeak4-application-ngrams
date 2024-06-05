@@ -1,0 +1,12 @@
+<map id="netspeak::regex::RegexQuery::combinations_upper_bound" name="netspeak::regex::RegexQuery::combinations_upper_bound">
+<area shape="rect" id="Node000001" title="Returns an upper bound for the number of possible words, the query can match. If UINT32_MAX is return..." alt="" coords="759,35,973,75"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a243db53a6f592cf81dc78ab6abe09bc2" title="Adds all words matching the given query to the given vector." alt="" coords="246,5,438,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="745,51,438,33,439,28,745,45"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a2f4d2e52bef616730e1395063c3e82ed" title="Returns whether this query will reject all words." alt="" coords="496,63,711,103"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="745,70,711,74,711,69,745,65"/>
+<area shape="rect" id="Node000003" href="$classcli_1_1RegexCommand.html#a359a924652eac2c3d8664bfc5ff29f3e" title=" " alt="" coords="5,13,188,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="232,28,188,28,188,23,232,23"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="498,62,433,48,434,43,499,57"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1regex.html#a0ad812750b4e0550867c0e250b83e396" title="Appends the general string representation of a regex query." alt="" coords="236,70,448,95"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="482,85,448,85,448,80,482,80"/>
+</map>

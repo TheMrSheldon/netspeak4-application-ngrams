@@ -1,0 +1,12 @@
+<map id="netspeak::util::__properties_format_impl::write_unicode_char" name="netspeak::util::__properties_format_impl::write_unicode_char">
+<area shape="rect" id="Node000001" title=" " alt="" coords="660,37,903,77"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util_1_1____properties__format__impl.html#a0e92214f9e3ba2baea59697cacf4b7f9" title=" " alt="" coords="413,5,612,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="646,44,612,40,612,34,647,39"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util_1_1____properties__format__impl.html#aa93ba70613ea151ee49b7888a6b28a43" title=" " alt="" coords="413,69,612,109"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="647,76,612,80,612,75,646,71"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#aff96a54c98e1783d6dceb8fb51daca2e" title=" " alt="" coords="213,37,365,77"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="400,44,366,49,366,44,399,39"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1util_1_1Config.html#a9b472d498bac92f78ff5282406f4dc3d" title="This will output the config in the .properties file format." alt="" coords="5,37,165,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="199,60,165,60,165,55,199,55"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="399,76,366,71,366,66,400,71"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="netspeak::util::ChainCutter::next" name="netspeak::util::ChainCutter::next">
+<area shape="rect" id="Node000001" title="Returns whether there is another unique cut and computes the next cuts." alt="" coords="5,5,201,45"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="493,13,644,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,20,249,19,445,19,480,19,480,25,445,24,249,24,202,25"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1util_1_1ChainCutter.html#a9e05a5ab5bb585f8276bf7e6edce76c5" title=" " alt="" coords="249,33,445,73"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,34,236,38,236,43,201,39"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="446,38,479,34,480,39,446,44"/>
+</map>

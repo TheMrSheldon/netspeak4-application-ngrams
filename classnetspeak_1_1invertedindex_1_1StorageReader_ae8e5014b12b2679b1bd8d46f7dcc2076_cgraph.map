@@ -1,0 +1,12 @@
+<map id="netspeak::invertedindex::StorageReader::~StorageReader" name="netspeak::invertedindex::StorageReader::~StorageReader">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,247,45"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1invertedindex_1_1StorageReader.html#aff3e5221c5e53e175ea46f8a5ec86371" title=" " alt="" coords="295,5,475,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,23,281,23,281,28,247,28"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#a978978e70b474657b12402a3db711ef0" title=" " alt="" coords="523,13,681,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="475,23,509,23,509,28,475,28"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="936,13,1087,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="682,20,729,19,888,19,922,19,922,25,888,24,729,24,682,25"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#af94d48fda5f335ddcb461a8237079866" title=" " alt="" coords="729,33,888,73"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="682,33,716,38,716,43,681,39"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="888,40,922,35,923,40,889,45"/>
+</map>

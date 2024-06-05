@@ -1,0 +1,9 @@
+<map id="netspeak::regex::finite_query_to_utf8" name="netspeak::regex::finite_query_to_utf8">
+<area shape="rect" id="Node000001" title=" " alt="" coords="716,13,884,53"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a5c0cbc299628d069cfd1d800d74875d3" title=" " alt="" coords="476,5,668,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="702,35,668,35,668,30,702,30"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a243db53a6f592cf81dc78ab6abe09bc2" title="Adds all words matching the given query to the given vector." alt="" coords="236,13,428,53"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="462,35,428,35,428,30,462,30"/>
+<area shape="rect" id="Node000004" href="$classcli_1_1RegexCommand.html#a359a924652eac2c3d8664bfc5ff29f3e" title=" " alt="" coords="5,20,188,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="222,35,188,35,188,30,222,30"/>
+</map>

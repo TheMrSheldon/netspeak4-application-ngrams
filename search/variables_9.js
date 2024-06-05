@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['id_0',['id',['../structnetspeak_1_1ref__.html#a51c51c0fdd26524785306d4257a8f375',1,'netspeak::ref_::id'],['../structnetspeak_1_1PhraseFileParserItem.html#a1861f57c96ea35d998a7d750d8ee836e',1,'netspeak::PhraseFileParserItem::id']]],
+  ['id_5f_1',['id_',['../classnetspeak_1_1model_1_1Phrase.html#a4406696f9783cc73072322078e19d3bd',1,'netspeak::model::Phrase::id_'],['../classnetspeak_1_1model_1_1RawRefResult_1_1Ref.html#a46aa23f65533ed52faf8501291b8196c',1,'netspeak::model::RawRefResult::Ref::id_']]],
+  ['id_5fdata_5f_2',['id_data_',['../classnetspeak_1_1util_1_1StringIdMap_1_1Builder.html#ac716088497e6b5c669be2e3e68f743c0',1,'netspeak::util::StringIdMap::Builder']]],
+  ['id_5fmap_3',['id_map',['../classnetspeak_1_1PhraseCorpus.html#a3c0a13373d4e93591413432f6f87b9d5',1,'netspeak::PhraseCorpus']]],
+  ['id_5fmap_5f_4',['id_map_',['../classnetspeak_1_1util_1_1StringIdMap.html#abf2a4667965fd0b21abfae49ea5b4897',1,'netspeak::util::StringIdMap']]],
+  ['id_5foffset_5f_5',['id_offset_',['../classnetspeak_1_1PhraseFileParser.html#a92b11c62e7c104b479878cdf6d45c2f6',1,'netspeak::PhraseFileParser']]],
+  ['in_5fdictset_5f_6',['in_dictset_',['../classantlr4_1_1QueryConstructor.html#aedf22a3bfc3be3393b86250c753234d3',1,'antlr4::QueryConstructor']]],
+  ['index_5fbegin_5f_7',['index_begin_',['../structnetspeak_1_1invertedindex_1_1page__type.html#aa703f18952426322a62747f01dc13cb7',1,'netspeak::invertedindex::page_type']]],
+  ['index_5fcur_5f_8',['index_cur_',['../structnetspeak_1_1invertedindex_1_1page__type.html#ac7f5e3e207a96e7d88e02b0dc2c5a5d9',1,'netspeak::invertedindex::page_type']]],
+  ['index_5fdirectory_5f_9',['index_directory_',['../classnetspeak_1_1invertedindex_1_1Configuration.html#ac19f17cb22a2144b0e7500caf1dc2a4f',1,'netspeak::invertedindex::Configuration']]],
+  ['index_5fend_5f_10',['index_end_',['../structnetspeak_1_1invertedindex_1_1page__type.html#af182165fe0969f8a4c791b6e375a1031',1,'netspeak::invertedindex::page_type']]],
+  ['index_5ffile_5fname_11',['index_file_name',['../classnetspeak_1_1bighashmap_1_1BigHashMap.html#a14dec8ff5f063276074b95c19c5b0fe7',1,'netspeak::bighashmap::BigHashMap::index_file_name'],['../classnetspeak_1_1bighashmap_1_1Builder.html#a7474e8072da00d18f1ff6ab69c60a125',1,'netspeak::bighashmap::Builder::index_file_name']]],
+  ['input_5fdirectory_5f_12',['input_directory_',['../classnetspeak_1_1invertedindex_1_1Configuration.html#ae412e8763d60cfc5680a370ce7381708',1,'netspeak::invertedindex::Configuration']]],
+  ['input_5ffile_5f_13',['input_file_',['../classnetspeak_1_1invertedindex_1_1Configuration.html#a56af941197013813cd9d209e0deb043b',1,'netspeak::invertedindex::Configuration']]],
+  ['instance_14',['instance',['../structnetspeak_1_1service_1_1UniqueMap_1_1entry.html#a242daa4b91cde44137d903cd6264ec8c',1,'netspeak::service::UniqueMap::entry']]],
+  ['instances_5f_15',['instances_',['../classnetspeak_1_1service_1_1UniqueMap.html#a9c58fde9abd5e6383c2aecc724d0c3db',1,'netspeak::service::UniqueMap']]],
+  ['is_5f_16',['is_',['../classnetspeak_1_1invertedindex_1_1InvertedFileReader.html#a0cefa75a56fc3433c368c25eec66a1b0',1,'netspeak::invertedindex::InvertedFileReader::is_'],['../classnetspeak_1_1PhraseFileParser.html#a63cd1c897919bdf4415d8e44d1e7df91',1,'netspeak::PhraseFileParser::is_']]],
+  ['item_5f_17',['item_',['../classnetspeak_1_1PhraseFileReader.html#ac5f0597e308dbff86d60c2f7a07145ba',1,'netspeak::PhraseFileReader']]],
+  ['iter_5f_18',['iter_',['../classnetspeak_1_1invertedindex_1_1RawPostlist.html#afaa082aea9afcbd7637da88a2f08b277',1,'netspeak::invertedindex::RawPostlist']]]
+];

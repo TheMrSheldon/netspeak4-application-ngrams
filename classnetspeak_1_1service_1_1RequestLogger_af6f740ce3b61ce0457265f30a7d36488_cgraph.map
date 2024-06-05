@@ -1,0 +1,27 @@
+<map id="netspeak::service::RequestLogger::GetCorpora" name="netspeak::service::RequestLogger::GetCorpora">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,88,207,128"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1util_1_1JsonWriter.html#acbaa81da8314c01152d8a52ae42dc28b" title=" " alt="" coords="683,6,869,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,86,188,55,221,41,254,30,363,11,474,3,579,5,669,11,669,16,579,10,475,9,364,16,255,35,223,46,191,60,138,91"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1service.html#a2da5e86a109060f47f4261181bd65a4b" title=" " alt="" coords="255,44,400,84"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="207,86,241,79,242,84,208,91"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1service.html#a75b5182433d6eb37dde58d0efff5b799" title=" " alt="" coords="255,132,400,172"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="208,126,242,133,241,138,207,131"/>
+<area shape="rect" id="Node000008" href="$namespacenetspeak_1_1service.html#aebd8a38b84a6aa4b293543abb10f1fb8" title=" " alt="" coords="255,220,400,260"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="142,126,282,211,280,216,139,131"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="917,94,1068,120"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="831,43,946,87,944,92,829,48"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="287,133,285,123,291,114,306,108,327,106,352,109,366,116,363,121,351,114,327,111,307,113,295,118,290,124,292,131"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1util_1_1JsonWriter_1_1Value.html#a26810075211549614a9b03eb4afbedb9" title=" " alt="" coords="683,87,869,127"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="400,137,448,130,669,110,669,116,448,135,401,142"/>
+<area shape="rect" id="Node000007" href="$namespacenetspeak_1_1service.html#a2d63ea4d672ce15b7fbc671e76939284" title="Returns the current time formatted as a string following the ISO 8601 format for UTC date and time." alt="" coords="469,144,614,184"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="400,154,455,157,455,162,400,159"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="870,104,904,104,904,110,870,110"/>
+<area shape="poly" id="edge10_Node000008_Node000008" title=" " alt="" coords="287,221,285,211,291,202,306,196,327,194,352,197,366,204,363,209,351,202,327,199,307,201,295,206,290,212,292,219"/>
+<area shape="rect" id="Node000009" href="$classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html#aa7d3f4f919394e032f405e39e58d7958" title=" " alt="" coords="448,214,635,254"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="400,236,434,234,434,240,400,241"/>
+<area shape="rect" id="Node000010" href="$namespacenetspeak_1_1util.html#a134a9d8c3e5477e6835cb4367cdafebf" title=" " alt="" coords="701,179,851,219"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="634,217,687,210,688,215,635,223"/>
+<area shape="poly" id="edge13_Node000010_Node000003" title=" " alt="" coords="823,177,948,123,950,128,825,181"/>
+<area shape="rect" id="Node000011" href="$namespacenetspeak_1_1util.html#ab81364f286f51c8ceaafc921fd48dd5a" title=" " alt="" coords="927,179,1059,219"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="851,196,913,196,913,202,851,202"/>
+</map>

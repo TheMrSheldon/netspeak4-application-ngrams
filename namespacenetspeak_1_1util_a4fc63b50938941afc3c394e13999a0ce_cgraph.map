@@ -1,0 +1,5 @@
+<map id="netspeak::util::vec_sorted_filter_dups" name="netspeak::util::vec_sorted_filter_dups">
+<area shape="rect" id="Node000001" title="Assuming a sorted vector, this will remove all duplicate elements in the vector." alt="" coords="5,5,151,45"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="199,13,349,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,23,185,23,185,28,151,28"/>
+</map>

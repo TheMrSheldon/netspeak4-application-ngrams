@@ -6,8 +6,8 @@ var classnetspeak_1_1model_1_1SimpleQuery =
     [ "SimpleQuery", "classnetspeak_1_1model_1_1SimpleQuery.html#a6cd60d77acc09e02dabcbcbca4abcb3f", null ],
     [ "SimpleQuery", "classnetspeak_1_1model_1_1SimpleQuery.html#aa39ddf9786c756b02ae858003e6d6a3b", null ],
     [ "has_wildcards", "classnetspeak_1_1model_1_1SimpleQuery.html#a5759acdd6e6a127b57a3975b0579fde9", null ],
-    [ "operator=", "classnetspeak_1_1model_1_1SimpleQuery.html#ae8fef2cae63d2fba502983e1d1fac05b", null ],
-    [ "root", "classnetspeak_1_1model_1_1SimpleQuery.html#a30d5ce01875fa036f735c1a011c26262", null ],
-    [ "root", "classnetspeak_1_1model_1_1SimpleQuery.html#aadb9293160fff057b7824ff1223a850c", null ],
+    [ "operator=", "classnetspeak_1_1model_1_1SimpleQuery.html#a9795bc6a0a3285e6d1a72ffabdb3a2ad", null ],
+    [ "root", "classnetspeak_1_1model_1_1SimpleQuery.html#aacd9450bbdddc1274a461e21075335db", null ],
+    [ "root", "classnetspeak_1_1model_1_1SimpleQuery.html#ac6308b874ac5adc0abfac9f6e3ef12c9", null ],
     [ "root_", "classnetspeak_1_1model_1_1SimpleQuery.html#a5c4e931b96efc58bfaa5d19b5726ed12", null ]
 ];

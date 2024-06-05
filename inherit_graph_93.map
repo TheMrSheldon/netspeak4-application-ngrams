@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classnetspeak_1_1util_1_1JsonWriter_1_1Value.html" title=" " alt="" coords="5,5,192,47"/>
+<area shape="rect" id="Node000000" href="$classnetspeak_1_1util_1_1Config.html" title="A general configuration class backed by a simple map of string key&#45;value&#45;pairs." alt="" coords="5,5,165,31"/>
+<area shape="rect" id="Node000001" href="$classnetspeak_1_1Properties.html" title=" " alt="" coords="213,5,369,31"/>
+<area shape="poly" id="edge26_Node000000_Node000001" title=" " alt="" coords="179,15,213,15,213,21,179,21"/>
 </map>

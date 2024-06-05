@@ -1,0 +1,759 @@
+<!-- Heavily based on https://github.com/jothepro/doxygen-awesome-css/blob/main/doxygen-custom/header.html -->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- BEGIN opengraph metadata -->
+    <meta property="og:title" content=Netspeak />
+    <meta property="og:image" content="netspeak_logo.svg" />
+    <meta property="og:description" content="One word leads to another." />
+    <meta property="og:url" content="https://github.com/netspeak/netspeak4-application-ngrams" />
+    <!-- END opengraph metadata -->
+    <!-- BEGIN twitter metadata -->
+    <meta name="twitter:image:src" content="netspeak_logo.svg" />
+    <meta name="twitter:title" content="Netspeak" />
+    <meta name="twitter:description" content="One word leads to another." />
+    <!-- END twitter metadata -->
+    <title>Netspeak: netspeak::service Namespace Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/svg+xml" href="netspeak_logo.svg" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+    <script type="text/javascript" src="toggle-alternative-theme.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+        DoxygenAwesomeDarkModeToggle.init()
+        DoxygenAwesomeParagraphLink.init()
+        DoxygenAwesomeInteractiveToc.init()
+        DoxygenAwesomeTabs.init()
+    </script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-tabs.js" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- https://tholman.com/github-corners/ -->
+    <a href="https://github.com/netspeak/netspeak4-application-ngrams" class="github-corner"
+        title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 250 250" width="40" height="40"
+            style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg></a>
+    <style>
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+        @media (max-width:500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+    </style>
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectlogo"><img alt="Logo" src="netspeak_logo.svg" /></td>
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">Netspeak
+                                &#160;<span
+                                    id="projectnumber">4.2.0</span>
+                            </div>
+                            <div id="projectbrief">One word leads to another.</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespacenetspeak_1_1service.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">netspeak::service Namespace Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1service_1_1LoadBalanceProxy.html">LoadBalanceProxy</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A proxy to unify and load-balance any number of compatible <a class="el" href="classnetspeak_1_1Netspeak.html">Netspeak</a> indexes.  <a href="classnetspeak_1_1service_1_1LoadBalanceProxy.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1service_1_1RequestLogger.html">RequestLogger</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnetspeak_1_1service_1_1UniqueMap.html">UniqueMap</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An implementation of the <a class="el" href="classnetspeak_1_1Netspeak.html">Netspeak</a> gRPC service that will forward all requests to a unique <a class="el" href="classnetspeak_1_1Netspeak.html">Netspeak</a> instance for the given corpus.  <a href="classnetspeak_1_1service_1_1UniqueMap.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:adb702de36b91e1da78929b192a9fb0c3" id="r_adb702de36b91e1da78929b192a9fb0c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1service.html#adb702de36b91e1da78929b192a9fb0c3">is_valid_tracking_id</a> (const std::string &amp;id)</td></tr>
+<tr class="separator:adb702de36b91e1da78929b192a9fb0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3123a7ad18ee7a84fde227fc980c8ef6" id="r_a3123a7ad18ee7a84fde227fc980c8ef6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1service.html#a3123a7ad18ee7a84fde227fc980c8ef6">set_tracking_id</a> (grpc::ClientContext &amp;context, const std::string &amp;id)</td></tr>
+<tr class="separator:a3123a7ad18ee7a84fde227fc980c8ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2da5e86a109060f47f4261181bd65a4b" id="r_a2da5e86a109060f47f4261181bd65a4b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1service.html#a2da5e86a109060f47f4261181bd65a4b">get_tracking_id</a> (const grpc::ServerContext &amp;context)</td></tr>
+<tr class="separator:a2da5e86a109060f47f4261181bd65a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5fa11e35e7a549c179834573e1abb7" id="r_a9f5fa11e35e7a549c179834573e1abb7"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1service.html#a9f5fa11e35e7a549c179834573e1abb7">operator&lt;&lt;</a> (std::ostream &amp;out, const Corpus &amp;corpus)</td></tr>
+<tr class="separator:a9f5fa11e35e7a549c179834573e1abb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa2a00c5d85f05b437d2357b4c75d648" id="r_aaa2a00c5d85f05b437d2357b4c75d648"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1service.html#aaa2a00c5d85f05b437d2357b4c75d648">check_compatible</a> (const Corpus &amp;a, const Corpus &amp;b)</td></tr>
+<tr class="separator:aaa2a00c5d85f05b437d2357b4c75d648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a345d38ff1fb859d0b86939259e01a8bf" id="r_a345d38ff1fb859d0b86939259e01a8bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1service.html#a345d38ff1fb859d0b86939259e01a8bf">initialize_from_stubs</a> (const <a class="el" href="classnetspeak_1_1service_1_1LoadBalanceProxy.html#aba48e51ba236a54f05ae6c86f5bf0565">LoadBalanceProxy::StubVector</a> &amp;stubs, std::unordered_map&lt; std::string, std::vector&lt; <a class="el" href="classnetspeak_1_1service_1_1LoadBalanceProxy.html#af15cf1c1d2602438d6bc3f5962ce7576">LoadBalanceProxy::StubPtr</a> &gt; &gt; &amp;services, std::vector&lt; Corpus &gt; &amp;corpora)</td></tr>
+<tr class="separator:a345d38ff1fb859d0b86939259e01a8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf5b62e0ec7d7138fda7239a43049771" id="r_abf5b62e0ec7d7138fda7239a43049771"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1service.html#abf5b62e0ec7d7138fda7239a43049771">bit_mix</a> (uint64_t x)</td></tr>
+<tr class="memdesc:abf5b62e0ec7d7138fda7239a43049771"><td class="mdescLeft">&#160;</td><td class="mdescRight">This determinestically returns a random number from the given number.  <br /></td></tr>
+<tr class="separator:abf5b62e0ec7d7138fda7239a43049771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d63ea4d672ce15b7fbc671e76939284" id="r_a2d63ea4d672ce15b7fbc671e76939284"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1service.html#a2d63ea4d672ce15b7fbc671e76939284">utc_timestamp</a> ()</td></tr>
+<tr class="memdesc:a2d63ea4d672ce15b7fbc671e76939284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current time formatted as a string following the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format for UTC date and time.  <br /></td></tr>
+<tr class="separator:a2d63ea4d672ce15b7fbc671e76939284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ce9e6b6f83b0b45f9a8474b5210dce9" id="r_a2ce9e6b6f83b0b45f9a8474b5210dce9"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1service.html#a2ce9e6b6f83b0b45f9a8474b5210dce9">get_log_file_prefix</a> ()</td></tr>
+<tr class="separator:a2ce9e6b6f83b0b45f9a8474b5210dce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75b5182433d6eb37dde58d0efff5b799" id="r_a75b5182433d6eb37dde58d0efff5b799"><td class="memTemplParams" colspan="2">template&lt;class S , class R &gt; </td></tr>
+<tr class="memitem:a75b5182433d6eb37dde58d0efff5b799"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html">util::JsonWriter::ObjectContinue</a>&lt; S, R &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1service.html#a75b5182433d6eb37dde58d0efff5b799">log_boilerplate</a> (<a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1Value.html">util::JsonWriter::Value</a>&lt; S, R &gt; writer, uint64_t req_id, const std::string &amp;user, const google::protobuf::Message &amp;message)</td></tr>
+<tr class="separator:a75b5182433d6eb37dde58d0efff5b799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd8a38b84a6aa4b293543abb10f1fb8" id="r_aebd8a38b84a6aa4b293543abb10f1fb8"><td class="memTemplParams" colspan="2">template&lt;class S , class R &gt; </td></tr>
+<tr class="memitem:aebd8a38b84a6aa4b293543abb10f1fb8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html">util::JsonWriter::ObjectContinue</a>&lt; S, R &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenetspeak_1_1service.html#aebd8a38b84a6aa4b293543abb10f1fb8">log_error_status</a> (<a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html">util::JsonWriter::ObjectContinue</a>&lt; S, R &gt; writer, const grpc::Status &amp;status)</td></tr>
+<tr class="separator:aebd8a38b84a6aa4b293543abb10f1fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="abf5b62e0ec7d7138fda7239a43049771" name="abf5b62e0ec7d7138fda7239a43049771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf5b62e0ec7d7138fda7239a43049771">&#9670;&#160;</a></span>bit_mix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t netspeak::service::bit_mix </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This determinestically returns a random number from the given number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint64_t </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="LoadBalanceProxy_8cpp_source.html#l00064">64</a> of file <a class="el" href="LoadBalanceProxy_8cpp_source.html">LoadBalanceProxy.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>                             {</div>
+<div class="line"><span class="lineno">   65</span>  <span class="comment">// do 16 iterations of xorshift* using x as the seed</span></div>
+<div class="line"><span class="lineno">   66</span>  <span class="comment">// https://en.wikipedia.org/wiki/Xorshift#xorshift*</span></div>
+<div class="line"><span class="lineno">   67</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 16; i &gt; 0; i--) {</div>
+<div class="line"><span class="lineno">   68</span>    x ^= x &gt;&gt; 12; <span class="comment">// a</span></div>
+<div class="line"><span class="lineno">   69</span>    x ^= x &lt;&lt; 25; <span class="comment">// b</span></div>
+<div class="line"><span class="lineno">   70</span>    x ^= x &gt;&gt; 27; <span class="comment">// c</span></div>
+<div class="line"><span class="lineno">   71</span>  }</div>
+<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">return</span> x * UINT64_C(0x2545F4914F6CDD1D);</div>
+<div class="line"><span class="lineno">   73</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_abf5b62e0ec7d7138fda7239a43049771_icgraph.svg" width="646" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aaa2a00c5d85f05b437d2357b4c75d648" name="aaa2a00c5d85f05b437d2357b4c75d648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa2a00c5d85f05b437d2357b4c75d648">&#9670;&#160;</a></span>check_compatible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void netspeak::service::check_compatible </td>
+          <td>(</td>
+          <td class="paramtype">const Corpus &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Corpus &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="LoadBalanceProxy_8cpp_source.html#l00015">15</a> of file <a class="el" href="LoadBalanceProxy_8cpp_source.html">LoadBalanceProxy.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                        {</div>
+<div class="line"><span class="lineno">   16</span>  <span class="keywordflow">if</span> (!LoadBalanceProxy::areCompatible(a, b)) {</div>
+<div class="line"><span class="lineno">   17</span>    std::stringstream what;</div>
+<div class="line"><span class="lineno">   18</span>    what &lt;&lt; <span class="stringliteral">&quot;The corpora &quot;</span> &lt;&lt; a &lt;&lt; <span class="stringliteral">&quot; and &quot;</span> &lt;&lt; b &lt;&lt; <span class="stringliteral">&quot; have the same key but are incompatible.&quot;</span>;</div>
+<div class="line"><span class="lineno">   19</span>    <span class="keywordflow">throw</span> std::logic_error(what.str());</div>
+<div class="line"><span class="lineno">   20</span>  }</div>
+<div class="line"><span class="lineno">   21</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_aaa2a00c5d85f05b437d2357b4c75d648_cgraph.svg" width="450" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_aaa2a00c5d85f05b437d2357b4c75d648_icgraph.svg" width="643" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2ce9e6b6f83b0b45f9a8474b5210dce9" name="a2ce9e6b6f83b0b45f9a8474b5210dce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ce9e6b6f83b0b45f9a8474b5210dce9">&#9670;&#160;</a></span>get_log_file_prefix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string netspeak::service::get_log_file_prefix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>could we just use the utc_timestamp instead or use - as a separate but keep the decimal point? The latter would only require a different format specifier: <code>{:Y-m-dTH-M-SZ}</code>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="RequestLogger_8cpp_source.html#l00027">27</a> of file <a class="el" href="RequestLogger_8cpp_source.html">RequestLogger.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>                                       {</div>
+<div class="line"><span class="lineno">   30</span>  <span class="keyword">auto</span> time = <a class="code hl_function" href="namespacenetspeak_1_1service.html#a2d63ea4d672ce15b7fbc671e76939284">netspeak::service::utc_timestamp</a>();</div>
+<div class="line"><span class="lineno">   31</span>  std::replace(time.begin(), time.end(), <span class="charliteral">&#39;:&#39;</span>, <span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><span class="lineno">   32</span>  std::replace(time.begin(), time.end(), <span class="charliteral">&#39;.&#39;</span>, <span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><span class="lineno">   33</span>  <span class="keywordflow">return</span> time;</div>
+<div class="line"><span class="lineno">   34</span>}</div>
+<div class="ttc" id="anamespacenetspeak_1_1service_html_a2d63ea4d672ce15b7fbc671e76939284"><div class="ttname"><a href="namespacenetspeak_1_1service.html#a2d63ea4d672ce15b7fbc671e76939284">netspeak::service::utc_timestamp</a></div><div class="ttdeci">static std::string utc_timestamp()</div><div class="ttdoc">Returns the current time formatted as a string following the ISO 8601 format for UTC date and time.</div><div class="ttdef"><b>Definition</b> <a href="RequestLogger_8cpp_source.html#l00022">RequestLogger.cpp:22</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_a2ce9e6b6f83b0b45f9a8474b5210dce9_cgraph.svg" width="350" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2da5e86a109060f47f4261181bd65a4b" name="a2da5e86a109060f47f4261181bd65a4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2da5e86a109060f47f4261181bd65a4b">&#9670;&#160;</a></span>get_tracking_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string netspeak::service::get_tracking_id </td>
+          <td>(</td>
+          <td class="paramtype">const grpc::ServerContext &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tracking_8cpp_source.html#l00026">26</a> of file <a class="el" href="tracking_8cpp_source.html">tracking.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                            {</div>
+<div class="line"><span class="lineno">   27</span>  std::string tracking_id;</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; metadata = context.client_metadata();</div>
+<div class="line"><span class="lineno">   30</span>  <span class="keyword">auto</span> it = metadata.find(<span class="stringliteral">&quot;netspeak-tracking-id&quot;</span>);</div>
+<div class="line"><span class="lineno">   31</span>  <span class="keywordflow">if</span> (it != metadata.end()) {</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keyword">const</span> <span class="keyword">auto</span> id_raw = it-&gt;second;</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>    <span class="comment">// the tracking id is expected to by an 128bit hexadecimal number.</span></div>
+<div class="line"><span class="lineno">   35</span>    <span class="comment">// if that is not case, the given tracking id will be ignored.</span></div>
+<div class="line"><span class="lineno">   36</span>    <span class="comment">// valid tracking ids will be normalized to all lower-case letters.</span></div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">if</span> (id_raw.length() == 32) {</div>
+<div class="line"><span class="lineno">   39</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> c : id_raw) {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> ((c &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; c &lt;= <span class="charliteral">&#39;9&#39;</span>) || (c &gt;= <span class="charliteral">&#39;a&#39;</span> &amp;&amp; c &lt;= <span class="charliteral">&#39;f&#39;</span>)) {</div>
+<div class="line"><span class="lineno">   41</span>          tracking_id.push_back(c);</div>
+<div class="line"><span class="lineno">   42</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c &gt;= <span class="charliteral">&#39;A&#39;</span> &amp;&amp; c &lt;= <span class="charliteral">&#39;F&#39;</span>) {</div>
+<div class="line"><span class="lineno">   43</span>          tracking_id.push_back(<span class="charliteral">&#39;a&#39;</span> + c - <span class="charliteral">&#39;A&#39;</span>);</div>
+<div class="line"><span class="lineno">   44</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   45</span>          <span class="comment">// invalid</span></div>
+<div class="line"><span class="lineno">   46</span>          tracking_id.clear();</div>
+<div class="line"><span class="lineno">   47</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>      }</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="line"><span class="lineno">   51</span>  }</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>  <span class="keywordflow">return</span> tracking_id;</div>
+<div class="line"><span class="lineno">   54</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_a2da5e86a109060f47f4261181bd65a4b_icgraph.svg" width="406" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a345d38ff1fb859d0b86939259e01a8bf" name="a345d38ff1fb859d0b86939259e01a8bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a345d38ff1fb859d0b86939259e01a8bf">&#9670;&#160;</a></span>initialize_from_stubs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void netspeak::service::initialize_from_stubs </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1service_1_1LoadBalanceProxy.html#aba48e51ba236a54f05ae6c86f5bf0565">LoadBalanceProxy::StubVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>stubs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_map&lt; std::string, std::vector&lt; <a class="el" href="classnetspeak_1_1service_1_1LoadBalanceProxy.html#af15cf1c1d2602438d6bc3f5962ce7576">LoadBalanceProxy::StubPtr</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>services</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; Corpus &gt; &amp;&#160;</td>
+          <td class="paramname"><em>corpora</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="LoadBalanceProxy_8cpp_source.html#l00023">23</a> of file <a class="el" href="LoadBalanceProxy_8cpp_source.html">LoadBalanceProxy.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>                                                       {</div>
+<div class="line"><span class="lineno">   26</span>  std::unordered_map&lt;std::string, Corpus&gt; corpora_map;</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classnetspeak_1_1value_1_1pair.html">pair</a> : stubs) {</div>
+<div class="line"><span class="lineno">   29</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; corpus = <a class="code hl_class" href="classnetspeak_1_1value_1_1pair.html">pair</a>.first;</div>
+<div class="line"><span class="lineno">   30</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; stub = <a class="code hl_class" href="classnetspeak_1_1value_1_1pair.html">pair</a>.second;</div>
+<div class="line"><span class="lineno">   31</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; key = corpus.key();</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>    <span class="comment">// add or check the current corpus</span></div>
+<div class="line"><span class="lineno">   34</span>    <span class="keyword">auto</span> corpora_it = corpora_map.find(key);</div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">if</span> (corpora_it == corpora_map.end()) {</div>
+<div class="line"><span class="lineno">   36</span>      corpora.push_back(corpus);</div>
+<div class="line"><span class="lineno">   37</span>      corpora_map.emplace(key, corpus);</div>
+<div class="line"><span class="lineno">   38</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   39</span>      check_compatible(corpora_it-&gt;second, corpus);</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>    <span class="comment">// add the stub</span></div>
+<div class="line"><span class="lineno">   43</span>    <span class="keyword">auto</span> it = services.find(key);</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">if</span> (it == services.end()) {</div>
+<div class="line"><span class="lineno">   45</span>      std::vector&lt;LoadBalanceProxy::StubPtr&gt; list{ stub };</div>
+<div class="line"><span class="lineno">   46</span>      services.emplace(key, list);</div>
+<div class="line"><span class="lineno">   47</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   48</span>      it-&gt;second.push_back(stub);</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="line"><span class="lineno">   50</span>  }</div>
+<div class="line"><span class="lineno">   51</span>}</div>
+<div class="ttc" id="aclassnetspeak_1_1value_1_1pair_html"><div class="ttname"><a href="classnetspeak_1_1value_1_1pair.html">netspeak::value::pair</a></div><div class="ttdef"><b>Definition</b> <a href="pair_8hpp_source.html#l00011">pair.hpp:11</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_a345d38ff1fb859d0b86939259e01a8bf_cgraph.svg" width="656" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_a345d38ff1fb859d0b86939259e01a8bf_icgraph.svg" width="450" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="adb702de36b91e1da78929b192a9fb0c3" name="adb702de36b91e1da78929b192a9fb0c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb702de36b91e1da78929b192a9fb0c3">&#9670;&#160;</a></span>is_valid_tracking_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool netspeak::service::is_valid_tracking_id </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tracking_8cpp_source.html#l00006">6</a> of file <a class="el" href="tracking_8cpp_source.html">tracking.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>                                               {</div>
+<div class="line"><span class="lineno">    7</span>  <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.length() != 32) {</div>
+<div class="line"><span class="lineno">    8</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">    9</span>  }</div>
+<div class="line"><span class="lineno">   10</span> </div>
+<div class="line"><span class="lineno">   11</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> c : id) {</div>
+<div class="line"><span class="lineno">   12</span>    <span class="keywordflow">if</span> (!((c &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; c &lt;= <span class="charliteral">&#39;9&#39;</span>) || (c &gt;= <span class="charliteral">&#39;a&#39;</span> &amp;&amp; c &lt;= <span class="charliteral">&#39;f&#39;</span>) || (c &gt;= <span class="charliteral">&#39;A&#39;</span> &amp;&amp; c &lt;= <span class="charliteral">&#39;F&#39;</span>))) {</div>
+<div class="line"><span class="lineno">   13</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="line"><span class="lineno">   15</span>  }</div>
+<div class="line"><span class="lineno">   16</span> </div>
+<div class="line"><span class="lineno">   17</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   18</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_adb702de36b91e1da78929b192a9fb0c3_icgraph.svg" width="526" height="68"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a75b5182433d6eb37dde58d0efff5b799" name="a75b5182433d6eb37dde58d0efff5b799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75b5182433d6eb37dde58d0efff5b799">&#9670;&#160;</a></span>log_boilerplate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class S , class R &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html">util::JsonWriter::ObjectContinue</a>&lt; S, R &gt; netspeak::service::log_boilerplate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1Value.html">util::JsonWriter::Value</a>&lt; S, R &gt;&#160;</td>
+          <td class="paramname"><em>writer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>req_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const google::protobuf::Message &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RequestLogger_8cpp_source.html#l00053">53</a> of file <a class="el" href="RequestLogger_8cpp_source.html">RequestLogger.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>                                                                                             {</div>
+<div class="line"><span class="lineno">   56</span>  <span class="keywordflow">return</span> writer.<a class="code hl_function" href="classnetspeak_1_1util_1_1JsonWriter_1_1Value.html#a26810075211549614a9b03eb4afbedb9">object</a>()</div>
+<div class="line"><span class="lineno">   57</span>      .prop(<span class="stringliteral">&quot;timestamp&quot;</span>)</div>
+<div class="line"><span class="lineno">   58</span>      .string(<a class="code hl_function" href="namespacenetspeak_1_1service.html#a2d63ea4d672ce15b7fbc671e76939284">utc_timestamp</a>())</div>
+<div class="line"><span class="lineno">   59</span>      .prop(<span class="stringliteral">&quot;req_id&quot;</span>)</div>
+<div class="line"><span class="lineno">   60</span>      .number(req_id)</div>
+<div class="line"><span class="lineno">   61</span>      .prop(<span class="stringliteral">&quot;user&quot;</span>)</div>
+<div class="line"><span class="lineno">   62</span>      .string(user)</div>
+<div class="line"><span class="lineno">   63</span>      .prop(<span class="stringliteral">&quot;message&quot;</span>)</div>
+<div class="line"><span class="lineno">   64</span>      .protobuf_message(message);</div>
+<div class="line"><span class="lineno">   65</span>}</div>
+<div class="ttc" id="aclassnetspeak_1_1util_1_1JsonWriter_1_1Value_html_a26810075211549614a9b03eb4afbedb9"><div class="ttname"><a href="classnetspeak_1_1util_1_1JsonWriter_1_1Value.html#a26810075211549614a9b03eb4afbedb9">netspeak::util::JsonWriter::Value::object</a></div><div class="ttdeci">ObjectStart&lt; S, R &gt; object()</div><div class="ttdef"><b>Definition</b> <a href="JsonWriter_8hpp_source.html#l00149">JsonWriter.hpp:149</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_a75b5182433d6eb37dde58d0efff5b799_cgraph.svg" width="590" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_a75b5182433d6eb37dde58d0efff5b799_icgraph.svg" width="406" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aebd8a38b84a6aa4b293543abb10f1fb8" name="aebd8a38b84a6aa4b293543abb10f1fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd8a38b84a6aa4b293543abb10f1fb8">&#9670;&#160;</a></span>log_error_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class S , class R &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html">util::JsonWriter::ObjectContinue</a>&lt; S, R &gt; netspeak::service::log_error_status </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html">util::JsonWriter::ObjectContinue</a>&lt; S, R &gt;&#160;</td>
+          <td class="paramname"><em>writer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const grpc::Status &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RequestLogger_8cpp_source.html#l00067">67</a> of file <a class="el" href="RequestLogger_8cpp_source.html">RequestLogger.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                                                  {</div>
+<div class="line"><span class="lineno">   69</span>  <span class="keywordflow">return</span> writer.<a class="code hl_function" href="classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html#aa7d3f4f919394e032f405e39e58d7958">prop</a>(<span class="stringliteral">&quot;status&quot;</span>)</div>
+<div class="line"><span class="lineno">   70</span>      .object()</div>
+<div class="line"><span class="lineno">   71</span>      .prop(<span class="stringliteral">&quot;code&quot;</span>)</div>
+<div class="line"><span class="lineno">   72</span>      .number(status.error_code())</div>
+<div class="line"><span class="lineno">   73</span>      .prop(<span class="stringliteral">&quot;message&quot;</span>)</div>
+<div class="line"><span class="lineno">   74</span>      .string(status.error_message())</div>
+<div class="line"><span class="lineno">   75</span>      .prop(<span class="stringliteral">&quot;details&quot;</span>)</div>
+<div class="line"><span class="lineno">   76</span>      .string(status.error_details())</div>
+<div class="line"><span class="lineno">   77</span>      .endObject();</div>
+<div class="line"><span class="lineno">   78</span>}</div>
+<div class="ttc" id="aclassnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue_html_aa7d3f4f919394e032f405e39e58d7958"><div class="ttname"><a href="classnetspeak_1_1util_1_1JsonWriter_1_1ObjectContinue.html#aa7d3f4f919394e032f405e39e58d7958">netspeak::util::JsonWriter::ObjectContinue::prop</a></div><div class="ttdeci">Value&lt; S, ObjectContinue&lt; S, R &gt; &gt; prop(const std::string &amp;key)</div><div class="ttdef"><b>Definition</b> <a href="JsonWriter_8hpp_source.html#l00162">JsonWriter.hpp:162</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_aebd8a38b84a6aa4b293543abb10f1fb8_cgraph.svg" width="787" height="103"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_aebd8a38b84a6aa4b293543abb10f1fb8_icgraph.svg" width="406" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9f5fa11e35e7a549c179834573e1abb7" name="a9f5fa11e35e7a549c179834573e1abb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5fa11e35e7a549c179834573e1abb7">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; netspeak::service::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Corpus &amp;&#160;</td>
+          <td class="paramname"><em>corpus</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="service_8cpp_source.html#l00014">14</a> of file <a class="el" href="service_8cpp_source.html">service.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>                                                              {</div>
+<div class="line"><span class="lineno">   15</span>  <span class="keywordflow">return</span> out &lt;&lt; corpus.name() &lt;&lt; <span class="stringliteral">&quot; (key=\&quot;&quot;</span> &lt;&lt; corpus.key() &lt;&lt; <span class="stringliteral">&quot;\&quot; lang=&quot;</span> &lt;&lt; corpus.language() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   16</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3123a7ad18ee7a84fde227fc980c8ef6" name="a3123a7ad18ee7a84fde227fc980c8ef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3123a7ad18ee7a84fde227fc980c8ef6">&#9670;&#160;</a></span>set_tracking_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void netspeak::service::set_tracking_id </td>
+          <td>(</td>
+          <td class="paramtype">grpc::ClientContext &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tracking_8cpp_source.html#l00020">20</a> of file <a class="el" href="tracking_8cpp_source.html">tracking.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                                      {</div>
+<div class="line"><span class="lineno">   21</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacenetspeak_1_1service.html#adb702de36b91e1da78929b192a9fb0c3">is_valid_tracking_id</a>(<span class="keywordtype">id</span>)) {</div>
+<div class="line"><span class="lineno">   22</span>    context.AddMetadata(<span class="stringliteral">&quot;netspeak-tracking-id&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   23</span>  }</div>
+<div class="line"><span class="lineno">   24</span>}</div>
+<div class="ttc" id="anamespacenetspeak_1_1service_html_adb702de36b91e1da78929b192a9fb0c3"><div class="ttname"><a href="namespacenetspeak_1_1service.html#adb702de36b91e1da78929b192a9fb0c3">netspeak::service::is_valid_tracking_id</a></div><div class="ttdeci">bool is_valid_tracking_id(const std::string &amp;id)</div><div class="ttdef"><b>Definition</b> <a href="tracking_8cpp_source.html#l00006">tracking.cpp:6</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_a3123a7ad18ee7a84fde227fc980c8ef6_cgraph.svg" width="355" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_a3123a7ad18ee7a84fde227fc980c8ef6_icgraph.svg" width="327" height="68"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2d63ea4d672ce15b7fbc671e76939284" name="a2d63ea4d672ce15b7fbc671e76939284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d63ea4d672ce15b7fbc671e76939284">&#9670;&#160;</a></span>utc_timestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string netspeak::service::utc_timestamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current time formatted as a string following the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format for UTC date and time. </p>
+
+<p class="definition">Definition at line <a class="el" href="RequestLogger_8cpp_source.html#l00022">22</a> of file <a class="el" href="RequestLogger_8cpp_source.html">RequestLogger.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>                                 {</div>
+<div class="line"><span class="lineno">   23</span>  <span class="keyword">const</span> <span class="keyword">auto</span> now = std::chrono::time_point_cast&lt;std::chrono::microseconds&gt;(std::chrono::system_clock::now());</div>
+<div class="line"><span class="lineno">   24</span>  <span class="keywordflow">return</span> std::format(<span class="stringliteral">&quot;{:%FT%TZ}&quot;</span>, now);</div>
+<div class="line"><span class="lineno">   25</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacenetspeak_1_1service_a2d63ea4d672ce15b7fbc671e76939284_icgraph.svg" width="599" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacenetspeak.html">netspeak</a></li><li class="navelem"><a class="el" href="namespacenetspeak_1_1service.html">service</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

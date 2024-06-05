@@ -1,0 +1,23 @@
+<map id="cli::ShellCommand::run" name="cli::ShellCommand::run">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,64,179,89"/>
+<area shape="rect" id="Node000002" href="$namespacecli.html#af5a194c0dcd2ddaa3314841efa4331b5" title=" " alt="" coords="227,39,405,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,64,213,60,213,66,179,70"/>
+<area shape="rect" id="Node000006" href="$namespacecli.html#a22879e42bef83852f1a2561c844fbe00" title=" " alt="" coords="234,88,398,113"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="179,83,220,88,220,93,179,89"/>
+<area shape="rect" id="Node000003" href="$namespacecli.html#a83d85626e46ec5febb1e46ac750f88cb" title=" " alt="" coords="453,8,623,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="406,36,439,32,440,37,406,42"/>
+<area shape="rect" id="Node000005" href="$namespacecli.html#a4671fa197b7eee6dfa2cd7789a6f4d29" title=" " alt="" coords="487,59,589,84"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="406,57,473,63,473,68,406,62"/>
+<area shape="rect" id="Node000004" href="$namespacecli.html#ae9428c4a49b414b314134bdf38214c6e" title="Returns the corpora of the given stub." alt="" coords="687,5,804,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="623,17,673,16,673,22,623,22"/>
+<area shape="poly" id="edge11_Node000006_Node000005" title=" " alt="" coords="398,87,473,77,474,82,399,92"/>
+<area shape="rect" id="Node000007" href="$namespacenetspeak_1_1util.html#ad2441a387c3a4c47e09c373e9412fad0" title=" " alt="" coords="469,112,607,137"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="399,107,456,113,455,118,398,112"/>
+<area shape="rect" id="Node000008" href="$namespacenetspeak_1_1util.html#ab27a22c787271513007af0719b17cef9" title=" " alt="" coords="675,55,815,95"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="591,109,661,93,662,98,593,115"/>
+<area shape="rect" id="Node000009" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="868,149,1019,175"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="608,128,855,151,854,157,607,134"/>
+<area shape="rect" id="Node000010" href="$namespacenetspeak_1_1util.html#a93e18aaa529a497b6afdf4b3bd221182" title=" " alt="" coords="671,170,820,210"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="580,135,669,163,668,168,578,140"/>
+<area shape="poly" id="edge10_Node000010_Node000009" title=" " alt="" coords="820,177,854,172,854,177,821,182"/>
+</map>

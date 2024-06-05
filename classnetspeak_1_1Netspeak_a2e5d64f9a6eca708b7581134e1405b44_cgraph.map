@@ -1,0 +1,30 @@
+<map id="netspeak::Netspeak::merge_raw_result_" name="netspeak::Netspeak::merge_raw_result_">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,142,160,182"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak.html#a7d85cfd91348af02f56ecd9cfd3961db" title=" " alt="" coords="208,5,423,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,140,142,90,173,63,207,41,225,33,227,38,209,46,176,68,146,94,101,144"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1model_1_1RawResult.html#a32a4802673f54798a24982dfbf6b79de" title="All added phrase result sets with at least one phrase." alt="" coords="211,55,419,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,139,207,112,245,98,246,103,209,116,136,144"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1PhraseCorpus.html#abc33683ef5bb92aa0dfa538fbbb7a05e" title=" " alt="" coords="226,170,405,210"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="161,169,213,175,212,180,160,174"/>
+<area shape="rect" id="Node000012" href="$classnetspeak_1_1model_1_1RawResult.html#a8140a1f1488146a09f0d81fb0162d959" title="All added phrase reference result sets with at least one reference." alt="" coords="211,234,419,274"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="123,180,209,220,230,227,228,232,207,224,121,185"/>
+<area shape="rect" id="Node000013" href="$classnetspeak_1_1model_1_1RawResult.html#ab3e394f89648ecfa9d9a3cfc4341a554" title=" " alt="" coords="211,298,419,338"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="101,180,146,232,176,260,209,284,221,290,219,295,207,288,173,264,142,236,97,184"/>
+<area shape="rect" id="Node000014" href="$namespacenetspeak_1_1util.html#a3d1d03195f7667390b5f548a2b9f9869" title="A simple function that appends all elements of other to base." alt="" coords="489,83,631,123"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="160,150,475,111,475,116,161,155"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#aad6c5a8708322dd600c23507cc2035f1" title=" " alt="" coords="481,148,639,173"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="404,177,467,169,468,174,405,182"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1PhraseCorpus.html#a94ce18bb4bf8e39af470b06c66d33797" title=" " alt="" coords="471,198,649,238"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="405,198,457,204,456,209,404,203"/>
+<area shape="rect" id="Node000011" href="$namespacenetspeak.html#af4c3dc2b340c7ade26cd9638cd1108a1" title="Returns the size in bytes each entry in the binary file of the given length (= n&#45;gram class)." alt="" coords="481,263,639,288"/>
+<area shape="poly" id="edge10_Node000004_Node000011" title=" " alt="" coords="392,208,424,220,448,234,472,248,494,256,492,261,470,252,445,238,422,224,390,213"/>
+<area shape="rect" id="Node000006" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="713,91,864,116"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="611,145,723,117,725,122,612,151"/>
+<area shape="rect" id="Node000008" href="$structnetspeak_1_1value_1_1value__traits.html#a27c68558505f16e261d678ee62c8a4f0" title=" " alt="" coords="703,141,874,181"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="640,195,695,181,696,187,641,201"/>
+<area shape="rect" id="Node000009" href="$classnetspeak_1_1model_1_1Words.html#a74ce9e9ed9745cdfffd806ec605974df" title=" " alt="" coords="699,205,878,245"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="649,218,686,219,686,224,649,223"/>
+<area shape="rect" id="Node000010" href="$classnetspeak_1_1model_1_1Phrase.html#a0cfea75b7cad4d3c9a3cd111789bd42f" title=" " alt="" coords="697,269,880,309"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="626,236,711,262,709,267,625,241"/>
+<area shape="poly" id="edge14_Node000014_Node000006" title=" " alt="" coords="632,101,699,101,699,106,632,106"/>
+</map>

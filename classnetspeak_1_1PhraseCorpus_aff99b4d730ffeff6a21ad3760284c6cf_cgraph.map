@@ -1,0 +1,25 @@
+<map id="netspeak::PhraseCorpus::open" name="netspeak::PhraseCorpus::open">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,61,184,101"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1PhraseCorpus.html#a13443ac2920664a49937a89caa622394" title=" " alt="" coords="474,25,653,65"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,72,460,51,461,56,184,77"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1PhraseCorpus.html#a59d4f58c04dbe6951096baad931ad6d7" title=" " alt="" coords="232,89,411,129"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="185,90,218,94,218,99,184,95"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1util_1_1StringIdMap_1_1Builder.html#aaae054493a636c9a6c9eb186f970e630" title=" " alt="" coords="736,5,905,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="653,36,722,30,722,36,653,41"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1error__message.html#a2a36ff57b354714213502a72e6d9d416" title=" " alt="" coords="727,69,914,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="653,58,714,69,714,74,653,63"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#aad6c5a8708322dd600c23507cc2035f1" title=" " alt="" coords="742,134,899,159"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="644,63,669,75,684,86,694,98,703,109,717,119,735,127,733,132,715,124,699,113,690,101,681,90,667,80,642,68"/>
+<area shape="rect" id="Node000006" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="973,159,1124,185"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="900,153,960,159,959,165,899,158"/>
+<area shape="rect" id="Node000008" href="$structnetspeak_1_1util_1_1FileDescriptor.html#abdc417820110f016b314a0a68e33775c" title=" " alt="" coords="459,177,668,217"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="378,127,496,170,494,175,377,132"/>
+<area shape="rect" id="Node000010" href="$namespacenetspeak.html#ad4aa35cf59e6cc5973a4da6d97a1c2b0" title=" " alt="" coords="475,89,652,129"/>
+<area shape="poly" id="edge13_Node000007_Node000010" title=" " alt="" coords="411,107,461,107,461,112,411,112"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="601,175,715,120,738,111,740,116,717,125,603,179"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="665,175,742,159,743,165,666,180"/>
+<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="668,189,959,174,959,179,668,195"/>
+<area shape="poly" id="edge12_Node000008_Node000008" title=" " alt="" coords="519,178,516,168,523,158,539,153,563,151,591,154,606,161,604,166,590,159,563,156,540,158,526,163,521,169,524,176"/>
+<area shape="rect" id="Node000009" href="$structnetspeak_1_1util_1_1FileDescriptor.html#a21032b84b713c8f0f84bfb5f70ea0bbf" title=" " alt="" coords="716,235,925,275"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="654,215,717,229,716,234,653,220"/>
+</map>

@@ -9,6 +9,6 @@ var classnetspeak_1_1bighashmap_1_1InternalMap =
     [ "~InternalMap", "classnetspeak_1_1bighashmap_1_1InternalMap.html#a16e90610f2d81a2fd2f68ca07f299a57", null ],
     [ "InternalMap", "classnetspeak_1_1bighashmap_1_1InternalMap.html#a2bf5f719141050961f5967e006036043", null ],
     [ "Get", "classnetspeak_1_1bighashmap_1_1InternalMap.html#af7547d2d66d8db1f2e9585ac049a414a", null ],
-    [ "Open", "classnetspeak_1_1bighashmap_1_1InternalMap.html#ae3abccfb1e0b5905ab99dae2a9e5e76b", null ],
+    [ "Open", "classnetspeak_1_1bighashmap_1_1InternalMap.html#a470932089af53c75aeeb67cf8032ef2e", null ],
     [ "data_", "classnetspeak_1_1bighashmap_1_1InternalMap.html#abaa62bfce8c7cb7f5be1d40784fb5fa4", null ]
 ];

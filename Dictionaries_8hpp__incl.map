@@ -1,0 +1,11 @@
+<map id="netspeak/Dictionaries.hpp" name="netspeak/Dictionaries.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="104,5,296,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,96,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,33,89,75,86,70,175,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="120,79,192,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="195,32,173,68,168,66,190,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="216,79,275,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="210,30,233,66,228,69,205,32"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="299,79,423,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="227,28,324,71,321,75,225,33"/>
+</map>

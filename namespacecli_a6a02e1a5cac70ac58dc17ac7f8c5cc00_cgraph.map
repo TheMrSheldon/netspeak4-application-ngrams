@@ -1,0 +1,9 @@
+<map id="cli::scanSources" name="cli::scanSources">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,70,132,95"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1service_1_1LoadBalanceProxy.html#a1ed5863b0775c1160e5c793e79516309" title="Returns the whether the two corpora are compatible by the definition of this proxy." alt="" coords="180,5,425,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,67,207,46,208,51,122,73"/>
+<area shape="rect" id="Node000003" href="$namespacecli.html#ae9428c4a49b414b314134bdf38214c6e" title="Returns the corpora of the given stub." alt="" coords="244,70,361,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,80,230,80,230,85,133,85"/>
+<area shape="rect" id="Node000004" href="$namespacecli.html#aa049984e5a8328fb9ff8fe3719602d80" title=" " alt="" coords="252,119,353,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="128,93,181,104,239,116,238,122,179,109,127,98"/>
+</map>

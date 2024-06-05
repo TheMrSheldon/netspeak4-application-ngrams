@@ -1,4 +1,5 @@
 <map id="netspeak::service::LoadBalanceProxy" name="netspeak::service::LoadBalanceProxy">
-<area shape="rect" id="node1" title="A proxy to unify and load&#45;balance any number of compatible Netspeak indexes." alt="" coords="27,80,172,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,193,32"/>
+<area shape="rect" id="Node000001" title="A proxy to unify and load&#45;balance any number of compatible Netspeak indexes." alt="" coords="11,119,180,379"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,185,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,84,98,119,93,119,93,84"/>
 </map>

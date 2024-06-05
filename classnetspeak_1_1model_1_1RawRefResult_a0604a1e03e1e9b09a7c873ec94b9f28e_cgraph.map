@@ -1,0 +1,7 @@
+<map id="netspeak::model::RawRefResult::disjoint_with" name="netspeak::model::RawRefResult::disjoint_with">
+<area shape="rect" id="Node000001" title="Returns whether this and the given raw result set do not share any common phrase references." alt="" coords="5,37,236,77"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1model_1_1RawRefResult.html#a53caa8af8c7e1f2b2f8d1beaf2061ef3" title="Returns whether this result set contains no phrase references." alt="" coords="284,5,515,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,41,270,37,271,43,237,47"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1model_1_1RawRefResult.html#a6f2f6c9a3bdf9fa2e03f93c6718911b6" title="The phrase references of this result set sorted by frequency in descending order." alt="" coords="284,69,515,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,68,271,72,270,77,236,73"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="netspeak::service::log_error_status" name="netspeak::service::log_error_status">
+<area shape="rect" id="Node000001" title=" " alt="" coords="255,37,400,77"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="365,26,352,19,327,16,306,18,293,23,289,29,291,36,286,38,283,28,290,18,305,13,327,11,353,14,367,21"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1service_1_1RequestLogger.html#af6f740ce3b61ce0457265f30a7d36488" title=" " alt="" coords="5,5,207,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,48,206,43,207,37,241,42"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1service_1_1RequestLogger.html#a131feb684685433d4f618ea9ba4e6380" title=" " alt="" coords="21,69,191,109"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="241,72,192,80,191,74,241,67"/>
+</map>

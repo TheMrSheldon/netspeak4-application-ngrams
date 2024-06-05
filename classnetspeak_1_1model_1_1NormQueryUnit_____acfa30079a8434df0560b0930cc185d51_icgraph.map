@@ -1,0 +1,14 @@
+<map id="netspeak::model::NormQueryUnit__::tag" name="netspeak::model::NormQueryUnit__::tag">
+<area shape="rect" id="Node000001" title=" " alt="" coords="540,85,755,125"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1model.html#a76cb5f6f16196d78de0430ccd2bb43a4" title=" " alt="" coords="276,5,492,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="587,82,491,46,445,33,446,28,493,41,589,77"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1model_1_1NormQueryUnit____.html#ad6a8f6f0ad9b7d031398e1b4b2f90f4d" title=" " alt="" coords="277,55,491,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="526,94,491,90,492,85,527,89"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1model.html#a48cbc76c3e91dedbda542ebaac4d9302" title=" " alt="" coords="276,120,492,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="527,120,492,124,492,119,526,115"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1model.html#a2e3fa40462fc88abd33620b09736dc0e" title=" " alt="" coords="302,194,466,234"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="587,132,434,196,432,191,585,128"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="429,182,413,175,384,173,359,175,343,179,338,185,341,193,336,194,333,184,340,175,358,169,384,167,414,170,431,177"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1model_1_1SimpleQuery.html#a5759acdd6e6a127b57a3975b0579fde9" title=" " alt="" coords="5,194,228,234"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="288,217,228,217,228,211,288,211"/>
+</map>

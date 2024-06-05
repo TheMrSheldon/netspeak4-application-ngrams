@@ -1,0 +1,17 @@
+<map id="netspeak::SimpleQueryOptimizer::optimize_simple_children" name="netspeak::SimpleQueryOptimizer::optimize_simple_children">
+<area shape="rect" id="Node000001" title=" " alt="" coords="779,101,1017,141"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1SimpleQueryOptimizer.html#a605b78bfa6d1898f7b5b5ca66fd95c31" title=" " alt="" coords="492,5,731,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="835,99,730,60,690,48,692,43,732,55,837,94"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1SimpleQueryOptimizer.html#a55c4015de0d1fa34754beb52f95119f6" title=" " alt="" coords="492,69,731,109"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="765,109,731,105,731,100,765,104"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1SimpleQueryOptimizer.html#a1ef947a07a36069a5be13d260b518350" title=" " alt="" coords="492,133,731,173"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="765,139,731,143,731,137,765,134"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1QueryNormalizer.html#a70187ab668d98c93cfc3a8d05ca1508e" title=" " alt="" coords="224,5,425,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="478,28,426,28,426,23,478,23"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1Netspeak.html#aaa049275c7a0a7f6721acf7422402bff" title=" " alt="" coords="5,5,157,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="210,28,158,28,158,23,210,23"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1SimpleQueryOptimizer.html#a6df1cdcea41d9914bb1063642d615bdf" title=" " alt="" coords="205,133,444,173"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="508,115,415,136,414,131,507,110"/>
+<area shape="poly" id="edge6_Node000006_Node000001" title=" " alt="" coords="427,173,495,184,571,191,651,191,730,183,797,164,856,139,858,144,799,169,731,188,652,197,571,196,494,189,427,179"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="478,156,444,156,444,151,478,151"/>
+</map>

@@ -1,0 +1,502 @@
+<!-- Heavily based on https://github.com/jothepro/doxygen-awesome-css/blob/main/doxygen-custom/header.html -->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- BEGIN opengraph metadata -->
+    <meta property="og:title" content=Netspeak />
+    <meta property="og:image" content="netspeak_logo.svg" />
+    <meta property="og:description" content="One word leads to another." />
+    <meta property="og:url" content="https://github.com/netspeak/netspeak4-application-ngrams" />
+    <!-- END opengraph metadata -->
+    <!-- BEGIN twitter metadata -->
+    <meta name="twitter:image:src" content="netspeak_logo.svg" />
+    <meta name="twitter:title" content="Netspeak" />
+    <meta name="twitter:description" content="One word leads to another." />
+    <!-- END twitter metadata -->
+    <title>Netspeak: netspeak/Configuration.cpp Source File</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/svg+xml" href="netspeak_logo.svg" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+    <script type="text/javascript" src="toggle-alternative-theme.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+        DoxygenAwesomeDarkModeToggle.init()
+        DoxygenAwesomeParagraphLink.init()
+        DoxygenAwesomeInteractiveToc.init()
+        DoxygenAwesomeTabs.init()
+    </script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-tabs.js" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- https://tholman.com/github-corners/ -->
+    <a href="https://github.com/netspeak/netspeak4-application-ngrams" class="github-corner"
+        title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 250 250" width="40" height="40"
+            style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg></a>
+    <style>
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+        @media (max-width:500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+    </style>
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectlogo"><img alt="Logo" src="netspeak_logo.svg" /></td>
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">Netspeak
+                                &#160;<span
+                                    id="projectnumber">4.2.0</span>
+                            </div>
+                            <div id="projectbrief">One word leads to another.</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Configuration_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Configuration.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Configuration_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;filesystem&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;<a class="code" href="Configuration_8hpp.html">netspeak/Configuration.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;<a class="code" href="traceable__error_8hpp.html">netspeak/util/traceable_error.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenetspeak.html">netspeak</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>fs = std::filesystem;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// CONSTANTS</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a043d5fe6357aa7c77b8e7c4ba98793a6">Configuration::PATH_TO_HOME</a>(<span class="stringliteral">&quot;path.to.home&quot;</span>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a5934de6cb2d3e1acfd3e8e8fb0f9c545">Configuration::PATH_TO_PHRASE_INDEX</a>(<span class="stringliteral">&quot;path.to.phrase-index&quot;</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#ad6abd01bad43bd65cd4f4a27128a6a2c">Configuration::PATH_TO_PHRASE_CORPUS</a>(<span class="stringliteral">&quot;path.to.phrase-corpus&quot;</span>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a575deec7f41100fcf0ac6c7f6769b5c4">Configuration::PATH_TO_PHRASE_DICTIONARY</a>(<span class="stringliteral">&quot;path.to.phrase-dictionary&quot;</span>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#ac880e45a2c2378445b85308869b95fa3">Configuration::PATH_TO_POSTLIST_INDEX</a>(<span class="stringliteral">&quot;path.to.postlist-index&quot;</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a95e77e1c9235a105c83479a258e4c2b5">Configuration::PATH_TO_HASH_DICTIONARY</a>(<span class="stringliteral">&quot;path.to.hash-dictionary&quot;</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a85f964e3737f343b0a02c65704069522">Configuration::PATH_TO_REGEX_VOCABULARY</a>(<span class="stringliteral">&quot;path.to.regex-vocabulary&quot;</span>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#abc5d494303d0ef71578d4d826dfdabd2">Configuration::EXTENDS</a>(<span class="stringliteral">&quot;extends&quot;</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a4919e573d786ddb208d3b0723764e347">Configuration::CORPUS_KEY</a>(<span class="stringliteral">&quot;corpus.key&quot;</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a20625755af33b0d8ceb43786c750dcd7">Configuration::CORPUS_NAME</a>(<span class="stringliteral">&quot;corpus.name&quot;</span>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a70fe81a79ae8918bae82e1eeddf8c4d1">Configuration::CORPUS_LANGUAGE</a>(<span class="stringliteral">&quot;corpus.language&quot;</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#aea91c4d0613324c7c68ce2e0d8b55f71">Configuration::CACHE_CAPACITY</a>(<span class="stringliteral">&quot;cache.capacity&quot;</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a00be569319f066bf5c43f5b3428492cf">Configuration::QUERY_LOWER_CASE</a>(<span class="stringliteral">&quot;query.lower-case&quot;</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#aeab3e57ee3572a5d45afb9284f8f60bf">Configuration::SEARCH_MAX_NORM_QUERIES</a>(<span class="stringliteral">&quot;search.max-norm-queries&quot;</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a833adc6bc2953dcb017de76b362ea64d">Configuration::SEARCH_REGEX_MAX_MATCHES</a>(<span class="stringliteral">&quot;search.regex.max-matches&quot;</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a61ae1ea682e322f808f2e3051d966df1">Configuration::SEARCH_REGEX_MAX_TIME</a>(<span class="stringliteral">&quot;search.regex.max-time&quot;</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a10f53641a0a389cf76113ac5d45fa2c4">Configuration::DEFAULT_PHRASE_INDEX_DIR_NAME</a>(<span class="stringliteral">&quot;phrase-index&quot;</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a01bd84fa12ab115554350b7664a4fe41">Configuration::DEFAULT_PHRASE_CORPUS_DIR_NAME</a>(<span class="stringliteral">&quot;phrase-corpus&quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a0968fc84850ad63b0b2cbd28db89262b">Configuration::DEFAULT_PHRASE_DICTIONARY_DIR_NAME</a>(<span class="stringliteral">&quot;phrase-dictionary&quot;</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a42ebba55a1dc316b71e2d1eb7902ae3f">Configuration::DEFAULT_POSTLIST_INDEX_DIR_NAME</a>(<span class="stringliteral">&quot;postlist-index&quot;</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a12566b5c05ec89b19cdaa548acb2e3e2">Configuration::DEFAULT_HASH_DICTIONARY_DIR_NAME</a>(<span class="stringliteral">&quot;hash-dictionary&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">const</span> std::string <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a8d50a601aaf9efc6f30738f35b7b632b">Configuration::DEFAULT_REGEX_VOCABULARY_DIR_NAME</a>(<span class="stringliteral">&quot;regex-vocabulary&quot;</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespacenetspeak.html#a95cab633d77077b6f561fdcb08dd91c3">   43</a></span><span class="keyword">const</span> std::unordered_set&lt;std::string&gt; <a class="code hl_variable" href="namespacenetspeak.html#a95cab633d77077b6f561fdcb08dd91c3">PATHS</a>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a043d5fe6357aa7c77b8e7c4ba98793a6">Configuration::PATH_TO_HOME</a>,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a5934de6cb2d3e1acfd3e8e8fb0f9c545">Configuration::PATH_TO_PHRASE_INDEX</a>,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#ad6abd01bad43bd65cd4f4a27128a6a2c">Configuration::PATH_TO_PHRASE_CORPUS</a>,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a575deec7f41100fcf0ac6c7f6769b5c4">Configuration::PATH_TO_PHRASE_DICTIONARY</a>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#ac880e45a2c2378445b85308869b95fa3">Configuration::PATH_TO_POSTLIST_INDEX</a>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a95e77e1c9235a105c83479a258e4c2b5">Configuration::PATH_TO_HASH_DICTIONARY</a>,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a85f964e3737f343b0a02c65704069522">Configuration::PATH_TO_REGEX_VOCABULARY</a>,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">// CONSTRUCTOR</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#a72f126113d7544a81dfc2c4b4a5cf784">   57</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a72f126113d7544a81dfc2c4b4a5cf784">Configuration::load_extends</a>() {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a20b8fe2645059f8f0b0c1da50285c4d4">config_</a>.<a class="code hl_function" href="classnetspeak_1_1util_1_1Config.html#ab380dc04a08e5c65adfdc3b13aa27fad">contains</a>(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#abc5d494303d0ef71578d4d826dfdabd2">EXTENDS</a>)) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">auto</span> extends_path = fs::path(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a20b8fe2645059f8f0b0c1da50285c4d4">config_</a>.<a class="code hl_function" href="classnetspeak_1_1util_1_1Config.html#a3664f30f248a879b1940df27a37f4f81">get</a>(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#abc5d494303d0ef71578d4d826dfdabd2">EXTENDS</a>));</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">if</span> (extends_path.empty()) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a78a1b06952d1d3727816d0f19028fb1f">base_dir_</a>.empty()) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      extends_path = fs::absolute(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a78a1b06952d1d3727816d0f19028fb1f">base_dir_</a> / extends_path);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a29e7dbca3b9b7ae6eff3b7d178320207">extends_</a> = std::make_unique&lt;Configuration&gt;(extends_path);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#a774b12e520ae186f5fa20ac901c3d72f">   69</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a774b12e520ae186f5fa20ac901c3d72f">Configuration::desugar_home</a>() {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a20b8fe2645059f8f0b0c1da50285c4d4">config_</a>.<a class="code hl_function" href="classnetspeak_1_1util_1_1Config.html#ab380dc04a08e5c65adfdc3b13aa27fad">contains</a>(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a043d5fe6357aa7c77b8e7c4ba98793a6">PATH_TO_HOME</a>)) {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">auto</span> home_path = fs::path(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a20b8fe2645059f8f0b0c1da50285c4d4">config_</a>.<a class="code hl_function" href="classnetspeak_1_1util_1_1Config.html#a3664f30f248a879b1940df27a37f4f81">get</a>(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a043d5fe6357aa7c77b8e7c4ba98793a6">PATH_TO_HOME</a>));</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">if</span> (home_path.empty()) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a78a1b06952d1d3727816d0f19028fb1f">base_dir_</a>.empty()) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      home_path = fs::absolute(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a78a1b06952d1d3727816d0f19028fb1f">base_dir_</a> / home_path);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">auto</span> set_default = [&amp;](<span class="keyword">const</span> std::string&amp; key, <span class="keyword">const</span> std::string&amp; default_value) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a20b8fe2645059f8f0b0c1da50285c4d4">config_</a>.<a class="code hl_function" href="classnetspeak_1_1util_1_1Config.html#ab380dc04a08e5c65adfdc3b13aa27fad">contains</a>(key)) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a20b8fe2645059f8f0b0c1da50285c4d4">config_</a>[key] = fs::weakly_canonical(fs::absolute(home_path / default_value)).string();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    };</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    set_default(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#ad6abd01bad43bd65cd4f4a27128a6a2c">PATH_TO_PHRASE_CORPUS</a>, <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a01bd84fa12ab115554350b7664a4fe41">DEFAULT_PHRASE_CORPUS_DIR_NAME</a>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    set_default(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a575deec7f41100fcf0ac6c7f6769b5c4">PATH_TO_PHRASE_DICTIONARY</a>, <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a0968fc84850ad63b0b2cbd28db89262b">DEFAULT_PHRASE_DICTIONARY_DIR_NAME</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    set_default(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a5934de6cb2d3e1acfd3e8e8fb0f9c545">PATH_TO_PHRASE_INDEX</a>, <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a10f53641a0a389cf76113ac5d45fa2c4">DEFAULT_PHRASE_INDEX_DIR_NAME</a>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    set_default(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#ac880e45a2c2378445b85308869b95fa3">PATH_TO_POSTLIST_INDEX</a>, <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a42ebba55a1dc316b71e2d1eb7902ae3f">DEFAULT_POSTLIST_INDEX_DIR_NAME</a>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    set_default(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a95e77e1c9235a105c83479a258e4c2b5">PATH_TO_HASH_DICTIONARY</a>, <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a12566b5c05ec89b19cdaa548acb2e3e2">DEFAULT_HASH_DICTIONARY_DIR_NAME</a>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    set_default(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a85f964e3737f343b0a02c65704069522">PATH_TO_REGEX_VOCABULARY</a>, <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a8d50a601aaf9efc6f30738f35b7b632b">DEFAULT_REGEX_VOCABULARY_DIR_NAME</a>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#a568baeba6c6624c55945ec9bcc0237c2">   94</a></span><a class="code hl_function" href="classnetspeak_1_1Configuration.html#a7de647fad059409f4a66618e5372c758">Configuration::Configuration</a>(std::initializer_list&lt;util::Config::initializer_list_type&gt; list)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    : config_(list), extends_(), base_dir_() {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a72f126113d7544a81dfc2c4b4a5cf784">load_extends</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a774b12e520ae186f5fa20ac901c3d72f">desugar_home</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><a class="code hl_function" href="classnetspeak_1_1Configuration.html#a7de647fad059409f4a66618e5372c758">Configuration::Configuration</a>(fs::path file_name) : config_(file_name), extends_(), base_dir_(file_name.parent_path()) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a72f126113d7544a81dfc2c4b4a5cf784">load_extends</a>();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a774b12e520ae186f5fa20ac901c3d72f">desugar_home</a>();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#ac9c67ce4d47206c1029175c44f8ccdfc">  103</a></span><a class="code hl_function" href="classnetspeak_1_1Configuration.html#a7de647fad059409f4a66618e5372c758">Configuration::Configuration</a>(<span class="keyword">const</span> <a class="code hl_class" href="classnetspeak_1_1util_1_1Config.html">util::Config</a>&amp; config) : config_(config), extends_(), base_dir_() {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a72f126113d7544a81dfc2c4b4a5cf784">load_extends</a>();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a774b12e520ae186f5fa20ac901c3d72f">desugar_home</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
+</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">// METHODS</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="foldopen" id="foldopen00112" data-start="{" data-end="}">
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#a3244253bdf9a9d68c88c5bcdea25db2a">  112</a></span>std::string <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a3244253bdf9a9d68c88c5bcdea25db2a">Configuration::get_required</a>(<span class="keyword">const</span> std::string&amp; key)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="keyword">auto</span> value = <a class="code hl_function" href="classnetspeak_1_1Configuration.html#aff9301d99209481a48c20c33a15de752">get_optional</a>(key);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keywordflow">if</span> (value) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">return</span> *value;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">throw</span> <a class="code hl_struct" href="structnetspeak_1_1util_1_1tracable__runtime__error.html">util::tracable_runtime_error</a>(<span class="stringliteral">&quot;The required key &quot;</span> + key + <span class="stringliteral">&quot; is missing.&quot;</span>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#aff9301d99209481a48c20c33a15de752">  120</a></span>std::optional&lt;std::string&gt; <a class="code hl_function" href="classnetspeak_1_1Configuration.html#aff9301d99209481a48c20c33a15de752">Configuration::get_optional</a>(<span class="keyword">const</span> std::string&amp; key)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a20b8fe2645059f8f0b0c1da50285c4d4">config_</a>.<a class="code hl_function" href="classnetspeak_1_1util_1_1Config.html#ab380dc04a08e5c65adfdc3b13aa27fad">contains</a>(key)) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a20b8fe2645059f8f0b0c1da50285c4d4">config_</a>.<a class="code hl_function" href="classnetspeak_1_1util_1_1Config.html#a3664f30f248a879b1940df27a37f4f81">get</a>(key);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a29e7dbca3b9b7ae6eff3b7d178320207">extends_</a>) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a29e7dbca3b9b7ae6eff3b7d178320207">extends_</a>-&gt;get_optional(key);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00129" data-start="{" data-end="}">
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#a418506b5c21390339b097336b71afa93">  129</a></span>std::string <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a418506b5c21390339b097336b71afa93">Configuration::get</a>(<span class="keyword">const</span> std::string&amp; key, <span class="keyword">const</span> std::string&amp; defaultValue)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="keyword">auto</span> value = <a class="code hl_function" href="classnetspeak_1_1Configuration.html#aff9301d99209481a48c20c33a15de752">get_optional</a>(key);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <span class="keywordflow">if</span> (value) {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">return</span> *value;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">return</span> defaultValue;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>}</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="foldopen" id="foldopen00138" data-start="{" data-end="}">
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="namespacenetspeak.html#a492bdb0b5b15556ec2f71bbe0e6bcf7a">  138</a></span>fs::path <a class="code hl_function" href="namespacenetspeak.html#a492bdb0b5b15556ec2f71bbe0e6bcf7a">relative_to</a>(<span class="keyword">const</span> std::string&amp; path, <span class="keyword">const</span> fs::path&amp; to) {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="keywordflow">if</span> (to.empty()) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordflow">return</span> fs::weakly_canonical(path);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">return</span> fs::weakly_canonical(fs::absolute(to / path));</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  }</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#a178b1a84cf240f11fbf98ba1ab113766">  145</a></span>fs::path <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a178b1a84cf240f11fbf98ba1ab113766">Configuration::get_required_path</a>(<span class="keyword">const</span> std::string&amp; key)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenetspeak.html#a492bdb0b5b15556ec2f71bbe0e6bcf7a">relative_to</a>(<a class="code hl_function" href="classnetspeak_1_1Configuration.html#a3244253bdf9a9d68c88c5bcdea25db2a">get_required</a>(key), <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a78a1b06952d1d3727816d0f19028fb1f">base_dir_</a>);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00148" data-start="{" data-end="}">
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#a68d3ae93a76264d217cab60f755e4510">  148</a></span>std::optional&lt;fs::path&gt; <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a68d3ae93a76264d217cab60f755e4510">Configuration::get_optional_path</a>(<span class="keyword">const</span> std::string&amp; key)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <span class="keyword">const</span> <span class="keyword">auto</span> optional = <a class="code hl_function" href="classnetspeak_1_1Configuration.html#aff9301d99209481a48c20c33a15de752">get_optional</a>(key);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="keywordflow">if</span> (!optional) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenetspeak.html#a492bdb0b5b15556ec2f71bbe0e6bcf7a">relative_to</a>(*optional, <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a78a1b06952d1d3727816d0f19028fb1f">base_dir_</a>);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00155" data-start="{" data-end="}">
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#a349f4a5c0bf2a9d116ccee84a774cb2a">  155</a></span>fs::path <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a349f4a5c0bf2a9d116ccee84a774cb2a">Configuration::get_path</a>(<span class="keyword">const</span> std::string&amp; key, <span class="keyword">const</span> std::string&amp; defaultValue)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenetspeak.html#a492bdb0b5b15556ec2f71bbe0e6bcf7a">relative_to</a>(<a class="code hl_function" href="classnetspeak_1_1Configuration.html#a418506b5c21390339b097336b71afa93">get</a>(key, defaultValue), <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a78a1b06952d1d3727816d0f19028fb1f">base_dir_</a>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>}</div>
+</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="foldopen" id="foldopen00159" data-start="{" data-end="}">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="namespacenetspeak.html#a566ee443ef0d78969a1b1376d1937067">  159</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespacenetspeak.html#a566ee443ef0d78969a1b1376d1937067">parse_bool</a>(<span class="keyword">const</span> std::string&amp; key, <span class="keyword">const</span> std::string&amp; value) {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="keywordflow">if</span> (value == <span class="stringliteral">&quot;false&quot;</span>) {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="keywordflow">if</span> (value == <span class="stringliteral">&quot;true&quot;</span>) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  std::stringstream out;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  out &lt;&lt; <span class="stringliteral">&quot;Invalid boolean value for &#39;&quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;&#39;. Expected &#39;true&#39; or &#39;false&#39; but found &#39;&quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;&#39;.&quot;</span>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <span class="keywordflow">throw</span> <a class="code hl_struct" href="structnetspeak_1_1util_1_1tracable__runtime__error.html">util::tracable_runtime_error</a>(out.str());</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#a7ef4052e920860d82856af52fa329941">  171</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a7ef4052e920860d82856af52fa329941">Configuration::get_required_bool</a>(<span class="keyword">const</span> std::string&amp; key)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenetspeak.html#a566ee443ef0d78969a1b1376d1937067">parse_bool</a>(key, <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a3244253bdf9a9d68c88c5bcdea25db2a">get_required</a>(key));</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00174" data-start="{" data-end="}">
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#aed2594665f7f0529186a7f50b318ef54">  174</a></span>std::optional&lt;bool&gt; <a class="code hl_function" href="classnetspeak_1_1Configuration.html#aed2594665f7f0529186a7f50b318ef54">Configuration::get_optional_bool</a>(<span class="keyword">const</span> std::string&amp; key)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="keyword">const</span> <span class="keyword">auto</span> optional = <a class="code hl_function" href="classnetspeak_1_1Configuration.html#aff9301d99209481a48c20c33a15de752">get_optional</a>(key);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="keywordflow">if</span> (!optional) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenetspeak.html#a566ee443ef0d78969a1b1376d1937067">parse_bool</a>(key, *optional);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00181" data-start="{" data-end="}">
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#ab49a5e48856245ce0c3a1705826c500a">  181</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classnetspeak_1_1Configuration.html#ab49a5e48856245ce0c3a1705826c500a">Configuration::get_bool</a>(<span class="keyword">const</span> std::string&amp; key, <span class="keywordtype">bool</span> defaultValue)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1Configuration.html#aed2594665f7f0529186a7f50b318ef54">get_optional_bool</a>(key).value_or(std::move(defaultValue));</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>}</div>
+</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="foldopen" id="foldopen00186" data-start="{" data-end="}">
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#a859de4b34a67ec88117409c9eb0bcc99">  186</a></span>std::unordered_set&lt;std::string&gt; <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a859de4b34a67ec88117409c9eb0bcc99">Configuration::keys</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  std::unordered_set&lt;std::string&gt; result;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a29e7dbca3b9b7ae6eff3b7d178320207">extends_</a>) {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    result = <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a29e7dbca3b9b7ae6eff3b7d178320207">extends_</a>-&gt;keys();</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; foo : <a class="code hl_variable" href="classnetspeak_1_1Configuration.html#a20b8fe2645059f8f0b0c1da50285c4d4">config_</a>) {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    result.insert(foo.first);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  }</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  result.erase(<a class="code hl_variable" href="classnetspeak_1_1Configuration.html#abc5d494303d0ef71578d4d826dfdabd2">EXTENDS</a>);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>}</div>
+</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="foldopen" id="foldopen00202" data-start="{" data-end="}">
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#ac63101c63ef3cb005f881833757c121d">  202</a></span><a class="code hl_class" href="classnetspeak_1_1util_1_1Config.html">util::Config</a> <a class="code hl_function" href="classnetspeak_1_1Configuration.html#ac63101c63ef3cb005f881833757c121d">Configuration::full_config</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <a class="code hl_class" href="classnetspeak_1_1util_1_1Config.html">util::Config</a> config;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; key : <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a859de4b34a67ec88117409c9eb0bcc99">keys</a>()) {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacenetspeak.html#a95cab633d77077b6f561fdcb08dd91c3">PATHS</a>.find(key) == <a class="code hl_variable" href="namespacenetspeak.html#a95cab633d77077b6f561fdcb08dd91c3">PATHS</a>.end()) {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      <span class="comment">// not a path</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>      config[key] = <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a3244253bdf9a9d68c88c5bcdea25db2a">get_required</a>(key);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>      <span class="comment">// path</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      config[key] = <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a178b1a84cf240f11fbf98ba1ab113766">get_required_path</a>(key).string();</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    }</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <span class="keywordflow">return</span> config;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>}</div>
+</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="foldopen" id="foldopen00219" data-start="{" data-end="}">
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classnetspeak_1_1Configuration.html#a7df6bab59598b039e18f637a9558fb83">  219</a></span><a class="code hl_class" href="classnetspeak_1_1Configuration.html">Configuration</a> <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a7df6bab59598b039e18f637a9558fb83">Configuration::extend</a>(<span class="keyword">const</span> <a class="code hl_class" href="classnetspeak_1_1Configuration.html">Configuration</a>&amp; base)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  <span class="keyword">auto</span> config = base.<a class="code hl_function" href="classnetspeak_1_1Configuration.html#ac63101c63ef3cb005f881833757c121d">full_config</a>();</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="keyword">auto</span> this_config = <a class="code hl_function" href="classnetspeak_1_1Configuration.html#ac63101c63ef3cb005f881833757c121d">full_config</a>();</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  config.merge(this_config.begin(), this_config.end());</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classnetspeak_1_1Configuration.html#a7de647fad059409f4a66618e5372c758">Configuration</a>(config);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>}</div>
+</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>} <span class="comment">// namespace netspeak</span></div>
+<div class="ttc" id="aConfiguration_8hpp_html"><div class="ttname"><a href="Configuration_8hpp.html">Configuration.hpp</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html"><div class="ttname"><a href="classnetspeak_1_1Configuration.html">netspeak::Configuration</a></div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00016">Configuration.hpp:16</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a00be569319f066bf5c43f5b3428492cf"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a00be569319f066bf5c43f5b3428492cf">netspeak::Configuration::QUERY_LOWER_CASE</a></div><div class="ttdeci">static const std::string QUERY_LOWER_CASE</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00066">Configuration.hpp:66</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a01bd84fa12ab115554350b7664a4fe41"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a01bd84fa12ab115554350b7664a4fe41">netspeak::Configuration::DEFAULT_PHRASE_CORPUS_DIR_NAME</a></div><div class="ttdeci">static const std::string DEFAULT_PHRASE_CORPUS_DIR_NAME</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00074">Configuration.hpp:74</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a043d5fe6357aa7c77b8e7c4ba98793a6"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a043d5fe6357aa7c77b8e7c4ba98793a6">netspeak::Configuration::PATH_TO_HOME</a></div><div class="ttdeci">static const std::string PATH_TO_HOME</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00051">Configuration.hpp:51</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a0968fc84850ad63b0b2cbd28db89262b"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a0968fc84850ad63b0b2cbd28db89262b">netspeak::Configuration::DEFAULT_PHRASE_DICTIONARY_DIR_NAME</a></div><div class="ttdeci">static const std::string DEFAULT_PHRASE_DICTIONARY_DIR_NAME</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00075">Configuration.hpp:75</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a10f53641a0a389cf76113ac5d45fa2c4"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a10f53641a0a389cf76113ac5d45fa2c4">netspeak::Configuration::DEFAULT_PHRASE_INDEX_DIR_NAME</a></div><div class="ttdeci">static const std::string DEFAULT_PHRASE_INDEX_DIR_NAME</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00073">Configuration.hpp:73</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a12566b5c05ec89b19cdaa548acb2e3e2"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a12566b5c05ec89b19cdaa548acb2e3e2">netspeak::Configuration::DEFAULT_HASH_DICTIONARY_DIR_NAME</a></div><div class="ttdeci">static const std::string DEFAULT_HASH_DICTIONARY_DIR_NAME</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00077">Configuration.hpp:77</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a178b1a84cf240f11fbf98ba1ab113766"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a178b1a84cf240f11fbf98ba1ab113766">netspeak::Configuration::get_required_path</a></div><div class="ttdeci">std::filesystem::path get_required_path(const std::string &amp;key) const</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00145">Configuration.cpp:145</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a20625755af33b0d8ceb43786c750dcd7"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a20625755af33b0d8ceb43786c750dcd7">netspeak::Configuration::CORPUS_NAME</a></div><div class="ttdeci">static const std::string CORPUS_NAME</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00061">Configuration.hpp:61</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a20b8fe2645059f8f0b0c1da50285c4d4"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a20b8fe2645059f8f0b0c1da50285c4d4">netspeak::Configuration::config_</a></div><div class="ttdeci">util::Config config_</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00018">Configuration.hpp:18</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a29e7dbca3b9b7ae6eff3b7d178320207"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a29e7dbca3b9b7ae6eff3b7d178320207">netspeak::Configuration::extends_</a></div><div class="ttdeci">std::unique_ptr&lt; Configuration &gt; extends_</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00019">Configuration.hpp:19</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a3244253bdf9a9d68c88c5bcdea25db2a"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a3244253bdf9a9d68c88c5bcdea25db2a">netspeak::Configuration::get_required</a></div><div class="ttdeci">std::string get_required(const std::string &amp;key) const</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00112">Configuration.cpp:112</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a349f4a5c0bf2a9d116ccee84a774cb2a"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a349f4a5c0bf2a9d116ccee84a774cb2a">netspeak::Configuration::get_path</a></div><div class="ttdeci">std::filesystem::path get_path(const std::string &amp;key, const std::string &amp;defaultValue) const</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00155">Configuration.cpp:155</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a418506b5c21390339b097336b71afa93"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a418506b5c21390339b097336b71afa93">netspeak::Configuration::get</a></div><div class="ttdeci">std::string get(const std::string &amp;key, const std::string &amp;defaultValue) const</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00129">Configuration.cpp:129</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a42ebba55a1dc316b71e2d1eb7902ae3f"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a42ebba55a1dc316b71e2d1eb7902ae3f">netspeak::Configuration::DEFAULT_POSTLIST_INDEX_DIR_NAME</a></div><div class="ttdeci">static const std::string DEFAULT_POSTLIST_INDEX_DIR_NAME</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00076">Configuration.hpp:76</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a4919e573d786ddb208d3b0723764e347"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a4919e573d786ddb208d3b0723764e347">netspeak::Configuration::CORPUS_KEY</a></div><div class="ttdeci">static const std::string CORPUS_KEY</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00060">Configuration.hpp:60</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a575deec7f41100fcf0ac6c7f6769b5c4"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a575deec7f41100fcf0ac6c7f6769b5c4">netspeak::Configuration::PATH_TO_PHRASE_DICTIONARY</a></div><div class="ttdeci">static const std::string PATH_TO_PHRASE_DICTIONARY</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00054">Configuration.hpp:54</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a5934de6cb2d3e1acfd3e8e8fb0f9c545"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a5934de6cb2d3e1acfd3e8e8fb0f9c545">netspeak::Configuration::PATH_TO_PHRASE_INDEX</a></div><div class="ttdeci">static const std::string PATH_TO_PHRASE_INDEX</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00052">Configuration.hpp:52</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a61ae1ea682e322f808f2e3051d966df1"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a61ae1ea682e322f808f2e3051d966df1">netspeak::Configuration::SEARCH_REGEX_MAX_TIME</a></div><div class="ttdeci">static const std::string SEARCH_REGEX_MAX_TIME</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00071">Configuration.hpp:71</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a68d3ae93a76264d217cab60f755e4510"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a68d3ae93a76264d217cab60f755e4510">netspeak::Configuration::get_optional_path</a></div><div class="ttdeci">std::optional&lt; std::filesystem::path &gt; get_optional_path(const std::string &amp;key) const</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00148">Configuration.cpp:148</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a70fe81a79ae8918bae82e1eeddf8c4d1"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a70fe81a79ae8918bae82e1eeddf8c4d1">netspeak::Configuration::CORPUS_LANGUAGE</a></div><div class="ttdeci">static const std::string CORPUS_LANGUAGE</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00062">Configuration.hpp:62</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a72f126113d7544a81dfc2c4b4a5cf784"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a72f126113d7544a81dfc2c4b4a5cf784">netspeak::Configuration::load_extends</a></div><div class="ttdeci">void load_extends()</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00057">Configuration.cpp:57</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a774b12e520ae186f5fa20ac901c3d72f"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a774b12e520ae186f5fa20ac901c3d72f">netspeak::Configuration::desugar_home</a></div><div class="ttdeci">void desugar_home()</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00069">Configuration.cpp:69</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a78a1b06952d1d3727816d0f19028fb1f"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a78a1b06952d1d3727816d0f19028fb1f">netspeak::Configuration::base_dir_</a></div><div class="ttdeci">std::filesystem::path base_dir_</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00020">Configuration.hpp:20</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a7de647fad059409f4a66618e5372c758"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a7de647fad059409f4a66618e5372c758">netspeak::Configuration::Configuration</a></div><div class="ttdeci">Configuration()</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00026">Configuration.hpp:26</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a7df6bab59598b039e18f637a9558fb83"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a7df6bab59598b039e18f637a9558fb83">netspeak::Configuration::extend</a></div><div class="ttdeci">Configuration extend(const Configuration &amp;base) const</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00219">Configuration.cpp:219</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a7ef4052e920860d82856af52fa329941"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a7ef4052e920860d82856af52fa329941">netspeak::Configuration::get_required_bool</a></div><div class="ttdeci">bool get_required_bool(const std::string &amp;key) const</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00171">Configuration.cpp:171</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a833adc6bc2953dcb017de76b362ea64d"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a833adc6bc2953dcb017de76b362ea64d">netspeak::Configuration::SEARCH_REGEX_MAX_MATCHES</a></div><div class="ttdeci">static const std::string SEARCH_REGEX_MAX_MATCHES</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00070">Configuration.hpp:70</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a859de4b34a67ec88117409c9eb0bcc99"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a859de4b34a67ec88117409c9eb0bcc99">netspeak::Configuration::keys</a></div><div class="ttdeci">std::unordered_set&lt; std::string &gt; keys() const</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00186">Configuration.cpp:186</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a85f964e3737f343b0a02c65704069522"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a85f964e3737f343b0a02c65704069522">netspeak::Configuration::PATH_TO_REGEX_VOCABULARY</a></div><div class="ttdeci">static const std::string PATH_TO_REGEX_VOCABULARY</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00057">Configuration.hpp:57</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a8d50a601aaf9efc6f30738f35b7b632b"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a8d50a601aaf9efc6f30738f35b7b632b">netspeak::Configuration::DEFAULT_REGEX_VOCABULARY_DIR_NAME</a></div><div class="ttdeci">static const std::string DEFAULT_REGEX_VOCABULARY_DIR_NAME</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00078">Configuration.hpp:78</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_a95e77e1c9235a105c83479a258e4c2b5"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#a95e77e1c9235a105c83479a258e4c2b5">netspeak::Configuration::PATH_TO_HASH_DICTIONARY</a></div><div class="ttdeci">static const std::string PATH_TO_HASH_DICTIONARY</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00056">Configuration.hpp:56</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_ab49a5e48856245ce0c3a1705826c500a"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#ab49a5e48856245ce0c3a1705826c500a">netspeak::Configuration::get_bool</a></div><div class="ttdeci">bool get_bool(const std::string &amp;key, bool defaultValue) const</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00181">Configuration.cpp:181</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_abc5d494303d0ef71578d4d826dfdabd2"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#abc5d494303d0ef71578d4d826dfdabd2">netspeak::Configuration::EXTENDS</a></div><div class="ttdeci">static const std::string EXTENDS</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00058">Configuration.hpp:58</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_ac63101c63ef3cb005f881833757c121d"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#ac63101c63ef3cb005f881833757c121d">netspeak::Configuration::full_config</a></div><div class="ttdeci">util::Config full_config() const</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00202">Configuration.cpp:202</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_ac880e45a2c2378445b85308869b95fa3"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#ac880e45a2c2378445b85308869b95fa3">netspeak::Configuration::PATH_TO_POSTLIST_INDEX</a></div><div class="ttdeci">static const std::string PATH_TO_POSTLIST_INDEX</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00055">Configuration.hpp:55</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_ad6abd01bad43bd65cd4f4a27128a6a2c"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#ad6abd01bad43bd65cd4f4a27128a6a2c">netspeak::Configuration::PATH_TO_PHRASE_CORPUS</a></div><div class="ttdeci">static const std::string PATH_TO_PHRASE_CORPUS</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00053">Configuration.hpp:53</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_aea91c4d0613324c7c68ce2e0d8b55f71"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#aea91c4d0613324c7c68ce2e0d8b55f71">netspeak::Configuration::CACHE_CAPACITY</a></div><div class="ttdeci">static const std::string CACHE_CAPACITY</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00064">Configuration.hpp:64</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_aeab3e57ee3572a5d45afb9284f8f60bf"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#aeab3e57ee3572a5d45afb9284f8f60bf">netspeak::Configuration::SEARCH_MAX_NORM_QUERIES</a></div><div class="ttdeci">static const std::string SEARCH_MAX_NORM_QUERIES</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8hpp_source.html#l00068">Configuration.hpp:68</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_aed2594665f7f0529186a7f50b318ef54"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#aed2594665f7f0529186a7f50b318ef54">netspeak::Configuration::get_optional_bool</a></div><div class="ttdeci">std::optional&lt; bool &gt; get_optional_bool(const std::string &amp;key) const</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00174">Configuration.cpp:174</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1Configuration_html_aff9301d99209481a48c20c33a15de752"><div class="ttname"><a href="classnetspeak_1_1Configuration.html#aff9301d99209481a48c20c33a15de752">netspeak::Configuration::get_optional</a></div><div class="ttdeci">std::optional&lt; std::string &gt; get_optional(const std::string &amp;key) const</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00120">Configuration.cpp:120</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1util_1_1Config_html"><div class="ttname"><a href="classnetspeak_1_1util_1_1Config.html">netspeak::util::Config</a></div><div class="ttdoc">A general configuration class backed by a simple map of string key-value-pairs.</div><div class="ttdef"><b>Definition</b> <a href="Config_8hpp_source.html#l00019">Config.hpp:19</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1util_1_1Config_html_a3664f30f248a879b1940df27a37f4f81"><div class="ttname"><a href="classnetspeak_1_1util_1_1Config.html#a3664f30f248a879b1940df27a37f4f81">netspeak::util::Config::get</a></div><div class="ttdeci">const std::string &amp; get(const std::string &amp;key, const std::string &amp;default_value) const</div><div class="ttdoc">Returns the value of the given key or the given default value if the key is not part of the config.</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00018">Config.cpp:18</a></div></div>
+<div class="ttc" id="aclassnetspeak_1_1util_1_1Config_html_ab380dc04a08e5c65adfdc3b13aa27fad"><div class="ttname"><a href="classnetspeak_1_1util_1_1Config.html#ab380dc04a08e5c65adfdc3b13aa27fad">netspeak::util::Config::contains</a></div><div class="ttdeci">bool contains(const std::string &amp;key) const</div><div class="ttdef"><b>Definition</b> <a href="Config_8hpp_source.html#l00040">Config.hpp:40</a></div></div>
+<div class="ttc" id="anamespacenetspeak_html"><div class="ttname"><a href="namespacenetspeak.html">netspeak</a></div><div class="ttdef"><b>Definition</b> <a href="BigHashMap_8hpp_source.html#l00022">BigHashMap.hpp:22</a></div></div>
+<div class="ttc" id="anamespacenetspeak_html_a492bdb0b5b15556ec2f71bbe0e6bcf7a"><div class="ttname"><a href="namespacenetspeak.html#a492bdb0b5b15556ec2f71bbe0e6bcf7a">netspeak::relative_to</a></div><div class="ttdeci">fs::path relative_to(const std::string &amp;path, const fs::path &amp;to)</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00138">Configuration.cpp:138</a></div></div>
+<div class="ttc" id="anamespacenetspeak_html_a566ee443ef0d78969a1b1376d1937067"><div class="ttname"><a href="namespacenetspeak.html#a566ee443ef0d78969a1b1376d1937067">netspeak::parse_bool</a></div><div class="ttdeci">bool parse_bool(const std::string &amp;key, const std::string &amp;value)</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00159">Configuration.cpp:159</a></div></div>
+<div class="ttc" id="anamespacenetspeak_html_a95cab633d77077b6f561fdcb08dd91c3"><div class="ttname"><a href="namespacenetspeak.html#a95cab633d77077b6f561fdcb08dd91c3">netspeak::PATHS</a></div><div class="ttdeci">const std::unordered_set&lt; std::string &gt; PATHS</div><div class="ttdef"><b>Definition</b> <a href="Configuration_8cpp_source.html#l00043">Configuration.cpp:43</a></div></div>
+<div class="ttc" id="astructnetspeak_1_1util_1_1tracable__runtime__error_html"><div class="ttname"><a href="structnetspeak_1_1util_1_1tracable__runtime__error.html">netspeak::util::tracable_runtime_error</a></div><div class="ttdef"><b>Definition</b> <a href="traceable__error_8hpp_source.html#l00031">traceable_error.hpp:31</a></div></div>
+<div class="ttc" id="atraceable__error_8hpp_html"><div class="ttname"><a href="traceable__error_8hpp.html">traceable_error.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a8a8422ec10cf825de143d3254a4db2e.html">netspeak</a></li><li class="navelem"><a class="el" href="Configuration_8cpp.html">Configuration.cpp</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

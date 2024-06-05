@@ -1,0 +1,5 @@
+<map id="netspeak::QuerySimplifier" name="netspeak::QuerySimplifier">
+<area shape="rect" id="Node000001" title="A converter from a Query to its SimpleQuery units." alt="" coords="11,228,193,613"/>
+<area shape="rect" id="Node000002" href="$structnetspeak_1_1QueryNormalizer_1_1Options.html" title=" " alt="" coords="5,5,199,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,166,105,211,99,211,99,166"/>
+</map>

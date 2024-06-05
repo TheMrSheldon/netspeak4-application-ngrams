@@ -1,5 +1,7 @@
 <map id="netspeak::model::SimpleQuery" name="netspeak::model::SimpleQuery">
-<area shape="rect" id="node1" title=" " alt="" coords="5,213,228,240"/>
-<area shape="rect" id="node2" href="$classnetspeak_1_1model_1_1SimpleQueryUnit____.html" title=" " alt="" coords="5,109,228,151"/>
-<area shape="rect" id="node3" href="$structnetspeak_1_1model_1_1NormQueryUnit_____1_1Source.html" title=" " alt="" coords="9,5,224,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,691,220,896"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1model_1_1SimpleQueryUnit____.html" title=" " alt="" coords="5,168,220,628"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,628,115,674,110,674,110,628"/>
+<area shape="rect" id="Node000003" href="$structnetspeak_1_1model_1_1NormQueryUnit_____1_1Source.html" title=" " alt="" coords="9,5,216,105"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,105,115,151,110,151,110,105"/>
 </map>

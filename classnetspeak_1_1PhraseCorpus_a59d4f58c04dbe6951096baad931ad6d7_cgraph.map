@@ -1,0 +1,17 @@
+<map id="netspeak::PhraseCorpus::open_phrase_files_" name="netspeak::PhraseCorpus::open_phrase_files_">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,120,184,160"/>
+<area shape="rect" id="Node000002" href="$structnetspeak_1_1util_1_1FileDescriptor.html#abdc417820110f016b314a0a68e33775c" title=" " alt="" coords="232,88,441,128"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,126,218,121,219,126,184,131"/>
+<area shape="rect" id="Node000007" href="$namespacenetspeak.html#ad4aa35cf59e6cc5973a4da6d97a1c2b0" title=" " alt="" coords="248,152,425,192"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="184,149,235,156,234,161,184,154"/>
+<area shape="poly" id="edge7_Node000002_Node000002" title=" " alt="" coords="292,88,289,78,296,69,312,63,337,61,365,64,380,71,378,76,363,69,337,67,313,69,300,73,294,79,297,87"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1error__message.html#a2a36ff57b354714213502a72e6d9d416" title=" " alt="" coords="501,5,687,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,85,489,55,513,47,515,52,490,60,398,90"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#aad6c5a8708322dd600c23507cc2035f1" title=" " alt="" coords="515,70,673,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="441,95,501,89,501,94,442,100"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="747,95,897,121"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="442,105,733,105,733,111,442,111"/>
+<area shape="rect" id="Node000006" href="$structnetspeak_1_1util_1_1FileDescriptor.html#a21032b84b713c8f0f84bfb5f70ea0bbf" title=" " alt="" coords="489,171,699,211"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="404,126,442,137,522,164,520,169,441,143,403,131"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="673,89,733,95,733,101,673,94"/>
+</map>

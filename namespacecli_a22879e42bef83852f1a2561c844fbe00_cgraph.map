@@ -1,0 +1,14 @@
+<map id="cli::RunNetspeakShell" name="cli::RunNetspeakShell">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,95,169,121"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util.html#ad2441a387c3a4c47e09c373e9412fad0" title=" " alt="" coords="217,70,356,95"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,95,203,91,204,96,170,100"/>
+<area shape="rect" id="Node000006" href="$namespacecli.html#a4671fa197b7eee6dfa2cd7789a6f4d29" title=" " alt="" coords="235,119,338,145"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="170,115,222,122,221,127,169,121"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#ab27a22c787271513007af0719b17cef9" title=" " alt="" coords="409,5,549,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,67,398,47,399,52,331,72"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="601,99,752,125"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="357,85,588,103,587,108,356,91"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#a93e18aaa529a497b6afdf4b3bd221182" title=" " alt="" coords="404,120,553,160"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="331,93,399,114,398,119,329,98"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="553,127,587,122,588,127,554,132"/>
+</map>

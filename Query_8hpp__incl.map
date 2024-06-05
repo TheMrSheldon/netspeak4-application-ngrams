@@ -1,0 +1,19 @@
+<map id="netspeak/model/Query.hpp" name="netspeak/model/Query.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="199,5,395,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,83,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,33,97,78,96,73,256,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="107,79,181,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="274,33,182,75,180,70,272,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="206,79,293,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="292,33,267,69,262,66,287,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="317,79,376,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="308,29,333,66,329,69,303,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="401,79,463,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="320,28,399,70,397,74,318,33"/>
+<area shape="rect" id="Node000007" href="$LengthRange_8hpp.html" title=" " alt="" coords="487,79,622,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="339,28,501,72,499,78,338,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="458,152,545,177"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="548,106,520,143,516,140,544,103"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="569,152,645,177"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="565,103,592,139,588,142,561,106"/>
+</map>

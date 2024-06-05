@@ -1,0 +1,13 @@
+<map id="netspeak::model::RawRefResult::refs" name="netspeak::model::RawRefResult::refs">
+<area shape="rect" id="Node000001" title="The phrase references of this result set sorted by frequency in descending order." alt="" coords="725,69,956,109"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1model_1_1RawRefResult.html#a0604a1e03e1e9b09a7c873ec94b9f28e" title="Returns whether this and the given raw result set do not share any common phrase references." alt="" coords="447,5,677,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="739,69,649,48,650,43,740,64"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1model_1_1RawRefResult.html#aa98ade235e2a2e2ec9e833b58d374d0d" title="Creates a new result set that contains all phrases (unknown words) of this set and the given set." alt="" coords="447,69,677,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="712,92,677,92,677,87,712,87"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak.html#adc992b5399e2243ef4e4a3530e10cb1b" title=" " alt="" coords="499,134,625,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="730,115,625,137,624,131,729,109"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1Netspeak.html#a63bb059fbca69dbbcb42a2c9ed24674f" title=" " alt="" coords="205,127,399,167"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="485,149,399,149,399,144,485,144"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1Netspeak.html#aaa049275c7a0a7f6721acf7422402bff" title=" " alt="" coords="5,127,157,167"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="192,149,158,149,158,144,192,144"/>
+</map>

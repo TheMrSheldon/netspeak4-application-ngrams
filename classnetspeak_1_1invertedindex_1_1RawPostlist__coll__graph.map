@@ -1,4 +1,5 @@
 <map id="netspeak::invertedindex::RawPostlist" name="netspeak::invertedindex::RawPostlist">
-<area shape="rect" id="node1" title=" " alt="" coords="5,109,185,151"/>
-<area shape="rect" id="node2" href="$structnetspeak_1_1invertedindex_1_1Head.html" title=" " alt="" coords="5,5,185,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,208,177,548"/>
+<area shape="rect" id="Node000002" href="$structnetspeak_1_1invertedindex_1_1Head.html" title=" " alt="" coords="5,5,177,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,145,94,191,89,191,89,145"/>
 </map>

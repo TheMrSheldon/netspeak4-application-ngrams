@@ -1,10 +1,10 @@
 var structnetspeak_1_1value_1_1value__traits =
 [
     [ "io_size_type", "structnetspeak_1_1value_1_1value__traits.html#ad729041c279a8a6a803115a7f1446443", null ],
-    [ "value_type", "structnetspeak_1_1value_1_1value__traits.html#acbb66562d166614511d1ad6d2c88314a", null ],
+    [ "value_type", "structnetspeak_1_1value_1_1value__traits.html#a9fc470e548a52f0ba148d640f7d922f2", null ],
     [ "ByteSize", "structnetspeak_1_1value_1_1value__traits.html#a9143e9e16780f7ec73be1b387f0e9539", null ],
-    [ "copy_from", "structnetspeak_1_1value_1_1value__traits.html#a85fbc8a57dac65eda0da6b778aa28eec", null ],
-    [ "copy_to", "structnetspeak_1_1value_1_1value__traits.html#a03ced8f8eea3ae4cc984b522078624d0", null ],
+    [ "copy_from", "structnetspeak_1_1value_1_1value__traits.html#a27c68558505f16e261d678ee62c8a4f0", null ],
+    [ "copy_to", "structnetspeak_1_1value_1_1value__traits.html#ad8e5a704d34361f68b6325efb40d7872", null ],
     [ "parse_from", "structnetspeak_1_1value_1_1value__traits.html#ac31a9953614e416777f4652b215bd560", null ],
     [ "print_to", "structnetspeak_1_1value_1_1value__traits.html#a55ccc1c45a80bd3a713fc7f9b5a5374a", null ],
     [ "println_to", "structnetspeak_1_1value_1_1value__traits.html#a62dd263b6d365ae7d14b77fa253e62df", null ],

@@ -1,0 +1,13 @@
+<map id="netspeak::invertedindex::StorageWriter::write" name="netspeak::invertedindex::StorageWriter::write">
+<area shape="rect" id="Node000001" title=" " alt="" coords="480,41,660,81"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1invertedindex_1_1UnsortedInput.html#a7e52c2f2d76a1897a5ec1ebf05744dbb" title=" " alt="" coords="243,5,423,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="466,48,422,42,423,36,467,43"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1invertedindex_1_1SortedInput.html#a7a0960a0a573256e0887b29e8650a799" title=" " alt="" coords="233,70,432,125"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="467,80,433,85,432,80,466,74"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1invertedindex_1_1UnsortedInput.html#a3bf52078c65c198e542a3e16d42eff20" title=" " alt="" coords="5,5,185,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,28,186,28,186,23,229,23"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1invertedindex_1_1SortedInput.html#ae3183e635b4fa91c0b855773b95ce99c" title=" " alt="" coords="5,73,185,113"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="220,98,185,98,186,92,220,93"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1invertedindex_1_1SortedInput.html#a6aff15206149d6721ea2bbd44a1aebd6" title=" " alt="" coords="5,137,185,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="221,128,176,140,175,135,219,123"/>
+</map>

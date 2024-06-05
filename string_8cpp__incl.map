@@ -1,0 +1,20 @@
+<map id="netspeak/util/string.cpp" name="netspeak/util/string.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="246,5,421,31"/>
+<area shape="rect" id="Node000002" href="$check_8hpp.html" title=" " alt="" coords="145,79,322,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="319,33,262,73,259,68,316,29"/>
+<area shape="rect" id="Node000008" href="$string_8hpp.html" title=" " alt="" coords="347,79,523,104"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="351,28,408,68,405,73,348,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,240,72,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="145,105,97,123,75,136,57,154,47,170,41,189,39,227,33,226,36,188,42,168,53,150,72,132,94,118,143,100"/>
+<area shape="rect" id="Node000004" href="$std__path__formatter_8hpp.html" title="Defines an std::formatter for std::filesystem::path. MUST be deleted when C++26 is available with tha..." alt="" coords="67,152,234,192"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="223,106,182,145,179,141,219,102"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="243,240,301,265"/>
+<area shape="poly" id="edge8_Node000002_Node000006" title=" " alt="" coords="239,103,269,226,263,227,234,105"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="310,159,397,185"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="252,102,325,149,322,154,250,106"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="125,194,68,234,65,230,122,190"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="105,240,196,265"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="153,192,153,226,148,226,148,192"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="181,190,244,230,241,235,179,194"/>
+<area shape="poly" id="edge10_Node000008_Node000006" title=" " alt="" coords="437,105,432,147,424,172,410,194,389,213,365,227,315,246,314,241,362,223,386,208,406,190,419,169,427,146,432,104"/>
+</map>

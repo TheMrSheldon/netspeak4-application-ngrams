@@ -1,0 +1,10 @@
+<map id="netspeak::Configuration::get" name="netspeak::Configuration::get">
+<area shape="rect" id="Node000001" title=" " alt="" coords="431,77,637,102"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1Configuration.html#a349f4a5c0bf2a9d116ccee84a774cb2a" title=" " alt="" coords="205,5,383,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="472,76,369,48,371,43,473,70"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1Netspeak.html#a8653d43c4d385a1b81075d1b1c6fb1ea" title=" " alt="" coords="218,69,370,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="417,92,370,92,370,87,417,87"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1Netspeak.html#a4fa7fcfd57d5c943e1bf476c61610c99" title=" " alt="" coords="5,99,157,139"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="473,108,383,124,294,127,205,124,158,123,158,118,205,119,294,122,382,119,472,103"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="204,104,158,111,157,106,204,99"/>
+</map>

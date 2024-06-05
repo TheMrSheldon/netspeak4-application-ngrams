@@ -1,0 +1,7 @@
+<map id="netspeak::util::Config::get" name="netspeak::util::Config::get">
+<area shape="rect" id="Node000001" title="Returns the value of the given key or the given default value if the key is not part of the config." alt="" coords="5,42,195,67"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1util_1_1Config.html#ab380dc04a08e5c65adfdc3b13aa27fad" title=" " alt="" coords="243,5,403,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,39,229,35,229,40,196,45"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="247,70,398,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,64,234,69,233,74,195,69"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="netspeak::parse_bool" name="netspeak::parse_bool">
+<area shape="rect" id="Node000001" title=" " alt="" coords="656,45,817,70"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1Configuration.html#aed2594665f7f0529186a7f50b318ef54" title=" " alt="" coords="431,5,608,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="642,46,608,41,609,36,642,41"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1Configuration.html#a7ef4052e920860d82856af52fa329941" title=" " alt="" coords="431,69,608,109"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="642,74,609,79,608,74,642,69"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1Configuration.html#ab49a5e48856245ce0c3a1705826c500a" title=" " alt="" coords="205,5,383,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="417,28,383,28,383,23,417,23"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1Netspeak.html#a4fa7fcfd57d5c943e1bf476c61610c99" title=" " alt="" coords="5,5,157,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="191,28,157,28,157,23,191,23"/>
+</map>

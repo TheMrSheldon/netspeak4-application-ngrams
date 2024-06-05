@@ -1,7 +1,11 @@
 <map id="netspeak::invertedindex::Searcher&lt; Value, ThreadSafe &gt;" name="netspeak::invertedindex::Searcher&lt; Value, ThreadSafe &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="296,116,531,157"/>
-<area shape="rect" id="node2" href="$classnetspeak_1_1invertedindex_1_1RawSearcher.html" title=" " alt="" coords="6,5,186,47"/>
-<area shape="rect" id="node3" href="$classnetspeak_1_1invertedindex_1_1StorageReader.html" title=" " alt="" coords="5,71,187,127"/>
-<area shape="rect" id="node4" href="$structnetspeak_1_1invertedindex_1_1Properties.html" title=" " alt="" coords="6,152,186,193"/>
-<area shape="rect" id="node5" href="$classnetspeak_1_1invertedindex_1_1Configuration.html" title=" " alt="" coords="6,217,186,259"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="286,468,513,768"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1invertedindex_1_1RawSearcher.html" title=" " alt="" coords="5,125,177,285"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,296,159,351,192,404,238,461,288,513,284,517,234,464,188,407,154,354,127,299"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1invertedindex_1_1Configuration.html" title=" " alt="" coords="202,5,391,405"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="349,405,361,451,355,452,344,406"/>
+<area shape="rect" id="Node000004" href="$structnetspeak_1_1invertedindex_1_1Properties.html" title=" " alt="" coords="416,45,588,365"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="465,366,443,453,438,451,460,365"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1invertedindex_1_1StorageReader.html" title=" " alt="" coords="613,18,786,393"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="615,389,603,407,566,454,526,500,522,496,562,451,598,404,610,386"/>
 </map>

@@ -1,0 +1,15 @@
+<map id="netspeak::util::__properties_format_impl::consume_before_key" name="netspeak::util::__properties_format_impl::consume_before_key">
+<area shape="rect" id="Node000001" title="Consumes all spaces, empty lines, can comments before a key." alt="" coords="5,88,260,128"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util_1_1____properties__format__impl.html#aa59494f19b87314e52797323b69dbaa9" title="Consumes a comment." alt="" coords="308,5,553,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,85,343,47,345,52,206,91"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="852,93,1003,118"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="261,106,804,105,838,105,838,110,804,111,261,111"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util_1_1____properties__format__impl.html#a1edacf213d0577079a2dd1e6381db099" title=" " alt="" coords="601,56,804,96"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="260,98,587,80,587,85,260,104"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util_1_1____properties__format__impl.html#aa1caae33d5ecb274023b62bc9244f942" title=" " alt="" coords="603,171,802,211"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="204,125,308,149,455,169,590,181,589,187,454,175,308,155,203,131"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="554,16,676,20,741,28,805,41,854,60,897,83,894,88,852,65,803,47,740,34,676,26,554,22"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="539,43,588,52,587,57,538,48"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="805,87,839,91,838,96,804,92"/>
+<area shape="poly" id="edge8_Node000005_Node000003" title=" " alt="" coords="755,168,879,120,881,125,757,173"/>
+</map>

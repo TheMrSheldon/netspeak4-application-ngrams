@@ -1,0 +1,9 @@
+<map id="netspeak::service::LoadBalanceProxy::LoadBalanceProxy" name="netspeak::service::LoadBalanceProxy::LoadBalanceProxy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,237,60"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1service.html#a345d38ff1fb859d0b86939259e01a8bf" title=" " alt="" coords="285,13,444,53"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,30,272,30,272,35,237,35"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1service.html#aaa2a00c5d85f05b437d2357b4c75d648" title=" " alt="" coords="492,13,637,53"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="445,30,478,30,478,35,445,35"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1service_1_1LoadBalanceProxy.html#a1ed5863b0775c1160e5c793e79516309" title="Returns the whether the two corpora are compatible by the definition of this proxy." alt="" coords="685,13,931,53"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="638,30,671,30,671,35,638,35"/>
+</map>

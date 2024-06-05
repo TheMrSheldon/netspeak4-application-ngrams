@@ -1,10 +1,20 @@
 var searchData=
 [
-  ['max_462',['max',['../structnetspeak_1_1model_1_1LengthRange.html#a6e2f2d8dfd11f29a57267c4ec3d80b45',1,'netspeak::model::LengthRange']]],
-  ['max_5flength_463',['max_length',['../structnetspeak_1_1QueryNormalizer_1_1Options.html#a34fb9e6e9867127b93b4406b55742d9b',1,'netspeak::QueryNormalizer::Options']]],
-  ['max_5fnorm_5fqueries_464',['max_norm_queries',['../structnetspeak_1_1QueryNormalizer_1_1Options.html#a2e8ba99f24adb32e9cdd6f8c22d56af7',1,'netspeak::QueryNormalizer::Options']]],
-  ['max_5fregex_5fmatches_465',['max_regex_matches',['../structnetspeak_1_1QueryNormalizer_1_1Options.html#aba556914b763d679fe6b6967a437dbe8',1,'netspeak::QueryNormalizer::Options']]],
-  ['max_5fregex_5ftime_466',['max_regex_time',['../structnetspeak_1_1QueryNormalizer_1_1Options.html#a71aa88dc995d1fea36d1dfa6f7b51f07',1,'netspeak::QueryNormalizer::Options']]],
-  ['min_467',['min',['../structnetspeak_1_1model_1_1LengthRange.html#a6a8295d8c3514edfdf2f06975cbb234b',1,'netspeak::model::LengthRange']]],
-  ['min_5flength_468',['min_length',['../structnetspeak_1_1QueryNormalizer_1_1Options.html#aa8d59b5ee8183c7c77a6c785aba8800d',1,'netspeak::QueryNormalizer::Options']]]
+  ['cache_5faccess_5fcount_0',['cache_access_count',['../classnetspeak_1_1Properties.html#a719d76da9d362406c908181bc34a57b0',1,'netspeak::Properties']]],
+  ['cache_5fcapacity_1',['cache_capacity',['../classnetspeak_1_1Properties.html#a212cc471b2df8bfd40af9d29dfd3f8ce',1,'netspeak::Properties::cache_capacity'],['../classnetspeak_1_1Configuration.html#aea91c4d0613324c7c68ce2e0d8b55f71',1,'netspeak::Configuration::CACHE_CAPACITY']]],
+  ['cache_5fhit_5frate_2',['cache_hit_rate',['../classnetspeak_1_1Properties.html#a952a7537dc2f2a6eacbad210deee38f9',1,'netspeak::Properties']]],
+  ['cache_5fpolicy_3',['cache_policy',['../classnetspeak_1_1Properties.html#a2cea657c193a00941d6628f0e40a7026',1,'netspeak::Properties']]],
+  ['cache_5fsize_4',['cache_size',['../classnetspeak_1_1Properties.html#ae0bcb90f97aafbb978d790143c6e1d99',1,'netspeak::Properties']]],
+  ['cache_5ftop_5f100_5',['cache_top_100',['../classnetspeak_1_1Properties.html#a3684a41d143efaf5c739d58b4ea09cb9',1,'netspeak::Properties']]],
+  ['char_5fdata_5f_6',['char_data_',['../classnetspeak_1_1util_1_1StringIdMap_1_1Builder.html#abbd9de3ede0f3b136ec5956f192ef58e',1,'netspeak::util::StringIdMap::Builder::char_data_'],['../classnetspeak_1_1util_1_1StringIdMap.html#afecf22ac08199dcc0b816b7a6b68effe',1,'netspeak::util::StringIdMap::char_data_']]],
+  ['children_5f_7',['children_',['../classnetspeak_1_1model_1_1QueryUnit____.html#aa5af14bea36204e78afa5b0e93ce8782',1,'netspeak::model::QueryUnit__::children_'],['../classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a30774198c27a827d4c7c257bd8169290',1,'netspeak::model::SimpleQueryUnit__::children_']]],
+  ['commands_5f_8',['commands_',['../classcli_1_1Commands.html#ab642c9d84b1db778629ea773d5586d29',1,'cli::Commands']]],
+  ['config_5f_9',['config_',['../classnetspeak_1_1Configuration.html#a20b8fe2645059f8f0b0c1da50285c4d4',1,'netspeak::Configuration::config_'],['../classnetspeak_1_1invertedindex_1_1IndexStrategy.html#a9fbed8c08dec1f8b882014c18eafb1c5',1,'netspeak::invertedindex::IndexStrategy::config_'],['../classnetspeak_1_1invertedindex_1_1Searcher.html#ae387555c308cbc1d64554235ad5a3763',1,'netspeak::invertedindex::Searcher::config_']]],
+  ['corpora_5f_10',['corpora_',['../classnetspeak_1_1service_1_1LoadBalanceProxy.html#a5fb5ea77ccf5d34baf001383aff7e3dc',1,'netspeak::service::LoadBalanceProxy::corpora_'],['../classnetspeak_1_1service_1_1UniqueMap.html#a0a0de2d663519365e4773317d2f74463',1,'netspeak::service::UniqueMap::corpora_']]],
+  ['corpus_11',['corpus',['../structnetspeak_1_1service_1_1UniqueMap_1_1entry.html#a63539d36f7db9c904737ea9de5e9a3a4',1,'netspeak::service::UniqueMap::entry']]],
+  ['corpus_5fkey_12',['CORPUS_KEY',['../classnetspeak_1_1Configuration.html#a4919e573d786ddb208d3b0723764e347',1,'netspeak::Configuration']]],
+  ['corpus_5flanguage_13',['CORPUS_LANGUAGE',['../classnetspeak_1_1Configuration.html#a70fe81a79ae8918bae82e1eeddf8c4d1',1,'netspeak::Configuration']]],
+  ['corpus_5fname_14',['CORPUS_NAME',['../classnetspeak_1_1Configuration.html#a20625755af33b0d8ceb43786c750dcd7',1,'netspeak::Configuration']]],
+  ['count_5f_15',['count_',['../structnetspeak_1_1invertedindex_1_1constant__size__iter.html#ac00bb95a7150e4a8eb345450361bbe85',1,'netspeak::invertedindex::constant_size_iter']]],
+  ['cuts_5f_16',['cuts_',['../classnetspeak_1_1util_1_1ChainCutter.html#a650f8e9e72f03c111387b221da59f621',1,'netspeak::util::ChainCutter']]]
 ];

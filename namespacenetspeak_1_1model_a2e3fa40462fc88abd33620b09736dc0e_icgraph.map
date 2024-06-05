@@ -1,0 +1,6 @@
+<map id="netspeak::model::unit_contains_wildcards" name="netspeak::model::unit_contains_wildcards">
+<area shape="rect" id="Node000001" title=" " alt="" coords="276,29,440,69"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="399,18,384,11,358,8,335,10,321,15,316,21,318,28,313,30,311,20,318,10,334,5,358,3,386,6,401,13"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1model_1_1SimpleQuery.html#a5759acdd6e6a127b57a3975b0579fde9" title=" " alt="" coords="5,29,228,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,52,228,52,228,47,262,47"/>
+</map>

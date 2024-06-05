@@ -1,0 +1,16 @@
+<map id="netspeak::StarQueryConverter::alternation" name="netspeak::StarQueryConverter::alternation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1016,29,1235,69"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1171,18,1155,11,1125,8,1099,10,1084,15,1078,21,1081,28,1076,30,1073,20,1081,10,1098,5,1125,3,1156,5,1173,13"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1StarQueryConverter.html#a603db91f5a1da4fcc11c7e99f71ece2f" title=" " alt="" coords="749,29,968,69"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="1002,61,968,61,968,56,1002,56"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1StarQueryConverter.html#a72012a4108886c30c45ec19164f42dfd" title=" " alt="" coords="749,93,968,133"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="1029,75,943,96,942,91,1027,70"/>
+<area shape="poly" id="edge3_Node000002_Node000001" title=" " alt="" coords="982,38,1016,38,1016,43,982,43"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="904,18,888,11,859,8,833,10,817,15,811,21,814,28,809,30,806,20,814,10,832,5,859,3,890,5,906,13"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1SimpleQueryNormalizer.html#a64fc82bf1d46c167bbb645835120b233" title="Converts the given simple query into norm queries and adds them to the given list of norm queries." alt="" coords="455,93,701,133"/>
+<area shape="poly" id="edge6_Node000003_Node000004" title=" " alt="" coords="735,116,702,116,702,111,735,111"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1QueryNormalizer.html#a70187ab668d98c93cfc3a8d05ca1508e" title=" " alt="" coords="205,93,407,133"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="441,116,407,116,407,111,441,111"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1Netspeak.html#aaa049275c7a0a7f6721acf7422402bff" title=" " alt="" coords="5,93,157,133"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="191,116,157,116,157,111,191,111"/>
+</map>

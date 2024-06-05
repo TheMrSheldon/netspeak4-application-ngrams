@@ -1,0 +1,5 @@
+<map id="netspeak::regex::RegexQuery::accept_all_non_empty" name="netspeak::regex::RegexQuery::accept_all_non_empty">
+<area shape="rect" id="Node000001" title="Returns whether this query will accept all non&#45;empty words." alt="" coords="5,5,220,45"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1regex_1_1RegexQuery.html#aa0a5cc38ccc6098fa3a77bcf9cb79edd" title="Returns whether this query will accept all words." alt="" coords="268,5,483,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,23,254,23,254,28,220,28"/>
+</map>

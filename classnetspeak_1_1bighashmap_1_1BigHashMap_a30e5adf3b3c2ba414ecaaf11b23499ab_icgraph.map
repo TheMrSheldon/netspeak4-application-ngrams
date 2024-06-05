@@ -1,0 +1,13 @@
+<map id="netspeak::bighashmap::BigHashMap::SerializedSizeInBytes" name="netspeak::bighashmap::BigHashMap::SerializedSizeInBytes">
+<area shape="rect" id="Node000001" title=" " alt="" coords="755,70,965,125"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1bighashmap_1_1BigHashMap.html#addfe7cd1002c06e1e4eabca8f7d74222" title=" " alt="" coords="536,77,707,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="741,100,707,100,707,95,741,95"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1Netspeak.html#a4fa7fcfd57d5c943e1bf476c61610c99" title=" " alt="" coords="310,5,462,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="541,76,451,48,453,43,543,71"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1RetrievalStrategy_3_01RetrievalStrategy3Tag_01_4.html#a2caa474eae2060143eb6ad2769f93a6d" title=" " alt="" coords="284,70,488,125"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="522,100,488,100,488,95,522,95"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1invertedindex_1_1StorageReader.html#abc68bcbfd21694b8f5ab27dfb22bd042" title=" " alt="" coords="296,149,476,189"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="543,124,453,152,451,147,541,119"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1invertedindex_1_1StorageReader.html#a6bdbb90550e9d309ca3144be280e511d" title=" " alt="" coords="5,149,236,189"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="282,172,236,172,236,167,282,167"/>
+</map>

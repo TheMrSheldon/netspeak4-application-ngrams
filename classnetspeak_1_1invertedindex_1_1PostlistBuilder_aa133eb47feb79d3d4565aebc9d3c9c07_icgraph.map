@@ -1,0 +1,18 @@
+<map id="netspeak::invertedindex::PostlistBuilder::build" name="netspeak::invertedindex::PostlistBuilder::build">
+<area shape="rect" id="Node000001" title=" " alt="" coords="716,69,896,109"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1invertedindex_1_1PostlistSorter.html#a0bb0492d40e3460f4463a35843df5bf7" title=" " alt="" coords="461,5,668,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="716,68,640,48,641,43,718,63"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1invertedindex_1_1PostlistSorter.html#a3a4bdc4279ad3c23c77d69c629f4b89a" title=" " alt="" coords="475,69,655,109"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="702,92,655,92,655,87,702,87"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1invertedindex_1_1SortedInput.html#a7a0960a0a573256e0887b29e8650a799" title=" " alt="" coords="465,134,664,189"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="726,116,657,137,656,131,724,111"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1invertedindex_1_1PostlistSorter.html#a58f01b8d58f6487a4ceb2f1ab3d2f0a1" title=" " alt="" coords="233,24,413,64"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="448,37,414,40,413,34,447,32"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1invertedindex_1_1UnsortedInput.html#ac107e445403ad38a4774f83e92e9bb70" title=" " alt="" coords="5,24,185,64"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="219,47,185,47,185,41,219,41"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="461,73,413,64,414,58,462,67"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1invertedindex_1_1SortedInput.html#ae3183e635b4fa91c0b855773b95ce99c" title=" " alt="" coords="233,105,413,145"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="452,147,413,141,414,136,452,142"/>
+<area shape="rect" id="Node000008" href="$classnetspeak_1_1invertedindex_1_1SortedInput.html#a6aff15206149d6721ea2bbd44a1aebd6" title=" " alt="" coords="233,169,413,209"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="452,177,414,182,413,176,452,172"/>
+</map>

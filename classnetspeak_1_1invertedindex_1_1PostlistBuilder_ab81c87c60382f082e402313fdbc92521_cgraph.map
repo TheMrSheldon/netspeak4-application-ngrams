@@ -1,0 +1,19 @@
+<map id="netspeak::invertedindex::PostlistBuilder::push_back" name="netspeak::invertedindex::PostlistBuilder::push_back">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,105,207,145"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1invertedindex_1_1PostlistBuilder.html#a65cf7ffab2be1fb0a3ff7a9ec2906b9b" title=" " alt="" coords="255,5,457,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,103,254,55,274,47,276,52,256,60,148,108"/>
+<area shape="rect" id="Node000003" href="$structnetspeak_1_1value_1_1value__traits.html#a1de8038347bdd72008ef72ad481f4a77" title=" " alt="" coords="271,69,441,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="206,108,256,101,257,106,207,113"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1invertedindex_1_1PostlistBuilder.html#a8ddce60535a42049c39477e03bdc43ed" title=" " alt="" coords="266,134,446,189"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="207,137,253,144,252,149,206,142"/>
+<area shape="rect" id="Node000008" href="$structnetspeak_1_1value_1_1value__traits.html#a1d2c047e82f197702794fb868e80c24b" title=" " alt="" coords="505,203,676,243"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="139,143,192,173,255,197,315,210,377,218,492,224,492,229,377,224,315,216,254,203,190,177,137,148"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#a90ad222cbfa3cee11c3ed1dfa1235d10" title=" " alt="" coords="508,149,673,174"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="446,159,494,159,494,164,446,164"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="447,182,501,196,499,202,446,187"/>
+<area shape="rect" id="Node000006" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="931,150,1081,175"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="674,157,724,156,883,156,917,157,917,162,883,161,724,161,674,162"/>
+<area shape="rect" id="Node000007" href="$namespacenetspeak_1_1util.html#af94d48fda5f335ddcb461a8237079866" title=" " alt="" coords="724,171,883,211"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="674,170,711,175,710,180,673,175"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="883,177,916,172,917,178,884,182"/>
+</map>

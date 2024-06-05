@@ -1,0 +1,20 @@
+<map id="cli::print_error" name="cli::print_error">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,119,129"/>
+<area shape="rect" id="Node000002" href="$namespacecli.html#afa35336b7c594c68eb850544a1ae6b41" title=" " alt="" coords="167,104,349,129"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,114,153,114,153,119,119,119"/>
+<area shape="rect" id="Node000003" href="$classcli_1_1Command.html#ad1d4b2459b72ddab8cec0279f576b7a0" title=" " alt="" coords="648,5,799,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="276,102,328,69,361,53,397,39,457,25,520,17,634,12,634,17,520,22,458,31,398,45,364,57,330,74,278,106"/>
+<area shape="rect" id="Node000004" href="$namespacecli.html#a3aacc4bf1a67732a492a18bc25fcd211" title=" " alt="" coords="411,55,562,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="317,101,413,80,414,86,318,107"/>
+<area shape="rect" id="Node000006" href="$namespacecli.html#affe799d66dff4cf3b7872b5c76382a8d" title=" " alt="" coords="397,104,576,129"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="350,114,384,114,384,119,350,119"/>
+<area shape="rect" id="Node000007" href="$classcli_1_1Command.html#a8dcc4261b4cdd458bd235f19eb604507" title=" " alt="" coords="408,153,565,179"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="318,127,414,148,413,153,317,132"/>
+<area shape="rect" id="Node000008" href="$namespacecli.html#a176ef3b1efb7c9ba45ff614d5ae0aacd" title=" " alt="" coords="433,203,541,228"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="281,127,333,158,398,189,421,197,419,202,396,194,331,162,278,132"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="548,52,648,31,649,36,549,57"/>
+<area shape="rect" id="Node000005" href="$classcli_1_1Command.html#a384df28e8769751598c52346deebeb77" title=" " alt="" coords="624,55,823,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="562,65,610,65,610,70,562,70"/>
+<area shape="rect" id="Node000009" href="$namespacecli.html#a37b490d397c09cf994d962212b4a4f7a" title=" " alt="" coords="670,203,777,228"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="541,213,656,213,656,218,541,218"/>
+</map>

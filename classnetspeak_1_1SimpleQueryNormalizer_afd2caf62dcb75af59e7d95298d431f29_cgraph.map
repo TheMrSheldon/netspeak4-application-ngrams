@@ -1,0 +1,16 @@
+<map id="netspeak::SimpleQueryNormalizer::add_simple" name="netspeak::SimpleQueryNormalizer::add_simple">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,252,141"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1model_1_1NormQueryUnit____.html#a10e94517dedda4444f587c76f12691db" title=" " alt="" coords="300,5,515,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,99,299,55,323,47,325,52,301,60,182,104"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1model_1_1NormQuery.html#a1026b5afae11d5cdfecc06eb4fa6c005" title=" " alt="" coords="300,69,515,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="252,105,286,101,287,106,253,110"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1StarQuery.html#af2d22da01b5eab954ec585c071068348" title=" " alt="" coords="330,133,485,173"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="253,133,316,140,316,146,252,138"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1model_1_1NormQueryUnit____.html#a90ea86da4e6967f5690e0483b810e897" title=" " alt="" coords="300,197,515,237"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="182,139,301,183,325,191,323,196,299,188,180,144"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1model_1_1NormQueryUnit____.html#ac434701089b009138eafdec6f1bfbc8e" title=" " alt="" coords="563,69,777,109"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="491,43,575,63,573,69,490,48"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="483,195,514,183,575,150,629,115,632,120,578,154,516,188,485,200"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1model_1_1NormQueryUnit____.html#a7f11cf1d3effc88caf0fa666fd472878" title=" " alt="" coords="563,197,777,237"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="515,215,549,215,549,220,515,220"/>
+</map>

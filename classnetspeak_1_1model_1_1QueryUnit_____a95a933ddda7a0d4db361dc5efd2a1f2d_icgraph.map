@@ -1,0 +1,25 @@
+<map id="netspeak::model::QueryUnit__::tag" name="netspeak::model::QueryUnit__::tag">
+<area shape="rect" id="Node000001" title=" " alt="" coords="489,261,695,301"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1model_1_1QueryUnit____.html#a7453d54bedafcefa354894f2c394c5c4" title=" " alt="" coords="236,133,441,173"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="538,258,378,176,381,171,541,253"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1model_1_1QueryUnit____.html#ac85cc5078f0726242a273118acccfa78" title=" " alt="" coords="236,357,441,397"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="527,309,393,360,392,355,525,304"/>
+<area shape="rect" id="Node000003" href="$classantlr4_1_1QueryConstructor.html#a4c98d040a76e41b59c4fd04c38c59db2" title=" " alt="" coords="5,5,188,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="298,128,246,93,187,60,159,48,161,43,189,55,249,89,301,123"/>
+<area shape="rect" id="Node000004" href="$classantlr4_1_1QueryConstructor.html#afe1ea68a8a98f2498f3fb41c593e0657" title=" " alt="" coords="5,69,188,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="249,132,172,112,173,107,250,127"/>
+<area shape="rect" id="Node000005" href="$classantlr4_1_1QueryConstructor.html#a72312ab3ef84dbf05eb7d4d8e08e52a5" title=" " alt="" coords="5,133,188,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="222,156,188,156,188,151,222,151"/>
+<area shape="rect" id="Node000006" href="$classantlr4_1_1QueryConstructor.html#ad5b1971e445b12f1f9e8cbc4c9618bb7" title=" " alt="" coords="5,197,188,237"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="250,179,173,200,172,195,249,174"/>
+<area shape="rect" id="Node000008" href="$classantlr4_1_1QueryConstructor.html#ae7edd119e7f8282d7deaf51699113ac4" title=" " alt="" coords="5,261,188,301"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="279,354,187,316,155,304,157,299,189,311,281,349"/>
+<area shape="rect" id="Node000009" href="$classantlr4_1_1QueryConstructor.html#a3adb887e347ba0ba1f3d2ac96d072e24" title=" " alt="" coords="5,325,188,365"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="222,365,188,360,189,355,223,359"/>
+<area shape="rect" id="Node000010" href="$classantlr4_1_1QueryConstructor.html#a255c49a5080e687aefc3372cb84783b1" title=" " alt="" coords="5,389,188,429"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="223,395,189,400,188,395,222,390"/>
+<area shape="rect" id="Node000011" href="$classantlr4_1_1QueryConstructor.html#a95d98c68d314f6a193961bb3959003cc" title=" " alt="" coords="5,453,188,493"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="281,405,189,444,157,456,155,451,187,439,279,400"/>
+<area shape="rect" id="Node000012" href="$classantlr4_1_1QueryConstructor.html#a967ddb2ed0c3e732b7845112539e0774" title=" " alt="" coords="5,517,188,557"/>
+<area shape="poly" id="edge11_Node000007_Node000012" title=" " alt="" coords="311,410,257,459,189,508,165,520,163,515,187,503,254,455,307,406"/>
+</map>

@@ -1,4 +1,5 @@
 <map id="netspeak::Configuration" name="netspeak::Configuration">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,183,121"/>
-<area shape="rect" id="node2" href="$classnetspeak_1_1util_1_1Config.html" title="A general configuration class backed by a simple map of string key&#45;value&#45;pairs." alt="" coords="14,5,174,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,353,239,899"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1util_1_1Config.html" title="A general configuration class backed by a simple map of string key&#45;value&#45;pairs." alt="" coords="46,5,198,291"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,291,125,337,119,337,119,291"/>
 </map>

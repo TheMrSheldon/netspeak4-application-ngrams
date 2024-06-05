@@ -1,0 +1,11 @@
+<map id="netspeak::add_missing" name="netspeak::add_missing">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,42,177,67"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak.html#ad26a208d24590b1200b160e2f5b94aa9" title=" " alt="" coords="225,35,397,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,52,212,52,212,57,178,57"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1error__message.html#a2a36ff57b354714213502a72e6d9d416" title=" " alt="" coords="445,5,632,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="397,41,431,36,432,42,398,46"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#aad6c5a8708322dd600c23507cc2035f1" title=" " alt="" coords="460,70,617,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="398,63,447,69,446,74,397,68"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="680,70,831,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="618,80,666,80,666,85,618,85"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="netspeak::invertedindex::ByteBuffer::write" name="netspeak::invertedindex::ByteBuffer::write">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,185,103"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ad475d7f84f0c84151455988a2c08e486" title=" " alt="" coords="233,5,413,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,60,230,46,231,51,176,65"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#a33fbb28caf0f5be34cbce2f84faecb87" title=" " alt="" coords="245,70,401,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,80,232,80,232,85,186,85"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1invertedindex_1_1ByteBuffer.html#ac7160f8bd36f86815662909c0722556f" title=" " alt="" coords="233,120,413,160"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="176,100,231,114,230,119,175,105"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="668,71,819,97"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="402,78,620,77,654,78,654,83,620,83,402,84"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#af94d48fda5f335ddcb461a8237079866" title=" " alt="" coords="461,92,620,132"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="402,91,448,97,447,102,401,96"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="620,98,654,94,655,99,621,104"/>
+</map>

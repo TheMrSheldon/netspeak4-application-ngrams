@@ -1,6 +1,9 @@
 <map id="netspeak/util/std_path_formatter.hpp" name="netspeak/util/std_path_formatter.hpp">
-<area shape="rect" id="node1" title="Defines an std::formatter for std::filesystem::path. MUST be deleted when C++26 is available with tha..." alt="" coords="70,5,237,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,96,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="120,95,187,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="211,95,269,121"/>
+<area shape="rect" id="Node000001" title="Defines an std::formatter for std::filesystem::path. MUST be deleted when C++26 is available with tha..." alt="" coords="70,5,237,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,96,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,48,78,87,75,83,127,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="120,93,187,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,46,156,79,151,79,151,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="211,93,269,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,44,219,82,215,86,173,48"/>
 </map>

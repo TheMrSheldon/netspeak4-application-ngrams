@@ -1,0 +1,9 @@
+<map id="netspeak::binary_search" name="netspeak::binary_search">
+<area shape="rect" id="Node000001" title="Finds the best possible value in the range min to max (both inclusive) such that comparer(value)&lt;=0 ." alt="" coords="657,13,839,38"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak.html#abad07282259830ea1d26af81f1755844" title=" " alt="" coords="455,5,609,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="643,28,610,28,610,23,643,23"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1QueryNormalizer.html#a70187ab668d98c93cfc3a8d05ca1508e" title=" " alt="" coords="205,5,407,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="441,28,407,28,407,23,441,23"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1Netspeak.html#aaa049275c7a0a7f6721acf7422402bff" title=" " alt="" coords="5,5,157,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="191,28,157,28,157,23,191,23"/>
+</map>

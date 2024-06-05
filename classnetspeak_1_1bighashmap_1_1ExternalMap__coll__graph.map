@@ -1,4 +1,5 @@
 <map id="netspeak::bighashmap::ExternalMap&lt; ValueT, IsThreadSafe, Traits &gt;" name="netspeak::bighashmap::ExternalMap&lt; ValueT, IsThreadSafe, Traits &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="25,95,199,151"/>
-<area shape="rect" id="node2" href="$classnetspeak_1_1bighashmap_1_1CmphMap.html" title=" " alt="" coords="5,5,219,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="25,313,191,548"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1bighashmap_1_1CmphMap.html" title=" " alt="" coords="5,5,211,265"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,279,111,313,105,313,105,279"/>
 </map>

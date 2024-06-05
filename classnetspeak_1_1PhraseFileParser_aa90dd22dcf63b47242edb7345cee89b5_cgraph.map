@@ -1,0 +1,18 @@
+<map id="netspeak::PhraseFileParser::read_next" name="netspeak::PhraseFileParser::read_next">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,90,203,130"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1PhraseFileParser.html#a2b1e4624be15f416aa1248496795497f" title=" " alt="" coords="251,90,448,130"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,107,237,107,237,113,203,113"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#a1f7aa14f6cb81f98cbca5413e3026096" title=" " alt="" coords="507,26,664,66"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="423,87,497,67,499,72,425,92"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1model_1_1Words.html#abb26187aa586f258c8eb4271f3d5af0f" title=" " alt="" coords="496,90,675,130"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="448,107,482,107,482,113,448,113"/>
+<area shape="rect" id="Node000008" href="$classnetspeak_1_1model_1_1Words.html#a74ce9e9ed9745cdfffd806ec605974df" title=" " alt="" coords="496,154,675,194"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="425,128,499,148,497,153,423,133"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#aad6c5a8708322dd600c23507cc2035f1" title=" " alt="" coords="723,5,880,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="664,33,709,27,709,33,665,38"/>
+<area shape="rect" id="Node000006" href="$namespacenetspeak_1_1util.html#a53fac399fbfab002a4a512c161eb184f" title=" " alt="" coords="736,55,867,95"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="665,54,723,62,722,67,664,59"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="928,35,1079,60"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="881,27,914,32,914,37,880,32"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="866,64,914,57,915,62,867,69"/>
+</map>

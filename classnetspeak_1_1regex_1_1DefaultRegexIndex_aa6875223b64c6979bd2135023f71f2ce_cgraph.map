@@ -1,0 +1,18 @@
+<map id="netspeak::regex::DefaultRegexIndex::match_query_regex" name="netspeak::regex::DefaultRegexIndex::match_query_regex">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,133,241,173"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1regex.html#afac3221e2a2d1a5db57380f4b12386c9" title=" " alt="" coords="311,37,487,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,131,288,87,313,79,314,84,290,92,174,136"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a027a4b5415fce264c86bdd7c038ca46b" title="Returns the maximum number of UTF8 bytes a word can to have to match this query." alt="" coords="291,101,506,141"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="241,137,277,133,278,138,242,142"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a634da32c1d91b1d13ffcb3bc0edf259c" title="Returns the minimum number of UTF8 bytes a word has to have to match this query." alt="" coords="291,165,506,205"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="242,164,278,169,277,174,241,170"/>
+<area shape="rect" id="Node000008" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a54963c57bab5c92e0044c351b69da357" title="Returns the word string from the given entry." alt="" coords="289,229,508,269"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="174,171,290,215,314,223,313,228,288,220,172,176"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1regex_1_1RegexQuery.html#ace5fe64453987c6f605300a8aa5d4ee4" title="Get the underlying units." alt="" coords="556,5,771,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="487,44,542,37,543,43,487,49"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1regex.html#a2012930d0c5c43d0ad661a49adceb26b" title=" " alt="" coords="577,69,749,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="487,65,564,75,563,80,487,71"/>
+<area shape="rect" id="Node000006" href="$namespacenetspeak_1_1regex.html#a6e50f7971c5d223b3dfc4ed586fd45d6" title=" " alt="" coords="571,133,756,173"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="507,132,557,138,557,143,506,137"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="506,170,557,163,557,169,507,175"/>
+</map>

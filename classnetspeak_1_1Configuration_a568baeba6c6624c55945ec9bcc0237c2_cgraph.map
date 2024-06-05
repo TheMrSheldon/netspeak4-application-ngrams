@@ -1,0 +1,16 @@
+<map id="netspeak::Configuration::Configuration" name="netspeak::Configuration::Configuration">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,183,77"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1Configuration.html#a774b12e520ae186f5fa20ac901c3d72f" title=" " alt="" coords="231,5,408,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,42,217,37,218,42,183,47"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1Configuration.html#a72f126113d7544a81dfc2c4b4a5cf784" title=" " alt="" coords="231,69,408,109"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="183,67,218,72,217,77,182,73"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1util_1_1Config.html#ab380dc04a08e5c65adfdc3b13aa27fad" title=" " alt="" coords="693,63,853,103"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="408,16,522,16,584,20,646,29,713,55,711,60,645,35,584,25,522,21,408,21"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1util_1_1Config.html#a3664f30f248a879b1940df27a37f4f81" title="Returns the value of the given key or the given default value if the key is not part of the config." alt="" coords="456,45,645,70"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="409,35,446,40,445,45,408,40"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="646,66,680,69,679,75,646,71"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="698,13,849,38"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="639,42,684,35,685,41,640,47"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="408,85,680,81,680,87,408,91"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="408,74,445,69,446,75,409,80"/>
+</map>

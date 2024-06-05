@@ -1,0 +1,8 @@
+<map id="netspeak::util::JsonWriter::Value::protobuf_message" name="netspeak::util::JsonWriter::Value::protobuf_message">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,200,45"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="483,13,633,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,20,248,19,435,19,469,19,469,25,435,24,248,24,200,25"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1util_1_1JsonWriter_1_1Value.html#a28df35b205e2cce1951bd4b4175c703c" title=" " alt="" coords="248,33,435,73"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,34,235,38,234,43,200,39"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="435,39,469,34,469,39,436,44"/>
+</map>

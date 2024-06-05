@@ -1,0 +1,29 @@
+<map id="netspeak/PhraseCorpus.hpp" name="netspeak/PhraseCorpus.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="876,5,1079,31"/>
+<area shape="rect" id="Node000002" href="$Netspeak_8hpp.html" title=" " alt="" coords="567,79,743,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="913,36,708,81,706,76,912,31"/>
+<area shape="rect" id="Node000007" href="$indexing_8cpp.html" title=" " alt="" coords="1090,159,1259,185"/>
+<area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="982,44,989,74,1005,102,1027,122,1053,137,1108,157,1106,162,1051,142,1024,126,1001,106,984,76,977,45"/>
+<area shape="rect" id="Node000013" href="$PhraseCorpus_8cpp.html" title=" " alt="" coords="1015,79,1217,104"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="1013,34,1095,76,1092,81,1011,39"/>
+<area shape="rect" id="Node000003" href="$ProxyCommand_8cpp.html" title=" " alt="" coords="894,159,1066,185"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="716,105,933,157,932,162,715,110"/>
+<area shape="rect" id="Node000004" href="$ServeCommand_8cpp.html" title=" " alt="" coords="62,247,234,273"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="553,97,402,103,233,113,90,130,42,141,17,154,9,167,10,180,18,193,32,206,72,228,113,245,111,250,69,233,29,210,14,197,5,182,4,166,13,150,40,136,89,125,233,108,402,97,553,92"/>
+<area shape="rect" id="Node000005" href="$ShellCommand_8cpp.html" title=" " alt="" coords="27,159,194,185"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="553,107,390,127,206,155,166,162,165,157,205,149,389,122,553,102"/>
+<area shape="rect" id="Node000006" href="$Netspeak_8cpp.html" title=" " alt="" coords="218,159,393,185"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="591,110,357,162,356,157,590,104"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="757,103,1079,149,1120,157,1119,162,1078,155,756,108"/>
+<area shape="rect" id="Node000008" href="$RequestLogger_8hpp.html" title=" " alt="" coords="679,152,870,192"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="685,109,747,150,744,154,682,114"/>
+<area shape="rect" id="Node000011" href="$UniqueMap_8hpp.html" title=" " alt="" coords="417,159,655,185"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="627,114,555,161,552,157,624,110"/>
+<area shape="rect" id="Node000009" href="$cli_2logging_8cpp.html" title=" " alt="" coords="698,247,814,273"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="770,206,761,247,756,246,765,205"/>
+<area shape="rect" id="Node000010" href="$RequestLogger_8cpp.html" title=" " alt="" coords="838,240,1029,280"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="823,196,900,238,897,242,820,201"/>
+<area shape="poly" id="edge11_Node000011_Node000004" title=" " alt="" coords="472,190,200,250,199,245,470,185"/>
+<area shape="rect" id="Node000012" href="$UniqueMap_8cpp.html" title=" " alt="" coords="417,247,655,273"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="539,199,539,247,533,247,533,199"/>
+</map>

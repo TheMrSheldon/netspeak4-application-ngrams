@@ -1,0 +1,13 @@
+<map id="netspeak::QuerySimplifier::dict_to_simple" name="netspeak::QuerySimplifier::dict_to_simple">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,133,196,173"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1QuerySimplifier.html#a6370b7569ff3cd8fe257c76f23ed166b" title=" " alt="" coords="260,5,451,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,131,178,93,243,55,260,48,262,53,245,60,180,97,128,135"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3080baa4a48b461ec365cec8f3aa967c" title=" " alt="" coords="244,69,467,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,131,261,110,263,115,182,136"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a42d698a0c2b81bb96d5efb842e0c09cd" title=" " alt="" coords="244,133,467,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="196,151,230,151,230,156,196,156"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1model_1_1SimpleQueryUnit____.html#aec3288b9da92b0fdeedcec37c09572c4" title=" " alt="" coords="244,197,467,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="182,171,263,191,261,197,180,176"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1QuerySimplifier.html#a18ef84f764ae6f69b3cf33d616e6fc41" title=" " alt="" coords="260,261,451,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="128,171,180,209,245,247,262,254,260,259,243,252,178,214,125,176"/>
+</map>

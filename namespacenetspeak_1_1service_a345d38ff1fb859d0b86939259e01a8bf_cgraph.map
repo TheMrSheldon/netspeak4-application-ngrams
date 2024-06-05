@@ -1,0 +1,7 @@
+<map id="netspeak::service::initialize_from_stubs" name="netspeak::service::initialize_from_stubs">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,164,45"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1service.html#aaa2a00c5d85f05b437d2357b4c75d648" title=" " alt="" coords="212,5,357,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,23,198,23,198,28,165,28"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1service_1_1LoadBalanceProxy.html#a1ed5863b0775c1160e5c793e79516309" title="Returns the whether the two corpora are compatible by the definition of this proxy." alt="" coords="405,5,651,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="358,23,391,23,391,28,358,28"/>
+</map>

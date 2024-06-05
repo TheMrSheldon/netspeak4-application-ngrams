@@ -1,0 +1,20 @@
+<map id="netspeak::model::NormQuery::size" name="netspeak::model::NormQuery::size">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1044,156,1259,196"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1SimpleQueryNormalizer.html#a64b4efb1803b5ed2bd2b1dc7197938f5" title=" " alt="" coords="749,5,996,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1118,148,1063,103,1030,80,995,60,966,48,968,43,997,55,1032,75,1066,98,1121,144"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1RetrievalStrategy_3_01RetrievalStrategy3Tag_01_4.html#a9842c21d3de64eb6d496ad7f267c35dc" title=" " alt="" coords="771,70,975,125"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1066,155,970,127,971,122,1067,150"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1RetrievalStrategy_3_01RetrievalStrategy3Tag_01_4.html#af15e58c41758453cd1efcaf402637e3d" title=" " alt="" coords="771,149,975,203"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1030,179,975,179,975,173,1030,173"/>
+<area shape="rect" id="Node000008" href="$classnetspeak_1_1model_1_1NormQuery.html#abb5ddb30740717dcd0e89e98c5498610" title=" " alt="" coords="765,228,980,268"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1061,202,952,231,950,225,1059,197"/>
+<area shape="rect" id="Node000009" href="$classnetspeak_1_1Netspeak.html#aaaac0f03b7e31a499189cdcba71801f7" title=" " alt="" coords="491,174,665,229"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1121,207,1066,249,1032,268,997,283,929,299,873,304,818,297,749,283,681,260,623,231,626,226,684,255,750,277,819,292,874,298,928,294,995,277,1030,263,1063,244,1117,203"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1SimpleQueryNormalizer.html#a64fc82bf1d46c167bbb645835120b233" title="Converts the given simple query into norm queries and adds them to the given list of norm queries." alt="" coords="455,57,701,97"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="746,50,692,60,691,55,745,45"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1QueryNormalizer.html#a70187ab668d98c93cfc3a8d05ca1508e" title=" " alt="" coords="205,113,407,153"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="467,103,404,116,403,111,466,98"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1Netspeak.html#aaa049275c7a0a7f6721acf7422402bff" title=" " alt="" coords="5,147,157,187"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="192,153,158,158,157,153,191,148"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="477,197,157,175,158,169,478,192"/>
+</map>

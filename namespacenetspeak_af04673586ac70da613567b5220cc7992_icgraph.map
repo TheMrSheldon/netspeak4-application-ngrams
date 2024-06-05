@@ -1,0 +1,12 @@
+<map id="netspeak::find_regexes" name="netspeak::find_regexes">
+<area shape="rect" id="Node000001" title=" " alt="" coords="675,35,847,60"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="800,25,789,17,761,13,737,15,725,20,722,26,729,33,725,36,717,26,721,16,736,10,761,8,791,12,803,21"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak.html#a1483e29fb72fc8f5c98544b32add8c6b" title=" " alt="" coords="455,5,627,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="660,37,626,32,627,27,661,31"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak.html#abad07282259830ea1d26af81f1755844" title=" " alt="" coords="463,55,618,95"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="661,63,619,68,618,63,660,57"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1QueryNormalizer.html#a70187ab668d98c93cfc3a8d05ca1508e" title=" " alt="" coords="205,55,407,95"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="449,78,407,78,407,73,449,73"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1Netspeak.html#aaa049275c7a0a7f6721acf7422402bff" title=" " alt="" coords="5,55,157,95"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="191,78,157,78,157,73,191,73"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="cli::ProxyCommand::run" name="cli::ProxyCommand::run">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,46,184,71"/>
+<area shape="rect" id="Node000002" href="$namespacecli.html#abce6dd7d1d2d3a60550506a724548cb0" title=" " alt="" coords="257,21,381,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,46,243,39,244,44,185,51"/>
+<area shape="rect" id="Node000003" href="$namespacecli.html#ab3047781f5c7e722415ab5ac13152596" title=" " alt="" coords="232,70,407,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,66,218,69,218,75,184,71"/>
+<area shape="rect" id="Node000004" href="$namespacecli.html#a6a02e1a5cac70ac58dc17ac7f8c5cc00" title=" " alt="" coords="455,70,581,95"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="407,80,441,80,441,85,407,85"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1service_1_1LoadBalanceProxy.html#a1ed5863b0775c1160e5c793e79516309" title="Returns the whether the two corpora are compatible by the definition of this proxy." alt="" coords="629,5,875,45"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="570,67,656,46,657,51,571,73"/>
+<area shape="rect" id="Node000006" href="$namespacecli.html#ae9428c4a49b414b314134bdf38214c6e" title="Returns the corpora of the given stub." alt="" coords="693,70,811,95"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="582,80,680,80,680,85,582,85"/>
+<area shape="rect" id="Node000007" href="$namespacecli.html#aa049984e5a8328fb9ff8fe3719602d80" title=" " alt="" coords="701,119,803,145"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="578,93,630,104,688,116,687,122,629,109,576,98"/>
+</map>

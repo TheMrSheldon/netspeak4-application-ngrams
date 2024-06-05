@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type_474',['Type',['../structnetspeak_1_1regex_1_1RegexUnit.html#a3480f979c6207cd8b2906d4c84f5f447',1,'netspeak::regex::RegexUnit']]]
+  ['algorithm_0',['Algorithm',['../namespacenetspeak_1_1bighashmap.html#ac10a28840661ce118cfc3c524178fc7f',1,'netspeak::bighashmap']]]
 ];

@@ -1,0 +1,11 @@
+<map id="netspeak::model::RawRefResult::unknown_words" name="netspeak::model::RawRefResult::unknown_words">
+<area shape="rect" id="Node000001" title=" " alt="" coords="725,35,956,75"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1model_1_1RawRefResult.html#aa98ade235e2a2e2ec9e833b58d374d0d" title="Creates a new result set that contains all phrases (unknown words) of this set and the given set." alt="" coords="447,5,677,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="711,44,677,40,678,35,712,38"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak.html#adc992b5399e2243ef4e4a3530e10cb1b" title=" " alt="" coords="499,70,625,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="712,70,626,79,625,74,712,65"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1Netspeak.html#a63bb059fbca69dbbcb42a2c9ed24674f" title=" " alt="" coords="205,63,399,103"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="485,85,399,85,399,80,485,80"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1Netspeak.html#aaa049275c7a0a7f6721acf7422402bff" title=" " alt="" coords="5,63,157,103"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="192,85,158,85,158,80,192,80"/>
+</map>

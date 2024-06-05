@@ -1,0 +1,29 @@
+<map id="netspeak::SimpleQueryNormalizer::add_with_stars" name="netspeak::SimpleQueryNormalizer::add_with_stars">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,229,252,269"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1StarQuery.html#ae2f36a0e2e0396dacc0335a37c9990f7" title=" " alt="" coords="330,5,485,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,228,165,191,201,144,246,96,299,55,316,46,318,50,301,60,250,100,205,148,169,194,144,231"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1util_1_1ChainCutter.html#a4a2ad399d5cba8d80b20d04674b89153" title="Returns whether there is another unique cut and computes the next cuts." alt="" coords="309,69,505,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,227,214,174,255,145,299,119,314,112,316,117,301,124,258,149,217,178,153,231"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1model_1_1NormQueryUnit____.html#a10e94517dedda4444f587c76f12691db" title=" " alt="" coords="300,133,515,173"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="180,227,299,183,323,175,325,180,301,188,182,232"/>
+<area shape="rect" id="Node000008" href="$classnetspeak_1_1util_1_1ChainCutter.html#aeb89082f7993ec2d1437b076a2e9a7ea" title="Returns the current output of the cutter iterator." alt="" coords="309,197,505,237"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="252,233,295,227,296,233,253,238"/>
+<area shape="rect" id="Node000009" href="$classnetspeak_1_1model_1_1NormQuery.html#a0d7789ccab66ae884162a6c3076efd5d" title=" " alt="" coords="300,261,515,301"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="253,261,287,265,286,270,252,266"/>
+<area shape="rect" id="Node000010" href="$classnetspeak_1_1model_1_1NormQuery.html#a1026b5afae11d5cdfecc06eb4fa6c005" title=" " alt="" coords="300,325,515,365"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="182,267,301,311,325,319,323,324,299,316,180,272"/>
+<area shape="rect" id="Node000011" href="$classnetspeak_1_1StarQuery.html#af2d22da01b5eab954ec585c071068348" title=" " alt="" coords="330,389,485,429"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="153,267,217,321,258,350,301,375,318,382,316,387,299,380,255,354,214,325,150,272"/>
+<area shape="rect" id="Node000012" href="$classnetspeak_1_1model_1_1NormQueryUnit____.html#a90ea86da4e6967f5690e0483b810e897" title=" " alt="" coords="300,453,515,493"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="144,268,169,305,205,351,250,398,301,439,312,445,309,450,299,444,246,402,201,354,165,308,140,271"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="825,78,976,103"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="506,85,777,84,812,85,812,90,777,89,506,90"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1util_1_1ChainCutter.html#a9e05a5ab5bb585f8276bf7e6edce76c5" title=" " alt="" coords="572,99,768,139"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="506,98,559,104,558,109,505,103"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="768,104,811,99,812,104,768,109"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1model_1_1NormQueryUnit____.html#ac434701089b009138eafdec6f1bfbc8e" title=" " alt="" coords="563,261,777,301"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="485,171,516,183,578,216,632,251,629,256,575,221,514,188,483,176"/>
+<area shape="poly" id="edge13_Node000012_Node000007" title=" " alt="" coords="490,451,513,439,553,410,589,376,644,311,649,314,593,380,557,414,516,444,492,456"/>
+<area shape="rect" id="Node000013" href="$classnetspeak_1_1model_1_1NormQueryUnit____.html#a7f11cf1d3effc88caf0fa666fd472878" title=" " alt="" coords="563,453,777,493"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="515,471,549,471,549,476,515,476"/>
+</map>

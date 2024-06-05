@@ -13,8 +13,8 @@ var classnetspeak_1_1model_1_1Phrase =
     [ "operator==", "classnetspeak_1_1model_1_1Phrase.html#ab8c673980229dbffbcdb65f1dcf6f6c8", null ],
     [ "operator>", "classnetspeak_1_1model_1_1Phrase.html#a6f24a1fc27e88e55fbdd10c25c6bf933", null ],
     [ "operator>=", "classnetspeak_1_1model_1_1Phrase.html#aecff7bb6133a48e7f83a871f53ae539b", null ],
-    [ "words", "classnetspeak_1_1model_1_1Phrase.html#a74b4a84ed5a1ed90a3d9a115726686c8", null ],
-    [ "words", "classnetspeak_1_1model_1_1Phrase.html#a21acbbc8d91cc782c6f350de01374149", null ],
+    [ "words", "classnetspeak_1_1model_1_1Phrase.html#a528f3baefe9aa0eeab9f0d3d585c0d2b", null ],
+    [ "words", "classnetspeak_1_1model_1_1Phrase.html#a0cfea75b7cad4d3c9a3cd111789bd42f", null ],
     [ "freq_", "classnetspeak_1_1model_1_1Phrase.html#a8ab5dc775237aac86ffc95edc89034f3", null ],
     [ "id_", "classnetspeak_1_1model_1_1Phrase.html#a4406696f9783cc73072322078e19d3bd", null ],
     [ "words_", "classnetspeak_1_1model_1_1Phrase.html#a229e0d404e2b8a1417e878cd1bce9b99", null ]

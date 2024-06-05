@@ -1,0 +1,13 @@
+<map id="netspeak::model::QueryUnit__::terminal" name="netspeak::model::QueryUnit__::terminal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="236,133,441,173"/>
+<area shape="rect" id="Node000002" href="$classantlr4_1_1QueryConstructor.html#ae7edd119e7f8282d7deaf51699113ac4" title=" " alt="" coords="5,5,188,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="298,128,246,93,187,60,159,48,161,43,189,55,249,89,301,123"/>
+<area shape="rect" id="Node000003" href="$classantlr4_1_1QueryConstructor.html#a3adb887e347ba0ba1f3d2ac96d072e24" title=" " alt="" coords="5,69,188,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="249,132,172,112,173,107,250,127"/>
+<area shape="rect" id="Node000004" href="$classantlr4_1_1QueryConstructor.html#a255c49a5080e687aefc3372cb84783b1" title=" " alt="" coords="5,133,188,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="222,156,188,156,188,151,222,151"/>
+<area shape="rect" id="Node000005" href="$classantlr4_1_1QueryConstructor.html#a95d98c68d314f6a193961bb3959003cc" title=" " alt="" coords="5,197,188,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="250,179,173,200,172,195,249,174"/>
+<area shape="rect" id="Node000006" href="$classantlr4_1_1QueryConstructor.html#a967ddb2ed0c3e732b7845112539e0774" title=" " alt="" coords="5,261,188,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="301,183,249,218,189,252,161,264,159,259,187,247,246,213,298,179"/>
+</map>

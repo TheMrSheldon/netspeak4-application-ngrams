@@ -1,0 +1,9 @@
+<map id="netspeak::SimpleQueryNormalizer::add_simple" name="netspeak::SimpleQueryNormalizer::add_simple">
+<area shape="rect" id="Node000001" title=" " alt="" coords="749,5,996,45"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1SimpleQueryNormalizer.html#a64fc82bf1d46c167bbb645835120b233" title="Converts the given simple query into norm queries and adds them to the given list of norm queries." alt="" coords="455,5,701,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="736,28,701,28,701,23,736,23"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1QueryNormalizer.html#a70187ab668d98c93cfc3a8d05ca1508e" title=" " alt="" coords="205,5,407,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="441,28,407,28,407,23,441,23"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1Netspeak.html#aaa049275c7a0a7f6721acf7422402bff" title=" " alt="" coords="5,5,157,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="191,28,157,28,157,23,191,23"/>
+</map>

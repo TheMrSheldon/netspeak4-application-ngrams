@@ -1,0 +1,445 @@
+<!-- Heavily based on https://github.com/jothepro/doxygen-awesome-css/blob/main/doxygen-custom/header.html -->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- BEGIN opengraph metadata -->
+    <meta property="og:title" content=Netspeak />
+    <meta property="og:image" content="netspeak_logo.svg" />
+    <meta property="og:description" content="One word leads to another." />
+    <meta property="og:url" content="https://github.com/netspeak/netspeak4-application-ngrams" />
+    <!-- END opengraph metadata -->
+    <!-- BEGIN twitter metadata -->
+    <meta name="twitter:image:src" content="netspeak_logo.svg" />
+    <meta name="twitter:title" content="Netspeak" />
+    <meta name="twitter:description" content="One word leads to another." />
+    <!-- END twitter metadata -->
+    <title>Netspeak: netspeak::NormQueryCounter Struct Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/svg+xml" href="netspeak_logo.svg" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+    <script type="text/javascript" src="toggle-alternative-theme.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+        DoxygenAwesomeDarkModeToggle.init()
+        DoxygenAwesomeParagraphLink.init()
+        DoxygenAwesomeInteractiveToc.init()
+        DoxygenAwesomeTabs.init()
+    </script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-tabs.js" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- https://tholman.com/github-corners/ -->
+    <a href="https://github.com/netspeak/netspeak4-application-ngrams" class="github-corner"
+        title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 250 250" width="40" height="40"
+            style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg></a>
+    <style>
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+        @media (max-width:500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+    </style>
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectlogo"><img alt="Logo" src="netspeak_logo.svg" /></td>
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">Netspeak
+                                &#160;<span
+                                    id="projectnumber">4.2.0</span>
+                            </div>
+                            <div id="projectbrief">One word leads to another.</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structnetspeak_1_1NormQueryCounter.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="structnetspeak_1_1NormQueryCounter-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">netspeak::NormQueryCounter Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Collaboration diagram for netspeak::NormQueryCounter:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter__coll__graph.svg" width="219" height="339"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html">UnitResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the result of an estimate. It's either a constant value or a function dependent on the number of words each regex will be replaced with.  <a href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ac9785f12fa982c8c5871bb4ef9d5dd19" id="r_ac9785f12fa982c8c5871bb4ef9d5dd19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter.html#ac9785f12fa982c8c5871bb4ef9d5dd19">NormQueryCounter</a> (const <a class="el" href="structnetspeak_1_1QueryNormalizer_1_1Options.html">QueryNormalizer::Options</a> &amp;<a class="el" href="structnetspeak_1_1NormQueryCounter.html#ab10b92bf58a99a7bc71baca77a2167d7">options</a>)</td></tr>
+<tr class="separator:ac9785f12fa982c8c5871bb4ef9d5dd19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a853463fd07c510eeef9767164fbfd5bd" id="r_a853463fd07c510eeef9767164fbfd5bd"><td class="memItemLeft" align="right" valign="top">std::function&lt; uint64_t(size_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter.html#a853463fd07c510eeef9767164fbfd5bd">estimate</a> (const <a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html">SimpleQuery</a> &amp;query)</td></tr>
+<tr class="memdesc:a853463fd07c510eeef9767164fbfd5bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a function that, given the number of words each regex will be replaced with, return an estimate for the number of norm queries creates by the given query.  <br /></td></tr>
+<tr class="separator:a853463fd07c510eeef9767164fbfd5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ab10b92bf58a99a7bc71baca77a2167d7" id="r_ab10b92bf58a99a7bc71baca77a2167d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnetspeak_1_1QueryNormalizer_1_1Options.html">QueryNormalizer::Options</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter.html#ab10b92bf58a99a7bc71baca77a2167d7">options</a></td></tr>
+<tr class="separator:ab10b92bf58a99a7bc71baca77a2167d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a72d9822b381ac1a8d8f29521c73c7e45" id="r_a72d9822b381ac1a8d8f29521c73c7e45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html">UnitResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter.html#a72d9822b381ac1a8d8f29521c73c7e45">estimate_impl</a> (const <a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> &amp;unit, const <a class="el" href="structnetspeak_1_1MinLengthMargin.html">MinLengthMargin</a> margin)</td></tr>
+<tr class="separator:a72d9822b381ac1a8d8f29521c73c7e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00546">546</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac9785f12fa982c8c5871bb4ef9d5dd19" name="ac9785f12fa982c8c5871bb4ef9d5dd19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9785f12fa982c8c5871bb4ef9d5dd19">&#9670;&#160;</a></span>NormQueryCounter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">netspeak::NormQueryCounter::NormQueryCounter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnetspeak_1_1QueryNormalizer_1_1Options.html">QueryNormalizer::Options</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00550">550</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  550</span>: <a class="code hl_variable" href="structnetspeak_1_1NormQueryCounter.html#ab10b92bf58a99a7bc71baca77a2167d7">options</a>(<a class="code hl_variable" href="structnetspeak_1_1NormQueryCounter.html#ab10b92bf58a99a7bc71baca77a2167d7">options</a>) {}</div>
+<div class="ttc" id="astructnetspeak_1_1NormQueryCounter_html_ab10b92bf58a99a7bc71baca77a2167d7"><div class="ttname"><a href="structnetspeak_1_1NormQueryCounter.html#ab10b92bf58a99a7bc71baca77a2167d7">netspeak::NormQueryCounter::options</a></div><div class="ttdeci">QueryNormalizer::Options options</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00548">QueryNormalizer.cpp:548</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a853463fd07c510eeef9767164fbfd5bd" name="a853463fd07c510eeef9767164fbfd5bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a853463fd07c510eeef9767164fbfd5bd">&#9670;&#160;</a></span>estimate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt; uint64_t(size_t)&gt; netspeak::NormQueryCounter::estimate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html">SimpleQuery</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a function that, given the number of words each regex will be replaced with, return an estimate for the number of norm queries creates by the given query. </p>
+<p>The returned estimate is guaranteed to be always higher than the actual number of norm queries (but also bounded by the maximum number representable in <code>uint64_t</code> ).</p>
+<p>Every regex in the given query will be assumed to be replaced by the given number of words.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td></td></tr>
+    <tr><td class="paramname">regex_matches</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00567">567</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  567</span>                                                                   {</div>
+<div class="line"><span class="lineno">  568</span>    MinLengthMargin margin(0, 0);</div>
+<div class="line"><span class="lineno">  569</span>    <span class="keyword">const</span> <span class="keyword">auto</span> result = <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter.html#a72d9822b381ac1a8d8f29521c73c7e45">estimate_impl</a>(query.root(), margin);</div>
+<div class="line"><span class="lineno">  570</span>    <span class="keywordflow">if</span> (result.is_constant()) {</div>
+<div class="line"><span class="lineno">  571</span>      <span class="comment">// the estimate is a constant</span></div>
+<div class="line"><span class="lineno">  572</span>      <span class="keyword">const</span> <span class="keyword">auto</span> constant = result.constant();</div>
+<div class="line"><span class="lineno">  573</span>      <span class="keywordflow">return</span> [=](size_t) { <span class="keywordflow">return</span> constant; };</div>
+<div class="line"><span class="lineno">  574</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  575</span>      <span class="comment">// the estimate depends on the number of regex matches</span></div>
+<div class="line"><span class="lineno">  576</span>      <span class="keyword">const</span> <span class="keyword">auto</span> function = result.function();</div>
+<div class="line"><span class="lineno">  577</span>      <span class="keywordflow">return</span> [=](<span class="keywordtype">size_t</span> regex_matches) { <span class="keywordflow">return</span> function(regex_matches); };</div>
+<div class="line"><span class="lineno">  578</span>    }</div>
+<div class="line"><span class="lineno">  579</span>  }</div>
+<div class="ttc" id="astructnetspeak_1_1NormQueryCounter_html_a72d9822b381ac1a8d8f29521c73c7e45"><div class="ttname"><a href="structnetspeak_1_1NormQueryCounter.html#a72d9822b381ac1a8d8f29521c73c7e45">netspeak::NormQueryCounter::estimate_impl</a></div><div class="ttdeci">UnitResult estimate_impl(const SimpleQuery::Unit &amp;unit, const MinLengthMargin margin)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00678">QueryNormalizer.cpp:678</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_a853463fd07c510eeef9767164fbfd5bd_cgraph.svg" width="768" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_a853463fd07c510eeef9767164fbfd5bd_icgraph.svg" width="879" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a72d9822b381ac1a8d8f29521c73c7e45" name="a72d9822b381ac1a8d8f29521c73c7e45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72d9822b381ac1a8d8f29521c73c7e45">&#9670;&#160;</a></span>estimate_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html">UnitResult</a> netspeak::NormQueryCounter::estimate_impl </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnetspeak_1_1model_1_1SimpleQuery.html#a43fea0b12ec882cb69446cbcb8aa02f5">SimpleQuery::Unit</a> &amp;&#160;</td>
+          <td class="paramname"><em>unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structnetspeak_1_1MinLengthMargin.html">MinLengthMargin</a>&#160;</td>
+          <td class="paramname"><em>margin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00678">678</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  678</span>                                                                                      {</div>
+<div class="line"><span class="lineno">  679</span>    <span class="keywordflow">switch</span> (unit.tag()) {</div>
+<div class="line"><span class="lineno">  680</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38dabdde29e3c0fe7b687d69a696bbaf71ac">SimpleQuery::Unit::Tag::WORD</a>:</div>
+<div class="line"><span class="lineno">  681</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da97894a65a46501e516e242a3d38f7d0d">SimpleQuery::Unit::Tag::QMARK</a>:</div>
+<div class="line"><span class="lineno">  682</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  683</span> </div>
+<div class="line"><span class="lineno">  684</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da8ab2630ada18b94a005a0c5399d9d483">SimpleQuery::Unit::Tag::STAR</a>:</div>
+<div class="line"><span class="lineno">  685</span>        <span class="keywordflow">return</span> 1UL + std::max&lt;uint32_t&gt;(0, <a class="code hl_variable" href="structnetspeak_1_1NormQueryCounter.html#ab10b92bf58a99a7bc71baca77a2167d7">options</a>.<a class="code hl_variable" href="structnetspeak_1_1QueryNormalizer_1_1Options.html#a34fb9e6e9867127b93b4406b55742d9b">max_length</a> - margin.total());</div>
+<div class="line"><span class="lineno">  686</span> </div>
+<div class="line"><span class="lineno">  687</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da17746ad0201dc8a388f2f979b50b071c">SimpleQuery::Unit::Tag::REGEX</a>:</div>
+<div class="line"><span class="lineno">  688</span>        <span class="keywordflow">return</span> UnitResult([](<span class="keywordtype">size_t</span> input) { <span class="keywordflow">return</span> (uint64_t)input; });</div>
+<div class="line"><span class="lineno">  689</span> </div>
+<div class="line"><span class="lineno">  690</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da80ea6a59a36341e746a915b8c39872cf">SimpleQuery::Unit::Tag::ALTERNATION</a>: {</div>
+<div class="line"><span class="lineno">  691</span>        UnitResult sum = 0;</div>
+<div class="line"><span class="lineno">  692</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; child : unit.children()) {</div>
+<div class="line"><span class="lineno">  693</span>          sum = sum + <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter.html#a72d9822b381ac1a8d8f29521c73c7e45">estimate_impl</a>(child, margin);</div>
+<div class="line"><span class="lineno">  694</span>        }</div>
+<div class="line"><span class="lineno">  695</span>        <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno">  696</span>      }</div>
+<div class="line"><span class="lineno">  697</span> </div>
+<div class="line"><span class="lineno">  698</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da911737ef056ac1eb1c4c7dbe6eb90786">SimpleQuery::Unit::Tag::CONCAT</a>: {</div>
+<div class="line"><span class="lineno">  699</span>        uint32_t uint_min_length = 0;</div>
+<div class="line"><span class="lineno">  700</span>        std::vector&lt;uint32_t&gt; min_lengths;</div>
+<div class="line"><span class="lineno">  701</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; child : unit.children()) {</div>
+<div class="line"><span class="lineno">  702</span>          <span class="keyword">auto</span> min_len = child.min_length();</div>
+<div class="line"><span class="lineno">  703</span>          <span class="keywordflow">if</span> (min_len == UINT32_MAX) {</div>
+<div class="line"><span class="lineno">  704</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  705</span>          }</div>
+<div class="line"><span class="lineno">  706</span>          uint_min_length += min_len;</div>
+<div class="line"><span class="lineno">  707</span>          min_lengths.push_back(min_len);</div>
+<div class="line"><span class="lineno">  708</span>        }</div>
+<div class="line"><span class="lineno">  709</span> </div>
+<div class="line"><span class="lineno">  710</span>        UnitResult total = 1;</div>
+<div class="line"><span class="lineno">  711</span>        uint32_t min_before = 0;</div>
+<div class="line"><span class="lineno">  712</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i != unit.children().size(); i++) {</div>
+<div class="line"><span class="lineno">  713</span>          <span class="keyword">const</span> <span class="keyword">auto</span>&amp; child = unit.children()[i];</div>
+<div class="line"><span class="lineno">  714</span>          <span class="keyword">const</span> uint32_t child_min = min_lengths[i];</div>
+<div class="line"><span class="lineno">  715</span>          <span class="keyword">const</span> uint32_t min_after = uint_min_length - min_before - child_min;</div>
+<div class="line"><span class="lineno">  716</span>          <span class="keyword">const</span> <span class="keyword">auto</span> c_num = <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter.html#a72d9822b381ac1a8d8f29521c73c7e45">estimate_impl</a>(child, margin + MinLengthMargin(min_before, min_after));</div>
+<div class="line"><span class="lineno">  717</span>          min_before += child_min;</div>
+<div class="line"><span class="lineno">  718</span> </div>
+<div class="line"><span class="lineno">  719</span>          <span class="keywordflow">if</span> (c_num.is_constant() &amp;&amp; c_num.constant() == UINT64_MAX) {</div>
+<div class="line"><span class="lineno">  720</span>            <span class="keywordflow">return</span> UINT64_MAX;</div>
+<div class="line"><span class="lineno">  721</span>          }</div>
+<div class="line"><span class="lineno">  722</span>          <span class="keywordflow">if</span> (c_num.is_constant() &amp;&amp; c_num.constant() == 0) {</div>
+<div class="line"><span class="lineno">  723</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  724</span>          }</div>
+<div class="line"><span class="lineno">  725</span>          total = total * c_num;</div>
+<div class="line"><span class="lineno">  726</span>        }</div>
+<div class="line"><span class="lineno">  727</span>        <span class="keywordflow">return</span> total;</div>
+<div class="line"><span class="lineno">  728</span>      }</div>
+<div class="line"><span class="lineno">  729</span> </div>
+<div class="line"><span class="lineno">  730</span>      <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  731</span>        <span class="keywordflow">throw</span> tracable_logic_error(<span class="stringliteral">&quot;Unknown tag&quot;</span>);</div>
+<div class="line"><span class="lineno">  732</span>    }</div>
+<div class="line"><span class="lineno">  733</span>  }</div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a3247a2a5789d3161f6682491821ed38da17746ad0201dc8a388f2f979b50b071c"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da17746ad0201dc8a388f2f979b50b071c">netspeak::model::SimpleQueryUnit__::Tag::REGEX</a></div><div class="ttdeci">@ REGEX</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a3247a2a5789d3161f6682491821ed38da80ea6a59a36341e746a915b8c39872cf"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da80ea6a59a36341e746a915b8c39872cf">netspeak::model::SimpleQueryUnit__::Tag::ALTERNATION</a></div><div class="ttdeci">@ ALTERNATION</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a3247a2a5789d3161f6682491821ed38da8ab2630ada18b94a005a0c5399d9d483"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da8ab2630ada18b94a005a0c5399d9d483">netspeak::model::SimpleQueryUnit__::Tag::STAR</a></div><div class="ttdeci">@ STAR</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a3247a2a5789d3161f6682491821ed38da911737ef056ac1eb1c4c7dbe6eb90786"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da911737ef056ac1eb1c4c7dbe6eb90786">netspeak::model::SimpleQueryUnit__::Tag::CONCAT</a></div><div class="ttdeci">@ CONCAT</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a3247a2a5789d3161f6682491821ed38da97894a65a46501e516e242a3d38f7d0d"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38da97894a65a46501e516e242a3d38f7d0d">netspeak::model::SimpleQueryUnit__::Tag::QMARK</a></div><div class="ttdeci">@ QMARK</div></div>
+<div class="ttc" id="aclassnetspeak_1_1model_1_1SimpleQueryUnit_____html_a3247a2a5789d3161f6682491821ed38dabdde29e3c0fe7b687d69a696bbaf71ac"><div class="ttname"><a href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a3247a2a5789d3161f6682491821ed38dabdde29e3c0fe7b687d69a696bbaf71ac">netspeak::model::SimpleQueryUnit__::Tag::WORD</a></div><div class="ttdeci">@ WORD</div></div>
+<div class="ttc" id="astructnetspeak_1_1QueryNormalizer_1_1Options_html_a34fb9e6e9867127b93b4406b55742d9b"><div class="ttname"><a href="structnetspeak_1_1QueryNormalizer_1_1Options.html#a34fb9e6e9867127b93b4406b55742d9b">netspeak::QueryNormalizer::Options::max_length</a></div><div class="ttdeci">uint32_t max_length</div><div class="ttdoc">The maximum length norm queries are allowed to have.</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8hpp_source.html#l00057">QueryNormalizer.hpp:57</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_a72d9822b381ac1a8d8f29521c73c7e45_cgraph.svg" width="498" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_a72d9822b381ac1a8d8f29521c73c7e45_icgraph.svg" width="1143" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab10b92bf58a99a7bc71baca77a2167d7" name="ab10b92bf58a99a7bc71baca77a2167d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab10b92bf58a99a7bc71baca77a2167d7">&#9670;&#160;</a></span>options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnetspeak_1_1QueryNormalizer_1_1Options.html">QueryNormalizer::Options</a> netspeak::NormQueryCounter::options</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00548">548</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>netspeak/<a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacenetspeak.html">netspeak</a></li><li class="navelem"><a class="el" href="structnetspeak_1_1NormQueryCounter.html">NormQueryCounter</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

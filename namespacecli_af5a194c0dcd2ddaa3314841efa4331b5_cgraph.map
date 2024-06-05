@@ -1,0 +1,9 @@
+<map id="cli::RunLocalServerShell" name="cli::RunLocalServerShell">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,184,56"/>
+<area shape="rect" id="Node000002" href="$namespacecli.html#a83d85626e46ec5febb1e46ac750f88cb" title=" " alt="" coords="232,5,401,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,30,218,27,219,32,185,36"/>
+<area shape="rect" id="Node000004" href="$namespacecli.html#a4671fa197b7eee6dfa2cd7789a6f4d29" title=" " alt="" coords="265,55,368,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="185,50,252,58,251,63,184,56"/>
+<area shape="rect" id="Node000003" href="$namespacecli.html#ae9428c4a49b414b314134bdf38214c6e" title="Returns the corpora of the given stub." alt="" coords="449,5,567,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="402,15,435,15,435,21,402,21"/>
+</map>

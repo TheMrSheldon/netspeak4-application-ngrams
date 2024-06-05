@@ -1,0 +1,18 @@
+<map id="netspeak/invertedindex/PostlistBuilder.hpp" name="netspeak/invertedindex/PostlistBuilder.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="105,5,281,45"/>
+<area shape="rect" id="Node000002" href="$PostlistSorter_8hpp.html" title=" " alt="" coords="105,93,281,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,59,196,93,191,93,191,59"/>
+<area shape="rect" id="Node000003" href="$SortedInput_8hpp.html" title=" " alt="" coords="5,181,181,221"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="136,55,113,72,96,95,88,116,86,139,91,181,86,181,81,139,83,115,91,92,109,68,133,50"/>
+<area shape="rect" id="Node000007" href="$UnsortedInput_8hpp.html" title=" " alt="" coords="205,181,381,221"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="254,50,277,68,296,92,304,115,306,139,301,181,296,181,301,139,298,116,291,95,273,72,250,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="163,144,117,183,114,179,159,140"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="228,140,273,179,269,183,224,144"/>
+<area shape="rect" id="Node000004" href="$Indexer_8hpp.html" title=" " alt="" coords="105,269,281,309"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="128,228,173,267,169,271,124,232"/>
+<area shape="rect" id="Node000005" href="$ManagedIndexer_8hpp.html" title=" " alt="" coords="105,357,281,397"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="196,323,196,357,191,357,191,323"/>
+<area shape="rect" id="Node000006" href="$indexing_8cpp.html" title=" " alt="" coords="109,445,278,471"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="196,411,196,445,191,445,191,411"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="263,232,217,271,214,267,259,228"/>
+</map>

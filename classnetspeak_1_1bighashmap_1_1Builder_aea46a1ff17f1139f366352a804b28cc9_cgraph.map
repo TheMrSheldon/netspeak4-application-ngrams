@@ -1,0 +1,12 @@
+<map id="netspeak::bighashmap::Builder::IsUnique" name="netspeak::bighashmap::Builder::IsUnique">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,176,103"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util.html#ad2441a387c3a4c47e09c373e9412fad0" title=" " alt="" coords="224,70,363,95"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,80,210,80,210,85,176,85"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#ab27a22c787271513007af0719b17cef9" title=" " alt="" coords="415,5,555,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="336,67,404,47,406,52,337,72"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="608,99,759,125"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="363,85,594,103,594,108,363,91"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#a93e18aaa529a497b6afdf4b3bd221182" title=" " alt="" coords="411,120,560,160"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="337,93,406,114,404,119,336,98"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="560,127,594,122,594,127,561,132"/>
+</map>

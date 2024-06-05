@@ -1,0 +1,10 @@
+<map id="netspeak::bighashmap::ExternalMap::ExternalMap" name="netspeak::bighashmap::ExternalMap::ExternalMap">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,208,45"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util.html#a4acc3d13f8d541f4b65dd44f486403fd" title=" " alt="" coords="256,13,412,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,23,242,23,242,28,209,28"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="667,13,817,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="412,20,460,19,619,19,653,19,653,25,619,24,460,24,413,25"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#af94d48fda5f335ddcb461a8237079866" title=" " alt="" coords="460,33,619,73"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="413,33,446,38,446,43,412,39"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="619,40,652,35,653,40,620,45"/>
+</map>

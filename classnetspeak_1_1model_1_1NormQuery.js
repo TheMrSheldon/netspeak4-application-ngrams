@@ -9,8 +9,8 @@ var classnetspeak_1_1model_1_1NormQuery =
     [ "operator!=", "classnetspeak_1_1model_1_1NormQuery.html#af6b9a8049ebbc1b05e4b4bd986842552", null ],
     [ "operator==", "classnetspeak_1_1model_1_1NormQuery.html#abb5ddb30740717dcd0e89e98c5498610", null ],
     [ "size", "classnetspeak_1_1model_1_1NormQuery.html#a0d7789ccab66ae884162a6c3076efd5d", null ],
-    [ "units", "classnetspeak_1_1model_1_1NormQuery.html#a9fdc2ae06e51f835b80690d0deef19f5", null ],
-    [ "units", "classnetspeak_1_1model_1_1NormQuery.html#ab25a94f1f1333dad7ce46d983260b607", null ],
+    [ "units", "classnetspeak_1_1model_1_1NormQuery.html#a1026b5afae11d5cdfecc06eb4fa6c005", null ],
+    [ "units", "classnetspeak_1_1model_1_1NormQuery.html#a396bda297e3bcfadb6c56a060b1fbfae", null ],
     [ "EMPTY", "classnetspeak_1_1model_1_1NormQuery.html#a36ddbb1a03891b03377b14081865e05a", null ],
     [ "units_", "classnetspeak_1_1model_1_1NormQuery.html#a372a0b02d8385e14e79910a837c7ce1f", null ]
 ];

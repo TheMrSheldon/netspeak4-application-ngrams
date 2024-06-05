@@ -1,6 +1,6 @@
 var classnetspeak_1_1bighashmap_1_1Builder =
 [
-    [ "Checksum", "classnetspeak_1_1bighashmap_1_1Builder.html#a020cf54f0667d62fce51f0f1e8070b68", null ],
+    [ "Checksum", "classnetspeak_1_1bighashmap_1_1Builder.html#aa2f69767acb9d28a63caea0d32c56446", null ],
     [ "Entry", "classnetspeak_1_1bighashmap_1_1Builder.html#acfacfae38b939c9abd7f0d39cc62deff", null ],
     [ "EntryTraits", "classnetspeak_1_1bighashmap_1_1Builder.html#af52bca4eeb08df85b75bb59bb0b7bb59", null ],
     [ "Traits", "classnetspeak_1_1bighashmap_1_1Builder.html#aee71cc82077686909e61cf3c9299e1f9", null ],
@@ -13,7 +13,7 @@ var classnetspeak_1_1bighashmap_1_1Builder =
     [ "CountRecords", "classnetspeak_1_1bighashmap_1_1Builder.html#ae4e2ef8f5512442b408c6ad678f152bf", null ],
     [ "CreateKeyFile", "classnetspeak_1_1bighashmap_1_1Builder.html#aa0aabbe526c4b5268a49a69f23ff7615", null ],
     [ "IsUnique", "classnetspeak_1_1bighashmap_1_1Builder.html#aea46a1ff17f1139f366352a804b28cc9", null ],
-    [ "Partition", "classnetspeak_1_1bighashmap_1_1Builder.html#a4692243f77391f959596c13d014d67e2", null ],
+    [ "Partition", "classnetspeak_1_1bighashmap_1_1Builder.html#a7144d697e3b176b53d03f0b4dcca71d1", null ],
     [ "index_file_name", "classnetspeak_1_1bighashmap_1_1Builder.html#a7474e8072da00d18f1ff6ab69c60a125", null ],
     [ "key_value_delim", "classnetspeak_1_1bighashmap_1_1Builder.html#aaf8daf8566516639f095fc58ea489fa6", null ]
 ];

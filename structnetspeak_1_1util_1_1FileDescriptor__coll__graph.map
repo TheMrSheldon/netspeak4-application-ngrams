@@ -1,0 +1,3 @@
+<map id="netspeak::util::FileDescriptor" name="netspeak::util::FileDescriptor">
+<area shape="rect" id="Node000001" title="A managed file descriptor. This is implemented using a shared pointer." alt="" coords="5,5,207,151"/>
+</map>

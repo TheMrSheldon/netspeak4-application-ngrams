@@ -1,0 +1,5 @@
+<map id="netspeak::regex::RegexQuery::reject_all" name="netspeak::regex::RegexQuery::reject_all">
+<area shape="rect" id="Node000001" title="Returns whether this query will reject all words." alt="" coords="5,5,220,45"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1regex_1_1RegexQuery.html#a8f2543e1cc1b4460233f700f547a89f6" title="Returns an upper bound for the number of possible words, the query can match. If UINT32_MAX is return..." alt="" coords="268,5,483,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,23,254,23,254,28,220,28"/>
+</map>

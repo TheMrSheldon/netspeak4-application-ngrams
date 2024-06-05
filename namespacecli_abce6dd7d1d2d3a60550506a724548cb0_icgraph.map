@@ -1,0 +1,7 @@
+<map id="cli::add_logging" name="cli::add_logging">
+<area shape="rect" id="Node000001" title=" " alt="" coords="232,31,356,56"/>
+<area shape="rect" id="Node000002" href="$classcli_1_1ProxyCommand.html#a50dcb9c42e6b385a65354f9b999901ce" title=" " alt="" coords="5,5,184,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,36,184,32,185,27,219,31"/>
+<area shape="rect" id="Node000003" href="$classcli_1_1ServeCommand.html#ae9d12b8532a97a743fdc831040ee45c1" title=" " alt="" coords="5,55,184,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="219,55,185,59,184,54,218,50"/>
+</map>

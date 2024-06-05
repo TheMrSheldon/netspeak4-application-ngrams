@@ -1,0 +1,14 @@
+<map id="netspeak::util::LfuCache::update" name="netspeak::util::LfuCache::update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,184,71"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="685,39,836,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,32,278,18,391,7,515,3,577,6,638,13,713,32,712,37,637,18,576,12,515,9,392,12,278,23,184,37"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1util_1_1LfuCache.html#a0e25828d5cac54740caed94051d0d269" title=" " alt="" coords="232,59,411,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,60,218,64,218,69,184,65"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1util_1_1LfuCache.html#ae8c157a74657b15828b5a6059cce4a27" title=" " alt="" coords="459,27,637,67"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="411,64,445,59,446,65,412,69"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1util_1_1LfuCache.html#a0b132be7b4e8641f6337a987e134a4a8" title=" " alt="" coords="459,91,637,131"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="412,89,446,94,445,100,411,95"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1util_1_1LfuCache.html#a6ebcb5852d68c0b00a14763bd8db4418" title=" " alt="" coords="459,155,637,195"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="364,97,460,141,478,148,476,153,458,146,362,102"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="619,89,701,65,703,70,621,94"/>
+</map>

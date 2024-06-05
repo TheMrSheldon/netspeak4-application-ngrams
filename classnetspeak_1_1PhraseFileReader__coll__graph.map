@@ -1,6 +1,9 @@
 <map id="netspeak::PhraseFileReader&lt; stream_provides_phrase_id &gt;" name="netspeak::PhraseFileReader&lt; stream_provides_phrase_id &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="592,45,823,86"/>
-<area shape="rect" id="node2" href="$classnetspeak_1_1invertedindex_1_1RecordReader.html" title=" " alt="" coords="299,5,479,61"/>
-<area shape="rect" id="node3" href="$structnetspeak_1_1PhraseFileParserItem.html" title=" " alt="" coords="276,85,503,112"/>
-<area shape="rect" id="node4" href="$classnetspeak_1_1model_1_1Words.html" title=" " alt="" coords="5,85,184,112"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,571,228,751"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1invertedindex_1_1RecordReader.html" title=" " alt="" coords="9,353,181,508"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,521,111,570,106,571,101,522"/>
+<area shape="rect" id="Node000003" href="$structnetspeak_1_1PhraseFileParserItem.html" title=" " alt="" coords="206,388,425,473"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="281,475,207,560,203,556,277,472"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1model_1_1Words.html" title=" " alt="" coords="230,5,401,291"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="318,291,318,371,313,371,313,291"/>
 </map>

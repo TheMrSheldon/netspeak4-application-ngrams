@@ -1,0 +1,17 @@
+<map id="netspeak/value/value_traits.hpp" name="netspeak/value/value_traits.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="236,5,399,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,72,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,48,86,94,85,89,250,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="96,93,163,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="273,48,171,90,169,85,271,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="187,93,253,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="295,48,247,87,243,82,292,43"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="277,93,357,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="320,46,320,79,315,79,315,46"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="382,93,469,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="345,43,399,83,396,87,342,48"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="493,93,552,119"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="367,43,481,86,479,91,366,48"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="577,93,669,119"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="391,43,565,87,564,92,390,48"/>
+</map>

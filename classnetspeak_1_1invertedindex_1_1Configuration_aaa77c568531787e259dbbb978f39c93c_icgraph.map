@@ -1,0 +1,10 @@
+<map id="netspeak::invertedindex::Configuration::expected_record_count" name="netspeak::invertedindex::Configuration::expected_record_count">
+<area shape="rect" id="Node000001" title=" " alt="" coords="539,70,724,125"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1invertedindex_1_1UnsortedInput.html#a14d1dabae0597d0f84e11d9f97eda34e" title=" " alt="" coords="293,5,473,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="525,69,452,48,454,43,526,64"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1invertedindex_1_1IndexStrategy.html#a678dbc89579fae943cb8c2ef5867307c" title=" " alt="" coords="276,70,491,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="525,100,491,100,491,95,525,95"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1invertedindex_1_1UnsortedInput.html#a08ef9014c5622dbb729cf8c12ffc92fc" title=" " alt="" coords="5,111,228,151"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="533,131,491,139,423,145,354,147,228,143,228,138,354,142,423,140,490,133,532,125"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="263,115,229,119,228,114,262,110"/>
+</map>

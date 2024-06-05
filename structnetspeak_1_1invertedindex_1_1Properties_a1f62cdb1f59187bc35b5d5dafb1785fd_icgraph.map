@@ -1,0 +1,13 @@
+<map id="netspeak::invertedindex::Properties::default_filename" name="netspeak::invertedindex::Properties::default_filename">
+<area shape="rect" id="Node000001" title=" " alt="" coords="488,80,668,135"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1invertedindex_1_1Indexer.html#a01a9448341a44ad65f23452dd8487961" title=" " alt="" coords="260,55,440,95"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="474,95,440,91,440,85,475,90"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1invertedindex_1_1Searcher.html#a7892a42a3c0e390af6f33815de970002" title=" " alt="" coords="260,119,440,159"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="475,125,440,129,440,124,474,119"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak.html#af42806304a02200d2a12099b3b54f35d" title=" " alt="" coords="5,5,212,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="251,55,162,33,163,28,252,49"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1invertedindex_1_1ManagedIndexer.html#ac43570be49a3700fc731358ffc45919d" title=" " alt="" coords="17,55,200,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="246,78,200,78,200,73,246,73"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1invertedindex_1_1Searcher.html#a89859cbc571a9e0ff7ff6830cb21ce72" title=" " alt="" coords="19,119,199,159"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="246,142,199,142,199,137,246,137"/>
+</map>

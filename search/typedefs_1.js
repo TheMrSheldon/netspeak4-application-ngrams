@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['index_5fentry_5ftype_473',['index_entry_type',['../structnetspeak_1_1RetrievalStrategy3Tag.html#a2a4b3f0261819b9b41e713be681c87bc',1,'netspeak::RetrievalStrategy3Tag']]]
+  ['address_0',['address',['../classnetspeak_1_1invertedindex_1_1StorageReader.html#aeb596d3becfbe403bd3ed16cdcc62371',1,'netspeak::invertedindex::StorageReader::Address'],['../classnetspeak_1_1invertedindex_1_1StorageWriter.html#a5bebe414eea37470ddfbc0192e0534ca',1,'netspeak::invertedindex::StorageWriter::Address']]]
 ];

@@ -1,0 +1,13 @@
+<map id="antlr4::QueryConstructor::enterWord" name="antlr4::QueryConstructor::enterWord">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,188,109"/>
+<area shape="rect" id="Node000002" href="$classantlr4_1_1QueryConstructor.html#a968de060cb7e4922495c27954b17d0a0" title=" " alt="" coords="247,5,430,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,67,249,46,250,51,174,72"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1model_1_1QueryUnit____.html#ac85cc5078f0726242a273118acccfa78" title=" " alt="" coords="236,69,441,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,87,222,87,222,92,188,92"/>
+<area shape="rect" id="Node000006" href="$namespaceantlr4.html#aacdddfb624b04c5f787d9c5ecef87202" title="Unescapes backslashes in the given string." alt="" coords="254,134,423,159"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="182,107,272,128,271,133,181,112"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1model_1_1QueryUnit____.html#a95a933ddda7a0d4db361dc5efd2a1f2d" title=" " alt="" coords="489,37,695,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="441,74,475,69,476,75,442,79"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1model_1_1QueryUnit____.html#aceea127950e12e672abdacecd7cd178c" title=" " alt="" coords="489,101,695,141"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="442,100,476,104,475,109,441,105"/>
+</map>

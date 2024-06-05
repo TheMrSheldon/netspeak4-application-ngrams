@@ -1,9 +1,15 @@
 <map id="netspeak::Netspeak" name="netspeak::Netspeak">
-<area shape="rect" id="node1" title=" " alt="" coords="820,129,972,156"/>
-<area shape="rect" id="node2" href="$classnetspeak_1_1PhraseCorpus.html" title=" " alt="" coords="425,5,604,32"/>
-<area shape="rect" id="node3" href="$classnetspeak_1_1QueryProcessor.html" title=" " alt="" coords="383,57,647,98"/>
-<area shape="rect" id="node4" href="$classnetspeak_1_1RetrievalStrategy.html" title=" " alt="" coords="5,57,269,98"/>
-<area shape="rect" id="node5" href="$structnetspeak_1_1Netspeak_1_1search__config.html" title=" " alt="" coords="439,122,591,163"/>
-<area shape="rect" id="node6" href="$classnetspeak_1_1util_1_1LfuCache.html" title=" " alt="" coords="409,188,621,244"/>
-<area shape="rect" id="node7" href="$classnetspeak_1_1QueryNormalizer.html" title=" " alt="" coords="414,268,615,295"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="505,736,707,1056"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1QueryNormalizer.html" title=" " alt="" coords="5,368,199,533"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,532,165,604,187,640,213,671,277,729,349,777,422,817,491,849,489,854,420,822,346,782,274,733,209,675,183,643,160,607,126,534"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1QueryProcessor.html" title=" " alt="" coords="223,381,479,521"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="383,520,426,612,479,711,499,742,494,745,474,713,421,614,378,522"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1RetrievalStrategy.html" title=" " alt="" coords="223,5,479,165"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="354,165,354,365,349,365,349,165"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1util_1_1LfuCache.html" title=" " alt="" coords="504,243,708,658"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="609,658,609,719,603,719,603,658"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1PhraseCorpus.html" title=" " alt="" coords="733,228,903,673"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="735,665,712,713,708,723,703,720,708,711,730,663"/>
+<area shape="rect" id="Node000007" href="$structnetspeak_1_1Netspeak_1_1search__config.html" title=" " alt="" coords="927,391,1093,511"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="997,512,966,593,944,636,917,675,873,723,824,766,772,804,722,836,719,831,769,799,821,761,870,719,913,672,940,633,962,591,992,510"/>
 </map>

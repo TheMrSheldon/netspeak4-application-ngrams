@@ -1,5 +1,7 @@
 <map id="netspeak::service::RequestLogger" name="netspeak::service::RequestLogger">
-<area shape="rect" id="node1" title=" " alt="" coords="129,153,275,195"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,13,193,39"/>
-<area shape="rect" id="node3" href="$classnetspeak_1_1util_1_1Lockable.html" title=" " alt="" coords="218,5,394,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="121,367,267,567"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,185,158"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,171,168,366,163,367,106,172"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1util_1_1Lockable.html" title=" " alt="" coords="210,5,378,245"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="261,246,230,351,225,350,256,245"/>
 </map>

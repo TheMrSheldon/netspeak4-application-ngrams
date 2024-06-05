@@ -1,0 +1,12 @@
+<map id="netspeak::service::utc_timestamp" name="netspeak::service::utc_timestamp">
+<area shape="rect" id="Node000001" title="Returns the current time formatted as a string following the ISO 8601 format for UTC date and time." alt="" coords="448,49,593,89"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1service.html#a2ce9e6b6f83b0b45f9a8474b5210dce9" title=" " alt="" coords="255,5,400,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="434,52,400,45,401,39,435,47"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1service.html#a75b5182433d6eb37dde58d0efff5b799" title=" " alt="" coords="255,93,400,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="435,91,401,99,400,94,434,86"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="360,81,348,75,327,72,309,74,298,79,294,85,296,92,291,94,289,84,295,75,308,69,327,67,350,70,362,77"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1service_1_1RequestLogger.html#af6f740ce3b61ce0457265f30a7d36488" title=" " alt="" coords="5,61,207,101"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="241,104,206,99,207,93,241,98"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1service_1_1RequestLogger.html#a131feb684685433d4f618ea9ba4e6380" title=" " alt="" coords="21,125,191,165"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="241,128,192,136,191,130,241,123"/>
+</map>

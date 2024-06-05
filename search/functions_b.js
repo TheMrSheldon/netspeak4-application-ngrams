@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['operator_3c_3c_437',['operator&lt;&lt;',['../classnetspeak_1_1util_1_1Config.html#ade6133f623d65739e99bb5e858f26cfa',1,'netspeak::util::Config']]],
-  ['operator_3d_438',['operator=',['../classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a094616daee7e30f189c72633b9da98e8',1,'netspeak::invertedindex::ByteBuffer::operator=()'],['../classnetspeak_1_1util_1_1Lockable.html#aac552bca4a50a4c7c479a90d5778f96d',1,'netspeak::util::Lockable::operator=(const Lockable &amp;other)=delete'],['../classnetspeak_1_1util_1_1Lockable.html#abc86451809c99e32e0f6ff82d49068c3',1,'netspeak::util::Lockable::operator=(Lockable &amp;&amp;other)=delete']]],
-  ['optimize_5fquery_439',['optimize_query',['../classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a445e83616a9f062d4f44db53017f3e9c',1,'netspeak::regex::DefaultRegexIndex']]]
+  ['key_0',['key',['../classnetspeak_1_1invertedindex_1_1Record.html#a8c31f71f3940ea11d85fbfca276f0eca',1,'netspeak::invertedindex::Record::key()'],['../classnetspeak_1_1invertedindex_1_1Record.html#acdd34c27dbbdd218fe2bf41c9a0a3190',1,'netspeak::invertedindex::Record::key() const']]],
+  ['key_5fsorting_1',['key_sorting',['../classnetspeak_1_1invertedindex_1_1Configuration.html#a0d46063abee324f4493ffc93ec573363',1,'netspeak::invertedindex::Configuration']]],
+  ['keys_2',['keys',['../classnetspeak_1_1Configuration.html#a859de4b34a67ec88117409c9eb0bcc99',1,'netspeak::Configuration']]]
 ];

@@ -1,0 +1,11 @@
+<map id="netspeak::prune" name="netspeak::prune">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,77,132,102"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1model_1_1RawRefResult.html#a6f2f6c9a3bdf9fa2e03f93c6718911b6" title="The phrase references of this result set sorted by frequency in descending order." alt="" coords="180,5,411,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,74,179,55,208,47,210,52,181,60,114,79"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1model_1_1RawRefResult.html#adeb3d567620874295db354edef045627" title=" " alt="" coords="180,69,411,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="132,87,166,87,166,92,132,92"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#a3d1d03195f7667390b5f548a2b9f9869" title="A simple function that appends all elements of other to base." alt="" coords="224,133,367,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="114,99,181,119,211,127,210,133,179,124,113,105"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="459,141,609,166"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="367,151,445,151,445,156,367,156"/>
+</map>

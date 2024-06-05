@@ -1,0 +1,19 @@
+<map id="netspeak::Netspeak::process_wildcard_query_" name="netspeak::Netspeak::process_wildcard_query_">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,199,95"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak.html#abdb7d378bf744897cc6616601a27595d" title=" " alt="" coords="247,5,449,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,53,279,31,280,36,189,58"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak.html#ae7f7321abeae1a74ab51068b929fbab6" title="Returns a unique string representation for the given query." alt="" coords="264,55,432,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,73,250,73,250,78,199,78"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak.html#adc992b5399e2243ef4e4a3530e10cb1b" title=" " alt="" coords="285,139,411,164"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="169,93,294,132,292,137,167,98"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1model_1_1NormQuery.html#a1026b5afae11d5cdfecc06eb4fa6c005" title=" " alt="" coords="505,35,720,75"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="432,66,491,62,491,67,432,72"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1model_1_1RawRefResult.html#a6f2f6c9a3bdf9fa2e03f93c6718911b6" title="The phrase references of this result set sorted by frequency in descending order." alt="" coords="497,99,728,139"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="411,141,483,132,484,138,412,146"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1model_1_1RawRefResult.html#adeb3d567620874295db354edef045627" title=" " alt="" coords="497,163,728,203"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="412,156,484,165,483,170,411,162"/>
+<area shape="rect" id="Node000008" href="$namespacenetspeak_1_1util.html#a3d1d03195f7667390b5f548a2b9f9869" title="A simple function that appends all elements of other to base." alt="" coords="541,227,684,267"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="377,162,433,187,498,213,529,223,527,228,496,218,430,192,375,167"/>
+<area shape="rect" id="Node000009" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="776,235,927,260"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="684,245,762,245,762,250,684,250"/>
+</map>

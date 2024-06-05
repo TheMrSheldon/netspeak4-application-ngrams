@@ -1,0 +1,9 @@
+<map id="netspeak::value::generator::randomized" name="netspeak::value::generator::randomized">
+<area shape="rect" id="Node000001" title=" " alt="" coords="285,77,483,117"/>
+<area shape="rect" id="Node000002" href="$structnetspeak_1_1value_1_1generator_3_01pair_3_01T1_00_01T2_01_4_01_4.html#afb1bc8ed2888a89caf9fc3863d71ac42" title=" " alt="" coords="5,5,237,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,76,194,48,196,43,298,71"/>
+<area shape="rect" id="Node000003" href="$structnetspeak_1_1value_1_1generator_3_01quadruple_3_01T1_00_01T2_00_01T3_00_01T4_01_4_01_4.html#a07ccc9b67c160bd837d93318d07bb389" title=" " alt="" coords="23,70,220,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="272,100,220,100,220,95,272,95"/>
+<area shape="rect" id="Node000004" href="$structnetspeak_1_1value_1_1generator_3_01triple_3_01T1_00_01T2_00_01T3_01_4_01_4.html#af8a53e77c0e2b633ec6f6a7202f2233b" title=" " alt="" coords="23,149,220,203"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="304,124,214,151,213,146,303,119"/>
+</map>

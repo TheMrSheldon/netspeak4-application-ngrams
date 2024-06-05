@@ -1,0 +1,11 @@
+<map id="netspeak::PhraseCorpus::init_vocabulary_" name="netspeak::PhraseCorpus::init_vocabulary_">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,184,109"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1util_1_1StringIdMap_1_1Builder.html#aaae054493a636c9a6c9eb186f970e630" title=" " alt="" coords="241,5,410,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,67,239,46,240,52,168,72"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1error__message.html#a2a36ff57b354714213502a72e6d9d416" title=" " alt="" coords="232,69,419,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,87,219,87,219,92,184,92"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#aad6c5a8708322dd600c23507cc2035f1" title=" " alt="" coords="247,134,404,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,107,261,128,260,133,175,112"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="467,134,617,159"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="405,144,453,144,453,149,405,149"/>
+</map>

@@ -1,0 +1,878 @@
+<!-- Heavily based on https://github.com/jothepro/doxygen-awesome-css/blob/main/doxygen-custom/header.html -->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- BEGIN opengraph metadata -->
+    <meta property="og:title" content=Netspeak />
+    <meta property="og:image" content="netspeak_logo.svg" />
+    <meta property="og:description" content="One word leads to another." />
+    <meta property="og:url" content="https://github.com/netspeak/netspeak4-application-ngrams" />
+    <!-- END opengraph metadata -->
+    <!-- BEGIN twitter metadata -->
+    <meta name="twitter:image:src" content="netspeak_logo.svg" />
+    <meta name="twitter:title" content="Netspeak" />
+    <meta name="twitter:description" content="One word leads to another." />
+    <!-- END twitter metadata -->
+    <title>Netspeak: netspeak::NormQueryCounter::UnitResult Struct Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/svg+xml" href="netspeak_logo.svg" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+    <script type="text/javascript" src="toggle-alternative-theme.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+        DoxygenAwesomeDarkModeToggle.init()
+        DoxygenAwesomeParagraphLink.init()
+        DoxygenAwesomeInteractiveToc.init()
+        DoxygenAwesomeTabs.init()
+    </script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-tabs.js" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- https://tholman.com/github-corners/ -->
+    <a href="https://github.com/netspeak/netspeak4-application-ngrams" class="github-corner"
+        title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 250 250" width="40" height="40"
+            style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg></a>
+    <style>
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+        @media (max-width:500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+    </style>
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectlogo"><img alt="Logo" src="netspeak_logo.svg" /></td>
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">Netspeak
+                                &#160;<span
+                                    id="projectnumber">4.2.0</span>
+                            </div>
+                            <div id="projectbrief">One word leads to another.</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structnetspeak_1_1NormQueryCounter_1_1UnitResult.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="structnetspeak_1_1NormQueryCounter_1_1UnitResult-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">netspeak::NormQueryCounter::UnitResult Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This is the result of an estimate. It's either a constant value or a function dependent on the number of words each regex will be replaced with.  
+ <a href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for netspeak::NormQueryCounter::UnitResult:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_1_1UnitResult__coll__graph.svg" width="219" height="371"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a03bd21cd2890f4ec4bd799b3cdbbc93d" id="r_a03bd21cd2890f4ec4bd799b3cdbbc93d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a03bd21cd2890f4ec4bd799b3cdbbc93d">UnitResult</a> (uint64_t <a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a589087f255a5beb89302a98a81bb5b20">constant</a>)</td></tr>
+<tr class="separator:a03bd21cd2890f4ec4bd799b3cdbbc93d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67af5c009e7290cb78e05da518d2737" id="r_aa67af5c009e7290cb78e05da518d2737"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#aa67af5c009e7290cb78e05da518d2737">UnitResult</a> (std::function&lt; uint64_t(size_t)&gt; <a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a2becd4c5ea558378d097ea58d8c95a02">function</a>)</td></tr>
+<tr class="separator:aa67af5c009e7290cb78e05da518d2737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a045b40207852de57b08e8aaf7dbc02" id="r_a8a045b40207852de57b08e8aaf7dbc02"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a8a045b40207852de57b08e8aaf7dbc02">is_constant</a> () const</td></tr>
+<tr class="separator:a8a045b40207852de57b08e8aaf7dbc02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a589087f255a5beb89302a98a81bb5b20" id="r_a589087f255a5beb89302a98a81bb5b20"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a589087f255a5beb89302a98a81bb5b20">constant</a> () const</td></tr>
+<tr class="separator:a589087f255a5beb89302a98a81bb5b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2becd4c5ea558378d097ea58d8c95a02" id="r_a2becd4c5ea558378d097ea58d8c95a02"><td class="memItemLeft" align="right" valign="top">const std::function&lt; uint64_t(size_t)&gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a2becd4c5ea558378d097ea58d8c95a02">function</a> () const</td></tr>
+<tr class="separator:a2becd4c5ea558378d097ea58d8c95a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af886196c51a68b001caccc460c7361ec" id="r_af886196c51a68b001caccc460c7361ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html">UnitResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#af886196c51a68b001caccc460c7361ec">operator+</a> (const <a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html">UnitResult</a> &amp;rhs) const</td></tr>
+<tr class="separator:af886196c51a68b001caccc460c7361ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a305a9f8fed2943821670206b3f16c636" id="r_a305a9f8fed2943821670206b3f16c636"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html">UnitResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a305a9f8fed2943821670206b3f16c636">operator*</a> (const <a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html">UnitResult</a> &amp;rhs) const</td></tr>
+<tr class="separator:a305a9f8fed2943821670206b3f16c636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a36253464da6a7aa117b0a09d1bd8e0ed" id="r_a36253464da6a7aa117b0a09d1bd8e0ed"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a36253464da6a7aa117b0a09d1bd8e0ed">safe_add</a> (uint64_t a, uint64_t b)</td></tr>
+<tr class="separator:a36253464da6a7aa117b0a09d1bd8e0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793398091f3116f6810967e2d1b72c2e" id="r_a793398091f3116f6810967e2d1b72c2e"><td class="memItemLeft" align="right" valign="top">static std::function&lt; uint64_t(size_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a793398091f3116f6810967e2d1b72c2e">safe_add</a> (uint64_t a, const std::function&lt; uint64_t(size_t)&gt; &amp;b)</td></tr>
+<tr class="separator:a793398091f3116f6810967e2d1b72c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af61614a3d30ecf1b116a7d572a5250e9" id="r_af61614a3d30ecf1b116a7d572a5250e9"><td class="memItemLeft" align="right" valign="top">static std::function&lt; uint64_t(size_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#af61614a3d30ecf1b116a7d572a5250e9">safe_add</a> (const std::function&lt; uint64_t(size_t)&gt; &amp;a, const std::function&lt; uint64_t(size_t)&gt; &amp;b)</td></tr>
+<tr class="separator:af61614a3d30ecf1b116a7d572a5250e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff24fb1226fe02a6f7055ea4d7e677be" id="r_aff24fb1226fe02a6f7055ea4d7e677be"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#aff24fb1226fe02a6f7055ea4d7e677be">safe_mult</a> (uint64_t a, uint64_t b)</td></tr>
+<tr class="separator:aff24fb1226fe02a6f7055ea4d7e677be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b2f423647d675c7d82a18817ee8d954" id="r_a2b2f423647d675c7d82a18817ee8d954"><td class="memItemLeft" align="right" valign="top">static std::function&lt; uint64_t(size_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a2b2f423647d675c7d82a18817ee8d954">safe_mult</a> (uint64_t a, const std::function&lt; uint64_t(size_t)&gt; &amp;b)</td></tr>
+<tr class="separator:a2b2f423647d675c7d82a18817ee8d954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591b706b22792aa109478150d741a34d" id="r_a591b706b22792aa109478150d741a34d"><td class="memItemLeft" align="right" valign="top">static std::function&lt; uint64_t(size_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a591b706b22792aa109478150d741a34d">safe_mult</a> (const std::function&lt; uint64_t(size_t)&gt; &amp;a, const std::function&lt; uint64_t(size_t)&gt; &amp;b)</td></tr>
+<tr class="separator:a591b706b22792aa109478150d741a34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af219f8a29c6acbd4bb4deb5bd5cfa495" id="r_af219f8a29c6acbd4bb4deb5bd5cfa495"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#af219f8a29c6acbd4bb4deb5bd5cfa495">_is_constant</a></td></tr>
+<tr class="separator:af219f8a29c6acbd4bb4deb5bd5cfa495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8bf002ad641760ec061afc88d9ae47" id="r_a5e8bf002ad641760ec061afc88d9ae47"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a5e8bf002ad641760ec061afc88d9ae47">_constant</a></td></tr>
+<tr class="separator:a5e8bf002ad641760ec061afc88d9ae47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c36008451f821370c53b04a2dee976" id="r_a26c36008451f821370c53b04a2dee976"><td class="memItemLeft" align="right" valign="top">std::function&lt; uint64_t(size_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a26c36008451f821370c53b04a2dee976">_function</a></td></tr>
+<tr class="separator:a26c36008451f821370c53b04a2dee976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This is the result of an estimate. It's either a constant value or a function dependent on the number of words each regex will be replaced with. </p>
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00586">586</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a03bd21cd2890f4ec4bd799b3cdbbc93d" name="a03bd21cd2890f4ec4bd799b3cdbbc93d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03bd21cd2890f4ec4bd799b3cdbbc93d">&#9670;&#160;</a></span>UnitResult() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">netspeak::NormQueryCounter::UnitResult::UnitResult </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>constant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00593">593</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  593</span>: <a class="code hl_variable" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#af219f8a29c6acbd4bb4deb5bd5cfa495">_is_constant</a>(<span class="keyword">true</span>), <a class="code hl_variable" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a5e8bf002ad641760ec061afc88d9ae47">_constant</a>(<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a589087f255a5beb89302a98a81bb5b20">constant</a>) {}</div>
+<div class="ttc" id="astructnetspeak_1_1NormQueryCounter_1_1UnitResult_html_a589087f255a5beb89302a98a81bb5b20"><div class="ttname"><a href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a589087f255a5beb89302a98a81bb5b20">netspeak::NormQueryCounter::UnitResult::constant</a></div><div class="ttdeci">uint64_t constant() const</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00600">QueryNormalizer.cpp:600</a></div></div>
+<div class="ttc" id="astructnetspeak_1_1NormQueryCounter_1_1UnitResult_html_a5e8bf002ad641760ec061afc88d9ae47"><div class="ttname"><a href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a5e8bf002ad641760ec061afc88d9ae47">netspeak::NormQueryCounter::UnitResult::_constant</a></div><div class="ttdeci">uint64_t _constant</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00589">QueryNormalizer.cpp:589</a></div></div>
+<div class="ttc" id="astructnetspeak_1_1NormQueryCounter_1_1UnitResult_html_af219f8a29c6acbd4bb4deb5bd5cfa495"><div class="ttname"><a href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#af219f8a29c6acbd4bb4deb5bd5cfa495">netspeak::NormQueryCounter::UnitResult::_is_constant</a></div><div class="ttdeci">bool _is_constant</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00588">QueryNormalizer.cpp:588</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa67af5c009e7290cb78e05da518d2737" name="aa67af5c009e7290cb78e05da518d2737"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa67af5c009e7290cb78e05da518d2737">&#9670;&#160;</a></span>UnitResult() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">netspeak::NormQueryCounter::UnitResult::UnitResult </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; uint64_t(size_t)&gt;&#160;</td>
+          <td class="paramname"><em>function</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00594">594</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  595</span>        : <a class="code hl_variable" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#af219f8a29c6acbd4bb4deb5bd5cfa495">_is_constant</a>(<span class="keyword">false</span>), <a class="code hl_variable" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a5e8bf002ad641760ec061afc88d9ae47">_constant</a>(0), <a class="code hl_variable" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a26c36008451f821370c53b04a2dee976">_function</a>(std::move(<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a2becd4c5ea558378d097ea58d8c95a02">function</a>)) {}</div>
+<div class="ttc" id="astructnetspeak_1_1NormQueryCounter_1_1UnitResult_html_a26c36008451f821370c53b04a2dee976"><div class="ttname"><a href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a26c36008451f821370c53b04a2dee976">netspeak::NormQueryCounter::UnitResult::_function</a></div><div class="ttdeci">std::function&lt; uint64_t(size_t)&gt; _function</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00590">QueryNormalizer.cpp:590</a></div></div>
+<div class="ttc" id="astructnetspeak_1_1NormQueryCounter_1_1UnitResult_html_a2becd4c5ea558378d097ea58d8c95a02"><div class="ttname"><a href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a2becd4c5ea558378d097ea58d8c95a02">netspeak::NormQueryCounter::UnitResult::function</a></div><div class="ttdeci">const std::function&lt; uint64_t(size_t)&gt; &amp; function() const</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00604">QueryNormalizer.cpp:604</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a589087f255a5beb89302a98a81bb5b20" name="a589087f255a5beb89302a98a81bb5b20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a589087f255a5beb89302a98a81bb5b20">&#9670;&#160;</a></span>constant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t netspeak::NormQueryCounter::UnitResult::constant </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00600">600</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  600</span>                              {</div>
+<div class="line"><span class="lineno">  601</span>      assert(<a class="code hl_variable" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#af219f8a29c6acbd4bb4deb5bd5cfa495">_is_constant</a>);</div>
+<div class="line"><span class="lineno">  602</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a5e8bf002ad641760ec061afc88d9ae47">_constant</a>;</div>
+<div class="line"><span class="lineno">  603</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_1_1UnitResult_a589087f255a5beb89302a98a81bb5b20_icgraph.svg" width="491" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2becd4c5ea558378d097ea58d8c95a02" name="a2becd4c5ea558378d097ea58d8c95a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2becd4c5ea558378d097ea58d8c95a02">&#9670;&#160;</a></span>function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::function&lt; uint64_t(size_t)&gt; &amp; netspeak::NormQueryCounter::UnitResult::function </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00604">604</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  604</span>                                                          {</div>
+<div class="line"><span class="lineno">  605</span>      assert(!<a class="code hl_variable" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#af219f8a29c6acbd4bb4deb5bd5cfa495">_is_constant</a>);</div>
+<div class="line"><span class="lineno">  606</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a26c36008451f821370c53b04a2dee976">_function</a>;</div>
+<div class="line"><span class="lineno">  607</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_1_1UnitResult_a2becd4c5ea558378d097ea58d8c95a02_icgraph.svg" width="491" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8a045b40207852de57b08e8aaf7dbc02" name="a8a045b40207852de57b08e8aaf7dbc02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a045b40207852de57b08e8aaf7dbc02">&#9670;&#160;</a></span>is_constant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool netspeak::NormQueryCounter::UnitResult::is_constant </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00597">597</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  597</span>                             {</div>
+<div class="line"><span class="lineno">  598</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#af219f8a29c6acbd4bb4deb5bd5cfa495">_is_constant</a>;</div>
+<div class="line"><span class="lineno">  599</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_1_1UnitResult_a8a045b40207852de57b08e8aaf7dbc02_icgraph.svg" width="491" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a305a9f8fed2943821670206b3f16c636" name="a305a9f8fed2943821670206b3f16c636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a305a9f8fed2943821670206b3f16c636">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html">UnitResult</a> netspeak::NormQueryCounter::UnitResult::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html">UnitResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00657">657</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  657</span>                                                      {</div>
+<div class="line"><span class="lineno">  658</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a8a045b40207852de57b08e8aaf7dbc02">is_constant</a>() &amp;&amp; <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a589087f255a5beb89302a98a81bb5b20">constant</a>() == 0) {</div>
+<div class="line"><span class="lineno">  659</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  660</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rhs.is_constant() &amp;&amp; rhs.constant() == 0) {</div>
+<div class="line"><span class="lineno">  661</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  662</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a8a045b40207852de57b08e8aaf7dbc02">is_constant</a>() &amp;&amp; <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a589087f255a5beb89302a98a81bb5b20">constant</a>() == UINT64_MAX) {</div>
+<div class="line"><span class="lineno">  663</span>        <span class="keywordflow">return</span> UINT64_MAX;</div>
+<div class="line"><span class="lineno">  664</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rhs.is_constant() &amp;&amp; rhs.constant() == UINT64_MAX) {</div>
+<div class="line"><span class="lineno">  665</span>        <span class="keywordflow">return</span> UINT64_MAX;</div>
+<div class="line"><span class="lineno">  666</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a8a045b40207852de57b08e8aaf7dbc02">is_constant</a>() &amp;&amp; rhs.is_constant()) {</div>
+<div class="line"><span class="lineno">  667</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#aff24fb1226fe02a6f7055ea4d7e677be">safe_mult</a>(<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a589087f255a5beb89302a98a81bb5b20">constant</a>(), rhs.constant());</div>
+<div class="line"><span class="lineno">  668</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a8a045b40207852de57b08e8aaf7dbc02">is_constant</a>()) {</div>
+<div class="line"><span class="lineno">  669</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#aff24fb1226fe02a6f7055ea4d7e677be">safe_mult</a>(<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a589087f255a5beb89302a98a81bb5b20">constant</a>(), rhs.function());</div>
+<div class="line"><span class="lineno">  670</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rhs.is_constant()) {</div>
+<div class="line"><span class="lineno">  671</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#aff24fb1226fe02a6f7055ea4d7e677be">safe_mult</a>(rhs.constant(), <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a2becd4c5ea558378d097ea58d8c95a02">function</a>());</div>
+<div class="line"><span class="lineno">  672</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  673</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#aff24fb1226fe02a6f7055ea4d7e677be">safe_mult</a>(<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a2becd4c5ea558378d097ea58d8c95a02">function</a>(), rhs.function());</div>
+<div class="line"><span class="lineno">  674</span>      }</div>
+<div class="line"><span class="lineno">  675</span>    }</div>
+<div class="ttc" id="astructnetspeak_1_1NormQueryCounter_1_1UnitResult_html_a8a045b40207852de57b08e8aaf7dbc02"><div class="ttname"><a href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a8a045b40207852de57b08e8aaf7dbc02">netspeak::NormQueryCounter::UnitResult::is_constant</a></div><div class="ttdeci">bool is_constant() const</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00597">QueryNormalizer.cpp:597</a></div></div>
+<div class="ttc" id="astructnetspeak_1_1NormQueryCounter_1_1UnitResult_html_aff24fb1226fe02a6f7055ea4d7e677be"><div class="ttname"><a href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#aff24fb1226fe02a6f7055ea4d7e677be">netspeak::NormQueryCounter::UnitResult::safe_mult</a></div><div class="ttdeci">static uint64_t safe_mult(uint64_t a, uint64_t b)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00625">QueryNormalizer.cpp:625</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_1_1UnitResult_a305a9f8fed2943821670206b3f16c636_cgraph.svg" width="491" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af886196c51a68b001caccc460c7361ec" name="af886196c51a68b001caccc460c7361ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af886196c51a68b001caccc460c7361ec">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html">UnitResult</a> netspeak::NormQueryCounter::UnitResult::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html">UnitResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00642">642</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  642</span>                                                      {</div>
+<div class="line"><span class="lineno">  643</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a8a045b40207852de57b08e8aaf7dbc02">is_constant</a>() &amp;&amp; <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a589087f255a5beb89302a98a81bb5b20">constant</a>() == UINT64_MAX) {</div>
+<div class="line"><span class="lineno">  644</span>        <span class="keywordflow">return</span> UINT64_MAX;</div>
+<div class="line"><span class="lineno">  645</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rhs.is_constant() &amp;&amp; rhs.constant() == UINT64_MAX) {</div>
+<div class="line"><span class="lineno">  646</span>        <span class="keywordflow">return</span> UINT64_MAX;</div>
+<div class="line"><span class="lineno">  647</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a8a045b40207852de57b08e8aaf7dbc02">is_constant</a>() &amp;&amp; rhs.is_constant()) {</div>
+<div class="line"><span class="lineno">  648</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a36253464da6a7aa117b0a09d1bd8e0ed">safe_add</a>(<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a589087f255a5beb89302a98a81bb5b20">constant</a>(), rhs.constant());</div>
+<div class="line"><span class="lineno">  649</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a8a045b40207852de57b08e8aaf7dbc02">is_constant</a>()) {</div>
+<div class="line"><span class="lineno">  650</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a36253464da6a7aa117b0a09d1bd8e0ed">safe_add</a>(<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a589087f255a5beb89302a98a81bb5b20">constant</a>(), rhs.function());</div>
+<div class="line"><span class="lineno">  651</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rhs.is_constant()) {</div>
+<div class="line"><span class="lineno">  652</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a36253464da6a7aa117b0a09d1bd8e0ed">safe_add</a>(rhs.constant(), <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a2becd4c5ea558378d097ea58d8c95a02">function</a>());</div>
+<div class="line"><span class="lineno">  653</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  654</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a36253464da6a7aa117b0a09d1bd8e0ed">safe_add</a>(<a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a2becd4c5ea558378d097ea58d8c95a02">function</a>(), rhs.function());</div>
+<div class="line"><span class="lineno">  655</span>      }</div>
+<div class="line"><span class="lineno">  656</span>    }</div>
+<div class="ttc" id="astructnetspeak_1_1NormQueryCounter_1_1UnitResult_html_a36253464da6a7aa117b0a09d1bd8e0ed"><div class="ttname"><a href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a36253464da6a7aa117b0a09d1bd8e0ed">netspeak::NormQueryCounter::UnitResult::safe_add</a></div><div class="ttdeci">static uint64_t safe_add(uint64_t a, uint64_t b)</div><div class="ttdef"><b>Definition</b> <a href="QueryNormalizer_8cpp_source.html#l00609">QueryNormalizer.cpp:609</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_1_1UnitResult_af886196c51a68b001caccc460c7361ec_cgraph.svg" width="491" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af61614a3d30ecf1b116a7d572a5250e9" name="af61614a3d30ecf1b116a7d572a5250e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af61614a3d30ecf1b116a7d572a5250e9">&#9670;&#160;</a></span>safe_add() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::function&lt; uint64_t(size_t)&gt; netspeak::NormQueryCounter::UnitResult::safe_add </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; uint64_t(size_t)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; uint64_t(size_t)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00621">621</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  622</span>                                                                                            {</div>
+<div class="line"><span class="lineno">  623</span>      <span class="keywordflow">return</span> [=](<span class="keywordtype">size_t</span> input) { <span class="keywordflow">return</span> <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a36253464da6a7aa117b0a09d1bd8e0ed">safe_add</a>(a(input), b(input)); };</div>
+<div class="line"><span class="lineno">  624</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_1_1UnitResult_af61614a3d30ecf1b116a7d572a5250e9_cgraph.svg" width="491" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a793398091f3116f6810967e2d1b72c2e" name="a793398091f3116f6810967e2d1b72c2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a793398091f3116f6810967e2d1b72c2e">&#9670;&#160;</a></span>safe_add() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::function&lt; uint64_t(size_t)&gt; netspeak::NormQueryCounter::UnitResult::safe_add </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; uint64_t(size_t)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00618">618</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  618</span>                                                                                                      {</div>
+<div class="line"><span class="lineno">  619</span>      <span class="keywordflow">return</span> [=](<span class="keywordtype">size_t</span> input) { <span class="keywordflow">return</span> <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a36253464da6a7aa117b0a09d1bd8e0ed">safe_add</a>(a, b(input)); };</div>
+<div class="line"><span class="lineno">  620</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_1_1UnitResult_a793398091f3116f6810967e2d1b72c2e_cgraph.svg" width="491" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a36253464da6a7aa117b0a09d1bd8e0ed" name="a36253464da6a7aa117b0a09d1bd8e0ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36253464da6a7aa117b0a09d1bd8e0ed">&#9670;&#160;</a></span>safe_add() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint64_t netspeak::NormQueryCounter::UnitResult::safe_add </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00609">609</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  609</span>                                                     {</div>
+<div class="line"><span class="lineno">  610</span>      uint64_t sum = a + b;</div>
+<div class="line"><span class="lineno">  611</span>      <span class="keywordflow">if</span> (sum &lt; a) {</div>
+<div class="line"><span class="lineno">  612</span>        <span class="comment">// overflow occurred</span></div>
+<div class="line"><span class="lineno">  613</span>        <span class="keywordflow">return</span> UINT64_MAX;</div>
+<div class="line"><span class="lineno">  614</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  615</span>        <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno">  616</span>      }</div>
+<div class="line"><span class="lineno">  617</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_1_1UnitResult_a36253464da6a7aa117b0a09d1bd8e0ed_icgraph.svg" width="491" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a591b706b22792aa109478150d741a34d" name="a591b706b22792aa109478150d741a34d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a591b706b22792aa109478150d741a34d">&#9670;&#160;</a></span>safe_mult() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::function&lt; uint64_t(size_t)&gt; netspeak::NormQueryCounter::UnitResult::safe_mult </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; uint64_t(size_t)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; uint64_t(size_t)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00637">637</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  638</span>                                                                                             {</div>
+<div class="line"><span class="lineno">  639</span>      <span class="keywordflow">return</span> [=](<span class="keywordtype">size_t</span> input) { <span class="keywordflow">return</span> <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#aff24fb1226fe02a6f7055ea4d7e677be">safe_mult</a>(a(input), b(input)); };</div>
+<div class="line"><span class="lineno">  640</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_1_1UnitResult_a591b706b22792aa109478150d741a34d_cgraph.svg" width="491" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2b2f423647d675c7d82a18817ee8d954" name="a2b2f423647d675c7d82a18817ee8d954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b2f423647d675c7d82a18817ee8d954">&#9670;&#160;</a></span>safe_mult() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::function&lt; uint64_t(size_t)&gt; netspeak::NormQueryCounter::UnitResult::safe_mult </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; uint64_t(size_t)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00634">634</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  634</span>                                                                                                       {</div>
+<div class="line"><span class="lineno">  635</span>      <span class="keywordflow">return</span> [=](<span class="keywordtype">size_t</span> input) { <span class="keywordflow">return</span> <a class="code hl_function" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#aff24fb1226fe02a6f7055ea4d7e677be">safe_mult</a>(a, b(input)); };</div>
+<div class="line"><span class="lineno">  636</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_1_1UnitResult_a2b2f423647d675c7d82a18817ee8d954_cgraph.svg" width="491" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aff24fb1226fe02a6f7055ea4d7e677be" name="aff24fb1226fe02a6f7055ea4d7e677be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff24fb1226fe02a6f7055ea4d7e677be">&#9670;&#160;</a></span>safe_mult() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint64_t netspeak::NormQueryCounter::UnitResult::safe_mult </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00625">625</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  625</span>                                                      {</div>
+<div class="line"><span class="lineno">  626</span>      uint64_t prod = a * b;</div>
+<div class="line"><span class="lineno">  627</span>      <span class="keywordflow">if</span> (prod &lt; a || prod &lt; b) {</div>
+<div class="line"><span class="lineno">  628</span>        <span class="comment">// overflow occurred</span></div>
+<div class="line"><span class="lineno">  629</span>        <span class="keywordflow">return</span> UINT64_MAX;</div>
+<div class="line"><span class="lineno">  630</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  631</span>        <span class="keywordflow">return</span> prod;</div>
+<div class="line"><span class="lineno">  632</span>      }</div>
+<div class="line"><span class="lineno">  633</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structnetspeak_1_1NormQueryCounter_1_1UnitResult_aff24fb1226fe02a6f7055ea4d7e677be_icgraph.svg" width="491" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5e8bf002ad641760ec061afc88d9ae47" name="a5e8bf002ad641760ec061afc88d9ae47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e8bf002ad641760ec061afc88d9ae47">&#9670;&#160;</a></span>_constant</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t netspeak::NormQueryCounter::UnitResult::_constant</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00589">589</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a26c36008451f821370c53b04a2dee976" name="a26c36008451f821370c53b04a2dee976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26c36008451f821370c53b04a2dee976">&#9670;&#160;</a></span>_function</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;uint64_t(size_t)&gt; netspeak::NormQueryCounter::UnitResult::_function</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00590">590</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af219f8a29c6acbd4bb4deb5bd5cfa495" name="af219f8a29c6acbd4bb4deb5bd5cfa495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af219f8a29c6acbd4bb4deb5bd5cfa495">&#9670;&#160;</a></span>_is_constant</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool netspeak::NormQueryCounter::UnitResult::_is_constant</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="QueryNormalizer_8cpp_source.html#l00588">588</a> of file <a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>netspeak/<a class="el" href="QueryNormalizer_8cpp_source.html">QueryNormalizer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacenetspeak.html">netspeak</a></li><li class="navelem"><a class="el" href="structnetspeak_1_1NormQueryCounter.html">NormQueryCounter</a></li><li class="navelem"><a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html">UnitResult</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

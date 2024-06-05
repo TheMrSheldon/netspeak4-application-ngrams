@@ -1,0 +1,21 @@
+<map id="netspeak::regex::RegexQuery::get_units" name="netspeak::regex::RegexQuery::get_units">
+<area shape="rect" id="Node000001" title="Get the underlying units." alt="" coords="1020,99,1235,139"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1regex.html#afac3221e2a2d1a5db57380f4b12386c9" title=" " alt="" coords="778,5,954,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1065,96,971,60,935,48,937,43,973,55,1067,91"/>
+<area shape="rect" id="Node000006" href="$namespacenetspeak_1_1regex.html#ace4835f8060dcf407b0f4bdf422de2b2" title=" " alt="" coords="782,69,950,109"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1006,108,950,101,951,96,1006,102"/>
+<area shape="rect" id="Node000008" href="$namespacenetspeak_1_1regex.html#a0ad812750b4e0550867c0e250b83e396" title="Appends the general string representation of a regex query." alt="" coords="760,134,972,159"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1007,134,973,138,972,133,1006,129"/>
+<area shape="rect" id="Node000009" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a445e83616a9f062d4f44db53017f3e9c" title="Optimizes the given query considering the properties of the vocabulary of the index." alt="" coords="490,163,698,203"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="1069,146,1022,162,973,175,902,185,829,190,698,191,698,185,829,184,901,179,971,169,1021,157,1067,141"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#aa6875223b64c6979bd2135023f71f2ce" title=" " alt="" coords="476,5,712,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="765,28,712,28,712,23,765,23"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a243db53a6f592cf81dc78ab6abe09bc2" title="Adds all words matching the given query to the given vector." alt="" coords="236,77,428,117"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="507,52,477,60,405,80,404,75,475,55,506,46"/>
+<area shape="rect" id="Node000005" href="$classcli_1_1RegexCommand.html#a359a924652eac2c3d8664bfc5ff29f3e" title=" " alt="" coords="5,85,188,110"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="222,100,188,100,188,95,222,95"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a5c0cbc299628d069cfd1d800d74875d3" title=" " alt="" coords="498,70,690,125"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="768,95,690,97,690,92,768,90"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="484,100,428,100,428,95,484,95"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="518,161,393,120,395,115,520,156"/>
+</map>

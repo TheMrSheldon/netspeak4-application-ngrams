@@ -1,0 +1,18 @@
+<map id="netspeak::invertedindex::Indexer::Indexer" name="netspeak::invertedindex::Indexer::Indexer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,185,119"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1invertedindex_1_1Indexer.html#ae3cb65012146012ce47e5654c0104bdd" title=" " alt="" coords="243,14,423,54"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,77,246,55,247,60,170,82"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1invertedindex_1_1Configuration.html#a0d46063abee324f4493ffc93ec573363" title=" " alt="" coords="233,79,433,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,97,220,97,220,102,186,102"/>
+<area shape="rect" id="Node000005" href="$namespacenetspeak_1_1util.html#ad2441a387c3a4c47e09c373e9412fad0" title=" " alt="" coords="264,145,403,171"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="178,117,268,139,267,145,176,122"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1invertedindex_1_1Configuration.html#aea1c2d3c89d203c4e7e1ea65e734f874" title=" " alt="" coords="481,5,661,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="424,31,468,31,468,36,424,36"/>
+<area shape="rect" id="Node000006" href="$namespacenetspeak_1_1util.html#ab27a22c787271513007af0719b17cef9" title=" " alt="" coords="501,85,641,125"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="390,143,487,121,488,126,392,148"/>
+<area shape="rect" id="Node000007" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="709,179,860,204"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="403,160,696,182,696,187,403,166"/>
+<area shape="rect" id="Node000008" href="$namespacenetspeak_1_1util.html#a93e18aaa529a497b6afdf4b3bd221182" title=" " alt="" coords="497,199,646,239"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="384,168,484,194,482,199,383,173"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="646,207,695,200,696,206,647,212"/>
+</map>

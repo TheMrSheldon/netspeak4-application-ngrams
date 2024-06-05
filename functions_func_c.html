@@ -1,0 +1,217 @@
+<!-- Heavily based on https://github.com/jothepro/doxygen-awesome-css/blob/main/doxygen-custom/header.html -->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- BEGIN opengraph metadata -->
+    <meta property="og:title" content=Netspeak />
+    <meta property="og:image" content="netspeak_logo.svg" />
+    <meta property="og:description" content="One word leads to another." />
+    <meta property="og:url" content="https://github.com/netspeak/netspeak4-application-ngrams" />
+    <!-- END opengraph metadata -->
+    <!-- BEGIN twitter metadata -->
+    <meta name="twitter:image:src" content="netspeak_logo.svg" />
+    <meta name="twitter:title" content="Netspeak" />
+    <meta name="twitter:description" content="One word leads to another." />
+    <!-- END twitter metadata -->
+    <title>Netspeak: Class Members - Functions</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/svg+xml" href="netspeak_logo.svg" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+    <script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+    <script type="text/javascript" src="toggle-alternative-theme.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+        DoxygenAwesomeDarkModeToggle.init()
+        DoxygenAwesomeParagraphLink.init()
+        DoxygenAwesomeInteractiveToc.init()
+        DoxygenAwesomeTabs.init()
+    </script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-tabs.js" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- https://tholman.com/github-corners/ -->
+    <a href="https://github.com/netspeak/netspeak4-application-ngrams" class="github-corner"
+        title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 250 250" width="40" height="40"
+            style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg></a>
+    <style>
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+        @media (max-width:500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+    </style>
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectlogo"><img alt="Logo" src="netspeak_logo.svg" /></td>
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">Netspeak
+                                &#160;<span
+                                    id="projectnumber">4.2.0</span>
+                            </div>
+                            <div id="projectbrief">One word leads to another.</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions_func_c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<div class="textblock">Here is a list of all functions with links to the classes they belong to:</div>
+
+<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>capacity()&#160;:&#160;<a class="el" href="classnetspeak_1_1util_1_1LfuCache.html#ae8c157a74657b15828b5a6059cce4a27">netspeak::util::LfuCache&lt; T &gt;</a></li>
+<li>ChainCutter()&#160;:&#160;<a class="el" href="classnetspeak_1_1util_1_1ChainCutter.html#a651f7eb2b83650b32a065d53ad9ee06a">netspeak::util::ChainCutter</a></li>
+<li>char_set()&#160;:&#160;<a class="el" href="structnetspeak_1_1regex_1_1RegexUnit.html#a98dff8023a5bb0d25f87f544dbb39659">netspeak::regex::RegexUnit</a></li>
+<li>children()&#160;:&#160;<a class="el" href="classnetspeak_1_1model_1_1QueryUnit____.html#a0326e3ab796164ff05ff1e86d5f360be">netspeak::model::QueryUnit__</a>, <a class="el" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a8840caeb703398accd6bf417b0b1ae8e">netspeak::model::SimpleQueryUnit__</a></li>
+<li>clear()&#160;:&#160;<a class="el" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a8bf3b64f0b8396aaf781e0e166fda2a4">netspeak::invertedindex::ByteBuffer</a>, <a class="el" href="classnetspeak_1_1invertedindex_1_1PostlistBuilder.html#aa8341dc51b109df63b5114f1212a64b5">netspeak::invertedindex::PostlistBuilder&lt; T &gt;</a>, <a class="el" href="classnetspeak_1_1util_1_1LfuCache.html#abff9b5498b11a98854a3fc80d50943ae">netspeak::util::LfuCache&lt; T &gt;</a></li>
+<li>clear_children()&#160;:&#160;<a class="el" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#af81b530261791b239f1b5f4ad9ecdd69">netspeak::model::SimpleQueryUnit__</a></li>
+<li>clone()&#160;:&#160;<a class="el" href="classnetspeak_1_1invertedindex_1_1ByteBuffer.html#a123a9c595224694ecdc3b55ebcf058bc">netspeak::invertedindex::ByteBuffer</a>, <a class="el" href="classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a8757480e9fabb57efdd76819a01e1393">netspeak::model::SimpleQueryUnit__</a></li>
+<li>close()&#160;:&#160;<a class="el" href="classnetspeak_1_1invertedindex_1_1RawSearcher.html#a4bdb63c5f7c10f62c00b261eb9a4967c">netspeak::invertedindex::RawSearcher</a>, <a class="el" href="classnetspeak_1_1invertedindex_1_1Searcher.html#a91dd02625fd6aee21db8d76eba1def26">netspeak::invertedindex::Searcher&lt; Value, ThreadSafe &gt;</a></li>
+<li>Close()&#160;:&#160;<a class="el" href="classnetspeak_1_1invertedindex_1_1StorageReader.html#aff3e5221c5e53e175ea46f8a5ec86371">netspeak::invertedindex::StorageReader&lt; T, ThreadSafe &gt;</a></li>
+<li>close()&#160;:&#160;<a class="el" href="classnetspeak_1_1invertedindex_1_1StorageWriter.html#a504b8f6d78f6946fcdb5ee52b85348ce">netspeak::invertedindex::StorageWriter&lt; T &gt;</a>, <a class="el" href="classnetspeak_1_1invertedindex_1_1UnsortedInput.html#a73407b6fe41e1204f787398082b4555e">netspeak::invertedindex::UnsortedInput&lt; T &gt;</a></li>
+<li>CmphMap()&#160;:&#160;<a class="el" href="classnetspeak_1_1bighashmap_1_1CmphMap.html#a6be675f0bb430bdc305e5fee965b28a2">netspeak::bighashmap::CmphMap&lt; ValueT, Traits &gt;</a></li>
+<li>combinations_upper_bound()&#160;:&#160;<a class="el" href="classnetspeak_1_1regex_1_1RegexQuery.html#a8f2543e1cc1b4460233f700f547a89f6">netspeak::regex::RegexQuery</a></li>
+<li>compute_jumpin_frequency_()&#160;:&#160;<a class="el" href="classnetspeak_1_1RetrievalStrategy_3_01RetrievalStrategy3Tag_01_4.html#a46996c7cfad6ba39a61a0c1c2f1f8cbf">netspeak::RetrievalStrategy&lt; RetrievalStrategy3Tag &gt;</a></li>
+<li>concat()&#160;:&#160;<a class="el" href="classnetspeak_1_1StarQueryConverter.html#a603db91f5a1da4fcc11c7e99f71ece2f">netspeak::StarQueryConverter</a></li>
+<li>concat_star_optimization()&#160;:&#160;<a class="el" href="classnetspeak_1_1SimpleQueryOptimizer.html#a2fd2078d6604e20582903f7a41430e16">netspeak::SimpleQueryOptimizer</a></li>
+<li>concat_to_simple()&#160;:&#160;<a class="el" href="classnetspeak_1_1QuerySimplifier.html#a1f629b768d053c64ba136f00661e601d">netspeak::QuerySimplifier</a></li>
+<li>config()&#160;:&#160;<a class="el" href="classnetspeak_1_1invertedindex_1_1IndexStrategy.html#a8ebd3e75416a396d35d9dca2a6dcb399">netspeak::invertedindex::IndexStrategy&lt; T &gt;</a></li>
+<li>Config()&#160;:&#160;<a class="el" href="classnetspeak_1_1util_1_1Config.html#a825fc9aee3b96be65a458791a5d14bcc">netspeak::util::Config</a></li>
+<li>Configuration()&#160;:&#160;<a class="el" href="classnetspeak_1_1Configuration.html#ac9c67ce4d47206c1029175c44f8ccdfc">netspeak::Configuration</a>, <a class="el" href="classnetspeak_1_1invertedindex_1_1Configuration.html#ac9ba02e5d2c7e922f4ce02092362b48a">netspeak::invertedindex::Configuration</a></li>
+<li>configuration()&#160;:&#160;<a class="el" href="classnetspeak_1_1invertedindex_1_1Searcher.html#a817178d29458aa3d521ebaba3042ea78">netspeak::invertedindex::Searcher&lt; Value, ThreadSafe &gt;</a></li>
+<li>constant()&#160;:&#160;<a class="el" href="structnetspeak_1_1NormQueryCounter_1_1UnitResult.html#a589087f255a5beb89302a98a81bb5b20">netspeak::NormQueryCounter::UnitResult</a></li>
+<li>constant_size_iter()&#160;:&#160;<a class="el" href="structnetspeak_1_1invertedindex_1_1constant__size__iter.html#a94536ae2453b22b734afa905c8146676">netspeak::invertedindex::constant_size_iter</a></li>
+<li>contains()&#160;:&#160;<a class="el" href="classnetspeak_1_1PhraseCorpus.html#a783d35e8d7ee608615d86d0e0f33f2f7">netspeak::PhraseCorpus</a>, <a class="el" href="classnetspeak_1_1util_1_1Config.html#ab380dc04a08e5c65adfdc3b13aa27fad">netspeak::util::Config</a></li>
+<li>contains_child()&#160;:&#160;<a class="el" href="classnetspeak_1_1SimpleQueryOptimizer.html#a77d726b94a9d80c743c3b5546aab766f">netspeak::SimpleQueryOptimizer</a></li>
+<li>copy_from()&#160;:&#160;<a class="el" href="structnetspeak_1_1value_1_1value__traits.html#a27c68558505f16e261d678ee62c8a4f0">netspeak::value::value_traits&lt; T &gt;</a>, <a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01big__string_01_4.html#a549025689117e40bdd57af716ccd21eb">netspeak::value::value_traits&lt; big_string &gt;</a>, <a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01pair_3_01T1_00_01T2_01_4_01_4.html#a721174b04412492d05318a71112b2227">netspeak::value::value_traits&lt; pair&lt; T1, T2 &gt; &gt;</a>, <a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01quadruple_3_01T1_00_01T2_00_01T3_00_01T4_01_4_01_4.html#aa55a2465bacdb56b8755e56ec00c7cbb">netspeak::value::value_traits&lt; quadruple&lt; T1, T2, T3, T4 &gt; &gt;</a>, <a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01std_1_1string_01_4.html#a23e76d216098083efbb29e0030abca45">netspeak::value::value_traits&lt; std::string &gt;</a>, <a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01triple_3_01T1_00_01T2_00_01T3_01_4_01_4.html#a7f45afca1b4c39f43c8557635cde89ed">netspeak::value::value_traits&lt; triple&lt; T1, T2, T3 &gt; &gt;</a></li>
+<li>copy_to()&#160;:&#160;<a class="el" href="structnetspeak_1_1value_1_1value__traits.html#ad8e5a704d34361f68b6325efb40d7872">netspeak::value::value_traits&lt; T &gt;</a>, <a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01big__string_01_4.html#a9bde9b0a40dc0305511603da9eed3ac7">netspeak::value::value_traits&lt; big_string &gt;</a>, <a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01pair_3_01T1_00_01T2_01_4_01_4.html#a0348a31a094f4817282cf9d8d4ecd839">netspeak::value::value_traits&lt; pair&lt; T1, T2 &gt; &gt;</a>, <a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01quadruple_3_01T1_00_01T2_00_01T3_00_01T4_01_4_01_4.html#af5d1037adb7b9dfba8e469197fe5ad43">netspeak::value::value_traits&lt; quadruple&lt; T1, T2, T3, T4 &gt; &gt;</a>, <a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01std_1_1string_01_4.html#a329c50a8c14e7f07078dc39d3ec3a628">netspeak::value::value_traits&lt; std::string &gt;</a>, <a class="el" href="structnetspeak_1_1value_1_1value__traits_3_01triple_3_01T1_00_01T2_00_01T3_01_4_01_4.html#af9f68ea839254135f0f4c5a260d562f5">netspeak::value::value_traits&lt; triple&lt; T1, T2, T3 &gt; &gt;</a></li>
+<li>corpus_measurements()&#160;:&#160;<a class="el" href="structcli_1_1Tester_1_1corpus__measurements.html#ae778166d0bdd61f415595bb0e3056a23">cli::Tester::corpus_measurements</a></li>
+<li>count_phrases()&#160;:&#160;<a class="el" href="classnetspeak_1_1PhraseCorpus.html#a436713055969380039d89778197d92bf">netspeak::PhraseCorpus</a></li>
+<li>count_qmarks()&#160;:&#160;<a class="el" href="classnetspeak_1_1model_1_1NormQuery.html#a2e5537a5193819704d922127f027b404">netspeak::model::NormQuery</a></li>
+<li>count_vocabulary()&#160;:&#160;<a class="el" href="classnetspeak_1_1PhraseCorpus.html#a3c133724b6e69e9b2f13304f6da88676">netspeak::PhraseCorpus</a></li>
+<li>count_words()&#160;:&#160;<a class="el" href="classnetspeak_1_1model_1_1NormQuery.html#afbfc36d0cc0ba9a450803331f8180016">netspeak::model::NormQuery</a></li>
+<li>CountRecords()&#160;:&#160;<a class="el" href="classnetspeak_1_1bighashmap_1_1Builder.html#ae4e2ef8f5512442b408c6ad678f152bf">netspeak::bighashmap::Builder&lt; ValueT, TraitsT &gt;</a></li>
+<li>create()&#160;:&#160;<a class="el" href="classnetspeak_1_1util_1_1JsonWriter.html#acbaa81da8314c01152d8a52ae42dc28b">netspeak::util::JsonWriter</a></li>
+<li>create_id_map()&#160;:&#160;<a class="el" href="classnetspeak_1_1util_1_1StringIdMap.html#ac9bb146efee99556794d10947eb9ac2e">netspeak::util::StringIdMap&lt; Id &gt;</a></li>
+<li>create_reject_all()&#160;:&#160;<a class="el" href="classnetspeak_1_1regex_1_1RegexQuery.html#a74390b07cc488876e518d35979f3f814">netspeak::regex::RegexQuery</a></li>
+<li>create_sorted_words()&#160;:&#160;<a class="el" href="classnetspeak_1_1util_1_1StringIdMap.html#a090557f4d30f1edc918215938c025346">netspeak::util::StringIdMap&lt; Id &gt;</a></li>
+<li>CreateKeyFile()&#160;:&#160;<a class="el" href="classnetspeak_1_1bighashmap_1_1Builder.html#aa0aabbe526c4b5268a49a69f23ff7615">netspeak::bighashmap::Builder&lt; ValueT, TraitsT &gt;</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

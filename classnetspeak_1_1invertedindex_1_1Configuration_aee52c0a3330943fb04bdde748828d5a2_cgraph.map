@@ -1,0 +1,9 @@
+<map id="netspeak::invertedindex::Configuration::print" name="netspeak::invertedindex::Configuration::print">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,185,77"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1invertedindex.html#aa1f26a090b429663fc0ef19fc83ef92c" title=" " alt="" coords="233,5,413,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,42,220,37,220,42,186,47"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#ac8b0cdf55599b33fd7d4013948d48f43" title=" " alt="" coords="257,69,389,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,67,244,76,243,81,185,73"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="461,77,612,102"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="390,87,447,87,447,92,390,92"/>
+</map>

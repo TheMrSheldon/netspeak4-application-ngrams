@@ -1,0 +1,11 @@
+<map id="netspeak::regex::regex_pattern_append_char" name="netspeak::regex::regex_pattern_append_char">
+<area shape="rect" id="Node000001" title=" " alt="" coords="984,5,1156,45"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1regex.html#afac3221e2a2d1a5db57380f4b12386c9" title=" " alt="" coords="760,5,936,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="971,28,936,28,936,23,971,23"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#aa6875223b64c6979bd2135023f71f2ce" title=" " alt="" coords="476,5,712,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="746,28,712,28,712,23,746,23"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1regex_1_1DefaultRegexIndex.html#a243db53a6f592cf81dc78ab6abe09bc2" title="Adds all words matching the given query to the given vector." alt="" coords="236,5,428,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="462,28,428,28,428,23,462,23"/>
+<area shape="rect" id="Node000005" href="$classcli_1_1RegexCommand.html#a359a924652eac2c3d8664bfc5ff29f3e" title=" " alt="" coords="5,13,188,38"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="222,28,188,28,188,23,222,23"/>
+</map>

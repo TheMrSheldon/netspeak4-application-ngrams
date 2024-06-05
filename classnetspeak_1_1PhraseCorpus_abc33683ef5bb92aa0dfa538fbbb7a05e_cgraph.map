@@ -1,0 +1,17 @@
+<map id="netspeak::PhraseCorpus::read_phrases" name="netspeak::PhraseCorpus::read_phrases">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,103,184,143"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util.html#aad6c5a8708322dd600c23507cc2035f1" title=" " alt="" coords="243,21,400,47"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,101,274,49,276,54,147,106"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1PhraseCorpus.html#a94ce18bb4bf8e39af470b06c66d33797" title=" " alt="" coords="232,103,411,143"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="185,121,218,121,218,126,185,126"/>
+<area shape="rect" id="Node000008" href="$namespacenetspeak.html#af4c3dc2b340c7ade26cd9638cd1108a1" title="Returns the size in bytes each entry in the binary file of the given length (= n&#45;gram class)." alt="" coords="243,168,400,193"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="175,141,258,162,257,167,174,146"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="475,5,625,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="400,26,461,22,461,27,401,31"/>
+<area shape="rect" id="Node000005" href="$structnetspeak_1_1value_1_1value__traits.html#a27c68558505f16e261d678ee62c8a4f0" title=" " alt="" coords="465,55,635,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="410,102,451,93,452,99,411,107"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1model_1_1Words.html#a74ce9e9ed9745cdfffd806ec605974df" title=" " alt="" coords="461,119,639,159"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="411,127,447,129,447,135,411,132"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1model_1_1Phrase.html#a0cfea75b7cad4d3c9a3cd111789bd42f" title=" " alt="" coords="459,183,641,223"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="381,141,480,176,478,181,379,146"/>
+</map>

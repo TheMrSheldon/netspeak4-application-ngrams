@@ -1,0 +1,13 @@
+<map id="netspeak::util::FileDescriptor::open" name="netspeak::util::FileDescriptor::open">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,88,215,128"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="62,88,60,78,67,69,84,63,110,61,140,64,156,71,154,76,138,69,110,67,85,69,70,73,65,79,68,87"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1error__message.html#a2a36ff57b354714213502a72e6d9d416" title=" " alt="" coords="274,5,461,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,85,262,55,286,47,288,52,263,60,171,90"/>
+<area shape="rect" id="Node000003" href="$namespacenetspeak_1_1util.html#aad6c5a8708322dd600c23507cc2035f1" title=" " alt="" coords="289,70,446,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="215,95,274,89,275,94,215,100"/>
+<area shape="rect" id="Node000004" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="520,95,671,121"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="215,105,506,105,506,111,215,111"/>
+<area shape="rect" id="Node000005" href="$structnetspeak_1_1util_1_1FileDescriptor.html#a21032b84b713c8f0f84bfb5f70ea0bbf" title=" " alt="" coords="263,171,472,211"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="174,125,292,164,290,169,172,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="447,89,507,95,506,101,446,94"/>
+</map>

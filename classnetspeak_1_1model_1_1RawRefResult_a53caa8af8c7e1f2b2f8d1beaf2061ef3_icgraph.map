@@ -1,0 +1,5 @@
+<map id="netspeak::model::RawRefResult::empty" name="netspeak::model::RawRefResult::empty">
+<area shape="rect" id="Node000001" title="Returns whether this result set contains no phrase references." alt="" coords="284,5,515,45"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1model_1_1RawRefResult.html#a0604a1e03e1e9b09a7c873ec94b9f28e" title="Returns whether this and the given raw result set do not share any common phrase references." alt="" coords="5,5,236,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,28,236,28,236,23,270,23"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="netspeak::SimpleQueryOptimizer::optimize_simple_unit" name="netspeak::SimpleQueryOptimizer::optimize_simple_unit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1028,69,1267,109"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1SimpleQueryOptimizer.html#a0a56e07cb81afd1e5893bc469342b0b2" title=" " alt="" coords="741,69,980,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1014,92,980,92,980,87,1014,87"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1SimpleQueryOptimizer.html#a605b78bfa6d1898f7b5b5ca66fd95c31" title=" " alt="" coords="455,69,693,109"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="727,92,694,92,694,87,727,87"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1SimpleQueryOptimizer.html#a55c4015de0d1fa34754beb52f95119f6" title=" " alt="" coords="455,5,693,45"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="756,69,664,48,665,43,758,64"/>
+<area shape="rect" id="Node000007" href="$classnetspeak_1_1SimpleQueryOptimizer.html#a1ef947a07a36069a5be13d260b518350" title=" " alt="" coords="455,133,693,173"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="758,115,665,136,664,131,756,110"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1QueryNormalizer.html#a70187ab668d98c93cfc3a8d05ca1508e" title=" " alt="" coords="205,69,407,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="441,92,407,92,407,87,441,87"/>
+<area shape="rect" id="Node000005" href="$classnetspeak_1_1Netspeak.html#aaa049275c7a0a7f6721acf7422402bff" title=" " alt="" coords="5,69,157,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="191,92,157,92,157,87,191,87"/>
+<area shape="poly" id="edge6_Node000006_Node000001" title=" " alt="" coords="707,29,839,39,980,55,1052,67,1051,72,980,60,839,45,707,35"/>
+<area shape="poly" id="edge8_Node000007_Node000001" title=" " alt="" coords="707,144,839,134,980,119,1051,107,1052,112,980,124,839,139,707,149"/>
+</map>

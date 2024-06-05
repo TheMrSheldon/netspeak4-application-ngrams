@@ -1,0 +1,14 @@
+<map id="netspeak::NormQueryCounter::estimate" name="netspeak::NormQueryCounter::estimate">
+<area shape="rect" id="Node000001" title="Returns a function that, given the number of words each regex will be replaced with,..." alt="" coords="5,101,221,141"/>
+<area shape="rect" id="Node000002" href="$structnetspeak_1_1NormQueryCounter.html#a72d9822b381ac1a8d8f29521c73c7e45" title=" " alt="" coords="273,69,489,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,106,259,101,259,107,222,111"/>
+<area shape="rect" id="Node000006" href="$classnetspeak_1_1model_1_1SimpleQuery.html#aacd9450bbdddc1274a461e21075335db" title=" " alt="" coords="269,133,492,173"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="222,132,256,136,255,141,221,137"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="331,70,328,60,336,50,354,45,381,43,412,45,428,53,426,58,410,51,381,48,355,50,339,55,333,61,336,68"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a8840caeb703398accd6bf417b0b1ae8e" title=" " alt="" coords="540,5,763,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="465,67,552,46,554,51,467,72"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1model_1_1SimpleQueryUnit____.html#a06c21084859addaa75c754815d691d39" title=" " alt="" coords="540,69,763,109"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="489,87,526,87,526,92,489,92"/>
+<area shape="rect" id="Node000005" href="$structnetspeak_1_1MinLengthMargin.html#a8cdd98a8f57fe14e82acefbd8c45653f" title=" " alt="" coords="550,133,753,173"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="467,107,554,128,552,133,465,112"/>
+</map>

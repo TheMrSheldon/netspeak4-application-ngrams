@@ -1,0 +1,5 @@
+<map id="netspeak::util::Lockable::lock" name="netspeak::util::Lockable::lock">
+<area shape="rect" id="Node000001" title="Returns a shared_ptr to the unlocked resource. The resource remains unlocked as long as it is referen..." alt="" coords="5,5,181,45"/>
+<area shape="rect" id="Node000002" href="$namespacenetspeak_1_1util.html#a4c91ad572508b4021399ac7dddff574d" title=" " alt="" coords="229,13,380,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,23,216,23,216,28,181,28"/>
+</map>

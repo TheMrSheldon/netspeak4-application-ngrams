@@ -1,7 +1,11 @@
 <map id="netspeak::invertedindex::iterator_type" name="netspeak::invertedindex::iterator_type">
-<area shape="rect" id="node1" title=" " alt="" coords="556,57,736,98"/>
-<area shape="rect" id="node2" title=" " alt="" coords="298,5,447,32"/>
-<area shape="rect" id="node3" href="$structnetspeak_1_1invertedindex_1_1swap__type.html" title=" " alt="" coords="283,57,463,98"/>
-<area shape="rect" id="node4" href="$structnetspeak_1_1invertedindex_1_1page__type.html" title=" " alt="" coords="283,122,463,163"/>
-<area shape="rect" id="node5" href="$classnetspeak_1_1invertedindex_1_1ByteBuffer.html" title=" " alt="" coords="5,122,185,163"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="171,651,343,911"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,455,147,521"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,531,179,649,175,652,101,534"/>
+<area shape="rect" id="Node000003" href="$structnetspeak_1_1invertedindex_1_1page__type.html" title=" " alt="" coords="171,408,343,568"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="260,568,260,634,255,634,255,568"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1invertedindex_1_1ByteBuffer.html" title=" " alt="" coords="171,5,343,325"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="260,326,260,392,255,392,255,326"/>
+<area shape="rect" id="Node000005" href="$structnetspeak_1_1invertedindex_1_1swap__type.html" title=" " alt="" coords="367,388,539,588"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="389,590,355,640,350,637,384,587"/>
 </map>

@@ -6,7 +6,7 @@ var classnetspeak_1_1invertedindex_1_1PostlistBuilder =
     [ "value_vector", "classnetspeak_1_1invertedindex_1_1PostlistBuilder.html#ad904c2c95719d569a878f6e3f28b984d", null ],
     [ "PostlistBuilder", "classnetspeak_1_1invertedindex_1_1PostlistBuilder.html#a73d338a8bc9aa950d40cc045fac2b536", null ],
     [ "~PostlistBuilder", "classnetspeak_1_1invertedindex_1_1PostlistBuilder.html#a68d11d5e8396fb720fb399a88d285fe0", null ],
-    [ "build", "classnetspeak_1_1invertedindex_1_1PostlistBuilder.html#abb926ebf5c4126be05d8953151ce7b8d", null ],
+    [ "build", "classnetspeak_1_1invertedindex_1_1PostlistBuilder.html#aa133eb47feb79d3d4565aebc9d3c9c07", null ],
     [ "clear", "classnetspeak_1_1invertedindex_1_1PostlistBuilder.html#aa8341dc51b109df63b5114f1212a64b5", null ],
     [ "has_swap_", "classnetspeak_1_1invertedindex_1_1PostlistBuilder.html#a65cf7ffab2be1fb0a3ff7a9ec2906b9b", null ],
     [ "push_back", "classnetspeak_1_1invertedindex_1_1PostlistBuilder.html#ab81c87c60382f082e402313fdbc92521", null ],

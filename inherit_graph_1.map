@@ -1,9 +1,17 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classcli_1_1Command.html" title=" " alt="" coords="5,132,117,159"/>
-<area shape="rect" id="node2" href="$classcli_1_1BuildCommand.html" title=" " alt="" coords="169,5,315,32"/>
-<area shape="rect" id="node3" href="$classcli_1_1ProxyCommand.html" title=" " alt="" coords="167,56,317,83"/>
-<area shape="rect" id="node4" href="$classcli_1_1RegexCommand.html" title=" " alt="" coords="165,107,319,133"/>
-<area shape="rect" id="node5" href="$classcli_1_1ServeCommand.html" title=" " alt="" coords="167,157,317,184"/>
-<area shape="rect" id="node6" href="$classcli_1_1ShellCommand.html" title=" " alt="" coords="170,208,314,235"/>
-<area shape="rect" id="node7" href="$classcli_1_1StressCommand.html" title=" " alt="" coords="166,259,318,285"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,171,155,196"/>
+<area shape="rect" id="Node000001" href="$classnetspeak_1_1invertedindex_1_1PostlistBuilder.html" title=" " alt="" coords="203,5,383,60"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="100,158,144,114,201,69,221,58,223,63,204,74,148,118,104,162"/>
+<area shape="rect" id="Node000002" href="$classnetspeak_1_1invertedindex_1_1StorageWriter.html" title=" " alt="" coords="203,84,383,139"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="130,164,211,136,212,141,132,169"/>
+<area shape="rect" id="Node000003" href="$classnetspeak_1_1invertedindex_1_1PostlistBuilder.html" title=" " alt="" coords="203,163,383,203"/>
+<area shape="poly" id="edge4_Node000000_Node000003" title=" " alt="" coords="168,181,202,181,202,186,168,186"/>
+<area shape="rect" id="Node000004" href="$classnetspeak_1_1invertedindex_1_1StorageWriter.html" title=" " alt="" coords="203,227,383,267"/>
+<area shape="poly" id="edge5_Node000000_Node000004" title=" " alt="" coords="137,198,226,225,225,230,135,203"/>
+<area shape="rect" id="Node000005" href="$structnetspeak_1_1invertedindex_1_1iterator__type.html" title=" " alt="" coords="203,291,383,331"/>
+<area shape="poly" id="edge6_Node000000_Node000005" title=" " alt="" coords="106,204,150,241,204,277,229,289,227,294,201,282,147,245,103,208"/>
+<area shape="rect" id="Node000006" href="$structnetspeak_1_1invertedindex_1_1constant__size__iter.html" title=" " alt="" coords="431,259,611,299"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="396,294,430,289,431,295,397,299"/>
+<area shape="rect" id="Node000007" href="$structnetspeak_1_1invertedindex_1_1variable__size__iter.html" title=" " alt="" coords="431,323,611,363"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="397,323,431,328,430,333,396,329"/>
 </map>
