@@ -1,7 +1,8 @@
+/**
 \dir netspeak/model
 \brief  This folder defines basic internal types that are used everywhere. All types are Netspeak specific and used
-    across classes. These types are how our different classes communicate.
-
+across classes. These types are how our different classes communicate.
+\details
 
 ## Queries
 
@@ -24,3 +25,5 @@ A norm query is the simplest type of queries. It's a query that can be answered 
 A simple query is a mutable intermediate format between `Query` and `NormQuery`. It is logically equivalent to `Query` but cannot literally represent every `Query` object (equally powerful but less verbose).
 
 This format is mainly used during the conversion from `Query` to a list of `NormQuery`s.
+
+*/

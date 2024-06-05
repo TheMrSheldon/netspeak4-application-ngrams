@@ -1,3 +1,0 @@
-\dir netspeak/regex
-\brief This folder contains all classes for Netspeak's in-memory regex index. This includes the index itself and all
-    classes for regex query parsing, validation, and optimization.

@@ -1,4 +1,4 @@
-\page netspeakcli Using the Netspeak CLI
+\page netspeakcli Netspeak CLI
 
 After compiling, you can run the Netspeak executable which will start a small command line interface for Netspeak.
 
