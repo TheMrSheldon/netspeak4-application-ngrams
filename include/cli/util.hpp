@@ -6,12 +6,6 @@
 #include <string>
 
 namespace cli {
-
-/**
- * @brief Returns the address of the localhost with the given port.
- */
-std::string localhost(uint16_t port);
-
 /**
  * @brief Returns the corpora of the given stub.
  *

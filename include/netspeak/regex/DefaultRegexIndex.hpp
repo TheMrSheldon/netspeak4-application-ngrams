@@ -98,7 +98,7 @@ public:
    */
   explicit DefaultRegexIndex(std::string vocabulary);
   DefaultRegexIndex(const DefaultRegexIndex&) = delete;
-  ~DefaultRegexIndex() override{};
+  ~DefaultRegexIndex() override = default;
 
   const std::string& vocabulary() const {
     return vocabulary_;

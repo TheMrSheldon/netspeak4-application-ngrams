@@ -1,5 +1,5 @@
-#ifndef PATHS
-#define PATHS
+#ifndef PATHS_HPP
+#define PATHS_HPP
 
 #include <fstream>
 #include <netspeak/error.hpp>
@@ -21,10 +21,8 @@ const std::string TEST_REGEX_DATA = "data/test_Regex.txt";
 
 inline std::string load_file(std::string path) {
   std::ifstream ifs(path);
-  netspeak::util::check(ifs.is_open(), netspeak::error_message::cannot_open,
-                        path);
-  std::string content((std::istreambuf_iterator<char>(ifs)),
-                      (std::istreambuf_iterator<char>()));
+  netspeak::util::check(ifs.is_open(), netspeak::error_message::cannot_open, path);
+  std::string content((std::istreambuf_iterator<char>(ifs)), (std::istreambuf_iterator<char>()));
   ifs.close();
   return content;
 }
@@ -32,4 +30,4 @@ inline std::string load_file(std::string path) {
 } // namespace test
 
 
-#endif // PATHS
+#endif // PATHS_HPP

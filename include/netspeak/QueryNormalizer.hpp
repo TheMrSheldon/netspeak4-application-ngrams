@@ -13,11 +13,11 @@
 
 namespace netspeak {
 
-// TODO: cache for regex queries
+/** \todo cache for regex queries **/
 
 
 /**
- * This class is responsable for normalizing queries.
+ * This class is responsible for normalizing queries.
  *
  * A norm query (normalized query)
  */

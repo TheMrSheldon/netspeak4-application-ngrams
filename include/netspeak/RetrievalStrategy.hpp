@@ -9,8 +9,8 @@
 namespace netspeak {
 
 /**
- * Primary template to extract the phrase frequency and phrase id from certain
- * index entry type used by specialized classes of \c RetrievalStrategy.
+ * Primary template to extract the phrase frequency and phrase id from certain index entry type used by specialized
+ * classes of \c RetrievalStrategy.
  */
 template <typename IndexEntryT>
 struct index_entry_traits {
@@ -38,10 +38,9 @@ struct stats_type {
 };
 
 /**
- * Primary template to define the common interface of retrieval strategies.
- * Customized strategies have to specialize this template by providing a unique
- * type representing some RetrievalStrategyTag. This technique is inspired by
- * the STL's interator category tag classes.
+ * @brief Primary template to define the common interface of retrieval strategies.
+ * @details Customized strategies have to specialize this template by providing a unique type representing some
+ * RetrievalStrategyTag. This technique is inspired by the STL's interator category tag classes.
  */
 template <typename RetrievalStrategyTag>
 class RetrievalStrategy {

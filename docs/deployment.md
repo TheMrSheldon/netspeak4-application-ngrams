@@ -10,7 +10,7 @@ After changing the definition, you have to run `build/generate-protobuf-files.sh
 
 You also have to update the generated protobuf files `netspeak4-application-java` by running `src/scripts/generate-protobuf-files.sh` (this requires Java >= 1.6 to be installed).
 
-\note In case you OS doesn't support the specific protobuf version required, you the dev console from `netspeak4-deployment`.
+\note In case you OS doesn't support the specific protobuf version required, use the dev console from `netspeak4-deployment`.
 
 
 ## Antlr4

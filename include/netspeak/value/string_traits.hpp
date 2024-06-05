@@ -4,12 +4,12 @@
 #define NETSPEAK_VALUE_STRING_TRAITS_HPP
 
 #include <cstdio>
+#include <format>
+#include <stdexcept>
 #include <string>
 
 #include <boost/algorithm/string/trim.hpp>
 
-#include <format>
-#include <stdexcept>
 #include "value_traits.hpp"
 
 namespace netspeak::value {
@@ -20,9 +20,7 @@ namespace netspeak::value {
 
 template <>
 struct NameOf<std::string> {
-  static std::string value() {
-    return "String";
-  }
+  constexpr static std::string value = "String";
 };
 
 // -----------------------------------------------------------------------------
@@ -104,7 +102,7 @@ struct value_traits<std::string> {
   }
 
   static inline std::string type_name() {
-    return NameOf<value_type>::value();
+    return NameOf<value_type>::value;
   }
 };
 

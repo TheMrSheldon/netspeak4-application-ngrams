@@ -1,9 +1,9 @@
-#ifndef TEST_NETSPEAK_MANAGED_DIRECTORY
-#define TEST_NETSPEAK_MANAGED_DIRECTORY
-
-#include <string>
+#ifndef TEST_NETSPEAK_MANAGED_DIRECTORY_HPP
+#define TEST_NETSPEAK_MANAGED_DIRECTORY_HPP
 
 #include <filesystem>
+#include <string>
+
 #include <boost/test/unit_test.hpp>
 
 namespace test {

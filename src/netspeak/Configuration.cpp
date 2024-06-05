@@ -10,37 +10,34 @@ namespace fs = std::filesystem;
 
 // CONSTANTS
 
+const std::string Configuration::PATH_TO_HOME("path.to.home");
+const std::string Configuration::PATH_TO_PHRASE_INDEX("path.to.phrase-index");
+const std::string Configuration::PATH_TO_PHRASE_CORPUS("path.to.phrase-corpus");
+const std::string Configuration::PATH_TO_PHRASE_DICTIONARY("path.to.phrase-dictionary");
+const std::string Configuration::PATH_TO_POSTLIST_INDEX("path.to.postlist-index");
+const std::string Configuration::PATH_TO_HASH_DICTIONARY("path.to.hash-dictionary");
+const std::string Configuration::PATH_TO_REGEX_VOCABULARY("path.to.regex-vocabulary");
+const std::string Configuration::EXTENDS("extends");
 
-#define PREFIX const std::string Configuration
+const std::string Configuration::CORPUS_KEY("corpus.key");
+const std::string Configuration::CORPUS_NAME("corpus.name");
+const std::string Configuration::CORPUS_LANGUAGE("corpus.language");
 
-PREFIX::PATH_TO_HOME("path.to.home");
-PREFIX::PATH_TO_PHRASE_INDEX("path.to.phrase-index");
-PREFIX::PATH_TO_PHRASE_CORPUS("path.to.phrase-corpus");
-PREFIX::PATH_TO_PHRASE_DICTIONARY("path.to.phrase-dictionary");
-PREFIX::PATH_TO_POSTLIST_INDEX("path.to.postlist-index");
-PREFIX::PATH_TO_HASH_DICTIONARY("path.to.hash-dictionary");
-PREFIX::PATH_TO_REGEX_VOCABULARY("path.to.regex-vocabulary");
-PREFIX::EXTENDS("extends");
+const std::string Configuration::CACHE_CAPACITY("cache.capacity");
 
-PREFIX::CORPUS_KEY("corpus.key");
-PREFIX::CORPUS_NAME("corpus.name");
-PREFIX::CORPUS_LANGUAGE("corpus.language");
+const std::string Configuration::QUERY_LOWER_CASE("query.lower-case");
 
-PREFIX::CACHE_CAPACITY("cache.capacity");
+const std::string Configuration::SEARCH_MAX_NORM_QUERIES("search.max-norm-queries");
 
-PREFIX::QUERY_LOWER_CASE("query.lower-case");
+const std::string Configuration::SEARCH_REGEX_MAX_MATCHES("search.regex.max-matches");
+const std::string Configuration::SEARCH_REGEX_MAX_TIME("search.regex.max-time");
 
-PREFIX::SEARCH_MAX_NORM_QUERIES("search.max-norm-queries");
-
-PREFIX::SEARCH_REGEX_MAX_MATCHES("search.regex.max-matches");
-PREFIX::SEARCH_REGEX_MAX_TIME("search.regex.max-time");
-
-PREFIX::DEFAULT_PHRASE_INDEX_DIR_NAME("phrase-index");
-PREFIX::DEFAULT_PHRASE_CORPUS_DIR_NAME("phrase-corpus");
-PREFIX::DEFAULT_PHRASE_DICTIONARY_DIR_NAME("phrase-dictionary");
-PREFIX::DEFAULT_POSTLIST_INDEX_DIR_NAME("postlist-index");
-PREFIX::DEFAULT_HASH_DICTIONARY_DIR_NAME("hash-dictionary");
-PREFIX::DEFAULT_REGEX_VOCABULARY_DIR_NAME("regex-vocabulary");
+const std::string Configuration::DEFAULT_PHRASE_INDEX_DIR_NAME("phrase-index");
+const std::string Configuration::DEFAULT_PHRASE_CORPUS_DIR_NAME("phrase-corpus");
+const std::string Configuration::DEFAULT_PHRASE_DICTIONARY_DIR_NAME("phrase-dictionary");
+const std::string Configuration::DEFAULT_POSTLIST_INDEX_DIR_NAME("postlist-index");
+const std::string Configuration::DEFAULT_HASH_DICTIONARY_DIR_NAME("hash-dictionary");
+const std::string Configuration::DEFAULT_REGEX_VOCABULARY_DIR_NAME("regex-vocabulary");
 
 
 const std::unordered_set<std::string> PATHS{

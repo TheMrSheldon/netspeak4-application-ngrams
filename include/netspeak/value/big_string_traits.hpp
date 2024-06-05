@@ -22,9 +22,7 @@ namespace netspeak::value {
 
 template <>
 struct NameOf<big_string> {
-  static std::string value() {
-    return "BigString";
-  }
+  constexpr static std::string value = "BigString";
 };
 
 // -----------------------------------------------------------------------------
@@ -85,7 +83,7 @@ struct value_traits<big_string> {
   }
 
   static inline std::string type_name() {
-    return NameOf<value_type>::value();
+    return NameOf<value_type>::value;
   }
 };
 

@@ -9,12 +9,15 @@
 
 namespace netspeak::regex {
 
+/** \todo Consider making RegexUnit an std::variant and using std::visit instead of switch cases **/
+
 /**
  * @brief A basic unit of a regex query.
  *
  * A regex unit has a type which defines the function of its UTF32 string value.
  */
-struct RegexUnit {
+struct RegexUnit final {
+public:
   /**
    * @brief The type of a unit.
    */
@@ -47,15 +50,14 @@ public:
 
 /**
  * @brief An immutable query for a regex index.
- *
- * Top create a query, either use a parser or the \c RegexQueryBuilder .
+ * @details Top create a query, either use a parser or the \c RegexQueryBuilder .
  */
-class RegexQuery {
+class RegexQuery final {
 private:
-  std::vector<RegexUnit> m_units;
+  std::vector<RegexUnit> units;
 
 public:
-  explicit RegexQuery(const std::vector<RegexUnit>& units) : m_units(units) {}
+  explicit RegexQuery(const std::vector<RegexUnit>& units) : units(units) {}
 
   /**
    * @brief Create a new \c RegexQuery that rejects all words.
@@ -66,8 +68,8 @@ public:
 
   /**
    * @brief Returns whether this query will reject all words.
-   *
-   * Note: All words in the context of a formal language.
+   * @details
+   *  \note All words in the context of a formal language.
    */
   bool reject_all() const {
     return combinations_upper_bound() == 0;
@@ -75,11 +77,11 @@ public:
 
   /**
    * @brief Returns whether this query will accept all words.
-   *
-   * Note: All words in the context of a formal language.
+   * @details
+   *  \note All words in the context of a formal language.
    */
   bool accept_all() const {
-    return m_units.size() == 1 && m_units.front().type == RegexUnit::Type::STAR;
+    return units.size() == 1 && units.front().type == RegexUnit::Type::STAR;
   }
 
   /**
@@ -93,12 +95,12 @@ public:
     if (accept_all()) {
       return true;
     }
-    if (m_units.size() == 2) {
-      switch (m_units[0].type) {
+    if (units.size() == 2) {
+      switch (units[0].type) {
         case RegexUnit::Type::STAR:
-          return m_units[1].type == RegexUnit::Type::QMARK;
+          return units[1].type == RegexUnit::Type::QMARK;
         case RegexUnit::Type::QMARK:
-          return m_units[1].type == RegexUnit::Type::STAR;
+          return units[1].type == RegexUnit::Type::STAR;
         default:
           break;
       }
@@ -144,7 +146,7 @@ public:
    * @return std::vector<RegexUnit> const
    */
   const std::vector<RegexUnit>& get_units() const {
-    return m_units;
+    return units;
   }
 };
 

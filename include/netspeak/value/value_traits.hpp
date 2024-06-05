@@ -3,6 +3,7 @@
 #ifndef NETSPEAK_VALUE_VALUE_TRAITS_HPP
 #define NETSPEAK_VALUE_VALUE_TRAITS_HPP
 
+#include <cstdint>
 #include <cstring>
 #include <format>
 #include <iostream>
@@ -21,72 +22,52 @@ struct NameOf;
 
 template <>
 struct NameOf<int8_t> {
-  static std::string value() {
-    return "Byte";
-  }
+  constexpr static std::string value = "Byte";
 };
 
 template <>
 struct NameOf<uint8_t> {
-  static std::string value() {
-    return "UByte";
-  }
+  constexpr static std::string value = "UByte";
 };
 
 template <>
 struct NameOf<int16_t> {
-  static std::string value() {
-    return "Short";
-  }
+  constexpr static std::string value = "Short";
 };
 
 template <>
 struct NameOf<uint16_t> {
-  static std::string value() {
-    return "UShort";
-  }
+  constexpr static std::string value = "UShort";
 };
 
 template <>
 struct NameOf<int32_t> {
-  static std::string value() {
-    return "Int";
-  }
+  constexpr static std::string value = "Int";
 };
 
 template <>
 struct NameOf<uint32_t> {
-  static std::string value() {
-    return "UInt";
-  }
+  constexpr static std::string value = "UInt";
 };
 
 template <>
 struct NameOf<int64_t> {
-  static std::string value() {
-    return "Long";
-  }
+  constexpr static std::string value = "Long";
 };
 
 template <>
 struct NameOf<uint64_t> {
-  static std::string value() {
-    return "ULong";
-  }
+  constexpr static std::string value = "ULong";
 };
 
 template <>
 struct NameOf<float> {
-  static std::string value() {
-    return "Float";
-  }
+  constexpr static std::string value = "Float";
 };
 
 template <>
 struct NameOf<double> {
-  static std::string value() {
-    return "Double";
-  }
+  constexpr static std::string value = "Double";
 };
 
 // -----------------------------------------------------------------------------
@@ -110,7 +91,7 @@ inline void print_to_os(uint8_t value, std::ostream& os) {
   os << static_cast<uint16_t>(value);
 }
 
-static const char tuple_element_separator = '\t';
+static constexpr char tuple_element_separator = '\t';
 
 template <typename T>
 struct value_traits {
@@ -166,7 +147,7 @@ struct value_traits {
   }
 
   static inline std::string type_name() {
-    return NameOf<value_type>::value();
+    return NameOf<value_type>::value;
   }
 };
 

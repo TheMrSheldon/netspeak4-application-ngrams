@@ -32,7 +32,7 @@ RegexQuery RegexQuery::create_reject_all() {
 
 uint32_t RegexQuery::combinations_upper_bound() const {
   uint64_t count = 1;
-  for (const auto& unit : m_units) {
+  for (const auto& unit : units) {
     switch (unit.type) {
       case RegexUnit::Type::QMARK:
       case RegexUnit::Type::STAR:
@@ -74,7 +74,7 @@ size_t number_of_utf8_bytes(char32_t c) {
 
 size_t RegexQuery::min_utf8_input_length() const {
   size_t min = 0;
-  for (const auto& unit : m_units) {
+  for (const auto& unit : units) {
     switch (unit.type) {
       case RegexUnit::Type::WORD:
         for (const auto c : unit.value) {
@@ -113,7 +113,7 @@ size_t RegexQuery::min_utf8_input_length() const {
 }
 size_t RegexQuery::max_utf8_input_length() const {
   size_t max = 0;
-  for (const auto& unit : m_units) {
+  for (const auto& unit : units) {
     switch (unit.type) {
       case RegexUnit::Type::WORD:
       case RegexUnit::Type::OPTIONAL_WORD:
