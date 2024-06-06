@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 #  For shorter build time (but larger binary), we could install protobuf-compiler-grpc libgrpc++-dev here.
 #  If we leave these out, we only need to install pkg-config and the CMake setup automatically compiles
 #  and links grpc++ into the final binary.
-RUN apt-get update && apt-get -y install git g++-13 cmake \
+RUN apt-get update && apt-get -y install git g++-13 cmake lcov \
     protobuf-compiler \
     pkg-config \
     libboost-all-dev \
@@ -26,7 +26,7 @@ COPY src ./src
 COPY tests ./tests
 
 # Configure and Build
-RUN cmake -S ./ -B ./build/ -DCMAKE_BUILD_TYPE=MinSizeRel -D CMAKE_C_COMPILER=gcc-13 -D CMAKE_CXX_COMPILER=g++-13 -D NETSPEAK_BUILD_DOCS=NO && \
+RUN cmake -S ./ -B ./build/ -DCMAKE_BUILD_TYPE=MinSizeRel -D CMAKE_C_COMPILER=gcc-13 -D CMAKE_CXX_COMPILER=g++-13 -D NETSPEAK_BUILD_DOCS=NO -D NETSPEAK_BUILD_TESTS=NO && \
     cmake --build ./build/ --config MinSizeRel --target netspeakcli -j 16 && \
     cmake --build ./build/ --config MinSizeRel --target tests -j 16
 

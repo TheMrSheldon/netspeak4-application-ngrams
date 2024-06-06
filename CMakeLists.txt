@@ -2,9 +2,10 @@ cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
 
 option(NETSPEAK_BUILD_TESTS "Build tests" ON)
 option(NETSPEAK_BUILD_DOCS "Build documentation" ON)
+option(NETSPEAK_BUILD_DEB "Build debian package" ON)
 option(NETSPEAK_ONLY_DOCS "Build only documentation -- this disables tests and others" OFF)
 
-project(Netspeak VERSION 4.2.0 LANGUAGES C CXX)
+project(Netspeak VERSION 5.0.0 LANGUAGES C CXX)
 
 ##########################################################################################
 # Enable Optimization
@@ -94,4 +95,25 @@ if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME) AND NETSPEAK_BUILD_DOCS)
 	add_custom_command(TARGET netspeak_docs POST_BUILD
     	COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/docs/media/netspeak-banner.svg ${DOXYGEN_OUTPUT_DIRECTORY}/html/docs/media/netspeak-banner.svg
 	)
+endif()
+
+##########################################################################################
+# Debian Package
+##########################################################################################
+# Debian Packaging only available if this is the main app
+if(NOT NETSPEAK_ONLY_DOCS AND (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME) AND NETSPEAK_BUILD_DEB)
+	install(TARGETS netspeakcli RUNTIME DESTINATION bin)
+
+	SET(CPACK_GENERATOR "DEB")
+	SET(CPACK_PACKAGE_NAME netspeakcli)
+	SET(CPACK_SET_DESTDIR TRUE)
+	SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "info@netspeak.org")
+	SET(CPACK_PACKAGE_VERSION "5.0.0rc")
+	include(GNUInstallDirs)
+	SET(CPACK_DEBIAN_PACKAGE_DESCRIPTION "Description") # TODO: description
+	SET(CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
+	SET(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+	SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libcmph0, libicu74, libgrpc++1.51t64")
+	SET(CPACK_PACKAGE_VENDOR "Webis Group")
+	include(CPack)
 endif()
